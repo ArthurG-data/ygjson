@@ -10,7 +10,7 @@
     "required": ["id", "code", "name", "type", "editions", "source", "releases"],
     "properties": {
       "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "The slug of the YGOPRODeck set name, deduplicated with -2, -3 when two names slug alike."},
-      "code": {"type": "string", "minLength": 1, "description": "The set prefix (LOB). Not unique: 142 prefixes are shared by several sets, so the id is the key."},
+      "code": {"type": "string", "minLength": 1, "description": "The set prefix (LOB). Not unique: 151 prefixes are shared by several sets, so the id is the key."},
       "name": {"type": "string", "minLength": 1, "description": "The English set name."},
       "type": {"enum": ["booster", "structure_deck", "starter_deck", "tin", "special_edition", "sneak_peek", "duel_terminal", "speed_duel", "promo", "box_set", "other"],
                "description": "The set's product line. The importers guess it from the name; import_yugipedia refines it from the Yugipedia infobox."},
