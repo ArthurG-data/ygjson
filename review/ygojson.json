@@ -1,0 +1,5605 @@
+{
+ "archetypesSkipped": [
+  {
+   "id": "c748db73-393a-415c-87a2-71033fc04ca9",
+   "name": "C",
+   "slug": "c"
+  },
+  {
+   "id": "e0f43c5a-d146-461c-97ab-99d02567808a",
+   "name": "Magnet Warrior Σ",
+   "slug": "magnet-warrior"
+  },
+  {
+   "id": "bc5db931-b6bc-4f4b-a928-82c0feff1149",
+   "name": "lswarm",
+   "slug": "lswarm"
+  }
+ ],
+ "cardsUnmatched": [
+  {
+   "id": "64865",
+   "name": "Cyberse Code Magician"
+  },
+  {
+   "id": "433377",
+   "name": "Blitzclique - Steppleader"
+  },
+  {
+   "id": "561300",
+   "name": "Poisonous Viper"
+  },
+  {
+   "id": "613496",
+   "name": "Over Tuning"
+  },
+  {
+   "id": "847217",
+   "name": "Orichalcos Sword of Sealing"
+  },
+  {
+   "id": "1186447",
+   "name": "Horoscope Sorcerer, the Stargazer Magician"
+  },
+  {
+   "id": "1259915",
+   "name": "Sacred Beasts Thunderclap"
+  },
+  {
+   "id": "1280391",
+   "name": "Advent of Atlantis"
+  },
+  {
+   "id": "1463589",
+   "name": "Anti-GMX Final Experiment"
+  },
+  {
+   "id": "1595137",
+   "name": "Evolved Daneen"
+  },
+  {
+   "id": "1710647",
+   "name": "Yoa the Plague Ashtra"
+  },
+  {
+   "id": "2372506",
+   "name": "Chaos Magical Hats"
+  },
+  {
+   "id": "2419596",
+   "name": "Number 101: Silent Honor ARK - Soul Asylum"
+  },
+  {
+   "id": "2606417",
+   "name": "Reversal Box"
+  },
+  {
+   "id": "2618725",
+   "name": "GMX Partner Selandea"
+  },
+  {
+   "id": "2725599",
+   "name": "Rescue-ACE Arbitrator"
+  },
+  {
+   "id": "2729965",
+   "name": "Hey, Space Trunade!"
+  },
+  {
+   "id": "2906939",
+   "name": "Ashtrashen - Gate to the Worlds Beyond"
+  },
+  {
+   "id": "2932235",
+   "name": "Thousand Umbral Horror"
+  },
+  {
+   "id": "3064783",
+   "name": "Shining Umbral Horror"
+  },
+  {
+   "id": "3129527",
+   "name": "Sleepy Scapegoats"
+  },
+  {
+   "id": "3287359",
+   "name": "Magical Musket Mastermind Caspar"
+  },
+  {
+   "id": "3294539",
+   "name": "Crimson Blade Dragon"
+  },
+  {
+   "id": "3434362",
+   "name": "Rustin Mammoth"
+  },
+  {
+   "id": "3441553",
+   "name": "Sacred Beasts Skyfall"
+  },
+  {
+   "id": "3635138",
+   "name": "Emissaries from Darkness"
+  },
+  {
+   "id": "3739500",
+   "name": "Ruler of the End of the World"
+  },
+  {
+   "id": "3841104",
+   "name": "Stratiae the Stratasmasher Dino"
+  },
+  {
+   "id": "3957130",
+   "name": "Trisborrel Dragon"
+  },
+  {
+   "id": "4026187",
+   "name": "Teller of Fairy Tails"
+  },
+  {
+   "id": "4063756",
+   "name": "Mediclius the Extraordinary Power Patron"
+  },
+  {
+   "id": "4079728",
+   "name": "Gung-Ho! Springans!"
+  },
+  {
+   "id": "4611341",
+   "name": "S-Force Mystify"
+  },
+  {
+   "id": "4663194",
+   "name": "Dark City at Midnight"
+  },
+  {
+   "id": "4881365",
+   "name": "Alligator's Dragon Knight"
+  },
+  {
+   "id": "4891376",
+   "name": "Zalen the Shackled Dragon"
+  },
+  {
+   "id": "4909946",
+   "name": "Boss on Parade"
+  },
+  {
+   "id": "4993187",
+   "name": "W:P Fancy Ball"
+  },
+  {
+   "id": "5121528",
+   "name": "B.E.S. Derringer Core"
+  },
+  {
+   "id": "5125629",
+   "name": "Malefic Paradigm Shift"
+  },
+  {
+   "id": "5148778",
+   "name": "Starving Venom Wing Dragon"
+  },
+  {
+   "id": "5208118",
+   "name": "Solving for Pendulum"
+  },
+  {
+   "id": "5559570",
+   "name": "Elfnote June Pride"
+  },
+  {
+   "id": "5833929",
+   "name": "Melffy Godmommy"
+  },
+  {
+   "id": "5914858",
+   "name": "Junora the Power Patron of Tuning"
+  },
+  {
+   "id": "6071005",
+   "name": "Witchcrafter Marka"
+  },
+  {
+   "id": "6083904",
+   "name": "Diabrocken the Ominous Specter"
+  },
+  {
+   "id": "6195332",
+   "name": "Exstellarknight Constellar Ptolemy Ω7"
+  },
+  {
+   "id": "6325660",
+   "name": "Dominus Spark"
+  },
+  {
+   "id": "6361316",
+   "name": "WAKE CUP! Kuro"
+  },
+  {
+   "id": "6547248",
+   "name": "Clown Crew New Face"
+  },
+  {
+   "id": "6772168",
+   "name": "Invoked Oceanus"
+  },
+  {
+   "id": "6958567",
+   "name": "Witchcrafter Celebration"
+  },
+  {
+   "id": "7293697",
+   "name": "Toon World the Perfect World"
+  },
+  {
+   "id": "7428507",
+   "name": "Burial Summit Trirealm Rift Helheim"
+  },
+  {
+   "id": "7594154",
+   "name": "Zenna's Deceiving Doll Maidens"
+  },
+  {
+   "id": "7656689",
+   "name": "Genni, the Maid of Endymion"
+  },
+  {
+   "id": "7894706",
+   "name": "The Chaotic Phantasmal Sacred Beasts"
+  },
+  {
+   "id": "7917970",
+   "name": "Dragunity Divine Wind"
+  },
+  {
+   "id": "8039562",
+   "name": "Dragunity Falchion"
+  },
+  {
+   "id": "8252010",
+   "name": "X-Saber Gottoms"
+  },
+  {
+   "id": "8315896",
+   "name": "Candelato, the Beast of Light"
+  },
+  {
+   "id": "8540055",
+   "name": "Trirealm Rift of Blue Tuonela"
+  },
+  {
+   "id": "8593259",
+   "name": "Elemental HERO Clay Guardian"
+  },
+  {
+   "id": "8778267",
+   "name": "Penetration Fusion"
+  },
+  {
+   "id": "8852158",
+   "name": "Reeshaddoll Wendikurhu"
+  },
+  {
+   "id": "8915275",
+   "name": "Evil Box"
+  },
+  {
+   "id": "9362643",
+   "name": "The Glitter of Raise Moon"
+  },
+  {
+   "id": "9484285",
+   "name": "Raise Moon Hope Squeeze - Jackpot"
+  },
+  {
+   "id": "9591819",
+   "name": "Gagaga Escape"
+  },
+  {
+   "id": "9762295",
+   "name": "A Journey Back to the Light - \"Zenet\""
+  },
+  {
+   "id": "9978697",
+   "name": "X-Saber Pellina"
+  },
+  {
+   "id": "10007434",
+   "name": "Zenet Prophet - Amenhotep"
+  },
+  {
+   "id": "10086952",
+   "name": "Quick Summon"
+  },
+  {
+   "id": "10266279",
+   "name": "Junoldo the Shadespirit Power Patron"
+  },
+  {
+   "id": "10307853",
+   "name": "Garden of Talistones"
+  },
+  {
+   "id": "10529441",
+   "name": "Foolish Trap Hole"
+  },
+  {
+   "id": "10611873",
+   "name": "Raise Moon Lamp Croucier"
+  },
+  {
+   "id": "10673071",
+   "name": "Virakam, the Divine Spirit of Artifice"
+  },
+  {
+   "id": "10884847",
+   "name": "Zenetmes Nekhbet"
+  },
+  {
+   "id": "11333460",
+   "name": "Raise Moon Elegance Carol"
+  },
+  {
+   "id": "11642993",
+   "name": "S-Force World Sorting"
+  },
+  {
+   "id": "11876803",
+   "name": "Lunalight Scarlet Tiger"
+  },
+  {
+   "id": "11895663",
+   "name": "Emi Blitzclique"
+  },
+  {
+   "id": "11911336",
+   "name": "Spellbook of the Grand Circle"
+  },
+  {
+   "id": "12555008",
+   "name": "Zenet Cataract"
+  },
+  {
+   "id": "12738990",
+   "name": "Gearfried the Steel Knight"
+  },
+  {
+   "id": "12845564",
+   "name": "Angelechy Endgame Problem"
+  },
+  {
+   "id": "12908094",
+   "name": "Gagaga Magician - Gagaga Magic"
+  },
+  {
+   "id": "13021682",
+   "name": "Starjunk Synchron"
+  },
+  {
+   "id": "13068112",
+   "name": "Angelechy Strategy Score"
+  },
+  {
+   "id": "13203964",
+   "name": "Perfectron Hydradrive Dragon"
+  },
+  {
+   "id": "13243124",
+   "name": "Favorite HERO Flame Wingman"
+  },
+  {
+   "id": "13450581",
+   "name": "Knight of Twin Swords"
+  },
+  {
+   "id": "14425515",
+   "name": "Infernity Doom Slinger"
+  },
+  {
+   "id": "14556954",
+   "name": "VIP Whale"
+  },
+  {
+   "id": "14732294",
+   "name": "White Knight Lord"
+  },
+  {
+   "id": "14965712",
+   "name": "Kuriboh - Multiply!"
+  },
+  {
+   "id": "15141103",
+   "name": "Dark Tuner Catastrogue"
+  },
+  {
+   "id": "15185344",
+   "name": "Crowned Siclavee"
+  },
+  {
+   "id": "15415552",
+   "name": "Mortilux Heruvur"
+  },
+  {
+   "id": "15725501",
+   "name": "Makourai, the Lightning Strike"
+  },
+  {
+   "id": "15778492",
+   "name": "Gaming Gamer GG"
+  },
+  {
+   "id": "16237004",
+   "name": "Shamanite Shamanknight"
+  },
+  {
+   "id": "16734927",
+   "name": "Ectoplasmic Fortification"
+  },
+  {
+   "id": "16908882",
+   "name": "Number 104: Masquerade V"
+  },
+  {
+   "id": "17020474",
+   "name": "Ashtraja Susanoo"
+  },
+  {
+   "id": "17209452",
+   "name": "Kewl Tune Rotary"
+  },
+  {
+   "id": "17242022",
+   "name": "Red-Eyes Black Dragon Exceed"
+  },
+  {
+   "id": "17269895",
+   "name": "King's Resonance"
+  },
+  {
+   "id": "17350692",
+   "name": "Yomagna the Fire Phantom"
+  },
+  {
+   "id": "17473466",
+   "name": "Nervedo the Shadebeast Power Patron"
+  },
+  {
+   "id": "17782288",
+   "name": "Angelechy Problem"
+  },
+  {
+   "id": "17856505",
+   "name": "Pumpking the Great Ghost King"
+  },
+  {
+   "id": "18078153",
+   "name": "Army of the Haunted"
+  },
+  {
+   "id": "18321034",
+   "name": "Hecahands Mankibuel"
+  },
+  {
+   "id": "18482473",
+   "name": "H.E.R.O. Flash!"
+  },
+  {
+   "id": "18595008",
+   "name": "Predaplant Lilizard"
+  },
+  {
+   "id": "18616294",
+   "name": "Gray Layer"
+  },
+  {
+   "id": "18711696",
+   "name": "Assault Sonic Warrior"
+  },
+  {
+   "id": "18738846",
+   "name": "Astrazma Urania"
+  },
+  {
+   "id": "18795635",
+   "name": "GMX Applied Experiment #55"
+  },
+  {
+   "id": "18905769",
+   "name": "Guivre"
+  },
+  {
+   "id": "19144622",
+   "name": "Fairy Tail - Matchgiru"
+  },
+  {
+   "id": "19326613",
+   "name": "Once Upon a Fairy Tail"
+  },
+  {
+   "id": "19434243",
+   "name": "Power Vice Dragon"
+  },
+  {
+   "id": "19438484",
+   "name": "Ilios the Black Sun Dragon"
+  },
+  {
+   "id": "19491080",
+   "name": "Clown Crew Cappello"
+  },
+  {
+   "id": "19504025",
+   "name": "Enneacraft Reset"
+  },
+  {
+   "id": "19951423",
+   "name": "S-Force Signify"
+  },
+  {
+   "id": "20049870",
+   "name": "GMX Researcher Selande"
+  },
+  {
+   "id": "20448151",
+   "name": "Clown Crew Rehearsal"
+  },
+  {
+   "id": "21419436",
+   "name": "Unchained Soul Rage Abominator"
+  },
+  {
+   "id": "21501961",
+   "name": "Pair Bear Scare!!"
+  },
+  {
+   "id": "21861412",
+   "name": "Flux Ochsenfeld"
+  },
+  {
+   "id": "22106558",
+   "name": "Mechanical Mechanic"
+  },
+  {
+   "id": "22404570",
+   "name": "Power Patron Shade of the Final Hour"
+  },
+  {
+   "id": "22623509",
+   "name": "Verre, the Maid of Endymion"
+  },
+  {
+   "id": "22734799",
+   "name": "Summoner of the Sacred Beasts"
+  },
+  {
+   "id": "22912101",
+   "name": "Surge Blitzclique"
+  },
+  {
+   "id": "23526128",
+   "name": "Blitzclique Return Stroke"
+  },
+  {
+   "id": "23856331",
+   "name": "Inferno of the Sacred Beasts - Uria, Lord of Searing Flames"
+  },
+  {
+   "id": "24056179",
+   "name": "Capsule Monster Chess"
+  },
+  {
+   "id": "24088928",
+   "name": "Skull Archfiend of Chaos"
+  },
+  {
+   "id": "24203749",
+   "name": "The Great Gallant Bandit"
+  },
+  {
+   "id": "24461358",
+   "name": "Ragged Records of Rites"
+  },
+  {
+   "id": "24672129",
+   "name": "Aroma Strategy"
+  },
+  {
+   "id": "24749710",
+   "name": "Mind Shuffle"
+  },
+  {
+   "id": "24780790",
+   "name": "Chaospawn Bishop"
+  },
+  {
+   "id": "24902348",
+   "name": "Archidux, the Squid Sorcerer"
+  },
+  {
+   "id": "24925387",
+   "name": "Adamancipator Conductor"
+  },
+  {
+   "id": "25024929",
+   "name": "Just Flip a Coin"
+  },
+  {
+   "id": "25158975",
+   "name": "Destiny HERO - Destro-Dogma"
+  },
+  {
+   "id": "25661743",
+   "name": "Prohibited Power Patron Portal - Terminus"
+  },
+  {
+   "id": "25687946",
+   "name": "Melffy Footsteps"
+  },
+  {
+   "id": "25799717",
+   "name": "Evil Dragon Cards - Metal Dragon"
+  },
+  {
+   "id": "26116996",
+   "name": "Revenge of the Paper Dolls"
+  },
+  {
+   "id": "26364381",
+   "name": "Demiurge Ema"
+  },
+  {
+   "id": "26387390",
+   "name": "Junk Signal"
+  },
+  {
+   "id": "26511269",
+   "name": "Penalty Game \"GREED, the Illusion of Avarice\""
+  },
+  {
+   "id": "26633847",
+   "name": "Gilford the Lightning, the Warrior of Thunderbolts"
+  },
+  {
+   "id": "27096833",
+   "name": "Borreload Liberator Dragon"
+  },
+  {
+   "id": "27118421",
+   "name": "Starving Venom Fusion Dragon, Four Heavenly Dragons"
+  },
+  {
+   "id": "27519978",
+   "name": "Charmer Quartet in Bloom"
+  },
+  {
+   "id": "27632520",
+   "name": "Fairy Tail - Wiccat"
+  },
+  {
+   "id": "27855495",
+   "name": "Barrel Dragon the Machine Dragon"
+  },
+  {
+   "id": "28331069",
+   "name": "Neo Galaxy-Eyes Photon Dragon - Photon Howling"
+  },
+  {
+   "id": "28904860",
+   "name": "Angelechy Bastion"
+  },
+  {
+   "id": "28968609",
+   "name": "Garbage Golem"
+  },
+  {
+   "id": "29053656",
+   "name": "Crimson Dragon Quetzalcoatl"
+  },
+  {
+   "id": "29081251",
+   "name": "Hubrow, Founder of the Ominous Observers"
+  },
+  {
+   "id": "29927283",
+   "name": "Returned Dino Daneen"
+  },
+  {
+   "id": "30068809",
+   "name": "Adamancipator Mates"
+  },
+  {
+   "id": "30109445",
+   "name": "Clown Crew Dristy"
+  },
+  {
+   "id": "30138615",
+   "name": "Nightmare-Eyes Restrict"
+  },
+  {
+   "id": "30275298",
+   "name": "Cyber End Dragon, the Final Strike Dragon"
+  },
+  {
+   "id": "30397786",
+   "name": "Blue-Eyes White Dragon, the White Phantom Beast"
+  },
+  {
+   "id": "30698243",
+   "name": "Red Hypernova Dragon"
+  },
+  {
+   "id": "30752324",
+   "name": "Ancient Secrets"
+  },
+  {
+   "id": "30875635",
+   "name": "Miracle Ejector"
+  },
+  {
+   "id": "30945251",
+   "name": "Blitzclique Overvolt"
+  },
+  {
+   "id": "31114334",
+   "name": "Assault Blackwing - Kusanagi the Gathering Storm"
+  },
+  {
+   "id": "31411835",
+   "name": "Hecahands Dandalos"
+  },
+  {
+   "id": "31531914",
+   "name": "Unchained Ogre Shma"
+  },
+  {
+   "id": "31533473",
+   "name": "Clown Crew Diabolo"
+  },
+  {
+   "id": "31822037",
+   "name": "Purification Power Patron"
+  },
+  {
+   "id": "32044675",
+   "name": "Glitch Clutch Nullgainer"
+  },
+  {
+   "id": "32126000",
+   "name": "Learning Elf"
+  },
+  {
+   "id": "32236916",
+   "name": "Rainbow Bridge Bifrost"
+  },
+  {
+   "id": "32289031",
+   "name": "Tellarknight Constellar Delteros"
+  },
+  {
+   "id": "32353566",
+   "name": "Witchcrafter Walpurgis"
+  },
+  {
+   "id": "32467459",
+   "name": "El Shaddoll Meshahrail"
+  },
+  {
+   "id": "33166263",
+   "name": "Hyperinvoked Aeon"
+  },
+  {
+   "id": "33302589",
+   "name": "Constellar Castor"
+  },
+  {
+   "id": "33475154",
+   "name": "Witchcrafter Madame Rilliona"
+  },
+  {
+   "id": "33599853",
+   "name": "Light and Darkness Ritual"
+  },
+  {
+   "id": "33700664",
+   "name": "Trirealm Rift Territory - Valvols"
+  },
+  {
+   "id": "33822112",
+   "name": "Mad Tempest Trirealm Rift Ploutonion"
+  },
+  {
+   "id": "34041788",
+   "name": "Endymion Empire"
+  },
+  {
+   "id": "34298391",
+   "name": "Mind Scan"
+  },
+  {
+   "id": "34314989",
+   "name": "Dark-Eyes Illusionist Faceless Mage"
+  },
+  {
+   "id": "34528176",
+   "name": "Dragunity Knight - Areus"
+  },
+  {
+   "id": "34645790",
+   "name": "Trirealm Rift of Scarlet Naraka"
+  },
+  {
+   "id": "34950192",
+   "name": "Lev Shaddoll Fusion"
+  },
+  {
+   "id": "35167375",
+   "name": "Surprise Fusion"
+  },
+  {
+   "id": "35240714",
+   "name": "Saber Combination"
+  },
+  {
+   "id": "35761342",
+   "name": "Trirealm Rift of Emptiness Gehenna"
+  },
+  {
+   "id": "35989913",
+   "name": "Endless Bond"
+  },
+  {
+   "id": "36270527",
+   "name": "Ars Magna the Finite and the Infinite"
+  },
+  {
+   "id": "36709484",
+   "name": "Theorealize Past Lull"
+  },
+  {
+   "id": "37092104",
+   "name": "Monster Arms of Atlantis"
+  },
+  {
+   "id": "37279096",
+   "name": "Ars Magna \"Citrinitas\""
+  },
+  {
+   "id": "37432075",
+   "name": "Invocation - \"Sword\""
+  },
+  {
+   "id": "37458564",
+   "name": "Cyberse Contract Witch"
+  },
+  {
+   "id": "37654623",
+   "name": "Hideout in the Sky, Coulomb"
+  },
+  {
+   "id": "37839434",
+   "name": "Ashtra's Domain"
+  },
+  {
+   "id": "38001022",
+   "name": "Barian's Seal"
+  },
+  {
+   "id": "38114652",
+   "name": "Mikumari the Banisher Ashtra"
+  },
+  {
+   "id": "38331244",
+   "name": "Akasuna the Battle Ashtra"
+  },
+  {
+   "id": "38354018",
+   "name": "Superdreadnought Rail Cannon Flying Launcher"
+  },
+  {
+   "id": "38391684",
+   "name": "Atlantis, City of the Sea Dragon"
+  },
+  {
+   "id": "38578076",
+   "name": "Perfect Eclosion - Perfectly Ultimate Great Moth"
+  },
+  {
+   "id": "38776201",
+   "name": "Sacred Beasts Released"
+  },
+  {
+   "id": "38817295",
+   "name": "Ultimate Sky"
+  },
+  {
+   "id": "38984832",
+   "name": "GMX 55th Experiment Report"
+  },
+  {
+   "id": "39016067",
+   "name": "Wind Unicorn Parallel, the Dracoslayer"
+  },
+  {
+   "id": "39030883",
+   "name": "Dark Armed Dragon Punisher"
+  },
+  {
+   "id": "39053882",
+   "name": "V Umbral Horror"
+  },
+  {
+   "id": "39123673",
+   "name": "Spell Power Attainment"
+  },
+  {
+   "id": "39513225",
+   "name": "Barian's Seventh Untopia"
+  },
+  {
+   "id": "39576656",
+   "name": "Kewl Tune Crackle"
+  },
+  {
+   "id": "39706423",
+   "name": "GMX Suppression Squad"
+  },
+  {
+   "id": "40041559",
+   "name": "Genia of the Ring"
+  },
+  {
+   "id": "40235813",
+   "name": "Dark Time Wizard"
+  },
+  {
+   "id": "40237839",
+   "name": "Winged Kuriboh Sabatiel LV10"
+  },
+  {
+   "id": "40275470",
+   "name": "Jinzo - Energy Shocker"
+  },
+  {
+   "id": "41350417",
+   "name": "Dark Magical Curtain"
+  },
+  {
+   "id": "41424250",
+   "name": "Chaos End Ruler - Master of the Beginning and End"
+  },
+  {
+   "id": "41458361",
+   "name": "Adamancipator Luminous"
+  },
+  {
+   "id": "41570943",
+   "name": "Azure Ocean Dragon Lord - Neo-Daedalus Rage"
+  },
+  {
+   "id": "41763141",
+   "name": "Fata Dragna"
+  },
+  {
+   "id": "42026772",
+   "name": "The Magical King of Dimension Zeta"
+  },
+  {
+   "id": "42138622",
+   "name": "Vortex of Time"
+  },
+  {
+   "id": "42232157",
+   "name": "Stage of Destiny"
+  },
+  {
+   "id": "42396591",
+   "name": "Number C104: Umbral Horror Masquerade Victory"
+  },
+  {
+   "id": "42410161",
+   "name": "Angelechy Shatranga"
+  },
+  {
+   "id": "42719764",
+   "name": "Summon Shock"
+  },
+  {
+   "id": "42759961",
+   "name": "Clown Crew Flair"
+  },
+  {
+   "id": "43355214",
+   "name": "The Undying Legion"
+  },
+  {
+   "id": "43419178",
+   "name": "Ashtraya Mikumari-no-Mikoto"
+  },
+  {
+   "id": "43471513",
+   "name": "Convex Knight"
+  },
+  {
+   "id": "43632709",
+   "name": "Cerynemesia, Mystical Beast of the Forest"
+  },
+  {
+   "id": "43871165",
+   "name": "Jupredo the Shademachine Power Patron"
+  },
+  {
+   "id": "43932352",
+   "name": "Hecahands Bait"
+  },
+  {
+   "id": "43989315",
+   "name": "Invoked Sorath"
+  },
+  {
+   "id": "44001993",
+   "name": "Magician of Dark Chaos - Black Chaos"
+  },
+  {
+   "id": "44088353",
+   "name": "Doll Hammer"
+  },
+  {
+   "id": "44654994",
+   "name": "Artmage Impasto -Recapture-"
+  },
+  {
+   "id": "44694191",
+   "name": "Fleeting Phantom Mask Master"
+  },
+  {
+   "id": "44716748",
+   "name": "Trito Enneacraft - \"exapatisIA\""
+  },
+  {
+   "id": "44857722",
+   "name": "Full Moon Mirror"
+  },
+  {
+   "id": "44886582",
+   "name": "Super Duper Polymerization"
+  },
+  {
+   "id": "44994712",
+   "name": "Predaplant Longinephila"
+  },
+  {
+   "id": "45116390",
+   "name": "Heavy Armored Knight Babeldecker"
+  },
+  {
+   "id": "45151304",
+   "name": "Am Duazenet"
+  },
+  {
+   "id": "45223540",
+   "name": "Sorcerer of the Swamp"
+  },
+  {
+   "id": "45462306",
+   "name": "X-Saber Bruno"
+  },
+  {
+   "id": "45508030",
+   "name": "Possessed Destiny"
+  },
+  {
+   "id": "45536531",
+   "name": "Funny Dark Rabbit"
+  },
+  {
+   "id": "45538320",
+   "name": "Spiritual Art Familiars"
+  },
+  {
+   "id": "45700805",
+   "name": "Plasma Warrior Eitom"
+  },
+  {
+   "id": "46001505",
+   "name": "Champion's Pulse"
+  },
+  {
+   "id": "46072770",
+   "name": "The Phantom Knights of Decayed Cloak"
+  },
+  {
+   "id": "46273941",
+   "name": "Pere-Zenet Em Heru"
+  },
+  {
+   "id": "46826483",
+   "name": "Dark Tyranno"
+  },
+  {
+   "id": "46955132",
+   "name": "Melffy Rabbys"
+  },
+  {
+   "id": "46983930",
+   "name": "The Stars of Raise Moon"
+  },
+  {
+   "id": "46985799",
+   "name": "Black Rose Dragon/Assault Mode"
+  },
+  {
+   "id": "46986420",
+   "name": "Dark Magician"
+  },
+  {
+   "id": "47095439",
+   "name": "Zenetnakht Sphinx"
+  },
+  {
+   "id": "47471667",
+   "name": "D - Burst"
+  },
+  {
+   "id": "47605577",
+   "name": "Raise Moon Starter Squeeze"
+  },
+  {
+   "id": "47828069",
+   "name": "Raise Moon Wings Rapi"
+  },
+  {
+   "id": "47914440",
+   "name": "Lane Restriction"
+  },
+  {
+   "id": "48016074",
+   "name": "Charmers of the Grand Circle"
+  },
+  {
+   "id": "48128081",
+   "name": "Destined Duel"
+  },
+  {
+   "id": "48171151",
+   "name": "Astrograph Sorcerer, the Starfrost Magician"
+  },
+  {
+   "id": "48340269",
+   "name": "Angelechy Verdict"
+  },
+  {
+   "id": "48393693",
+   "name": "Gagaga Girl - Cell Phone Subtraction"
+  },
+  {
+   "id": "48940617",
+   "name": "Zenet Thunderfall"
+  },
+  {
+   "id": "49122098",
+   "name": "Spell Card \"Enemy Controller\""
+  },
+  {
+   "id": "49415281",
+   "name": "Synchro Emergency"
+  },
+  {
+   "id": "49828011",
+   "name": "Officiating Reverie"
+  },
+  {
+   "id": "50071178",
+   "name": "King of Yamimado"
+  },
+  {
+   "id": "50073633",
+   "name": "Celtic Mystic"
+  },
+  {
+   "id": "50147815",
+   "name": "Sacred Beasts Combined Assault"
+  },
+  {
+   "id": "50208444",
+   "name": "Elemental Saga Doriado"
+  },
+  {
+   "id": "50251045",
+   "name": "Calamity of the Sacred Beasts - Hamon, Lord of Striking Thunder"
+  },
+  {
+   "id": "50284408",
+   "name": "Angelechy Castellan"
+  },
+  {
+   "id": "50849686",
+   "name": "Flashforce Sword"
+  },
+  {
+   "id": "51083544",
+   "name": "Frost Tiger"
+  },
+  {
+   "id": "51193716",
+   "name": "Super Critical"
+  },
+  {
+   "id": "51307986",
+   "name": "Skyborne Blue Cularsaw"
+  },
+  {
+   "id": "51420096",
+   "name": "Adamancipator Crystal - Tiamite"
+  },
+  {
+   "id": "51546708",
+   "name": "Dark Tuner Nightmare Hand"
+  },
+  {
+   "id": "51669847",
+   "name": "Plundered Power Patron Plane - Vidolia"
+  },
+  {
+   "id": "51869363",
+   "name": "Superconductive Plasma Blast"
+  },
+  {
+   "id": "52123534",
+   "name": "Kumenyo, the Nine-Hued Deer"
+  },
+  {
+   "id": "52245126",
+   "name": "Audhumla, Progenitor of the Frozen Expanse"
+  },
+  {
+   "id": "52558178",
+   "name": "Power Connection"
+  },
+  {
+   "id": "52768390",
+   "name": "Dark Creator"
+  },
+  {
+   "id": "52782439",
+   "name": "Exceptional Schedule"
+  },
+  {
+   "id": "52915304",
+   "name": "Zombyra"
+  },
+  {
+   "id": "53038955",
+   "name": "Dark Paladin - Wave-Motion"
+  },
+  {
+   "id": "53481938",
+   "name": "Rokket Barrage"
+  },
+  {
+   "id": "53754391",
+   "name": "Thundercrash Snarecrow"
+  },
+  {
+   "id": "53770666",
+   "name": "Armament Reincarnation"
+  },
+  {
+   "id": "53904087",
+   "name": "Rahamu, Envoy of the Sacred Tome"
+  },
+  {
+   "id": "54077752",
+   "name": "Stare of the Snake Hair"
+  },
+  {
+   "id": "54171327",
+   "name": "Angelechy Disturbance"
+  },
+  {
+   "id": "54577949",
+   "name": "Witness of the Ancient"
+  },
+  {
+   "id": "54603525",
+   "name": "Clear Wing Synchro Dragon, Four Heavenly Dragons"
+  },
+  {
+   "id": "54641720",
+   "name": "Destiny HERO - Dreadnought Master"
+  },
+  {
+   "id": "54725177",
+   "name": "Galaxy-Eyes Photon Change Dragon"
+  },
+  {
+   "id": "55363218",
+   "name": "Cartoon Shade"
+  },
+  {
+   "id": "55393975",
+   "name": "Angelechy Destrier"
+  },
+  {
+   "id": "55585856",
+   "name": "Ms. Tick Call"
+  },
+  {
+   "id": "56034579",
+   "name": "GMX Chairman Kimridge"
+  },
+  {
+   "id": "56311997",
+   "name": "GMX - ALLOS"
+  },
+  {
+   "id": "56651978",
+   "name": "Elfnote Regina"
+  },
+  {
+   "id": "56725612",
+   "name": "Fairy Tail Ball"
+  },
+  {
+   "id": "56779694",
+   "name": "Armor Wizard Pazoo"
+  },
+  {
+   "id": "56838842",
+   "name": "Fiend Piece Golem"
+  },
+  {
+   "id": "57256127",
+   "name": "Shipping Archfiend"
+  },
+  {
+   "id": "57294268",
+   "name": "Aleister the Reminiscent"
+  },
+  {
+   "id": "57847269",
+   "name": "Clown Crew Matinee Operatics"
+  },
+  {
+   "id": "58036097",
+   "name": "Melffy Playtime Surprise"
+  },
+  {
+   "id": "58083496",
+   "name": "Odd-Eyes Override Dragon"
+  },
+  {
+   "id": "58809685",
+   "name": "Elfnotes: Quatrain of Succession"
+  },
+  {
+   "id": "58916810",
+   "name": "Crackle Blitzclique"
+  },
+  {
+   "id": "58995660",
+   "name": "Early Palm Gets the Win"
+  },
+  {
+   "id": "59011257",
+   "name": "Fallin' Cheatah"
+  },
+  {
+   "id": "59062857",
+   "name": "Angelechy Brilliant Move"
+  },
+  {
+   "id": "59106048",
+   "name": "Witchcrafter Seed"
+  },
+  {
+   "id": "59138498",
+   "name": "Martyr of the Sacred Beasts"
+  },
+  {
+   "id": "59921227",
+   "name": "Blitzclique Alternator"
+  },
+  {
+   "id": "60439482",
+   "name": "Regulus' Arrow"
+  },
+  {
+   "id": "60516416",
+   "name": "Possessed Destiny - Wynn"
+  },
+  {
+   "id": "60700283",
+   "name": "Tellarknight Cygnian"
+  },
+  {
+   "id": "60811211",
+   "name": "Trirealm Rift Darkness"
+  },
+  {
+   "id": "61033809",
+   "name": "Sky Thunder Trirealm Rift Yomi"
+  },
+  {
+   "id": "61082944",
+   "name": "Spiritual Power Recovery Potion"
+  },
+  {
+   "id": "61151074",
+   "name": "Sky Striker Mecha - Adil Saber"
+  },
+  {
+   "id": "61345801",
+   "name": "Void Unleashing"
+  },
+  {
+   "id": "62104532",
+   "name": "The Phantom Knights' Rank-Up-Magic Requiem"
+  },
+  {
+   "id": "62368221",
+   "name": "Ars Magna the Corruption and the Purification"
+  },
+  {
+   "id": "62542673",
+   "name": "Destiny HERO - Doom Overlord"
+  },
+  {
+   "id": "63111591",
+   "name": "Crow, the Carrion Cutpurse"
+  },
+  {
+   "id": "63250533",
+   "name": "Relinquished the Wicked Eye of Illusion"
+  },
+  {
+   "id": "63481713",
+   "name": "Siren Vortex of Atlantis"
+  },
+  {
+   "id": "63926180",
+   "name": "Sacred Spirit Sword Aiwass"
+  },
+  {
+   "id": "64049762",
+   "name": "Blitzclique - Breakaway"
+  },
+  {
+   "id": "64233143",
+   "name": "Daedalus Maelstrom"
+  },
+  {
+   "id": "64413994",
+   "name": "Stealth Angecradle"
+  },
+  {
+   "id": "64455720",
+   "name": "Ashtra's Web"
+  },
+  {
+   "id": "64603351",
+   "name": "Levia-Dragon of Atlantis - Daedalus"
+  },
+  {
+   "id": "64626565",
+   "name": "Dark Ceruvim Irisfil"
+  },
+  {
+   "id": "64972181",
+   "name": "Harpie Lady - Elegant Egotist"
+  },
+  {
+   "id": "65118318",
+   "name": "Foolish Graverobber"
+  },
+  {
+   "id": "65195679",
+   "name": "Trirealm Rift Judgment"
+  },
+  {
+   "id": "65302903",
+   "name": "Dominusteer Rosepamela"
+  },
+  {
+   "id": "65325949",
+   "name": "Kuzuha the Hex Ashtra"
+  },
+  {
+   "id": "65400671",
+   "name": "Crystron Halqifibrax Prism"
+  },
+  {
+   "id": "65424481",
+   "name": "Ekhajar, Descendant Dragon of the Ice Barrier"
+  },
+  {
+   "id": "65541655",
+   "name": "Red Nova Dragon - Burning Soul"
+  },
+  {
+   "id": "65785782",
+   "name": "Call of Atlantis"
+  },
+  {
+   "id": "65848113",
+   "name": "DoomZ XIII Over - Graflareio"
+  },
+  {
+   "id": "65861210",
+   "name": "Fallen Paradise of the Sacred Beasts"
+  },
+  {
+   "id": "65961304",
+   "name": "Kewl Tune B2B"
+  },
+  {
+   "id": "66122213",
+   "name": "Infernal Strike Fighter"
+  },
+  {
+   "id": "66206748",
+   "name": "Masked HERO Fountain"
+  },
+  {
+   "id": "66247039",
+   "name": "Mind Mirror Force"
+  },
+  {
+   "id": "66664203",
+   "name": "Cyber Dragon, the Luminous Mech Dragon"
+  },
+  {
+   "id": "66787942",
+   "name": "Predaplant Bal Teah"
+  },
+  {
+   "id": "67216732",
+   "name": "S-Force Nightcatcher"
+  },
+  {
+   "id": "67676619",
+   "name": "Assault Lion"
+  },
+  {
+   "id": "67803035",
+   "name": "Reincarnation of the Unchained"
+  },
+  {
+   "id": "67809530",
+   "name": "The Crimson King"
+  },
+  {
+   "id": "67886895",
+   "name": "Deep-Eyes White Dragon, the Blue Abyss"
+  },
+  {
+   "id": "68378605",
+   "name": "Vodnika the Fountain Spirit"
+  },
+  {
+   "id": "68508433",
+   "name": "Master Spirit Tech Force - Pendulum Ruler"
+  },
+  {
+   "id": "68625623",
+   "name": "Unchained Malevolent Magistrate Kamura"
+  },
+  {
+   "id": "68721020",
+   "name": "Malefic Force"
+  },
+  {
+   "id": "68798161",
+   "name": "Thoroughbred Elf"
+  },
+  {
+   "id": "69191257",
+   "name": "Jade Dragon Mech"
+  },
+  {
+   "id": "69678646",
+   "name": "Stellarnova Bonds"
+  },
+  {
+   "id": "69748261",
+   "name": "Witchcrafter Distortion"
+  },
+  {
+   "id": "69964858",
+   "name": "Witchcrafter Pupils"
+  },
+  {
+   "id": "70058649",
+   "name": "Clown Crew Soiree Operations"
+  },
+  {
+   "id": "70088809",
+   "name": "Fydraulis Harmonia"
+  },
+  {
+   "id": "70383419",
+   "name": "Invoked Baybarron"
+  },
+  {
+   "id": "70405001",
+   "name": "Black Luster Soldier - Soldier of Light and Darkness"
+  },
+  {
+   "id": "70488851",
+   "name": "Vidolium the Unstable Power Patron of Unity"
+  },
+  {
+   "id": "70522875",
+   "name": "Dragunity Lord - Georgius"
+  },
+  {
+   "id": "70686400",
+   "name": "Witchcrafter Terracottan"
+  },
+  {
+   "id": "71108540",
+   "name": "Invincible Demise Lord"
+  },
+  {
+   "id": "71155456",
+   "name": "Trirealm Rift of Sky Sheol"
+  },
+  {
+   "id": "71222649",
+   "name": "Twilight Specter Rayrage"
+  },
+  {
+   "id": "71275181",
+   "name": "Fifty Fifty?"
+  },
+  {
+   "id": "71645463",
+   "name": "Dragunity Quirinus"
+  },
+  {
+   "id": "71801447",
+   "name": "Enneacraft - Atil.SPIA"
+  },
+  {
+   "id": "71808988",
+   "name": "Blue-Eyes Ultimate Toon Dragon"
+  },
+  {
+   "id": "72278590",
+   "name": "Zenet Per Akh"
+  },
+  {
+   "id": "72321198",
+   "name": "Arcana Force XII - The Hangman"
+  },
+  {
+   "id": "72374522",
+   "name": "Thorn Fangs of Violet Poison"
+  },
+  {
+   "id": "72867001",
+   "name": "Commander Souza, Swordmaster"
+  },
+  {
+   "id": "72921536",
+   "name": "Comic Cat"
+  },
+  {
+   "id": "72978038",
+   "name": "\"Raise Moon\" the City that Never Sleeps"
+  },
+  {
+   "id": "73090586",
+   "name": "Cielo, the Night Sky of Raise Moon - No More Bets!"
+  },
+  {
+   "id": "73218792",
+   "name": "Junk Meister"
+  },
+  {
+   "id": "73320394",
+   "name": "Evil Lord - Zorc"
+  },
+  {
+   "id": "73443672",
+   "name": "Underworld Circle"
+  },
+  {
+   "id": "73490148",
+   "name": "Tauzenet Wadjet"
+  },
+  {
+   "id": "73496100",
+   "name": "Gagaga Illusion"
+  },
+  {
+   "id": "74212164",
+   "name": "Raise Moon Blade Shayna"
+  },
+  {
+   "id": "74378580",
+   "name": "GMX Lab #5"
+  },
+  {
+   "id": "74405783",
+   "name": "The Three Champions of Swordsoul"
+  },
+  {
+   "id": "74665150",
+   "name": "Decode Talker Integration"
+  },
+  {
+   "id": "75191028",
+   "name": "GMX - COMPREX"
+  },
+  {
+   "id": "75518330",
+   "name": "Barian's Hope"
+  },
+  {
+   "id": "75527221",
+   "name": "Deadly Zombie Breath"
+  },
+  {
+   "id": "75787708",
+   "name": "Odd-Eyes Pendulum Dragon of the Four Heavenly Dragons"
+  },
+  {
+   "id": "75934716",
+   "name": "Cielo, the Veil of Raise Moon"
+  },
+  {
+   "id": "75983808",
+   "name": "Chaos Mystic Box"
+  },
+  {
+   "id": "76213610",
+   "name": "Officiator of Doom Samuel"
+  },
+  {
+   "id": "76334960",
+   "name": "Invocation - \"Grail\""
+  },
+  {
+   "id": "76504386",
+   "name": "Number 39: Utopia, Emissary of Light"
+  },
+  {
+   "id": "76548531",
+   "name": "Gorgonic Umbral Horror"
+  },
+  {
+   "id": "76630812",
+   "name": "Graceful & Skull Dice"
+  },
+  {
+   "id": "76636978",
+   "name": "Stardust Dragon - Victim Sanctuary"
+  },
+  {
+   "id": "76660178",
+   "name": "Fisherman of Legend"
+  },
+  {
+   "id": "77157846",
+   "name": "Shade the Obscure"
+  },
+  {
+   "id": "77435268",
+   "name": "Checkker"
+  },
+  {
+   "id": "77456448",
+   "name": "Spell Shattering Sword"
+  },
+  {
+   "id": "77482666",
+   "name": "Swiftwind Panther Warrior"
+  },
+  {
+   "id": "77699839",
+   "name": "Crocodile"
+  },
+  {
+   "id": "77856460",
+   "name": "Helping Robo for Underwater Combat"
+  },
+  {
+   "id": "78021082",
+   "name": "Weaver of Fairy Tails"
+  },
+  {
+   "id": "78114463",
+   "name": "Solemn Accusation"
+  },
+  {
+   "id": "78449284",
+   "name": "The Phantom Knights of Malevolent Scythe"
+  },
+  {
+   "id": "78579058",
+   "name": "Levia-Dragoon - Daedalus"
+  },
+  {
+   "id": "78744660",
+   "name": "Archfiend Matriarch"
+  },
+  {
+   "id": "79561872",
+   "name": "Melffys' Joyful Surprise"
+  },
+  {
+   "id": "79621896",
+   "name": "Archfiend's Origin"
+  },
+  {
+   "id": "79791695",
+   "name": "CXyz Hope Chaos Barian Dragon"
+  },
+  {
+   "id": "79936051",
+   "name": "Northern Crossfire"
+  },
+  {
+   "id": "79966218",
+   "name": "Princess Dracaena, the Thirsting Tree"
+  },
+  {
+   "id": "80222045",
+   "name": "Breeze the Electrovore of Rkunas"
+  },
+  {
+   "id": "80461466",
+   "name": "Great Mammoth of the Netherworld"
+  },
+  {
+   "id": "80565021",
+   "name": "Angelechy Opening to e4"
+  },
+  {
+   "id": "80635735",
+   "name": "Invoked De Anima"
+  },
+  {
+   "id": "80749819",
+   "name": "Call of the Forgotten"
+  },
+  {
+   "id": "80843006",
+   "name": "Mixousia the Confounder"
+  },
+  {
+   "id": "81101309",
+   "name": "Night Train Blue Traveler"
+  },
+  {
+   "id": "81684048",
+   "name": "Pumpking the King of Grave Ghosts"
+  },
+  {
+   "id": "81758313",
+   "name": "Myriaday Dragon"
+  },
+  {
+   "id": "81797573",
+   "name": "Angelechy Enlisted"
+  },
+  {
+   "id": "81965543",
+   "name": "Distrust Paranoia"
+  },
+  {
+   "id": "82119326",
+   "name": "Tails of the Fairy Tails"
+  },
+  {
+   "id": "82159583",
+   "name": "Clown Crew Biancaviso"
+  },
+  {
+   "id": "82323997",
+   "name": "Red Nova Dragon/Assault Mode"
+  },
+  {
+   "id": "82344137",
+   "name": "Phara the Primordial Goddess"
+  },
+  {
+   "id": "82370493",
+   "name": "Predaplant Daredevil"
+  },
+  {
+   "id": "82692552",
+   "name": "Coralianectes, the Luminous Cradle Dragon"
+  },
+  {
+   "id": "82706696",
+   "name": "GMX - VELOX"
+  },
+  {
+   "id": "82933935",
+   "name": "Mimighoul Flower"
+  },
+  {
+   "id": "82970905",
+   "name": "Father Grizzly"
+  },
+  {
+   "id": "82997779",
+   "name": "Archfiend's Usurpation"
+  },
+  {
+   "id": "83232904",
+   "name": "Clown Crew Malabarisme"
+  },
+  {
+   "id": "83319154",
+   "name": "Annihilate Retroglight"
+  },
+  {
+   "id": "83445539",
+   "name": "Darkness Resonator"
+  },
+  {
+   "id": "83528184",
+   "name": "GMX Associate Noma"
+  },
+  {
+   "id": "83566725",
+   "name": "The Phantom Knights of Doomed Soleret"
+  },
+  {
+   "id": "84031736",
+   "name": "Clown Crew Finale"
+  },
+  {
+   "id": "84054556",
+   "name": "DoomZ Command \"A.D.R.A.S.T.E.I.A.\""
+  },
+  {
+   "id": "84288367",
+   "name": "Aiwass, Divine Spirit of the Law"
+  },
+  {
+   "id": "84401954",
+   "name": "Grain Blitzclique"
+  },
+  {
+   "id": "84512726",
+   "name": "Zenet Prophet - Nefertari"
+  },
+  {
+   "id": "85121747",
+   "name": "Final Journey of the Soul"
+  },
+  {
+   "id": "85257384",
+   "name": "The Phantom Knights of Umbrage Veil"
+  },
+  {
+   "id": "85482105",
+   "name": "Speedroid Darumaknocker"
+  },
+  {
+   "id": "85523502",
+   "name": "Whisker Blitzclique"
+  },
+  {
+   "id": "86132414",
+   "name": "Abyss of the Sacred Beasts"
+  },
+  {
+   "id": "86319972",
+   "name": "Gamma Summon"
+  },
+  {
+   "id": "86343295",
+   "name": "Archfiend of Gilfer - Flame Attack"
+  },
+  {
+   "id": "86457955",
+   "name": "Angelechy Opposition"
+  },
+  {
+   "id": "86673403",
+   "name": "Angelechy Seneschal"
+  },
+  {
+   "id": "87395095",
+   "name": "Half Slice of Nickeline"
+  },
+  {
+   "id": "87465873",
+   "name": "Attribute Rejection"
+  },
+  {
+   "id": "87758525",
+   "name": "Favorite HERO Shining Flare Wingman"
+  },
+  {
+   "id": "87818869",
+   "name": "Hyper Rank-Up-Magic Ultimate Force"
+  },
+  {
+   "id": "88288421",
+   "name": "Field Power Bonus"
+  },
+  {
+   "id": "88300002",
+   "name": "Evil Dragon Cards - Earth Dragon"
+  },
+  {
+   "id": "88570003",
+   "name": "Dark Magician, the Pharaoh's Servant"
+  },
+  {
+   "id": "88931417",
+   "name": "Gatling Ogre"
+  },
+  {
+   "id": "89027418",
+   "name": "Imposter Shift"
+  },
+  {
+   "id": "89176044",
+   "name": "Predaprimitive"
+  },
+  {
+   "id": "89693655",
+   "name": "Subspace Battle"
+  },
+  {
+   "id": "89753095",
+   "name": "Lightning Crash"
+  },
+  {
+   "id": "89875646",
+   "name": "Triple Borrel Launch"
+  },
+  {
+   "id": "89913287",
+   "name": "Adamancipator Risen - Tiamite"
+  },
+  {
+   "id": "90011273",
+   "name": "Breachborrel Dragon"
+  },
+  {
+   "id": "90091224",
+   "name": "Dark Rebellion Xyz Dragon, Four Heavenly Dragons"
+  },
+  {
+   "id": "90098000",
+   "name": "Warchief of Atlantis"
+  },
+  {
+   "id": "90249148",
+   "name": "Dark Necrofear, the Ruler of Demise"
+  },
+  {
+   "id": "90728287",
+   "name": "Ars Magna \"Philosophorum\""
+  },
+  {
+   "id": "90875418",
+   "name": "Theorealized Medius"
+  },
+  {
+   "id": "91215724",
+   "name": "Junk Armor"
+  },
+  {
+   "id": "91237821",
+   "name": "Clown Crew Fiends"
+  },
+  {
+   "id": "91444835",
+   "name": "Ashtra's Howl"
+  },
+  {
+   "id": "91461780",
+   "name": "Blue-Eyes Ultimate Dragon, the God-Surpassing Servant"
+  },
+  {
+   "id": "91583378",
+   "name": "Exodia the Obliterator"
+  },
+  {
+   "id": "91714772",
+   "name": "Galaxy Defense Robot Orbital 7"
+  },
+  {
+   "id": "92058902",
+   "name": "Future Fusion Nova"
+  },
+  {
+   "id": "92359409",
+   "name": "Superdreadnought Rail Cannon Gustav Rocket"
+  },
+  {
+   "id": "92447211",
+   "name": "Long-Tailed Black Horse"
+  },
+  {
+   "id": "92517928",
+   "name": "Galaxy-Eyes Antimatter Dragon"
+  },
+  {
+   "id": "92936364",
+   "name": "Red Dragon Archfiend's Chains"
+  },
+  {
+   "id": "93023136",
+   "name": "Fallen Angel in Darkness"
+  },
+  {
+   "id": "93172951",
+   "name": "Clown Crew Meteor"
+  },
+  {
+   "id": "93871599",
+   "name": "The Guiding Flute of Summoning Dragons"
+  },
+  {
+   "id": "93898740",
+   "name": "Unchained Syncretism"
+  },
+  {
+   "id": "94014327",
+   "name": "Unchained Enma Lord Yama"
+  },
+  {
+   "id": "94384774",
+   "name": "Ebisu Shinsen Matsuri"
+  },
+  {
+   "id": "94467314",
+   "name": "Rain of Frogs"
+  },
+  {
+   "id": "94641726",
+   "name": "Storm-Bane Dragon Destorbim"
+  },
+  {
+   "id": "95072744",
+   "name": "Tohushaddoll Grysta"
+  },
+  {
+   "id": "95136979",
+   "name": "Unchained Ogre Shara"
+  },
+  {
+   "id": "95506252",
+   "name": "Black Jack the Shadow-Armored Knight"
+  },
+  {
+   "id": "95589901",
+   "name": "Mischief of the Wolves"
+  },
+  {
+   "id": "95915457",
+   "name": "Mirror Barrier"
+  },
+  {
+   "id": "96205925",
+   "name": "Trirealm Rift Gospel"
+  },
+  {
+   "id": "96228804",
+   "name": "Regulus, the Prince of Endymion"
+  },
+  {
+   "id": "96345184",
+   "name": "Infinity of the Sacred Beasts - Raviel, Lord of Phantasms"
+  },
+  {
+   "id": "97254001",
+   "name": "Summer"
+  },
+  {
+   "id": "97462632",
+   "name": "Griffoh"
+  },
+  {
+   "id": "97818130",
+   "name": "Black Skull Dragon, the Archfiend of Unity"
+  },
+  {
+   "id": "98476659",
+   "name": "Pot of Sloth"
+  },
+  {
+   "id": "98518633",
+   "name": "Kerolia the Frolicsome"
+  },
+  {
+   "id": "98684220",
+   "name": "Black Chaos"
+  },
+  {
+   "id": "98931282",
+   "name": "Destiny HERO - Dreadnought Servant"
+  },
+  {
+   "id": "99199231",
+   "name": "S-Force Origin"
+  },
+  {
+   "id": "99311889",
+   "name": "Prohibitive Power Patron Purview - Vilaea"
+  },
+  {
+   "id": "99398682",
+   "name": "Crimson Call"
+  },
+  {
+   "id": "99505609",
+   "name": "Bingo!"
+  },
+  {
+   "id": "99522650",
+   "name": "Silent Magician, the Silent Fighter"
+  },
+  {
+   "id": "99630221",
+   "name": "Tigress in Silent Repose"
+  },
+  {
+   "id": "99753860",
+   "name": "Ars Magna the Division and the Union"
+  },
+  {
+   "id": "100200298",
+   "name": "Counter Spell \"Negate Attack\""
+  },
+  {
+   "id": "100350263",
+   "name": "The Dark Dragon Lord of Ultum"
+  },
+  {
+   "id": "100460001",
+   "name": "Pritima the Infinity Cubic Vessel"
+  },
+  {
+   "id": "100460002",
+   "name": "Alditia Hell Blaze the Burning Cubic Lord"
+  },
+  {
+   "id": "100460003",
+   "name": "Abyss Vagrada the Abyssal Cubic Lord"
+  },
+  {
+   "id": "100460004",
+   "name": "Divine Anima Infinity the Creation Cubic Overlord"
+  },
+  {
+   "id": "100460006",
+   "name": "Cubic Bodhi"
+  },
+  {
+   "id": "100460026",
+   "name": "Marincess Azuri"
+  },
+  {
+   "id": "100460027",
+   "name": "Marincess Ulpis"
+  },
+  {
+   "id": "100460028",
+   "name": "Aqua Leviathan @Marincess"
+  },
+  {
+   "id": "100460030",
+   "name": "Marincess Truth Heart"
+  },
+  {
+   "id": "100460031",
+   "name": "Marincess Reef Lagoon"
+  },
+  {
+   "id": "100461000",
+   "name": "Diabellstar, the Seeker of Sinful Spoils"
+  },
+  {
+   "id": "100461001",
+   "name": "Buster Blader, the One Who Surpasses the Limits"
+  },
+  {
+   "id": "100461002",
+   "name": "Wicked Canon"
+  },
+  {
+   "id": "100461003",
+   "name": "Hope for the Future"
+  },
+  {
+   "id": "100462001",
+   "name": "Trinitas Magistus"
+  },
+  {
+   "id": "100462002",
+   "name": "Invoked Magistus Heruvim"
+  },
+  {
+   "id": "100462004",
+   "name": "Magistus Witchcrafter Aruru"
+  },
+  {
+   "id": "100463002",
+   "name": "Gandora-X the Blackmetal Rampaging Dragon"
+  },
+  {
+   "id": "100463005",
+   "name": "Time Chain"
+  },
+  {
+   "id": "100463008",
+   "name": "Warrior's Devotion"
+  },
+  {
+   "id": "101303084",
+   "name": "Mercurium the Living Quicksilver"
+  },
+  {
+   "id": "101304014",
+   "name": "Elvennotes Regina"
+  },
+  {
+   "id": "101403001",
+   "name": "Helpoemer, Chanter of the Sun God"
+  },
+  {
+   "id": "101403002",
+   "name": "Makyura, Destructor of the Sun God"
+  },
+  {
+   "id": "101403003",
+   "name": "Gil Garth, Exterminator of the Sun God"
+  },
+  {
+   "id": "101403004",
+   "name": "Viser Des Shock, Tormentor of the Sun God"
+  },
+  {
+   "id": "101403005",
+   "name": "Amazoness Chain Master - Brink of Death Chain Dance"
+  },
+  {
+   "id": "101403006",
+   "name": "Amazoness Fighter - Instant Kill Dance"
+  },
+  {
+   "id": "101403007",
+   "name": "Amazoness Spellcaster - Forbidden Spell Dance"
+  },
+  {
+   "id": "101403008",
+   "name": "Harpie Lady - Alluring Dance"
+  },
+  {
+   "id": "101403009",
+   "name": "Purifire of the Winter Raven's Forest"
+  },
+  {
+   "id": "101403010",
+   "name": "Mart, Knight of the Winter Raven"
+  },
+  {
+   "id": "101403011",
+   "name": "Anu, Knight of the Winter Raven"
+  },
+  {
+   "id": "101403012",
+   "name": "Sinful Spoils of the Winter Raven's Forest"
+  },
+  {
+   "id": "101403013",
+   "name": "Salamangreat Markhor"
+  },
+  {
+   "id": "101403014",
+   "name": "Salamangreat Bastella"
+  },
+  {
+   "id": "101403015",
+   "name": "Primrose the Twin Rikka Fairy"
+  },
+  {
+   "id": "101403016",
+   "name": "Rikka Black Princess"
+  },
+  {
+   "id": "101403017",
+   "name": "Invincible Rocket Warrior"
+  },
+  {
+   "id": "101403018",
+   "name": "Ashtrata Tamayori"
+  },
+  {
+   "id": "101403019",
+   "name": "Rampant Wings of Atlantis"
+  },
+  {
+   "id": "101403020",
+   "name": "Bunnillin: Mocha MOD"
+  },
+  {
+   "id": "101403021",
+   "name": "Heretic Eradicator"
+  },
+  {
+   "id": "101403022",
+   "name": "Nightmare Twinkle"
+  },
+  {
+   "id": "101403023",
+   "name": "The Secret Crane Princess Who Returns A Favor"
+  },
+  {
+   "id": "101403024",
+   "name": "Reindsurm Amurusa"
+  },
+  {
+   "id": "101403025",
+   "name": "Reindsurm Luvian"
+  },
+  {
+   "id": "101403026",
+   "name": "Reindsurm Carcasas"
+  },
+  {
+   "id": "101403027",
+   "name": "Reindsurm Gigalovendra"
+  },
+  {
+   "id": "101403028",
+   "name": "Reindsurm Giriakarma"
+  },
+  {
+   "id": "101403029",
+   "name": "Javelin Beetle of the Alliance"
+  },
+  {
+   "id": "101403030",
+   "name": "The Winged Dragon of Ra, Sun God of Darkness"
+  },
+  {
+   "id": "101403031",
+   "name": "Lava Golem, Steelcage of the Sun God"
+  },
+  {
+   "id": "101403032",
+   "name": "Amazoness Swordmaster"
+  },
+  {
+   "id": "101403033",
+   "name": "Triangle Ecstasy Harpie Lady Sisters"
+  },
+  {
+   "id": "101403034",
+   "name": "Diabellze, Heiress of the Winter Raven's Forest"
+  },
+  {
+   "id": "101403035",
+   "name": "Omega Vidolium the Power Patron of Heaven's End"
+  },
+  {
+   "id": "101403036",
+   "name": "The Legendary Insect Queen"
+  },
+  {
+   "id": "101403037",
+   "name": "Zaltys, Knight of the Winter Raven"
+  },
+  {
+   "id": "101403038",
+   "name": "Aitvaras, Knight of the Winter Raven"
+  },
+  {
+   "id": "101403039",
+   "name": "Ashtrama Yoami"
+  },
+  {
+   "id": "101403040",
+   "name": "Lethargisaurus"
+  },
+  {
+   "id": "101403041",
+   "name": "Teardrop the Rikka Empress"
+  },
+  {
+   "id": "101403042",
+   "name": "Rikka Empress Strenna"
+  },
+  {
+   "id": "101403043",
+   "name": "Number 96: Dark Manipulator"
+  },
+  {
+   "id": "101403044",
+   "name": "Karin the Celestial Sage of the Highest Heights"
+  },
+  {
+   "id": "101403045",
+   "name": "Ars Magna Artmage"
+  },
+  {
+   "id": "101403046",
+   "name": "Ars Magna DoomZ"
+  },
+  {
+   "id": "101403047",
+   "name": "Ars Magna Elfnote"
+  },
+  {
+   "id": "101403049",
+   "name": "Codaedalus"
+  },
+  {
+   "id": "101403050",
+   "name": "Necromancer of Dragon Magic"
+  },
+  {
+   "id": "101403051",
+   "name": "The Immortal Sun God"
+  },
+  {
+   "id": "101403052",
+   "name": "The Sun God Leading Down into Darkness"
+  },
+  {
+   "id": "101403053",
+   "name": "Elegant Tri-Mirror"
+  },
+  {
+   "id": "101403054",
+   "name": "Harpie & Amazoness Rakshasa Formation"
+  },
+  {
+   "id": "101403055",
+   "name": "Reindsurm Conquest"
+  },
+  {
+   "id": "101403056",
+   "name": "Reindsurm Carnation"
+  },
+  {
+   "id": "101403057",
+   "name": "Reindsurm Butterfly"
+  },
+  {
+   "id": "101403058",
+   "name": "Reindsurm Practice"
+  },
+  {
+   "id": "101403059",
+   "name": "Deep Forest of the Winter Raven"
+  },
+  {
+   "id": "101403060",
+   "name": "Power Patron Portal Plugging -Sword of Mutual Destruction-"
+  },
+  {
+   "id": "101403061",
+   "name": "Ars Magna Academic Arcane Apparition Acropolis"
+  },
+  {
+   "id": "101403063",
+   "name": "Salamangreat Gearblade"
+  },
+  {
+   "id": "101403064",
+   "name": "Rikka June Moon"
+  },
+  {
+   "id": "101403065",
+   "name": "Chaos Barian's Change"
+  },
+  {
+   "id": "101403066",
+   "name": "Bunnillin Extract"
+  },
+  {
+   "id": "101403067",
+   "name": "Power of the Duelist"
+  },
+  {
+   "id": "101403068",
+   "name": "The Pyramid of Kepher"
+  },
+  {
+   "id": "101403069",
+   "name": "Card Crawl"
+  },
+  {
+   "id": "101403070",
+   "name": "Castle of Vampire"
+  },
+  {
+   "id": "101403071",
+   "name": "Autumn"
+  },
+  {
+   "id": "101403072",
+   "name": "Sun God Domination"
+  },
+  {
+   "id": "101403073",
+   "name": "Egyptian God Slime, Protector of the Sun God"
+  },
+  {
+   "id": "101403074",
+   "name": "Amazoness Dramatic Rescue"
+  },
+  {
+   "id": "101403075",
+   "name": "Eyelluring Mirror Wall"
+  },
+  {
+   "id": "101403076",
+   "name": "Reindsurm Encounter"
+  },
+  {
+   "id": "101403077",
+   "name": "Splendor of the Winter Raven Witch"
+  },
+  {
+   "id": "101403078",
+   "name": "Illusion of the Winter Raven Witch"
+  },
+  {
+   "id": "101403079",
+   "name": "Theorealize Ephemeral Lull"
+  },
+  {
+   "id": "101403080",
+   "name": "Bunnillin Soft"
+  },
+  {
+   "id": "149694341",
+   "name": "???"
+  }
+ ],
+ "setsMatchedByFallback": [
+  {
+   "code": "YS15",
+   "id": "2-player-starter-deck-yuya-declan",
+   "name": "2-Player Starter Deck: Yuya & Declan",
+   "prefix": "YS15-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "2-Player Starter Deck Yuya & Declan"
+  },
+  {
+   "code": "CT03",
+   "id": "collectible-tins-2006-wave-2",
+   "name": "Collectible Tins 2006 Wave 2",
+   "prefix": "CT03-EN",
+   "rule": "prefix",
+   "ygojsonName": "Collectible Tins 2006"
+  },
+  {
+   "code": "DCR",
+   "id": "dark-crisis",
+   "name": "Dark Crisis",
+   "prefix": "DCR-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Dark Crisis"
+  },
+  {
+   "code": "DCR",
+   "id": "dark-crisis-25th-anniversary-edition",
+   "name": "Dark Crisis (25th Anniversary Edition)",
+   "prefix": "DCR-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Dark Crisis"
+  },
+  {
+   "code": "DEM1",
+   "id": "demo-pack",
+   "name": "Demo Pack",
+   "prefix": "DEM1-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Demo Deck"
+  },
+  {
+   "code": "DMG",
+   "id": "duel-master-s-guide-promotional-cards",
+   "name": "Duel Master's Guide promotional cards",
+   "prefix": "DMG-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Duel Master's Guide"
+  },
+  {
+   "code": "DL14",
+   "id": "duelist-league-14-participation-cards",
+   "name": "Duelist League 14 participation cards",
+   "prefix": "DL14-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Duelist League 14"
+  },
+  {
+   "code": "DL16",
+   "id": "duelist-league-16-participation-cards",
+   "name": "Duelist League 16 participation cards",
+   "prefix": "DL16-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Duelist League 16"
+  },
+  {
+   "code": "DL17",
+   "id": "duelist-league-17-participation-cards",
+   "name": "Duelist League 17 participation cards",
+   "prefix": "DL17-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Duelist League 17"
+  },
+  {
+   "code": "DL18",
+   "id": "duelist-league-18-participation-cards",
+   "name": "Duelist League 18 participation cards",
+   "prefix": "DL18-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Duelist League 18"
+  },
+  {
+   "code": "DL09",
+   "id": "duelist-league-2010-participation-cards",
+   "name": "Duelist League 2010 participation cards",
+   "prefix": "DL09-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Duelist League 2010"
+  },
+  {
+   "code": "EFC1",
+   "id": "efootball-collaboration-cards",
+   "name": "EFootball collaboration cards",
+   "prefix": "EFC1-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "eFootball collaboration cards"
+  },
+  {
+   "code": "FFSE",
+   "id": "fire-fists-special-edition",
+   "name": "Fire Fists: Special Edition",
+   "prefix": "FFSE-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Fire Fists Special Edition"
+  },
+  {
+   "code": "HASE",
+   "id": "hidden-arsenal-special-edition",
+   "name": "Hidden Arsenal: Special Edition",
+   "prefix": "HASE-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Hidden Arsenal Special Edition"
+  },
+  {
+   "code": "IOC",
+   "id": "invasion-of-chaos",
+   "name": "Invasion of Chaos",
+   "prefix": "IOC-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Invasion of Chaos"
+  },
+  {
+   "code": "INOV",
+   "id": "invasion-vengeance-special-edition",
+   "name": "Invasion: Vengeance: Special Edition",
+   "prefix": "INOV-ENSE",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Invasion: Vengeance Special Edition"
+  },
+  {
+   "code": "JOTL",
+   "id": "judgment-of-the-light-sneak-peek-participation-card",
+   "name": "Judgment of the Light Sneak Peek Participation Card",
+   "prefix": "JOTL-ENSP",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Judgment of the Light Sneak Peek participation card"
+  },
+  {
+   "code": "EP1",
+   "id": "kids-wb-duel-of-destiny-promotional-card",
+   "name": "Kids WB Duel of Destiny promotional card",
+   "prefix": "EP1-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Kids' WB! Duel of Destiny promotional card"
+  },
+  {
+   "code": "LOB",
+   "id": "legend-of-blue-eyes-white-dragon",
+   "name": "Legend of Blue Eyes White Dragon",
+   "prefix": "LOB-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Legend of Blue Eyes White Dragon"
+  },
+  {
+   "code": "LOB",
+   "id": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition",
+   "name": "Legend of Blue Eyes White Dragon (25th Anniversary Edition)",
+   "prefix": "LOB-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Legend of Blue Eyes White Dragon"
+  },
+  {
+   "code": "LC03",
+   "id": "legendary-collection-3-yugi-s-world",
+   "name": "Legendary Collection 3: Yugi's World",
+   "prefix": "LC03-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Legendary Collection 3: Yugi’s World"
+  },
+  {
+   "code": "TYL",
+   "id": "make-a-wish-foundation-promotional-card",
+   "name": "Make-A-Wish Foundation promotional card",
+   "prefix": "TYL-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Make-A-Wish Foundation"
+  },
+  {
+   "code": "MACR",
+   "id": "maximum-crisis-special-edition",
+   "name": "Maximum Crisis: Special Edition",
+   "prefix": "MACR-ENSE",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Maximum Crisis Special Edition"
+  },
+  {
+   "code": "MRD",
+   "id": "metal-raiders",
+   "name": "Metal Raiders",
+   "prefix": "MRD-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Metal Raiders"
+  },
+  {
+   "code": "MRD",
+   "id": "metal-raiders-25th-anniversary-edition",
+   "name": "Metal Raiders (25th Anniversary Edition)",
+   "prefix": "MRD-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Metal Raiders"
+  },
+  {
+   "code": "PSV",
+   "id": "pharaoh-s-servant",
+   "name": "Pharaoh's Servant",
+   "prefix": "PSV-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Pharaoh's Servant"
+  },
+  {
+   "code": "PSV",
+   "id": "pharaoh-s-servant-25th-anniversary-edition",
+   "name": "Pharaoh's Servant (25th Anniversary Edition)",
+   "prefix": "PSV-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Pharaoh's Servant"
+  },
+  {
+   "code": "PRC1",
+   "id": "premium-collection-tin",
+   "name": "Premium Collection Tin",
+   "prefix": "PRC1-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Premium Collection"
+  },
+  {
+   "code": "PP02",
+   "id": "premium-pack-2-tcg",
+   "name": "Premium Pack 2 (TCG)",
+   "prefix": null,
+   "rule": "yugipedia_name",
+   "ygojsonName": "Premium Pack 2"
+  },
+  {
+   "code": "PP01",
+   "id": "premium-pack-tcg",
+   "name": "Premium Pack (TCG)",
+   "prefix": null,
+   "rule": "yugipedia_name",
+   "ygojsonName": "Premium Pack"
+  },
+  {
+   "code": "RATE",
+   "id": "raging-tempest-special-edition",
+   "name": "Raging Tempest: Special Edition",
+   "prefix": "RATE-ENSE",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Raging Tempest Special Edition"
+  },
+  {
+   "code": "SHSP",
+   "id": "shadow-specters-special-edition",
+   "name": "Shadow Specters: Special Edition",
+   "prefix": "SHSP-ENSE",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Shadow Specters Special Edition"
+  },
+  {
+   "code": "SHVI",
+   "id": "shining-victories-special-edition",
+   "name": "Shining Victories: Special Edition",
+   "prefix": "SHVI-ENSE",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Shining Victories Special Edition"
+  },
+  {
+   "code": "SJC",
+   "id": "shonen-jump-championship-2004-prize-card",
+   "name": "Shonen Jump Championship 2004 Prize Card",
+   "prefix": "SJC-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Championship 2004"
+  },
+  {
+   "code": "SJC",
+   "id": "shonen-jump-championship-2005-prize-card",
+   "name": "Shonen Jump Championship 2005 Prize Card",
+   "prefix": "SJC-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Championship 2005"
+  },
+  {
+   "code": "SJC",
+   "id": "shonen-jump-championship-2006-prize-card",
+   "name": "Shonen Jump Championship 2006 Prize Card",
+   "prefix": "SJC-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Championship 2006"
+  },
+  {
+   "code": "SJCS",
+   "id": "shonen-jump-championship-2007-prize-card-a",
+   "name": "Shonen Jump Championship 2007 Prize Card A",
+   "prefix": "SJCS-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Championship 2007 A"
+  },
+  {
+   "code": "SJCS",
+   "id": "shonen-jump-championship-2007-prize-card-b",
+   "name": "Shonen Jump Championship 2007 Prize Card B",
+   "prefix": "SJCS-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Championship 2007 B"
+  },
+  {
+   "code": "SJCS",
+   "id": "shonen-jump-championship-2008-prize-card",
+   "name": "Shonen Jump Championship 2008 Prize Card",
+   "prefix": "SJCS-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Championship 2008"
+  },
+  {
+   "code": "SJCS",
+   "id": "shonen-jump-championship-2009-prize-card",
+   "name": "Shonen Jump Championship 2009 Prize Card",
+   "prefix": "SJCS-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Championship 2009"
+  },
+  {
+   "code": "JMP",
+   "id": "shonen-jump-vol-1-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 1, Issue 1 promotional card",
+   "prefix": "JMP-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 1 #1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-10-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 10, Issue 1 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 10, Issue 1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-10-issue-3-promotional-card",
+   "name": "Shonen Jump Vol. 10, Issue 3 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 10, Issue 3"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-10-issue-4-promotional-card",
+   "name": "Shonen Jump Vol. 10, Issue 4 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 10, Issue 4"
+  },
+  {
+   "code": "JMP",
+   "id": "shonen-jump-vol-2-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 2, Issue 1 promotional card",
+   "prefix": "JMP-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 2, Issue 1"
+  },
+  {
+   "code": "JMP",
+   "id": "shonen-jump-vol-3-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 3, Issue 1 promotional card",
+   "prefix": "JMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 3, Issue 1"
+  },
+  {
+   "code": "JMP",
+   "id": "shonen-jump-vol-4-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 4, Issue 1 promotional card",
+   "prefix": "JMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 4, Issue 1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-4-issue-11-promotional-card",
+   "name": "Shonen Jump Vol. 4, Issue 11 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 4, Issue 11"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-4-issue-12-promotional-card",
+   "name": "Shonen Jump Vol. 4, Issue 12 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 4, Issue 12"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-5-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 5, Issue 1 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 5 #1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-5-issue-11-promotional-card",
+   "name": "Shonen Jump Vol. 5, Issue 11 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 5, Issue 11"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-5-issue-4-promotional-card",
+   "name": "Shonen Jump Vol. 5, Issue 4 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 5, Issue 4"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-5-issue-6-promotional-card",
+   "name": "Shonen Jump Vol. 5, Issue 6 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 5, Issue 6"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-5-issue-9-promotional-card",
+   "name": "Shonen Jump Vol. 5, Issue 9 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 5, Issue 9"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-6-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 6, Issue 1 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 6, Issue 1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-6-issue-12-promotional-card",
+   "name": "Shonen Jump Vol. 6, Issue 12 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 6, Issue 12"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-6-issue-3-promotional-card",
+   "name": "Shonen Jump Vol. 6, Issue 3 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 6, Issue 3"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-6-issue-5-promotional-card",
+   "name": "Shonen Jump Vol. 6, Issue 5 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 6, Issue 5"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-6-issue-9-promotional-card",
+   "name": "Shonen Jump Vol. 6, Issue 9 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 6, Issue 9"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-7-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 7, Issue 1 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 7, Issue 1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-7-issue-11-promotional-card",
+   "name": "Shonen Jump Vol. 7, Issue 11 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 7, Issue 11"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-7-issue-3-promotional-card",
+   "name": "Shonen Jump Vol. 7, Issue 3 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 7, Issue 3"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-7-issue-6-promotional-card",
+   "name": "Shonen Jump Vol. 7, Issue 6 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 7, Issue 6"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-7-issue-9-promotional-card",
+   "name": "Shonen Jump Vol. 7, Issue 9 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 7, Issue 9"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-8-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 8, Issue 1 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 8, Issue 1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-8-issue-11-promotional-card",
+   "name": "Shonen Jump Vol. 8, Issue 11 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 8, Issue 11"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-8-issue-3-promotional-card",
+   "name": "Shonen Jump Vol. 8, Issue 3 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 8, Issue 3"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-8-issue-5-promotional-card",
+   "name": "Shonen Jump Vol. 8, Issue 5 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 8, Issue 5"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-8-issue-7-promotional-card",
+   "name": "Shonen Jump Vol. 8, Issue 7 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 8, Issue 7"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-8-issue-9-promotional-card",
+   "name": "Shonen Jump Vol. 8, Issue 9 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 8, Issue 9"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-9-issue-1-promotional-card",
+   "name": "Shonen Jump Vol. 9, Issue 1 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 9, Issue 1"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-9-issue-10-promotional-card",
+   "name": "Shonen Jump Vol. 9, Issue 10 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 9, Issue 10"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-9-issue-3-promotional-card",
+   "name": "Shonen Jump Vol. 9, Issue 3 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 9, Issue 3"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-9-issue-4-promotional-card",
+   "name": "Shonen Jump Vol. 9, Issue 4 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 9, Issue 4"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-9-issue-6-promotional-card",
+   "name": "Shonen Jump Vol. 9, Issue 6 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 9, Issue 6"
+  },
+  {
+   "code": "JUMP",
+   "id": "shonen-jump-vol-9-issue-8-promotional-card",
+   "name": "Shonen Jump Vol. 9, Issue 8 promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump Vol. 9, Issue 8"
+  },
+  {
+   "code": "YS14",
+   "id": "space-time-showdown-power-up-pack",
+   "name": "Space-Time Showdown Power-Up Pack",
+   "prefix": "YS14-ENA",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Super Starter Space-Time Showdown Power-Up Pack"
+  },
+  {
+   "code": "SRL",
+   "id": "spell-ruler",
+   "name": "Spell Ruler",
+   "prefix": "SRL-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Spell Ruler"
+  },
+  {
+   "code": "SRL",
+   "id": "spell-ruler-25th-anniversary-edition",
+   "name": "Spell Ruler (25th Anniversary Edition)",
+   "prefix": "SRL-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Spell Ruler"
+  },
+  {
+   "code": "YSKR",
+   "id": "starter-deck-kaiba-reloaded",
+   "name": "Starter Deck: Kaiba Reloaded",
+   "prefix": "YSKR-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Starter Deck Kaiba - Reloaded"
+  },
+  {
+   "code": "YSYR",
+   "id": "starter-deck-yugi-reloaded",
+   "name": "Starter Deck: Yugi Reloaded",
+   "prefix": "YSYR-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Starter Deck Yugi - Reloaded"
+  },
+  {
+   "code": "YS16",
+   "id": "starter-deck-yuya",
+   "name": "Starter Deck: Yuya",
+   "prefix": "YS16-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Starter Deck - Yuya"
+  },
+  {
+   "code": "SDMA",
+   "id": "structure-deck-marik-tcg",
+   "name": "Structure Deck: Marik (TCG)",
+   "prefix": null,
+   "rule": "yugipedia_name",
+   "ygojsonName": "Structure Deck: Marik"
+  },
+  {
+   "code": "JMP",
+   "id": "swedish-shonen-jump-2004-issue-2-promotional-card",
+   "name": "Swedish Shonen Jump 2004, Issue 2 promotional card",
+   "prefix": "JMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Swedish Shonen Jump 2004, #2"
+  },
+  {
+   "code": "JMP",
+   "id": "swedish-shonen-jump-2005-issue-12-promotional-card",
+   "name": "Swedish Shonen Jump 2005, Issue 12 promotional card",
+   "prefix": "JMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Shonen Jump 2005, #12"
+  },
+  {
+   "code": "TDIL",
+   "id": "the-dark-illusion-special-edition",
+   "name": "The Dark Illusion: Special Edition",
+   "prefix": "TDIL-ENSE",
+   "rule": "name_and_prefix",
+   "ygojsonName": "The Dark Illusion Special Edition"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-2022",
+   "name": "The Lost Art Promotion 2022",
+   "prefix": "LART-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "The Lost Art Promotion"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-2023",
+   "name": "The Lost Art Promotion 2023",
+   "prefix": "LART-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "The Lost Art Promotion"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-2024",
+   "name": "The Lost Art Promotion 2024",
+   "prefix": "LART-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "The Lost Art Promotion"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-series",
+   "name": "The Lost Art Promotion (series)",
+   "prefix": "LART-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "The Lost Art Promotion"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-alpha-april-2012-membership-promotional-card",
+   "name": "Weekly Shonen Jump Alpha April 2012 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump Alpha April 2012 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-alpha-december-2012-membership-promotional-card",
+   "name": "Weekly Shonen Jump Alpha December 2012 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump Alpha December 2012 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-alpha-july-2012-membership-promotional-card",
+   "name": "Weekly Shonen Jump Alpha July 2012 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump Alpha July 2012 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-alpha-september-2012-membership-promotional-card",
+   "name": "Weekly Shonen Jump Alpha September 2012 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump Alpha September 2012 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-april-2015-membership-promotional-card",
+   "name": "Weekly Shonen Jump April 2015 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump April 2015 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-april-2016-membership-promotional-card",
+   "name": "Weekly Shonen Jump April 2016 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump April 2016 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-april-2017-membership-promotional-card",
+   "name": "Weekly Shonen Jump April 2017 membership promotional card",
+   "prefix": null,
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump April 2017 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-august-2014-membership-promotional-card",
+   "name": "Weekly Shonen Jump August 2014 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump August 2014 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-december-2013-membership-promotional-card",
+   "name": "Weekly Shonen Jump December 2013 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump December 2013 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-february-2015-membership-promotional-card",
+   "name": "Weekly Shonen Jump February 2015 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump February 2015 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-january-2016-membership-promotional-card",
+   "name": "Weekly Shonen Jump January 2016 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump January 2016 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-january-2017-membership-promotional-card",
+   "name": "Weekly Shonen Jump January 2017 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump January 2017 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-january-2018-membership-promotional-card",
+   "name": "Weekly Shonen Jump January 2018 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump January 2018 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-july-2013-membership-promotional-card",
+   "name": "Weekly Shonen Jump July 2013 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump July 2013 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-july-2015-membership-promotional-card",
+   "name": "Weekly Shonen Jump July 2015 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump July 2015 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-july-2016-membership-promotional-card",
+   "name": "Weekly Shonen Jump July 2016 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump July 2016 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-july-2017-membership-promotional-card",
+   "name": "Weekly Shonen Jump July 2017 membership promotional card",
+   "prefix": null,
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump July 2017 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-july-2018-membership-promotional-card",
+   "name": "Weekly Shonen Jump July 2018 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump July 2018 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-march-2013-membership-promotional-card",
+   "name": "Weekly Shonen Jump March 2013 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump promotional card 5"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-march-2014-membership-promotional-card",
+   "name": "Weekly Shonen Jump March 2014 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump March 2014 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-november-2014-membership-promotional-card",
+   "name": "Weekly Shonen Jump November 2014 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump November 2014 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-november-2017-membership-promotional-card",
+   "name": "Weekly Shonen Jump November 2017 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump November 2017 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-november-2018-membership-promotional-card",
+   "name": "Weekly Shonen Jump November 2018 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump November 2018 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-october-2015-membership-promotional-card",
+   "name": "Weekly Shonen Jump October 2015 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump October 2015 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-october-2016-membership-promotional-card",
+   "name": "Weekly Shonen Jump October 2016 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump October 2016 membership"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-september-2013-membership-promotional-card",
+   "name": "Weekly Shonen Jump September 2013 membership promotional card",
+   "prefix": "JUMP-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Weekly Shonen Jump September 2013 membership"
+  },
+  {
+   "code": "YDT1",
+   "id": "yu-gi-oh-5d-s-duel-transer-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's Duel Transer promotional cards",
+   "prefix": "YDT1-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's DuelTranser Bundles"
+  },
+  {
+   "code": "TF04",
+   "id": "yu-gi-oh-5d-s-tag-force-4-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's Tag Force 4 promotional cards",
+   "prefix": "TF04-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Tag Force 4 Bundles"
+  },
+  {
+   "code": "TF05",
+   "id": "yu-gi-oh-5d-s-tag-force-5-promotional-cards-2",
+   "name": "Yu-Gi-Oh! 5D's Tag Force 5 promotional cards",
+   "prefix": "TF05-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Tag Force 5 Bundles"
+  },
+  {
+   "code": "YF01",
+   "id": "yu-gi-oh-5d-s-volume-1-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 1 promotional card",
+   "prefix": "YF01-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 1"
+  },
+  {
+   "code": "YF02",
+   "id": "yu-gi-oh-5d-s-volume-2-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 2 promotional card",
+   "prefix": "YF02-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 2"
+  },
+  {
+   "code": "YF03",
+   "id": "yu-gi-oh-5d-s-volume-3-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 3 promotional card",
+   "prefix": "YF03-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 3"
+  },
+  {
+   "code": "YF04",
+   "id": "yu-gi-oh-5d-s-volume-4-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 4 promotional card",
+   "prefix": "YF04-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 4"
+  },
+  {
+   "code": "YF05",
+   "id": "yu-gi-oh-5d-s-volume-5-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 5 promotional card",
+   "prefix": "YF05-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 5"
+  },
+  {
+   "code": "YF06",
+   "id": "yu-gi-oh-5d-s-volume-6-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 6 promotional card",
+   "prefix": "YF06-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 6"
+  },
+  {
+   "code": "YF07",
+   "id": "yu-gi-oh-5d-s-volume-7-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 7 promotional card",
+   "prefix": "YF07-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 7"
+  },
+  {
+   "code": "YF08",
+   "id": "yu-gi-oh-5d-s-volume-8-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's volume 8 promotional card",
+   "prefix": "YF08-EN",
+   "rule": "prefix",
+   "ygojsonName": "Yu-Gi-Oh! 5D's volume 8"
+  },
+  {
+   "code": "YF09",
+   "id": "yu-gi-oh-5d-s-volume-9-promotional-card",
+   "name": "Yu-Gi-Oh! 5D's Volume 9 promotional card",
+   "prefix": "YF09-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Volume 9"
+  },
+  {
+   "code": "WB01",
+   "id": "yu-gi-oh-5d-s-wheelie-breakers-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's Wheelie Breakers Promotional Cards",
+   "prefix": "WB01-EN",
+   "rule": "prefix",
+   "ygojsonName": "Yu-Gi-Oh! 5D's Wheelie Breakers Bundles"
+  },
+  {
+   "code": "WC09",
+   "id": "yu-gi-oh-5d-s-world-championship-2009-stardust-accelerator-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's World Championship 2009: Stardust Accelerator promotional cards",
+   "prefix": "WC09-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's STARDUST ACCELERATOR － WORLD CHAMPIONSHIP 2009 － Bundles"
+  },
+  {
+   "code": "WC10",
+   "id": "yu-gi-oh-5d-s-world-championship-2010-reverse-of-arcadia-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+   "prefix": "WC10-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's WORLD CHAMPIONSHIP 2010 － Reverse of Arcadia － Bundles"
+  },
+  {
+   "code": "WC11",
+   "id": "yu-gi-oh-5d-s-world-championship-2011-over-the-nexus-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's World Championship 2011: Over the Nexus promotional cards",
+   "prefix": "WC11-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 5D's WORLD CHAMPIONSHIP 2011 － OVER THE NEXUS － Bundles"
+  },
+  {
+   "code": "WC5",
+   "id": "yu-gi-oh-7-trials-to-glory-world-championship-tournament-2005-promotional-cards",
+   "name": "Yu-Gi-Oh! 7 Trials to Glory: World Championship Tournament 2005 promotional cards",
+   "prefix": "WC5-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! 7 Trials to Glory - World Championship Tournament 2005 - Bundles"
+  },
+  {
+   "code": "AC18",
+   "id": "yu-gi-oh-advent-calendar-2018",
+   "name": "Yu-Gi-Oh! Advent Calendar (2018)",
+   "prefix": "AC18-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Advent Calendar"
+  },
+  {
+   "code": "YA01",
+   "id": "yu-gi-oh-arc-v-volume-1-promotional-card",
+   "name": "Yu-Gi-Oh! ARC-V Volume 1 promotional card",
+   "prefix": "YA01-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ARC-V Volume 1"
+  },
+  {
+   "code": "YA02",
+   "id": "yu-gi-oh-arc-v-volume-2-promotional-card",
+   "name": "Yu-Gi-Oh! ARC-V Volume 2 promotional card",
+   "prefix": "YA02-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ARC-V Volume 2"
+  },
+  {
+   "code": "YA03",
+   "id": "yu-gi-oh-arc-v-volume-3-promotional-card",
+   "name": "Yu-Gi-Oh! ARC-V Volume 3 promotional card",
+   "prefix": "YA03-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ARC-V Volume 3"
+  },
+  {
+   "code": "YA04",
+   "id": "yu-gi-oh-arc-v-volume-4-promotional-card",
+   "name": "Yu-Gi-Oh! ARC-V Volume 4 promotional card",
+   "prefix": "YA04-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ARC-V Volume 4"
+  },
+  {
+   "code": "YA05",
+   "id": "yu-gi-oh-arc-v-volume-5-promotional-card",
+   "name": "Yu-Gi-Oh! ARC-V Volume 5 promotional card",
+   "prefix": "YA05-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ARC-V Volume 5"
+  },
+  {
+   "code": "YA06",
+   "id": "yu-gi-oh-arc-v-volume-6-promotional-card",
+   "name": "Yu-Gi-Oh! ARC-V Volume 6 promotional card",
+   "prefix": "YA06-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ARC-V Volume 6"
+  },
+  {
+   "code": "YA07",
+   "id": "yu-gi-oh-arc-v-volume-7-promotional-card",
+   "name": "Yu-Gi-Oh! ARC-V Volume 7 promotional card",
+   "prefix": "YA07-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ARC-V Volume 7"
+  },
+  {
+   "code": "YCSW",
+   "id": "yu-gi-oh-championship-series-2010-prize-cards",
+   "name": "Yu-Gi-Oh! Championship Series 2010 Prize Cards",
+   "prefix": "YCSW-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Championship Series 2010"
+  },
+  {
+   "code": "YCSW",
+   "id": "yu-gi-oh-championship-series-2011-prize-card",
+   "name": "Yu-Gi-Oh! Championship Series 2011 Prize Card",
+   "prefix": "YCSW-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Championship Series 2011"
+  },
+  {
+   "code": "YCSW",
+   "id": "yu-gi-oh-championship-series-2012-prize-card",
+   "name": "Yu-Gi-Oh! Championship Series 2012 Prize Card",
+   "prefix": "YCSW-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Championship Series 2012"
+  },
+  {
+   "code": "YCSW",
+   "id": "yu-gi-oh-championship-series-2013-prize-card",
+   "name": "Yu-Gi-Oh! Championship Series 2013 Prize Card",
+   "prefix": "YCSW-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Championship Series 2013"
+  },
+  {
+   "code": "YCSW",
+   "id": "yu-gi-oh-championship-series-2014-prize-card",
+   "name": "Yu-Gi-Oh! Championship Series 2014 Prize Card",
+   "prefix": "YCSW-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Championship Series 2014"
+  },
+  {
+   "code": "YCSW",
+   "id": "yu-gi-oh-championship-series-2015-prize-card",
+   "name": "Yu-Gi-Oh! Championship Series 2015 Prize Card",
+   "prefix": "YCSW-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Championship Series 2015"
+  },
+  {
+   "code": "YCSW",
+   "id": "yu-gi-oh-championship-series-2016-prize-card",
+   "name": "Yu-Gi-Oh! Championship Series 2016 Prize Card",
+   "prefix": "YCSW-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Championship Series 2016"
+  },
+  {
+   "code": "DDS",
+   "id": "yu-gi-oh-dark-duel-stories-promotional-cards",
+   "name": "Yu-Gi-Oh! Dark Duel Stories promotional cards",
+   "prefix": "DDS-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Dark Duel Stories"
+  },
+  {
+   "code": "DBT",
+   "id": "yu-gi-oh-destiny-board-traveler-promotional-cards",
+   "name": "Yu-Gi-Oh! Destiny Board Traveler promotional cards",
+   "prefix": "DBT-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Destiny Board Traveler Bundles"
+  },
+  {
+   "code": "YDB1",
+   "id": "yu-gi-oh-gx-card-almanac-promotional-cards",
+   "name": "Yu-Gi-Oh! GX Card Almanac promotional cards",
+   "prefix": "YDB1-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Card Almanac"
+  },
+  {
+   "code": "GX1",
+   "id": "yu-gi-oh-gx-duel-academy-promotional-cards",
+   "name": "Yu-Gi-Oh! GX Duel Academy promotional cards",
+   "prefix": "GX1-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Duel Academy Bundles"
+  },
+  {
+   "code": "GX03",
+   "id": "yu-gi-oh-gx-spirit-caller-promotional-cards",
+   "name": "Yu-Gi-Oh! GX Spirit Caller promotional cards",
+   "prefix": "GX03-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX SPIRIT CALLER Bundles"
+  },
+  {
+   "code": "GX04",
+   "id": "yu-gi-oh-gx-tag-force-2-promotional-cards",
+   "name": "Yu-Gi-Oh! GX Tag Force 2 promotional cards",
+   "prefix": "GX04-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Tag Force 2 Bundles"
+  },
+  {
+   "code": "GX06",
+   "id": "yu-gi-oh-gx-tag-force-3-promotional-cards",
+   "name": "Yu-Gi-Oh! GX Tag Force 3 promotional cards",
+   "prefix": "GX06-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Tag 3 Force Bundles"
+  },
+  {
+   "code": "GX05",
+   "id": "yu-gi-oh-gx-tag-force-evolution-promotional-cards",
+   "name": "Yu-Gi-Oh! GX Tag Force Evolution promotional cards",
+   "prefix": "GX05-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Tag Force Evolution Bundles"
+  },
+  {
+   "code": "GX02",
+   "id": "yu-gi-oh-gx-tag-force-promotional-cards",
+   "name": "Yu-Gi-Oh! GX Tag Force promotional cards",
+   "prefix": "GX02-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Tag Force Bundles"
+  },
+  {
+   "code": "YG01",
+   "id": "yu-gi-oh-gx-volume-1-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 1 promotional card",
+   "prefix": "YG01-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 1"
+  },
+  {
+   "code": "YG02",
+   "id": "yu-gi-oh-gx-volume-2-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 2 promotional card",
+   "prefix": "YG02-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 2"
+  },
+  {
+   "code": "YG03",
+   "id": "yu-gi-oh-gx-volume-3-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 3 promotional card",
+   "prefix": "YG03-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 3"
+  },
+  {
+   "code": "YG04",
+   "id": "yu-gi-oh-gx-volume-4-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 4 promotional card",
+   "prefix": "YG04-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 4"
+  },
+  {
+   "code": "YG05",
+   "id": "yu-gi-oh-gx-volume-5-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 5 promotional card",
+   "prefix": "YG05-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 5"
+  },
+  {
+   "code": "YG06",
+   "id": "yu-gi-oh-gx-volume-6-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 6 promotional card",
+   "prefix": "YG06-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 6"
+  },
+  {
+   "code": "YG07",
+   "id": "yu-gi-oh-gx-volume-7-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 7 promotional card",
+   "prefix": "YG07-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 7"
+  },
+  {
+   "code": "YG08",
+   "id": "yu-gi-oh-gx-volume-8-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 8 promotional card",
+   "prefix": "YG08-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 8"
+  },
+  {
+   "code": "YG09",
+   "id": "yu-gi-oh-gx-volume-9-promotional-card",
+   "name": "Yu-Gi-Oh! GX Volume 9 promotional card",
+   "prefix": "YG09-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! GX Volume 9"
+  },
+  {
+   "code": "LOD2",
+   "id": "yu-gi-oh-legacy-of-the-duelist-link-evolution-promotional-cards",
+   "name": "Yu-Gi-Oh! Legacy of the Duelist: Link Evolution promotional cards",
+   "prefix": "LOD2-EN",
+   "rule": "name_and_prefix",
+   "ygojsonName": "\tYu-Gi-Oh! Legacy of the Duelist: Link Evolution promotional cards"
+  },
+  {
+   "code": "NTR",
+   "id": "yu-gi-oh-nightmare-troubadour-promotional-cards",
+   "name": "Yu-Gi-Oh! Nightmare Troubadour promotional cards",
+   "prefix": "NTR-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! NIGHTMARE TROUBADOUR Bundles"
+  },
+  {
+   "code": "PCJ",
+   "id": "yu-gi-oh-power-of-chaos-joey-the-passion-promotional-cards",
+   "name": "Yu-Gi-Oh! Power of Chaos: Joey the Passion promotional cards",
+   "prefix": "PCJ-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Power of Chaos: Joey the Passion"
+  },
+  {
+   "code": "PCK",
+   "id": "yu-gi-oh-power-of-chaos-kaiba-the-revenge-promotional-cards",
+   "name": "Yu-Gi-Oh! Power of Chaos: Kaiba the Revenge promotional cards",
+   "prefix": "PCK-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Power of Chaos: Kaiba the Revenge"
+  },
+  {
+   "code": "PCY",
+   "id": "yu-gi-oh-power-of-chaos-yugi-the-destiny-promotional-cards",
+   "name": "Yu-Gi-Oh! Power of Chaos: Yugi the Destiny promotional cards",
+   "prefix": "PCY-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Power of Chaos: Yugi the Destiny"
+  },
+  {
+   "code": "ROD",
+   "id": "yu-gi-oh-reshef-of-destruction-promotional-cards",
+   "name": "Yu-Gi-Oh! Reshef of Destruction promotional cards",
+   "prefix": "ROD-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Reshef of Destruction Bundles"
+  },
+  {
+   "code": "21CC",
+   "id": "yu-gi-oh-tcg-remote-duel-extravaganza-participation-card",
+   "name": "Yu-Gi-Oh! TCG Remote Duel Extravaganza participation card",
+   "prefix": "21CC-EN",
+   "rule": "prefix",
+   "ygojsonName": "Yu-Gi-Oh! Remote Duel Extravaganza participation card"
+  },
+  {
+   "code": "MVP1",
+   "id": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-gold-edition",
+   "name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+   "prefix": "MVP1-ENG",
+   "rule": "name_and_prefix",
+   "ygojsonName": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Gold Edition"
+  },
+  {
+   "code": "MVPC",
+   "id": "yu-gi-oh-the-dark-side-of-dimensions-theater-distribution-cards",
+   "name": "Yu-Gi-Oh! The Dark Side of Dimensions Theater distribution cards",
+   "prefix": "MVPC-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! The Dark Side of Dimensions Theater distribution card"
+  },
+  {
+   "code": "DOR",
+   "id": "yu-gi-oh-the-duelists-of-the-roses-promotional-cards",
+   "name": "Yu-Gi-Oh! The Duelists of the Roses promotional cards",
+   "prefix": "DOR-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! The Duelists of the Roses"
+  },
+  {
+   "code": "EDS",
+   "id": "yu-gi-oh-the-eternal-duelist-soul-promotional-cards",
+   "name": "Yu-Gi-Oh! The Eternal Duelist Soul promotional cards",
+   "prefix": "EDS-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! The Eternal Duelist Soul Bundles"
+  },
+  {
+   "code": "TFK",
+   "id": "yu-gi-oh-the-falsebound-kingdom-promotional-cards",
+   "name": "Yu-Gi-Oh! The Falsebound Kingdom promotional cards",
+   "prefix": "TFK-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! The Falsebound Kingdom Bundles"
+  },
+  {
+   "code": "TSC",
+   "id": "yu-gi-oh-the-sacred-cards-promotional-cards",
+   "name": "Yu-Gi-Oh! The Sacred Cards promotional cards",
+   "prefix": "TSC-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! The Sacred Cards Bundles"
+  },
+  {
+   "code": "WC6",
+   "id": "yu-gi-oh-ultimate-masters-world-championship-tournament-2006-promotional-cards",
+   "name": "Yu-Gi-Oh! Ultimate Masters: World Championship Tournament 2006 promotional cards",
+   "prefix": "WC6-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ULTIMATE MASTERS - World Championship Tournament 2006 - Bundles"
+  },
+  {
+   "code": "WC07",
+   "id": "yu-gi-oh-world-championship-2007-promotional-cards",
+   "name": "Yu-Gi-Oh! World Championship 2007 promotional cards",
+   "prefix": "WC07-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! WORLD CHAMPIONSHIP 2007 Bundles"
+  },
+  {
+   "code": "WC08",
+   "id": "yu-gi-oh-world-championship-2008-promotional-cards",
+   "name": "Yu-Gi-Oh! World Championship 2008 promotional cards",
+   "prefix": "WC08-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! WORLD CHAMPIONSHIP 2008 Bundles"
+  },
+  {
+   "code": "2017",
+   "id": "yu-gi-oh-world-championship-2017-prize-cards",
+   "name": "Yu-Gi-Oh! World Championship 2017 prize cards",
+   "prefix": "2017-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! World Championship 2017"
+  },
+  {
+   "code": "2018",
+   "id": "yu-gi-oh-world-championship-2018-prize-cards",
+   "name": "Yu-Gi-Oh! World Championship 2018 prize cards",
+   "prefix": "2018-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! World Championship 2018"
+  },
+  {
+   "code": "WQ11",
+   "id": "yu-gi-oh-world-championship-qualifier-national-championships-2011-prize-cards",
+   "name": "Yu-Gi-Oh! World Championship Qualifier National Championships 2011 prize cards",
+   "prefix": "WQ11-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! WORLD CHAMPIONSHIP 2011 Qualifier"
+  },
+  {
+   "code": "WC4",
+   "id": "yu-gi-oh-world-championship-tournament-2004-promotional-cards",
+   "name": "Yu-Gi-Oh! World Championship Tournament 2004 promotional cards",
+   "prefix": "WC4-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! World Championship Tournament 2004 Bundles"
+  },
+  {
+   "code": "SDD",
+   "id": "yu-gi-oh-worldwide-edition-stairway-to-the-destined-duel-promotional-cards",
+   "name": "Yu-Gi-Oh! Worldwide Edition: Stairway to the Destined Duel promotional cards",
+   "prefix": "SDD-",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! Worldwide Edition - Stairway to the Destined Duel - Bundles"
+  },
+  {
+   "code": "YZ01",
+   "id": "yu-gi-oh-zexal-volume-1-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 1 promotional card",
+   "prefix": "YZ01-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 1"
+  },
+  {
+   "code": "YZ02",
+   "id": "yu-gi-oh-zexal-volume-2-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 2 promotional card",
+   "prefix": "YZ02-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 2"
+  },
+  {
+   "code": "YZ03",
+   "id": "yu-gi-oh-zexal-volume-3-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 3 promotional card",
+   "prefix": "YZ03-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 3"
+  },
+  {
+   "code": "YZ04",
+   "id": "yu-gi-oh-zexal-volume-4-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 4 promotional card",
+   "prefix": "YZ04-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 4"
+  },
+  {
+   "code": "YZ05",
+   "id": "yu-gi-oh-zexal-volume-5-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 5 promotional card",
+   "prefix": "YZ05-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 5"
+  },
+  {
+   "code": "YZ06",
+   "id": "yu-gi-oh-zexal-volume-6-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 6 promotional card",
+   "prefix": "YZ06-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 6"
+  },
+  {
+   "code": "YZ07",
+   "id": "yu-gi-oh-zexal-volume-7-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 7 promotional card",
+   "prefix": "YZ07-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 7"
+  },
+  {
+   "code": "YZ08",
+   "id": "yu-gi-oh-zexal-volume-8-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 8 promotional card",
+   "prefix": "YZ08-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 8"
+  },
+  {
+   "code": "YZ09",
+   "id": "yu-gi-oh-zexal-volume-9-promotional-card",
+   "name": "Yu-Gi-Oh! ZEXAL Volume 9 promotional card",
+   "prefix": "YZ09-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL Volume 9"
+  },
+  {
+   "code": "ZDC1",
+   "id": "yu-gi-oh-zexal-world-duel-carnival-promotional-cards",
+   "name": "Yu-Gi-Oh! ZEXAL World Duel Carnival promotional cards",
+   "prefix": "ZDC1-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Yu-Gi-Oh! ZEXAL World Duel Carnival Bundles"
+  },
+  {
+   "code": "ZTIN",
+   "id": "zexal-collection-tin",
+   "name": "Zexal Collection Tin",
+   "prefix": "ZTIN-EN",
+   "rule": "yugipedia_name",
+   "ygojsonName": "Zexal Collection"
+  }
+ ],
+ "setsUnmatched": [
+  {
+   "code": "MP20",
+   "id": "2020-tin-of-lost-memories-mega-pack",
+   "name": "2020 Tin of Lost Memories Mega Pack"
+  },
+  {
+   "code": "BLGG",
+   "id": "battles-of-legend-glorious-gallery",
+   "name": "Battles of Legend: Glorious Gallery"
+  },
+  {
+   "code": "BETB",
+   "id": "beyond-the-brave",
+   "name": "Beyond the Brave"
+  },
+  {
+   "code": "BLZD",
+   "id": "blazing-dominion",
+   "name": "Blazing Dominion"
+  },
+  {
+   "code": "BLVO",
+   "id": "blazing-vortex-premiere-promotional-card",
+   "name": "Blazing Vortex Premiere! promotional card"
+  },
+  {
+   "code": "CORI",
+   "id": "chaos-origins",
+   "name": "Chaos Origins"
+  },
+  {
+   "code": "CRC1",
+   "id": "crocs-collaboration-card",
+   "name": "Crocs collaboration card"
+  },
+  {
+   "code": "DAMA",
+   "id": "dawn-of-majesty-premiere-promotional-card",
+   "name": "Dawn of Majesty Premiere! promotional card"
+  },
+  {
+   "code": "DDY1",
+   "id": "duel-disk-yusei-version",
+   "name": "Duel Disk - Yusei Version"
+  },
+  {
+   "code": "ETCO",
+   "id": "eternity-code-premiere-promotional-card",
+   "name": "Eternity Code Premiere! promotional card"
+  },
+  {
+   "code": "LAVD",
+   "id": "legendary-arc-v-decks",
+   "name": "Legendary Arc-V Decks"
+  },
+  {
+   "code": "L26D",
+   "id": "legendary-modern-decks-2026",
+   "name": "Legendary Modern Decks 2026"
+  },
+  {
+   "code": "LIOV",
+   "id": "lightning-overdrive-premiere-promotional-card",
+   "name": "Lightning Overdrive Premiere! promotional card"
+  },
+  {
+   "code": "26LP",
+   "id": "limited-pack-world-championship-2026",
+   "name": "Limited Pack World Championship 2026"
+  },
+  {
+   "code": "MRL",
+   "id": "magic-ruler",
+   "name": "Magic Ruler"
+  },
+  {
+   "code": "MAMS",
+   "id": "magnificent-maestros",
+   "name": "Magnificent Maestros"
+  },
+  {
+   "code": "MAMO",
+   "id": "magnificent-monsters",
+   "name": "Magnificent Monsters"
+  },
+  {
+   "code": "MZMU",
+   "id": "maze-of-muertos",
+   "name": "Maze of Muertos"
+  },
+  {
+   "code": "OP10",
+   "id": "ots-tournament-pack-10-por",
+   "name": "OTS Tournament Pack 10 (POR)"
+  },
+  {
+   "code": "OP11",
+   "id": "ots-tournament-pack-11-por",
+   "name": "OTS Tournament Pack 11 (POR)"
+  },
+  {
+   "code": "OP12",
+   "id": "ots-tournament-pack-12-por",
+   "name": "OTS Tournament Pack 12 (POR)"
+  },
+  {
+   "code": "OP13",
+   "id": "ots-tournament-pack-13-por",
+   "name": "OTS Tournament Pack 13 (POR)"
+  },
+  {
+   "code": "OP14",
+   "id": "ots-tournament-pack-14-por",
+   "name": "OTS Tournament Pack 14 (POR)"
+  },
+  {
+   "code": "OP15",
+   "id": "ots-tournament-pack-15-por",
+   "name": "OTS Tournament Pack 15 (POR)"
+  },
+  {
+   "code": "OP16",
+   "id": "ots-tournament-pack-16-por",
+   "name": "OTS Tournament Pack 16 (POR)"
+  },
+  {
+   "code": "OP17",
+   "id": "ots-tournament-pack-17-por",
+   "name": "OTS Tournament Pack 17 (POR)"
+  },
+  {
+   "code": "OP18",
+   "id": "ots-tournament-pack-18-por",
+   "name": "OTS Tournament Pack 18 (POR)"
+  },
+  {
+   "code": "OP19",
+   "id": "ots-tournament-pack-19-por",
+   "name": "OTS Tournament Pack 19 (POR)"
+  },
+  {
+   "code": "OP07",
+   "id": "ots-tournament-pack-7-por",
+   "name": "OTS Tournament Pack 7 (POR)"
+  },
+  {
+   "code": "OP08",
+   "id": "ots-tournament-pack-8-por",
+   "name": "OTS Tournament Pack 8 (POR)"
+  },
+  {
+   "code": "OP09",
+   "id": "ots-tournament-pack-9-por",
+   "name": "OTS Tournament Pack 9 (POR)"
+  },
+  {
+   "code": "PHRA",
+   "id": "phantom-rage-premiere-promotional-card",
+   "name": "Phantom Rage Premiere! promotional card"
+  },
+  {
+   "code": "RA05",
+   "id": "rarity-collection-5",
+   "name": "Rarity Collection 5"
+  },
+  {
+   "code": "ROTD",
+   "id": "rise-of-the-duelist-premiere-promotional-card",
+   "name": "Rise of the Duelist Premiere! promotional card"
+  },
+  {
+   "code": "TKN1",
+   "id": "san-diego-comic-con-promotional-cards",
+   "name": "San Diego Comic-Con promotional cards"
+  },
+  {
+   "code": "JMPS",
+   "id": "shonen-jump-scholastic-edition-vol-9-issue-1-promotional-card",
+   "name": "Shonen Jump Scholastic Edition Vol. 9, Issue 1 promotional card"
+  },
+  {
+   "code": "JMPS",
+   "id": "sj-jump-pack-spring-2020-promotional-card",
+   "name": "SJ Jump Pack Spring 2020 promotional card"
+  },
+  {
+   "code": "TYP1",
+   "id": "thank-you-pack",
+   "name": "THANK YOU PACK"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-2025-e",
+   "name": "The Lost Art Promotion 2025 E"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-2025-f",
+   "name": "The Lost Art Promotion 2025 F"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-g",
+   "name": "The Lost Art Promotion G"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-h",
+   "name": "The Lost Art Promotion H"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-i",
+   "name": "The Lost Art Promotion I"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-j",
+   "name": "The Lost Art Promotion J"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-k",
+   "name": "The Lost Art Promotion K"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-l",
+   "name": "The Lost Art Promotion L"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-m",
+   "name": "The Lost Art Promotion M"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-n",
+   "name": "The Lost Art Promotion N"
+  },
+  {
+   "code": "LART",
+   "id": "the-lost-art-promotion-o",
+   "name": "The Lost Art Promotion O"
+  },
+  {
+   "code": "UP01",
+   "id": "ultimate-tournament-pack-1",
+   "name": "Ultimate Tournament Pack 1"
+  },
+  {
+   "code": "25LP",
+   "id": "wcs-2025-limited-pack",
+   "name": "WCS 2025 Limited Pack"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-april-2018-membership-promotional-card",
+   "name": "Weekly Shonen Jump April 2018 membership promotional card"
+  },
+  {
+   "code": "JUMP",
+   "id": "weekly-shonen-jump-december-2018-membership-promotional-cards",
+   "name": "Weekly Shonen Jump December 2018 membership promotional cards"
+  },
+  {
+   "code": "WI26",
+   "id": "winner-s-pack-2026-2027",
+   "name": "Winner's Pack 2026-2027"
+  },
+  {
+   "code": "JMPS",
+   "id": "wsj-jump-pack-fall-2016-promotional-card",
+   "name": "WSJ Jump Pack Fall 2016 promotional card"
+  },
+  {
+   "code": "JMPS",
+   "id": "wsj-jump-pack-fall-2017-promotional-card",
+   "name": "WSJ Jump Pack Fall 2017 promotional card"
+  },
+  {
+   "code": "JMPS",
+   "id": "wsj-jump-pack-fall-2018-promotional-card",
+   "name": "WSJ Jump Pack Fall 2018 promotional card"
+  },
+  {
+   "code": "JMPS",
+   "id": "wsj-jump-pack-spring-2016-promotional-card",
+   "name": "WSJ Jump Pack Spring 2016 promotional card"
+  },
+  {
+   "code": "JMPS",
+   "id": "wsj-jump-pack-spring-2017-promotional-card",
+   "name": "WSJ Jump Pack Spring 2017 promotional card"
+  },
+  {
+   "code": "JMPS",
+   "id": "wsj-jump-pack-spring-2018-promotional-card",
+   "name": "WSJ Jump Pack Spring 2018 promotional card"
+  },
+  {
+   "code": "JMPS",
+   "id": "wsj-jump-pack-spring-2019-promotional-card",
+   "name": "WSJ Jump Pack Spring 2019 promotional card"
+  },
+  {
+   "code": "WC09",
+   "id": "yu-gi-oh-5d-s-stardust-accelerator-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's Stardust Accelerator promotional cards"
+  },
+  {
+   "code": "TF05",
+   "id": "yu-gi-oh-5d-s-tag-force-5-promotional-cards",
+   "name": "Yu-Gi-Oh! 5D's Tag Force 5 Promotional Cards"
+  },
+  {
+   "code": "AC19",
+   "id": "yu-gi-oh-advent-calendar-2019",
+   "name": "Yu-Gi-Oh! Advent Calendar (2019)"
+  }
+ ],
+ "ygojsonSetsUnclaimed": [
+  {
+   "id": "378ed328-90be-4b04-a39e-6ba69c025f90",
+   "name": "2013 Collectible Tins",
+   "prefix": "CT10-EN"
+  },
+  {
+   "id": "b9509f4b-cbd6-4d6b-9a5b-e889d0a150ec",
+   "name": "Absolute Powerforce Plus",
+   "prefix": "ABPF-ENTK"
+  },
+  {
+   "id": "75e7c9d9-f080-4cfe-827b-cf746b0521c2",
+   "name": "Age of Overlord +1 Bonus Pack",
+   "prefix": "AGOV-AE"
+  },
+  {
+   "id": "09f257f7-f787-4e51-a8b4-82e77a7703c1",
+   "name": "Alliance Insight +1 Bonus Pack",
+   "prefix": "ALIN-AE"
+  },
+  {
+   "id": "a4cc7292-7c97-4ec9-b4da-d50f47be7a45",
+   "name": "Ancient Prophecy Plus",
+   "prefix": "ANPR-ENTK"
+  },
+  {
+   "id": "06c22c06-356e-4b9d-a2b1-2b8273b59c66",
+   "name": "Battle City Tournament Kit",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "1559291c-c744-49ac-b7c1-54d9a49ced55",
+   "name": "Bonus Pack: Awakened by the Primites",
+   "prefix": "BN01-AE"
+  },
+  {
+   "id": "a822b031-f314-440b-b932-eded57d98638",
+   "name": "Challenger Cup 2024 Qualifiers prize card",
+   "prefix": "24CC-AE"
+  },
+  {
+   "id": "79b3bd4d-d7d5-473a-94cc-4eac0ba06f48",
+   "name": "Challenger Cup 2025 Finals prize card",
+   "prefix": "25YC-AE"
+  },
+  {
+   "id": "34ff1897-f9e1-47f0-b691-39edb664e05c",
+   "name": "Challenger Cup 2025 Qualifiers prize card",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "92f460e4-527e-44c4-a2b6-7ef5a4919123",
+   "name": "Collectible Tins 2007",
+   "prefix": "CT04-EN"
+  },
+  {
+   "id": "08da0661-d0f6-460e-901c-33a9e2b883b7",
+   "name": "Collectible Tins 2008",
+   "prefix": "CT05-EN"
+  },
+  {
+   "id": "3741ce15-ff9d-40f5-8570-962d7ee4d700",
+   "name": "Collectible Tins 2009",
+   "prefix": "CT06-EN"
+  },
+  {
+   "id": "c0d4b627-acb7-4ad1-9e3f-9cf69be3532a",
+   "name": "Collectible Tins 2010",
+   "prefix": "CT07-EN"
+  },
+  {
+   "id": "b527970a-7202-4331-8c38-86ccdd2a2b70",
+   "name": "Collectible Tins 2011",
+   "prefix": "CT08-EN"
+  },
+  {
+   "id": "131365b6-544c-4e33-8e25-52f5ad725a41",
+   "name": "Collectible Tins 2012",
+   "prefix": "CT09-EN"
+  },
+  {
+   "id": "5499e80c-ce30-4c99-a080-f165a2a644ef",
+   "name": "Creation Pack 01",
+   "prefix": "CR01-AE"
+  },
+  {
+   "id": "b99d1782-a841-4b0b-84cd-2979786c0089",
+   "name": "Creation Pack 01 +1 Bonus Pack",
+   "prefix": "CR01-AES"
+  },
+  {
+   "id": "906d17f7-3435-43c6-af4e-2617d83372f6",
+   "name": "Creation Pack 02",
+   "prefix": "CR02-AE"
+  },
+  {
+   "id": "0d74de09-5f90-4375-9a0f-8d3d86800762",
+   "name": "Creation Pack 02 +1 Bonus Pack",
+   "prefix": "CR02-AES"
+  },
+  {
+   "id": "cb95fa2b-84bc-4787-a6b7-8c024b33c374",
+   "name": "Creation Pack 03",
+   "prefix": "CR03-AE"
+  },
+  {
+   "id": "7c7ae85a-ecbe-4ce4-b7f4-ddb9931eecb1",
+   "name": "Creation Pack 03 +1 Bonus Pack",
+   "prefix": "CR03-AES"
+  },
+  {
+   "id": "bb64bbd4-887e-43f4-8a87-108baf6758bd",
+   "name": "Creation Pack 04",
+   "prefix": "CR04-AE"
+  },
+  {
+   "id": "0ab33a82-e535-48b7-9a99-6bba7f225f5d",
+   "name": "Creation Pack 04 +1 Bonus Pack",
+   "prefix": "CR04-AES"
+  },
+  {
+   "id": "802045f5-ad00-4b80-b7de-842df750e9f7",
+   "name": "Creation Pack 05",
+   "prefix": "CR05-AE"
+  },
+  {
+   "id": "9f04ea90-4572-4115-b161-83f6d94a1c81",
+   "name": "Creation Pack 05 +1 Bonus Pack",
+   "prefix": "CR05-AES"
+  },
+  {
+   "id": "e7c10fc3-3aeb-4ff2-9832-8d723bc6b65f",
+   "name": "Creation Pack 06",
+   "prefix": "CR06-AE"
+  },
+  {
+   "id": "2081ad85-684b-4c39-aee7-055a58e5c700",
+   "name": "Creation Pack 06 +1 Bonus Pack",
+   "prefix": "CR06-AES"
+  },
+  {
+   "id": "834688ec-e8ca-436f-8a52-8902aad38df7",
+   "name": "Creation Pack 07",
+   "prefix": "CR07-AE"
+  },
+  {
+   "id": "3302ac35-19ec-4ade-85ed-97e8cb4fb84b",
+   "name": "Creation Pack 07 +1 Bonus Pack",
+   "prefix": "CR07-AES"
+  },
+  {
+   "id": "6b5fec3c-acbf-4e7d-81e1-8e7276adf099",
+   "name": "Creation Pack 08",
+   "prefix": "CR08-AE"
+  },
+  {
+   "id": "0cb00fe2-68de-4418-84f7-dfae798b54a5",
+   "name": "Creation Pack 08 +1 Bonus Pack",
+   "prefix": "CR08-AES"
+  },
+  {
+   "id": "22a92b95-3c28-4ee4-bf34-541a714d1ee2",
+   "name": "Creation Pack 09",
+   "prefix": "CR09-AE"
+  },
+  {
+   "id": "9bf537d2-b14f-4dc3-a15e-619f90410ff8",
+   "name": "Creation Pack 09 +1 Bonus Pack",
+   "prefix": "CR09-AES"
+  },
+  {
+   "id": "441503cb-1471-4264-8996-7d9eed6e661d",
+   "name": "Creation Pack 10",
+   "prefix": null
+  },
+  {
+   "id": "fd4d3bb7-8949-4a78-ac6c-563699f6e19b",
+   "name": "Custom Token Card",
+   "prefix": null
+  },
+  {
+   "id": "0b4c0329-ce5b-4f4c-81c2-be1d5c1a140d",
+   "name": "Deck-Build Pack: Crossover Breakers",
+   "prefix": "DBCB-AE"
+  },
+  {
+   "id": "a0599cb1-e42e-4fdb-a680-d07c7eafda5a",
+   "name": "Deck-Build Pack: Justice Hunters",
+   "prefix": "DBJH-AE"
+  },
+  {
+   "id": "f1c9be57-497c-494a-82b7-1bab8d14cc39",
+   "name": "Duel the Master: Orichalcos Challenge 2006 promotional card",
+   "prefix": "TKN1-EN"
+  },
+  {
+   "id": "854bc1db-ed16-48dc-a6c3-c6ec92c87e25",
+   "name": "Duel-Ignition Deck: HERO",
+   "prefix": "DI01-AE"
+  },
+  {
+   "id": "ed658de5-7214-4ff1-8d45-fc3ace91f25b",
+   "name": "Duel-Ignition Deck: Swordsoul",
+   "prefix": "DI02-AE"
+  },
+  {
+   "id": "02b499df-1fc0-452c-9a3f-dd0b8da06d02",
+   "name": "Duelin' Monsters Giveaway",
+   "prefix": "SDY-"
+  },
+  {
+   "id": "22c95e77-9c62-45e9-8141-aa89768b279e",
+   "name": "Duelist King Tournament: World Ranking Season 3 top 100 prize card",
+   "prefix": "WCS-"
+  },
+  {
+   "id": "f1104e42-a172-4479-90ac-b59a143ed365",
+   "name": "Duelist Nexus +1 Bonus Pack",
+   "prefix": "DUNE-AE"
+  },
+  {
+   "id": "bf93defe-fd79-479a-85ce-acf55c652743",
+   "name": "Essential Selection 01",
+   "prefix": "ES01-AE"
+  },
+  {
+   "id": "9dcba8e4-a895-4dca-b489-2475f21d83d3",
+   "name": "Hobby League participation cards",
+   "prefix": "HL"
+  },
+  {
+   "id": "2ab3d0e5-aa1e-40e8-b17d-34a14ad7fb5b",
+   "name": "Infinite Forbidden +1 Bonus Pack",
+   "prefix": "INFO-AE"
+  },
+  {
+   "id": "59b221d4-45c5-4a46-b773-e73d04bcabd3",
+   "name": "Invasion of Chaos",
+   "prefix": "IOC-EN"
+  },
+  {
+   "id": "325a1a91-1165-4d8e-a98f-146276a7c174",
+   "name": "Japan Championship 2022 Shop Qualifiers prize cards",
+   "prefix": "2022-EN"
+  },
+  {
+   "id": "05eaa802-e8dc-4c5f-b26c-4037c482112f",
+   "name": "Japan Championship 2024 Shop Qualifiers prize card 1",
+   "prefix": "2024-EN"
+  },
+  {
+   "id": "fcc0cda4-bd58-48ee-a373-b703c9b8ff35",
+   "name": "Japan Championship 2024 Shop Qualifiers prize card 2",
+   "prefix": "2024-EN"
+  },
+  {
+   "id": "7dd45e91-daef-4fab-a06f-e004825fcc56",
+   "name": "Japan Championship 2025 Shop Qualifiers prize card 1",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "563e6afa-65f9-4955-8e69-92bf400e50cb",
+   "name": "Japan Championship 2025 Shop Qualifiers prize card 2",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "e599da7b-bb49-45e6-a8ca-9c56ad73d7bd",
+   "name": "Judge promotional cards",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "e4696fd1-0206-42bf-beb3-4d8ac05e07b6",
+   "name": "KC Grand Tournament 2022 prize card",
+   "prefix": "2022-EN"
+  },
+  {
+   "id": "98e8ebb9-56b7-4054-8dbe-cc80d3675ffd",
+   "name": "Legacy of Destruction +1 Bonus Pack",
+   "prefix": "LEDE-AE"
+  },
+  {
+   "id": "b6e87823-ca66-4b5f-99c8-7df459efbf27",
+   "name": "Legendary Collection 2: Gameboard Edition",
+   "prefix": null
+  },
+  {
+   "id": "43ebf6dd-724e-4604-80bb-1c0a6f03fa11",
+   "name": "Legendary Collection: Gameboard Edition",
+   "prefix": null
+  },
+  {
+   "id": "734e62c4-6f3f-442b-b71f-e76cf1543557",
+   "name": "Masterpiece Series: Platinum Blue-Eyes White Dragon",
+   "prefix": null
+  },
+  {
+   "id": "7add4f67-7cac-49fa-88c7-f515c08d7a37",
+   "name": "Masterpiece Series: Platinum Dark Magician",
+   "prefix": null
+  },
+  {
+   "id": "b6e70207-77d4-4502-8969-ea19132fb266",
+   "name": "Mattel Action Figure promotional cards",
+   "prefix": null
+  },
+  {
+   "id": "926b0c80-4bd7-4d78-b769-1c094b109d1b",
+   "name": "Oversized Gift for 7000 People",
+   "prefix": null
+  },
+  {
+   "id": "83cc9ff1-e72f-4c14-8fc8-2c156df7854c",
+   "name": "Phantom Nightmare +1 Bonus Pack",
+   "prefix": "PHNI-AE"
+  },
+  {
+   "id": "56da6475-1d2d-4df0-ab6e-26f6e24a119b",
+   "name": "Pharaoh Tour 2006 Final prize card",
+   "prefix": "PT02-EN"
+  },
+  {
+   "id": "53d58448-a0a9-4f91-ba85-ca5aac94ef68",
+   "name": "Pharaoh Tour 2006 Stop participation card",
+   "prefix": "PT02-EN"
+  },
+  {
+   "id": "6bb5e836-8289-4f16-9948-b5cb0ea5dae1",
+   "name": "Rage of the Abyss +1 Bonus Pack",
+   "prefix": "ROTA-AE"
+  },
+  {
+   "id": "6cbf1986-fca9-43f5-9fb4-0e76437e1c5a",
+   "name": "Rarity Collection Quarter Century Edition",
+   "prefix": "RC04-AE"
+  },
+  {
+   "id": "fdd81c24-aba4-49ac-984d-724572eb6104",
+   "name": "Selection 5: Quarter Century Edition",
+   "prefix": "SLF1-AE"
+  },
+  {
+   "id": "cb51a2f4-194a-453e-8c76-b952d32eaf7a",
+   "name": "Shonen Jump August 2008 subscription bonus",
+   "prefix": "JUMP-EN"
+  },
+  {
+   "id": "db0deab3-f570-4115-b790-b17249490b97",
+   "name": "Shonen Jump Fifth Anniversary Collector's Issue",
+   "prefix": "JUMP-EN"
+  },
+  {
+   "id": "b1518c2a-ddbc-4079-aca7-ce2a191bd46f",
+   "name": "Shonen Jump May 2005 subscription bonus",
+   "prefix": "JMP-EN"
+  },
+  {
+   "id": "088317b8-c688-4b80-af83-71922124e375",
+   "name": "Shonen Jump Vol. 3 #9",
+   "prefix": "SP1-EN"
+  },
+  {
+   "id": "63d1cd58-0a92-4eef-9230-06c685c73f77",
+   "name": "Shonen Jump Vol. 3, Issue 11",
+   "prefix": "SP1-EN"
+  },
+  {
+   "id": "e2c5d242-3a80-4970-9890-782dcf94558a",
+   "name": "Shonen Jump Vol. 3, Issue 6",
+   "prefix": "SP1-EN"
+  },
+  {
+   "id": "11f18aea-bdcf-462c-aedc-c83e68730902",
+   "name": "Shonen Jump Vol. 4, Issue 10",
+   "prefix": "JUMP-EN"
+  },
+  {
+   "id": "f0f3abe1-8b66-4f2f-9356-520b1cec88ad",
+   "name": "Shonen Jump Vol. 4, Issue 2",
+   "prefix": "SP1-EN"
+  },
+  {
+   "id": "876b22d1-5dfa-40c6-aad3-cdd21fb96c11",
+   "name": "Shonen Jump Vol. 4, Issue 5",
+   "prefix": "SP2-EN"
+  },
+  {
+   "id": "1882a77f-cdd2-4a2a-aba3-d5f786f52ded",
+   "name": "Shonen Jump promotional cards",
+   "prefix": "J"
+  },
+  {
+   "id": "946a98f8-7f8f-4d8e-8751-0ee7f27f0eea",
+   "name": "Sneak Peek Participation Cards",
+   "prefix": null
+  },
+  {
+   "id": "30ff8c0b-41f6-4360-84a8-c10a0cee0a49",
+   "name": "Speed Duel GX: Midterm Destruction",
+   "prefix": "SGX4-EN"
+  },
+  {
+   "id": "2b15f0aa-681c-4e53-967f-dae0ed9ea07b",
+   "name": "Speed Duel Remote Duel Extravaganza Main Event prize cards",
+   "prefix": "OPTP-EN"
+  },
+  {
+   "id": "7aaf444e-2835-4ead-92c0-9358dc87f4e4",
+   "name": "Speed Duel Tournament Pack 7",
+   "prefix": "STP7-EN"
+  },
+  {
+   "id": "5a977f8a-cd18-4994-9617-5b82463fc1fe",
+   "name": "Speed Duel: Arena of Lost Souls Launch Event participation card",
+   "prefix": "YDPR-ENS"
+  },
+  {
+   "id": "12712dd1-321e-4422-990a-1c22155f2737",
+   "name": "Speed Duel: Battle City Finals",
+   "prefix": "SBC2-EN"
+  },
+  {
+   "id": "e8ea9564-afe7-4442-9006-75afcbb8aa75",
+   "name": "Speed Start Deck: Link Edition",
+   "prefix": "SSD1-AE"
+  },
+  {
+   "id": "e7d5cabb-5046-48a2-a083-577387030e6a",
+   "name": "Speed Start Deck: Synchro Edition",
+   "prefix": "SSD2-AE"
+  },
+  {
+   "id": "087a2f36-e5d6-4c13-b42d-ecd97b45c78b",
+   "name": "Stainless Steel Card: Dark Magician Girl",
+   "prefix": null
+  },
+  {
+   "id": "54a9c6ae-9dbf-4d0f-83d8-954ff8228375",
+   "name": "Stainless Steel Egyptian God Cards",
+   "prefix": null
+  },
+  {
+   "id": "bf92d724-8b66-435f-a82c-9053d0c90545",
+   "name": "Stainless Steel Egyptian God Cards Sweepstakes",
+   "prefix": null
+  },
+  {
+   "id": "3b6c376c-c9f2-4792-bd73-3651cc32e5e3",
+   "name": "Stardust Overdrive Plus",
+   "prefix": "SOVR-ENTK"
+  },
+  {
+   "id": "9dc0c5e4-490e-4bb0-bdf1-bffaa8677571",
+   "name": "Structure Deck: Illusion of the Dark Magicians",
+   "prefix": "SDID-AE"
+  },
+  {
+   "id": "33e875d4-335a-44ef-a50f-24e4526e5675",
+   "name": "Structure Deck: Illusion of the Dark Magicians Power-Up Pack",
+   "prefix": "SDID-AEP"
+  },
+  {
+   "id": "6be485ec-7d09-45e2-8dac-59e9a6215c26",
+   "name": "Structure Deck: Lord of Magician",
+   "prefix": "SD16-AE"
+  },
+  {
+   "id": "0f71b9c5-8e21-40d7-82b3-e74e2558a31b",
+   "name": "Structure Deck: Rise of the Blue-Eyes",
+   "prefix": "SDRB-AE"
+  },
+  {
+   "id": "d6c3ff94-9bb9-45dc-b061-4609735612f8",
+   "name": "Structure Deck: Rise of the Blue-Eyes Power-Up Pack",
+   "prefix": "SDRB-AEP"
+  },
+  {
+   "id": "863ba2ce-d6e1-497b-9d1c-98e15a078ae5",
+   "name": "Structure Deck: Salamangreat Sanctum",
+   "prefix": "SDSS-AE"
+  },
+  {
+   "id": "fa561a2d-c2ac-41e9-9472-9ae5761eaefb",
+   "name": "Structure Deck: Salamangreat Sanctum Transcend Power-Up Pack",
+   "prefix": "SDSS-AEP"
+  },
+  {
+   "id": "ba75c283-c2b5-474f-9858-84b7cd30196d",
+   "name": "Supreme Darkness +1 Bonus Pack",
+   "prefix": "SUDA-AE"
+  },
+  {
+   "id": "45fe6e20-de73-400b-9496-23b9c7aaf9dc",
+   "name": "Tactical-Try Deck: Exosister",
+   "prefix": "TT02-AEB"
+  },
+  {
+   "id": "9465e563-3f7d-4e21-9acf-4e8dc77e0fd3",
+   "name": "Tactical-Try Deck: Rescue-ACE",
+   "prefix": "TT02-AEA"
+  },
+  {
+   "id": "46202b36-c302-406d-b171-fd5a0c31bc2a",
+   "name": "The Fallen & The Virtuous (set)",
+   "prefix": null
+  },
+  {
+   "id": "0934e071-77b2-45b7-a607-510c811d9ebc",
+   "name": "The Lost Art Promotion",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "69d6ebed-a50c-4dd4-ac98-431d7ec05532",
+   "name": "The Lost Art Promotion",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "d50c0eb3-db7d-45e6-b34a-4c2cc77a58e2",
+   "name": "The Lost Art Promotion",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "eb921111-6c7f-4b80-a9a4-8a1a048e3bed",
+   "name": "The Lost Art Promotion",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "ed96656d-62cc-4645-a13f-2c99f7396924",
+   "name": "The Lost Art Promotion",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "88fb1ba1-c0a1-49c6-9e06-33ff1a9a2c71",
+   "name": "The Lost Art Promotion 2019 A",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "759030e9-20e6-4035-851f-4399e9bc1c4c",
+   "name": "The Lost Art Promotion 2019 B",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "3676e222-d9ea-413e-95da-edbcd6d129aa",
+   "name": "The Lost Art Promotion 2019 C",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "c3c6bdec-7239-443f-8793-d0f829bea832",
+   "name": "The Lost Art Promotion 2019 D",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "a5bea71f-b63c-46aa-8e0c-ff2b5efe7460",
+   "name": "The Lost Art Promotion 2019 E",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "b5f0d46d-b6bf-45e4-b3fa-4ddbfd10751b",
+   "name": "The Lost Art Promotion 2019 F",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "c6ab89ab-7876-4108-b432-3980a7cbf8b0",
+   "name": "The Lost Art Promotion 2020 A",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "3ff7d21c-03a1-45b6-a8c1-e7d4ef9150fb",
+   "name": "The Lost Art Promotion 2020 B",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "d350fb7d-c481-4d44-a1e3-6ecc4d58f5ee",
+   "name": "The Lost Art Promotion 2020 C",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "1bef6073-e7d9-4e4e-bced-ae1d281fcd0e",
+   "name": "The Lost Art Promotion 2022 B",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "57d13f68-f90b-4608-b9a5-3e794744b34f",
+   "name": "The Lost Art Promotion 2022 C",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "144865b0-f0c2-4f2b-b566-01cae6778652",
+   "name": "The Lost Art Promotion 2022 D",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "1c096409-e5d6-487e-8497-a66504ee04e9",
+   "name": "The Lost Art Promotion 2022 E",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "9ce067bc-008d-4d5d-9a1b-9df9bbdd91f6",
+   "name": "The Lost Art Promotion 2022 F",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "25085479-0a5c-4e26-a76d-58fb9e63d88d",
+   "name": "The Lost Art Promotion 2022 H",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "1e42179c-6e66-41bb-85e7-6ff84e90c131",
+   "name": "The Lost Art Promotion 2022 I",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "20978ce9-6e52-48f0-bcaa-7c4493544a82",
+   "name": "The Lost Art Promotion 2022 J",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "0d042874-952e-40fe-937f-bc57d82cc000",
+   "name": "The Lost Art Promotion 2022 L",
+   "prefix": null
+  },
+  {
+   "id": "26c3809b-ab94-4e38-beaf-4236dcab0cf9",
+   "name": "The Lost Art Promotion 2023 A",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "518957a2-6a29-431a-b363-ef43656a987e",
+   "name": "The Lost Art Promotion 2023 B",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "552329b3-e31d-4413-9bb8-d09a7e33c666",
+   "name": "The Lost Art Promotion 2023 C",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "e9d35502-01b7-4779-abc2-4686cb9e244a",
+   "name": "The Lost Art Promotion 2023 J",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "efd996aa-fd9c-4c37-b5ce-d3945877ff92",
+   "name": "The Lost Art Promotion 2023 K",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "39e73515-a7ca-4325-86a3-586ae560ac60",
+   "name": "The Lost Art Promotion 2023 L",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "567e3b31-0a77-4819-afad-ed4d87f034bf",
+   "name": "The Lost Art Promotion 2024 D",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "c0be6738-2d81-4de7-82bc-4880b9bd4661",
+   "name": "The Lost Art Promotion 2024 E",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "2ed6a686-71ec-496f-8830-8f1b7609bdc6",
+   "name": "The Lost Art Promotion 2024 F",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "0809d8b5-49b2-4286-98fc-0a1396ec92d8",
+   "name": "The Lost Art Promotion 2024 G",
+   "prefix": "LART-EN"
+  },
+  {
+   "id": "faf4a492-3eed-4665-aefa-6f7814640ee0",
+   "name": "Token Pack",
+   "prefix": "TKN3-EN"
+  },
+  {
+   "id": "5fadbce1-ba08-458d-b739-c24fccb7a313",
+   "name": "Token Pack Version 1.0",
+   "prefix": "TKN3-EN"
+  },
+  {
+   "id": "51f0ae97-a52e-4ae4-ba0e-d0a6ce8929eb",
+   "name": "Token Pack Version 2.0",
+   "prefix": "TKN3-EN"
+  },
+  {
+   "id": "5cc9b9f1-dd96-4093-bf1f-64be404e705c",
+   "name": "Top Ranked COSSY Duelists 2013 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "ee179bd1-c4e1-4611-b5be-7378d8549080",
+   "name": "Top Ranked COSSY Duelists 2014 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "6d855201-e9c0-42f6-a125-0bfd3b16843d",
+   "name": "Top Ranked COSSY Duelists 2015 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "0fddd59d-db76-4ced-af11-bc550a3b0bcf",
+   "name": "Top Ranked COSSY Duelists promotional cards",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "8b54d806-2bea-4d23-8775-c1c7ae70a453",
+   "name": "Toys \"R\" Us Geoffrey's Birthday Party promotional cards",
+   "prefix": "TKN1-EN"
+  },
+  {
+   "id": "1305e3fe-d283-432d-a31d-764e2c242b2d",
+   "name": "Toys \"R\" Us Throwdown promotional cards",
+   "prefix": "TKN2-EN"
+  },
+  {
+   "id": "320cc158-05a6-485e-82cf-89856a34be0a",
+   "name": "Trials of the Pharaoh - Speed Duel GX: Duel Academy Box promotional card",
+   "prefix": "OPTP-EN"
+  },
+  {
+   "id": "b3083c68-ed3f-4370-8760-e415cd612e21",
+   "name": "Trials of the Pharaoh - Speed Duel GX: Midterm Paradox promotional card",
+   "prefix": "OPTP-EN"
+  },
+  {
+   "id": "cda6feb7-67db-4786-b36a-bb71cb66fb43",
+   "name": "Upper Deck Entertainment promotional card",
+   "prefix": "SEAL-EN"
+  },
+  {
+   "id": "7a752f91-5c1a-4d49-b669-db4b6ff2e7d6",
+   "name": "Weekly Shonen Jump June 2019 membership",
+   "prefix": "JUMP-EN"
+  },
+  {
+   "id": "7a3660c5-e8f8-402d-973e-9239bf70a93a",
+   "name": "Weekly Shonen Jump May 2018 membership",
+   "prefix": "JUMP-EN"
+  },
+  {
+   "id": "3d52e140-3229-4156-94ef-4dc9f0cc6c32",
+   "name": "Yu-Gi-Oh! 3D Bonds Beyond Time Blu-ray promotional card",
+   "prefix": "MOV2-EN"
+  },
+  {
+   "id": "4b6e9859-4d12-4687-a7af-97fb34ee776e",
+   "name": "Yu-Gi-Oh! 5D's National Championship 2009 promotional cards",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "56db69ff-9b98-47e4-9b01-5f956b284d6f",
+   "name": "Yu-Gi-Oh! Championship Series 2012 pre-registration card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "91eeaf80-a457-45af-a5d6-2c85ff6719cf",
+   "name": "Yu-Gi-Oh! Championship Series 2013 pre-registration card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "e2ce3900-4f54-42cc-88af-22fafbef02c0",
+   "name": "Yu-Gi-Oh! Championship Series 2014 pre-registration card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "6d7fcc60-b0c1-4147-aabd-cbaf4a899d94",
+   "name": "Yu-Gi-Oh! Championship Series 2015 pre-registration card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "8d3d6ee5-c5f1-46d5-84b2-3b1976cdc0d6",
+   "name": "Yu-Gi-Oh! Championship Series 2016 pre-registration card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "07aa573d-700d-4b0a-a49a-8ee0ab97de10",
+   "name": "Yu-Gi-Oh! Championship Series 2024 prize card",
+   "prefix": "YCSW-EN"
+  },
+  {
+   "id": "e75bf6e2-78e3-43bd-ad5f-4a3ec7c4eedc",
+   "name": "Yu-Gi-Oh! Day January 2014 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "01747109-b075-40eb-9941-53208283f0e8",
+   "name": "Yu-Gi-Oh! Day January 2015 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "68b219fd-ed5f-44ba-a8a3-3ebc9388574a",
+   "name": "Yu-Gi-Oh! Day January 2016 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "dc29a224-f167-47ec-b942-f19b8f3d9878",
+   "name": "Yu-Gi-Oh! Day January 2017 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "316b90ea-dad4-4665-8bb7-37ebfc8fe1df",
+   "name": "Yu-Gi-Oh! Day July 2014 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "cdab365d-58d3-456e-846e-fa5c754468ff",
+   "name": "Yu-Gi-Oh! Day July 2015 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "4707cee4-9d23-4ea7-b9bf-8ed16679ac7a",
+   "name": "Yu-Gi-Oh! Day July 2016 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "6379d5df-0684-4418-a85f-b08a928dcc0d",
+   "name": "Yu-Gi-Oh! Day July 2017 promotional card",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "45be6876-7dcb-4d89-8b63-605e5051b4b1",
+   "name": "Yu-Gi-Oh! Day promotional cards",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "90298869-eef5-45f5-b0d5-03cc29412f14",
+   "name": "Yu-Gi-Oh! Duel Monsters International: Worldwide Edition promotional cards",
+   "prefix": "GBI-"
+  },
+  {
+   "id": "e962b671-4f56-4650-8218-c661bccbfdc2",
+   "name": "Yu-Gi-Oh! Duelist Volume 16",
+   "prefix": "JUMP-EN"
+  },
+  {
+   "id": "414a4b7c-2ea2-44c5-8b73-4b9c45a6833b",
+   "name": "Yu-Gi-Oh! Early Days Collection promotional cards",
+   "prefix": "EDC1-EN"
+  },
+  {
+   "id": "0a7bc277-d033-4831-b810-1f04b0aa2ad7",
+   "name": "Yu-Gi-Oh! Japanese World Championship Qualifier 2003 participation card",
+   "prefix": "WCS-"
+  },
+  {
+   "id": "b26b53e5-9cb4-4af3-b4a5-411612ad5aae",
+   "name": "Yu-Gi-Oh! Japanese World Championship Qualifier 2004 participation card",
+   "prefix": "WCS-AE"
+  },
+  {
+   "id": "341711cb-9500-4755-9e2d-740bcd66984a",
+   "name": "Yu-Gi-Oh! Japanese World Championship Qualifier 2012 participation card",
+   "prefix": "2012-AE"
+  },
+  {
+   "id": "3b9854c5-07fd-4bff-ba12-b6e8a27c48f5",
+   "name": "Yu-Gi-Oh! Japanese World Championship Qualifier 2013 participation card",
+   "prefix": "2013-AE"
+  },
+  {
+   "id": "b00a9f29-011a-4d69-90e4-9d8397779064",
+   "name": "Yu-Gi-Oh! Japanese World Championship Qualifier 2014 participation card",
+   "prefix": "2014-AE"
+  },
+  {
+   "id": "948b589f-b2b0-4b68-97cc-603650239f5c",
+   "name": "Yu-Gi-Oh! Japanese World Championship Qualifier participation card",
+   "prefix": "2015-EN"
+  },
+  {
+   "id": "7e3dc57c-25a2-4376-963a-d399187d1a91",
+   "name": "Yu-Gi-Oh! Millennium World Volume 4",
+   "prefix": "JUMP-EN"
+  },
+  {
+   "id": "f97a03d1-fa47-40ee-b75c-e7effe18e494",
+   "name": "Yu-Gi-Oh! Open Tournament Hong Kong 2025 prize card",
+   "prefix": "25OT-AEHK"
+  },
+  {
+   "id": "e655df75-d6f8-42f7-8332-8facff3341fd",
+   "name": "Yu-Gi-Oh! Open Tournament Indonesia 2025 prize cards",
+   "prefix": "25YC-AE"
+  },
+  {
+   "id": "f7573900-a3a5-48d4-9046-023633ac2ee5",
+   "name": "Yu-Gi-Oh! Open Tournament Singapore 2024 prize card",
+   "prefix": "24OT-AESG"
+  },
+  {
+   "id": "09bf16ce-7c75-4482-b2a0-5818ecdc1c79",
+   "name": "Yu-Gi-Oh! The Movie Ani-Manga",
+   "prefix": "YMA-EN"
+  },
+  {
+   "id": "18ca9b4c-059e-43e5-9834-fbefb77f6a58",
+   "name": "Yu-Gi-Oh! World Championship 2004 tournament promotional cards",
+   "prefix": null
+  },
+  {
+   "id": "2dc970a5-7fae-4e85-a8b1-94693bd61493",
+   "name": "Yu-Gi-Oh! World Championship 2008 prize cards",
+   "prefix": "WCPS-EN"
+  },
+  {
+   "id": "7c33aaf1-923f-49f1-8c8d-e59d35b8463f",
+   "name": "Yu-Gi-Oh! World Championship 2009 prize cards",
+   "prefix": "WCPS-EN"
+  },
+  {
+   "id": "69a91f25-201b-440f-b295-ed9665aa5fb0",
+   "name": "Yu-Gi-Oh! World Championship 2010 prize cards",
+   "prefix": "2010-EN"
+  },
+  {
+   "id": "312866d8-30d5-4657-90a8-ec1adfba8be6",
+   "name": "Yu-Gi-Oh! World Championship 2011 prize cards",
+   "prefix": "2011-EN"
+  },
+  {
+   "id": "f95e6c77-d87a-47e8-8c8d-98f1aa56a997",
+   "name": "Yu-Gi-Oh! World Championship 2012 prize cards",
+   "prefix": "2012-EN"
+  },
+  {
+   "id": "c9b38624-f6cf-4de2-aa88-c9f34edc7769",
+   "name": "Yu-Gi-Oh! World Championship 2013 prize cards",
+   "prefix": "2013-EN"
+  },
+  {
+   "id": "806f9f3e-2bbd-4120-9d25-7e34400b476d",
+   "name": "Yu-Gi-Oh! World Championship 2014 prize cards",
+   "prefix": "2014-EN"
+  },
+  {
+   "id": "6bffe241-d150-41ea-b36f-6dbd0d5c4964",
+   "name": "Yu-Gi-Oh! World Championship 2015 attendance cards",
+   "prefix": "2015-JPP"
+  },
+  {
+   "id": "852e996b-a609-4ceb-9d57-50060b6c5b5d",
+   "name": "Yu-Gi-Oh! World Championship 2015 prize cards",
+   "prefix": "2015-EN"
+  },
+  {
+   "id": "f515b506-cba7-480a-95c7-46dabafc09ba",
+   "name": "Yu-Gi-Oh! World Championship 2016 prize cards",
+   "prefix": "2016-EN"
+  },
+  {
+   "id": "58f37ff2-b1a3-401e-a493-81cadfcf48c6",
+   "name": "Yu-Gi-Oh! World Championship 2019",
+   "prefix": "2019-EN"
+  },
+  {
+   "id": "76b76a31-cdfe-40a9-88d1-a31b53ccc9c6",
+   "name": "Yu-Gi-Oh! World Championship 2020 Japanese National Qualifiers prize cards",
+   "prefix": "2020-EN"
+  },
+  {
+   "id": "86ecbd8f-f517-4f07-87ef-6e57be576bfe",
+   "name": "Yu-Gi-Oh! World Championship 2023 prize cards",
+   "prefix": "2023-EN"
+  },
+  {
+   "id": "a54004ac-0e8c-49bc-998b-a0c682287022",
+   "name": "Yu-Gi-Oh! World Championship 2024 Asia Regional Qualifiers prize cards",
+   "prefix": "2024-EN"
+  },
+  {
+   "id": "d445f645-178a-4dac-9887-0fe54d43f993",
+   "name": "Yu-Gi-Oh! World Championship 2024 Celebration Event prize cards",
+   "prefix": "2024-ENP"
+  },
+  {
+   "id": "a42667ad-dfb4-45ec-bbe6-7c57bcda249b",
+   "name": "Yu-Gi-Oh! World Championship 2024 Korea Card Shop Qualifiers prize card",
+   "prefix": "2024-EN"
+  },
+  {
+   "id": "10d9472c-f40e-4368-978f-b0b00342ba75",
+   "name": "Yu-Gi-Oh! World Championship 2024 Korea Regional Qualifiers prize card",
+   "prefix": "2024-EN"
+  },
+  {
+   "id": "5795f18e-faa8-4852-a3a2-b5aced8a5edb",
+   "name": "Yu-Gi-Oh! World Championship 2024 Mainland China Regional Qualifiers prize cards",
+   "prefix": "2024-EN"
+  },
+  {
+   "id": "5940c4b8-17d9-4188-ab0d-11a0e65c7c74",
+   "name": "Yu-Gi-Oh! World Championship 2024 participation cards",
+   "prefix": "TKN4-EN"
+  },
+  {
+   "id": "01d56450-d102-4337-bfac-7127365b2be6",
+   "name": "Yu-Gi-Oh! World Championship 2024 prize cards",
+   "prefix": "2024-EN"
+  },
+  {
+   "id": "a183ea0d-6ee0-4acc-adb3-af10c25f0f62",
+   "name": "Yu-Gi-Oh! World Championship 2025 Asia Regional Qualifiers prize card",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "4bdd460f-ef08-422c-b42a-60bb2eb24fe4",
+   "name": "Yu-Gi-Oh! World Championship 2025 Korea Card Shop Qualifiers prize card",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "35a619f9-bbd4-40f2-aa78-f512d96ea8f7",
+   "name": "Yu-Gi-Oh! World Championship 2025 Korea Regional Qualifiers prize card",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "c186d56e-39ef-4099-9d71-65588c7abea0",
+   "name": "Yu-Gi-Oh! World Championship 2025 Mainland China Regional Qualifiers prize card",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "c6f99ccf-8665-4f42-b502-8cf890a570b6",
+   "name": "Yu-Gi-Oh! World Championship 2025 prize cards",
+   "prefix": "2025-EN"
+  },
+  {
+   "id": "1d400505-4d88-4fe6-bef1-d2cf24263af1",
+   "name": "Yu-Gi-Oh! World Championship prize cards",
+   "prefix": null
+  }
+ ]
+}

@@ -211,15 +211,19 @@ def build_prints(raw: dict, set_ids: dict[str, str]) -> tuple[list[dict], int, l
     return [prints[k] for k in sorted(prints)], duplicates, unknown
 
 
-def merge_card(card: dict, prev: dict | None, tcgplayer_sets: set[str]) -> dict:
-    """Fold what other tools added to the card on disk into the freshly built one."""
+def merge_card(card: dict, prev: dict | None, tcgplayer_sets: set[str], foreign_slugs: set[str] = frozenset()) -> dict:
+    """Fold what other tools added to the card on disk into the freshly built one. foreign_slugs are the
+    archetypes another tool owns (source ygojson): their memberships on the card are kept, YGOPRODeck's own
+    archetype is taken fresh."""
     if prev is None:
         return card
     card["names"] = {**{k: v for k, v in prev.get("names", {}).items() if k != "en"}, **card["names"]}
-    card["identifiers"] = {**{k: v for k, v in prev.get("identifiers", {}).items()
-                              if k not in ("ygoprodeckId", "konamiId")}, **card["identifiers"]}
-    if "konamiId" in prev:
-        card["konamiId"] = prev["konamiId"]
+    # A Konami id YGOPRODeck lacks but YGOJSON gave stays; one YGOPRODeck gives wins.
+    card["identifiers"] = {**{k: v for k, v in prev.get("identifiers", {}).items() if k != "ygoprodeckId"},
+                           **card["identifiers"]}
+    kept = [a for a in prev.get("archetypes", []) if a in foreign_slugs]
+    if kept:
+        card["archetypes"] = sorted(set(card.get("archetypes", [])) | set(kept))
     old_prints = {p["id"]: p for p in prev.get("prints", [])}
     for p in card["prints"]:
         for key in ("identifiers", "tcgplayer", "editions"):
@@ -232,8 +236,8 @@ def merge_card(card: dict, prev: dict | None, tcgplayer_sets: set[str]) -> dict:
 
 
 def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs: dict[str, str],
-                existing: dict[str, dict], tcgplayer_sets: set[str] = frozenset()
-                ) -> tuple[dict[str, dict], dict]:
+                existing: dict[str, dict], tcgplayer_sets: set[str] = frozenset(),
+                foreign_slugs: set[str] = frozenset()) -> tuple[dict[str, dict], dict]:
     """Returns {bucket: file body} and the counts: duplicates and the unknown rarity strings."""
     old = {c["id"]: c for body in existing.values() for c in body["cards"]}
     files: dict[str, list[dict]] = collections.defaultdict(list)
@@ -245,7 +249,7 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
         card["prints"], dup, unk = build_prints(raw, set_ids)
         duplicates += dup
         unknown.update(unk)
-        files[ygjson.card_bucket(card["id"])].append(merge_card(card, old.get(card["id"]), tcgplayer_sets))
+        files[ygjson.card_bucket(card["id"])].append(merge_card(card, old.get(card["id"]), tcgplayer_sets, foreign_slugs))
     # A card another tool added and YGOPRODeck lacks stays where it is.
     seen = {c["id"] for cards in files.values() for c in cards}
     for cid, prev in old.items():
@@ -293,7 +297,8 @@ def main() -> None:
     sets, set_ids = build_sets(card_list, set_list, ygjson.load_eras(), existing_sets)
     archetypes, archetype_slugs = build_archetypes(card_list, archetype_names, existing_archetypes)
     tcgplayer_sets = {s["id"] for s in sets if s["source"] != SOURCE}
-    files, counts = build_cards(card_list, set_ids, archetype_slugs, load_existing_cards(), tcgplayer_sets)
+    foreign_slugs = {a["slug"] for a in archetypes["archetypes"] if a.get("source") != SOURCE}
+    files, counts = build_cards(card_list, set_ids, archetype_slugs, load_existing_cards(), tcgplayer_sets, foreign_slugs)
 
     ygjson.save_json(ygjson.SETS, sets)
     for bucket, body in files.items():

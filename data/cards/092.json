@@ -9,7 +9,11 @@
    "id": "92001300",
    "identifiers": {
     "konamiId": 6578,
-    "ygoprodeckId": 92001300
+    "ygojsonId": "540b6782-ae7d-4b5d-a031-4e3b0be0491a",
+    "ygoprodeckId": 92001300,
+    "yugipediaIds": [
+     2882
+    ]
    },
    "images": [
     {
@@ -24,7 +28,14 @@
    "monsterType": "Continuous",
    "name": "Ancient Gear Castle",
    "names": {
-    "en": "Ancient Gear Castle"
+    "de": "Antikes Antriebsschloss",
+    "en": "Ancient Gear Castle",
+    "es": "Castillo de Mecanismo Antiguo",
+    "fr": "Château Rouages Ancients",
+    "it": "Castello-Ingranaggio Antico",
+    "ja": "古代の機械城",
+    "ko": "앤틱 기어 캐슬",
+    "pt": "Castelo do Mecanismo Antigo"
    },
    "ocgDate": "2005-11-17",
    "passcode": 92001300,
@@ -86,7 +97,11 @@
    "id": "92003832",
    "identifiers": {
     "konamiId": 18669,
-    "ygoprodeckId": 92003832
+    "ygojsonId": "b47fa796-9767-4526-862c-5efd0e26617d",
+    "ygoprodeckId": 92003832,
+    "yugipediaIds": [
+     930200
+    ]
    },
    "images": [
     {
@@ -102,7 +117,15 @@
    "monsterType": "Psychic",
    "name": "Gold Pride - Roller Baller",
    "names": {
-    "en": "Gold Pride - Roller Baller"
+    "de": "Goldstolz - Ballroller",
+    "en": "Gold Pride - Roller Baller",
+    "es": "Orgullo Dorado - Rueda Esférica",
+    "fr": "Fierté d'Or - Rouleur à Boule",
+    "it": "Orgoglio d'Oro - Rotola Palla",
+    "ja": "ＧＰ－ＲＢ",
+    "ko": "GP－RB",
+    "pt": "Orgulho Dourado - Gira-Bola",
+    "zh-CN": "黄金荣耀－滚球手"
    },
    "passcode": 92003832,
    "prints": [
@@ -128,6 +151,9 @@
    ]
   },
   {
+   "archetypes": [
+    "number-spell-trap-archetype"
+   ],
    "atk": 2700,
    "attribute": "light",
    "def": 2100,
@@ -136,7 +162,11 @@
    "id": "92015800",
    "identifiers": {
     "konamiId": 14565,
-    "ygoprodeckId": 92015800
+    "ygojsonId": "57ddb594-792c-4c64-9c5a-6921f1befb78",
+    "ygoprodeckId": 92015800,
+    "yugipediaIds": [
+     618903
+    ]
    },
    "images": [
     {
@@ -151,7 +181,15 @@
    "monsterType": "Fairy",
    "name": "Number 76: Harmonizer Gradielle",
    "names": {
-    "en": "Number 76: Harmonizer Gradielle"
+    "de": "Nummer 76: Gradielle Harmonistin",
+    "en": "Number 76: Harmonizer Gradielle",
+    "es": "Número 76: Armonizador Gradielle",
+    "fr": "Numéro 76 : Gradielle l'Harmoniste",
+    "it": "Numero 76: Gradielle l'Armonizzatrice",
+    "ja": "Ｎｏ．７６ 諧調光師グラディエール",
+    "ko": "No.76 해조광사 그라디엘",
+    "pt": "Número 76: Harmonizadora Gradielle",
+    "zh-CN": "编号76 谐调光师 格拉递艾儿"
    },
    "ocgDate": "2019-05-18",
    "passcode": 92015800,
@@ -174,7 +212,8 @@
   },
   {
    "archetypes": [
-    "super-quant"
+    "super-quant",
+    "super-quantum"
    ],
    "atk": 2400,
    "attribute": "dark",
@@ -184,7 +223,11 @@
    "id": "92034192",
    "identifiers": {
     "konamiId": 21436,
-    "ygoprodeckId": 92034192
+    "ygojsonId": "a6c211c6-eb66-411b-afe1-ee30b3c4f03d",
+    "ygoprodeckId": 92034192,
+    "yugipediaIds": [
+     1115734
+    ]
    },
    "images": [
     {
@@ -200,7 +243,15 @@
    "monsterType": "Zombie",
    "name": "Super Quantum Black Layer",
    "names": {
-    "en": "Super Quantum Black Layer"
+    "de": "Superquantum Schwarze Schicht",
+    "en": "Super Quantum Black Layer",
+    "es": "Súper Cuantio Capa Negra",
+    "fr": "Force Black Super Quantum",
+    "it": "Super Quantum Strato Nero",
+    "ja": "超量士ブラックレイヤー",
+    "ko": "초량사 블랙레이어",
+    "pt": "Camada Negra Super Quantum",
+    "zh-CN": "超级量子士 黑层"
    },
    "ocgDate": "2025-04-26",
    "passcode": 92034192,
@@ -228,7 +279,11 @@
    "id": "92035412",
    "identifiers": {
     "konamiId": 9397,
-    "ygoprodeckId": 92035412
+    "ygojsonId": "01653bff-ba21-4373-b5e1-8d785a99fb88",
+    "ygoprodeckId": 92035412,
+    "yugipediaIds": [
+     146894
+    ]
    },
    "images": [
     {
@@ -243,7 +298,13 @@
    "monsterType": "Continuous",
    "name": "Vylon Element",
    "names": {
-    "en": "Vylon Element"
+    "de": "Vylon-Element",
+    "en": "Vylon Element",
+    "es": "Elemento Vylon",
+    "fr": "Élément Vylon",
+    "it": "Elemento Vylon",
+    "ja": "ヴァイロン・エレメント",
+    "ko": "바이론 엘리멘트"
    },
    "ocgDate": "2010-12-01",
    "passcode": 92035412,
@@ -277,7 +338,11 @@
    "id": "92039899",
    "identifiers": {
     "konamiId": 10633,
-    "ygoprodeckId": 92039899
+    "ygojsonId": "aef06249-1c29-4955-8fbf-1b5390770938",
+    "ygoprodeckId": 92039899,
+    "yugipediaIds": [
+     269423
+    ]
    },
    "images": [
     {
@@ -293,7 +358,15 @@
    "monsterType": "Fiend",
    "name": "Archfiend Cavalry",
    "names": {
-    "en": "Archfiend Cavalry"
+    "de": "Erzunterweltler Kavallerie",
+    "en": "Archfiend Cavalry",
+    "es": "Caballería Archidemonio",
+    "fr": "Cavalerie Archdémon",
+    "it": "Arcidemone Cavalleria",
+    "ja": "デーモンの騎兵",
+    "ko": "데몬의 기병",
+    "pt": "Cavalaria Arquidemônio",
+    "zh-CN": "恶魔的骑兵"
    },
    "ocgDate": "2013-04-20",
    "passcode": 92039899,
@@ -335,7 +408,11 @@
    "id": "92043888",
    "identifiers": {
     "konamiId": 16096,
-    "ygoprodeckId": 92043888
+    "ygojsonId": "70689e26-95d1-4cb8-a845-c523a03ae1fa",
+    "ygoprodeckId": 92043888,
+    "yugipediaIds": [
+     716756
+    ]
    },
    "images": [
     {
@@ -350,7 +427,15 @@
    "monsterType": "Counter",
    "name": "Solfachord Formal",
    "names": {
-    "en": "Solfachord Formal"
+    "de": "Solfakkord-Gala",
+    "en": "Solfachord Formal",
+    "es": "Formalidad Solfacorde",
+    "fr": "Tenue Solfaccord",
+    "it": "Formale Solfaccordo",
+    "ja": "ドレミコード・フォーマル",
+    "ko": "도레미코드 포멀",
+    "pt": "Formalidade Solfacorde",
+    "zh-CN": "音服和弦・端庄"
    },
    "ocgDate": "2021-03-06",
    "passcode": 92043888,
@@ -377,7 +462,11 @@
    "id": "92053608",
    "identifiers": {
     "konamiId": 11918,
-    "ygoprodeckId": 92053608
+    "ygojsonId": "ac4bfe0f-fb40-433c-966a-36e607388dda",
+    "ygoprodeckId": 92053608,
+    "yugipediaIds": [
+     347518
+    ]
    },
    "images": [
     {
@@ -393,7 +482,14 @@
    "monsterType": "Aqua",
    "name": "Aquaactress Arowana",
    "names": {
-    "en": "Aquaactress Arowana"
+    "de": "Aquaschauspielerin Knochenzüngler",
+    "en": "Aquaactress Arowana",
+    "es": "Acuactriz Arawana",
+    "fr": "Aquactrice Arowana",
+    "it": "Acquattrice Arowana",
+    "ja": "アクアアクトレス・アロワナ",
+    "ko": "아쿠아액트리스 아로와나",
+    "pt": "Aquatriz Arowana"
    },
    "ocgDate": "2015-05-16",
    "passcode": 92053608,
@@ -484,7 +580,11 @@
    "id": "92065772",
    "identifiers": {
     "konamiId": 7814,
-    "ygoprodeckId": 92065772
+    "ygojsonId": "ff3d01c3-018f-43f4-9064-842e11afad46",
+    "ygoprodeckId": 92065772,
+    "yugipediaIds": [
+     45952
+    ]
    },
    "images": [
     {
@@ -500,7 +600,14 @@
    "monsterType": "Insect",
    "name": "Numbing Grub in the Ice Barrier",
    "names": {
-    "en": "Numbing Grub in the Ice Barrier"
+    "de": "Betäubender Käfer der Eisbarriere",
+    "en": "Numbing Grub in the Ice Barrier",
+    "es": "Insecto Intoxicado de la Barrera de Hielo",
+    "fr": "Chenille Paralysante de la Barrière de Glace",
+    "it": "Bruco Intorpidito della Barriera di Ghiaccio",
+    "ja": "氷結界に住む魔酔虫",
+    "ko": "빙결계에 사는 마취충",
+    "zh-CN": "栖居冰结界的魔醉虫"
    },
    "ocgDate": "2008-06-24",
    "passcode": 92065772,
@@ -535,7 +642,11 @@
    "id": "92067220",
    "identifiers": {
     "konamiId": 16480,
-    "ygoprodeckId": 92067220
+    "ygojsonId": "e3385e4b-d545-46f2-bdcb-4691411e0c5b",
+    "ygoprodeckId": 92067220,
+    "yugipediaIds": [
+     710627
+    ]
    },
    "images": [
     {
@@ -550,7 +661,14 @@
    "monsterType": "Normal",
    "name": "Joker's Straight",
    "names": {
-    "en": "Joker's Straight"
+    "de": "Straße des Jokers",
+    "en": "Joker's Straight",
+    "es": "Escalera del Bufón",
+    "fr": "Quinte du Harlequin",
+    "it": "Scala al Joker",
+    "ja": "ジョーカーズ・ストレート",
+    "ko": "조커즈 스트레이트",
+    "pt": "Sequência do Coringa"
    },
    "ocgDate": "2021-09-25",
    "passcode": 92067220,
@@ -584,7 +702,11 @@
    "id": "92079625",
    "identifiers": {
     "konamiId": 15850,
-    "ygoprodeckId": 92079625
+    "ygojsonId": "4bbb31c3-b91a-47de-bc5c-5ab4000c2f7f",
+    "ygoprodeckId": 92079625,
+    "yugipediaIds": [
+     710363
+    ]
    },
    "images": [
     {
@@ -600,7 +722,15 @@
    "monsterType": "Fiend",
    "name": "Helshaddoll Hollow",
    "names": {
-    "en": "Helshaddoll Hollow"
+    "de": "Helschattenpuppe Leer",
+    "en": "Helshaddoll Hollow",
+    "es": "Vaciado Helsombrañeca",
+    "fr": "Vide Marionnette de l'Ombre Hel",
+    "it": "Helbambolaombra Cavo",
+    "ja": "影依の炎核 ヴォイド",
+    "ko": "헬섀도르 보이드",
+    "pt": "Vazio Helsombraneco",
+    "zh-CN": "狱影依的炎核 虚炼"
    },
    "ocgDate": "2020-12-05",
    "passcode": 92079625,
@@ -626,7 +756,11 @@
    "id": "92080692",
    "identifiers": {
     "konamiId": 13449,
-    "ygoprodeckId": 92080692
+    "ygojsonId": "a6793576-556c-4184-bf4d-ae6947e22c70",
+    "ygoprodeckId": 92080692,
+    "yugipediaIds": [
+     526389
+    ]
    },
    "images": [
     {
@@ -641,7 +775,14 @@
    "monsterType": "Counter",
    "name": "Showdown of the Secret Sense Scroll Techniques",
    "names": {
-    "en": "Showdown of the Secret Sense Scroll Techniques"
+    "de": "Techniken der Geheimen Schriftrolle",
+    "en": "Showdown of the Secret Sense Scroll Techniques",
+    "es": "Técnicas del Pergamino del Sentido Secreto",
+    "fr": "Techniques du Parchemin du Sens Secret",
+    "it": "Scontro delle Tecniche della Pergamena del Senso Segreto",
+    "ja": "見切りの極意",
+    "ko": "간파의 비법",
+    "pt": "Técnicas do Pergaminho do Sentido Secreto"
    },
    "ocgDate": "2017-10-14",
    "passcode": 92080692,
@@ -672,7 +813,11 @@
    "id": "92084010",
    "identifiers": {
     "konamiId": 6120,
-    "ygoprodeckId": 92084010
+    "ygojsonId": "70653bf9-a38d-46df-bf07-a1ae5cf33106",
+    "ygoprodeckId": 92084010,
+    "yugipediaIds": [
+     11473
+    ]
    },
    "images": [
     {
@@ -688,7 +833,14 @@
    "monsterType": "Fish",
    "name": "Unshaven Angler",
    "names": {
-    "en": "Unshaven Angler"
+    "de": "Bärtiger Anglerfisch",
+    "en": "Unshaven Angler",
+    "es": "Pescador sin Afeitar",
+    "fr": "Baudroie Barbue",
+    "it": "Rana-Pescatrice Barbuta",
+    "ja": "ヒゲアンコウ",
+    "ko": "수염 아귀",
+    "pt": "Xarroco Barbudo"
    },
    "ocgDate": "2004-05-27",
    "passcode": 92084010,
@@ -734,7 +886,11 @@
    "id": "92092092",
    "identifiers": {
     "konamiId": 12819,
-    "ygoprodeckId": 92092092
+    "ygojsonId": "354f5875-abcc-43b8-bc3f-76a8e6370a67",
+    "ygoprodeckId": 92092092,
+    "yugipediaIds": [
+     430819
+    ]
    },
    "images": [
     {
@@ -749,7 +905,14 @@
    "monsterType": "Continuous",
    "name": "Space Dragster",
    "names": {
-    "en": "Space Dragster"
+    "de": "Weltall-Dragster",
+    "en": "Space Dragster",
+    "es": "Dragster Espacial",
+    "fr": "Dragster de l'Espace",
+    "it": "Dragster Spaziale",
+    "ja": "調星のドラッグスター",
+    "ko": "조성의 드래그스터",
+    "pt": "Dragster Espacial"
    },
    "ocgDate": "2017-09-09",
    "passcode": 92092092,
@@ -777,7 +940,11 @@
    "id": "92099232",
    "identifiers": {
     "konamiId": 10682,
-    "ygoprodeckId": 92099232
+    "ygojsonId": "67a8dc23-3b32-411e-9b59-1c9075425765",
+    "ygoprodeckId": 92099232,
+    "yugipediaIds": [
+     269658
+    ]
    },
    "images": [
     {
@@ -792,7 +959,15 @@
    "monsterType": "Continuous",
    "name": "Shapesister",
    "names": {
-    "en": "Shapesister"
+    "de": "Gestaltwandlerin",
+    "en": "Shapesister",
+    "es": "Hermana Cambiaformas",
+    "fr": "Forme Sœur",
+    "it": "Mutaformasorella",
+    "ja": "シェイプシスター",
+    "ko": "셰이프시스터",
+    "pt": "Metamorfídia",
+    "zh-CN": "变形妖姐"
    },
    "ocgDate": "2013-04-20",
    "passcode": 92099232,
@@ -830,7 +1005,11 @@
    "id": "92107604",
    "identifiers": {
     "konamiId": 17381,
-    "ygoprodeckId": 92107604
+    "ygojsonId": "b57eba48-e13a-4c92-b1f4-615aae80a6b6",
+    "ygoprodeckId": 92107604,
+    "yugipediaIds": [
+     716538
+    ]
    },
    "images": [
     {
@@ -845,7 +1024,15 @@
    "monsterType": "Field",
    "name": "Runick Fountain",
    "names": {
-    "en": "Runick Fountain"
+    "de": "Runischer Brunnen",
+    "en": "Runick Fountain",
+    "es": "Fuente Rúnica",
+    "fr": "Fontaine Runick",
+    "it": "Fontana Runick",
+    "ja": "神碑の泉",
+    "ko": "루닉의 샘",
+    "pt": "Fonte Rúnika",
+    "zh-CN": "卢恩神碑之泉"
    },
    "ocgDate": "2022-03-19",
    "passcode": 92107604,
@@ -900,7 +1087,11 @@
    "id": "92110878",
    "identifiers": {
     "konamiId": 19845,
-    "ygoprodeckId": 92110878
+    "ygojsonId": "100034ca-abbd-48d9-9d98-1adf9188e685",
+    "ygoprodeckId": 92110878,
+    "yugipediaIds": [
+     1026262
+    ]
    },
    "images": [
     {
@@ -916,7 +1107,15 @@
    "monsterType": "Machine",
    "name": "Gadget Trio",
    "names": {
-    "en": "Gadget Trio"
+    "de": "Apparate-Trio",
+    "en": "Gadget Trio",
+    "es": "Trío Artilugio",
+    "fr": "Trio Gadget",
+    "it": "Trio Congegno",
+    "ja": "トリコロール・ガジェット",
+    "ko": "트리콜로르 가제트",
+    "pt": "Trio de Dispositivos",
+    "zh-CN": "三色小工具"
    },
    "ocgDate": "2024-01-27",
    "passcode": 92110878,
@@ -951,6 +1150,7 @@
   },
   {
    "archetypes": [
+    "artorigus",
     "noble-knight"
    ],
    "atk": 1800,
@@ -961,7 +1161,11 @@
    "id": "92125819",
    "identifiers": {
     "konamiId": 10115,
-    "ygoprodeckId": 92125819
+    "ygojsonId": "4488c4e8-3dfc-4cd9-b5e8-43ad62980925",
+    "ygoprodeckId": 92125819,
+    "yugipediaIds": [
+     209293
+    ]
    },
    "images": [
     {
@@ -977,7 +1181,15 @@
    "monsterType": "Warrior",
    "name": "Noble Knight Artorigus",
    "names": {
-    "en": "Noble Knight Artorigus"
+    "de": "Edler Ritter Artorigus",
+    "en": "Noble Knight Artorigus",
+    "es": "Noble Caballero Artorigus",
+    "fr": "Artorigus le Chevalier Noble",
+    "it": "Nobile Cavaliere Artorigus",
+    "ja": "聖騎士アルトリウス",
+    "ko": "성기사 아르토리우스",
+    "pt": "Nobre Cavaleiro Artorigus",
+    "zh-TW": "聖騎士阿托利斯"
    },
    "ocgDate": "2013-05-18",
    "passcode": 92125819,
@@ -1022,7 +1234,11 @@
    "id": "92133240",
    "identifiers": {
     "konamiId": 16814,
-    "ygoprodeckId": 92133240
+    "ygojsonId": "3767935d-123e-462c-b9ec-1988ea2cd743",
+    "ygoprodeckId": 92133240,
+    "yugipediaIds": [
+     714575
+    ]
    },
    "images": [
     {
@@ -1038,7 +1254,15 @@
    "monsterType": "Dinosaur",
    "name": "Dinomorphia Therizia",
    "names": {
-    "en": "Dinomorphia Therizia"
+    "de": "Dinomorphia Therizia",
+    "en": "Dinomorphia Therizia",
+    "es": "Dinomorfia Therizia",
+    "fr": "Therizia Dinomorphia",
+    "it": "Dinomorfia Therizia",
+    "ja": "ダイノルフィア・テリジア",
+    "ko": "다이놀피어 테리지아",
+    "pt": "Dinomorfia Therizia",
+    "zh-CN": "恐啡肽骇龙・特镰西娅"
    },
    "ocgDate": "2021-10-16",
    "passcode": 92133240,
@@ -1080,7 +1304,11 @@
    "id": "92142169",
    "identifiers": {
     "konamiId": 10573,
-    "ygoprodeckId": 92142169
+    "ygojsonId": "4058acbd-c477-4a22-9648-043efdc06bf7",
+    "ygoprodeckId": 92142169,
+    "yugipediaIds": [
+     269934
+    ]
    },
    "images": [
     {
@@ -1096,7 +1324,14 @@
    "monsterType": "Insect",
    "name": "Bite Bug",
    "names": {
-    "en": "Bite Bug"
+    "de": "Beißbug",
+    "en": "Bite Bug",
+    "es": "Bicho Mordedor",
+    "fr": "Insecte Mordant",
+    "it": "Insetto Morditore",
+    "ja": "パクバグ",
+    "ko": "뻐끔버그",
+    "pt": "Inseto Mordedor"
    },
    "ocgDate": "2013-03-16",
    "passcode": 92142169,
@@ -1127,7 +1362,11 @@
    "id": "92170894",
    "identifiers": {
     "konamiId": 12376,
-    "ygoprodeckId": 92170894
+    "ygojsonId": "c02e4d9d-6dd6-465e-99d6-c2ddb9a5d7df",
+    "ygoprodeckId": 92170894,
+    "yugipediaIds": [
+     360075
+    ]
    },
    "images": [
     {
@@ -1143,7 +1382,14 @@
    "monsterType": "Beast",
    "name": "Performapal Longphone Bull",
    "names": {
-    "en": "Performapal Longphone Bull"
+    "de": "Künstlerkumpel Langfonbulle",
+    "en": "Performapal Longphone Bull",
+    "es": "Artistamigo Toro Teléfonolargo",
+    "fr": "Taureau Grandphone Potartiste",
+    "it": "Artistamico Toro Lungotelefono",
+    "ja": "ＥＭロングフォーン・ブル",
+    "ko": "EM 롱폰 불",
+    "pt": "Camarartista Touro de Grandes Fones"
    },
    "ocgDate": "2016-03-19",
    "passcode": 92170894,
@@ -1174,7 +1420,11 @@
    "id": "92171126",
    "identifiers": {
     "konamiId": 21943,
-    "ygoprodeckId": 92171126
+    "ygojsonId": "5299c454-e657-4dd9-9857-1c711c099d4c",
+    "ygoprodeckId": 92171126,
+    "yugipediaIds": [
+     1140484
+    ]
    },
    "images": [
     {
@@ -1190,7 +1440,9 @@
    "monsterType": "Machine",
    "name": "Deftero Enneacraft - \"alazoneIA\"",
    "names": {
-    "en": "Deftero Enneacraft - \"alazoneIA\""
+    "en": "Deftero Enneacraft - \"alazoneIA\"",
+    "ja": "糾罪巧β’－「ａｌａｚｏｎｅＩＡ」",
+    "zh-CN": "纠罪巧β’－傲慢“alazoneIA”"
    },
    "ocgDate": "2025-08-23",
    "passcode": 92171126,
@@ -1228,7 +1480,11 @@
    "id": "92176681",
    "identifiers": {
     "konamiId": 14628,
-    "ygoprodeckId": 92176681
+    "ygojsonId": "3082f39d-74d3-44a1-a57d-5dc763af2459",
+    "ygoprodeckId": 92176681,
+    "yugipediaIds": [
+     642800
+    ]
    },
    "images": [
     {
@@ -1244,7 +1500,15 @@
    "monsterType": "Cyberse",
    "name": "Suppression Collider",
    "names": {
-    "en": "Suppression Collider"
+    "de": "Unterdrückungsbeschleuniger",
+    "en": "Suppression Collider",
+    "es": "Colisionador de Supresión",
+    "fr": "Collisionneur de Suppression",
+    "it": "Acceleratore di Soppressione",
+    "ja": "サプレス・コライダー",
+    "ko": "서프레스 컬라이더",
+    "pt": "Colisor de Supressão",
+    "zh-CN": "压制碰撞者"
    },
    "ocgDate": "2019-07-13",
    "passcode": 92176681,
@@ -1272,7 +1536,11 @@
    "id": "92182447",
    "identifiers": {
     "konamiId": 13998,
-    "ygoprodeckId": 92182447
+    "ygojsonId": "5ff45c2a-f08b-402d-98f5-19209821e8e8",
+    "ygoprodeckId": 92182447,
+    "yugipediaIds": [
+     559612
+    ]
    },
    "images": [
     {
@@ -1287,7 +1555,14 @@
    "monsterType": "Quick-Play",
    "name": "Mischief of the Time Goddess",
    "names": {
-    "en": "Mischief of the Time Goddess"
+    "de": "Streich der Zeitgöttin",
+    "en": "Mischief of the Time Goddess",
+    "es": "Diosa Traviesa del Tiempo",
+    "fr": "La Plaisanterie de la Déesse du Temps",
+    "it": "Dea Inganna Tempo",
+    "ja": "時の女神の悪戯",
+    "ko": "시간의 여신의 장난",
+    "pt": "Travessura da Deusa do Tempo"
    },
    "ocgDate": "2019-09-14",
    "passcode": 92182447,
@@ -1314,7 +1589,11 @@
    "id": "92200612",
    "identifiers": {
     "konamiId": 12759,
-    "ygoprodeckId": 92200612
+    "ygojsonId": "7a5e7bb6-3bc0-4771-a3fe-103e9dc9d5f7",
+    "ygoprodeckId": 92200612,
+    "yugipediaIds": [
+     464530
+    ]
    },
    "images": [
     {
@@ -1330,7 +1609,15 @@
    "monsterType": "Winged Beast",
    "name": "Shinobird Pigeon",
    "names": {
-    "en": "Shinobird Pigeon"
+    "de": "Shinobivogel Taube",
+    "en": "Shinobird Pigeon",
+    "es": "Paloma Shinobird",
+    "fr": "Pigeon Shinobiseau",
+    "it": "Shinobird Piccione",
+    "ja": "霊魂鳥－伝鳩",
+    "ko": "에스프릿 버드－전구",
+    "pt": "Shinobird Pombo",
+    "zh-CN": "灵魂鸟－传鸠"
    },
    "ocgDate": "2016-10-08",
    "passcode": 92200612,
@@ -1369,7 +1656,11 @@
    "id": "92204263",
    "identifiers": {
     "konamiId": 13389,
-    "ygoprodeckId": 92204263
+    "ygojsonId": "b29c5804-6133-4854-bf4e-4cdcff6b4283",
+    "ygoprodeckId": 92204263,
+    "yugipediaIds": [
+     526589
+    ]
    },
    "images": [
     {
@@ -1385,7 +1676,15 @@
    "monsterType": "Psychic",
    "name": "Mekk-Knight Indigo Eclipse",
    "names": {
-    "en": "Mekk-Knight Indigo Eclipse"
+    "de": "Mekk-Ritter Indigoblaue Sonnenfinsternis",
+    "en": "Mekk-Knight Indigo Eclipse",
+    "es": "Mekk-Caballero Eclipse Índigo",
+    "fr": "Éclipse Indigo Mekk-Chevalier",
+    "it": "Meck-Cavaliere Eclisse Indaco",
+    "ja": "紺碧の機界騎士",
+    "ko": "감벽의 잭나이츠",
+    "pt": "Mekk-Cavaleiro do Eclipse Índigo",
+    "zh-CN": "绀碧之机界骑士"
    },
    "ocgDate": "2017-10-14",
    "passcode": 92204263,
@@ -1417,7 +1716,11 @@
    "id": "92219931",
    "identifiers": {
     "konamiId": 6518,
-    "ygoprodeckId": 92219931
+    "ygojsonId": "2632a581-7312-46e7-aa47-0b450e13fb75",
+    "ygoprodeckId": 92219931,
+    "yugipediaIds": [
+     11404
+    ]
    },
    "images": [
     {
@@ -1432,7 +1735,13 @@
    "monsterType": "Normal",
    "name": "Simultaneous Loss",
    "names": {
-    "en": "Simultaneous Loss"
+    "de": "Gleichzeitiger Verlust",
+    "en": "Simultaneous Loss",
+    "es": "Pérdida Simultánea",
+    "fr": "Perte Simultanée",
+    "it": "Perdita Simultanea",
+    "ja": "二者一両損",
+    "ko": "양자손실"
    },
    "ocgDate": "2005-08-11",
    "passcode": 92219931,
@@ -1460,7 +1769,11 @@
    "id": "92221402",
    "identifiers": {
     "konamiId": 21204,
-    "ygoprodeckId": 92221402
+    "ygojsonId": "4302d303-0b84-4262-9e66-59e8fc72d53c",
+    "ygoprodeckId": 92221402,
+    "yugipediaIds": [
+     1107470
+    ]
    },
    "images": [
     {
@@ -1475,7 +1788,15 @@
    "monsterType": "Normal",
    "name": "Chaotic Elements",
    "names": {
-    "en": "Chaotic Elements"
+    "de": "Chaotische Elemente",
+    "en": "Chaotic Elements",
+    "es": "Elementos Caóticos",
+    "fr": "Éléments Chaotiques",
+    "it": "Elementi Caotici",
+    "ja": "カオティック・エレメンツ",
+    "ko": "카오틱 엘리멘츠",
+    "pt": "Elementos Caóticos",
+    "zh-CN": "混沌元素"
    },
    "ocgDate": "2025-01-25",
    "passcode": 92221402,
@@ -1506,7 +1827,11 @@
    "id": "92223430",
    "identifiers": {
     "konamiId": 14505,
-    "ygoprodeckId": 92223430
+    "ygojsonId": "a6b59247-4541-4e78-9963-3f720c7ad557",
+    "ygoprodeckId": 92223430,
+    "yugipediaIds": [
+     604884
+    ]
    },
    "images": [
     {
@@ -1521,7 +1846,15 @@
    "monsterType": "Field",
    "name": "Elborz, the Sacred Lands of Simorgh",
    "names": {
-    "en": "Elborz, the Sacred Lands of Simorgh"
+    "de": "Elborz, das geheiligte Land der Simorgh",
+    "en": "Elborz, the Sacred Lands of Simorgh",
+    "es": "Elborz, la Tierra Sagrada de Simorgh",
+    "fr": "Elborz, les Terres Sacrées de Simorgh",
+    "it": "Elborz, le Terre Sacre di Simorgh",
+    "ja": "神鳥の霊峰エルブルズ",
+    "ko": "시무르그의 영봉 엘부르즈",
+    "pt": "Elborz, as Terras Sagradas de Simorgh",
+    "zh-CN": "西摩格之灵峰 厄尔布鲁士"
    },
    "ocgDate": "2019-04-13",
    "passcode": 92223430,
@@ -1542,7 +1875,11 @@
    "id": "92223641",
    "identifiers": {
     "konamiId": 8827,
-    "ygoprodeckId": 92223641
+    "ygojsonId": "4e8b6e83-c4c4-46f3-9209-672b8acbe50f",
+    "ygoprodeckId": 92223641,
+    "yugipediaIds": [
+     127915
+    ]
    },
    "images": [
     {
@@ -1557,7 +1894,13 @@
    "monsterType": "Continuous",
    "name": "The Fountain in the Sky",
    "names": {
-    "en": "The Fountain in the Sky"
+    "de": "Der Brunnen im Himmel",
+    "en": "The Fountain in the Sky",
+    "es": "La Fuente en el Cielo",
+    "fr": "Fontaine du Ciel",
+    "it": "La Fontana nel Cielo",
+    "ja": "天空の泉",
+    "ko": "천공의 샘"
    },
    "ocgDate": "2010-02-20",
    "passcode": 92223641,
@@ -1591,7 +1934,11 @@
    "id": "92246806",
    "identifiers": {
     "konamiId": 11474,
-    "ygoprodeckId": 92246806
+    "ygojsonId": "79d62458-7f9c-45d9-961a-887bfcc15b2e",
+    "ygoprodeckId": 92246806,
+    "yugipediaIds": [
+     312441
+    ]
    },
    "images": [
     {
@@ -1607,7 +1954,14 @@
    "monsterType": "Beast-Warrior",
    "name": "Yosenju Kama 2",
    "names": {
-    "en": "Yosenju Kama 2"
+    "de": "Yosenju Kama 2",
+    "en": "Yosenju Kama 2",
+    "es": "Yosenju Kama 2",
+    "fr": "Yosenju Kama 2",
+    "it": "Yosenju Kama 2",
+    "ja": "妖仙獣 鎌弐太刀",
+    "ko": "요선수 겸이태도",
+    "pt": "Yosenju Kama 2"
    },
    "ocgDate": "2014-10-11",
    "passcode": 92246806,
@@ -1652,7 +2006,11 @@
    "id": "92248362",
    "identifiers": {
     "konamiId": 21376,
-    "ygoprodeckId": 92248362
+    "ygojsonId": "712384f2-3845-49bc-8ba5-1430c7b337f2",
+    "ygoprodeckId": 92248362,
+    "yugipediaIds": [
+     1115265
+    ]
    },
    "images": [
     {
@@ -1668,7 +2026,15 @@
    "monsterType": "Warrior",
    "name": "K9-17 Izuna",
    "names": {
-    "en": "K9-17 Izuna"
+    "de": "K9-17 Izuna",
+    "en": "K9-17 Izuna",
+    "es": "K9-17 Izuna",
+    "fr": "K9-17 Izuna",
+    "it": "K9-17 Izuna",
+    "ja": "Ｋ９－１７号 イヅナ",
+    "ko": "K9－17호 이즈나",
+    "pt": "Izuna K9-17",
+    "zh-CN": "K9－17号 饭纲"
    },
    "ocgDate": "2025-03-22",
    "passcode": 92248362,
@@ -1717,7 +2083,11 @@
    "id": "92266279",
    "identifiers": {
     "konamiId": 11858,
-    "ygoprodeckId": 92266279
+    "ygojsonId": "5108c4d9-86c1-4be9-a6e5-b1ec99ebed8c",
+    "ygoprodeckId": 92266279,
+    "yugipediaIds": [
+     351798
+    ]
    },
    "images": [
     {
@@ -1732,7 +2102,15 @@
    "monsterType": "Continuous",
    "name": "Humid Winds",
    "names": {
-    "en": "Humid Winds"
+    "de": "Feuchte Winde",
+    "en": "Humid Winds",
+    "es": "Vientos Húmedos",
+    "fr": "Vents Humides",
+    "it": "Venti Umidi",
+    "ja": "潤いの風",
+    "ko": "촉촉한 바람",
+    "pt": "Ventos Húmidos",
+    "zh-CN": "润泽之风"
    },
    "ocgDate": "2015-04-25",
    "passcode": 92266279,
@@ -1770,7 +2148,11 @@
    "id": "92269002",
    "identifiers": {
     "konamiId": 21834,
-    "ygoprodeckId": 92269002
+    "ygojsonId": "f532e9ad-958a-4bdb-a079-3a147465ab47",
+    "ygoprodeckId": 92269002,
+    "yugipediaIds": [
+     1136524
+    ]
    },
    "images": [
     {
@@ -1785,7 +2167,14 @@
    "monsterType": "Quick-Play",
    "name": "Tri-Brigade Hammer",
    "names": {
-    "en": "Tri-Brigade Hammer"
+    "de": "Hammer der Sta-Brigade",
+    "en": "Tri-Brigade Hammer",
+    "es": "Mazo Tri-Brigada",
+    "fr": "Marteau Tri-Brigade",
+    "it": "Martello Tri-Brigata",
+    "ja": "鉄獣の撃鉄",
+    "pt": "Martelo da Tri-Brigada",
+    "zh-CN": "铁兽之击铁"
    },
    "ocgDate": "2025-07-26",
    "passcode": 92269002,
@@ -1812,7 +2201,11 @@
    "id": "92300891",
    "identifiers": {
     "konamiId": 9285,
-    "ygoprodeckId": 92300891
+    "ygojsonId": "1fa75588-3dd6-4f1f-b833-19882144257a",
+    "ygoprodeckId": 92300891,
+    "yugipediaIds": [
+     150500
+    ]
    },
    "images": [
     {
@@ -1828,7 +2221,14 @@
    "monsterType": "Machine",
    "name": "Karakuri Barrel mdl 96 \"Shinkuro\"",
    "names": {
-    "en": "Karakuri Barrel mdl 96 \"Shinkuro\""
+    "de": "Karakuri-Fass Nr. 96 „Shinkuro“",
+    "en": "Karakuri Barrel mdl 96 \"Shinkuro\"",
+    "es": "Barril Karakuri mod 96 - \"Shinkuro\"",
+    "fr": "Karakuri 96 \"Shinkuro\" le Baril",
+    "it": "Barile Karakuri mod. 96 \"Shinkuro\"",
+    "ja": "カラクリ樽 真九六",
+    "ko": "자동기계통 96 \"신크로\"",
+    "zh-CN": "机偶桶 真九六"
    },
    "ocgDate": "2011-09-17",
    "passcode": 92300891,
@@ -1857,7 +2257,11 @@
    "id": "92327802",
    "identifiers": {
     "konamiId": 13217,
-    "ygoprodeckId": 92327802
+    "ygojsonId": "bf04d313-c424-428d-9569-81f0691579f1",
+    "ygoprodeckId": 92327802,
+    "yugipediaIds": [
+     443352
+    ]
    },
    "images": [
     {
@@ -1873,7 +2277,14 @@
    "monsterType": "Cyberse",
    "name": "Defect Compiler",
    "names": {
-    "en": "Defect Compiler"
+    "de": "Defekter Compiler",
+    "en": "Defect Compiler",
+    "es": "Compilador Defectuoso",
+    "fr": "Compilateur Défectueux",
+    "it": "Compilatore di Difetti",
+    "ja": "ディフェクト・コンパイラー",
+    "ko": "디펙트 컴파일러",
+    "pt": "Compilador Defeituoso"
    },
    "ocgDate": "2017-07-08",
    "passcode": 92327802,
@@ -1925,7 +2336,11 @@
    "id": "92332424",
    "identifiers": {
     "konamiId": 17779,
-    "ygoprodeckId": 92332424
+    "ygojsonId": "3677204b-7ce2-417c-8471-60414922780c",
+    "ygoprodeckId": 92332424,
+    "yugipediaIds": [
+     715764
+    ]
    },
    "images": [
     {
@@ -1941,7 +2356,15 @@
    "monsterType": "Spellcaster",
    "name": "Majesty Pegasus, the Dracoslayer",
    "names": {
-    "en": "Majesty Pegasus, the Dracoslayer"
+    "de": "Majestät Pegasus, die Drachobezwingerin",
+    "en": "Majesty Pegasus, the Dracoslayer",
+    "es": "Pegaso de la Majestuosidad, la Dracoasesino",
+    "fr": "Pégase Majesté, la Dracossassine",
+    "it": "Pegaso della Maestosità, il Dracoassassino",
+    "ja": "竜剣士マジェスティＰ",
+    "ko": "룡검사 마제스티P",
+    "pt": "Pégaso Majestade, o Dracossassino",
+    "zh-CN": "龙剑士 威风凛凛 天马"
    },
    "ocgDate": "2022-07-16",
    "passcode": 92332424,
@@ -1978,7 +2401,11 @@
    "id": "92341815",
    "identifiers": {
     "konamiId": 16754,
-    "ygoprodeckId": 92341815
+    "ygojsonId": "7803dc1b-d9b7-4153-b48e-68acf4f30991",
+    "ygoprodeckId": 92341815,
+    "yugipediaIds": [
+     716853
+    ]
    },
    "images": [
     {
@@ -1993,7 +2420,15 @@
    "monsterType": "Equip",
    "name": "Starlit Papillon",
    "names": {
-    "en": "Starlit Papillon"
+    "de": "Sternenlicht-Papillon",
+    "en": "Starlit Papillon",
+    "es": "Papillon Iluminado por Estrellas",
+    "fr": "Papillon Étoilé",
+    "it": "Papillon Lucestella",
+    "ja": "星空蝶",
+    "ko": "스타리트 파피용",
+    "pt": "Papillon Estrelada",
+    "zh-CN": "星空蝶"
    },
    "ocgDate": "2021-08-28",
    "passcode": 92341815,
@@ -2031,7 +2466,11 @@
    "id": "92345028",
    "identifiers": {
     "konamiId": 14502,
-    "ygoprodeckId": 92345028
+    "ygojsonId": "6f5510a1-273b-4675-a607-ece770144aaf",
+    "ygoprodeckId": 92345028,
+    "yugipediaIds": [
+     605322
+    ]
    },
    "images": [
     {
@@ -2046,7 +2485,15 @@
    "monsterType": "Normal",
    "name": "Fury of Fire",
    "names": {
-    "en": "Fury of Fire"
+    "de": "Zorn des Feuers",
+    "en": "Fury of Fire",
+    "es": "Furia de Fuego",
+    "fr": "Fureur du Feu",
+    "it": "Furia del Fuoco",
+    "ja": "フューリー・オブ・ファイア",
+    "ko": "퓨리 오브 파이어",
+    "pt": "Fúria de Fogo",
+    "zh-CN": "火焰狂暴"
    },
    "ocgDate": "2019-04-13",
    "passcode": 92345028,
@@ -2081,7 +2528,11 @@
    "id": "92346415",
    "identifiers": {
     "konamiId": 8049,
-    "ygoprodeckId": 92346415
+    "ygojsonId": "4dded47b-3353-4f6b-9d53-b9aa1d5c864d",
+    "ygoprodeckId": 92346415,
+    "yugipediaIds": [
+     57877
+    ]
    },
    "images": [
     {
@@ -2096,7 +2547,14 @@
    "monsterType": "Equip",
    "name": "Psychic Sword",
    "names": {
-    "en": "Psychic Sword"
+    "de": "Psi-Schwert",
+    "en": "Psychic Sword",
+    "es": "Espada Psíquica",
+    "fr": "Épée Psychique",
+    "it": "Spada Psichica",
+    "ja": "サイコ・ソード",
+    "ko": "사이코 스워드",
+    "pt": "Espada Psíquica"
    },
    "ocgDate": "2008-11-15",
    "passcode": 92346415,
@@ -2134,7 +2592,11 @@
    "id": "92353449",
    "identifiers": {
     "konamiId": 12650,
-    "ygoprodeckId": 92353449
+    "ygojsonId": "e365ff0c-0d78-4e7f-9439-f152c5c41359",
+    "ygoprodeckId": 92353449,
+    "yugipediaIds": [
+     448165
+    ]
    },
    "images": [
     {
@@ -2149,7 +2611,15 @@
    "monsterType": "Normal",
    "name": "Red-Eyes Insight",
    "names": {
-    "en": "Red-Eyes Insight"
+    "de": "Rotäugiger Einblick",
+    "en": "Red-Eyes Insight",
+    "es": "Perspicacia de Ojos Rojos",
+    "fr": "Vision aux Yeux Rouges",
+    "it": "Intuizione Occhi Rossi",
+    "ja": "レッドアイズ・インサイト",
+    "ko": "붉은 눈 인사이트",
+    "pt": "Intuição dos Olhos Vermelhos",
+    "zh-CN": "真红眼洞悉"
    },
    "ocgDate": "2016-07-09",
    "passcode": 92353449,
@@ -2287,7 +2757,11 @@
    "id": "92361635",
    "identifiers": {
     "konamiId": 9334,
-    "ygoprodeckId": 92361635
+    "ygojsonId": "50138c5f-d8ea-42c6-baee-4e6aea4bed53",
+    "ygoprodeckId": 92361635,
+    "yugipediaIds": [
+     147623
+    ]
    },
    "images": [
     {
@@ -2303,7 +2777,14 @@
    "monsterType": "Dragon",
    "name": "Atomic Scrap Dragon",
    "names": {
-    "en": "Atomic Scrap Dragon"
+    "de": "Atomarer Schrottdrache",
+    "en": "Atomic Scrap Dragon",
+    "es": "Dragón de Chatarra Atómica",
+    "fr": "Dragon de Ferraille Atomique",
+    "it": "Drago Frammento Atomico",
+    "ja": "アトミック・スクラップ・ドラゴン",
+    "ko": "아토믹 스크랩 드래곤",
+    "zh-CN": "核能废铁龙"
    },
    "ocgDate": "2010-11-13",
    "passcode": 92361635,
@@ -2338,7 +2819,11 @@
    "id": "92362073",
    "identifiers": {
     "konamiId": 14674,
-    "ygoprodeckId": 92362073
+    "ygojsonId": "91ab8ac7-6557-4493-870e-01c6c07a0271",
+    "ygoprodeckId": 92362073,
+    "yugipediaIds": [
+     618895
+    ]
    },
    "images": [
     {
@@ -2358,7 +2843,15 @@
    "monsterType": "Dragon",
    "name": "Galaxy Satellite Dragon",
    "names": {
-    "en": "Galaxy Satellite Dragon"
+    "de": "Galaxiesatelliten-Drache",
+    "en": "Galaxy Satellite Dragon",
+    "es": "Dragón Satélite Galaxia",
+    "fr": "Dragon Satellite Galactique",
+    "it": "Drago Satellite Galattico",
+    "ja": "銀河衛竜",
+    "ko": "갤럭시 새털라이트 드래곤",
+    "pt": "Dragão Satélite das Galáxias",
+    "zh-CN": "银河卫龙"
    },
    "ocgDate": "2019-07-13",
    "passcode": 92362073,
@@ -2391,7 +2884,11 @@
    "id": "92365601",
    "identifiers": {
     "konamiId": 10570,
-    "ygoprodeckId": 92365601
+    "ygojsonId": "afdc49e1-c4da-4e97-801c-7085d5edcd47",
+    "ygoprodeckId": 92365601,
+    "yugipediaIds": [
+     270854
+    ]
    },
    "images": [
     {
@@ -2406,7 +2903,15 @@
    "monsterType": "Normal",
    "name": "Rank-Up-Magic Limited Barian's Force",
    "names": {
-    "en": "Rank-Up-Magic Limited Barian's Force"
+    "de": "Rangsteigerungsmagie Barians kleine Kraft",
+    "en": "Rank-Up-Magic Limited Barian's Force",
+    "es": "Magia de Subida de Rango Fuerza Limitada de Barian",
+    "fr": "Force de Barian Restreinte Magie-Rang-Plus",
+    "it": "Alza-Rango-Magico Forza di Barian Limitata",
+    "ja": "ＲＵＭ－リミテッド・バリアンズ・フォース",
+    "ko": "RUM-리미티드 바리언즈 포스",
+    "pt": "Magia de Aumento de Classe Limitada Força de Barian",
+    "zh-CN": "升阶魔法－限制型巴利安之力"
    },
    "ocgDate": "2013-03-16",
    "passcode": 92365601,
@@ -2433,7 +2938,11 @@
    "id": "92373006",
    "identifiers": {
     "konamiId": 7482,
-    "ygoprodeckId": 92373006
+    "ygojsonId": "14c61fdb-d9af-48f2-8daa-de3e10b03c27",
+    "ygoprodeckId": 92373006,
+    "yugipediaIds": [
+     76224
+    ]
    },
    "images": [
     {
@@ -2449,7 +2958,15 @@
    "monsterType": "Beast",
    "name": "Test Tiger",
    "names": {
-    "en": "Test Tiger"
+    "de": "Versuchstiger",
+    "en": "Test Tiger",
+    "es": "Tigre de Prueba",
+    "fr": "Tigre de Laboratoire",
+    "it": "Tigre da Laboratorio",
+    "ja": "スレイブタイガー",
+    "ko": "슬레이브 타이거",
+    "pt": "Tigre de Laboratório",
+    "zh-CN": "奴隶虎"
    },
    "ocgDate": "2008-09-13",
    "passcode": 92373006,
@@ -2522,7 +3039,11 @@
    "id": "92377303",
    "identifiers": {
     "konamiId": 5230,
-    "ygoprodeckId": 92377303
+    "ygojsonId": "0ab5313b-251e-4da0-8b17-727bb68aa203",
+    "ygoprodeckId": 92377303,
+    "yugipediaIds": [
+     136
+    ]
    },
    "images": [
     {
@@ -2538,7 +3059,13 @@
    "monsterType": "Spellcaster",
    "name": "Dark Sage",
    "names": {
-    "en": "Dark Sage"
+    "de": "Dunkler Gelehrter",
+    "en": "Dark Sage",
+    "es": "Sabio Oscuro",
+    "fr": "Sage des Ténèbres",
+    "it": "Saggio Oscuro",
+    "ja": "黒衣の大賢者",
+    "ko": "검은 옷의 대현자"
    },
    "ocgDate": "2001-07-05",
    "passcode": 92377303,
@@ -2593,7 +3120,11 @@
    "id": "92379223",
    "identifiers": {
     "konamiId": 15132,
-    "ygoprodeckId": 92379223
+    "ygojsonId": "9127eea7-bf0b-4b56-aeab-52eceec101a1",
+    "ygoprodeckId": 92379223,
+    "yugipediaIds": [
+     714762
+    ]
    },
    "images": [
     {
@@ -2608,7 +3139,15 @@
    "monsterType": "Normal",
    "name": "El Dorado Adelantado",
    "names": {
-    "en": "El Dorado Adelantado"
+    "de": "El Dorado Adelantado",
+    "en": "El Dorado Adelantado",
+    "es": "El Dorado Adelantado",
+    "fr": "El Dorado Adelantado",
+    "it": "El Dorado Adelantado",
+    "ja": "黄金の征服王",
+    "ko": "엘 드라도 아델란타도",
+    "pt": "El Dorado Adelantado",
+    "zh-CN": "黄金征服王"
    },
    "ocgDate": "2020-03-07",
    "passcode": 92379223,
@@ -2642,7 +3181,11 @@
    "id": "92385016",
    "identifiers": {
     "konamiId": 17384,
-    "ygoprodeckId": 92385016
+    "ygojsonId": "47a4eb49-03f5-4f9a-8137-20e9e1da0fc3",
+    "ygoprodeckId": 92385016,
+    "yugipediaIds": [
+     715961
+    ]
    },
    "images": [
     {
@@ -2658,7 +3201,15 @@
    "monsterType": "Fairy",
    "name": "Munin the Runick Wings",
    "names": {
-    "en": "Munin the Runick Wings"
+    "de": "Munin die runischen Schwingen",
+    "en": "Munin the Runick Wings",
+    "es": "Munin las Alas Rúnicas",
+    "fr": "Munin des Ailes Runick",
+    "it": "Munin le Ali Runick",
+    "ja": "神碑の翼ムニン",
+    "ko": "루닉의 날개 무닌",
+    "pt": "Munin, as Asas Rúnikas",
+    "zh-CN": "神碑之翼 雾尼"
    },
    "ocgDate": "2022-03-19",
    "passcode": 92385016,
@@ -2694,7 +3245,11 @@
    "id": "92391084",
    "identifiers": {
     "konamiId": 4502,
-    "ygoprodeckId": 92391084
+    "ygojsonId": "6ffe9828-8980-4e76-8c75-54f08ac389b6",
+    "ygoprodeckId": 92391084,
+    "yugipediaIds": [
+     7717
+    ]
    },
    "images": [
     {
@@ -2710,7 +3265,10 @@
    "monsterType": "Beast",
    "name": "Wilmee",
    "names": {
-    "en": "Wilmee"
+    "de": "Kampfhase",
+    "en": "Wilmee",
+    "fr": "Wilmée",
+    "ja": "ウィルミー"
    },
    "ocgDate": "1999-05-25",
    "passcode": 92391084,
@@ -2742,7 +3300,11 @@
    "id": "92394653",
    "identifiers": {
     "konamiId": 5402,
-    "ygoprodeckId": 92394653
+    "ygojsonId": "dd584323-217d-47d0-a238-a4fa5e00bbf0",
+    "ygoprodeckId": 92394653,
+    "yugipediaIds": [
+     10453
+    ]
    },
    "images": [
     {
@@ -2757,7 +3319,13 @@
    "monsterType": "Continuous",
    "name": "Spirit's Invitation",
    "names": {
-    "en": "Spirit's Invitation"
+    "de": "Einladung des Geistes",
+    "en": "Spirit's Invitation",
+    "es": "Invitación del Espíritu",
+    "fr": "Invitation Spirit",
+    "it": "Invito dello Spirito",
+    "ja": "スピリットの誘い",
+    "ko": "스피릿의 권유"
    },
    "ocgDate": "2001-11-29",
    "passcode": 92394653,
@@ -2791,7 +3359,11 @@
    "id": "92408984",
    "identifiers": {
     "konamiId": 5342,
-    "ygoprodeckId": 92408984
+    "ygojsonId": "713c6daa-f05c-4d16-9734-135c3d13ab9d",
+    "ygoprodeckId": 92408984,
+    "yugipediaIds": [
+     7604
+    ]
    },
    "images": [
     {
@@ -2806,7 +3378,14 @@
    "monsterType": "Continuous",
    "name": "The Dragon's Bead",
    "names": {
-    "en": "The Dragon's Bead"
+    "de": "Perle des Drachen",
+    "en": "The Dragon's Bead",
+    "es": "La Cuenta del Dragón",
+    "fr": "La Pierre du Dragon",
+    "it": "La Perla di Drago",
+    "ja": "ドラゴンの宝珠",
+    "ko": "드래곤의 구슬",
+    "pt": "A Conta do Dragão"
    },
    "ocgDate": "2001-09-20",
    "passcode": 92408984,
@@ -2853,7 +3432,11 @@
    "id": "92409659",
    "identifiers": {
     "konamiId": 4442,
-    "ygoprodeckId": 92409659
+    "ygojsonId": "b946a37d-3937-4edb-b1f2-cf78d1bce5f3",
+    "ygoprodeckId": 92409659,
+    "yugipediaIds": [
+     7757
+    ]
    },
    "images": [
     {
@@ -2869,7 +3452,10 @@
    "monsterType": "Fish",
    "name": "White Dolphin",
    "names": {
-    "en": "White Dolphin"
+    "de": "Weißer Delfin",
+    "en": "White Dolphin",
+    "fr": "Dauphin Blanc",
+    "ja": "ホワイト・ドルフィン"
    },
    "ocgDate": "1999-05-25",
    "passcode": 92409659,
@@ -2891,7 +3477,11 @@
    "id": "92411493",
    "identifiers": {
     "konamiId": 13329,
-    "ygoprodeckId": 92411493
+    "ygojsonId": "d6770b74-d49e-46a5-91e5-7120f380c606",
+    "ygoprodeckId": 92411493,
+    "yugipediaIds": [
+     544131
+    ]
    },
    "images": [
     {
@@ -2907,7 +3497,14 @@
    "monsterType": "Fairy",
    "name": "The Weather Painter Rain",
    "names": {
-    "en": "The Weather Painter Rain"
+    "de": "Witterungsmalerin Regen",
+    "en": "The Weather Painter Rain",
+    "es": "Pintora Meteorológica Lluvia",
+    "fr": "Pluie, Peintre Météorologique",
+    "it": "Pittrice Metereologica Pioggia",
+    "ja": "雨天気ラズラ",
+    "ko": "우천후 라즈라",
+    "pt": "Pintora do Clima Chuva"
    },
    "ocgDate": "2017-08-11",
    "passcode": 92411493,
@@ -2945,7 +3542,11 @@
    "id": "92418590",
    "identifiers": {
     "konamiId": 10447,
-    "ygoprodeckId": 92418590
+    "ygojsonId": "5347bb51-0666-4568-a0c9-0c69cd1dcfd5",
+    "ygoprodeckId": 92418590,
+    "yugipediaIds": [
+     201084
+    ]
    },
    "images": [
     {
@@ -2961,7 +3562,15 @@
    "monsterType": "Machine",
    "name": "Gimmick Puppet Dreary Doll",
    "names": {
-    "en": "Gimmick Puppet Dreary Doll"
+    "de": "Gimmick-Marionette Traurige Puppe",
+    "en": "Gimmick Puppet Dreary Doll",
+    "es": "Marioneta Trucada Muñeca Sombría",
+    "fr": "Poupée Truquée Triste",
+    "it": "Burattino Arnese Bambola Tetra",
+    "ja": "ギミック・パペット－ネクロ・ドール",
+    "ko": "기믹 퍼핏－네크로 돌",
+    "pt": "Engenhoca Marionete Boneca Lúgubre",
+    "zh-CN": "机关傀偶－死灵娃娃"
    },
    "ocgDate": "2013-03-16",
    "passcode": 92418590,
@@ -3003,7 +3612,11 @@
    "id": "92421852",
    "identifiers": {
     "konamiId": 5072,
-    "ygoprodeckId": 92421852
+    "ygojsonId": "55a85c18-d51a-497d-8621-33074830f343",
+    "ygoprodeckId": 92421852,
+    "yugipediaIds": [
+     8740
+    ]
    },
    "images": [
     {
@@ -3019,7 +3632,14 @@
    "monsterType": "Machine",
    "name": "Robolady",
    "names": {
-    "en": "Robolady"
+    "de": "Robolady",
+    "en": "Robolady",
+    "es": "Robolady",
+    "fr": "Robolady",
+    "it": "Robolady",
+    "ja": "レアメタル・レディ",
+    "ko": "레어메탈 레이디",
+    "pt": "Robodama"
    },
    "ocgDate": "2001-11-29",
    "passcode": 92421852,
@@ -3056,7 +3676,11 @@
    "id": "92422871",
    "identifiers": {
     "konamiId": 18497,
-    "ygoprodeckId": 92422871
+    "ygojsonId": "e60c4bdb-6802-4733-9af2-f6f192c8ef59",
+    "ygoprodeckId": 92422871,
+    "yugipediaIds": [
+     714431
+    ]
    },
    "images": [
     {
@@ -3072,7 +3696,15 @@
    "monsterType": "Cyberse",
    "name": "Cyberse Desavewurm",
    "names": {
-    "en": "Cyberse Desavewurm"
+    "de": "Cyberse-Despeichwürm",
+    "en": "Cyberse Desavewurm",
+    "es": "Desgrabawurm Ciberso",
+    "fr": "Annulsauvewurm Cyberse",
+    "it": "Disalvawurm Cyberso",
+    "ja": "サイバース・ディセーブルム",
+    "ko": "사이버스 디세블룸",
+    "pt": "Desavewurm Ciberso",
+    "zh-CN": "电子界封存龙"
    },
    "ocgDate": "2023-01-14",
    "passcode": 92422871,
@@ -3108,7 +3740,11 @@
    "id": "92428405",
    "identifiers": {
     "konamiId": 17261,
-    "ygoprodeckId": 92428405
+    "ygojsonId": "b3a5a16f-7cbb-465c-96a3-38a0e1340a0f",
+    "ygoprodeckId": 92428405,
+    "yugipediaIds": [
+     716767
+    ]
    },
    "images": [
     {
@@ -3123,7 +3759,15 @@
    "monsterType": "Normal",
    "name": "Soul of the Supreme King",
    "names": {
-    "en": "Soul of the Supreme King"
+    "de": "Seele des Obersten Königs",
+    "en": "Soul of the Supreme King",
+    "es": "Alma del Rey Supremo",
+    "fr": "Âme du Roi Suprême",
+    "it": "Anima del Re Supremo",
+    "ja": "覇王龍の魂",
+    "ko": "패왕룡의 혼",
+    "pt": "Alma do Rei Supremo",
+    "zh-CN": "霸王龙之魂"
    },
    "ocgDate": "2022-02-19",
    "passcode": 92428405,
@@ -3164,7 +3808,11 @@
    "id": "92435533",
    "identifiers": {
     "konamiId": 13157,
-    "ygoprodeckId": 92435533
+    "ygojsonId": "1d21dc39-2fcf-4012-a4e1-487c5f46d93b",
+    "ygoprodeckId": 92435533,
+    "yugipediaIds": [
+     486309
+    ]
    },
    "images": [
     {
@@ -3180,7 +3828,14 @@
    "monsterType": "Fairy",
    "name": "Lazion, the Timelord",
    "names": {
-    "en": "Lazion, the Timelord"
+    "de": "Lazion, Herr der Zeit",
+    "en": "Lazion, the Timelord",
+    "es": "Lazion, el Señor del Tiempo",
+    "fr": "Lazion le Seigneur du Temps",
+    "it": "Lazion, il Signore del Tempo",
+    "ja": "時械神ラツィオン",
+    "ko": "시계신 라치온",
+    "pt": "Lazion, o Senhor do Tempo"
    },
    "ocgDate": "2017-05-13",
    "passcode": 92435533,
@@ -3252,7 +3907,11 @@
    "id": "92450185",
    "identifiers": {
     "konamiId": 7989,
-    "ygoprodeckId": 92450185
+    "ygojsonId": "e4163512-75ee-4892-aeac-2798b8299d08",
+    "ygoprodeckId": 92450185,
+    "yugipediaIds": [
+     45486
+    ]
    },
    "images": [
     {
@@ -3267,7 +3926,14 @@
    "monsterType": "Normal",
    "name": "Limiter Overload",
    "names": {
-    "en": "Limiter Overload"
+    "de": "Begrenzer-Überlastung",
+    "en": "Limiter Overload",
+    "es": "Sobrecarga del Limitador",
+    "fr": "Limitation de Surcharge",
+    "it": "Sovraccarico del Limitatore",
+    "ja": "リミッター・ブレイク",
+    "ko": "리미터 브레이크",
+    "pt": "Limitador de Sobrecarga"
    },
    "ocgDate": "2008-10-18",
    "passcode": 92450185,
@@ -3301,7 +3967,11 @@
    "id": "92472273",
    "identifiers": {
     "konamiId": 21774,
-    "ygoprodeckId": 92472273
+    "ygojsonId": "2f1da6f4-4535-42a8-a715-700f26d76079",
+    "ygoprodeckId": 92472273,
+    "yugipediaIds": [
+     1135259
+    ]
    },
    "images": [
     {
@@ -3317,7 +3987,15 @@
    "monsterType": "Dragon",
    "name": "DoomZ XII Zero - Drastea",
    "names": {
-    "en": "DoomZ XII Zero - Drastea"
+    "de": "UntergangZ XII Null - Drastea",
+    "en": "DoomZ XII Zero - Drastea",
+    "es": "DoomZ XII Cero - Drastea",
+    "fr": "DoomZ XII Zéro - Drastea",
+    "it": "DoomZ XII Zero - Drastea",
+    "ja": "終刻竜機ⅩⅡ－ドラスティア",
+    "ko": "둠즈XII－드라스티아",
+    "pt": "DoomZ XII Zero - Drastea",
+    "zh-CN": "终刻龙机ⅩⅡ－德拉斯提亚"
    },
    "ocgDate": "2025-07-26",
    "passcode": 92472273,
@@ -3349,7 +4027,11 @@
    "id": "92481084",
    "identifiers": {
     "konamiId": 13280,
-    "ygoprodeckId": 92481084
+    "ygojsonId": "a8824e0f-8abf-4c4a-8ce4-d27bd7a09c29",
+    "ygoprodeckId": 92481084,
+    "yugipediaIds": [
+     519675
+    ]
    },
    "images": [
     {
@@ -3364,7 +4046,14 @@
    "monsterType": "Field",
    "name": "Temple of the Mind's Eye",
    "names": {
-    "en": "Temple of the Mind's Eye"
+    "de": "Tempel des Inneren Auges",
+    "en": "Temple of the Mind's Eye",
+    "es": "Templo del Ojo de la Mente",
+    "fr": "Temple de l'Oeil de l'Esprit",
+    "it": "Tempio dell'Occhio della Mente",
+    "ja": "心眼の祭殿",
+    "ko": "심안의 제전",
+    "pt": "Templo do Olho da Mente"
    },
    "ocgDate": "2017-07-08",
    "passcode": 92481084,
@@ -3398,7 +4087,11 @@
    "id": "92487128",
    "identifiers": {
     "konamiId": 20595,
-    "ygoprodeckId": 92487128
+    "ygojsonId": "4f0d824b-b85e-4066-bb46-ec2e871646ee",
+    "ygoprodeckId": 92487128,
+    "yugipediaIds": [
+     1064999
+    ]
    },
    "images": [
     {
@@ -3414,7 +4107,15 @@
    "monsterType": "Dragon",
    "name": "Sosei Ryu-Ge Mistva",
    "names": {
-    "en": "Sosei Ryu-Ge Mistva"
+    "de": "Sosei Ryuge Mistva",
+    "en": "Sosei Ryu-Ge Mistva",
+    "es": "Sosei Ryu-Ge Mistva",
+    "fr": "Sosei Ryu-Ge Mistva",
+    "it": "Sosei Ryu-Ge Mistva",
+    "ja": "創星竜華－光巴",
+    "ko": "창성룡화－광파",
+    "pt": "Sosei Ryu-Ge Mistva",
+    "zh-CN": "创星龙华－光轮巴王"
    },
    "ocgDate": "2024-08-24",
    "passcode": 92487128,
@@ -3452,7 +4153,11 @@
    "id": "92501449",
    "identifiers": {
     "konamiId": 20535,
-    "ygoprodeckId": 92501449
+    "ygojsonId": "08c72135-93df-4e3b-921b-3c1a394b8f86",
+    "ygoprodeckId": 92501449,
+    "yugipediaIds": [
+     1064095
+    ]
    },
    "images": [
     {
@@ -3467,7 +4172,15 @@
    "monsterType": "Quick-Play",
    "name": "Primite Roar",
    "names": {
-    "en": "Primite Roar"
+    "de": "Gebrüll des Urerzes",
+    "en": "Primite Roar",
+    "es": "Rugido de Primitio",
+    "fr": "Rugissement Primite",
+    "it": "Ruggito Primite",
+    "ja": "原石の鳴獰",
+    "ko": "원석의 명영",
+    "pt": "Rugido Primita",
+    "zh-CN": "原石之鸣狞"
    },
    "ocgDate": "2024-10-10",
    "passcode": 92501449,
@@ -3509,7 +4222,11 @@
    "id": "92510265",
    "identifiers": {
     "konamiId": 12041,
-    "ygoprodeckId": 92510265
+    "ygojsonId": "ccbf07d9-3b4f-444d-8bf6-0baa9f9d9155",
+    "ygoprodeckId": 92510265,
+    "yugipediaIds": [
+     355357
+    ]
    },
    "images": [
     {
@@ -3525,7 +4242,14 @@
    "monsterType": "Warrior",
    "name": "Black Luster Soldier - Sacred Soldier",
    "names": {
-    "en": "Black Luster Soldier - Sacred Soldier"
+    "de": "Schwarz Glänzender Soldat - Heiliger Soldat",
+    "en": "Black Luster Soldier - Sacred Soldier",
+    "es": "Soldado del Brillo Negro - Soldado Sagrado",
+    "fr": "Soldat du Lustre Noir - Soldat Sacré",
+    "it": "Glorioso Soldato Nero - Soldato Sacro",
+    "ja": "聖戦士カオス・ソルジャー",
+    "ko": "성전사 카오스 솔저",
+    "pt": "Soldado do Lustro Negro - Soldado Sagrado"
    },
    "ocgDate": "2015-07-18",
    "passcode": 92510265,
@@ -3560,7 +4284,11 @@
    "id": "92512625",
    "identifiers": {
     "konamiId": 11411,
-    "ygoprodeckId": 92512625
+    "ygojsonId": "96cb492f-3e4d-43ff-97b6-0e1f77162f93",
+    "ygoprodeckId": 92512625,
+    "yugipediaIds": [
+     328841
+    ]
    },
    "images": [
     {
@@ -3575,7 +4303,15 @@
    "monsterType": "Counter",
    "name": "Solemn Scolding",
    "names": {
-    "en": "Solemn Scolding"
+    "de": "Ernste Predigt",
+    "en": "Solemn Scolding",
+    "es": "Regaño Solemne",
+    "fr": "Sermon Solennel",
+    "it": "Rimprovero Solenne",
+    "ja": "神の忠告",
+    "ko": "신의 충고",
+    "pt": "Censura Solene",
+    "zh-CN": "神之忠告"
    },
    "ocgDate": "2014-07-19",
    "passcode": 92512625,
@@ -3668,7 +4404,11 @@
    "id": "92518817",
    "identifiers": {
     "konamiId": 6701,
-    "ygoprodeckId": 92518817
+    "ygojsonId": "ba866ca7-0bb7-4d01-ba6b-be61d6318503",
+    "ygoprodeckId": 92518817,
+    "yugipediaIds": [
+     11554
+    ]
    },
    "images": [
     {
@@ -3684,7 +4424,14 @@
    "monsterType": "Spellcaster",
    "name": "Blazing Hiita",
    "names": {
-    "en": "Blazing Hiita"
+    "de": "Flammende Hiita",
+    "en": "Blazing Hiita",
+    "es": "Hiita Ardiente",
+    "fr": "Hiita, la Flamboyante",
+    "it": "Hiita Fiammeggiante",
+    "ja": "燃え盛るヒータ",
+    "ko": "타오르는 히타",
+    "pt": "Hiita em Chamas"
    },
    "ocgDate": "2007-09-22",
    "passcode": 92518817,
@@ -3736,7 +4483,11 @@
    "id": "92519087",
    "identifiers": {
     "konamiId": 15515,
-    "ygoprodeckId": 92519087
+    "ygojsonId": "fbc4a519-68ce-4950-95a6-2382ad4390b5",
+    "ygoprodeckId": 92519087,
+    "yugipediaIds": [
+     717399
+    ]
    },
    "images": [
     {
@@ -3752,7 +4503,15 @@
    "monsterType": "Psychic",
    "name": "Virtual World Kyubi - Shenshen",
    "names": {
-    "en": "Virtual World Kyubi - Shenshen"
+    "de": "Kyubi der Virtualwelt - Shenshen",
+    "en": "Virtual World Kyubi - Shenshen",
+    "es": "Kyubi del Mundo Virtual - Shenshen",
+    "fr": "Kyubi du Monde Virtuel - Shenshen",
+    "it": "Kyubi Mondo Virtuale - Shenshen",
+    "ja": "電脳堺狐－仙々",
+    "ko": "전뇌계호－셴셴",
+    "pt": "Kyubi do Mundo Virtual - Shenshen",
+    "zh-CN": "电脑堺狐－仙仙"
    },
    "ocgDate": "2020-08-08",
    "passcode": 92519087,
@@ -3798,7 +4557,11 @@
    "id": "92530005",
    "identifiers": {
     "konamiId": 20486,
-    "ygoprodeckId": 92530005
+    "ygojsonId": "461f3bcc-07fa-456e-8338-99d666b84ac7",
+    "ygoprodeckId": 92530005,
+    "yugipediaIds": [
+     1071296
+    ]
    },
    "images": [
     {
@@ -3814,7 +4577,15 @@
    "monsterType": "Spellcaster",
    "name": "Performage Ball Balancer",
    "names": {
-    "en": "Performage Ball Balancer"
+    "de": "Künstlerzauberer Ballreiter",
+    "en": "Performage Ball Balancer",
+    "es": "Artilusionista Balancín de Bolas",
+    "fr": "Équilibriste de Balles Mageartiste",
+    "it": "Artistamagus Equilibrista delle Palle",
+    "ja": "Ｅｍボール・ライダー",
+    "ko": "Em 볼 라이더",
+    "pt": "Camaramágico Equilibrista de Bolas",
+    "zh-CN": "娱乐巫师・骑球手"
    },
    "ocgDate": "2024-10-10",
    "passcode": 92530005,
@@ -3844,7 +4615,11 @@
    "id": "92534075",
    "identifiers": {
     "konamiId": 13326,
-    "ygoprodeckId": 92534075
+    "ygojsonId": "eea7b181-d700-42cf-a01e-06202af0f597",
+    "ygoprodeckId": 92534075,
+    "yugipediaIds": [
+     544298
+    ]
    },
    "images": [
     {
@@ -3859,7 +4634,15 @@
    "monsterType": "Continuous",
    "name": "Magical Musket - Fiendish Deal",
    "names": {
-    "en": "Magical Musket - Fiendish Deal"
+    "de": "Magische Muskete - Unterweltler-Abkommen",
+    "en": "Magical Musket - Fiendish Deal",
+    "es": "Mágico Mosquete - Trato Demoníaco",
+    "fr": "Magie de Mousquet - Accord Démoniaque",
+    "it": "Magico Moschetto - Patto Demoniaco",
+    "ja": "魔弾－デビルズ・ディール",
+    "ko": "마탄환-데블즈 딜",
+    "pt": "Mágico Mosquete - Acordo Demoníaco",
+    "zh-CN": "魔弹－魔鬼交易"
    },
    "ocgDate": "2017-08-11",
    "passcode": 92534075,
@@ -3876,7 +4659,8 @@
   },
   {
    "archetypes": [
-    "d-d-2"
+    "d-d-2",
+    "d-d-d"
    ],
    "atk": 2600,
    "attribute": "dark",
@@ -3886,7 +4670,11 @@
    "id": "92536468",
    "identifiers": {
     "konamiId": 11460,
-    "ygoprodeckId": 92536468
+    "ygojsonId": "aab37dde-630d-4662-9484-7388bb2897e0",
+    "ygoprodeckId": 92536468,
+    "yugipediaIds": [
+     330301
+    ]
    },
    "images": [
     {
@@ -3902,7 +4690,14 @@
    "monsterType": "Fiend",
    "name": "D/D/D Rebel King Leonidas",
    "names": {
-    "en": "D/D/D Rebel King Leonidas"
+    "de": "D/D/D-Rebellenkönig Leonidas",
+    "en": "D/D/D Rebel King Leonidas",
+    "es": "D/D/D Rey Rebelde Leónidas",
+    "fr": "D/D/D Léonidas, Roi Rebelle",
+    "it": "D/D/D Re Ribelle Leonidas",
+    "ja": "ＤＤＤ反骨王レオニダス",
+    "ko": "DDD 반골왕 레오니다스",
+    "pt": "D/D/D Rei Rebelde Leonidas"
    },
    "ocgDate": "2014-08-21",
    "passcode": 92536468,
@@ -3949,7 +4744,11 @@
    "id": "92559258",
    "identifiers": {
     "konamiId": 14442,
-    "ygoprodeckId": 92559258
+    "ygojsonId": "b300c5b9-d7d9-4806-a62a-473bf3ba7590",
+    "ygoprodeckId": 92559258,
+    "yugipediaIds": [
+     594473
+    ]
    },
    "images": [
     {
@@ -3965,7 +4764,14 @@
    "monsterType": "Spellcaster",
    "name": "Servant of Endymion",
    "names": {
-    "en": "Servant of Endymion"
+    "de": "Dienerin von Endymion",
+    "en": "Servant of Endymion",
+    "es": "Sirviente de Endimión",
+    "fr": "Servante d'Endymion",
+    "it": "Servitore di Endymion",
+    "ja": "サーヴァント・オブ・エンディミオン",
+    "ko": "서번트 오브 엔디미온",
+    "pt": "Servo de Endymion"
    },
    "ocgDate": "2019-03-09",
    "passcode": 92559258,
@@ -4009,7 +4815,11 @@
    "id": "92562411",
    "identifiers": {
     "konamiId": 14688,
-    "ygoprodeckId": 92562411
+    "ygojsonId": "20e66dd9-f135-4b09-9cc4-1f34749dba58",
+    "ygoprodeckId": 92562411,
+    "yugipediaIds": [
+     643268
+    ]
    },
    "images": [
     {
@@ -4024,7 +4834,15 @@
    "monsterType": "Continuous",
    "name": "The World Legacy",
    "names": {
-    "en": "The World Legacy"
+    "de": "Das Weltvermächtnis",
+    "en": "The World Legacy",
+    "es": "El Legado Mundial",
+    "fr": "L'Héritage du Monde",
+    "it": "L'Eredità del Mondo",
+    "ja": "星遺物の導く先",
+    "ko": "성유물이 이끄는 세계",
+    "pt": "O Legado Mundial",
+    "zh-CN": "星遗物所引导的前路"
    },
    "ocgDate": "2019-07-13",
    "passcode": 92562411,
@@ -4048,7 +4866,11 @@
    "id": "92565383",
    "identifiers": {
     "konamiId": 18792,
-    "ygoprodeckId": 92565383
+    "ygojsonId": "cfa99425-3481-4e70-8e97-f5ce9d075b27",
+    "ygoprodeckId": 92565383,
+    "yugipediaIds": [
+     930122
+    ]
    },
    "images": [
     {
@@ -4064,7 +4886,15 @@
    "monsterType": "Illusion",
    "name": "Cornfield Coatl",
    "names": {
-    "en": "Cornfield Coatl"
+    "de": "Kornfeld-Coatl",
+    "en": "Cornfield Coatl",
+    "es": "Coatl Maizal",
+    "fr": "Coatl du Champ de Maïs",
+    "it": "Coatl Campo di Grano",
+    "ja": "コーンフィールド コアトル",
+    "ko": "콘필드 코아틀",
+    "pt": "Coatl do Milharal",
+    "zh-CN": "玉米田 科亚特尔"
    },
    "ocgDate": "2023-04-22",
    "passcode": 92565383,
@@ -4109,7 +4939,11 @@
    "id": "92572371",
    "identifiers": {
     "konamiId": 10510,
-    "ygoprodeckId": 92572371
+    "ygojsonId": "77ab6879-6a3d-4f60-ada5-8d03e28e3021",
+    "ygoprodeckId": 92572371,
+    "yugipediaIds": [
+     273983
+    ]
    },
    "images": [
     {
@@ -4125,7 +4959,16 @@
    "monsterType": "Beast-Warrior",
    "name": "Brotherhood of the Fire Fist - Buffalo",
    "names": {
-    "en": "Brotherhood of the Fire Fist - Buffalo"
+    "de": "Bruderschaft der Feuerfaust - Büffel",
+    "en": "Brotherhood of the Fire Fist - Buffalo",
+    "es": "Hermandad del Puño de Fuego - Búfalo",
+    "fr": "Confrérie du Poing de Feu - Buffle",
+    "it": "Fratellanza del Pugno di Fuoco - Bufalo",
+    "ja": "殺炎星－ブルキ",
+    "ko": "살염성－불키",
+    "pt": "Irmandade do Punho de Fogo - Búfalo",
+    "zh-CN": "杀炎星－牛逵",
+    "zh-TW": "殺炎星－牛逵"
    },
    "ocgDate": "2013-02-16",
    "passcode": 92572371,
@@ -4170,7 +5013,11 @@
    "id": "92586237",
    "identifiers": {
     "konamiId": 15973,
-    "ygoprodeckId": 92586237
+    "ygojsonId": "baae0d33-8b5e-4a9e-89ad-69c132abdfdd",
+    "ygoprodeckId": 92586237,
+    "yugipediaIds": [
+     714180
+    ]
    },
    "images": [
     {
@@ -4186,7 +5033,14 @@
    "monsterType": "Beast-Warrior",
    "name": "Bujin Mahitotsu",
    "names": {
-    "en": "Bujin Mahitotsu"
+    "de": "Bujin Mahitotsu",
+    "en": "Bujin Mahitotsu",
+    "es": "Bujin Mahitotsu",
+    "fr": "Bujin Mahitotsu",
+    "it": "Bujin Mahitotsu",
+    "ja": "武神－マヒトツ",
+    "ko": "무사신－마히토츠",
+    "pt": "Bujin Mahitotsu"
    },
    "ocgDate": "2021-01-16",
    "passcode": 92586237,
@@ -4214,7 +5068,11 @@
    "id": "92595545",
    "identifiers": {
     "konamiId": 9732,
-    "ygoprodeckId": 92595545
+    "ygojsonId": "09fd8753-1f47-4abc-9808-24a92efa6e10",
+    "ygoprodeckId": 92595545,
+    "yugipediaIds": [
+     174074
+    ]
    },
    "images": [
     {
@@ -4230,7 +5088,13 @@
    "monsterType": "Thunder",
    "name": "Plasma Ball",
    "names": {
-    "en": "Plasma Ball"
+    "de": "Plasmakugel",
+    "en": "Plasma Ball",
+    "es": "Bola de Plasma",
+    "fr": "Balle Plasma",
+    "it": "Palla di Plasma",
+    "ja": "プラズマ・ボール",
+    "ko": "플라즈마 볼"
    },
    "ocgDate": "2011-07-16",
    "passcode": 92595545,
@@ -4255,7 +5119,11 @@
    "id": "92595643",
    "identifiers": {
     "konamiId": 7479,
-    "ygoprodeckId": 92595643
+    "ygojsonId": "036337c3-f105-4486-bc81-0e877c74e894",
+    "ygoprodeckId": 92595643,
+    "yugipediaIds": [
+     70292
+    ]
    },
    "images": [
     {
@@ -4270,7 +5138,13 @@
    "monsterType": "Normal",
    "name": "Fine",
    "names": {
-    "en": "Fine"
+    "de": "Strafe",
+    "en": "Fine",
+    "es": "Multa",
+    "fr": "Amende",
+    "it": "Multa",
+    "ja": "罰則金",
+    "ko": "벌금"
    },
    "ocgDate": "2007-11-23",
    "passcode": 92595643,
@@ -4297,7 +5171,11 @@
    "id": "92595825",
    "identifiers": {
     "konamiId": 21771,
-    "ygoprodeckId": 92595825
+    "ygojsonId": "313994b2-6142-4821-936f-2f289b2e7345",
+    "ygoprodeckId": 92595825,
+    "yugipediaIds": [
+     1136533
+    ]
    },
    "images": [
     {
@@ -4313,7 +5191,14 @@
    "monsterType": "Plant",
    "name": "Twilight Rose Black Knight",
    "names": {
-    "en": "Twilight Rose Black Knight"
+    "de": "Schwarzer Zwielichtsrosen-Ritter",
+    "en": "Twilight Rose Black Knight",
+    "es": "Caballero Negro de la Rosa del Atardecer",
+    "fr": "Chevalier Noir de la Rose du Crépuscule",
+    "it": "Cavaliere Nero della Rosa del Crepuscolo",
+    "ja": "夜薔薇の黒騎士",
+    "pt": "Cavaleiro Negro da Rosa do Crepúsculo",
+    "zh-CN": "夜蔷薇之黑骑士"
    },
    "ocgDate": "2025-07-26",
    "passcode": 92595825,
@@ -4342,7 +5227,11 @@
    "id": "92597893",
    "identifiers": {
     "konamiId": 15072,
-    "ygoprodeckId": 92597893
+    "ygojsonId": "cf10f148-dbb4-40f6-83d5-93c19d9672c5",
+    "ygoprodeckId": 92597893,
+    "yugipediaIds": [
+     714933
+    ]
    },
    "images": [
     {
@@ -4358,7 +5247,14 @@
    "monsterType": "Dragon",
    "name": "Feedran, the Winds of Mischief",
    "names": {
-    "en": "Feedran, the Winds of Mischief"
+    "de": "Feedran, der spitzbübische Wind",
+    "en": "Feedran, the Winds of Mischief",
+    "es": "Fiedran, los Vientos de Malicia",
+    "fr": "Feedran, les Vents de la Malice",
+    "it": "Feedran, i Venti Dispettosi",
+    "ja": "いたずら風のフィードラン",
+    "ko": "심술난 바람 피드란",
+    "pt": "Feedran, o Vento da Travesso"
    },
    "ocgDate": "2020-10-03",
    "passcode": 92597893,
@@ -4393,7 +5289,11 @@
    "id": "92607427",
    "identifiers": {
     "konamiId": 16431,
-    "ygoprodeckId": 92607427
+    "ygojsonId": "37153f69-2303-4d73-8f60-c88259468274",
+    "ygoprodeckId": 92607427,
+    "yugipediaIds": [
+     708366
+    ]
    },
    "images": [
     {
@@ -4408,7 +5308,15 @@
    "monsterType": "Normal",
    "name": "Toy Parade",
    "names": {
-    "en": "Toy Parade"
+    "de": "Spielzeugparade",
+    "en": "Toy Parade",
+    "es": "Desfile de Juguetes",
+    "fr": "Parade des Jouets",
+    "it": "Parata dei Giocattoli",
+    "ja": "トイ・パレード",
+    "ko": "토이 퍼레이드",
+    "pt": "Desfile de Brinquedos",
+    "zh-CN": "玩具游行队"
    },
    "ocgDate": "2021-07-17",
    "passcode": 92607427,
@@ -4425,7 +5333,8 @@
   },
   {
    "archetypes": [
-    "heroic"
+    "heroic",
+    "heroic-challenger"
    ],
    "atk": 0,
    "attribute": "earth",
@@ -4435,7 +5344,11 @@
    "id": "92609670",
    "identifiers": {
     "konamiId": 10696,
-    "ygoprodeckId": 92609670
+    "ygojsonId": "137ab507-b1de-49c1-b17c-2305d217a9cf",
+    "ygoprodeckId": 92609670,
+    "yugipediaIds": [
+     278595
+    ]
    },
    "images": [
     {
@@ -4451,7 +5364,14 @@
    "monsterType": "Warrior",
    "name": "Heroic Challenger - Ambush Soldier",
    "names": {
-    "en": "Heroic Challenger - Ambush Soldier"
+    "de": "Heroischer Herausforderer - Überfallsoldat",
+    "en": "Heroic Challenger - Ambush Soldier",
+    "es": "Contendiente Heroico - Soldado de la Emboscada",
+    "fr": "Challenger Héroïque - Soldat Embusqué",
+    "it": "Sfidante Eroico - Soldato da Imboscata",
+    "ja": "Ｈ・Ｃ アンブッシュ・ソルジャー",
+    "ko": "H·C 앰버시 솔저",
+    "pt": "Desafiante Heroico - Soldado da Emboscada"
    },
    "ocgDate": "2013-08-10",
    "passcode": 92609670,
@@ -4482,7 +5402,11 @@
    "id": "92610868",
    "identifiers": {
     "konamiId": 16085,
-    "ygoprodeckId": 92610868
+    "ygojsonId": "4d398bac-b5e8-465b-9a38-3ba9340846d3",
+    "ygoprodeckId": 92610868,
+    "yugipediaIds": [
+     716383
+    ]
    },
    "images": [
     {
@@ -4498,7 +5422,15 @@
    "monsterType": "Fairy",
    "name": "ReSolfachord Dreamia",
    "names": {
-    "en": "ReSolfachord Dreamia"
+    "de": "ReSolfakkord Dreamia",
+    "en": "ReSolfachord Dreamia",
+    "es": "Dreamia ReSolfacorde",
+    "fr": "RéSolfaccord Dreamia",
+    "it": "ReSolfaccordo Dreamia",
+    "ja": "レドレミコード・ドリーミア",
+    "ko": "레도레미코드 드리미아",
+    "pt": "ReSolfacorde Dreamia",
+    "zh-CN": "来音服和弦・多利米娅"
    },
    "ocgDate": "2021-03-06",
    "passcode": 92610868,
@@ -4531,7 +5463,11 @@
    "id": "92644052",
    "identifiers": {
     "konamiId": 17258,
-    "ygoprodeckId": 92644052
+    "ygojsonId": "4645465b-0210-4baa-bc1e-5166cea160b7",
+    "ygoprodeckId": 92644052,
+    "yugipediaIds": [
+     716206
+    ]
    },
    "images": [
     {
@@ -4547,7 +5483,15 @@
    "monsterType": "Spellcaster",
    "name": "Performapal Duelist Extraordinaire",
    "names": {
-    "en": "Performapal Duelist Extraordinaire"
+    "de": "Künstlerkumpel Überragender Duellant",
+    "en": "Performapal Duelist Extraordinaire",
+    "es": "Artistamigo Duelista Extraordinario",
+    "fr": "Duelliste Extraordinaire Potartiste",
+    "it": "Artistamico Duellante Straordinario",
+    "ja": "ＥＭ稀代の決闘者",
+    "ko": "EM 희대의 듀얼리스트",
+    "pt": "Camarartista Duelista Extraordinário",
+    "zh-CN": "娱乐伙伴 稀代的决斗者"
    },
    "ocgDate": "2022-02-19",
    "passcode": 92644052,
@@ -4584,7 +5528,11 @@
    "id": "92650018",
    "identifiers": {
     "konamiId": 16036,
-    "ygoprodeckId": 92650018
+    "ygojsonId": "44d134d2-33d8-4bc7-877e-fe11e6133b91",
+    "ygoprodeckId": 92650018,
+    "yugipediaIds": [
+     712709
+    ]
    },
    "images": [
     {
@@ -4599,7 +5547,14 @@
    "monsterType": "Normal",
    "name": "Amaze Attraction Horror House",
    "names": {
-    "en": "Amaze Attraction Horror House"
+    "de": "Vergnügliche Attraktion Horrorhaus",
+    "en": "Amaze Attraction Horror House",
+    "es": "Sorprendente Atracción Casa del Terror",
+    "fr": "Attraction-Étonnante Maison de l'Horreur",
+    "it": "Casa degli Orrori Attrazione Prodigio",
+    "ja": "Ａ・∀・ＨＨ",
+    "ko": "A・∀・HH",
+    "pt": "Divertida Atração Casa do Terror"
    },
    "ocgDate": "2021-01-16",
    "passcode": 92650018,
@@ -4620,7 +5575,11 @@
    "id": "92650749",
    "identifiers": {
     "konamiId": 19510,
-    "ygoprodeckId": 92650749
+    "ygojsonId": "3576d9bd-314d-48e8-9605-1a79d9cb3c43",
+    "ygoprodeckId": 92650749,
+    "yugipediaIds": [
+     1002440
+    ]
    },
    "images": [
     {
@@ -4635,7 +5594,15 @@
    "monsterType": "Continuous",
    "name": "Mature Chronicle",
    "names": {
-    "en": "Mature Chronicle"
+    "de": "Ausgereifte Chronik",
+    "en": "Mature Chronicle",
+    "es": "Crónica de Madurez",
+    "fr": "Parchemin Mature",
+    "it": "Cronache Mature",
+    "ja": "マチュア・クロニクル",
+    "ko": "매추어 크로니클",
+    "pt": "Crônica Madura",
+    "zh-CN": "成熟编年史"
    },
    "ocgDate": "2023-10-28",
    "passcode": 92650749,
@@ -4669,7 +5636,11 @@
    "id": "92652813",
    "identifiers": {
     "konamiId": 15406,
-    "ygoprodeckId": 92652813
+    "ygojsonId": "4ffeeca9-d63d-448a-bbe3-c28b5f1cccaa",
+    "ygoprodeckId": 92652813,
+    "yugipediaIds": [
+     713353
+    ]
    },
    "images": [
     {
@@ -4685,7 +5656,15 @@
    "monsterType": "Pyro",
    "name": "Awakening of the Possessed - Greater Inari Fire",
    "names": {
-    "en": "Awakening of the Possessed - Greater Inari Fire"
+    "de": "Erwachen der Besessenen - Größeres Inari-Feuer",
+    "en": "Awakening of the Possessed - Greater Inari Fire",
+    "es": "Despertar del Poseído - Inari de Fuego Superior",
+    "fr": "Éveil des Possédées - Super Inari Feu",
+    "it": "Risveglio dei Posseduti - Grande Inari di Fuoco",
+    "ja": "憑依覚醒－大稲荷火",
+    "ko": "빙의각성－대이나리불",
+    "pt": "Despertar dos Possuídos - Grande Fogo Inari",
+    "zh-CN": "凭依觉醒－大稻荷火"
    },
    "ocgDate": "2020-07-04",
    "passcode": 92652813,
@@ -4723,7 +5702,11 @@
    "id": "92661479",
    "identifiers": {
     "konamiId": 10066,
-    "ygoprodeckId": 92661479
+    "ygojsonId": "99bba936-7bee-49fe-a8a2-cee73ffdcb86",
+    "ygoprodeckId": 92661479,
+    "yugipediaIds": [
+     193905
+    ]
    },
    "images": [
     {
@@ -4738,7 +5721,14 @@
    "monsterType": "Warrior",
    "name": "Photon Strike Bounzer",
    "names": {
-    "en": "Photon Strike Bounzer"
+    "de": "Photonenstoß-Rausschmeißer",
+    "en": "Photon Strike Bounzer",
+    "es": "Rebotador de Golpe Fotónico",
+    "fr": "Riposteur Bounzer Photon",
+    "it": "Buttafuori Colpo Fotonico",
+    "ja": "フォトン・ストリーク・バウンサー",
+    "ko": "포톤 스트리크 바운서",
+    "pt": "Rufião do Golpe de Fóton"
    },
    "ocgDate": "2012-02-18",
    "passcode": 92661479,
@@ -4789,7 +5779,11 @@
    "id": "92667214",
    "identifiers": {
     "konamiId": 4104,
-    "ygoprodeckId": 92667214
+    "ygojsonId": "9f81ba34-837c-4a62-afd4-ac483fcb795d",
+    "ygoprodeckId": 92667214,
+    "yugipediaIds": [
+     509005
+    ]
    },
    "images": [
     {
@@ -4805,7 +5799,14 @@
    "monsterType": "Zombie",
    "name": "Clown Zombie",
    "names": {
-    "en": "Clown Zombie"
+    "de": "Clown-Zombie",
+    "en": "Clown Zombie",
+    "es": "Zombi Payaso",
+    "fr": "Zombie Clown",
+    "it": "Zombie Clown",
+    "ja": "マーダーサーカス・ゾンビ",
+    "ko": "머더 서커스 좀비",
+    "pt": "Palhaço Zumbi"
    },
    "ocgDate": "2000-01-27",
    "passcode": 92667214,
@@ -4840,7 +5841,11 @@
    "id": "92676637",
    "identifiers": {
     "konamiId": 7986,
-    "ygoprodeckId": 92676637
+    "ygojsonId": "88d741c9-65bd-43fb-aa5e-43354006f527",
+    "ygoprodeckId": 92676637,
+    "yugipediaIds": [
+     44611
+    ]
    },
    "images": [
     {
@@ -4856,7 +5861,15 @@
    "monsterType": "Machine",
    "name": "Tuningware",
    "names": {
-    "en": "Tuningware"
+    "de": "Abstimmgeschirr",
+    "en": "Tuningware",
+    "es": "Equipo de Afinación",
+    "fr": "Casserole de Réglage",
+    "it": "Attrezzo Sintonizzatore",
+    "ja": "チューニング・サポーター",
+    "ko": "튜닝 서포터",
+    "pt": "Artigo de Afinação",
+    "zh-CN": "调和支援者"
    },
    "ocgDate": "2008-10-18",
    "passcode": 92676637,
@@ -4908,7 +5921,11 @@
    "id": "92693205",
    "identifiers": {
     "konamiId": 11869,
-    "ygoprodeckId": 92693205
+    "ygojsonId": "70d2e8f3-aedf-405e-a39c-d5eb22ca1c8b",
+    "ygoprodeckId": 92693205,
+    "yugipediaIds": [
+     352678
+    ]
    },
    "images": [
     {
@@ -4924,7 +5941,14 @@
    "monsterType": "Machine",
    "name": "Geargianchor",
    "names": {
-    "en": "Geargianchor"
+    "de": "Getriebrianker",
+    "en": "Geargianchor",
+    "es": "Engranaji-ancla",
+    "fr": "Geargiancre",
+    "it": "Ingranaggianancora",
+    "ja": "ギアギアンカー",
+    "ko": "기아기아앵커",
+    "pt": "Engrenagiâncora"
    },
    "ocgDate": "2015-04-25",
    "passcode": 92693205,
@@ -4952,14 +5976,19 @@
   },
   {
    "archetypes": [
-    "labrynth"
+    "labrynth",
+    "welcome-labrynth"
    ],
    "frame": "trap",
    "hasEffect": true,
    "id": "92714517",
    "identifiers": {
     "konamiId": 18222,
-    "ygoprodeckId": 92714517
+    "ygojsonId": "cb33c952-9f64-47b0-a4ed-18e988c1c0ef",
+    "ygoprodeckId": 92714517,
+    "yugipediaIds": [
+     713725
+    ]
    },
    "images": [
     {
@@ -4974,7 +6003,15 @@
    "monsterType": "Normal",
    "name": "Big Welcome Labrynth",
    "names": {
-    "en": "Big Welcome Labrynth"
+    "de": "Großes Willkommens-Labrynth",
+    "en": "Big Welcome Labrynth",
+    "es": "Gran Bienvenida del Labrislinto",
+    "fr": "Grande Bienvenue Labrynth",
+    "it": "Grande Benvenuto Labrinto",
+    "ja": "ビッグウェルカム・ラビュリンス",
+    "ko": "빅웰컴 라뷰린스",
+    "pt": "Grande Boas-vindas a Labrinto",
+    "zh-CN": "欢迎大驾光临拉比丽斯"
    },
    "ocgDate": "2022-10-15",
    "passcode": 92714517,
@@ -5061,7 +6098,11 @@
    "id": "92719314",
    "identifiers": {
     "konamiId": 7419,
-    "ygoprodeckId": 92719314
+    "ygojsonId": "efcc9f6a-7f2a-4efd-af00-0c01fd211647",
+    "ygoprodeckId": 92719314,
+    "yugipediaIds": [
+     74736
+    ]
    },
    "images": [
     {
@@ -5077,7 +6118,14 @@
    "monsterType": "Thunder",
    "name": "The Dark Creator",
    "names": {
-    "en": "The Dark Creator"
+    "de": "Der finstere Schöpfer",
+    "en": "The Dark Creator",
+    "es": "El Creador Oscuro",
+    "fr": "Le Créateur des Ténèbres",
+    "it": "Il Creatore Oscuro",
+    "ja": "ダーク・クリエイター",
+    "ko": "다크크리에이터",
+    "zh-CN": "暗黑创世神"
    },
    "ocgDate": "2007-11-23",
    "passcode": 92719314,
@@ -5122,7 +6170,11 @@
    "id": "92720564",
    "identifiers": {
     "konamiId": 7877,
-    "ygoprodeckId": 92720564
+    "ygojsonId": "db5cc4ed-366c-49e8-bd46-0cc49ea3cde9",
+    "ygoprodeckId": 92720564,
+    "yugipediaIds": [
+     34706
+    ]
    },
    "images": [
     {
@@ -5138,7 +6190,14 @@
    "monsterType": "Machine",
    "name": "Morphtronic Boomboxen",
    "names": {
-    "en": "Morphtronic Boomboxen"
+    "de": "Morphtronische Boomboxen",
+    "en": "Morphtronic Boomboxen",
+    "es": "Boomboxen Morfotrónico",
+    "fr": "Transiston Morphtronique",
+    "it": "Stereo Morfotronico",
+    "ja": "Ｄ・ラジカッセン",
+    "ko": "D • 라디카셋",
+    "pt": "Boomboxen Morfotronico"
    },
    "ocgDate": "2008-07-19",
    "passcode": 92720564,
@@ -5173,7 +6232,11 @@
    "id": "92723496",
    "identifiers": {
     "konamiId": 11981,
-    "ygoprodeckId": 92723496
+    "ygojsonId": "39210a61-e4f9-4212-85a6-bad3d4ebf9ee",
+    "ygoprodeckId": 92723496,
+    "yugipediaIds": [
+     409889
+    ]
    },
    "images": [
     {
@@ -5189,7 +6252,14 @@
    "monsterType": "Wyrm",
    "name": "Giant Pairfish",
    "names": {
-    "en": "Giant Pairfish"
+    "de": "Riesiger Paarfisch",
+    "en": "Giant Pairfish",
+    "es": "Gigante Pareja de Peces",
+    "fr": "Couplepoisson Géant",
+    "it": "Pescicoppia Giganti",
+    "ja": "竜宮のツガイ",
+    "ko": "용궁의 부부",
+    "pt": "Casal de Peixes Gigantes"
    },
    "ocgDate": "2015-07-18",
    "passcode": 92723496,
@@ -5217,7 +6287,11 @@
    "id": "92729410",
    "identifiers": {
     "konamiId": 10745,
-    "ygoprodeckId": 92729410
+    "ygojsonId": "e8d10e6a-3cdc-4213-ba23-2ffb9f04c264",
+    "ygoprodeckId": 92729410,
+    "yugipediaIds": [
+     267962
+    ]
    },
    "images": [
     {
@@ -5233,7 +6307,14 @@
    "monsterType": "Beast",
    "name": "Baby Raccoon Ponpoko",
    "names": {
-    "en": "Baby Raccoon Ponpoko"
+    "de": "Waschbärbaby Ponpoko",
+    "en": "Baby Raccoon Ponpoko",
+    "es": "Mapache Bebé Ponpoko",
+    "fr": "Bébé Raton Laveur Ponpoko",
+    "it": "Piccolo Procione Ponpoko",
+    "ja": "子狸ぽんぽこ",
+    "ko": "꼬마너구리 폼포코",
+    "pt": "Bebê Guaxinim Ponpoko"
    },
    "ocgDate": "2013-07-20",
    "passcode": 92729410,
@@ -5278,7 +6359,11 @@
    "id": "92731385",
    "identifiers": {
     "konamiId": 17444,
-    "ygoprodeckId": 92731385
+    "ygojsonId": "f69a5b88-74b2-459f-81f8-7e2903188cfa",
+    "ygoprodeckId": 92731385,
+    "yugipediaIds": [
+     717012
+    ]
    },
    "images": [
     {
@@ -5294,7 +6379,15 @@
    "monsterType": "Aqua",
    "name": "Tearlaments Kitkallos",
    "names": {
-    "en": "Tearlaments Kitkallos"
+    "de": "Tränenklage Kitkallos",
+    "en": "Tearlaments Kitkallos",
+    "es": "Tiagrimentos Kitkallos",
+    "fr": "Kitkallos des Tiarmentations",
+    "it": "Tiaracrimalamenti Kitkallos",
+    "ja": "ティアラメンツ・キトカロス",
+    "ko": "티아라멘츠 키토칼로스",
+    "pt": "Lagrimentiara Kitkallos",
+    "zh-CN": "泪冠哀歌・琪多卡洛斯"
    },
    "ocgDate": "2022-04-23",
    "passcode": 92731385,
@@ -5323,7 +6416,11 @@
    "id": "92731455",
    "identifiers": {
     "konamiId": 4167,
-    "ygoprodeckId": 92731455
+    "ygojsonId": "888e29b4-82e8-450c-8d3d-f4f868b792ec",
+    "ygoprodeckId": 92731455,
+    "yugipediaIds": [
+     507132
+    ]
    },
    "images": [
     {
@@ -5339,7 +6436,15 @@
    "monsterType": "Warrior",
    "name": "M-Warrior #2",
    "names": {
-    "en": "M-Warrior #2"
+    "de": "M-Krieger #2",
+    "en": "M-Warrior #2",
+    "es": "M-Guerrero #2",
+    "fr": "M-Guerrier N°2",
+    "it": "Guerriero-M #2",
+    "ja": "マグネッツ２号",
+    "ko": "마그넷 2호",
+    "pt": "Guerreiro M Nº2",
+    "zh-CN": "磁体战士２号"
    },
    "ocgDate": "1999-03-27",
    "passcode": 92731455,
@@ -5380,7 +6485,11 @@
    "id": "92736188",
    "identifiers": {
     "konamiId": 6641,
-    "ygoprodeckId": 92736188
+    "ygojsonId": "96f20a11-7d0a-4ec3-9803-8313a48a26bf",
+    "ygoprodeckId": 92736188,
+    "yugipediaIds": [
+     3175
+    ]
    },
    "images": [
     {
@@ -5396,7 +6505,13 @@
    "monsterType": "Rock",
    "name": "Great Spirit",
    "names": {
-    "en": "Great Spirit"
+    "de": "Großer Geist",
+    "en": "Great Spirit",
+    "es": "Gran Espíritu",
+    "fr": "Grand Esprit",
+    "it": "Grande Spirito",
+    "ja": "グレート・スピリット",
+    "ko": "그레이트 스피릿"
    },
    "ocgDate": "2005-12-08",
    "passcode": 92736188,
@@ -5424,7 +6539,11 @@
    "id": "92744676",
    "identifiers": {
     "konamiId": 20426,
-    "ygoprodeckId": 92744676
+    "ygojsonId": "f4ef13f1-067b-48a1-bd20-a615202bc04b",
+    "ygoprodeckId": 92744676,
+    "yugipediaIds": [
+     1070089
+    ]
    },
    "images": [
     {
@@ -5440,7 +6559,13 @@
    "monsterType": "Fish",
    "name": "Zapper Shrimp",
    "names": {
-    "en": "Zapper Shrimp"
+    "de": "Schocker-Garnele",
+    "en": "Zapper Shrimp",
+    "es": "Gamba Exterminadora",
+    "fr": "Crevette Zappeuse",
+    "it": "Gamberetto Fulminatore",
+    "ja": "デンジエビ",
+    "pt": "Camarão-Elétrico"
    },
    "passcode": 92744676,
    "prints": [
@@ -5479,7 +6604,11 @@
    "id": "92746535",
    "identifiers": {
     "konamiId": 11809,
-    "ygoprodeckId": 92746535
+    "ygojsonId": "0fdbc555-9736-471b-80bf-cbb3d340239b",
+    "ygoprodeckId": 92746535,
+    "yugipediaIds": [
+     349108
+    ]
    },
    "images": [
     {
@@ -5495,7 +6624,15 @@
    "monsterType": "Dragon",
    "name": "Luster Pendulum, the Dracoslayer",
    "names": {
-    "en": "Luster Pendulum, the Dracoslayer"
+    "de": "Lüster-Pendel, der Drachobezwinger",
+    "en": "Luster Pendulum, the Dracoslayer",
+    "es": "Luster Péndulo, el Dracoasesino",
+    "fr": "Luster Pendule, le Dracossassin",
+    "it": "Lustro Pendulum, il Dracoassassino",
+    "ja": "竜剣士ラスターＰ",
+    "ko": "룡검사 라스터P",
+    "pt": "Pêndulo Luster, o Dracossassino",
+    "zh-CN": "龙剑士 光栅行者 灵摆"
    },
    "ocgDate": "2015-04-25",
    "passcode": 92746535,
@@ -5554,7 +6691,11 @@
    "id": "92755808",
    "identifiers": {
     "konamiId": 6183,
-    "ygoprodeckId": 92755808
+    "ygojsonId": "2c479699-437b-4ebe-93cd-5cf9170934b0",
+    "ygoprodeckId": 92755808,
+    "yugipediaIds": [
+     11738
+    ]
    },
    "images": [
     {
@@ -5570,7 +6711,14 @@
    "monsterType": "Dinosaur",
    "name": "Element Saurus",
    "names": {
-    "en": "Element Saurus"
+    "de": "Elementarsaurus",
+    "en": "Element Saurus",
+    "es": "Sauro Elemental",
+    "fr": "Saurus Élémentaire",
+    "it": "Dinosauro Elementale",
+    "ja": "エレメント・ザウルス",
+    "ko": "엘리멘트 사우루스",
+    "pt": "Saurus do Elemento"
    },
    "ocgDate": "2004-08-05",
    "passcode": 92755808,
@@ -5615,7 +6763,11 @@
    "id": "92767273",
    "identifiers": {
     "konamiId": 12882,
-    "ygoprodeckId": 92767273
+    "ygojsonId": "07e4da05-cbc0-4ae7-aeff-a2cdfa956e50",
+    "ygoprodeckId": 92767273,
+    "yugipediaIds": [
+     424765
+    ]
    },
    "images": [
     {
@@ -5631,7 +6783,14 @@
    "monsterType": "Plant",
    "name": "Performapal Barracuda",
    "names": {
-    "en": "Performapal Barracuda"
+    "de": "Künstlerkumpel Barrakuda",
+    "en": "Performapal Barracuda",
+    "es": "Artistamigo Barracuda",
+    "fr": "Barracuda Potartiste",
+    "it": "Artistamico Barracuda",
+    "ja": "ＥＭバラクーダ",
+    "ko": "EM 바라쿠다",
+    "pt": "Camarartista Barracuda"
    },
    "ocgDate": "2017-03-11",
    "passcode": 92767273,
@@ -5663,7 +6822,11 @@
    "id": "92770064",
    "identifiers": {
     "konamiId": 15864,
-    "ygoprodeckId": 92770064
+    "ygojsonId": "33a6d67e-741d-4f14-a237-da5d626d3371",
+    "ygoprodeckId": 92770064,
+    "yugipediaIds": [
+     708208
+    ]
    },
    "images": [
     {
@@ -5685,7 +6848,15 @@
    "monsterType": "Plant",
    "name": "Sunavalon Dryatrentiay",
    "names": {
-    "en": "Sunavalon Dryatrentiay"
+    "de": "Sonnenavalon-Dryatrentiay",
+    "en": "Sunavalon Dryatrentiay",
+    "es": "Solaravalon Driadentia",
+    "fr": "Dryarbre Solairavalon",
+    "it": "Solaravalon Driadentia",
+    "ja": "聖天樹の大母神",
+    "ko": "생아발론 드리아트란티에",
+    "pt": "Driatreantiay de Solaravalon",
+    "zh-CN": "圣天树之大母神"
    },
    "ocgDate": "2020-12-05",
    "passcode": 92770064,
@@ -5707,14 +6878,19 @@
   },
   {
    "archetypes": [
-    "cyber-dragon"
+    "cyber-dragon",
+    "cybernetic"
    ],
    "frame": "trap",
    "hasEffect": true,
    "id": "92773018",
    "identifiers": {
     "konamiId": 7468,
-    "ygoprodeckId": 92773018
+    "ygojsonId": "9d4c88c5-8367-43db-b0b5-cf553ebe75e8",
+    "ygoprodeckId": 92773018,
+    "yugipediaIds": [
+     508681
+    ]
    },
    "images": [
     {
@@ -5729,7 +6905,15 @@
    "monsterType": "Continuous",
    "name": "Cybernetic Hidden Technology",
    "names": {
-    "en": "Cybernetic Hidden Technology"
+    "de": "Kybernetisch verborgene Technologie",
+    "en": "Cybernetic Hidden Technology",
+    "es": "Tecnología Cibernética Oculta",
+    "fr": "Technologie Cybernétique Secrète",
+    "it": "Tecnologia Cibernetica Nascosta",
+    "ja": "サイバネティック・ヒドゥン・テクノロジー",
+    "ko": "사이버네틱 히든 테크놀로지",
+    "pt": "Tecnologia Cibernética Oculta",
+    "zh-CN": "人工脑秘密技术"
    },
    "ocgDate": "2007-11-23",
    "passcode": 92773018,
@@ -5762,7 +6946,11 @@
    "id": "92781606",
    "identifiers": {
     "konamiId": 13266,
-    "ygoprodeckId": 92781606
+    "ygojsonId": "9ac89b94-6e39-4fc0-b9a6-4b06dd986647",
+    "ygoprodeckId": 92781606,
+    "yugipediaIds": [
+     519553
+    ]
    },
    "images": [
     {
@@ -5783,7 +6971,15 @@
    "monsterType": "Insect",
    "name": "X-Krawler Qualiark",
    "names": {
-    "en": "X-Krawler Qualiark"
+    "de": "X-Krawler Qualiarche",
+    "en": "X-Krawler Qualiark",
+    "es": "X-Krawler Qualiarca",
+    "fr": "Qualiarche X-Krawler",
+    "it": "X-Krawler Qualiarca",
+    "ja": "エクスクローラー・クオリアーク",
+    "ko": "엑스크롤러 퀼리아크",
+    "pt": "Qualiarca X-Krawler",
+    "zh-CN": "超机怪虫・感质方舟"
    },
    "ocgDate": "2017-07-08",
    "passcode": 92781606,
@@ -5815,7 +7011,11 @@
    "id": "92784374",
    "identifiers": {
     "konamiId": 9162,
-    "ygoprodeckId": 92784374
+    "ygojsonId": "b2fcdd77-25a5-4b47-b99c-17e8fe3548f2",
+    "ygoprodeckId": 92784374,
+    "yugipediaIds": [
+     133273
+    ]
    },
    "images": [
     {
@@ -5831,7 +7031,15 @@
    "monsterType": "Spellcaster",
    "name": "Gishki Ariel",
    "names": {
-    "en": "Gishki Ariel"
+    "de": "Gishki-Ariel",
+    "en": "Gishki Ariel",
+    "es": "Ariel Gishki",
+    "fr": "Ariel Gishki",
+    "it": "Ariel Gishki",
+    "ja": "リチュア・エリアル",
+    "ko": "리추어 에리얼",
+    "pt": "Ariel Gishki",
+    "zh-CN": "咒仪・艾莉娅儿"
    },
    "ocgDate": "2010-08-03",
    "passcode": 92784374,
@@ -5870,7 +7078,11 @@
    "id": "92798873",
    "identifiers": {
     "konamiId": 17149,
-    "ygoprodeckId": 92798873
+    "ygojsonId": "aeab11f6-3700-46a3-b256-226cc4f1bd32",
+    "ygoprodeckId": 92798873,
+    "yugipediaIds": [
+     714571
+    ]
    },
    "images": [
     {
@@ -5886,7 +7098,15 @@
    "monsterType": "Dinosaur",
    "name": "Dinomorphia Rexterm",
    "names": {
-    "en": "Dinomorphia Rexterm"
+    "de": "Dinomorphia Rexterm",
+    "en": "Dinomorphia Rexterm",
+    "es": "Dinomorfia Rexterm",
+    "fr": "Rexterm Dinomorphia",
+    "it": "Dinomorfia Rexterm",
+    "ja": "ダイノルフィア・レクスターム",
+    "ko": "다이놀피어 렉스텀",
+    "pt": "Dinomorfia Rexterm",
+    "zh-CN": "恐啡肽骇龙・终结暴龙"
    },
    "ocgDate": "2022-01-15",
    "passcode": 92798873,
@@ -5925,7 +7145,11 @@
    "id": "92807548",
    "identifiers": {
     "konamiId": 8384,
-    "ygoprodeckId": 92807548
+    "ygojsonId": "a2aa5664-dae4-462c-a155-a0741ccf9364",
+    "ygoprodeckId": 92807548,
+    "yugipediaIds": [
+     405024
+    ]
    },
    "images": [
     {
@@ -5941,7 +7165,15 @@
    "monsterType": "Fairy",
    "name": "Darklord Ukoback",
    "names": {
-    "en": "Darklord Ukoback"
+    "de": "Finsterlord Ukoback",
+    "en": "Darklord Ukoback",
+    "es": "Señoroscuro Ukoback",
+    "fr": "Ange Déchu Ukoback",
+    "it": "Signore Oscuro Ukoback",
+    "ja": "堕天使ユコバック",
+    "ko": "타락천사 유코백",
+    "pt": "Senhor Obscuro Ukoback",
+    "zh-CN": "堕天使 乌科巴克"
    },
    "ocgDate": "2016-12-17",
    "passcode": 92807548,
@@ -5978,7 +7210,11 @@
    "id": "92812851",
    "identifiers": {
     "konamiId": 19187,
-    "ygoprodeckId": 92812851
+    "ygojsonId": "93494866-64ab-452c-b397-5d773d980d57",
+    "ygoprodeckId": 92812851,
+    "yugipediaIds": [
+     994364
+    ]
    },
    "images": [
     {
@@ -5999,7 +7235,15 @@
    "monsterType": "Spellcaster",
    "name": "Exceed the Pendulum",
    "names": {
-    "en": "Exceed the Pendulum"
+    "de": "Über dem Pendel",
+    "en": "Exceed the Pendulum",
+    "es": "Sobrepasa el Péndulo",
+    "fr": "Dépassement du Pendule",
+    "it": "Superare il Pendulum",
+    "ja": "奇跡の魔導剣士",
+    "ko": "엑시드 더 펜듈럼",
+    "pt": "Exceder o Pêndulo",
+    "zh-CN": "超升灵摆・奇迹的魔剑士"
    },
    "ocgDate": "2023-07-22",
    "passcode": 92812851,
@@ -6038,7 +7282,11 @@
    "id": "92821268",
    "identifiers": {
     "konamiId": 10693,
-    "ygoprodeckId": 92821268
+    "ygojsonId": "d2c3c3b4-c7a4-429f-9443-1cf720b42427",
+    "ygoprodeckId": 92821268,
+    "yugipediaIds": [
+     206219
+    ]
    },
    "images": [
     {
@@ -6054,7 +7302,14 @@
    "monsterType": "Machine",
    "name": "Gimmick Puppet Twilight Joker",
    "names": {
-    "en": "Gimmick Puppet Twilight Joker"
+    "de": "Gimmick-Marionette Zwielichtsjoker",
+    "en": "Gimmick Puppet Twilight Joker",
+    "es": "Marioneta Trucada Bufón del Atardecer",
+    "fr": "Poupée Truquée Arlequin du Crépuscule",
+    "it": "Burattino Arnese Giullare del Tramonto",
+    "ja": "ギミック・パペット－ナイト・ジョーカー",
+    "ko": "기믹 퍼핏-나이트 조커",
+    "pt": "Engenhoca Marionete Coringa do Crepúsculo"
    },
    "ocgDate": "2013-08-10",
    "passcode": 92821268,
@@ -6082,7 +7337,11 @@
    "id": "92826944",
    "identifiers": {
     "konamiId": 7359,
-    "ygoprodeckId": 92826944
+    "ygojsonId": "a4cfb813-b8c2-4d88-9cc8-0a46a2e97571",
+    "ygoprodeckId": 92826944,
+    "yugipediaIds": [
+     512106
+    ]
    },
    "images": [
     {
@@ -6098,7 +7357,15 @@
    "monsterType": "Zombie",
    "name": "Mezuki",
    "names": {
-    "en": "Mezuki"
+    "de": "Mezuki",
+    "en": "Mezuki",
+    "es": "Mezuki",
+    "fr": "Mezuki",
+    "it": "Mezuki",
+    "ja": "馬頭鬼",
+    "ko": "마두귀",
+    "pt": "Mezuki",
+    "zh-CN": "马头鬼"
    },
    "ocgDate": "2007-12-22",
    "passcode": 92826944,
@@ -6217,7 +7484,11 @@
    "id": "92841002",
    "identifiers": {
     "konamiId": 10742,
-    "ygoprodeckId": 92841002
+    "ygojsonId": "e7467738-de54-4f6f-b8d0-c9f48b7ace84",
+    "ygoprodeckId": 92841002,
+    "yugipediaIds": [
+     260981
+    ]
    },
    "images": [
     {
@@ -6233,7 +7504,14 @@
    "monsterType": "Dragon",
    "name": "Mythic Water Dragon",
    "names": {
-    "en": "Mythic Water Dragon"
+    "de": "Mythischer Wasserdrache",
+    "en": "Mythic Water Dragon",
+    "es": "Mítico Dragón Acuático",
+    "fr": "Dragon Mythique de l'Eau",
+    "it": "Drago Acqua Mitico",
+    "ja": "幻水龍",
+    "ko": "환수룡",
+    "pt": "Dragão da Água Mística"
    },
    "ocgDate": "2013-07-20",
    "passcode": 92841002,
@@ -6265,7 +7543,11 @@
    "id": "92854392",
    "identifiers": {
     "konamiId": 5737,
-    "ygoprodeckId": 92854392
+    "ygojsonId": "0658a0f4-7710-4a68-ad71-eb272ebc8cbe",
+    "ygoprodeckId": 92854392,
+    "yugipediaIds": [
+     11112
+    ]
    },
    "images": [
     {
@@ -6280,7 +7562,14 @@
    "monsterType": "Normal",
    "name": "Staunch Defender",
    "names": {
-    "en": "Staunch Defender"
+    "de": "Standfester Verteidiger",
+    "en": "Staunch Defender",
+    "es": "Defensor Acérrimo",
+    "fr": "Défenseur Résolu",
+    "it": "Difensore Incrollabile",
+    "ja": "立ちはだかる強敵",
+    "ko": "가로막는 강적",
+    "pt": "Defensor Estanque"
    },
    "ocgDate": "2002-11-21",
    "passcode": 92854392,
@@ -6320,7 +7609,11 @@
    "id": "92868896",
    "identifiers": {
     "konamiId": 13724,
-    "ygoprodeckId": 92868896
+    "ygojsonId": "b1c42d03-043c-4402-915d-e7547e1de5f6",
+    "ygoprodeckId": 92868896,
+    "yugipediaIds": [
+     556811
+    ]
    },
    "images": [
     {
@@ -6336,7 +7629,15 @@
    "monsterType": "Winged Beast",
    "name": "Dragunity Senatus",
    "names": {
-    "en": "Dragunity Senatus"
+    "de": "Dracheneinheit Senatus",
+    "en": "Dragunity Senatus",
+    "es": "Dracounidad Senatus",
+    "fr": "Sénat Dragunité",
+    "it": "Senatus Dragunità",
+    "ja": "ドラグニティ－セナート",
+    "ko": "드래그니티－세나트",
+    "pt": "Senatus Dragunidade",
+    "zh-CN": "龙骑兵团－元老院"
    },
    "ocgDate": "2018-04-14",
    "passcode": 92868896,
@@ -6381,7 +7682,11 @@
    "id": "92870717",
    "identifiers": {
     "konamiId": 11872,
-    "ygoprodeckId": 92870717
+    "ygojsonId": "cf812d5b-77ad-49c7-9623-c5464cd4f558",
+    "ygoprodeckId": 92870717,
+    "yugipediaIds": [
+     351564
+    ]
    },
    "images": [
     {
@@ -6397,7 +7702,14 @@
    "monsterType": "Warrior",
    "name": "Dragonox, the Empowered Warrior",
    "names": {
-    "en": "Dragonox, the Empowered Warrior"
+    "de": "Dragonox, der ermächtigte Krieger",
+    "en": "Dragonox, the Empowered Warrior",
+    "es": "Dragonox, el Guerrero Fortalecido",
+    "fr": "Dragonox, le Guerrier Éveillé",
+    "it": "Dragonox, il Guerriero Potenziato",
+    "ja": "魔装戦士 ドラゴノックス",
+    "ko": "마장전사 드라고녹스",
+    "pt": "Dragonox, o Guerreiro Edificado"
    },
    "ocgDate": "2015-04-25",
    "passcode": 92870717,
@@ -6427,7 +7739,11 @@
    "id": "92881099",
    "identifiers": {
     "konamiId": 14167,
-    "ygoprodeckId": 92881099
+    "ygojsonId": "bebebeae-4741-461c-860f-7a5455a7bb7b",
+    "ygoprodeckId": 92881099,
+    "yugipediaIds": [
+     572273
+    ]
    },
    "images": [
     {
@@ -6442,7 +7758,15 @@
    "monsterType": "Continuous",
    "name": "Alluring Mirror Split",
    "names": {
-    "en": "Alluring Mirror Split"
+    "de": "Verlockende Spiegelanordnung",
+    "en": "Alluring Mirror Split",
+    "es": "División del Espejo de Seducción",
+    "fr": "Reflet de Miroir Séduisant",
+    "it": "Specchio Divisore Seducente",
+    "ja": "魅惑の合わせ鏡",
+    "ko": "매혹의 스플릿 미러",
+    "pt": "Espelho Sedutor Divisor",
+    "zh-CN": "魅惑的千层镜"
    },
    "ocgDate": "2018-11-10",
    "passcode": 92881099,
@@ -6487,7 +7811,11 @@
    "id": "92887027",
    "identifiers": {
     "konamiId": 10063,
-    "ygoprodeckId": 92887027
+    "ygojsonId": "c3144b71-c2b1-467b-af5a-efcbde22d0f7",
+    "ygoprodeckId": 92887027,
+    "yugipediaIds": [
+     211412
+    ]
    },
    "images": [
     {
@@ -6503,7 +7831,13 @@
    "monsterType": "Warrior",
    "name": "Nomadic Force",
    "names": {
-    "en": "Nomadic Force"
+    "de": "Nomadische Truppen",
+    "en": "Nomadic Force",
+    "es": "Fuerza Nómada",
+    "fr": "La Troupe Nomade",
+    "it": "Forza Nomadica",
+    "ja": "ながれ者傭兵部隊",
+    "ko": "유랑 용병 부대"
    },
    "ocgDate": "2012-02-18",
    "passcode": 92887027,
@@ -6531,7 +7865,11 @@
    "id": "92890308",
    "identifiers": {
     "konamiId": 7926,
-    "ygoprodeckId": 92890308
+    "ygojsonId": "dd8a60a8-643d-4d7f-b15d-e8dd5112fdbc",
+    "ygoprodeckId": 92890308,
+    "yugipediaIds": [
+     26756
+    ]
    },
    "images": [
     {
@@ -6546,7 +7884,14 @@
    "monsterType": "Normal",
    "name": "Morphtransition",
    "names": {
-    "en": "Morphtransition"
+    "de": "Morphübergang",
+    "en": "Morphtransition",
+    "es": "Transición Morfotrónica",
+    "fr": "Transmorphisme",
+    "it": "Morfotransizione",
+    "ja": "ディフォーム",
+    "ko": "디폼",
+    "pt": "Morfotransformação"
    },
    "ocgDate": "2008-07-19",
    "passcode": 92890308,
@@ -6580,7 +7925,11 @@
    "id": "92892239",
    "identifiers": {
     "konamiId": 14625,
-    "ygoprodeckId": 92892239
+    "ygojsonId": "a7bb5aec-e8d5-47f6-8426-70fbba3e2c50",
+    "ygoprodeckId": 92892239,
+    "yugipediaIds": [
+     607505
+    ]
    },
    "images": [
     {
@@ -6596,7 +7945,15 @@
    "monsterType": "Dragon",
    "name": "Borreload Furious Dragon",
    "names": {
-    "en": "Borreload Furious Dragon"
+    "de": "Kalliberlade-Wut-Drache",
+    "en": "Borreload Furious Dragon",
+    "es": "Dragón Furioso Borrecarga",
+    "fr": "Dragon Furieux Chargeborrelle",
+    "it": "Drago Furioso Callibrocarica",
+    "ja": "ヴァレルロード・Ｆ・ドラゴン",
+    "ko": "바렐로드 F 드래곤",
+    "pt": "Dragão Furioso Callibregado",
+    "zh-CN": "枪管上膛暴怒龙"
    },
    "ocgDate": "2019-06-22",
    "passcode": 92892239,
@@ -6635,7 +7992,11 @@
    "id": "92895501",
    "identifiers": {
     "konamiId": 18729,
-    "ygoprodeckId": 92895501
+    "ygojsonId": "366b1de6-4a6b-469c-83b7-a755996a2f9d",
+    "ygoprodeckId": 92895501,
+    "yugipediaIds": [
+     806114
+    ]
    },
    "images": [
     {
@@ -6651,7 +8012,15 @@
    "monsterType": "Machine",
    "name": "Vanquish Soul Heavy Borger",
    "names": {
-    "en": "Vanquish Soul Heavy Borger"
+    "de": "Bezwingerseele Schwerer Borger",
+    "en": "Vanquish Soul Heavy Borger",
+    "es": "Derrota Almas Borg Pesado",
+    "fr": "Âme du Vainqueur Borger Lourd",
+    "it": "Sgomina Anima Borger Pesante",
+    "ja": "ＶＳ ヘヴィ・ボーガー",
+    "ko": "VS 헤비 보거",
+    "pt": "Alma Aniquiladora Borguer Pesado",
+    "zh-CN": "对击斗魂 重型博格"
    },
    "ocgDate": "2023-03-18",
    "passcode": 92895501,
@@ -6696,7 +8065,11 @@
    "id": "92901944",
    "identifiers": {
     "konamiId": 9102,
-    "ygoprodeckId": 92901944
+    "ygojsonId": "cfec4454-76df-4c3c-a77d-02524669543d",
+    "ygoprodeckId": 92901944,
+    "yugipediaIds": [
+     132489
+    ]
    },
    "images": [
     {
@@ -6712,7 +8085,14 @@
    "monsterType": "Winged Beast",
    "name": "Scrap Searcher",
    "names": {
-    "en": "Scrap Searcher"
+    "de": "Schrottsucher",
+    "en": "Scrap Searcher",
+    "es": "Buscador de Chatarra",
+    "fr": "Explorateur de Ferraille",
+    "it": "Ricercatore Frammento",
+    "ja": "スクラップ・サーチャー",
+    "ko": "스크랩 서처",
+    "zh-CN": "废铁探寻者"
    },
    "ocgDate": "2010-07-17",
    "passcode": 92901944,
@@ -6740,7 +8120,11 @@
    "id": "92907248",
    "identifiers": {
     "konamiId": 19905,
-    "ygoprodeckId": 92907248
+    "ygojsonId": "20067253-7686-4855-b727-7507a4f16f9a",
+    "ygoprodeckId": 92907248,
+    "yugipediaIds": [
+     1040264
+    ]
    },
    "images": [
     {
@@ -6755,7 +8139,15 @@
    "monsterType": "Quick-Play",
    "name": "Wake Up Centur-Ion!",
    "names": {
-    "en": "Wake Up Centur-Ion!"
+    "de": "Wach auf, Centur-Ion!",
+    "en": "Wake Up Centur-Ion!",
+    "es": "¡Despierta Centur-Ión!",
+    "fr": "Réveillez-Vous Centur-Ion !",
+    "it": "Risvegliati Centur-Ion!",
+    "ja": "ウェイクアップ・センチュリオン！",
+    "ko": "웨이크업 센츄리온!",
+    "pt": "Desperte, Centur-Ião!",
+    "zh-CN": "觉醒吧・百夫骑士！"
    },
    "ocgDate": "2024-01-27",
    "passcode": 92907248,
@@ -6796,7 +8188,11 @@
    "id": "92918648",
    "identifiers": {
     "konamiId": 10175,
-    "ygoprodeckId": 92918648
+    "ygojsonId": "5331ec09-e1e8-45b1-8d22-cf270e257361",
+    "ygoprodeckId": 92918648,
+    "yugipediaIds": [
+     208003
+    ]
    },
    "images": [
     {
@@ -6811,7 +8207,14 @@
    "monsterType": "Spellcaster",
    "name": "Hierophant of Prophecy",
    "names": {
-    "en": "Hierophant of Prophecy"
+    "de": "Der Hierophant der Prophezeiung",
+    "en": "Hierophant of Prophecy",
+    "es": "El Hierofante de la Profecía",
+    "fr": "Hiérophante de la Prophétie",
+    "it": "Ierofante della Profezia",
+    "ja": "魔導法皇 ハイロン",
+    "ko": "마도법황 하이론",
+    "zh-TW": "魔導法皇 海隆"
    },
    "ocgDate": "2012-04-14",
    "passcode": 92918648,
@@ -6851,7 +8254,11 @@
    "id": "92919429",
    "identifiers": {
     "konamiId": 15083,
-    "ygoprodeckId": 92919429
+    "ygojsonId": "cad59150-2cc2-4c24-a376-26d006fa2836",
+    "ygoprodeckId": 92919429,
+    "yugipediaIds": [
+     696531
+    ]
    },
    "images": [
     {
@@ -6867,7 +8274,15 @@
    "monsterType": "Fairy",
    "name": "Diviner of the Herald",
    "names": {
-    "en": "Diviner of the Herald"
+    "de": "Wahrsagerin des Herolds",
+    "en": "Diviner of the Herald",
+    "es": "Adivina del Heraldo",
+    "fr": "Devineresse du Héraut",
+    "it": "Divinatrice per l'Araldo",
+    "ja": "宣告者の神巫",
+    "ko": "디클레어러 디바이너",
+    "pt": "Adivinha do Arauto",
+    "zh-CN": "宣告者之神巫"
    },
    "ocgDate": "2020-02-04",
    "passcode": 92919429,
@@ -6970,7 +8385,11 @@
    "id": "92924317",
    "identifiers": {
     "konamiId": 6071,
-    "ygoprodeckId": 92924317
+    "ygojsonId": "44634824-8228-4c7c-80e6-5a974b392071",
+    "ygoprodeckId": 92924317,
+    "yugipediaIds": [
+     17009
+    ]
    },
    "images": [
     {
@@ -6985,7 +8404,14 @@
    "monsterType": "Continuous",
    "name": "Soul Resurrection",
    "names": {
-    "en": "Soul Resurrection"
+    "de": "Seelen-Auferstehung",
+    "en": "Soul Resurrection",
+    "es": "Resurección del Alma",
+    "fr": "Résurrection de l'Ame",
+    "it": "Resurrezione dell'Anima",
+    "ja": "蘇りし魂",
+    "ko": "소생 혼",
+    "pt": "Resurreição de Almas"
    },
    "ocgDate": "2004-02-26",
    "passcode": 92924317,
@@ -7032,7 +8458,11 @@
    "id": "92932860",
    "identifiers": {
     "konamiId": 14737,
-    "ygoprodeckId": 92932860
+    "ygojsonId": "6f8f9de8-7aad-431b-a451-6d4dc8cf6d7d",
+    "ygoprodeckId": 92932860,
+    "yugipediaIds": [
+     606412
+    ]
    },
    "images": [
     {
@@ -7048,7 +8478,14 @@
    "monsterType": "Spellcaster",
    "name": "Performapal Miss Director",
    "names": {
-    "en": "Performapal Miss Director"
+    "de": "Künstlerkumpel Fräulein Direktor",
+    "en": "Performapal Miss Director",
+    "es": "Artistamigo Srta. Directora",
+    "fr": "Madame la Directrice Potartiste",
+    "it": "Artistamico Miss Direttrice",
+    "ja": "ＥＭミス・ディレクター",
+    "ko": "EM 미스 디렉터",
+    "pt": "Camarartista Senhorita Diretora"
    },
    "ocgDate": "2019-09-21",
    "passcode": 92932860,
@@ -7080,7 +8517,11 @@
    "id": "92933195",
    "identifiers": {
     "konamiId": 7817,
-    "ygoprodeckId": 92933195
+    "ygojsonId": "f728bd9b-55a6-428c-9d1b-c44c3ee2ecc2",
+    "ygoprodeckId": 92933195,
+    "yugipediaIds": [
+     23586
+    ]
    },
    "images": [
     {
@@ -7096,7 +8537,13 @@
    "monsterType": "Winged Beast",
    "name": "Mist Valley Windmaster",
    "names": {
-    "en": "Mist Valley Windmaster"
+    "de": "Nebeltal-Windmeister",
+    "en": "Mist Valley Windmaster",
+    "es": "Amo del Viento del Valle Brumoso",
+    "fr": "Maître du Vent de la Vallée de Brume",
+    "it": "Signore del Vento della Valle delle Nebbie",
+    "ja": "霞の谷の風使い",
+    "ko": "안개 골짜기의 풍사"
    },
    "ocgDate": "2008-06-24",
    "passcode": 92933195,
@@ -7185,7 +8632,11 @@
    "id": "92944626",
    "identifiers": {
     "konamiId": 4107,
-    "ygoprodeckId": 92944626
+    "ygojsonId": "caf2d4aa-7674-491e-8148-adc4993139f8",
+    "ygoprodeckId": 92944626,
+    "yugipediaIds": [
+     7299
+    ]
    },
    "images": [
     {
@@ -7201,7 +8652,15 @@
    "monsterType": "Pyro",
    "name": "Wings of Wicked Flame",
    "names": {
-    "en": "Wings of Wicked Flame"
+    "de": "Flügel der bösen Flamme",
+    "en": "Wings of Wicked Flame",
+    "es": "Alas de la Llama Perversa",
+    "fr": "Ailes de la Flamme Malfaisante",
+    "it": "Ali di Fiamma Malvagia",
+    "ja": "邪炎の翼",
+    "ko": "사염의 날개",
+    "pt": "Asas da Chama Malvada",
+    "zh-CN": "邪炎之翼"
    },
    "ocgDate": "1999-03-01",
    "passcode": 92944626,
@@ -7229,7 +8688,11 @@
    "id": "92958307",
    "identifiers": {
     "konamiId": 12379,
-    "ygoprodeckId": 92958307
+    "ygojsonId": "d8429798-989a-4441-8041-61faa9d25994",
+    "ygoprodeckId": 92958307,
+    "yugipediaIds": [
+     360009
+    ]
    },
    "images": [
     {
@@ -7244,7 +8707,14 @@
    "monsterType": "Normal",
    "name": "Performapal Show Down",
    "names": {
-    "en": "Performapal Show Down"
+    "de": "Künstlerkumpel-Beifall",
+    "en": "Performapal Show Down",
+    "es": "Artistamigo Confrontación",
+    "fr": "Salut Final Potartiste",
+    "it": "Cala il Sipario Artistamico",
+    "ja": "ＥＭショーダウン",
+    "ko": "EM 쇼다운",
+    "pt": "Confronto Camarartista"
    },
    "ocgDate": "2016-03-19",
    "passcode": 92958307,
@@ -7271,7 +8741,11 @@
    "id": "92962242",
    "identifiers": {
     "konamiId": 18162,
-    "ygoprodeckId": 92962242
+    "ygojsonId": "2cae7218-0575-46ac-994d-4a5afd3bbad9",
+    "ygoprodeckId": 92962242,
+    "yugipediaIds": [
+     715467
+    ]
    },
    "images": [
     {
@@ -7287,7 +8761,14 @@
    "monsterType": "Rock",
    "name": "Jioh the Gravity Ninja",
    "names": {
-    "en": "Jioh the Gravity Ninja"
+    "de": "Jioh der Gravitations-Ninja",
+    "en": "Jioh the Gravity Ninja",
+    "es": "Jioh el Ninja de la Gravedad",
+    "fr": "Jioh le Ninja de la Gravité",
+    "it": "Jioh il Ninja Gravitazionale",
+    "ja": "重の忍者－磁翁",
+    "ko": "중의 첩자－지오우",
+    "pt": "Jioh, o Ninja da Gravidade"
    },
    "ocgDate": "2022-10-15",
    "passcode": 92962242,
@@ -7322,7 +8803,11 @@
    "id": "92964816",
    "identifiers": {
     "konamiId": 14058,
-    "ygoprodeckId": 92964816
+    "ygojsonId": "e8fff317-9ddf-4de5-a2a1-39d77513c1c3",
+    "ygoprodeckId": 92964816,
+    "yugipediaIds": [
+     572156
+    ]
    },
    "images": [
     {
@@ -7338,7 +8823,15 @@
    "monsterType": "Zombie",
    "name": "Glow-Up Bloom",
    "names": {
-    "en": "Glow-Up Bloom"
+    "de": "Aufblühende Blüte",
+    "en": "Glow-Up Bloom",
+    "es": "Floración Brillante",
+    "fr": "Floraison Luisante",
+    "it": "Fioritura Luminosa",
+    "ja": "グローアップ・ブルーム",
+    "ko": "그로우업 블룸",
+    "pt": "Florescer Brilhante",
+    "zh-CN": "成长花"
    },
    "ocgDate": "2018-09-22",
    "passcode": 92964816,
@@ -7367,7 +8860,8 @@
   },
   {
    "archetypes": [
-    "subterror"
+    "subterror",
+    "subterror-behemoth"
    ],
    "atk": 3000,
    "attribute": "earth",
@@ -7377,7 +8871,11 @@
    "id": "92970404",
    "identifiers": {
     "konamiId": 12822,
-    "ygoprodeckId": 92970404
+    "ygojsonId": "07048436-5115-4714-94ca-976c17138e81",
+    "ygoprodeckId": 92970404,
+    "yugipediaIds": [
+     474604
+    ]
    },
    "images": [
     {
@@ -7393,7 +8891,15 @@
    "monsterType": "Pyro",
    "name": "Subterror Behemoth Ultramafus",
    "names": {
-    "en": "Subterror Behemoth Ultramafus"
+    "de": "Unterterror-Behemoth Ultramafus",
+    "en": "Subterror Behemoth Ultramafus",
+    "es": "Behemoth del Subterror Ultramafus",
+    "fr": "Ultramafus Subterreur Béhémoth",
+    "it": "Behemoth Subterrore Ultramafus",
+    "ja": "サブテラーマリス・バレスアッシュ",
+    "ko": "서브테러마리스 바레스애시",
+    "pt": "Ultramáfico, o Behemoth Subterror",
+    "zh-CN": "地中骇界邪龙 熔烬巴利阿里"
    },
    "ocgDate": "2017-09-09",
    "passcode": 92970404,
@@ -7422,7 +8928,11 @@
    "id": "92998610",
    "identifiers": {
     "konamiId": 14107,
-    "ygoprodeckId": 92998610
+    "ygojsonId": "f7bb649a-0f03-41c8-8f1b-0dca751763af",
+    "ygoprodeckId": 92998610,
+    "yugipediaIds": [
+     577385
+    ]
    },
    "images": [
     {
@@ -7438,7 +8948,15 @@
    "monsterType": "Beast",
    "name": "Aloof Lupine",
    "names": {
-    "en": "Aloof Lupine"
+    "de": "Unnahbarer Wolf",
+    "en": "Aloof Lupine",
+    "es": "Lobuno Lejano",
+    "fr": "Louve Distante",
+    "it": "Lupino Distaccato",
+    "ja": "孤高除獣",
+    "ko": "고고제수",
+    "pt": "Lupino Distante",
+    "zh-CN": "孤高除兽"
    },
    "ocgDate": "2018-10-13",
    "passcode": 92998610,
