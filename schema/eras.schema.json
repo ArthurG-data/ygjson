@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ArthurG-data/ygjson/schema/eras.schema.json",
+  "title": "ygjson eras",
+  "description": "sets/eras.json: the TCG eras, named for the anime series and summoning mechanic players know them by. No source carries them; a set's era is the one whose window holds its release date.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["code", "name", "mechanic", "from"],
+    "properties": {
+      "code": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+      "name": {"type": "string", "minLength": 1},
+      "mechanic": {"type": "string", "minLength": 1, "description": "The summoning mechanic the era introduced."},
+      "from": {"type": "string", "format": "date", "description": "First day of the era, inclusive."},
+      "to": {"type": "string", "format": "date", "description": "Last day of the era, inclusive. Absent for the current era."}
+    }
+  }
+}

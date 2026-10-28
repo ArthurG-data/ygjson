@@ -1,0 +1,10 @@
+ygjson records facts about Yu-Gi-Oh! cards and products: names, passcodes, types, attributes, levels, ATK/DEF,
+rarities, set numbers, which set each print comes from, and which TCGplayer product is which print. No effect text,
+product descriptions or card art is copied into the data. Images in the data are links to YGOPRODeck and Yugipedia,
+not copies.
+
+The facts come from YGOPRODeck (https://ygoprodeck.com/api-guide/), YGOJSON
+(https://github.com/iconmaster5326/YGOJSON, MIT), Yugipedia (https://yugipedia.com, whose text is CC BY-SA 4.0) and
+TCGplayer's catalogue as mirrored by TCGCSV (https://tcgcsv.com).
+
+Yu-Gi-Oh! and its marks belong to Kazuki Takahashi/Shueisha and Konami. ygjson is not affiliated with them.

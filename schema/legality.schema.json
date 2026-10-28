@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ArthurG-data/ygjson/schema/legality.schema.json",
+  "title": "ygjson legality events",
+  "description": "legality/bans.json: changes to a card's status in a format, sorted by card, format and date. A card's status in force on a date is its last event on or before it; before its first event it is legal.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["events"],
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["card", "format", "status", "source"],
+        "anyOf": [{"required": ["effective"]}, {"required": ["inForceBy"]}],
+        "properties": {
+          "card": {"type": "string", "pattern": "^[0-9]+$", "description": "A card id."},
+          "format": {"enum": ["tcg", "ocg", "speed_duel", "goat"]},
+          "status": {"enum": ["banned", "limited", "semi_limited", "legal"], "description": "Copies allowed: banned 0, limited 1, semi_limited 2, legal 3."},
+          "effective": {"type": "string", "format": "date", "description": "The date the change took effect, when a source states it."},
+          "inForceBy": {"type": "string", "format": "date", "description": "The date the tool first saw the status, for a status no source dates. The change may have started earlier."},
+          "source": {"type": "string", "minLength": 1, "description": "Where the event comes from: a URL or a source name (ygojson, ygoprodeck)."}
+        }
+      }
+    }
+  }
+}

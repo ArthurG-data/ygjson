@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ArthurG-data/ygjson/schema/sets.schema.json",
+  "title": "ygjson sets",
+  "description": "sets/sets.json: every set a print can belong to. YGOPRODeck's sets, plus the TCGplayer groups that are not one of them (the 2020 date reprints).",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "code", "name", "type", "editions", "source", "releases"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "The slug of the YGOPRODeck set name, deduplicated with -2, -3 when two names slug alike."},
+      "code": {"type": "string", "minLength": 1, "description": "The set prefix (LOB). Not unique: 142 prefixes are shared by several sets, so the id is the key."},
+      "name": {"type": "string", "minLength": 1, "description": "The English set name."},
+      "type": {"enum": ["booster", "structure_deck", "starter_deck", "tin", "special_edition", "sneak_peek", "duel_terminal", "speed_duel", "promo", "box_set", "other"],
+               "description": "The set's product line. The importers guess it from the name; import_yugipedia refines it from the Yugipedia infobox."},
+      "series": {"type": "string", "minLength": 1, "description": "Yugipedia's series for the set (Core Booster, Mega-Pack...)."},
+      "parent": {"type": "string", "description": "The set this one hangs off: a sneak peek, special edition or promo names the booster it reprints, a date-reprint group the set it reprints."},
+      "era": {"type": "string", "description": "The code of the era (sets/eras.json) whose window holds the release date; a child set without a date takes its parent's."},
+      "editions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["first", "unlimited", "limited"]},
+                   "description": "The editions the set was printed in. A print overrides it with its own editions."},
+      "tcgplayerGroupIds": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}},
+      "source": {"enum": ["ygoprodeck", "tcgplayer"],
+                 "description": "ygoprodeck: the set is on YGOPRODeck. tcgplayer: minted for a TCGplayer group YGOPRODeck lacks."},
+      "releases": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["language", "name"],
+          "properties": {
+            "language": {"enum": ["en"]},
+            "name": {"type": "string", "minLength": 1},
+            "releaseDate": {"type": "string", "format": "date", "description": "YGOPRODeck's tcg_date, else Yugipedia's North American or English release date."},
+            "keyArt": {"type": "object", "additionalProperties": false, "required": ["url", "source"],
+                       "description": "The set's art, hotlinked: YGOPRODeck's set_image with the YGOPRODeck set page as source, else YGOJSON's pack art with the Yugipedia page as source.",
+                       "properties": {"url": {"type": "string", "format": "uri"}, "source": {"type": "string", "format": "uri"}}}
+          }
+        }
+      },
+      "identifiers": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "yugipediaId": {"type": "integer"},
+          "konamiDatabaseIds": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}, "description": "Set ids on Konami's card database."},
+          "ygojsonId": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

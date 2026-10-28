@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ArthurG-data/ygjson/schema/archetypes.schema.json",
+  "title": "ygjson archetypes",
+  "description": "data/archetypes.json: the archetypes and series cards can belong to. Members are derived from the cards' archetypes lists at build time.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["archetypes"],
+  "properties": {
+    "archetypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "name", "source"],
+        "properties": {
+          "slug": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "The slug of the name, deduplicated with -2, -3 when two names slug alike (D.D. and D/D)."},
+          "name": {"type": "string", "minLength": 1},
+          "names": {"type": "object", "minProperties": 1, "propertyNames": {"pattern": "^[a-z]{2}(-[A-Za-z]+)?$"},
+                    "additionalProperties": {"type": "string", "minLength": 1}, "description": "The name in each language YGOJSON has one for."},
+          "isArchetype": {"type": "boolean", "description": "False for a series Konami does not call an archetype. Set by import_ygojson."},
+          "source": {"enum": ["ygoprodeck", "ygojson"], "description": "Where the archetype was first seen."},
+          "identifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {"ygojsonId": {"type": "string", "minLength": 1}, "yugipediaId": {"type": "integer"}}
+          }
+        }
+      }
+    }
+  }
+}
