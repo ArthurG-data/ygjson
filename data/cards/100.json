@@ -1,0 +1,771 @@
+{
+ "cards": [
+  {
+   "archetypes": [
+    "ojama"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "100000101",
+   "identifiers": {
+    "ygoprodeckId": 100000101
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100000101.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100000101.jpg",
+     "id": 100000101,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100000101.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Normal",
+   "name": "Ojamandala",
+   "names": {
+    "en": "Ojamandala"
+   },
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "counter"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "100200298",
+   "identifiers": {
+    "konamiId": 24035,
+    "ygoprodeckId": 100200298
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100200298.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100200298.jpg",
+     "id": 100200298,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100200298.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Quick-Play",
+   "name": "Counter Spell \"Negate Attack\"",
+   "names": {
+    "en": "Counter Spell \"Negate Attack\""
+   },
+   "ocgDate": "2026-10-21",
+   "prints": []
+  },
+  {
+   "atk": 2000,
+   "attribute": "earth",
+   "def": 2000,
+   "frame": "normal",
+   "hasEffect": true,
+   "id": "100350263",
+   "identifiers": {
+    "konamiId": 23902,
+    "ygoprodeckId": 100350263
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100350263.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100350263.jpg",
+     "id": 100350263,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100350263.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Dragon",
+   "name": "The Dark Dragon Lord of Ultum",
+   "names": {
+    "en": "The Dark Dragon Lord of Ultum"
+   },
+   "ocgDate": "2026-10-01",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Normal"
+   ]
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "atk": 800,
+   "attribute": "earth",
+   "def": 800,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100460001",
+   "identifiers": {
+    "ygoprodeckId": 100460001
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460001.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460001.jpg",
+     "id": 100460001,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460001.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Machine",
+   "name": "Pritima the Infinity Cubic Vessel",
+   "names": {
+    "en": "Pritima the Infinity Cubic Vessel"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Machine",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "atk": 0,
+   "attribute": "fire",
+   "def": 0,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "100460002",
+   "identifiers": {
+    "ygoprodeckId": 100460002
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460002.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460002.jpg",
+     "id": 100460002,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460002.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 6,
+   "monsterType": "Fiend",
+   "name": "Alditia Hell Blaze the Burning Cubic Lord",
+   "names": {
+    "en": "Alditia Hell Blaze the Burning Cubic Lord"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Fiend",
+    "Fusion",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "abyss"
+   ],
+   "atk": 0,
+   "attribute": "water",
+   "def": 0,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "100460003",
+   "identifiers": {
+    "ygoprodeckId": 100460003
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460003.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460003.jpg",
+     "id": 100460003,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460003.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Fiend",
+   "name": "Abyss Vagrada the Abyssal Cubic Lord",
+   "names": {
+    "en": "Abyss Vagrada the Abyssal Cubic Lord"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Fiend",
+    "Fusion",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "atk": 0,
+   "attribute": "light",
+   "def": 3000,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "100460004",
+   "identifiers": {
+    "ygoprodeckId": 100460004
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460004.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460004.jpg",
+     "id": 100460004,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460004.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 10,
+   "monsterType": "Fiend",
+   "name": "Divine Anima Infinity the Creation Cubic Overlord",
+   "names": {
+    "en": "Divine Anima Infinity the Creation Cubic Overlord"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Fiend",
+    "Fusion",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "100460006",
+   "identifiers": {
+    "ygoprodeckId": 100460006
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460006.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460006.jpg",
+     "id": 100460006,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460006.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Continuous",
+   "name": "Cubic Bodhi",
+   "names": {
+    "en": "Cubic Bodhi"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "marincess"
+   ],
+   "atk": 1600,
+   "attribute": "water",
+   "def": 1000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100460026",
+   "identifiers": {
+    "ygoprodeckId": 100460026
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460026.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460026.jpg",
+     "id": 100460026,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460026.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 3,
+   "monsterType": "Cyberse",
+   "name": "Marincess Azuri",
+   "names": {
+    "en": "Marincess Azuri"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "marincess"
+   ],
+   "atk": 600,
+   "attribute": "water",
+   "def": 2400,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100460027",
+   "identifiers": {
+    "ygoprodeckId": 100460027
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460027.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460027.jpg",
+     "id": 100460027,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460027.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 5,
+   "monsterType": "Cyberse",
+   "name": "Marincess Ulpis",
+   "names": {
+    "en": "Marincess Ulpis"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "marincess"
+   ],
+   "atk": 2300,
+   "attribute": "water",
+   "def": 2000,
+   "frame": "ritual",
+   "hasEffect": true,
+   "id": "100460028",
+   "identifiers": {
+    "ygoprodeckId": 100460028
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460028.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460028.jpg",
+     "id": 100460028,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460028.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 7,
+   "monsterType": "Cyberse",
+   "name": "Aqua Leviathan @Marincess",
+   "names": {
+    "en": "Aqua Leviathan @Marincess"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Ritual",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "heart"
+   ],
+   "atk": 2800,
+   "attribute": "water",
+   "frame": "link",
+   "hasEffect": true,
+   "id": "100460030",
+   "identifiers": {
+    "ygoprodeckId": 100460030
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460030.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460030.jpg",
+     "id": 100460030,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460030.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "linkArrows": [
+    "Top",
+    "Right",
+    "Bottom-Left",
+    "Bottom-Right"
+   ],
+   "linkRating": 4,
+   "monsterType": "Cyberse",
+   "name": "Marincess Truth Heart",
+   "names": {
+    "en": "Marincess Truth Heart"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Link",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "marincess"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "100460031",
+   "identifiers": {
+    "ygoprodeckId": 100460031
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460031.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460031.jpg",
+     "id": 100460031,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460031.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Continuous",
+   "name": "Marincess Reef Lagoon",
+   "names": {
+    "en": "Marincess Reef Lagoon"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "diabell"
+   ],
+   "atk": 2500,
+   "attribute": "dark",
+   "def": 2000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100461000",
+   "identifiers": {
+    "ygoprodeckId": 100461000
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100461000.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100461000.jpg",
+     "id": 100461000,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100461000.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 7,
+   "monsterType": "Spellcaster",
+   "name": "Diabellstar, the Seeker of Sinful Spoils",
+   "names": {
+    "en": "Diabellstar, the Seeker of Sinful Spoils"
+   },
+   "ocgDate": "2027-03-01",
+   "prints": [],
+   "typeline": [
+    "Spellcaster",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "buster-blader"
+   ],
+   "atk": 2600,
+   "attribute": "earth",
+   "def": 2300,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100461001",
+   "identifiers": {
+    "ygoprodeckId": 100461001
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100461001.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100461001.jpg",
+     "id": 100461001,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100461001.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Warrior",
+   "name": "Buster Blader, the One Who Surpasses the Limits",
+   "names": {
+    "en": "Buster Blader, the One Who Surpasses the Limits"
+   },
+   "prints": [],
+   "typeline": [
+    "Warrior",
+    "Effect"
+   ]
+  },
+  {
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "100461002",
+   "identifiers": {
+    "ygoprodeckId": 100461002
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100461002.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100461002.jpg",
+     "id": 100461002,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100461002.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Continuous",
+   "name": "Wicked Canon",
+   "names": {
+    "en": "Wicked Canon"
+   },
+   "ocgDate": "2027-02-16",
+   "prints": [],
+   "tcgDate": "2027-02-16"
+  },
+  {
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "100461003",
+   "identifiers": {
+    "ygoprodeckId": 100461003
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100461003.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100461003.jpg",
+     "id": 100461003,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100461003.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Normal",
+   "name": "Hope for the Future",
+   "names": {
+    "en": "Hope for the Future"
+   },
+   "ocgDate": "2027-02-16",
+   "prints": [],
+   "tcgDate": "2027-02-16"
+  },
+  {
+   "archetypes": [
+    "magistus"
+   ],
+   "atk": 2500,
+   "attribute": "light",
+   "frame": "link",
+   "hasEffect": true,
+   "id": "100462001",
+   "identifiers": {
+    "ygoprodeckId": 100462001
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100462001.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100462001.jpg",
+     "id": 100462001,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100462001.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "linkArrows": [
+    "Top",
+    "Bottom-Left",
+    "Bottom-Right"
+   ],
+   "linkRating": 3,
+   "monsterType": "Spellcaster",
+   "name": "Trinitas Magistus",
+   "names": {
+    "en": "Trinitas Magistus"
+   },
+   "ocgDate": "2026-12-05",
+   "prints": [],
+   "typeline": [
+    "Spellcaster",
+    "Link",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "invoked"
+   ],
+   "atk": 2500,
+   "attribute": "light",
+   "def": 2100,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "100462002",
+   "identifiers": {
+    "ygoprodeckId": 100462002
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100462002.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100462002.jpg",
+     "id": 100462002,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100462002.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 9,
+   "monsterType": "Spellcaster",
+   "name": "Invoked Magistus Heruvim",
+   "names": {
+    "en": "Invoked Magistus Heruvim"
+   },
+   "ocgDate": "2026-12-05",
+   "prints": [],
+   "typeline": [
+    "Spellcaster",
+    "Fusion",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "magistus"
+   ],
+   "atk": 2800,
+   "attribute": "light",
+   "def": 1000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100462004",
+   "identifiers": {
+    "ygoprodeckId": 100462004
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100462004.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100462004.jpg",
+     "id": 100462004,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100462004.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Spellcaster",
+   "name": "Magistus Witchcrafter Aruru",
+   "names": {
+    "en": "Magistus Witchcrafter Aruru"
+   },
+   "ocgDate": "2026-12-05",
+   "prints": [],
+   "typeline": [
+    "Spellcaster",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "gandora"
+   ],
+   "atk": 0,
+   "attribute": "dark",
+   "def": 0,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100463002",
+   "identifiers": {
+    "ygoprodeckId": 100463002
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100463002.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100463002.jpg",
+     "id": 100463002,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100463002.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Dragon",
+   "name": "Gandora-X the Blackmetal Rampaging Dragon",
+   "names": {
+    "en": "Gandora-X the Blackmetal Rampaging Dragon"
+   },
+   "ocgDate": "2026-12-19",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Effect"
+   ]
+  },
+  {
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "100463005",
+   "identifiers": {
+    "ygoprodeckId": 100463005
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100463005.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100463005.jpg",
+     "id": 100463005,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100463005.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Continuous",
+   "name": "Time Chain",
+   "names": {
+    "en": "Time Chain"
+   },
+   "ocgDate": "2026-12-19",
+   "prints": []
+  },
+  {
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "100463008",
+   "identifiers": {
+    "ygoprodeckId": 100463008
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100463008.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100463008.jpg",
+     "id": 100463008,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100463008.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Normal",
+   "name": "Warrior's Devotion",
+   "names": {
+    "en": "Warrior's Devotion"
+   },
+   "ocgDate": "2026-12-19",
+   "prints": []
+  }
+ ]
+}
