@@ -1,0 +1,98 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "maximum-crisis-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "maximum-crisis-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     130610
+    ],
+    "ygojsonId": "d69d42cc-aa0a-4aeb-8d70-5eb99557466d"
+   },
+   "name": "Maximum Crisis Booster Box",
+   "set": "maximum-crisis",
+   "sources": [
+    "https://www.tcgplayer.com/product/130610/yugioh-maximum-crisis-maximum-crisis-booster-box",
+    "ygojson:d69d42cc-aa0a-4aeb-8d70-5eb99557466d"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "maximum-crisis"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "maximum-crisis-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     130611
+    ]
+   },
+   "name": "Maximum Crisis Booster Pack",
+   "set": "maximum-crisis",
+   "sources": [
+    "https://www.tcgplayer.com/product/130611/yugioh-maximum-crisis-maximum-crisis-booster-pack"
+   ]
+  },
+  {
+   "category": "special_edition",
+   "contents": {
+    "sealed": [
+     {
+      "count": 3,
+      "product": "maximum-crisis-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "maximum-crisis-special-edition-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     133441
+    ],
+    "ygojsonId": "7e3f05ba-175e-4202-931d-5294630d5e0e"
+   },
+   "name": "Maximum Crisis: Special Edition Box",
+   "set": "maximum-crisis",
+   "sources": [
+    "https://www.tcgplayer.com/product/133441/yugioh-maximum-crisis-maximum-crisis-special-edition-box",
+    "ygojson:7e3f05ba-175e-4202-931d-5294630d5e0e"
+   ]
+  },
+  {
+   "category": "display",
+   "contents": {
+    "sealed": [
+     {
+      "product": "maximum-crisis-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "maximum-crisis-special-edition-display",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     133440
+    ]
+   },
+   "name": "Maximum Crisis: Special Edition Display",
+   "set": "maximum-crisis",
+   "sources": [
+    "https://www.tcgplayer.com/product/133440/yugioh-maximum-crisis-maximum-crisis-special-edition-display"
+   ]
+  }
+ ]
+}

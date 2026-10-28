@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 50,
+      "product": "star-pack-battle-royal-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "star-pack-battle-royal-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     163861
+    ],
+    "ygojsonId": "3ff611f8-d320-4227-9ce5-a3ff2992e4f3"
+   },
+   "name": "Star Pack - Battle Royal Booster Box",
+   "set": "star-pack-battle-royal",
+   "sources": [
+    "https://www.tcgplayer.com/product/163861/yugioh-star-pack-battle-royal-star-pack-battle-royal-booster-box",
+    "ygojson:3ff611f8-d320-4227-9ce5-a3ff2992e4f3"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "star-pack-battle-royal"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "star-pack-battle-royal-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     163860
+    ]
+   },
+   "name": "Star Pack - Battle Royal Booster Pack",
+   "set": "star-pack-battle-royal",
+   "sources": [
+    "https://www.tcgplayer.com/product/163860/yugioh-star-pack-battle-royal-star-pack-battle-royal-booster-pack"
+   ]
+  }
+ ]
+}

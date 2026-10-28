@@ -1,0 +1,79 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 30,
+      "product": "duelist-pack-kaiba-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "duelist-pack-kaiba-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     35091
+    ],
+    "ygojsonId": "8c1acdf2-27a6-4538-b3ef-6ce3ff27adf1"
+   },
+   "name": "Duelist Pack: Kaiba - Booster Box [1st Edition]",
+   "set": "duelist-pack-kaiba",
+   "sources": [
+    "https://www.tcgplayer.com/product/35091/yugioh-duelist-pack-kaiba-duelist-pack-kaiba-booster-box-1st-edition",
+    "ygojson:8c1acdf2-27a6-4538-b3ef-6ce3ff27adf1"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "editions": [
+       "first"
+      ],
+      "set": "duelist-pack-kaiba"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "duelist-pack-kaiba-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     213400
+    ]
+   },
+   "name": "Duelist Pack: Kaiba - Booster Pack [1st Edition]",
+   "set": "duelist-pack-kaiba",
+   "sources": [
+    "https://www.tcgplayer.com/product/213400/yugioh-duelist-pack-kaiba-duelist-pack-kaiba-booster-pack-1st-edition"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "editions": [
+       "unlimited"
+      ],
+      "set": "duelist-pack-kaiba"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "duelist-pack-kaiba-booster-pack-2",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     35090
+    ]
+   },
+   "name": "Duelist Pack: Kaiba - Booster Pack [Unlimited Edition]",
+   "set": "duelist-pack-kaiba",
+   "sources": [
+    "https://www.tcgplayer.com/product/35090/yugioh-duelist-pack-kaiba-duelist-pack-kaiba-booster-pack-unlimited-edition"
+   ]
+  }
+ ]
+}

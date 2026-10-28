@@ -1,0 +1,67 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 5,
+      "product": "gold-series-3-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "gold-series-3-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57196
+    ],
+    "ygojsonId": "0a4ba93f-d699-4c5a-8523-b2ea605e1345"
+   },
+   "name": "Gold Series 3 - Booster Box",
+   "set": "gold-series-3",
+   "sources": [
+    "https://www.tcgplayer.com/product/57196/yugioh-gold-series-3-gold-series-3-booster-box",
+    "ygojson:0a4ba93f-d699-4c5a-8523-b2ea605e1345"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "gold-series-3"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "gold-series-3-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     35507
+    ]
+   },
+   "name": "Gold Series 3 - Booster Pack",
+   "set": "gold-series-3",
+   "sources": [
+    "https://www.tcgplayer.com/product/35507/yugioh-gold-series-3-gold-series-3-booster-pack"
+   ]
+  },
+  {
+   "category": "collectors_set",
+   "contents": {},
+   "contentsStatus": "unknown",
+   "id": "gold-series-3-collector-set",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     35506
+    ]
+   },
+   "name": "Gold Series 3 - Collector Set",
+   "set": "gold-series-3",
+   "sources": [
+    "https://www.tcgplayer.com/product/35506/yugioh-gold-series-3-gold-series-3-collector-set"
+   ]
+  }
+ ]
+}

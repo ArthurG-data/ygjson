@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "crossed-souls-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "crossed-souls-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     98382
+    ],
+    "ygojsonId": "0f373cd0-e43c-4ac4-a136-bc8843a7a634"
+   },
+   "name": "Crossed Souls Booster Box",
+   "set": "crossed-souls",
+   "sources": [
+    "https://www.tcgplayer.com/product/98382/yugioh-crossed-souls-crossed-souls-booster-box",
+    "ygojson:0f373cd0-e43c-4ac4-a136-bc8843a7a634"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "crossed-souls"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "crossed-souls-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     98383
+    ]
+   },
+   "name": "Crossed Souls Booster Pack",
+   "set": "crossed-souls",
+   "sources": [
+    "https://www.tcgplayer.com/product/98383/yugioh-crossed-souls-crossed-souls-booster-pack"
+   ]
+  }
+ ]
+}

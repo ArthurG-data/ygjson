@@ -54,6 +54,16 @@ ALIASES: dict[str, str] = {
     "Extra Secret": "extra_secret_rare",
     "Cr": "collectors_rare",
     "Duel Terminal Normal Rare Parallel Rare": "dt_rare_parallel",
+    # Spellings only TCGplayer uses. Each pairs with the one print YGOPRODeck leaves uncovered at that number
+    # (measured over the TCGCSV cache: 388 numbers pair Prismatic Collector's and Ultimate, 137 and 25 pair the
+    # Duel Terminal Technology rarities, 12 pair Parallel Rare).
+    "Prismatic Collector's Rare": "collectors_rare",
+    "Prismatic Ultimate Rare": "ultimate_rare",
+    "Duel Terminal Technology Common": "dt_normal_parallel",
+    "Duel Terminal Technology Ultra Rare": "dt_ultra_parallel",
+    "Parallel Rare": "normal_parallel_rare",
+    "Ultra Pharaoh's Rare": "pharaohs_rare",
+    "Ultra Pharaoh\u2019s Rare": "pharaohs_rare",
 }
 
 UNKNOWN = "unknown"

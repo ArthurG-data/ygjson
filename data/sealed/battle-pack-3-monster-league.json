@@ -1,0 +1,67 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 36,
+      "product": "battle-pack-3-monster-league-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "battle-pack-3-monster-league-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     91592
+    ],
+    "ygojsonId": "d5244f7a-586c-4b4c-bccb-e4c82bd7956f"
+   },
+   "name": "Battle Pack 3: Monster League Booster Box",
+   "set": "battle-pack-3-monster-league",
+   "sources": [
+    "https://www.tcgplayer.com/product/91592/yugioh-battle-pack-3-monster-league-battle-pack-3-monster-league-booster-box",
+    "ygojson:d5244f7a-586c-4b4c-bccb-e4c82bd7956f"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "battle-pack-3-monster-league"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "battle-pack-3-monster-league-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     91593
+    ]
+   },
+   "name": "Battle Pack 3: Monster League Booster Pack",
+   "set": "battle-pack-3-monster-league",
+   "sources": [
+    "https://www.tcgplayer.com/product/91593/yugioh-battle-pack-3-monster-league-battle-pack-3-monster-league-booster-pack"
+   ]
+  },
+  {
+   "category": "bundle",
+   "contents": {},
+   "contentsStatus": "unknown",
+   "id": "sealed-play-battle-kit-3",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     213479
+    ]
+   },
+   "name": "Sealed Play Battle Kit 3",
+   "set": "battle-pack-3-monster-league",
+   "sources": [
+    "https://www.tcgplayer.com/product/213479/yugioh-battle-pack-3-monster-league-sealed-play-battle-kit-3"
+   ]
+  }
+ ]
+}

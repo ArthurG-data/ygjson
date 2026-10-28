@@ -1,0 +1,76 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "duelist-revolution-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "duelist-revolution-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57190
+    ],
+    "ygojsonId": "3ec779b1-f21a-459e-9402-5c6838f96a65"
+   },
+   "name": "Duelist Revolution - Booster Box",
+   "set": "duelist-revolution",
+   "sources": [
+    "https://www.tcgplayer.com/product/57190/yugioh-duelist-revolution-duelist-revolution-booster-box",
+    "ygojson:3ec779b1-f21a-459e-9402-5c6838f96a65"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "duelist-revolution"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "duelist-revolution-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     35854
+    ]
+   },
+   "name": "Duelist Revolution - Booster Pack",
+   "set": "duelist-revolution",
+   "sources": [
+    "https://www.tcgplayer.com/product/35854/yugioh-duelist-revolution-duelist-revolution-booster-pack"
+   ]
+  },
+  {
+   "category": "special_edition",
+   "contents": {
+    "sealed": [
+     {
+      "count": 3,
+      "product": "duelist-revolution-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "duelist-revolution-special-edition",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57208
+    ],
+    "ygojsonId": "5e3f72ee-95ca-42f4-9127-ed8a8fbc2b72"
+   },
+   "name": "Duelist Revolution - Special Edition",
+   "set": "duelist-revolution",
+   "sources": [
+    "https://www.tcgplayer.com/product/57208/yugioh-duelist-revolution-duelist-revolution-special-edition",
+    "ygojson:5e3f72ee-95ca-42f4-9127-ed8a8fbc2b72"
+   ]
+  }
+ ]
+}

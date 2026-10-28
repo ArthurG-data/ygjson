@@ -1,0 +1,54 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 36,
+      "product": "hidden-arsenal-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "hidden-arsenal-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57232
+    ],
+    "ygojsonId": "e42dcb50-5bf7-44ff-9bbd-bf65d516c47c"
+   },
+   "name": "Hidden Arsenal - Booster Box [Unlimited Edition]",
+   "set": "hidden-arsenal",
+   "sources": [
+    "https://www.tcgplayer.com/product/57232/yugioh-hidden-arsenal-hidden-arsenal-booster-box-unlimited-edition",
+    "ygojson:e42dcb50-5bf7-44ff-9bbd-bf65d516c47c"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "editions": [
+       "unlimited"
+      ],
+      "set": "hidden-arsenal"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "hidden-arsenal-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     33771
+    ]
+   },
+   "name": "Hidden Arsenal - Booster Pack [Unlimited Edition]",
+   "set": "hidden-arsenal",
+   "sources": [
+    "https://www.tcgplayer.com/product/33771/yugioh-hidden-arsenal-hidden-arsenal-booster-pack-unlimited-edition"
+   ]
+  }
+ ]
+}

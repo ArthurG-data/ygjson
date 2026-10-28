@@ -1,0 +1,73 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "raging-battle-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "raging-battle-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57239
+    ],
+    "ygojsonId": "c8d6a699-56e4-4dcd-9279-ef69f93d6f83"
+   },
+   "name": "Raging Battle - Booster Box",
+   "set": "raging-battle",
+   "sources": [
+    "https://www.tcgplayer.com/product/57239/yugioh-raging-battle-raging-battle-booster-box",
+    "ygojson:c8d6a699-56e4-4dcd-9279-ef69f93d6f83"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "raging-battle"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "raging-battle-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     31945
+    ]
+   },
+   "name": "Raging Battle - Booster Pack",
+   "set": "raging-battle",
+   "sources": [
+    "https://www.tcgplayer.com/product/31945/yugioh-raging-battle-raging-battle-booster-pack"
+   ]
+  },
+  {
+   "category": "display",
+   "contents": {
+    "sealed": [
+     {
+      "product": "raging-battle-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "raging-battle-special-edition-display-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57215
+    ]
+   },
+   "name": "Raging Battle - Special Edition Display Box",
+   "set": "raging-battle",
+   "sources": [
+    "https://www.tcgplayer.com/product/57215/yugioh-raging-battle-raging-battle-special-edition-display-box"
+   ]
+  }
+ ]
+}

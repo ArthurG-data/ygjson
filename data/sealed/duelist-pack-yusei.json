@@ -1,0 +1,54 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 36,
+      "product": "duelist-pack-yusei-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "duelist-pack-yusei-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     213441
+    ],
+    "ygojsonId": "8933777d-c468-4a8f-b16b-56669282ac77"
+   },
+   "name": "Duelist Pack: Yusei Booster Box [1st Edition]",
+   "set": "duelist-pack-yusei",
+   "sources": [
+    "https://www.tcgplayer.com/product/213441/yugioh-duelist-pack-8-yusei-fudo-duelist-pack-yusei-booster-box-1st-edition",
+    "ygojson:8933777d-c468-4a8f-b16b-56669282ac77"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "editions": [
+       "first"
+      ],
+      "set": "duelist-pack-yusei"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "duelist-pack-yusei-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     213438
+    ]
+   },
+   "name": "Duelist Pack: Yusei Booster Pack [1st Edition]",
+   "set": "duelist-pack-yusei",
+   "sources": [
+    "https://www.tcgplayer.com/product/213438/yugioh-duelist-pack-8-yusei-fudo-duelist-pack-yusei-booster-pack-1st-edition"
+   ]
+  }
+ ]
+}

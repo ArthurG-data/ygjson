@@ -98,17 +98,35 @@
    "prints": [
     {
      "id": "burst-protocol:101303084:BPRO-EN084:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       674761
+      ]
+     },
      "number": "BPRO-EN084",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "burst-protocol"
+     "set": "burst-protocol",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mercurium the Living Quicksilver (Starlight Rare)"
+     }
     },
     {
      "id": "burst-protocol:101303084:BPRO-EN084:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       674800
+      ]
+     },
      "number": "BPRO-EN084",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "burst-protocol"
+     "set": "burst-protocol",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mercurium the Living Quicksilver"
+     }
     }
    ],
    "rank": 10,

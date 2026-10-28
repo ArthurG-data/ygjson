@@ -15,6 +15,25 @@ def test_misspellings_and_abbreviations_map_to_their_code():
     assert rarities.canonical("Ultra Rare (Pharaoh's Rare)") == "pharaohs_rare"
 
 
+@pytest.mark.parametrize("raw, code", [
+    ("Prismatic Collector's Rare", "collectors_rare"),
+    ("Prismatic Ultimate Rare", "ultimate_rare"),
+    ("Duel Terminal Technology Common", "dt_normal_parallel"),
+    ("Duel Terminal Technology Ultra Rare", "dt_ultra_parallel"),
+    ("Parallel Rare", "normal_parallel_rare"),
+    ("Ultra Pharaoh's Rare", "pharaohs_rare"),
+    ("Ultra Pharaoh\u2019s Rare", "pharaohs_rare"),
+])
+def test_tcgplayer_only_spellings_map_to_their_code(raw, code):
+    assert rarities.canonical(raw) == code
+
+
+@pytest.mark.parametrize("raw", ["Promo", "Secret Pharaoh's Rare", "Secret Pharaoh\u2019s Rare", "Emblazoned Ultra Rare",
+                                 "Emblazoned Secret Rare"])
+def test_tcgplayer_rarities_with_no_print_stay_unknown(raw):
+    assert rarities.canonical(raw) == "unknown"
+
+
 def test_canonical_is_forgiving_about_case_and_space_and_falls_back_to_unknown():
     assert rarities.canonical("  super rare ") == "super_rare"
     assert rarities.canonical("ULTRA RARE") == "ultra_rare"

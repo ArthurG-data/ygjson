@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "destiny-soldiers-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "destiny-soldiers-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     125162
+    ],
+    "ygojsonId": "b2e20115-0b45-4818-ba7b-adc9547f0a61"
+   },
+   "name": "Destiny Soldiers Booster Box",
+   "set": "destiny-soldiers",
+   "sources": [
+    "https://www.tcgplayer.com/product/125162/yugioh-destiny-soldiers-destiny-soldiers-booster-box",
+    "ygojson:b2e20115-0b45-4818-ba7b-adc9547f0a61"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "destiny-soldiers"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "destiny-soldiers-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     125163
+    ]
+   },
+   "name": "Destiny Soldiers Booster Pack",
+   "set": "destiny-soldiers",
+   "sources": [
+    "https://www.tcgplayer.com/product/125163/yugioh-destiny-soldiers-destiny-soldiers-booster-pack"
+   ]
+  }
+ ]
+}

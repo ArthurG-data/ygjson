@@ -1,0 +1,76 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "return-of-the-duelist-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "return-of-the-duelist-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     60114
+    ],
+    "ygojsonId": "a3938850-cad1-41dc-9bee-6c01e41ccee7"
+   },
+   "name": "Return of the Duelist - Booster Box",
+   "set": "return-of-the-duelist",
+   "sources": [
+    "https://www.tcgplayer.com/product/60114/yugioh-return-of-the-duelist-return-of-the-duelist-booster-box",
+    "ygojson:a3938850-cad1-41dc-9bee-6c01e41ccee7"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "return-of-the-duelist"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "return-of-the-duelist-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     60115
+    ]
+   },
+   "name": "Return of the Duelist - Booster Pack",
+   "set": "return-of-the-duelist",
+   "sources": [
+    "https://www.tcgplayer.com/product/60115/yugioh-return-of-the-duelist-return-of-the-duelist-booster-pack"
+   ]
+  },
+  {
+   "category": "special_edition",
+   "contents": {
+    "sealed": [
+     {
+      "count": 3,
+      "product": "return-of-the-duelist-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "return-of-the-duelist-special-edition",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     549615
+    ],
+    "ygojsonId": "d63ad2c1-8e6e-4821-a1bb-045b40a719a3"
+   },
+   "name": "Return of the Duelist: Special Edition",
+   "set": "return-of-the-duelist",
+   "sources": [
+    "https://www.tcgplayer.com/product/549615/yugioh-return-of-the-duelist-return-of-the-duelist-special-edition",
+    "ygojson:d63ad2c1-8e6e-4821-a1bb-045b40a719a3"
+   ]
+  }
+ ]
+}

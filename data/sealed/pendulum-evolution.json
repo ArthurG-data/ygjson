@@ -1,0 +1,52 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "pendulum-evolution-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "pendulum-evolution-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     131452
+    ],
+    "ygojsonId": "dd76a120-f093-4fe2-8f3d-70aed251a825"
+   },
+   "name": "Pendulum Evolution Booster Box",
+   "set": "pendulum-evolution",
+   "sources": [
+    "https://www.tcgplayer.com/product/131452/yugioh-pendulum-evolution-pendulum-evolution-booster-box",
+    "ygojson:dd76a120-f093-4fe2-8f3d-70aed251a825"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "pendulum-evolution"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "pendulum-evolution-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     131453
+    ]
+   },
+   "name": "Pendulum Evolution Booster Pack",
+   "releaseDate": "2017-06-23",
+   "set": "pendulum-evolution",
+   "sources": [
+    "https://www.tcgplayer.com/product/131453/yugioh-pendulum-evolution-pendulum-evolution-booster-pack"
+   ]
+  }
+ ]
+}

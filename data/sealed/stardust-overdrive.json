@@ -1,0 +1,76 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "stardust-overdrive-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "stardust-overdrive-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57198
+    ],
+    "ygojsonId": "1529639c-3feb-40e8-a39a-49ae9d5e73ba"
+   },
+   "name": "Stardust Overdrive - Booster Box",
+   "set": "stardust-overdrive",
+   "sources": [
+    "https://www.tcgplayer.com/product/57198/yugioh-stardust-overdrive-stardust-overdrive-booster-box",
+    "ygojson:1529639c-3feb-40e8-a39a-49ae9d5e73ba"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "stardust-overdrive"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "stardust-overdrive-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     33738
+    ]
+   },
+   "name": "Stardust Overdrive - Booster Pack",
+   "set": "stardust-overdrive",
+   "sources": [
+    "https://www.tcgplayer.com/product/33738/yugioh-stardust-overdrive-stardust-overdrive-booster-pack"
+   ]
+  },
+  {
+   "category": "special_edition",
+   "contents": {
+    "sealed": [
+     {
+      "count": 3,
+      "product": "stardust-overdrive-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "stardust-overdrive-special-edition",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57219
+    ],
+    "ygojsonId": "6c59ec1b-2a1c-4a13-82a3-d577e6224323"
+   },
+   "name": "Stardust Overdrive - Special Edition",
+   "set": "stardust-overdrive",
+   "sources": [
+    "https://www.tcgplayer.com/product/57219/yugioh-stardust-overdrive-stardust-overdrive-special-edition",
+    "ygojson:6c59ec1b-2a1c-4a13-82a3-d577e6224323"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "extreme-victory-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "extreme-victory-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57191
+    ],
+    "ygojsonId": "ef33993d-7171-4437-82a1-dd7557f38317"
+   },
+   "name": "Extreme Victory - Booster Box",
+   "set": "extreme-victory",
+   "sources": [
+    "https://www.tcgplayer.com/product/57191/yugioh-extreme-victory-extreme-victory-booster-box",
+    "ygojson:ef33993d-7171-4437-82a1-dd7557f38317"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "extreme-victory"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "extreme-victory-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     46796
+    ]
+   },
+   "name": "Extreme Victory - Booster Pack",
+   "set": "extreme-victory",
+   "sources": [
+    "https://www.tcgplayer.com/product/46796/yugioh-extreme-victory-extreme-victory-booster-pack"
+   ]
+  }
+ ]
+}

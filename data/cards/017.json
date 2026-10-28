@@ -43,10 +43,19 @@
    "prints": [
     {
      "id": "burst-of-destiny:17000165:BODE-EN061:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       252607
+      ]
+     },
      "number": "BODE-EN061",
      "rarity": "common",
      "region": "EN",
-     "set": "burst-of-destiny"
+     "set": "burst-of-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reptilianne Recoil"
+     }
     }
    ],
    "tcgDate": "2021-11-04"
@@ -94,10 +103,19 @@
    "prints": [
     {
      "id": "dimension-force:17008760:DIFO-EN066:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       271756
+      ]
+     },
      "number": "DIFO-EN066",
      "rarity": "common",
      "region": "EN",
-     "set": "dimension-force"
+     "set": "dimension-force",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Materiactor Annulus"
+     }
     }
    ],
    "tcgDate": "2022-05-19"
@@ -143,11 +161,23 @@
    "passcode": 17016131,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "eternity-code:17016131:ETCO-EN090:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       213386
+      ]
+     },
      "number": "ETCO-EN090",
      "rarity": "common",
      "region": "EN",
-     "set": "eternity-code"
+     "set": "eternity-code",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pride of the Plunder Patroll"
+     }
     }
    ],
    "tcgDate": "2020-04-30"
@@ -198,17 +228,35 @@
    "prints": [
     {
      "id": "2016-mega-tin-mega-pack:17016362:MP16-EN080:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       122377
+      ]
+     },
      "number": "MP16-EN080",
      "rarity": "rare",
      "region": "EN",
-     "set": "2016-mega-tin-mega-pack"
+     "set": "2016-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performage Trapeze Magician"
+     }
     },
     {
      "id": "clash-of-rebellions:17016362:CORE-EN053:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       102471
+      ]
+     },
      "number": "CORE-EN053",
      "rarity": "rare",
      "region": "EN",
-     "set": "clash-of-rebellions"
+     "set": "clash-of-rebellions",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performage Trapeze Magician"
+     }
     }
    ],
    "rank": 4,
@@ -253,11 +301,23 @@
    "passcode": 17020474,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "beyond-the-brave:17020474:BETB-EN039:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       719882
+      ]
+     },
      "number": "BETB-EN039",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "beyond-the-brave"
+     "set": "beyond-the-brave",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ashtraja Susanoo"
+     }
     }
    ],
    "tcgDate": "2026-10-08",
@@ -309,10 +369,19 @@
    "prints": [
     {
      "id": "stardust-overdrive:17021204:SOVR-EN019:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       33656
+      ]
+     },
      "number": "SOVR-EN019",
      "rarity": "rare",
      "region": "EN",
-     "set": "stardust-overdrive"
+     "set": "stardust-overdrive",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mother Spider"
+     }
     }
    ],
    "tcgDate": "2009-11-17",
@@ -367,45 +436,103 @@
    "prints": [
     {
      "id": "battles-of-legend-armageddon:17032740:BLAR-EN055:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       218000
+      ]
+     },
      "number": "BLAR-EN055",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-armageddon"
+     "set": "battles-of-legend-armageddon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental HERO Chaos Neos"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battles-of-legend-chapter-1:17032740:BLC1-EN140:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538612
+      ]
+     },
      "number": "BLC1-EN140",
      "rarity": "common",
      "region": "EN",
-     "set": "battles-of-legend-chapter-1"
+     "set": "battles-of-legend-chapter-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental HERO Chaos Neos"
+     }
     },
     {
      "id": "gladiator-s-assault:17032740:GLAS-EN036:ghost_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       27485,
+       82276
+      ]
+     },
      "number": "GLAS-EN036",
      "rarity": "ghost_rare",
      "region": "EN",
-     "set": "gladiator-s-assault"
+     "set": "gladiator-s-assault",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental Hero Chaos Neos (Ghost Rare)"
+     }
     },
     {
      "id": "gladiator-s-assault:17032740:GLAS-EN036:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26283
+      ]
+     },
      "number": "GLAS-EN036",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "gladiator-s-assault"
+     "set": "gladiator-s-assault",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental Hero Chaos Neos"
+     }
     },
     {
      "id": "legendary-collection-2-the-duel-academy-years-mega-pack:17032740:LCGX-EN065:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       56806
+      ]
+     },
      "number": "LCGX-EN065",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "legendary-collection-2-the-duel-academy-years-mega-pack"
+     "set": "legendary-collection-2-the-duel-academy-years-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Elemental HERO Chaos Neos"
+     }
     },
     {
      "id": "shadows-in-valhalla:17032740:SHVA-EN035:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       173521
+      ]
+     },
      "number": "SHVA-EN035",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "shadows-in-valhalla"
+     "set": "shadows-in-valhalla",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental HERO Chaos Neos"
+     }
     }
    ],
    "tcgDate": "2007-11-14",
@@ -461,10 +588,19 @@
    "prints": [
     {
      "id": "photon-shockwave:17045014:PHSW-EN021:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       57281
+      ]
+     },
      "number": "PHSW-EN021",
      "rarity": "rare",
      "region": "EN",
-     "set": "photon-shockwave"
+     "set": "photon-shockwave",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evolsaur Diplo"
+     }
     }
    ],
    "tcgDate": "2011-11-10",
@@ -511,18 +647,39 @@
    "passcode": 17052477,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dragons-of-legend-the-complete-series:17052477:DLCS-EN015:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       221542
+      ]
+     },
      "number": "DLCS-EN015",
      "rarity": "common",
      "region": "EN",
-     "set": "dragons-of-legend-the-complete-series"
+     "set": "dragons-of-legend-the-complete-series",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Guarded Treasure"
+     }
     },
     {
      "id": "dragons-of-legend:17052477:DRLG-EN013:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       82565
+      ]
+     },
      "number": "DRLG-EN013",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "dragons-of-legend"
+     "set": "dragons-of-legend",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Guarded Treasure"
+     }
     }
    ],
    "tcgDate": "2014-04-25"
@@ -571,24 +728,51 @@
    "prints": [
     {
      "id": "2022-tin-of-the-pharaoh-s-gods:17063599:MP22-EN016:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       284899
+      ]
+     },
      "number": "MP22-EN016",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "2022-tin-of-the-pharaoh-s-gods"
+     "set": "2022-tin-of-the-pharaoh-s-gods",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Heavenly Zephyr - Miradora"
+     }
     },
     {
      "id": "blazing-vortex:17063599:BLVO-EN029:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       231342
+      ]
+     },
      "number": "BLVO-EN029",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "blazing-vortex"
+     "set": "blazing-vortex",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Heavenly Zephyr - Miradora"
+     }
     },
     {
      "id": "blazing-vortex:17063599:BLVO-EN029:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       231641
+      ]
+     },
      "number": "BLVO-EN029",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "blazing-vortex"
+     "set": "blazing-vortex",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Heavenly Zephyr - Miradora (Starlight Rare)"
+     }
     }
    ],
    "tcgDate": "2021-02-04",
@@ -636,23 +820,53 @@
    "prints": [
     {
      "id": "ancient-sanctuary:17078030:AST-050:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23316
+      ]
+     },
      "number": "AST-050",
      "rarity": "common",
-     "set": "ancient-sanctuary"
+     "set": "ancient-sanctuary",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Wall of Revealing Light"
+     }
     },
     {
      "id": "dark-revelation-volume-2:17078030:DR2-EN162:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       24783
+      ]
+     },
      "number": "DR2-EN162",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-revelation-volume-2"
+     "set": "dark-revelation-volume-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Wall of Revealing Light"
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-6a:17078030:DT06-EN046:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81477
+      ]
+     },
      "number": "DT06-EN046",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-6a"
+     "set": "duel-terminal-6a",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Wall of Revealing Light"
+     }
     }
    ],
    "tcgDate": "2004-06-01"
@@ -704,24 +918,51 @@
    "prints": [
     {
      "id": "2025-mega-pack-tin:17080584:MP25-EN244:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       651643
+      ]
+     },
      "number": "MP25-EN244",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "2025-mega-pack-tin"
+     "set": "2025-mega-pack-tin",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Abyssrhine, the Atlantean Spirit"
+     }
     },
     {
      "id": "rage-of-the-abyss:17080584:ROTA-EN017:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       584263
+      ]
+     },
      "number": "ROTA-EN017",
      "rarity": "qc_secret_rare",
      "region": "EN",
-     "set": "rage-of-the-abyss"
+     "set": "rage-of-the-abyss",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Abyssrhine, the Atlantean Spirit (Quarter Century Secret Rare)"
+     }
     },
     {
      "id": "rage-of-the-abyss:17080584:ROTA-EN017:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       584262
+      ]
+     },
      "number": "ROTA-EN017",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "rage-of-the-abyss"
+     "set": "rage-of-the-abyss",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Abyssrhine, the Atlantean Spirit"
+     }
     }
    ],
    "tcgDate": "2024-07-27",
@@ -777,31 +1018,67 @@
    "prints": [
     {
      "id": "2016-mega-tin-mega-pack:17086528:MP16-EN050:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       122347
+      ]
+     },
      "number": "MP16-EN050",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "2016-mega-tin-mega-pack"
+     "set": "2016-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Xiangsheng Magician"
+     }
     },
     {
      "id": "clash-of-rebellions:17086528:CORE-EN004:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       102418
+      ]
+     },
      "number": "CORE-EN004",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "clash-of-rebellions"
+     "set": "clash-of-rebellions",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Xiangsheng Magician"
+     }
     },
     {
      "id": "star-pack-battle-royal:17086528:SP17-EN018:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       129201
+      ]
+     },
      "number": "SP17-EN018",
      "rarity": "common",
      "region": "EN",
-     "set": "star-pack-battle-royal"
+     "set": "star-pack-battle-royal",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Xiangsheng Magician"
+     }
     },
     {
      "id": "star-pack-battle-royal:17086528:SP17-EN018:starfoil_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       129202
+      ]
+     },
      "number": "SP17-EN018",
      "rarity": "starfoil_rare",
      "region": "EN",
-     "set": "star-pack-battle-royal"
+     "set": "star-pack-battle-royal",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Xiangsheng Magician (Starfoil)"
+     }
     }
    ],
    "scale": 8,
@@ -851,9 +1128,18 @@
    "prints": [
     {
      "id": "starter-deck-kaiba:17092736:SDK-039:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22695
+      ]
+     },
      "number": "SDK-039",
      "rarity": "common",
-     "set": "starter-deck-kaiba"
+     "set": "starter-deck-kaiba",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ancient Telescope"
+     }
     },
     {
      "id": "starter-deck-kaiba:17092736:SDK-E036:common",
@@ -953,18 +1239,39 @@
    "passcode": 17129783,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-7b:17129783:DT07-EN067:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81599
+      ]
+     },
      "number": "DT07-EN067",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-7b"
+     "set": "duel-terminal-7b",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Constellar Leonis"
+     }
     },
     {
      "id": "hidden-arsenal-7-knight-of-stars:17129783:HA07-EN043:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       68075
+      ]
+     },
      "number": "HA07-EN043",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "hidden-arsenal-7-knight-of-stars"
+     "set": "hidden-arsenal-7-knight-of-stars",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Constellar Leonis"
+     }
     }
    ],
    "tcgDate": "2013-02-01",
@@ -1020,52 +1327,115 @@
    "prints": [
     {
      "id": "destiny-soldiers:17132130:DESO-EN011:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       125267
+      ]
+     },
      "number": "DESO-EN011",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "destiny-soldiers"
+     "set": "destiny-soldiers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destiny HERO - Dogma"
+     }
     },
     {
      "id": "duelist-pack-aster-phoenix:17132130:DP05-EN007:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25628
+      ]
+     },
      "number": "DP05-EN007",
      "rarity": "rare",
      "region": "EN",
-     "set": "duelist-pack-aster-phoenix"
+     "set": "duelist-pack-aster-phoenix",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destiny HERO - Dogma"
+     }
     },
     {
      "id": "legendary-collection-2-the-duel-academy-years-mega-pack:17132130:LCGX-EN128:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       56781
+      ]
+     },
      "number": "LCGX-EN128",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "legendary-collection-2-the-duel-academy-years-mega-pack"
+     "set": "legendary-collection-2-the-duel-academy-years-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Destiny HERO - Dogma"
+     }
     },
     {
      "id": "legendary-hero-decks:17132130:LEHD-ENA01:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       177587
+      ]
+     },
      "number": "LEHD-ENA01",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-hero-decks"
+     "set": "legendary-hero-decks",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destiny HERO - Dogma"
+     }
     },
     {
      "id": "power-of-the-duelist:17132130:POTD-EN014:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25410
+      ]
+     },
      "number": "POTD-EN014",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "power-of-the-duelist"
+     "set": "power-of-the-duelist",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destiny Hero - Dogma"
+     }
     },
     {
      "id": "power-of-the-duelist:17132130:POTD-EN014:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58635
+      ]
+     },
      "number": "POTD-EN014",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "power-of-the-duelist"
+     "set": "power-of-the-duelist",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destiny Hero - Dogma (UTR)"
+     }
     },
     {
      "id": "speed-duel-gx-duel-academy-box:17132130:SGX1-ENB07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       266155
+      ]
+     },
      "number": "SGX1-ENB07",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-gx-duel-academy-box"
+     "set": "speed-duel-gx-duel-academy-box",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destiny HERO - Dogma"
+     }
     }
    ],
    "tcgDate": "2006-08-16",
@@ -1119,18 +1489,39 @@
    "passcode": 17141718,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dragons-of-legend-the-complete-series:17141718:DLCS-EN128:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       221704
+      ]
+     },
      "number": "DLCS-EN128",
      "rarity": "common",
      "region": "EN",
-     "set": "dragons-of-legend-the-complete-series"
+     "set": "dragons-of-legend-the-complete-series",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flower Cardian Zebra Grass"
+     }
     },
     {
      "id": "dragons-of-legend-unleashed:17141718:DRL3-EN032:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       121485
+      ]
+     },
      "number": "DRL3-EN032",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "dragons-of-legend-unleashed"
+     "set": "dragons-of-legend-unleashed",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flower Cardian Zebra Grass"
+     }
     }
    ],
    "tcgDate": "2016-08-18",
@@ -1179,17 +1570,35 @@
    "prints": [
     {
      "id": "2025-mega-pack-tin:17151328:MP25-EN255:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       651654
+      ]
+     },
      "number": "MP25-EN255",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "2025-mega-pack-tin"
+     "set": "2025-mega-pack-tin",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Firestorms Over Atlantis"
+     }
     },
     {
      "id": "rage-of-the-abyss:17151328:ROTA-EN066:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       584324
+      ]
+     },
      "number": "ROTA-EN066",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "rage-of-the-abyss"
+     "set": "rage-of-the-abyss",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Firestorms Over Atlantis"
+     }
     }
    ],
    "tcgDate": "2024-07-27"
@@ -1237,10 +1646,19 @@
    "prints": [
     {
      "id": "battles-of-legend-armageddon:17170970:BLAR-EN016:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217959
+      ]
+     },
      "number": "BLAR-EN016",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "battles-of-legend-armageddon"
+     "set": "battles-of-legend-armageddon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Armored White Bear"
+     }
     }
    ],
    "tcgDate": "2020-07-23",
@@ -1287,24 +1705,51 @@
    "prints": [
     {
      "id": "dark-revelation-volume-4:17178486:DR04-EN229:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80837
+      ]
+     },
      "number": "DR04-EN229",
      "rarity": "rare",
      "region": "EN",
-     "set": "dark-revelation-volume-4"
+     "set": "dark-revelation-volume-4",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Life Equalizer"
+     }
     },
     {
      "id": "enemy-of-justice:17178486:EOJ-EN049:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       24982
+      ]
+     },
      "number": "EOJ-EN049",
      "rarity": "rare",
      "region": "EN",
-     "set": "enemy-of-justice"
+     "set": "enemy-of-justice",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Life Equalizer"
+     }
     },
     {
      "id": "enemy-of-justice:17178486:EOJ-EN049:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58673
+      ]
+     },
      "number": "EOJ-EN049",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "enemy-of-justice"
+     "set": "enemy-of-justice",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Life Equalizer (UTR)"
+     }
     }
    ],
    "tcgDate": "2006-05-17"
@@ -1352,17 +1797,35 @@
    "prints": [
     {
      "id": "2015-mega-tin-mega-pack:17183908:MP15-EN105:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       105243
+      ]
+     },
      "number": "MP15-EN105",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "2015-mega-tin-mega-pack"
+     "set": "2015-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Yang Zing Path"
+     }
     },
     {
      "id": "duelist-alliance:17183908:DUEA-EN061:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       92404
+      ]
+     },
      "number": "DUEA-EN061",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "duelist-alliance"
+     "set": "duelist-alliance",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Yang Zing Path"
+     }
     }
    ],
    "tcgDate": "2014-08-14"
@@ -1408,11 +1871,23 @@
    "passcode": 17185260,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "yu-gi-oh-capsule-monster-coliseum-promotional-cards:17185260:CMC-EN002:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23410
+      ]
+     },
      "number": "CMC-EN002",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "yu-gi-oh-capsule-monster-coliseum-promotional-cards"
+     "set": "yu-gi-oh-capsule-monster-coliseum-promotional-cards",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Inferno Hammer (Capsule Monster Coliseum)"
+     }
     }
    ],
    "tcgDate": "2004-11-26",
@@ -1464,10 +1939,19 @@
    "prints": [
     {
      "id": "doom-of-dimensions:17188206:DOOD-EN091:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       654328
+      ]
+     },
      "number": "DOOD-EN091",
      "rarity": "common",
      "region": "EN",
-     "set": "doom-of-dimensions"
+     "set": "doom-of-dimensions",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "R.B. Lambda Blade"
+     }
     }
    ],
    "tcgDate": "2025-09-25",
@@ -1521,10 +2005,19 @@
    "prints": [
     {
      "id": "galactic-overlord:17189532:GAOV-EN011:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       59009
+      ]
+     },
      "number": "GAOV-EN011",
      "rarity": "common",
      "region": "EN",
-     "set": "galactic-overlord"
+     "set": "galactic-overlord",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Phantom Bounzer"
+     }
     }
    ],
    "tcgDate": "2012-04-28",
@@ -1573,24 +2066,51 @@
    "prints": [
     {
      "id": "ancient-guardians:17189677:ANGU-EN051:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       238065
+      ]
+     },
      "number": "ANGU-EN051",
      "rarity": "collectors_rare",
      "region": "EN",
-     "set": "ancient-guardians"
+     "set": "ancient-guardians",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Snake Rain (CR)"
+     }
     },
     {
      "id": "ancient-guardians:17189677:ANGU-EN051:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       238064
+      ]
+     },
      "number": "ANGU-EN051",
      "rarity": "rare",
      "region": "EN",
-     "set": "ancient-guardians"
+     "set": "ancient-guardians",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Snake Rain"
+     }
     },
     {
      "id": "tactical-evolution:17189677:TAEV-EN052:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26140
+      ]
+     },
      "number": "TAEV-EN052",
      "rarity": "rare",
      "region": "EN",
-     "set": "tactical-evolution"
+     "set": "tactical-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Snake Rain"
+     }
     }
    ],
    "tcgDate": "2007-08-15"
@@ -1636,9 +2156,18 @@
    "prints": [
     {
      "id": "pharaonic-guardian:17192817:PGD-001:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22230
+      ]
+     },
      "number": "PGD-001",
      "rarity": "common",
-     "set": "pharaonic-guardian"
+     "set": "pharaonic-guardian",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Molten Behemoth"
+     }
     }
    ],
    "tcgDate": "2003-07-18",
@@ -1686,24 +2215,51 @@
    "prints": [
     {
      "id": "2016-mega-tin-mega-pack:17194258:MP16-EN024:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       122321
+      ]
+     },
      "number": "MP16-EN024",
      "rarity": "rare",
      "region": "EN",
-     "set": "2016-mega-tin-mega-pack"
+     "set": "2016-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fusion Conscription"
+     }
     },
     {
      "id": "crossed-souls:17194258:CROS-EN053:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       98457
+      ]
+     },
      "number": "CROS-EN053",
      "rarity": "rare",
      "region": "EN",
-     "set": "crossed-souls"
+     "set": "crossed-souls",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fusion Conscription"
+     }
     },
     {
      "id": "fusion-enforcers:17194258:FUEN-EN057:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       127848
+      ]
+     },
      "number": "FUEN-EN057",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "fusion-enforcers"
+     "set": "fusion-enforcers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fusion Conscription"
+     }
     }
    ],
    "tcgDate": "2015-05-14"
@@ -1751,10 +2307,19 @@
    "prints": [
     {
      "id": "structure-deck-freezing-chains:17197110:SDFC-EN027:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       232210
+      ]
+     },
      "number": "SDFC-EN027",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "structure-deck-freezing-chains"
+     "set": "structure-deck-freezing-chains",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Winds Over the Ice Barrier"
+     }
     }
    ],
    "tcgDate": "2021-02-18"
@@ -1802,24 +2367,51 @@
    "prints": [
     {
      "id": "galactic-overlord:17201174:GAOV-EN008:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       59006
+      ]
+     },
      "number": "GAOV-EN008",
      "rarity": "rare",
      "region": "EN",
-     "set": "galactic-overlord"
+     "set": "galactic-overlord",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Hammer Shark"
+     }
     },
     {
      "id": "star-pack-2014:17201174:SP14-EN013:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       79844
+      ]
+     },
      "number": "SP14-EN013",
      "rarity": "common",
      "region": "EN",
-     "set": "star-pack-2014"
+     "set": "star-pack-2014",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Hammer Shark"
+     }
     },
     {
      "id": "star-pack-2014:17201174:SP14-EN013:starfoil_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       79845
+      ]
+     },
      "number": "SP14-EN013",
      "rarity": "starfoil_rare",
      "region": "EN",
-     "set": "star-pack-2014"
+     "set": "star-pack-2014",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Hammer Shark (Starfoil)"
+     }
     }
    ],
    "tcgDate": "2012-04-28",
@@ -1869,10 +2461,19 @@
    "prints": [
     {
      "id": "legendary-5d-s-decks:17201951:L5DD-ENY01:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       661255
+      ]
+     },
      "number": "L5DD-ENY01",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "legendary-5d-s-decks"
+     "set": "legendary-5d-s-decks",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Full-Speed Warrior"
+     }
     }
    ],
    "tcgDate": "2025-11-06",
@@ -1915,18 +2516,42 @@
    "passcode": 17209452,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "blazing-dominion:17209452:BLZD-EN021:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       692262
+      ]
+     },
      "number": "BLZD-EN021",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "blazing-dominion"
+     "set": "blazing-dominion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kewl Tune Rotary (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "blazing-dominion:17209452:BLZD-EN021:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       692263
+      ]
+     },
      "number": "BLZD-EN021",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "blazing-dominion"
+     "set": "blazing-dominion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kewl Tune Rotary"
+     }
     }
    ],
    "tcgDate": "2026-05-07",
@@ -1982,23 +2607,50 @@
    "prints": [
     {
      "id": "dark-beginning-2:17214465:DB2-EN211:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       24206
+      ]
+     },
      "number": "DB2-EN211",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-beginning-2"
+     "set": "dark-beginning-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maiden of the Aqua"
+     }
     },
     {
      "id": "pharaonic-guardian:17214465:PGD-008:short_print",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22186
+      ]
+     },
      "number": "PGD-008",
      "rarity": "short_print",
-     "set": "pharaonic-guardian"
+     "set": "pharaonic-guardian",
+     "tcgplayer": {
+      "match": "number",
+      "name": "Maiden of the Aqua"
+     }
     },
     {
      "id": "speed-duel-streets-of-battle-city:17214465:SBC1-ENC07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512276
+      ]
+     },
      "number": "SBC1-ENC07",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-streets-of-battle-city"
+     "set": "speed-duel-streets-of-battle-city",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maiden of the Aqua"
+     }
     }
    ],
    "tcgDate": "2003-07-18",
@@ -2052,19 +2704,42 @@
    "passcode": 17217034,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-modern-decks-2026:17217034:L26D-ENS33:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       683271
+      ]
+     },
+     "number": "L26D-ENS33",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "legendary-modern-decks-2026",
+     "tcgplayer": {
+      "match": "number+rarity-from-tcgplayer",
+      "name": "Combined Maneuver - Engage Zero! (Secret Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-modern-decks-2026:17217034:L26D-ENS33:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       683068
+      ]
+     },
      "number": "L26D-ENS33",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "legendary-modern-decks-2026"
-    },
-    {
-     "id": "legendary-modern-decks-2026:17217034:L26D-ENS33:unknown",
-     "number": "L26D-ENS33",
-     "rarity": "unknown",
-     "rawRarity": "New",
-     "region": "EN",
-     "set": "legendary-modern-decks-2026"
+     "set": "legendary-modern-decks-2026",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Combined Maneuver - Engage Zero!"
+     }
     }
    ],
    "tcgDate": "2026-04-23",
@@ -2114,31 +2789,67 @@
    "prints": [
     {
      "id": "dinosmasher-s-fury-structure-deck:17228908:SR04-EN021:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       130131
+      ]
+     },
      "number": "SR04-EN021",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "dinosmasher-s-fury-structure-deck"
+     "set": "dinosmasher-s-fury-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lost World"
+     }
     },
     {
      "id": "maximum-gold-el-dorado:17228908:MGED-EN058:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       253998
+      ]
+     },
      "number": "MGED-EN058",
      "rarity": "rare",
      "region": "EN",
-     "set": "maximum-gold-el-dorado"
+     "set": "maximum-gold-el-dorado",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lost World"
+     }
     },
     {
      "id": "maximum-gold:17228908:MAGO-EN154:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227580
+      ]
+     },
      "number": "MAGO-EN154",
      "rarity": "rare",
      "region": "EN",
-     "set": "maximum-gold"
+     "set": "maximum-gold",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lost World"
+     }
     },
     {
      "id": "wild-survivors:17228908:WISU-EN057:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       497958
+      ]
+     },
      "number": "WISU-EN057",
      "rarity": "rare",
      "region": "EN",
-     "set": "wild-survivors"
+     "set": "wild-survivors",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lost World"
+     }
     }
    ],
    "tcgDate": "2017-04-13"
@@ -2181,25 +2892,55 @@
    "passcode": 17236839,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dragons-of-legend-the-complete-series:17236839:DLCS-EN018:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       221548
+      ]
+     },
      "number": "DLCS-EN018",
      "rarity": "common",
      "region": "EN",
-     "set": "dragons-of-legend-the-complete-series"
+     "set": "dragons-of-legend-the-complete-series",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flash Fusion"
+     }
     },
     {
      "id": "dragons-of-legend:17236839:DRLG-EN016:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       82568
+      ]
+     },
      "number": "DRLG-EN016",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "dragons-of-legend"
+     "set": "dragons-of-legend",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flash Fusion"
+     }
     },
     {
      "id": "hidden-summoners:17236839:HISU-EN057:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       180310
+      ]
+     },
      "number": "HISU-EN057",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "hidden-summoners"
+     "set": "hidden-summoners",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flash Fusion"
+     }
     }
    ],
    "tcgDate": "2014-04-25"
@@ -2247,10 +2988,19 @@
    "prints": [
     {
      "id": "tournament-pack-8:17238333:TP8-EN018:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25349
+      ]
+     },
      "number": "TP8-EN018",
      "rarity": "common",
      "region": "EN",
-     "set": "tournament-pack-8"
+     "set": "tournament-pack-8",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Wretched Ghost of the Attic"
+     }
     }
    ],
    "tcgDate": "2006-04-28",
@@ -2305,18 +3055,39 @@
    "passcode": 17241370,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-7b:17241370:DT07-EN064:dt_rare_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81596
+      ]
+     },
      "number": "DT07-EN064",
      "rarity": "dt_rare_parallel",
      "region": "EN",
-     "set": "duel-terminal-7b"
+     "set": "duel-terminal-7b",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gishki Natalia"
+     }
     },
     {
      "id": "hidden-arsenal-7-knight-of-stars:17241370:HA07-EN040:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       68072
+      ]
+     },
      "number": "HA07-EN040",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "hidden-arsenal-7-knight-of-stars"
+     "set": "hidden-arsenal-7-knight-of-stars",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gishki Natalia"
+     }
     }
    ],
    "tcgDate": "2013-02-01",
@@ -2369,10 +3140,19 @@
    "prints": [
     {
      "id": "blazing-vortex:17241941:BLVO-EN032:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       231345
+      ]
+     },
      "number": "BLVO-EN032",
      "rarity": "common",
      "region": "EN",
-     "set": "blazing-vortex"
+     "set": "blazing-vortex",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gigathunder Giclops"
+     }
     }
    ],
    "scale": 5,
@@ -2418,18 +3198,43 @@
    "passcode": 17242022,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "beyond-the-brave:17242022:BETB-EN036:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       719879
+      ]
+     },
      "number": "BETB-EN036",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "beyond-the-brave"
+     "set": "beyond-the-brave",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red-Eyes Black Dragon Exceed (Starlight Rare) (Extended Art)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "beyond-the-brave:17242022:BETB-EN036:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       719877,
+       719878
+      ]
+     },
      "number": "BETB-EN036",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "beyond-the-brave"
+     "set": "beyond-the-brave",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red-Eyes Black Dragon Exceed"
+     }
     }
    ],
    "tcgDate": "2026-10-08",
@@ -2481,10 +3286,19 @@
    "prints": [
     {
      "id": "stardust-overdrive:17243896:SOVR-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       33653
+      ]
+     },
      "number": "SOVR-EN016",
      "rarity": "common",
      "region": "EN",
-     "set": "stardust-overdrive"
+     "set": "stardust-overdrive",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ground Spider"
+     }
     }
    ],
    "tcgDate": "2009-11-17",
@@ -2536,10 +3350,19 @@
    "prints": [
     {
      "id": "amazing-defenders:17255673:AMDE-EN028:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       477679
+      ]
+     },
      "number": "AMDE-EN028",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "amazing-defenders"
+     "set": "amazing-defenders",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Heavenly Gate of the Mikanko"
+     }
     }
    ],
    "tcgDate": "2023-01-19"
@@ -2588,17 +3411,35 @@
    "prints": [
     {
      "id": "2019-gold-sarcophagus-tin-mega-pack:17257342:MP19-EN174:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       197468
+      ]
+     },
      "number": "MP19-EN174",
      "rarity": "common",
      "region": "EN",
-     "set": "2019-gold-sarcophagus-tin-mega-pack"
+     "set": "2019-gold-sarcophagus-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Diana the Light Spirit"
+     }
     },
     {
      "id": "soul-fusion:17257342:SOFU-EN027:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       177989
+      ]
+     },
      "number": "SOFU-EN027",
      "rarity": "common",
      "region": "EN",
-     "set": "soul-fusion"
+     "set": "soul-fusion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Diana the Light Spirit"
+     }
     }
    ],
    "tcgDate": "2018-10-18",
@@ -2651,66 +3492,147 @@
    "prints": [
     {
      "id": "gold-series-haunted-mine:17259470:GLD5-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       59746
+      ]
+     },
      "number": "GLD5-EN019",
      "rarity": "common",
      "region": "EN",
-     "set": "gold-series-haunted-mine"
+     "set": "gold-series-haunted-mine",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master"
+     }
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:17259470:LCJW-EN202:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71790
+      ]
+     },
      "number": "LCJW-EN202",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-collection-4-joey-s-world-mega-pack"
+     "set": "legendary-collection-4-joey-s-world-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zombie Master"
+     }
     },
     {
      "id": "quarter-century-bonanza:17259470:RA03-EN185:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592936
+      ]
+     },
      "number": "RA03-EN185",
      "rarity": "platinum_secret_rare",
      "region": "EN",
-     "set": "quarter-century-bonanza"
+     "set": "quarter-century-bonanza",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master (Platinum Secret Rare)"
+     }
     },
     {
      "id": "quarter-century-bonanza:17259470:RA03-EN185:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592937
+      ]
+     },
      "number": "RA03-EN185",
      "rarity": "qc_secret_rare",
      "region": "EN",
-     "set": "quarter-century-bonanza"
+     "set": "quarter-century-bonanza",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master (Quarter Century Secret Rare)"
+     }
     },
     {
      "id": "structure-deck-zombie-horde:17259470:SR07-EN010:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       179263
+      ]
+     },
      "number": "SR07-EN010",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-zombie-horde"
+     "set": "structure-deck-zombie-horde",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master"
+     }
     },
     {
      "id": "tactical-evolution:17259470:TAEV-EN039:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26117
+      ]
+     },
      "number": "TAEV-EN039",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "tactical-evolution"
+     "set": "tactical-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master"
+     }
     },
     {
      "id": "tactical-evolution:17259470:TAEV-EN039:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58533
+      ]
+     },
      "number": "TAEV-EN039",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "tactical-evolution"
+     "set": "tactical-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master (UTR)"
+     }
     },
     {
      "id": "turbo-pack-booster-six:17259470:TU06-EN006:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       66737
+      ]
+     },
      "number": "TU06-EN006",
      "rarity": "rare",
      "region": "EN",
-     "set": "turbo-pack-booster-six"
+     "set": "turbo-pack-booster-six",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master"
+     }
     },
     {
      "id": "zombie-world-structure-deck:17259470:SDZW-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       32854
+      ]
+     },
      "number": "SDZW-EN016",
      "rarity": "common",
      "region": "EN",
-     "set": "zombie-world-structure-deck"
+     "set": "zombie-world-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zombie Master"
+     }
     }
    ],
    "tcgDate": "2007-08-15",
@@ -2765,10 +3687,19 @@
    "prints": [
     {
      "id": "crossed-souls:17264592:CROS-EN087:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       98483
+      ]
+     },
      "number": "CROS-EN087",
      "rarity": "common",
      "region": "EN",
-     "set": "crossed-souls"
+     "set": "crossed-souls",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "U.A. Rival Rebounder"
+     }
     }
    ],
    "tcgDate": "2015-05-14",
@@ -2824,46 +3755,106 @@
    "passcode": 17266660,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-pack-3-monster-league:17266660:BP03-EN050:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       91780
+      ]
+     },
      "number": "BP03-EN050",
      "rarity": "common",
      "region": "EN",
-     "set": "battle-pack-3-monster-league"
+     "set": "battle-pack-3-monster-league",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-pack-3-monster-league:17266660:BP03-EN050:shatterfoil_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       91951
+      ]
+     },
      "number": "BP03-EN050",
      "rarity": "shatterfoil_rare",
      "region": "EN",
-     "set": "battle-pack-3-monster-league"
+     "set": "battle-pack-3-monster-league",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light (Shatterfoil)"
+     }
     },
     {
      "id": "battles-of-legend-monster-mayhem:17266660:BLMM-EN103:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       635994
+      ]
+     },
      "number": "BLMM-EN103",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "battles-of-legend-monster-mayhem"
+     "set": "battles-of-legend-monster-mayhem",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light (Starlight Rare)"
+     }
     },
     {
      "id": "battles-of-legend-monster-mayhem:17266660:BLMM-EN103:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       635995
+      ]
+     },
      "number": "BLMM-EN103",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-monster-mayhem"
+     "set": "battles-of-legend-monster-mayhem",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light"
+     }
     },
     {
      "id": "maze-of-the-master:17266660:MZTM-EN068:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       622071
+      ]
+     },
      "number": "MZTM-EN068",
      "rarity": "rare",
      "region": "EN",
-     "set": "maze-of-the-master"
+     "set": "maze-of-the-master",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light"
+     }
     },
     {
      "id": "ots-tournament-pack-20:17266660:OP20-EN005:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       450442
+      ]
+     },
      "number": "OP20-EN005",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ots-tournament-pack-20"
+     "set": "ots-tournament-pack-20",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light"
+     }
     },
     {
      "id": "ots-tournament-pack-7-por:17266660:OP07-PT001:ultimate_rare",
@@ -2874,31 +3865,67 @@
     },
     {
      "id": "ots-tournament-pack-7:17266660:OP07-EN001:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       164861
+      ]
+     },
      "number": "OP07-EN001",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "ots-tournament-pack-7"
+     "set": "ots-tournament-pack-7",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light (UTR)"
+     }
     },
     {
      "id": "structure-deck-wave-of-light:17266660:SR05-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       156009
+      ]
+     },
      "number": "SR05-EN019",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-wave-of-light"
+     "set": "structure-deck-wave-of-light",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light"
+     }
     },
     {
      "id": "the-duelist-genesis:17266660:TDGS-EN082:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       27580
+      ]
+     },
      "number": "TDGS-EN082",
      "rarity": "rare",
      "region": "EN",
-     "set": "the-duelist-genesis"
+     "set": "the-duelist-genesis",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light"
+     }
     },
     {
      "id": "turbo-pack-booster-seven:17266660:TU07-EN017:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       66769
+      ]
+     },
      "number": "TU07-EN017",
      "rarity": "common",
      "region": "EN",
-     "set": "turbo-pack-booster-seven"
+     "set": "turbo-pack-booster-seven",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Herald of Orange Light"
+     }
     }
    ],
    "tcgDate": "2008-08-09",
@@ -2935,18 +3962,42 @@
    "passcode": 17269895,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "blazing-dominion:17269895:BLZD-EN071:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       692324
+      ]
+     },
      "number": "BLZD-EN071",
      "rarity": "common",
      "region": "EN",
-     "set": "blazing-dominion"
+     "set": "blazing-dominion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "King's Resonance"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-monsters:17269895:MAMO-EN119:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714837
+      ]
+     },
      "number": "MAMO-EN119",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-monsters"
+     "set": "magnificent-monsters",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "King's Resonance"
+     }
     }
    ],
    "tcgDate": "2026-05-07"
@@ -2998,31 +4049,67 @@
    "prints": [
     {
      "id": "2-player-starter-set:17272964:STAS-EN020:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       533059
+      ]
+     },
      "number": "STAS-EN020",
      "rarity": "common",
      "region": "EN",
-     "set": "2-player-starter-set"
+     "set": "2-player-starter-set",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mannadium Fearless (STAS-EN020)"
+     }
     },
     {
      "id": "2-player-starter-set:17272964:STAS-EN039:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       533083
+      ]
+     },
      "number": "STAS-EN039",
      "rarity": "common",
      "region": "EN",
-     "set": "2-player-starter-set"
+     "set": "2-player-starter-set",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mannadium Fearless (STAS-EN039)"
+     }
     },
     {
      "id": "25th-anniversary-tin-dueling-mirrors:17272964:MP24-EN189:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       579663
+      ]
+     },
      "number": "MP24-EN189",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "25th-anniversary-tin-dueling-mirrors"
+     "set": "25th-anniversary-tin-dueling-mirrors",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mannadium Fearless"
+     }
     },
     {
      "id": "cyberstorm-access:17272964:CYAC-EN013:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       493839
+      ]
+     },
      "number": "CYAC-EN013",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "cyberstorm-access"
+     "set": "cyberstorm-access",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mannadium Fearless"
+     }
     }
    ],
    "tcgDate": "2023-05-04",
@@ -3077,10 +4164,19 @@
    "prints": [
     {
      "id": "duelist-revolution:17285476:DREV-EN027:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       35780
+      ]
+     },
      "number": "DREV-EN027",
      "rarity": "common",
      "region": "EN",
-     "set": "duelist-revolution"
+     "set": "duelist-revolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Naturia Mosquito"
+     }
     }
    ],
    "tcgDate": "2010-08-07",
@@ -3132,18 +4228,55 @@
    "passcode": 17286057,
    "prints": [
     {
-     "id": "light-of-destruction:17286057:LODT-EN095:super_rare",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "light-of-destruction-2020-reprint:17286057:LODT-EN095:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       562280
+      ]
+     },
      "number": "LODT-EN095",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "light-of-destruction"
+     "set": "light-of-destruction-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Helios Trice Megistus"
+     }
+    },
+    {
+     "id": "light-of-destruction:17286057:LODT-EN095:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26789
+      ]
+     },
+     "number": "LODT-EN095",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "light-of-destruction",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Helios Trice Megistus"
+     }
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:17286057:SGX3-ENI23:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       489561
+      ]
+     },
      "number": "SGX3-ENI23",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-gx-duelists-of-shadows"
+     "set": "speed-duel-gx-duelists-of-shadows",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Helios Trice Megistus"
+     }
     }
    ],
    "tcgDate": "2008-05-03",
@@ -3195,10 +4328,19 @@
    "prints": [
     {
      "id": "raging-battle:17313545:RGBT-EN027:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       31870
+      ]
+     },
      "number": "RGBT-EN027",
      "rarity": "rare",
      "region": "EN",
-     "set": "raging-battle"
+     "set": "raging-battle",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Brain Golem"
+     }
     }
    ],
    "tcgDate": "2009-05-02",
@@ -3251,17 +4393,38 @@
    "prints": [
     {
      "id": "legendary-duelists-immortal-destiny:17315396:LED5-EN025:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       199638
+      ]
+     },
      "number": "LED5-EN025",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "legendary-duelists-immortal-destiny"
+     "set": "legendary-duelists-immortal-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supay, Duskwalker"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-3:17315396:LDS3-EN051:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276217
+      ]
+     },
      "number": "LDS3-EN051",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-season-3"
+     "set": "legendary-duelists-season-3",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supay, Duskwalker"
+     }
     }
    ],
    "tcgDate": "2019-09-26",
@@ -3310,17 +4473,38 @@
    "prints": [
     {
      "id": "cybernetic-horizon:17322533:CYHO-EN081:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       170758
+      ]
+     },
      "number": "CYHO-EN081",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "cybernetic-horizon"
+     "set": "cybernetic-horizon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pinpoint Landing"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-revenge:17322533:PHRE-EN029:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       665442
+      ]
+     },
      "number": "PHRE-EN029",
      "rarity": "rare",
      "region": "EN",
-     "set": "phantom-revenge"
+     "set": "phantom-revenge",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pinpoint Landing"
+     }
     }
    ],
    "tcgDate": "2018-07-26"
@@ -3371,25 +4555,55 @@
    "passcode": 17328157,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2017-mega-tin-mega-pack:17328157:MP17-EN176:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       141672
+      ]
+     },
      "number": "MP17-EN176",
      "rarity": "common",
      "region": "EN",
-     "set": "2017-mega-tin-mega-pack"
+     "set": "2017-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Speedroid Horse Stilts"
+     }
     },
     {
      "id": "legendary-duelists-synchro-storm:17328157:LED8-EN014:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       251331
+      ]
+     },
      "number": "LED8-EN014",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-synchro-storm"
+     "set": "legendary-duelists-synchro-storm",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Speedroid Horse Stilts"
+     }
     },
     {
      "id": "raging-tempest:17328157:RATE-EN006:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       127254
+      ]
+     },
      "number": "RATE-EN006",
      "rarity": "common",
      "region": "EN",
-     "set": "raging-tempest"
+     "set": "raging-tempest",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Speedroid Horse Stilts"
+     }
     }
    ],
    "tcgDate": "2017-02-09",
@@ -3445,39 +4659,92 @@
    "prints": [
     {
      "id": "breakers-of-shadow:17330916:BOSH-EN003:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       111102
+      ]
+     },
      "number": "BOSH-EN003",
      "rarity": "common",
      "region": "EN",
-     "set": "breakers-of-shadow"
+     "set": "breakers-of-shadow",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Monkeyboard"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-arc-v-decks:17330916:LAVD-ENO04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708271
+      ]
+     },
+     "number": "LAVD-ENO04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "legendary-arc-v-decks",
+     "tcgplayer": {
+      "match": "number+rarity-from-tcgplayer",
+      "name": "Performapal Monkeyboard"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-arc-v-decks:17330916:LAVD-ENO04:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710465
+      ]
+     },
      "number": "LAVD-ENO04",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "legendary-arc-v-decks"
+     "set": "legendary-arc-v-decks",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Monkeyboard (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-arc-v-decks:17330916:LAVD-ENO04:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710466
+      ]
+     },
      "number": "LAVD-ENO04",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "legendary-arc-v-decks"
-    },
-    {
-     "id": "legendary-arc-v-decks:17330916:LAVD-ENO04:unknown",
-     "number": "LAVD-ENO04",
-     "rarity": "unknown",
-     "rawRarity": "3",
-     "region": "EN",
-     "set": "legendary-arc-v-decks"
+     "set": "legendary-arc-v-decks",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Monkeyboard (Starlight Rare)"
+     }
     },
     {
      "id": "ots-tournament-pack-1:17330916:OP01-EN008:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       115960
+      ]
+     },
      "number": "OP01-EN008",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ots-tournament-pack-1"
+     "set": "ots-tournament-pack-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Monkeyboard"
+     }
     }
    ],
    "scale": 1,
@@ -3518,11 +4785,23 @@
    "passcode": 17350692,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "chaos-origins:17350692:CORI-EN083:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       702449
+      ]
+     },
      "number": "CORI-EN083",
      "rarity": "common",
      "region": "EN",
-     "set": "chaos-origins"
+     "set": "chaos-origins",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Yomagna the Fire Phantom"
+     }
     }
    ],
    "tcgDate": "2026-07-02",
@@ -3574,10 +4853,35 @@
    "passcode": 17358176,
    "prints": [
     {
+     "id": "metal-raiders-25th-anniversary-edition:17358176:MRD-EN119:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       486434
+      ]
+     },
+     "number": "MRD-EN119",
+     "rarity": "common",
+     "region": "EN",
+     "set": "metal-raiders-25th-anniversary-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lady of Faith"
+     }
+    },
+    {
      "id": "metal-raiders:17358176:MRD-119:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22140
+      ]
+     },
      "number": "MRD-119",
      "rarity": "common",
-     "set": "metal-raiders"
+     "set": "metal-raiders",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lady of Faith"
+     }
     },
     {
      "id": "metal-raiders:17358176:MRD-E119:common",
@@ -3587,11 +4891,23 @@
      "set": "metal-raiders"
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "metal-raiders:17358176:MRD-EN119:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       476746
+      ]
+     },
      "number": "MRD-EN119",
      "rarity": "common",
      "region": "EN",
-     "set": "metal-raiders"
+     "set": "metal-raiders",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lady of Faith"
+     }
     }
    ],
    "tcgDate": "2002-06-26",
@@ -3645,10 +4961,19 @@
    "prints": [
     {
      "id": "tactical-evolution:17363041:TAEV-EN008:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26086
+      ]
+     },
      "number": "TAEV-EN008",
      "rarity": "common",
      "region": "EN",
-     "set": "tactical-evolution"
+     "set": "tactical-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chrysalis Chicky"
+     }
     }
    ],
    "tcgDate": "2007-08-15",
@@ -3696,23 +5021,50 @@
    "prints": [
     {
      "id": "champion-pack-game-four:17375316:CP04-EN006:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26484
+      ]
+     },
      "number": "CP04-EN006",
      "rarity": "rare",
      "region": "EN",
-     "set": "champion-pack-game-four"
+     "set": "champion-pack-game-four",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Confiscation"
+     }
     },
     {
      "id": "dark-beginning-1:17375316:DB1-EN023:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23559
+      ]
+     },
      "number": "DB1-EN023",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-beginning-1"
+     "set": "dark-beginning-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Confiscation"
+     }
     },
     {
      "id": "magic-ruler:17375316:MRL-038:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       21841
+      ]
+     },
      "number": "MRL-038",
      "rarity": "super_rare",
-     "set": "magic-ruler"
+     "set": "magic-ruler",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Confiscation"
+     }
     },
     {
      "id": "magic-ruler:17375316:MRL-E038:super_rare",
@@ -3722,17 +5074,51 @@
      "set": "magic-ruler"
     },
     {
-     "id": "spell-ruler:17375316:SRL-038:super_rare",
-     "number": "SRL-038",
-     "rarity": "super_rare",
-     "set": "spell-ruler"
-    },
-    {
-     "id": "spell-ruler:17375316:SRL-EN038:super_rare",
+     "id": "spell-ruler-25th-anniversary-edition:17375316:SRL-EN038:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       486533
+      ]
+     },
      "number": "SRL-EN038",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "spell-ruler"
+     "set": "spell-ruler-25th-anniversary-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Confiscation"
+     }
+    },
+    {
+     "id": "spell-ruler:17375316:SRL-038:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       120626
+      ]
+     },
+     "number": "SRL-038",
+     "rarity": "super_rare",
+     "set": "spell-ruler",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Confiscation"
+     }
+    },
+    {
+     "id": "spell-ruler:17375316:SRL-EN038:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       478858
+      ]
+     },
+     "number": "SRL-EN038",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "spell-ruler",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Confiscation"
+     }
     }
    ],
    "tcgDate": "2002-09-16"
@@ -3784,24 +5170,51 @@
    "prints": [
     {
      "id": "battles-of-legend-crystal-revenge:17377751:BLCR-EN063:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       453676
+      ]
+     },
      "number": "BLCR-EN063",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-crystal-revenge"
+     "set": "battles-of-legend-crystal-revenge",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blackwing - Gram the Shining Star"
+     }
     },
     {
      "id": "the-dark-illusion-special-edition:17377751:TDIL-ENSE1:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       123744
+      ]
+     },
      "number": "TDIL-ENSE1",
      "rarity": "super_rare",
      "region": "ENSE",
-     "set": "the-dark-illusion-special-edition"
+     "set": "the-dark-illusion-special-edition",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Gram the Shining Star"
+     }
     },
     {
      "id": "yu-gi-oh-5d-s-volume-4-promotional-card:17377751:YF04-EN001:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71057
+      ]
+     },
      "number": "YF04-EN001",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "yu-gi-oh-5d-s-volume-4-promotional-card"
+     "set": "yu-gi-oh-5d-s-volume-4-promotional-card",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Gram the Shining Star"
+     }
     }
    ],
    "tcgDate": "2013-04-02",
@@ -3860,17 +5273,35 @@
    "prints": [
     {
      "id": "hidden-summoners:17382973:HISU-EN020:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       180356
+      ]
+     },
      "number": "HISU-EN020",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "hidden-summoners"
+     "set": "hidden-summoners",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Prank-Kids Dodo-Doodle-Doo"
+     }
     },
     {
      "id": "maximum-gold-el-dorado:17382973:MGED-EN114:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       254385
+      ]
+     },
      "number": "MGED-EN114",
      "rarity": "rare",
      "region": "EN",
-     "set": "maximum-gold-el-dorado"
+     "set": "maximum-gold-el-dorado",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Prank-Kids Dodo-Doodle-Doo"
+     }
     }
    ],
    "tcgDate": "2018-11-15",
@@ -3924,31 +5355,67 @@
    "prints": [
     {
      "id": "2015-mega-tin-mega-pack:17390179:MP15-EN058:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       105196
+      ]
+     },
      "number": "MP15-EN058",
      "rarity": "rare",
      "region": "EN",
-     "set": "2015-mega-tin-mega-pack"
+     "set": "2015-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flash Knight"
+     }
     },
     {
      "id": "advanced-demo-deck-extra-pack:17390179:DEM4-EN003:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       201059
+      ]
+     },
      "number": "DEM4-EN003",
      "rarity": "common",
      "region": "EN",
-     "set": "advanced-demo-deck-extra-pack"
+     "set": "advanced-demo-deck-extra-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flash Knight"
+     }
     },
     {
      "id": "demo-deck-2016:17390179:DEM3-EN003:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217860
+      ]
+     },
      "number": "DEM3-EN003",
      "rarity": "common",
      "region": "EN",
-     "set": "demo-deck-2016"
+     "set": "demo-deck-2016",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flash Knight"
+     }
     },
     {
      "id": "duelist-alliance:17390179:DUEA-EN001:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       92310
+      ]
+     },
      "number": "DUEA-EN001",
      "rarity": "rare",
      "region": "EN",
-     "set": "duelist-alliance"
+     "set": "duelist-alliance",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flash Knight"
+     }
     }
    ],
    "scale": 7,
@@ -4004,38 +5471,83 @@
    "prints": [
     {
      "id": "force-of-the-breaker:17393207:FOTB-EN015:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25739
+      ]
+     },
      "number": "FOTB-EN015",
      "rarity": "rare",
      "region": "EN",
-     "set": "force-of-the-breaker"
+     "set": "force-of-the-breaker",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gravekeeper's Commandant"
+     }
     },
     {
      "id": "force-of-the-breaker:17393207:FOTB-EN015:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58599
+      ]
+     },
      "number": "FOTB-EN015",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "force-of-the-breaker"
+     "set": "force-of-the-breaker",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gravekeeper's Commandant (UTR)"
+     }
     },
     {
      "id": "legendary-collection-3-yugi-s-world-mega-pack:17393207:LCYW-EN191:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       66991
+      ]
+     },
      "number": "LCYW-EN191",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "legendary-collection-3-yugi-s-world-mega-pack"
+     "set": "legendary-collection-3-yugi-s-world-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gravekeeper's Commandant"
+     }
     },
     {
      "id": "structure-deck-marik-tcg:17393207:SDMA-EN017:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       38469
+      ]
+     },
      "number": "SDMA-EN017",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-marik-tcg"
+     "set": "structure-deck-marik-tcg",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gravekeeper's Commandant"
+     }
     },
     {
      "id": "turbo-pack-booster-two:17393207:TU02-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       66708
+      ]
+     },
      "number": "TU02-EN019",
      "rarity": "common",
      "region": "EN",
-     "set": "turbo-pack-booster-two"
+     "set": "turbo-pack-booster-two",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gravekeeper's Commandant"
+     }
     }
    ],
    "tcgDate": "2007-05-16",
@@ -4090,24 +5602,51 @@
    "prints": [
     {
      "id": "2015-mega-tins:17412721:CT12-EN003:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       105133
+      ]
+     },
      "number": "CT12-EN003",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "2015-mega-tins"
+     "set": "2015-mega-tins",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elder Entity Norden"
+     }
     },
     {
      "id": "quarter-century-stampede:17412721:RA04-EN226:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627525
+      ]
+     },
      "number": "RA04-EN226",
      "rarity": "platinum_secret_rare",
      "region": "EN",
-     "set": "quarter-century-stampede"
+     "set": "quarter-century-stampede",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elder Entity Norden (Platinum Secret Rare)"
+     }
     },
     {
      "id": "quarter-century-stampede:17412721:RA04-EN226:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627526
+      ]
+     },
      "number": "RA04-EN226",
      "rarity": "qc_secret_rare",
      "region": "EN",
-     "set": "quarter-century-stampede"
+     "set": "quarter-century-stampede",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elder Entity Norden (Quarter Century Secret Rare)"
+     }
     }
    ],
    "tcgDate": "2015-09-17",
@@ -4162,17 +5701,35 @@
    "prints": [
     {
      "id": "force-of-the-breaker:17415895:FOTB-EN012:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25736
+      ]
+     },
      "number": "FOTB-EN012",
      "rarity": "rare",
      "region": "EN",
-     "set": "force-of-the-breaker"
+     "set": "force-of-the-breaker",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Volcanic Slicer"
+     }
     },
     {
      "id": "force-of-the-breaker:17415895:FOTB-EN012:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58597
+      ]
+     },
      "number": "FOTB-EN012",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "force-of-the-breaker"
+     "set": "force-of-the-breaker",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Volcanic Slicer (UTR)"
+     }
     }
    ],
    "tcgDate": "2007-05-16",
@@ -4224,31 +5781,70 @@
    "prints": [
     {
      "id": "battle-pack-2-war-of-the-giants:17418744:BP02-EN167:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       69394
+      ]
+     },
      "number": "BP02-EN167",
      "rarity": "common",
      "region": "EN",
-     "set": "battle-pack-2-war-of-the-giants"
+     "set": "battle-pack-2-war-of-the-giants",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Photon Sanctuary"
+     }
     },
     {
      "id": "battle-pack-2-war-of-the-giants:17418744:BP02-EN167:mosaic_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       69609
+      ]
+     },
      "number": "BP02-EN167",
      "rarity": "mosaic_rare",
      "region": "EN",
-     "set": "battle-pack-2-war-of-the-giants"
+     "set": "battle-pack-2-war-of-the-giants",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Photon Sanctuary (Mosaic Rare)"
+     }
     },
     {
      "id": "ots-tournament-pack-21:17418744:OP21-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       482457
+      ]
+     },
      "number": "OP21-EN019",
      "rarity": "common",
      "region": "EN",
-     "set": "ots-tournament-pack-21"
+     "set": "ots-tournament-pack-21",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Photon Sanctuary"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "premium-collection-tin:17418744:PRC1-EN022:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58161
+      ]
+     },
      "number": "PRC1-EN022",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "premium-collection-tin"
+     "set": "premium-collection-tin",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Photon Sanctuary"
+     }
     }
    ],
    "tcgDate": "2012-03-16"
@@ -4295,10 +5891,19 @@
    "prints": [
     {
      "id": "ots-tournament-pack-29:17418745:OP29-EN027:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       658322
+      ]
+     },
      "number": "OP29-EN027",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ots-tournament-pack-29"
+     "set": "ots-tournament-pack-29",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Photon Token"
+     }
     }
    ],
    "tcgDate": "2016-01-01"
@@ -4343,17 +5948,35 @@
    "prints": [
     {
      "id": "2022-tin-of-the-pharaoh-s-gods:17427333:MP22-EN043:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       284957
+      ]
+     },
      "number": "MP22-EN043",
      "rarity": "common",
      "region": "EN",
-     "set": "2022-tin-of-the-pharaoh-s-gods"
+     "set": "2022-tin-of-the-pharaoh-s-gods",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "E.M.R."
+     }
     },
     {
      "id": "blazing-vortex:17427333:BLVO-EN078:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       231391
+      ]
+     },
      "number": "BLVO-EN078",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "blazing-vortex"
+     "set": "blazing-vortex",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "E.M.R."
+     }
     }
    ],
    "tcgDate": "2021-02-04"
@@ -4443,58 +6066,171 @@
    "prints": [
     {
      "id": "dark-beginning-2:17444133:DB2-EN115:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       24296
+      ]
+     },
      "number": "DB2-EN115",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-beginning-2"
+     "set": "dark-beginning-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     },
     {
      "id": "duelist-pack-kaiba:17444133:DPKB-EN017:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       35064
+      ]
+     },
      "number": "DPKB-EN017",
      "rarity": "rare",
      "region": "EN",
-     "set": "duelist-pack-kaiba"
+     "set": "duelist-pack-kaiba",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     },
     {
-     "id": "retro-pack-2:17444133:RP02-EN087:rare",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "retro-pack-2-2020-reprint:17444133:RP02-EN087:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       649897
+      ]
+     },
      "number": "RP02-EN087",
      "rarity": "rare",
      "region": "EN",
-     "set": "retro-pack-2"
+     "set": "retro-pack-2-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "retro-pack-2:17444133:RP02-EN087:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       78259
+      ]
+     },
+     "number": "RP02-EN087",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "retro-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     },
     {
      "id": "rise-of-the-dragon-lords-structure-deck:17444133:SDRL-EN008:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26217
+      ]
+     },
      "number": "SDRL-EN008",
      "rarity": "common",
      "region": "EN",
-     "set": "rise-of-the-dragon-lords-structure-deck"
+     "set": "rise-of-the-dragon-lords-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     },
     {
-     "id": "saga-of-blue-eyes-white-dragon-structure-deck:17444133:SDBE-EN016:common",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "saga-of-blue-eyes-white-dragon-structure-deck-2020-reprint:17444133:SDBE-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       565315
+      ]
+     },
      "number": "SDBE-EN016",
      "rarity": "common",
      "region": "EN",
-     "set": "saga-of-blue-eyes-white-dragon-structure-deck"
+     "set": "saga-of-blue-eyes-white-dragon-structure-deck-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
+    },
+    {
+     "id": "saga-of-blue-eyes-white-dragon-structure-deck:17444133:SDBE-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71241
+      ]
+     },
+     "number": "SDBE-EN016",
+     "rarity": "common",
+     "region": "EN",
+     "set": "saga-of-blue-eyes-white-dragon-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     },
     {
      "id": "speed-duel-gx-midterm-paradox:17444133:SGX2-END12:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       287909
+      ]
+     },
      "number": "SGX2-END12",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-gx-midterm-paradox"
+     "set": "speed-duel-gx-midterm-paradox",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     },
     {
      "id": "starter-deck-kaiba-evolution:17444133:SKE-015:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23208
+      ]
+     },
      "number": "SKE-015",
      "rarity": "ultra_rare",
-     "set": "starter-deck-kaiba-evolution"
+     "set": "starter-deck-kaiba-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     },
     {
      "id": "starter-deck-kaiba-reloaded:17444133:YSKR-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77753
+      ]
+     },
      "number": "YSKR-EN016",
      "rarity": "common",
      "region": "EN",
-     "set": "starter-deck-kaiba-reloaded"
+     "set": "starter-deck-kaiba-reloaded",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaiser Sea Horse"
+     }
     }
    ],
    "tcgDate": "2004-03-01",
@@ -4542,37 +6278,104 @@
    "prints": [
     {
      "id": "dark-beginning-1:17449108:DB1-EN089:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23625
+      ]
+     },
      "number": "DB1-EN089",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-beginning-1"
+     "set": "dark-beginning-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-1:17449108:DT01-EN038:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80933
+      ]
+     },
      "number": "DT01-EN038",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-1"
+     "set": "duel-terminal-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
      "id": "duel-terminal-preview-wave-1:17449108:DTP1-EN012:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80878
+      ]
+     },
      "number": "DTP1-EN012",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-preview-wave-1"
+     "set": "duel-terminal-preview-wave-1",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
      "id": "duelist-league-2-participation-cards:17449108:DL11-EN015:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77392,
+       80340,
+       80341,
+       80342
+      ]
+     },
      "number": "DL11-EN015",
      "rarity": "rare",
      "region": "EN",
-     "set": "duelist-league-2-participation-cards"
+     "set": "duelist-league-2-participation-cards",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Nobleman of Extermination (Red)"
+     }
+    },
+    {
+     "id": "pharaoh-s-servant-25th-anniversary-edition:17449108:PSV-EN035:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       486676
+      ]
+     },
+     "number": "PSV-EN035",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "pharaoh-s-servant-25th-anniversary-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
      "id": "pharaoh-s-servant:17449108:PSV-035:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22268
+      ]
+     },
      "number": "PSV-035",
      "rarity": "rare",
-     "set": "pharaoh-s-servant"
+     "set": "pharaoh-s-servant",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
      "id": "pharaoh-s-servant:17449108:PSV-E035:rare",
@@ -4582,31 +6385,70 @@
      "set": "pharaoh-s-servant"
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "pharaoh-s-servant:17449108:PSV-EN035:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       476286
+      ]
+     },
      "number": "PSV-EN035",
      "rarity": "rare",
      "region": "EN",
-     "set": "pharaoh-s-servant"
+     "set": "pharaoh-s-servant",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
      "id": "speed-duel-battle-city-box:17449108:SBCB-EN117:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       228040
+      ]
+     },
      "number": "SBCB-EN117",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-battle-city-box"
+     "set": "speed-duel-battle-city-box",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
      "id": "speed-duel-tournament-pack-6:17449108:STP6-EN026:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       515488
+      ]
+     },
      "number": "STP6-EN026",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-tournament-pack-6"
+     "set": "speed-duel-tournament-pack-6",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     },
     {
      "id": "tournament-pack-4:17449108:TP4-016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22787
+      ]
+     },
      "number": "TP4-016",
      "rarity": "common",
-     "set": "tournament-pack-4"
+     "set": "tournament-pack-4",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nobleman of Extermination"
+     }
     }
    ],
    "tcgDate": "2002-10-20"
@@ -4651,10 +6493,19 @@
    "prints": [
     {
      "id": "age-of-overlord:17462320:AGOV-EN052:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       520506
+      ]
+     },
      "number": "AGOV-EN052",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "age-of-overlord"
+     "set": "age-of-overlord",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Realm Elegy"
+     }
     }
    ],
    "tcgDate": "2023-10-19"
@@ -4706,17 +6557,35 @@
    "prints": [
     {
      "id": "legendary-duelists-season-2:17465972:LDS2-EN041:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230280
+      ]
+     },
      "number": "LDS2-EN041",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-season-2"
+     "set": "legendary-duelists-season-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blackwing - Auster the South Wind"
+     }
     },
     {
      "id": "legendary-duelists-white-dragon-abyss:17465972:LED3-EN025:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       177307
+      ]
+     },
      "number": "LED3-EN025",
      "rarity": "rare",
      "region": "EN",
-     "set": "legendary-duelists-white-dragon-abyss"
+     "set": "legendary-duelists-white-dragon-abyss",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blackwing - Auster the South Wind"
+     }
     }
    ],
    "tcgDate": "2018-09-27",
@@ -4773,10 +6642,19 @@
    "prints": [
     {
      "id": "rising-rampage:17469113:RIRA-EN027:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       194635
+      ]
+     },
      "number": "RIRA-EN027",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "rising-rampage"
+     "set": "rising-rampage",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Avida, Rebuilder of Worlds"
+     }
     }
    ],
    "tcgDate": "2019-07-25",
@@ -4819,18 +6697,42 @@
    "passcode": 17473466,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "blazing-dominion:17473466:BLZD-EN011:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       692248
+      ]
+     },
      "number": "BLZD-EN011",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "blazing-dominion"
+     "set": "blazing-dominion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nervedo the Shadebeast Power Patron (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "blazing-dominion:17473466:BLZD-EN011:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       692249
+      ]
+     },
      "number": "BLZD-EN011",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "blazing-dominion"
+     "set": "blazing-dominion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nervedo the Shadebeast Power Patron"
+     }
     }
    ],
    "scale": 1,
@@ -4889,17 +6791,35 @@
    "prints": [
     {
      "id": "astral-pack-two:17475251:AP02-EN008:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       78019
+      ]
+     },
      "number": "AP02-EN008",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "astral-pack-two"
+     "set": "astral-pack-two",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Brotherhood of the Fire Fist - Hawk"
+     }
     },
     {
      "id": "cosmo-blazer:17475251:CBLZ-EN021:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       67616
+      ]
+     },
      "number": "CBLZ-EN021",
      "rarity": "common",
      "region": "EN",
-     "set": "cosmo-blazer"
+     "set": "cosmo-blazer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Brotherhood of the Fire Fist - Hawk"
+     }
     }
    ],
    "tcgDate": "2013-01-25",
@@ -4946,46 +6866,125 @@
    "passcode": 17484499,
    "prints": [
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "dark-legends:17484499:DLG1-EN100:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       33586
+      ]
+     },
      "number": "DLG1-EN100",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "dark-legends"
+     "set": "dark-legends",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exchange of the Spirit"
+     }
     },
     {
      "id": "duelist-pack-rivals-of-the-pharaoh:17484499:DPRP-EN035:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       122974
+      ]
+     },
      "number": "DPRP-EN035",
      "rarity": "common",
      "region": "EN",
-     "set": "duelist-pack-rivals-of-the-pharaoh"
+     "set": "duelist-pack-rivals-of-the-pharaoh",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exchange of the Spirit"
+     }
     },
     {
      "id": "elemental-energy-sneak-peek-participation-card:17484499:SP1-EN004:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       24847
+      ]
+     },
      "number": "SP1-EN004",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "elemental-energy-sneak-peek-participation-card"
+     "set": "elemental-energy-sneak-peek-participation-card",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Exchange of the Spirit"
+     }
     },
     {
      "id": "magnificent-mavens:17484499:MAMA-EN032:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       451024
+      ]
+     },
      "number": "MAMA-EN032",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-mavens"
+     "set": "magnificent-mavens",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exchange of the Spirit"
+     }
     },
     {
      "id": "premium-gold-return-of-the-bling:17484499:PGL2-EN066:gold_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       96906
+      ]
+     },
      "number": "PGL2-EN066",
      "rarity": "gold_rare",
      "region": "EN",
-     "set": "premium-gold-return-of-the-bling"
+     "set": "premium-gold-return-of-the-bling",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exchange of the Spirit"
+     }
     },
     {
-     "id": "retro-pack:17484499:RP01-EN099:secret_rare",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "retro-pack-2020-reprint:17484499:RP01-EN099:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       564246
+      ]
+     },
      "number": "RP01-EN099",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "retro-pack"
+     "set": "retro-pack-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exchange of the Spirit"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "retro-pack:17484499:RP01-EN099:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       78169
+      ]
+     },
+     "number": "RP01-EN099",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "retro-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exchange of the Spirit"
+     }
     }
    ],
    "tcgDate": "2005-11-05"
@@ -5032,24 +7031,57 @@
    "prints": [
     {
      "id": "absolute-powerforce:17490535:ABPF-EN075:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       34578
+      ]
+     },
      "number": "ABPF-EN075",
      "rarity": "common",
      "region": "EN",
-     "set": "absolute-powerforce"
+     "set": "absolute-powerforce",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Alien Brain"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-pack-3-monster-league:17490535:BP03-EN215:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       91754
+      ]
+     },
      "number": "BP03-EN215",
      "rarity": "common",
      "region": "EN",
-     "set": "battle-pack-3-monster-league"
+     "set": "battle-pack-3-monster-league",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Alien Brain"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-pack-3-monster-league:17490535:BP03-EN215:shatterfoil_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       92148
+      ]
+     },
      "number": "BP03-EN215",
      "rarity": "shatterfoil_rare",
      "region": "EN",
-     "set": "battle-pack-3-monster-league"
+     "set": "battle-pack-3-monster-league",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Alien Brain (Shatterfoil)"
+     }
     },
     {
      "id": "ots-tournament-pack-16-por:17490535:OP16-PT021:common",
@@ -5060,10 +7092,19 @@
     },
     {
      "id": "ots-tournament-pack-16:17490535:OP16-EN021:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       241514
+      ]
+     },
      "number": "OP16-EN021",
      "rarity": "common",
      "region": "EN",
-     "set": "ots-tournament-pack-16"
+     "set": "ots-tournament-pack-16",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Alien Brain"
+     }
     }
    ],
    "tcgDate": "2010-02-12"
@@ -5111,31 +7152,70 @@
    "prints": [
     {
      "id": "order-of-chaos:17494901:ORCS-EN048:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       57738
+      ]
+     },
      "number": "ORCS-EN048",
      "rarity": "rare",
      "region": "EN",
-     "set": "order-of-chaos"
+     "set": "order-of-chaos",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gagagabolt"
+     }
     },
     {
      "id": "star-pack-2014:17494901:SP14-EN033:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       79901
+      ]
+     },
      "number": "SP14-EN033",
      "rarity": "common",
      "region": "EN",
-     "set": "star-pack-2014"
+     "set": "star-pack-2014",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gagagabolt"
+     }
     },
     {
      "id": "star-pack-2014:17494901:SP14-EN033:starfoil_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       79902
+      ]
+     },
      "number": "SP14-EN033",
      "rarity": "starfoil_rare",
      "region": "EN",
-     "set": "star-pack-2014"
+     "set": "star-pack-2014",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gagagabolt (Starfoil)"
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "zexal-collection-tin:17494901:ZTIN-ENV03:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       67757
+      ]
+     },
      "number": "ZTIN-ENV03",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "zexal-collection-tin"
+     "set": "zexal-collection-tin",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gagagabolt (UTR)"
+     }
     }
    ],
    "tcgDate": "2012-01-14"
@@ -5193,17 +7273,35 @@
     },
     {
      "id": "ots-tournament-pack-14:17502671:OP14-EN005:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       224638
+      ]
+     },
      "number": "OP14-EN005",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ots-tournament-pack-14"
+     "set": "ots-tournament-pack-14",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infernity General"
+     }
     },
     {
      "id": "yu-gi-oh-5d-s-volume-3-promotional-card:17502671:YF03-EN001:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77979
+      ]
+     },
      "number": "YF03-EN001",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "yu-gi-oh-5d-s-volume-3-promotional-card"
+     "set": "yu-gi-oh-5d-s-volume-3-promotional-card",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Infernity General"
+     }
     }
    ],
    "tcgDate": "2012-10-02",
@@ -5251,17 +7349,35 @@
    "prints": [
     {
      "id": "2019-gold-sarcophagus-tin-mega-pack:17509503:MP19-EN214:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       197506
+      ]
+     },
      "number": "MP19-EN214",
      "rarity": "common",
      "region": "EN",
-     "set": "2019-gold-sarcophagus-tin-mega-pack"
+     "set": "2019-gold-sarcophagus-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Revenge of the Normal"
+     }
     },
     {
      "id": "soul-fusion:17509503:SOFU-EN079:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       178119
+      ]
+     },
      "number": "SOFU-EN079",
      "rarity": "common",
      "region": "EN",
-     "set": "soul-fusion"
+     "set": "soul-fusion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Revenge of the Normal"
+     }
     }
    ],
    "tcgDate": "2018-10-18"
@@ -5348,10 +7464,19 @@
    "prints": [
     {
      "id": "storm-of-ragnarok:17521642:STOR-EN064:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       39327
+      ]
+     },
      "number": "STOR-EN064",
      "rarity": "common",
      "region": "EN",
-     "set": "storm-of-ragnarok"
+     "set": "storm-of-ragnarok",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zero Force"
+     }
     }
    ],
    "tcgDate": "2011-02-08"
@@ -5398,18 +7523,39 @@
    "passcode": 17530001,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2017-mega-tin-mega-pack:17530001:MP17-EN049:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       141374
+      ]
+     },
      "number": "MP17-EN049",
      "rarity": "common",
      "region": "EN",
-     "set": "2017-mega-tin-mega-pack"
+     "set": "2017-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cuben"
+     }
     },
     {
      "id": "shining-victories:17530001:SHVI-EN090:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       117971
+      ]
+     },
      "number": "SHVI-EN090",
      "rarity": "common",
      "region": "EN",
-     "set": "shining-victories"
+     "set": "shining-victories",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cuben"
+     }
     }
    ],
    "tcgDate": "2016-05-05",
@@ -5460,10 +7606,35 @@
    "passcode": 17535588,
    "prints": [
     {
+     "id": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition:17535588:LOB-EN116:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       486194
+      ]
+     },
+     "number": "LOB-EN116",
+     "rarity": "common",
+     "region": "EN",
+     "set": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Armored Starfish"
+     }
+    },
+    {
      "id": "legend-of-blue-eyes-white-dragon:17535588:LOB-116:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       21754
+      ]
+     },
      "number": "LOB-116",
      "rarity": "common",
-     "set": "legend-of-blue-eyes-white-dragon"
+     "set": "legend-of-blue-eyes-white-dragon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Armored Starfish"
+     }
     },
     {
      "id": "legend-of-blue-eyes-white-dragon:17535588:LOB-E094:common",
@@ -5473,11 +7644,23 @@
      "set": "legend-of-blue-eyes-white-dragon"
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "legend-of-blue-eyes-white-dragon:17535588:LOB-EN116:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       476441
+      ]
+     },
      "number": "LOB-EN116",
      "rarity": "common",
      "region": "EN",
-     "set": "legend-of-blue-eyes-white-dragon"
+     "set": "legend-of-blue-eyes-white-dragon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Armored Starfish"
+     }
     }
    ],
    "tcgDate": "2002-03-08",
@@ -5530,24 +7713,51 @@
    "prints": [
     {
      "id": "2019-gold-sarcophagus-tin-mega-pack:17535764:MP19-EN176:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       197470
+      ]
+     },
      "number": "MP19-EN176",
      "rarity": "common",
      "region": "EN",
-     "set": "2019-gold-sarcophagus-tin-mega-pack"
+     "set": "2019-gold-sarcophagus-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gokipole"
+     }
     },
     {
      "id": "soul-fusion:17535764:SOFU-EN030:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       177992
+      ]
+     },
      "number": "SOFU-EN030",
      "rarity": "rare",
      "region": "EN",
-     "set": "soul-fusion"
+     "set": "soul-fusion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gokipole"
+     }
     },
     {
      "id": "the-grand-creators:17535764:GRCR-EN044:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       260765
+      ]
+     },
      "number": "GRCR-EN044",
      "rarity": "rare",
      "region": "EN",
-     "set": "the-grand-creators"
+     "set": "the-grand-creators",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gokipole"
+     }
     }
    ],
    "tcgDate": "2018-10-18",
@@ -5599,10 +7809,19 @@
    "prints": [
     {
      "id": "cosmo-blazer:17536995:CBLZ-EN070:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       67665
+      ]
+     },
      "number": "CBLZ-EN070",
      "rarity": "common",
      "region": "EN",
-     "set": "cosmo-blazer"
+     "set": "cosmo-blazer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Heraldry Change"
+     }
     }
    ],
    "tcgDate": "2013-01-25"
@@ -5653,10 +7872,19 @@
    "prints": [
     {
      "id": "raging-tempest:17540705:RATE-EN003:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       127249
+      ]
+     },
      "number": "RATE-EN003",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "raging-tempest"
+     "set": "raging-tempest",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Dag Daggerman"
+     }
     }
    ],
    "scale": 2,
@@ -5714,45 +7942,102 @@
    "prints": [
     {
      "id": "battles-of-legend-monster-mayhem:17548456:BLMM-EN150:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       636045
+      ]
+     },
      "number": "BLMM-EN150",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "battles-of-legend-monster-mayhem"
+     "set": "battles-of-legend-monster-mayhem",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Meteor"
+     }
     },
     {
      "id": "battles-of-legend-monster-mayhem:17548456:BLMM-EN150:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       636046
+      ]
+     },
      "number": "BLMM-EN150",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "battles-of-legend-monster-mayhem"
+     "set": "battles-of-legend-monster-mayhem",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Meteor (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-4:17548456:DT04-EN041:dt_ultra_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81243
+      ]
+     },
      "number": "DT04-EN041",
      "rarity": "dt_ultra_parallel",
      "region": "EN",
-     "set": "duel-terminal-4"
+     "set": "duel-terminal-4",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Meteor"
+     }
     },
     {
      "id": "hidden-arsenal-4-trishula-s-triumph:17548456:HA04-EN029:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       39639
+      ]
+     },
      "number": "HA04-EN029",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "hidden-arsenal-4-trishula-s-triumph"
+     "set": "hidden-arsenal-4-trishula-s-triumph",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Meteor"
+     }
     },
     {
      "id": "quarter-century-stampede:17548456:RA04-EN139:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627350
+      ]
+     },
      "number": "RA04-EN139",
      "rarity": "platinum_secret_rare",
      "region": "EN",
-     "set": "quarter-century-stampede"
+     "set": "quarter-century-stampede",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Meteor (Platinum Secret Rare)"
+     }
     },
     {
      "id": "quarter-century-stampede:17548456:RA04-EN139:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627351
+      ]
+     },
      "number": "RA04-EN139",
      "rarity": "qc_secret_rare",
      "region": "EN",
-     "set": "quarter-century-stampede"
+     "set": "quarter-century-stampede",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Meteor (Quarter Century Secret Rare)"
+     }
     }
    ],
    "tcgDate": "2011-01-25",
@@ -5809,10 +8094,19 @@
    "prints": [
     {
      "id": "cyberstorm-access:17550376:CYAC-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       493842
+      ]
+     },
      "number": "CYAC-EN016",
      "rarity": "common",
      "region": "EN",
-     "set": "cyberstorm-access"
+     "set": "cyberstorm-access",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nemleria Dream Defender - Oreiller"
+     }
     }
    ],
    "tcgDate": "2023-05-04",
@@ -5864,45 +8158,102 @@
    "prints": [
     {
      "id": "battle-pack-epic-dawn:17559367:BP01-EN017:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       59141
+      ]
+     },
      "number": "BP01-EN017",
      "rarity": "rare",
      "region": "EN",
-     "set": "battle-pack-epic-dawn"
+     "set": "battle-pack-epic-dawn",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep Diver"
+     }
     },
     {
      "id": "battle-pack-epic-dawn:17559367:BP01-EN017:starfoil_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       69668
+      ]
+     },
      "number": "BP01-EN017",
      "rarity": "starfoil_rare",
      "region": "EN",
-     "set": "battle-pack-epic-dawn"
+     "set": "battle-pack-epic-dawn",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep Diver (Starfoil)"
+     }
     },
     {
      "id": "realm-of-the-sea-emperor-structure-deck:17559367:SDRE-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       67137
+      ]
+     },
      "number": "SDRE-EN019",
      "rarity": "common",
      "region": "EN",
-     "set": "realm-of-the-sea-emperor-structure-deck"
+     "set": "realm-of-the-sea-emperor-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep Diver"
+     }
     },
     {
      "id": "thank-you-pack:17559367:TYP1-EN007:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       724489
+      ]
+     },
      "number": "TYP1-EN007",
      "rarity": "common",
      "region": "EN",
-     "set": "thank-you-pack"
+     "set": "thank-you-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep Diver"
+     }
     },
     {
      "id": "thank-you-pack:17559367:TYP1-EN007:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       724490
+      ]
+     },
      "number": "TYP1-EN007",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "thank-you-pack"
+     "set": "thank-you-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep Diver (Super Rare)"
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "yu-gi-oh-world-championship-2008-promotional-cards:17559367:WC08-EN001:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26797
+      ]
+     },
      "number": "WC08-EN001",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "yu-gi-oh-world-championship-2008-promotional-cards"
+     "set": "yu-gi-oh-world-championship-2008-promotional-cards",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep Diver"
+     }
     }
    ],
    "tcgDate": "2007-12-04",
@@ -5953,31 +8304,67 @@
    "prints": [
     {
      "id": "battle-pack-epic-dawn:17573739:BP01-EN153:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       59277
+      ]
+     },
      "number": "BP01-EN153",
      "rarity": "common",
      "region": "EN",
-     "set": "battle-pack-epic-dawn"
+     "set": "battle-pack-epic-dawn",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Alector, Sovereign of Birds"
+     }
     },
     {
      "id": "battle-pack-epic-dawn:17573739:BP01-EN153:starfoil_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       69804
+      ]
+     },
      "number": "BP01-EN153",
      "rarity": "starfoil_rare",
      "region": "EN",
-     "set": "battle-pack-epic-dawn"
+     "set": "battle-pack-epic-dawn",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Alector, Sovereign of Birds (Starfoil)"
+     }
     },
     {
      "id": "turbo-pack-booster-six:17573739:TU06-EN011:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       66742
+      ]
+     },
      "number": "TU06-EN011",
      "rarity": "rare",
      "region": "EN",
-     "set": "turbo-pack-booster-six"
+     "set": "turbo-pack-booster-six",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Alector, Sovereign of Birds"
+     }
     },
     {
      "id": "yu-gi-oh-r-volume-5-promotional-card:17573739:YR05-EN001:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       38640
+      ]
+     },
      "number": "YR05-EN001",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "yu-gi-oh-r-volume-5-promotional-card"
+     "set": "yu-gi-oh-r-volume-5-promotional-card",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Alector, Sovereign of Birds"
+     }
     }
    ],
    "tcgDate": "2010-06-02",
@@ -6024,17 +8411,35 @@
    "prints": [
     {
      "id": "force-of-the-breaker:17589298:FOTB-EN067:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25793
+      ]
+     },
      "number": "FOTB-EN067",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "force-of-the-breaker"
+     "set": "force-of-the-breaker",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sword of Dark Rites"
+     }
     },
     {
      "id": "gold-series-4-pyramids-edition:17589298:GLD4-EN042:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       47595
+      ]
+     },
      "number": "GLD4-EN042",
      "rarity": "common",
      "region": "EN",
-     "set": "gold-series-4-pyramids-edition"
+     "set": "gold-series-4-pyramids-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sword of Dark Rites"
+     }
     }
    ],
    "tcgDate": "2007-05-16"
@@ -6082,30 +8487,66 @@
    "prints": [
     {
      "id": "dark-revelation-volume-1:17597059:DR1-EN052:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23839
+      ]
+     },
      "number": "DR1-EN052",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "dark-revelation-volume-1"
+     "set": "dark-revelation-volume-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Byser Shock"
+     }
     },
     {
      "id": "ots-tournament-pack-24:17597059:OP24-EN014:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538703
+      ]
+     },
      "number": "OP24-EN014",
      "rarity": "common",
      "region": "EN",
-     "set": "ots-tournament-pack-24"
+     "set": "ots-tournament-pack-24",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Byser Shock"
+     }
     },
     {
      "id": "pharaonic-guardian:17597059:PGD-103:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       21812
+      ]
+     },
      "number": "PGD-103",
      "rarity": "ultra_rare",
-     "set": "pharaonic-guardian"
+     "set": "pharaonic-guardian",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Byser Shock"
+     }
     },
     {
      "id": "speed-duel-starter-decks-twisted-nightmares:17597059:SS05-ENB12:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       214022
+      ]
+     },
      "number": "SS05-ENB12",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-starter-decks-twisted-nightmares"
+     "set": "speed-duel-starter-decks-twisted-nightmares",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Byser Shock"
+     }
     }
    ],
    "tcgDate": "2003-07-18",
@@ -6156,25 +8597,55 @@
    "passcode": 17601919,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2014-mega-tin-mega-pack:17601919:MP14-EN154:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       92704
+      ]
+     },
      "number": "MP14-EN154",
      "rarity": "common",
      "region": "EN",
-     "set": "2014-mega-tin-mega-pack"
+     "set": "2014-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pumprincess the Princess of Ghosts"
+     }
     },
     {
      "id": "shadow-specters:17601919:SHSP-EN032:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       72401
+      ]
+     },
      "number": "SHSP-EN032",
      "rarity": "common",
      "region": "EN",
-     "set": "shadow-specters"
+     "set": "shadow-specters",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pumprincess the Princess of Ghosts"
+     }
     },
     {
      "id": "speed-duel-streets-of-battle-city:17601919:SBC1-ENI09:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512451
+      ]
+     },
      "number": "SBC1-ENI09",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-streets-of-battle-city"
+     "set": "speed-duel-streets-of-battle-city",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pumprincess the Princess of Ghosts"
+     }
     }
    ],
    "tcgDate": "2013-11-08",
@@ -6224,18 +8695,39 @@
    "passcode": 17616743,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2020-tin-of-lost-memories-mega-pack:17616743:MP20-EN239:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       220896
+      ]
+     },
      "number": "MP20-EN239",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "2020-tin-of-lost-memories-mega-pack"
+     "set": "2020-tin-of-lost-memories-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Evil Eye Awakening"
+     }
     },
     {
      "id": "the-infinity-chasers:17616743:INCH-EN034:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       186401
+      ]
+     },
      "number": "INCH-EN034",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "the-infinity-chasers"
+     "set": "the-infinity-chasers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil Eye Awakening"
+     }
     }
    ],
    "tcgDate": "2019-03-21"
@@ -6276,11 +8768,23 @@
    "passcode": 17621695,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-revenge:17621695:PHRE-EN024:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       665435
+      ]
+     },
      "number": "PHRE-EN024",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "phantom-revenge"
+     "set": "phantom-revenge",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Enneapolis"
+     }
     }
    ],
    "tcgDate": "2025-12-04"
@@ -6326,66 +8830,147 @@
    "prints": [
     {
      "id": "2-player-starter-set:17626381:STAS-EN037:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       533081
+      ]
+     },
      "number": "STAS-EN037",
      "rarity": "common",
      "region": "EN",
-     "set": "2-player-starter-set"
+     "set": "2-player-starter-set",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "egyptian-god-deck-obelisk-the-tormentor:17626381:EGO1-EN031:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       242006
+      ]
+     },
      "number": "EGO1-EN031",
      "rarity": "common",
      "region": "EN",
-     "set": "egyptian-god-deck-obelisk-the-tormentor"
+     "set": "egyptian-god-deck-obelisk-the-tormentor",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "egyptian-god-deck-slifer-the-sky-dragon:17626381:EGS1-EN028:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       241928
+      ]
+     },
      "number": "EGS1-EN028",
      "rarity": "common",
      "region": "EN",
-     "set": "egyptian-god-deck-slifer-the-sky-dragon"
+     "set": "egyptian-god-deck-slifer-the-sky-dragon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "speed-duel-starter-decks-twisted-nightmares:17626381:SS05-ENB25:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       214043
+      ]
+     },
      "number": "SS05-ENB25",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-starter-decks-twisted-nightmares"
+     "set": "speed-duel-starter-decks-twisted-nightmares",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "starter-deck-codebreaker:17626381:YS18-EN032:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       170215
+      ]
+     },
      "number": "YS18-EN032",
      "rarity": "common",
      "region": "EN",
-     "set": "starter-deck-codebreaker"
+     "set": "starter-deck-codebreaker",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "starter-deck-link-strike:17626381:YS17-EN030:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       138051
+      ]
+     },
      "number": "YS17-EN030",
      "rarity": "common",
      "region": "EN",
-     "set": "starter-deck-link-strike"
+     "set": "starter-deck-link-strike",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "structure-deck-mechanized-madness:17626381:SR10-EN033:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       212673
+      ]
+     },
      "number": "SR10-EN033",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-mechanized-madness"
+     "set": "structure-deck-mechanized-madness",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "super-starter-space-time-showdown:17626381:YS14-EN022:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       91422
+      ]
+     },
      "number": "YS14-EN022",
      "rarity": "common",
      "region": "EN",
-     "set": "super-starter-space-time-showdown"
+     "set": "super-starter-space-time-showdown",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     },
     {
      "id": "valiant-smashers:17626381:VASM-EN014:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       526951
+      ]
+     },
      "number": "VASM-EN014",
      "rarity": "rare",
      "region": "EN",
-     "set": "valiant-smashers"
+     "set": "valiant-smashers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Supply Squad"
+     }
     }
    ],
    "tcgDate": "2014-07-10"
@@ -6432,31 +9017,67 @@
    "prints": [
     {
      "id": "2015-mega-tin-mega-pack:17639150:MP15-EN171:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       105339
+      ]
+     },
      "number": "MP15-EN171",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "2015-mega-tin-mega-pack"
+     "set": "2015-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Saqlifice"
+     }
     },
     {
      "id": "quarter-century-stampede:17639150:RA04-EN238:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627551
+      ]
+     },
      "number": "RA04-EN238",
      "rarity": "platinum_secret_rare",
      "region": "EN",
-     "set": "quarter-century-stampede"
+     "set": "quarter-century-stampede",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Saqlifice (Platinum Secret Rare)"
+     }
     },
     {
      "id": "quarter-century-stampede:17639150:RA04-EN238:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627552
+      ]
+     },
      "number": "RA04-EN238",
      "rarity": "qc_secret_rare",
      "region": "EN",
-     "set": "quarter-century-stampede"
+     "set": "quarter-century-stampede",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Saqlifice (Quarter Century Secret Rare)"
+     }
     },
     {
      "id": "the-new-challengers:17639150:NECH-EN061:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94583
+      ]
+     },
      "number": "NECH-EN061",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "the-new-challengers"
+     "set": "the-new-challengers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Saqlifice"
+     }
     }
    ],
    "tcgDate": "2014-11-06"
@@ -6505,10 +9126,19 @@
    "prints": [
     {
      "id": "cosmo-blazer:17643265:CBLZ-EN010:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       67605
+      ]
+     },
      "number": "CBLZ-EN010",
      "rarity": "common",
      "region": "EN",
-     "set": "cosmo-blazer"
+     "set": "cosmo-blazer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Double Shark"
+     }
     }
    ],
    "tcgDate": "2013-01-25",
@@ -6561,18 +9191,39 @@
    "passcode": 17649753,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-2:17649753:DT02-EN085:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81087
+      ]
+     },
      "number": "DT02-EN085",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-2"
+     "set": "duel-terminal-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Worm Rakuyeh"
+     }
     },
     {
      "id": "hidden-arsenal-2:17649753:HA02-EN055:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       35738
+      ]
+     },
      "number": "HA02-EN055",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "hidden-arsenal-2"
+     "set": "hidden-arsenal-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Worm Rakuyeh"
+     }
     }
    ],
    "tcgDate": "2010-05-25",
@@ -6620,23 +9271,50 @@
    "prints": [
     {
      "id": "dark-beginning-1:17653779:DB1-EN025:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23561
+      ]
+     },
      "number": "DB1-EN025",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-beginning-1"
+     "set": "dark-beginning-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fairy's Hand Mirror"
+     }
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:17653779:LCJW-EN106:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71650
+      ]
+     },
      "number": "LCJW-EN106",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-collection-4-joey-s-world-mega-pack"
+     "set": "legendary-collection-4-joey-s-world-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fairy's Hand Mirror"
+     }
     },
     {
      "id": "magic-ruler:17653779:MRL-041:short_print",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       21958
+      ]
+     },
      "number": "MRL-041",
      "rarity": "short_print",
-     "set": "magic-ruler"
+     "set": "magic-ruler",
+     "tcgplayer": {
+      "match": "number",
+      "name": "Fairy's Hand Mirror"
+     }
     },
     {
      "id": "magic-ruler:17653779:MRL-E041:short_print",
@@ -6647,23 +9325,50 @@
     },
     {
      "id": "spell-ruler-25th-anniversary-edition:17653779:SRL-EN041:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       486536
+      ]
+     },
      "number": "SRL-EN041",
      "rarity": "common",
      "region": "EN",
-     "set": "spell-ruler-25th-anniversary-edition"
+     "set": "spell-ruler-25th-anniversary-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fairy's Hand Mirror"
+     }
     },
     {
      "id": "spell-ruler:17653779:SRL-041:short_print",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       120629
+      ]
+     },
      "number": "SRL-041",
      "rarity": "short_print",
-     "set": "spell-ruler"
+     "set": "spell-ruler",
+     "tcgplayer": {
+      "match": "number",
+      "name": "Fairy's Hand Mirror"
+     }
     },
     {
      "id": "spell-ruler:17653779:SRL-EN041:short_print",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       478861
+      ]
+     },
      "number": "SRL-EN041",
      "rarity": "short_print",
      "region": "EN",
-     "set": "spell-ruler"
+     "set": "spell-ruler",
+     "tcgplayer": {
+      "match": "number",
+      "name": "Fairy's Hand Mirror"
+     }
     }
    ],
    "tcgDate": "2002-09-16"
@@ -6712,30 +9417,69 @@
    "prints": [
     {
      "id": "ancient-sanctuary:17655904:AST-038:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23277
+      ]
+     },
      "number": "AST-038",
      "rarity": "ultra_rare",
-     "set": "ancient-sanctuary"
+     "set": "ancient-sanctuary",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "dark-revelation-volume-2:17655904:DR2-EN150:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       24771
+      ]
+     },
      "number": "DR2-EN150",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "dark-revelation-volume-2"
+     "set": "dark-revelation-volume-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "dragons-collide-structure-deck:17655904:SDDC-EN025:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       57925
+      ]
+     },
      "number": "SDDC-EN025",
      "rarity": "common",
      "region": "EN",
-     "set": "dragons-collide-structure-deck"
+     "set": "dragons-collide-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-1:17655904:DT01-EN039:dt_rare_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80934
+      ]
+     },
      "number": "DT01-EN039",
      "rarity": "dt_rare_parallel",
      "region": "EN",
-     "set": "duel-terminal-1"
+     "set": "duel-terminal-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "duel-terminal-preview-wave-1:17655904:DTP1-EN013:dt_normal_parallel",
@@ -6752,60 +9496,194 @@
      "set": "duel-terminal-preview-wave-2"
     },
     {
-     "id": "legendary-collection-kaiba-mega-pack:17655904:LCKC-EN025:secret_rare",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "legendary-collection-kaiba-mega-pack-2020-reprint:17655904:LCKC-EN025:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       658911
+      ]
+     },
      "number": "LCKC-EN025",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "legendary-collection-kaiba-mega-pack"
+     "set": "legendary-collection-kaiba-mega-pack-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
-     "id": "legendary-decks-ii:17655904:LDK2-ENK19:common",
+     "id": "legendary-collection-kaiba-mega-pack:17655904:LCKC-EN025:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       161951
+      ]
+     },
+     "number": "LCKC-EN025",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "legendary-collection-kaiba-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Burst Stream of Destruction"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "legendary-decks-ii-2020-reprint:17655904:LDK2-ENK19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543097
+      ]
+     },
      "number": "LDK2-ENK19",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-decks-ii"
+     "set": "legendary-decks-ii-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "legendary-decks-ii:17655904:LDK2-ENK19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       123543
+      ]
+     },
+     "number": "LDK2-ENK19",
+     "rarity": "common",
+     "region": "EN",
+     "set": "legendary-decks-ii",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "legendary-duelists-season-2:17655904:LDS2-EN021:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230251
+      ]
+     },
      "number": "LDS2-EN021",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-season-2"
+     "set": "legendary-duelists-season-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
-     "id": "saga-of-blue-eyes-white-dragon-structure-deck:17655904:SDBE-EN021:common",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "saga-of-blue-eyes-white-dragon-structure-deck-2020-reprint:17655904:SDBE-EN021:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       565320
+      ]
+     },
      "number": "SDBE-EN021",
      "rarity": "common",
      "region": "EN",
-     "set": "saga-of-blue-eyes-white-dragon-structure-deck"
+     "set": "saga-of-blue-eyes-white-dragon-structure-deck-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
+    },
+    {
+     "id": "saga-of-blue-eyes-white-dragon-structure-deck:17655904:SDBE-EN021:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71246
+      ]
+     },
+     "number": "SDBE-EN021",
+     "rarity": "common",
+     "region": "EN",
+     "set": "saga-of-blue-eyes-white-dragon-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "speed-duel-starter-decks-duelists-of-tomorrow:17655904:SS02-ENA13:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       183660
+      ]
+     },
      "number": "SS02-ENA13",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-starter-decks-duelists-of-tomorrow"
+     "set": "speed-duel-starter-decks-duelists-of-tomorrow",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "starter-deck-kaiba-reloaded:17655904:YSKR-EN036:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77773
+      ]
+     },
      "number": "YSKR-EN036",
      "rarity": "common",
      "region": "EN",
-     "set": "starter-deck-kaiba-reloaded"
+     "set": "starter-deck-kaiba-reloaded",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "structure-deck-blue-eyes-white-destiny:17655904:SDWD-EN024:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       616581,
+       618800
+      ]
+     },
      "number": "SDWD-EN024",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-blue-eyes-white-destiny"
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     },
     {
      "id": "structure-deck-seto-kaiba:17655904:SDKS-EN022:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       123775
+      ]
+     },
      "number": "SDKS-EN022",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-seto-kaiba"
+     "set": "structure-deck-seto-kaiba",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction"
+     }
     }
    ],
    "tcgDate": "2004-06-01"
@@ -6854,57 +9732,132 @@
    "prints": [
     {
      "id": "dark-beginning-2:17658803:DB2-EN165:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       24224
+      ]
+     },
      "number": "DB2-EN165",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-beginning-2"
+     "set": "dark-beginning-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "legacy-of-darkness:17658803:LOD-050:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22166
+      ]
+     },
      "number": "LOD-050",
      "rarity": "super_rare",
-     "set": "legacy-of-darkness"
+     "set": "legacy-of-darkness",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     },
     {
      "id": "legacy-of-darkness:17658803:LOD-EN050:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       476694
+      ]
+     },
      "number": "LOD-EN050",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "legacy-of-darkness"
+     "set": "legacy-of-darkness",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:17658803:SGX3-ENB04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       489395
+      ]
+     },
      "number": "SGX3-ENB04",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-gx-duelists-of-shadows"
+     "set": "speed-duel-gx-duelists-of-shadows",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     },
     {
      "id": "speed-duel-starter-decks-duelists-of-tomorrow:17658803:SS02-ENA04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       183651
+      ]
+     },
      "number": "SS02-ENA04",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-starter-decks-duelists-of-tomorrow"
+     "set": "speed-duel-starter-decks-duelists-of-tomorrow",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     },
     {
      "id": "starter-deck-2006:17658803:YSD-EN003:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25123
+      ]
+     },
      "number": "YSD-EN003",
      "rarity": "common",
      "region": "EN",
-     "set": "starter-deck-2006"
+     "set": "starter-deck-2006",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     },
     {
      "id": "starter-deck-dawn-of-the-xyz:17658803:YS11-EN002:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       47744
+      ]
+     },
      "number": "YS11-EN002",
      "rarity": "common",
      "region": "EN",
-     "set": "starter-deck-dawn-of-the-xyz"
+     "set": "starter-deck-dawn-of-the-xyz",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     },
     {
      "id": "starter-deck-kaiba-evolution:17658803:SKE-014:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25175
+      ]
+     },
      "number": "SKE-014",
      "rarity": "common",
-     "set": "starter-deck-kaiba-evolution"
+     "set": "starter-deck-kaiba-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Luster Dragon #2"
+     }
     }
    ],
    "tcgDate": "2003-06-06",
@@ -6959,18 +9912,39 @@
    "passcode": 17663375,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:17663375:LDS1-EN084:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217487
+      ]
+     },
      "number": "LDS1-EN084",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-season-1"
+     "set": "legendary-duelists-season-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ancient Gear Wyvern"
+     }
     },
     {
      "id": "machine-reactor-structure-deck:17663375:SR03-EN003:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       130073
+      ]
+     },
      "number": "SR03-EN003",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "machine-reactor-structure-deck"
+     "set": "machine-reactor-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ancient Gear Wyvern"
+     }
     }
    ],
    "tcgDate": "2017-04-13",
@@ -7025,10 +9999,19 @@
    "prints": [
     {
      "id": "battles-of-legend-armageddon:17679043:BLAR-EN004:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217947
+      ]
+     },
      "number": "BLAR-EN004",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-armageddon"
+     "set": "battles-of-legend-armageddon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Penguin Torpedo"
+     }
     }
    ],
    "tcgDate": "2020-07-23",
@@ -7076,17 +10059,35 @@
    "prints": [
     {
      "id": "2019-gold-sarcophagus-tin-mega-pack:17688543:MP19-EN133:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       197270
+      ]
+     },
      "number": "MP19-EN133",
      "rarity": "common",
      "region": "EN",
-     "set": "2019-gold-sarcophagus-tin-mega-pack"
+     "set": "2019-gold-sarcophagus-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Deep Grave"
+     }
     },
     {
      "id": "cybernetic-horizon:17688543:CYHO-EN078:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       170755
+      ]
+     },
      "number": "CYHO-EN078",
      "rarity": "rare",
      "region": "EN",
-     "set": "cybernetic-horizon"
+     "set": "cybernetic-horizon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Deep Grave"
+     }
     }
    ],
    "tcgDate": "2018-07-26"
@@ -7134,10 +10135,19 @@
    "prints": [
     {
      "id": "the-grand-creators:17691568:GRCR-EN010:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       260724
+      ]
+     },
      "number": "GRCR-EN010",
      "rarity": "rare",
      "region": "EN",
-     "set": "the-grand-creators"
+     "set": "the-grand-creators",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gagaku-P.U.N.K. Crash Beat"
+     }
     }
    ],
    "tcgDate": "2022-01-27"
@@ -7184,10 +10194,19 @@
    "prints": [
     {
      "id": "tactical-evolution:17706537:TAEV-EN086:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26128
+      ]
+     },
      "number": "TAEV-EN086",
      "rarity": "rare",
      "region": "EN",
-     "set": "tactical-evolution"
+     "set": "tactical-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fossil Tusker"
+     }
     }
    ],
    "tcgDate": "2007-08-15",
@@ -7238,10 +10257,19 @@
    "prints": [
     {
      "id": "doom-of-dimensions:17719582:DOOD-EN075:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       654310
+      ]
+     },
      "number": "DOOD-EN075",
      "rarity": "common",
      "region": "EN",
-     "set": "doom-of-dimensions"
+     "set": "doom-of-dimensions",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Artmage Peripeteia -Turmoil-"
+     }
     }
    ],
    "tcgDate": "2025-09-25"
@@ -7293,38 +10321,83 @@
    "prints": [
     {
      "id": "absolute-powerforce:17720747:ABPF-EN012:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58455
+      ]
+     },
      "number": "ABPF-EN012",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "absolute-powerforce"
+     "set": "absolute-powerforce",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witch of the Black Rose (UTR)"
+     }
     },
     {
      "id": "absolute-powerforce:17720747:ABPF-EN012:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       34515
+      ]
+     },
      "number": "ABPF-EN012",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "absolute-powerforce"
+     "set": "absolute-powerforce",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witch of the Black Rose"
+     }
     },
     {
      "id": "legendary-5d-s-decks:17720747:L5DD-ENA02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       661300
+      ]
+     },
      "number": "L5DD-ENA02",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-5d-s-decks"
+     "set": "legendary-5d-s-decks",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witch of the Black Rose"
+     }
     },
     {
      "id": "legendary-duelists-season-2:17720747:LDS2-EN097:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230342
+      ]
+     },
      "number": "LDS2-EN097",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-season-2"
+     "set": "legendary-duelists-season-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witch of the Black Rose"
+     }
     },
     {
      "id": "legendary-duelists-sisters-of-the-rose:17720747:LED4-EN030:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       183147
+      ]
+     },
      "number": "LED4-EN030",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-sisters-of-the-rose"
+     "set": "legendary-duelists-sisters-of-the-rose",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witch of the Black Rose"
+     }
     }
    ],
    "tcgDate": "2010-02-12",
@@ -7373,17 +10446,35 @@
    "prints": [
     {
      "id": "2019-gold-sarcophagus-tin-mega-pack:17722185:MP19-EN211:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       197503
+      ]
+     },
      "number": "MP19-EN211",
      "rarity": "common",
      "region": "EN",
-     "set": "2019-gold-sarcophagus-tin-mega-pack"
+     "set": "2019-gold-sarcophagus-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Invincibility Barrier"
+     }
     },
     {
      "id": "soul-fusion:17722185:SOFU-EN076:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       178116
+      ]
+     },
      "number": "SOFU-EN076",
      "rarity": "common",
      "region": "EN",
-     "set": "soul-fusion"
+     "set": "soul-fusion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Invincibility Barrier"
+     }
     }
    ],
    "tcgDate": "2018-10-18"
@@ -7428,10 +10519,19 @@
    "prints": [
     {
      "id": "structure-deck-blue-eyes-white-destiny:17725109:SDWD-EN019:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       616576
+      ]
+     },
      "number": "SDWD-EN019",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "structure-deck-blue-eyes-white-destiny"
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Roar of the Blue-Eyed Dragons"
+     }
     }
    ],
    "tcgDate": "2025-02-13"
@@ -7482,31 +10582,67 @@
    "prints": [
     {
      "id": "duelist-pack-jaden-yuki-3:17732278:DP06-EN003:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       32186
+      ]
+     },
      "number": "DP06-EN003",
      "rarity": "common",
      "region": "EN",
-     "set": "duelist-pack-jaden-yuki-3"
+     "set": "duelist-pack-jaden-yuki-3",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Glow Moss"
+     }
     },
     {
      "id": "legendary-collection-2-the-duel-academy-years-mega-pack:17732278:LCGX-EN023:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       56930
+      ]
+     },
      "number": "LCGX-EN023",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-collection-2-the-duel-academy-years-mega-pack"
+     "set": "legendary-collection-2-the-duel-academy-years-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Neo-Spacian Glow Moss"
+     }
     },
     {
      "id": "shadows-in-valhalla:17732278:SHVA-EN032:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       173518
+      ]
+     },
      "number": "SHVA-EN032",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "shadows-in-valhalla"
+     "set": "shadows-in-valhalla",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Glow Moss"
+     }
     },
     {
      "id": "strike-of-neos:17732278:STON-EN006:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25657
+      ]
+     },
      "number": "STON-EN006",
      "rarity": "common",
      "region": "EN",
-     "set": "strike-of-neos"
+     "set": "strike-of-neos",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Glow Moss"
+     }
     }
    ],
    "tcgDate": "2007-02-28",
@@ -7604,18 +10740,39 @@
    "passcode": 17739335,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2020-tin-of-lost-memories-mega-pack:17739335:MP20-EN236:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       220901
+      ]
+     },
      "number": "MP20-EN236",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "2020-tin-of-lost-memories-mega-pack"
+     "set": "2020-tin-of-lost-memories-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zerrziel, Ruler of the Evil Eyed"
+     }
     },
     {
      "id": "the-infinity-chasers:17739335:INCH-EN031:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       186398
+      ]
+     },
      "number": "INCH-EN031",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "the-infinity-chasers"
+     "set": "the-infinity-chasers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zerrziel, Ruler of the Evil Eyed"
+     }
     }
    ],
    "tcgDate": "2019-03-21",
@@ -7671,18 +10828,39 @@
    "passcode": 17745969,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:17745969:LDS1-EN041:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217452
+      ]
+     },
      "number": "LDS1-EN041",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-season-1"
+     "set": "legendary-duelists-season-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Super Vehicroid - Mobile Base"
+     }
     },
     {
      "id": "legendary-duelists:17745969:LEDU-EN030:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       144997
+      ]
+     },
      "number": "LEDU-EN030",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "legendary-duelists"
+     "set": "legendary-duelists",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Super Vehicroid - Mobile Base"
+     }
     }
    ],
    "tcgDate": "2017-09-07",
@@ -7728,10 +10906,19 @@
    "prints": [
     {
      "id": "alliance-insight:17749468:ALIN-EN035:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       629415
+      ]
+     },
      "number": "ALIN-EN035",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "alliance-insight"
+     "set": "alliance-insight",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Azamina"
+     }
     }
    ],
    "tcgDate": "2025-05-01",
@@ -7784,24 +10971,51 @@
    "prints": [
     {
      "id": "battles-of-legend-terminal-revenge:17751597:BLTR-EN113:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       554971
+      ]
+     },
      "number": "BLTR-EN113",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-terminal-revenge"
+     "set": "battles-of-legend-terminal-revenge",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Branded Retribution"
+     }
     },
     {
      "id": "structure-deck-albaz-strike:17751597:SDAZ-EN032:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       268024
+      ]
+     },
      "number": "SDAZ-EN032",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "structure-deck-albaz-strike"
+     "set": "structure-deck-albaz-strike",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Branded Retribution"
+     }
     },
     {
      "id": "the-chronicles-deck-the-fallen-the-virtuous-all-foil-edition:17751597:CH01-EN034:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       658270
+      ]
+     },
      "number": "CH01-EN034",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "the-chronicles-deck-the-fallen-the-virtuous-all-foil-edition"
+     "set": "the-chronicles-deck-the-fallen-the-virtuous-all-foil-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Branded Retribution"
+     }
     }
    ],
    "tcgDate": "2022-04-14"
@@ -7852,18 +11066,39 @@
    "passcode": 17760003,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-4:17760003:DT04-EN038:dt_ultra_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81240
+      ]
+     },
      "number": "DT04-EN038",
      "rarity": "dt_ultra_parallel",
      "region": "EN",
-     "set": "duel-terminal-4"
+     "set": "duel-terminal-4",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Genex Ally Triarm"
+     }
     },
     {
      "id": "hidden-arsenal-4-trishula-s-triumph:17760003:HA04-EN026:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       39636
+      ]
+     },
      "number": "HA04-EN026",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "hidden-arsenal-4-trishula-s-triumph"
+     "set": "hidden-arsenal-4-trishula-s-triumph",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Genex Ally Triarm"
+     }
     }
    ],
    "tcgDate": "2011-01-25",
@@ -7920,10 +11155,19 @@
    "prints": [
     {
      "id": "battles-of-legend-light-s-revenge:17775525:BLLR-EN011:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       136800
+      ]
+     },
      "number": "BLLR-EN011",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-light-s-revenge"
+     "set": "battles-of-legend-light-s-revenge",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Superheavy Samurai Steam Train King"
+     }
     }
    ],
    "tcgDate": "2017-07-06",
@@ -7962,11 +11206,23 @@
    "passcode": 17782288,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "chaos-origins:17782288:CORI-EN094:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       702461
+      ]
+     },
      "number": "CORI-EN094",
      "rarity": "common",
      "region": "EN",
-     "set": "chaos-origins"
+     "set": "chaos-origins",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Angelechy Problem"
+     }
     }
    ],
    "tcgDate": "2026-07-02"
@@ -8012,25 +11268,59 @@
    "passcode": 17787975,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-gold-edition:17787975:MVP1-ENG23:gold_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       126663
+      ]
+     },
      "number": "MVP1-ENG23",
      "rarity": "gold_rare",
      "region": "EN",
-     "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-gold-edition"
+     "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-gold-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dimension Sphinx"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-secret-edition:17787975:MVP1-ENS23:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       207835
+      ]
+     },
      "number": "MVP1-ENS23",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-secret-edition"
+     "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-secret-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dimension Sphinx"
+     }
     },
     {
      "id": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack:17787975:MVP1-EN023:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       120925
+      ]
+     },
      "number": "MVP1-EN023",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack"
+     "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dimension Sphinx"
+     }
     }
    ],
    "tcgDate": "2016-07-21"
@@ -8081,17 +11371,35 @@
    "prints": [
     {
      "id": "gladiator-s-assault:17810268:GLAS-EN010:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       26257
+      ]
+     },
      "number": "GLAS-EN010",
      "rarity": "rare",
      "region": "EN",
-     "set": "gladiator-s-assault"
+     "set": "gladiator-s-assault",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cloudian - Acid Cloud"
+     }
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:17810268:SGX3-ENH03:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       489514
+      ]
+     },
      "number": "SGX3-ENH03",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-gx-duelists-of-shadows"
+     "set": "speed-duel-gx-duelists-of-shadows",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cloudian - Acid Cloud"
+     }
     }
    ],
    "tcgDate": "2007-11-14",
@@ -8139,58 +11447,136 @@
    "passcode": 17814387,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-1:17814387:DT01-EN049:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80944
+      ]
+     },
      "number": "DT01-EN049",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-1"
+     "set": "duel-terminal-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-1:17814387:DTP1-EN019:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80885
+      ]
+     },
      "number": "DTP1-EN019",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-preview-wave-1"
+     "set": "duel-terminal-preview-wave-1",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "speed-duel-demo-deck-2020:17814387:DEM6-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       500586
+      ]
+     },
      "number": "DEM6-EN019",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-demo-deck-2020"
+     "set": "speed-duel-demo-deck-2020",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "speed-duel-starter-decks-ultimate-predators:17814387:SS03-ENA26:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       196264
+      ]
+     },
      "number": "SS03-ENA26",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-starter-decks-ultimate-predators"
+     "set": "speed-duel-starter-decks-ultimate-predators",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "speed-duel-trials-of-the-kingdom-sneak-peek-participation-cards:17814387:SBTK-ENSP5:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       206293
+      ]
+     },
      "number": "SBTK-ENSP5",
      "rarity": "common",
      "region": "ENSP",
-     "set": "speed-duel-trials-of-the-kingdom-sneak-peek-participation-cards"
+     "set": "speed-duel-trials-of-the-kingdom-sneak-peek-participation-cards",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "starter-deck-2006:17814387:YSD-EN032:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25152
+      ]
+     },
      "number": "YSD-EN032",
      "rarity": "common",
      "region": "EN",
-     "set": "starter-deck-2006"
+     "set": "starter-deck-2006",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "starter-deck-joey:17814387:SDJ-044:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23027
+      ]
+     },
      "number": "SDJ-044",
      "rarity": "common",
-     "set": "starter-deck-joey"
+     "set": "starter-deck-joey",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "starter-deck-kaiba:17814387:SDK-038:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22694
+      ]
+     },
      "number": "SDK-038",
      "rarity": "common",
-     "set": "starter-deck-kaiba"
+     "set": "starter-deck-kaiba",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "starter-deck-kaiba:17814387:SDK-E035:common",
@@ -8201,15 +11587,33 @@
     },
     {
      "id": "starter-deck-pegasus:17814387:SDP-042:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       23075
+      ]
+     },
      "number": "SDP-042",
      "rarity": "common",
-     "set": "starter-deck-pegasus"
+     "set": "starter-deck-pegasus",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "starter-deck-yugi:17814387:SDY-031:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22637
+      ]
+     },
      "number": "SDY-031",
      "rarity": "common",
-     "set": "starter-deck-yugi"
+     "set": "starter-deck-yugi",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reinforcements"
+     }
     },
     {
      "id": "starter-deck-yugi:17814387:SDY-E029:common",
@@ -8268,17 +11672,35 @@
    "prints": [
     {
      "id": "25th-anniversary-tin-dueling-heroes-mega-pack:17825378:MP23-EN071:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       514581
+      ]
+     },
      "number": "MP23-EN071",
      "rarity": "common",
      "region": "EN",
-     "set": "25th-anniversary-tin-dueling-heroes-mega-pack"
+     "set": "25th-anniversary-tin-dueling-heroes-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Predaplant Triantis"
+     }
     },
     {
      "id": "dimension-force:17825378:DIFO-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       271670
+      ]
+     },
      "number": "DIFO-EN019",
      "rarity": "common",
      "region": "EN",
-     "set": "dimension-force"
+     "set": "dimension-force",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Predaplant Triantis"
+     }
     }
    ],
    "scale": 8,
@@ -8336,17 +11758,35 @@
    "prints": [
     {
      "id": "2022-tin-of-the-pharaoh-s-gods:17827173:MP22-EN197:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       285057
+      ]
+     },
      "number": "MP22-EN197",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "2022-tin-of-the-pharaoh-s-gods"
+     "set": "2022-tin-of-the-pharaoh-s-gods",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Floowandereeze & Toccan"
+     }
     },
     {
      "id": "burst-of-destiny:17827173:BODE-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       252550
+      ]
+     },
      "number": "BODE-EN016",
      "rarity": "common",
      "region": "EN",
-     "set": "burst-of-destiny"
+     "set": "burst-of-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Floowandereeze & Toccan"
+     }
     }
    ],
    "tcgDate": "2021-11-04",
@@ -8401,12 +11841,20 @@
    "passcode": 17832359,
    "prints": [
     {
-     "id": "battles-of-legend-monster-mayhem:17832359:BLMM-EN035:unknown",
+     "id": "battles-of-legend-monster-mayhem:17832359:BLMM-EN035:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       635921
+      ]
+     },
      "number": "BLMM-EN035",
-     "rarity": "unknown",
-     "rawRarity": "New",
+     "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-monster-mayhem"
+     "set": "battles-of-legend-monster-mayhem",
+     "tcgplayer": {
+      "match": "number+rarity-from-tcgplayer",
+      "name": "Wonko, Noble Knight of the Forest"
+     }
     }
    ],
    "tcgDate": "2025-06-13",
@@ -8457,10 +11905,19 @@
    "prints": [
     {
      "id": "starstrike-blast:17841097:STBL-EN004:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       38538
+      ]
+     },
      "number": "STBL-EN004",
      "rarity": "common",
      "region": "EN",
-     "set": "starstrike-blast"
+     "set": "starstrike-blast",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Needle Soldier"
+     }
     }
    ],
    "tcgDate": "2010-11-06",
@@ -8508,17 +11965,35 @@
    "prints": [
     {
      "id": "duelist-pack-rivals-of-the-pharaoh:17841166:DPRP-EN007:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       122946
+      ]
+     },
      "number": "DPRP-EN007",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "duelist-pack-rivals-of-the-pharaoh"
+     "set": "duelist-pack-rivals-of-the-pharaoh",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magnet Force"
+     }
     },
     {
      "id": "speed-duel-battle-city-box:17841166:SBCB-EN040:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227934
+      ]
+     },
      "number": "SBCB-EN040",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-battle-city-box"
+     "set": "speed-duel-battle-city-box",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magnet Force"
+     }
     }
    ],
    "tcgDate": "2016-09-15"
@@ -8555,18 +12030,42 @@
    "passcode": 17856505,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maze-of-muertos:17856505:MZMU-EN005:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       678906
+      ]
+     },
      "number": "MZMU-EN005",
      "rarity": "collectors_rare",
      "region": "EN",
-     "set": "maze-of-muertos"
+     "set": "maze-of-muertos",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pumpking the Great Ghost King (Collector's Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maze-of-muertos:17856505:MZMU-EN005:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       678905
+      ]
+     },
      "number": "MZMU-EN005",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "maze-of-muertos"
+     "set": "maze-of-muertos",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pumpking the Great Ghost King"
+     }
     }
    ],
    "rank": 6,
@@ -8623,17 +12122,35 @@
    "prints": [
     {
      "id": "2015-mega-tin-mega-pack:17857780:MP15-EN126:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       105278
+      ]
+     },
      "number": "MP15-EN126",
      "rarity": "rare",
      "region": "EN",
-     "set": "2015-mega-tin-mega-pack"
+     "set": "2015-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Cheermole"
+     }
     },
     {
      "id": "the-new-challengers:17857780:NECH-EN001:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94518
+      ]
+     },
      "number": "NECH-EN001",
      "rarity": "rare",
      "region": "EN",
-     "set": "the-new-challengers"
+     "set": "the-new-challengers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Cheermole"
+     }
     }
    ],
    "scale": 5,
@@ -8691,10 +12208,19 @@
    "prints": [
     {
      "id": "invasion-vengeance:17871506:INOV-EN028:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       124726
+      ]
+     },
      "number": "INOV-EN028",
      "rarity": "rare",
      "region": "EN",
-     "set": "invasion-vengeance"
+     "set": "invasion-vengeance",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Meteor Dragon Red-Eyes Impact"
+     }
     }
    ],
    "tcgDate": "2016-11-03",
@@ -8742,10 +12268,19 @@
    "prints": [
     {
      "id": "stardust-overdrive:17874674:SOVR-EN079:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       33716
+      ]
+     },
      "number": "SOVR-EN079",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "stardust-overdrive"
+     "set": "stardust-overdrive",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Seal of Wickedness"
+     }
     }
    ],
    "tcgDate": "2009-11-17"
@@ -8793,10 +12328,35 @@
    "passcode": 17881964,
    "prints": [
     {
+     "id": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition:17881964:LOB-EN019:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       486065
+      ]
+     },
+     "number": "LOB-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Darkfire Dragon"
+     }
+    },
+    {
      "id": "legend-of-blue-eyes-white-dragon:17881964:LOB-019:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       21887
+      ]
+     },
      "number": "LOB-019",
      "rarity": "rare",
-     "set": "legend-of-blue-eyes-white-dragon"
+     "set": "legend-of-blue-eyes-white-dragon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Darkfire Dragon"
+     }
     },
     {
      "id": "legend-of-blue-eyes-white-dragon:17881964:LOB-E015:rare",
@@ -8806,17 +12366,38 @@
      "set": "legend-of-blue-eyes-white-dragon"
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "legend-of-blue-eyes-white-dragon:17881964:LOB-EN019:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       476192
+      ]
+     },
      "number": "LOB-EN019",
      "rarity": "rare",
      "region": "EN",
-     "set": "legend-of-blue-eyes-white-dragon"
+     "set": "legend-of-blue-eyes-white-dragon",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Darkfire Dragon"
+     }
     },
     {
      "id": "tournament-pack-3rd-season:17881964:TP3-016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22767
+      ]
+     },
      "number": "TP3-016",
      "rarity": "common",
-     "set": "tournament-pack-3rd-season"
+     "set": "tournament-pack-3rd-season",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Darkfire Dragon"
+     }
     }
    ],
    "tcgDate": "2002-03-08",
@@ -8868,10 +12449,19 @@
    "prints": [
     {
      "id": "dimension-force:17885118:DIFO-EN069:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       271759
+      ]
+     },
      "number": "DIFO-EN069",
      "rarity": "common",
      "region": "EN",
-     "set": "dimension-force"
+     "set": "dimension-force",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pendulum Scale"
+     }
     }
    ],
    "tcgDate": "2022-05-19"
@@ -8916,10 +12506,19 @@
    "prints": [
     {
      "id": "burst-of-destiny:17888577:BODE-EN064:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       252611
+      ]
+     },
      "number": "BODE-EN064",
      "rarity": "common",
      "region": "EN",
-     "set": "burst-of-destiny"
+     "set": "burst-of-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sonic Tracker"
+     }
     }
    ],
    "tcgDate": "2021-11-04"
@@ -8963,31 +12562,70 @@
    "prints": [
     {
      "id": "crimson-crisis:17896384:CRMS-EN061:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       29030
+      ]
+     },
      "number": "CRMS-EN061",
      "rarity": "rare",
      "region": "EN",
-     "set": "crimson-crisis"
+     "set": "crimson-crisis",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Arcane Barrier"
+     }
     },
     {
      "id": "duelist-league-14-participation-cards:17896384:DL14-EN014:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77590,
+       80511,
+       80512,
+       80513
+      ]
+     },
      "number": "DL14-EN014",
      "rarity": "rare",
      "region": "EN",
-     "set": "duelist-league-14-participation-cards"
+     "set": "duelist-league-14-participation-cards",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Arcane Barrier (Red)"
+     }
     },
     {
      "id": "speed-duel-attack-from-the-deep:17896384:SBAD-EN005:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       190889
+      ]
+     },
      "number": "SBAD-EN005",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-attack-from-the-deep"
+     "set": "speed-duel-attack-from-the-deep",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Arcane Barrier"
+     }
     },
     {
      "id": "structure-deck-order-of-the-spellcasters:17896384:SR08-EN026:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       188677
+      ]
+     },
      "number": "SR08-EN026",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-order-of-the-spellcasters"
+     "set": "structure-deck-order-of-the-spellcasters",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Arcane Barrier"
+     }
     }
    ],
    "tcgDate": "2009-02-28"
@@ -9037,17 +12675,35 @@
    "prints": [
     {
      "id": "lord-of-the-tachyon-galaxy:17932494:LTGY-EN090:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       68202
+      ]
+     },
      "number": "LTGY-EN090",
      "rarity": "common",
      "region": "EN",
-     "set": "lord-of-the-tachyon-galaxy"
+     "set": "lord-of-the-tachyon-galaxy",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sonic Warrior"
+     }
     },
     {
      "id": "synchron-extreme-structure-deck:17932494:SDSE-EN012:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       103918
+      ]
+     },
      "number": "SDSE-EN012",
      "rarity": "common",
      "region": "EN",
-     "set": "synchron-extreme-structure-deck"
+     "set": "synchron-extreme-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sonic Warrior"
+     }
     }
    ],
    "tcgDate": "2013-05-17",
@@ -9103,10 +12759,19 @@
    "prints": [
     {
      "id": "valiant-smashers:17943271:VASM-EN007:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       526940
+      ]
+     },
      "number": "VASM-EN007",
      "rarity": "rare",
      "region": "EN",
-     "set": "valiant-smashers"
+     "set": "valiant-smashers",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mementotlan Goblin"
+     }
     }
    ],
    "tcgDate": "2023-11-16",
@@ -9162,10 +12827,19 @@
    "prints": [
     {
      "id": "rise-of-the-duelist:17946349:ROTD-EN028:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       218904
+      ]
+     },
      "number": "ROTD-EN028",
      "rarity": "common",
      "region": "EN",
-     "set": "rise-of-the-duelist"
+     "set": "rise-of-the-duelist",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mathmech Diameter"
+     }
     }
    ],
    "tcgDate": "2020-08-06",
@@ -9219,38 +12893,83 @@
    "prints": [
     {
      "id": "limited-pack-world-championship-2025:17947697:25LP-EN018:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       650926
+      ]
+     },
      "number": "25LP-EN018",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "limited-pack-world-championship-2025"
+     "set": "limited-pack-world-championship-2025",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maiden of White (Secret Rare)"
+     }
     },
     {
      "id": "limited-pack-world-championship-2025:17947697:25LP-EN018:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       650925
+      ]
+     },
      "number": "25LP-EN018",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "limited-pack-world-championship-2025"
+     "set": "limited-pack-world-championship-2025",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maiden of White"
+     }
     },
     {
      "id": "structure-deck-blue-eyes-white-destiny:17947697:SDWD-EN041:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       616553
+      ]
+     },
      "number": "SDWD-EN041",
      "rarity": "qc_secret_rare",
      "region": "EN",
-     "set": "structure-deck-blue-eyes-white-destiny"
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maiden of White (Quarter Century Secret Rare)"
+     }
     },
     {
      "id": "structure-deck-blue-eyes-white-destiny:17947697:SDWD-EN041:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       616552
+      ]
+     },
      "number": "SDWD-EN041",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "structure-deck-blue-eyes-white-destiny"
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maiden of White (Secret Rare)"
+     }
     },
     {
      "id": "structure-deck-blue-eyes-white-destiny:17947697:SDWD-EN041:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       616598
+      ]
+     },
      "number": "SDWD-EN041",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "structure-deck-blue-eyes-white-destiny"
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maiden of White"
+     }
     }
    ],
    "tcgDate": "2024-09-07",
@@ -9305,18 +13024,39 @@
    "passcode": 17948378,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-4:17948378:DT04-EN025:dt_normal_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81227
+      ]
+     },
      "number": "DT04-EN025",
      "rarity": "dt_normal_parallel",
      "region": "EN",
-     "set": "duel-terminal-4"
+     "set": "duel-terminal-4",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Dino"
+     }
     },
     {
      "id": "hidden-arsenal-4-trishula-s-triumph:17948378:HA04-EN015:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       39625
+      ]
+     },
      "number": "HA04-EN015",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "hidden-arsenal-4-trishula-s-triumph"
+     "set": "hidden-arsenal-4-trishula-s-triumph",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jurrac Dino"
+     }
     }
    ],
    "tcgDate": "2011-01-25",
@@ -9366,18 +13106,39 @@
    "passcode": 17954937,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-modern-decks-2026:17954937:L26D-ENM20:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       683139
+      ]
+     },
      "number": "L26D-ENM20",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "legendary-modern-decks-2026"
+     "set": "legendary-modern-decks-2026",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mitsurugi Great Purification"
+     }
     },
     {
      "id": "supreme-darkness:17954937:SUDA-EN096:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       610924
+      ]
+     },
      "number": "SUDA-EN096",
      "rarity": "common",
      "region": "EN",
-     "set": "supreme-darkness"
+     "set": "supreme-darkness",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mitsurugi Great Purification"
+     }
     }
    ],
    "tcgDate": "2025-01-23"
@@ -9429,66 +13190,156 @@
    "prints": [
     {
      "id": "battles-of-legend-relentless-revenge:17955766:BLRR-EN049:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       169432
+      ]
+     },
      "number": "BLRR-EN049",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "battles-of-legend-relentless-revenge"
+     "set": "battles-of-legend-relentless-revenge",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin"
+     }
     },
     {
      "id": "duelist-pack-jaden-yuki-2:17955766:DP03-EN005:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25596
+      ]
+     },
      "number": "DP03-EN005",
      "rarity": "rare",
      "region": "EN",
-     "set": "duelist-pack-jaden-yuki-2"
+     "set": "duelist-pack-jaden-yuki-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin"
+     }
     },
     {
      "id": "legendary-collection-2-the-duel-academy-years-mega-pack:17955766:LCGX-EN017:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       56927
+      ]
+     },
      "number": "LCGX-EN017",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-collection-2-the-duel-academy-years-mega-pack"
+     "set": "legendary-collection-2-the-duel-academy-years-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Neo-Spacian Aqua Dolphin"
+     }
     },
     {
      "id": "legendary-duelists-magical-hero:17955766:LED6-EN018:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       206993
+      ]
+     },
      "number": "LED6-EN018",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-magical-hero"
+     "set": "legendary-duelists-magical-hero",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-3:17955766:LDS3-EN101:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276168
+      ]
+     },
      "number": "LDS3-EN101",
      "rarity": "common",
      "region": "EN",
-     "set": "legendary-duelists-season-3"
+     "set": "legendary-duelists-season-3",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin"
+     }
     },
     {
      "id": "power-of-the-duelist:17955766:POTD-EN003:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25399
+      ]
+     },
      "number": "POTD-EN003",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "power-of-the-duelist"
+     "set": "power-of-the-duelist",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin"
+     }
     },
     {
      "id": "power-of-the-duelist:17955766:POTD-EN003:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       58630
+      ]
+     },
      "number": "POTD-EN003",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "power-of-the-duelist"
+     "set": "power-of-the-duelist",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin (UTR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rarity-collection-5:17955766:RA05-EN088:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687206
+      ]
+     },
      "number": "RA05-EN088",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "rarity-collection-5"
+     "set": "rarity-collection-5",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rarity-collection-5:17955766:RA05-EN088:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687207
+      ]
+     },
      "number": "RA05-EN088",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "rarity-collection-5"
+     "set": "rarity-collection-5",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo-Spacian Aqua Dolphin"
+     }
     }
    ],
    "tcgDate": "2006-08-16",
@@ -9538,18 +13389,39 @@
    "passcode": 17956906,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2020-tin-of-lost-memories-mega-pack:17956906:MP20-EN045:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       220721
+      ]
+     },
      "number": "MP20-EN045",
      "rarity": "rare",
      "region": "EN",
-     "set": "2020-tin-of-lost-memories-mega-pack"
+     "set": "2020-tin-of-lost-memories-mega-pack",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Final Light"
+     }
     },
     {
      "id": "savage-strike:17956906:SAST-EN090:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       184197
+      ]
+     },
      "number": "SAST-EN090",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "savage-strike"
+     "set": "savage-strike",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Final Light"
+     }
     }
    ],
    "tcgDate": "2019-01-31"
@@ -9597,17 +13469,35 @@
    "prints": [
     {
      "id": "astral-pack-six:17968114:AP06-EN016:short_print",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       95452
+      ]
+     },
      "number": "AP06-EN016",
      "rarity": "short_print",
      "region": "EN",
-     "set": "astral-pack-six"
+     "set": "astral-pack-six",
+     "tcgplayer": {
+      "match": "number",
+      "name": "Amazon of the Seas"
+     }
     },
     {
      "id": "champion-pack-game-five:17968114:CP05-EN012:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       33044
+      ]
+     },
      "number": "CP05-EN012",
      "rarity": "common",
      "region": "EN",
-     "set": "champion-pack-game-five"
+     "set": "champion-pack-game-five",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Amazon of the Seas"
+     }
     }
    ],
    "tcgDate": "2008-01-08",
@@ -9662,10 +13552,19 @@
    "prints": [
     {
      "id": "pendulum-domination-structure-deck:17979378:SDPD-EN015:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       127037
+      ]
+     },
      "number": "SDPD-EN015",
      "rarity": "common",
      "region": "EN",
-     "set": "pendulum-domination-structure-deck"
+     "set": "pendulum-domination-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "D/D Proud Chevalier"
+     }
     }
    ],
    "scale": 6,
@@ -9721,91 +13620,239 @@
    "prints": [
     {
      "id": "25th-anniversary-ultimate-kaiba-set:17985575:KC01-EN030:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       542291
+      ]
+     },
      "number": "KC01-EN030",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "25th-anniversary-ultimate-kaiba-set"
+     "set": "25th-anniversary-ultimate-kaiba-set",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "booster-pack-collectors-tins-2002:17985575:BPT-004:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22797
+      ]
+     },
      "number": "BPT-004",
      "rarity": "secret_rare",
-     "set": "booster-pack-collectors-tins-2002"
+     "set": "booster-pack-collectors-tins-2002",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "dark-legends:17985575:DLG1-EN087:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       33573
+      ]
+     },
      "number": "DLG1-EN087",
      "rarity": "common",
      "region": "EN",
-     "set": "dark-legends"
+     "set": "dark-legends",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "dragons-collide-structure-deck:17985575:SDDC-EN015:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       57915
+      ]
+     },
      "number": "SDDC-EN015",
      "rarity": "common",
      "region": "EN",
-     "set": "dragons-collide-structure-deck"
+     "set": "dragons-collide-structure-deck",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "duelist-league-17-participation-cards:17985575:DL17-EN001:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80532,
+       80533,
+       80534,
+       80535
+      ]
+     },
      "number": "DL17-EN001",
      "rarity": "rare",
      "region": "EN",
-     "set": "duelist-league-17-participation-cards"
+     "set": "duelist-league-17-participation-cards",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Lord of D. (Red)"
+     }
     },
     {
      "id": "duelist-pack-battle-city:17985575:DPBC-EN017:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       99977
+      ]
+     },
      "number": "DPBC-EN017",
      "rarity": "common",
      "region": "EN",
-     "set": "duelist-pack-battle-city"
+     "set": "duelist-pack-battle-city",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "duelist-pack-kaiba:17985575:DPKB-EN009:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       35056
+      ]
+     },
      "number": "DPKB-EN009",
      "rarity": "common",
      "region": "EN",
-     "set": "duelist-pack-kaiba"
+     "set": "duelist-pack-kaiba",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
-     "id": "retro-pack:17985575:RP01-EN086:rare",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "retro-pack-2020-reprint:17985575:RP01-EN086:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       564233
+      ]
+     },
      "number": "RP01-EN086",
      "rarity": "rare",
      "region": "EN",
-     "set": "retro-pack"
+     "set": "retro-pack-2020-reprint",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "retro-pack:17985575:RP01-EN086:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       78156
+      ]
+     },
+     "number": "RP01-EN086",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "retro-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "speed-duel-starter-decks-duelists-of-tomorrow:17985575:SS02-ENA05:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       183652
+      ]
+     },
      "number": "SS02-ENA05",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-starter-decks-duelists-of-tomorrow"
+     "set": "speed-duel-starter-decks-duelists-of-tomorrow",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "speed-duel-tournament-pack-1:17985575:STP1-EN005:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       188975
+      ]
+     },
      "number": "STP1-EN005",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "speed-duel-tournament-pack-1"
+     "set": "speed-duel-tournament-pack-1",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "speed-duel-tournament-pack-6:17985575:STP6-EN016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       515466
+      ]
+     },
      "number": "STP6-EN016",
      "rarity": "common",
      "region": "EN",
-     "set": "speed-duel-tournament-pack-6"
+     "set": "speed-duel-tournament-pack-6",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "starter-deck-kaiba-evolution:17985575:SKE-016:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       25176
+      ]
+     },
      "number": "SKE-016",
      "rarity": "common",
-     "set": "starter-deck-kaiba-evolution"
+     "set": "starter-deck-kaiba-evolution",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "starter-deck-kaiba:17985575:SDK-041:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22697
+      ]
+     },
      "number": "SDK-041",
      "rarity": "super_rare",
-     "set": "starter-deck-kaiba"
+     "set": "starter-deck-kaiba",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     },
     {
      "id": "starter-deck-kaiba:17985575:SDK-E038:super_rare",
@@ -9816,10 +13863,19 @@
     },
     {
      "id": "structure-deck-seto-kaiba:17985575:SDKS-EN011:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       123764
+      ]
+     },
      "number": "SDKS-EN011",
      "rarity": "common",
      "region": "EN",
-     "set": "structure-deck-seto-kaiba"
+     "set": "structure-deck-seto-kaiba",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of D."
+     }
     }
    ],
    "tcgDate": "2002-03-29",
@@ -9871,17 +13927,35 @@
    "prints": [
     {
      "id": "2018-mega-tin-mega-pack:17988746:MP18-EN061:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       174941
+      ]
+     },
      "number": "MP18-EN061",
      "rarity": "common",
      "region": "EN",
-     "set": "2018-mega-tin-mega-pack"
+     "set": "2018-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Parry Knights"
+     }
     },
     {
      "id": "code-of-the-duelist:17988746:COTD-EN037:short_print",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       139201
+      ]
+     },
      "number": "COTD-EN037",
      "rarity": "short_print",
      "region": "EN",
-     "set": "code-of-the-duelist"
+     "set": "code-of-the-duelist",
+     "tcgplayer": {
+      "match": "number",
+      "name": "Parry Knights"
+     }
     }
    ],
    "tcgDate": "2017-08-03",
@@ -9936,18 +14010,39 @@
    "passcode": 17994645,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2017-mega-tin-mega-pack:17994645:MP17-EN095:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       141461
+      ]
+     },
      "number": "MP17-EN095",
      "rarity": "rare",
      "region": "EN",
-     "set": "2017-mega-tin-mega-pack"
+     "set": "2017-mega-tin-mega-pack",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Assault Blackwing - Sayo the Rain Hider"
+     }
     },
     {
      "id": "the-dark-illusion:17994645:TDIL-EN047:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       121304
+      ]
+     },
      "number": "TDIL-EN047",
      "rarity": "rare",
      "region": "EN",
-     "set": "the-dark-illusion"
+     "set": "the-dark-illusion",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Assault Blackwing - Sayo the Rain Hider"
+     }
     }
    ],
    "tcgDate": "2016-08-04",

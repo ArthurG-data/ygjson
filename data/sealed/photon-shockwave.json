@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "photon-shockwave-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "photon-shockwave-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57236
+    ],
+    "ygojsonId": "eb2a94cb-3436-4964-8b16-366245f0d81b"
+   },
+   "name": "Photon Shockwave - Booster Box",
+   "set": "photon-shockwave",
+   "sources": [
+    "https://www.tcgplayer.com/product/57236/yugioh-photon-shockwave-photon-shockwave-booster-box",
+    "ygojson:eb2a94cb-3436-4964-8b16-366245f0d81b"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "photon-shockwave"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "photon-shockwave-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57385
+    ]
+   },
+   "name": "Photon Shockwave - Booster Pack",
+   "set": "photon-shockwave",
+   "sources": [
+    "https://www.tcgplayer.com/product/57385/yugioh-photon-shockwave-photon-shockwave-booster-pack"
+   ]
+  }
+ ]
+}

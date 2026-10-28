@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "starstrike-blast-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "starstrike-blast-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57199
+    ],
+    "ygojsonId": "43890958-f121-490f-b54f-2e5278107f67"
+   },
+   "name": "Starstrike Blast - Booster Box",
+   "set": "starstrike-blast",
+   "sources": [
+    "https://www.tcgplayer.com/product/57199/yugioh-starstrike-blast-starstrike-blast-booster-box",
+    "ygojson:43890958-f121-490f-b54f-2e5278107f67"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "starstrike-blast"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "starstrike-blast-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     38635
+    ]
+   },
+   "name": "Starstrike Blast - Booster Pack",
+   "set": "starstrike-blast",
+   "sources": [
+    "https://www.tcgplayer.com/product/38635/yugioh-starstrike-blast-starstrike-blast-booster-pack"
+   ]
+  }
+ ]
+}

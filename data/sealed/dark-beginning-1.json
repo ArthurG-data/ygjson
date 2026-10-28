@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "dark-beginning-1-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "dark-beginning-1-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57183
+    ],
+    "ygojsonId": "caaf45d3-4f2b-4bf9-8bd6-98bb26cb8729"
+   },
+   "name": "Dark Beginning 1 - Booster Box",
+   "set": "dark-beginning-1",
+   "sources": [
+    "https://www.tcgplayer.com/product/57183/yugioh-dark-beginning-1-dark-beginning-1-booster-box",
+    "ygojson:caaf45d3-4f2b-4bf9-8bd6-98bb26cb8729"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "dark-beginning-1"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "dark-beginning-1-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     254762
+    ]
+   },
+   "name": "Dark Beginning 1 Booster Pack",
+   "set": "dark-beginning-1",
+   "sources": [
+    "https://www.tcgplayer.com/product/254762/yugioh-dark-beginning-1-dark-beginning-1-booster-pack"
+   ]
+  }
+ ]
+}

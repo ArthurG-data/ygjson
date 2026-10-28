@@ -1,0 +1,99 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "raging-tempest-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "raging-tempest-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     127066
+    ],
+    "ygojsonId": "94d49ccc-8899-4fd6-a0d6-b4367c219843"
+   },
+   "name": "Raging Tempest Booster Box",
+   "set": "raging-tempest",
+   "sources": [
+    "https://www.tcgplayer.com/product/127066/yugioh-raging-tempest-raging-tempest-booster-box",
+    "ygojson:94d49ccc-8899-4fd6-a0d6-b4367c219843"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "raging-tempest"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "raging-tempest-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     127067
+    ]
+   },
+   "name": "Raging Tempest Booster Pack",
+   "releaseDate": "2017-02-10",
+   "set": "raging-tempest",
+   "sources": [
+    "https://www.tcgplayer.com/product/127067/yugioh-raging-tempest-raging-tempest-booster-pack"
+   ]
+  },
+  {
+   "category": "display",
+   "contents": {
+    "sealed": [
+     {
+      "product": "raging-tempest-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "raging-tempest-special-edition-display",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     129308
+    ]
+   },
+   "name": "Raging Tempest: Special Edition Display",
+   "set": "raging-tempest",
+   "sources": [
+    "https://www.tcgplayer.com/product/129308/yugioh-raging-tempest-raging-tempest-special-edition-display"
+   ]
+  },
+  {
+   "category": "special_edition",
+   "contents": {
+    "sealed": [
+     {
+      "count": 3,
+      "product": "raging-tempest-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "raging-tempest-special-edition-individual-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     129303
+    ],
+    "ygojsonId": "2be612e8-8859-457b-b849-6094cc0b38be"
+   },
+   "name": "Raging Tempest: Special Edition Individual Box",
+   "set": "raging-tempest",
+   "sources": [
+    "https://www.tcgplayer.com/product/129303/yugioh-raging-tempest-raging-tempest-special-edition-individual-box",
+    "ygojson:2be612e8-8859-457b-b849-6094cc0b38be"
+   ]
+  }
+ ]
+}

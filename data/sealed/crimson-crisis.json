@@ -1,0 +1,76 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 24,
+      "product": "crimson-crisis-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "crimson-crisis-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57180
+    ],
+    "ygojsonId": "149d36b9-277b-476e-9e4d-f6857c3f5948"
+   },
+   "name": "Crimson Crisis - Booster Box",
+   "set": "crimson-crisis",
+   "sources": [
+    "https://www.tcgplayer.com/product/57180/yugioh-crimson-crisis-crimson-crisis-booster-box",
+    "ygojson:149d36b9-277b-476e-9e4d-f6857c3f5948"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "crimson-crisis"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "crimson-crisis-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     29069
+    ]
+   },
+   "name": "Crimson Crisis - Booster Pack",
+   "set": "crimson-crisis",
+   "sources": [
+    "https://www.tcgplayer.com/product/29069/yugioh-crimson-crisis-crimson-crisis-booster-pack"
+   ]
+  },
+  {
+   "category": "special_edition",
+   "contents": {
+    "sealed": [
+     {
+      "count": 3,
+      "product": "crimson-crisis-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "crimson-crisis-special-edition",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     57205
+    ],
+    "ygojsonId": "f8c8b529-1e30-4ddf-bdaf-9943119978c0"
+   },
+   "name": "Crimson Crisis - Special Edition",
+   "set": "crimson-crisis",
+   "sources": [
+    "https://www.tcgplayer.com/product/57205/yugioh-crimson-crisis-crimson-crisis-special-edition",
+    "ygojson:f8c8b529-1e30-4ddf-bdaf-9943119978c0"
+   ]
+  }
+ ]
+}

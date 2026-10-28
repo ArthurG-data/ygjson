@@ -1,0 +1,95 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {},
+   "contentsStatus": "unknown",
+   "id": "duelist-pack-yugi-and-kaiba-booster-box-special-edition",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     213411
+    ]
+   },
+   "name": "Duelist Pack: Yugi and Kaiba Booster Box [Special Edition]",
+   "set": "duelist-pack-yugi",
+   "sources": [
+    "https://www.tcgplayer.com/product/213411/yugioh-duelist-pack-yugi-duelist-pack-yugi-and-kaiba-booster-box-special-edition"
+   ]
+  },
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 36,
+      "product": "duelist-pack-yugi-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "duelist-pack-yugi-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     213410
+    ],
+    "ygojsonId": "c3b941d9-1e24-4d4d-be3b-549a04b92a61"
+   },
+   "name": "Duelist Pack: Yugi Booster Box [1st Edition]",
+   "set": "duelist-pack-yugi",
+   "sources": [
+    "https://www.tcgplayer.com/product/213410/yugioh-duelist-pack-yugi-duelist-pack-yugi-booster-box-1st-edition",
+    "ygojson:c3b941d9-1e24-4d4d-be3b-549a04b92a61"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "editions": [
+       "first"
+      ],
+      "set": "duelist-pack-yugi"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "duelist-pack-yugi-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     148265
+    ]
+   },
+   "name": "Duelist Pack: Yugi Booster Pack [1st Edition]",
+   "set": "duelist-pack-yugi",
+   "sources": [
+    "https://www.tcgplayer.com/product/148265/yugioh-duelist-pack-yugi-duelist-pack-yugi-booster-pack-1st-edition"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "editions": [
+       "unlimited"
+      ],
+      "set": "duelist-pack-yugi"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "duelist-pack-yugi-booster-pack-2",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     213409
+    ]
+   },
+   "name": "Duelist Pack: Yugi Booster Pack [Unlimited]",
+   "set": "duelist-pack-yugi",
+   "sources": [
+    "https://www.tcgplayer.com/product/213409/yugioh-duelist-pack-yugi-duelist-pack-yugi-booster-pack-unlimited"
+   ]
+  }
+ ]
+}

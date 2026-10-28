@@ -1,0 +1,51 @@
+{
+ "products": [
+  {
+   "category": "booster_box",
+   "contents": {
+    "sealed": [
+     {
+      "count": 50,
+      "product": "star-pack-arc-v-booster-pack"
+     }
+    ]
+   },
+   "contentsStatus": "complete",
+   "id": "star-pack-arc-v-booster-box",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     99781
+    ],
+    "ygojsonId": "76f30cf9-6fad-47bc-97d6-7837214bf99e"
+   },
+   "name": "Star Pack ARC-V Booster Box",
+   "set": "star-pack-arc-v",
+   "sources": [
+    "https://www.tcgplayer.com/product/99781/yugioh-star-pack-arc-v-star-pack-arc-v-booster-box",
+    "ygojson:76f30cf9-6fad-47bc-97d6-7837214bf99e"
+   ]
+  },
+  {
+   "category": "booster_pack",
+   "contents": {
+    "pool": [
+     {
+      "set": "star-pack-arc-v"
+     }
+    ]
+   },
+   "contentsStatus": "partial",
+   "id": "star-pack-arc-v-booster-pack",
+   "identifiers": {
+    "tcgplayerProductIds": [
+     99782
+    ]
+   },
+   "name": "Star Pack ARC-V Booster Pack",
+   "set": "star-pack-arc-v",
+   "sources": [
+    "https://www.tcgplayer.com/product/99782/yugioh-star-pack-arc-v-star-pack-arc-v-booster-pack"
+   ]
+  }
+ ]
+}
