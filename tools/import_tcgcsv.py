@@ -1,6 +1,6 @@
 """Tie TCGplayer's Yu-Gi-Oh! groups and products (TCGCSV category 2) to our sets and prints, and write review/tcgplayer-2.json.
 
-    uv run python tools/import_tcgcsv.py
+    uv run python tools/import_tcgcsv.py [--refresh]
 
 Reads sets/sets.json and data/cards/*.json (written by import_ygoprodeck and refined by import_ygojson and
 import_yugipedia), .cache/tcgcsv, and mappings/tcgplayer_groups.json ({groupId: {"set": id, "why": evidence}}), and
@@ -25,12 +25,19 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
      or exactly one print has that number at all                       -> number
   3. no set, or the number is not in the group's set: the number is in exactly one other set (the set is named
      differently on TCGplayer), tried with the same rules there        -> number-other-set
+  4. no print anywhere has the number: the product's name is exactly one card, and its rarity is known. The print is
+     minted (source tcgplayer), in the group's set, or in a set minted for a group that matched none -> minted
 Whatever remains goes to review `unmatched` with the reason. A product lands on one print only. A print holds
-several products only when they are the same card at the same rarity (the (Red) and (Blue) tin promos); a product
-that would share a print with another card, or another rarity, goes to review `conflicts`.
+several products only when they are the same card at the same rarity; a product that would share a print with another
+card, or another rarity, goes to review `conflicts`.
+
+A product whose name carries a variant tag (variant_of) has a price of its own: Zaborg the Thunder Monarch is 129.99
+in Blue and 4.49 in Green under one number and rarity. It lands on its own print, a copy of the base print with
+`variant` set, and the base print keeps only the unmarked product, if there is one.
 """
 from __future__ import annotations
 
+import argparse
 import collections
 import json
 import re
@@ -40,6 +47,7 @@ import rarities
 import tcgcsv
 import ygjson
 from import_ygojson import normalise
+from import_ygoprodeck import era_of, set_type
 
 CACHE = ygjson.ROOT / ".cache" / "tcgcsv"
 REVIEW = ygjson.ROOT / "review" / "tcgplayer-2.json"
@@ -53,7 +61,34 @@ SUFFIX_SLUGS = {"2020 Date Reprint": "2020-reprint", "2020 Reprint": "2020-repri
 WORLDWIDE = " (Worldwide English)"
 SUBTYPES = {"1st Edition": "first", "Unlimited": "unlimited", "Limited": "limited"}
 EDITION_ORDER = ("first", "unlimited", "limited")
-RULES = ("exact_name", "normalised_name", "worldwide_english", "mapping", "abbreviation", "reprint")
+RULES = ("exact_name", "normalised_name", "worldwide_english", "mapping", "abbreviation", "reprint", "minted")
+MINTED = "minted"
+_SKILL_CARD = " (Skill Card)"
+
+# The tags that name a separately priced version of one print: a foil colour, an art letter, a numbered art. Rarity and
+# treatment tags are not here: a rarity is already part of the print, and the stamps and alternate arts stay on it.
+_VARIANT_TAG = re.compile(r"^(Blue|Green|Purple|Red|Silver|Bronze|[A-G]|Version \d+)$")
+# A treatment on top of a variant is a further version the catalogue has no print for.
+_TREATMENT_TAG = re.compile(r"stamp|alternate art|extended art|new art|misprint|emblazoned|oversized|japanese artwork", re.I)
+_TOKEN_PREFIX = "Token: "
+
+
+def unplaceable_tags(prod: tcgcsv.Product) -> bool:
+    """True when the tags name versions no one print can hold: two variants, or a variant with a treatment."""
+    tags = prod.base_name_and_tags()[1]
+    variants = [t for t in tags if _VARIANT_TAG.match(t)]
+    return len(variants) > 1 or (len(variants) == 1 and any(_TREATMENT_TAG.search(t) for t in tags))
+
+
+def has_rarity_tag(prod: tcgcsv.Product) -> bool:
+    """True when the name itself says which rarity this is, beyond the Rarity field: "(PCR)", "(Secret Rare)"."""
+    return any(not _VARIANT_TAG.match(t) and not _TREATMENT_TAG.search(t) for t in prod.base_name_and_tags()[1])
+
+
+def variant_of(prod: tcgcsv.Product) -> str | None:
+    """The variant slug in a product's name tags, or None when it has none or more than one."""
+    found = [t for t in prod.base_name_and_tags()[1] if _VARIANT_TAG.match(t)]
+    return ygjson.slugify(found[0]) if len(found) == 1 else None
 
 
 def split_child(name: str) -> tuple[str, str] | None:
@@ -182,19 +217,53 @@ class Catalog:
         self.files = files
         self.by_set_number: dict[tuple[str, str], list[tuple[dict, dict]]] = collections.defaultdict(list)
         self.by_number: dict[str, set[str]] = collections.defaultdict(set)
+        self.by_name: dict[str, list[dict]] = collections.defaultdict(list)
+        self.by_alias: dict[str, list[dict]] = collections.defaultdict(list)
+        self.by_id: dict[str, dict] = {}
         self.touched: set[str] = set()
         for body in files.values():
             for card in body["cards"]:
+                self.by_name[normalise(card["name"].removesuffix(_SKILL_CARD))].append(card)
                 for p in card["prints"]:
                     self.add(card, p)
+        # An alias is a weaker claim than a name, so a product is read as an alias only when no card has that name.
+        for body in files.values():
+            for card in body["cards"]:
+                for alias in card.get("aliases", []):
+                    if normalise(alias) not in self.by_name:
+                        self.by_alias[normalise(alias)].append(card)
 
     def add(self, card: dict, p: dict) -> None:
-        if p.get("number"):
+        self.by_id[p["id"]] = p
+        # A variant is reached through its base print, so a number lookup never sees it as a second candidate.
+        if p.get("number") and not p.get("variant"):
             self.by_set_number[(p["set"], p["number"])].append((card, p))
             self.by_number[p["number"]].add(p["set"])
 
     def find(self, set_id: str, number: str) -> list[tuple[dict, dict]]:
         return self.by_set_number.get((set_id, number), [])
+
+    def card_named(self, base_name: str) -> dict | None:
+        """The one card with this name. "Token: Sheep" reads as a token card, "Sheep Token" or "Sheep", and never as
+        the monster or spell a token shows: "Token: Grinder Golem" is not the card Grinder Golem."""
+        is_token = base_name.startswith(_TOKEN_PREFIX)
+        short = base_name.removeprefix(_TOKEN_PREFIX)
+        for name in ([f"{short} Token", short] if is_token else [base_name]):
+            found = self.by_name.get(normalise(name)) or self.by_alias.get(normalise(name), [])
+            if is_token:
+                found = [c for c in found if c.get("kind") == "token"]
+            if found:
+                return found[0] if len(found) == 1 else None
+        return None
+
+    def attach(self, card: dict, fields: dict) -> dict:
+        """The print with this id on the card, adding it if it is new."""
+        found = self.by_id.get(fields["id"])
+        if found is not None:
+            return found
+        card["prints"].append(fields)
+        self.add(card, fields)
+        return fields
 
     def sort_prints(self) -> None:
         for body in self.files.values():
@@ -206,12 +275,33 @@ def _product_ids(p: dict) -> list[int]:
     return p.get("identifiers", {}).get("tcgplayerProductIds", [])
 
 
+def _remove_minted(sets: list[dict], files: dict[str, dict]) -> None:
+    """Drop what an earlier run minted, so each run decides again and a rule fixed today leaves nothing behind. A product
+    on a removed print goes back through the rules. Reprint sets (they have a parent) are not minted this way."""
+    for body in files.values():
+        for card in body["cards"]:
+            card["prints"] = [p for p in card["prints"] if p.get("source") != SOURCE]
+
+
+def _drop_empty_minted_prints(files: dict[str, dict]) -> None:
+    """A minted print exists to hold a product. One whose product was refused, or moved to a variant, is dropped, or a shop
+    listing could price a print no source vouches for."""
+    for body in files.values():
+        for card in body["cards"]:
+            card["prints"] = [p for p in card["prints"] if p.get("source") != SOURCE or _product_ids(p)]
+
+
+def _drop_empty_minted_sets(sets: list[dict], files: dict[str, dict]) -> list[dict]:
+    used = {p["set"] for body in files.values() for card in body["cards"] for p in card["prints"]}
+    return [s for s in sets if s["source"] != SOURCE or "parent" in s or s["id"] in used]
+
+
 def _edition_list(editions) -> list[str]:
     return [e for e in EDITION_ORDER if e in editions]
 
 
 class Importer:
-    def __init__(self, sets, files, groups, products, prices, mapping):
+    def __init__(self, sets, files, groups, products, prices, mapping, eras=None):
         self.sets = {s["id"]: s for s in sets}
         self.groups = {g["groupId"]: g for g in groups}
         self.products = products  # {groupId: [Product]}
@@ -238,6 +328,10 @@ class Importer:
         self.set_of_group: dict[int, str] = {}
         self.rekeyed = 0
         self.minted = 0
+        self.sold_as: dict[str, set[str]] = collections.defaultdict(set)  # card id -> TCGplayer's base names for it
+        self.minted_prints = 0
+        self.minted_variants = 0
+        self.eras = eras or []
 
     # --- groups -----------------------------------------------------------------------------------------------
 
@@ -246,6 +340,13 @@ class Importer:
         for gid, (set_id, rule) in found["matches"].items():
             self.set_of_group[gid] = set_id
             self.group_rules[rule] += 1
+        # A set an earlier run minted for a group is that group's set; the name rules never consider it.
+        for s in self.sets.values():
+            if s["source"] == SOURCE and s["id"] not in self.set_of_group.values():
+                for gid in s.get("tcgplayerGroupIds", []):
+                    if gid in self.groups and gid not in found["reprints"]:
+                        self.set_of_group.setdefault(gid, s["id"])
+                        s["editions"] = self._group_editions(gid, s["type"])
         taken = set(self.sets)
         for gid, candidates in found["reprints"].items():
             parent_id = self.best_parent(gid, candidates)
@@ -344,34 +445,122 @@ class Importer:
                                "number": prod.number, "rarity": prod.rarity, "reason": reason})
 
     def _land(self, card: dict, p: dict, prod: tcgcsv.Product, match: str) -> bool:
-        """Put the product on the print. False (and a review entry) when the print holds another card or rarity."""
-        held = [i for i in _product_ids(p) if i != prod.product_id and i in self.by_id]
+        """Put the product on the print, or on the print's variant when the product names one. False (and a review
+        entry) when the print holds another card or rarity. A variant print is created only after those checks, so a
+        refused product leaves no empty print behind."""
+        if unplaceable_tags(prod):
+            self._review(prod, "its tags name two versions, and no print can hold both")
+            return False
+        # A base print and its variants are one card at one rarity, so a stranger is refused whichever of them it hits.
+        family = [q for q in card["prints"]
+                  if (q["set"], q.get("number"), q["rarity"]) == (p["set"], p.get("number"), p["rarity"])]
+        held = sorted(i for q in family for i in _product_ids(q) if i != prod.product_id and i in self.by_id)
         mine = (normalise(prod.base_name_and_tags()[0]), rarities.canonical(prod.rarity))
         for i in held:
             other = self.by_id[i]
-            if (normalise(other.base_name_and_tags()[0]), rarities.canonical(other.rarity)) != mine:
+            theirs = (normalise(other.base_name_and_tags()[0]), rarities.canonical(other.rarity))
+            sibling_id = ygjson.print_id(p["set"], card["id"], p.get("number"), mine[1])
+            if theirs != mine and theirs[0] == mine[0] and mine[1] != rarities.UNKNOWN and sibling_id != p["id"] \
+                    and has_rarity_tag(prod):
+                # The same card at another rarity under one number, as its name says: "Number 107 (PCR)" in RA04. A
+                # rarity only the Rarity field states stays a conflict, because a mislabel would become a real print.
+                sibling = {k: p[k] for k in ("number", "region", "set") if k in p}
+                fields = {"id": sibling_id, **sibling, "rarity": mine[1], "source": SOURCE}
+                return self._land(card, self.catalog.attach(card, fields), prod, MINTED)
+            if theirs != mine:
                 self.conflicts.append({"productId": prod.product_id, "name": prod.name, "groupId": prod.group_id,
                                        "print": p["id"], "heldBy": held,
                                        "reason": "the print holds a product of another name or rarity"})
                 return False
+        variant = variant_of(prod)
+        if variant and not p.get("variant"):
+            p = self._variant_print(card, p, variant)
         previous = self.owner.get(prod.product_id)
         if previous is not None and previous is not p:
-            previous["identifiers"]["tcgplayerProductIds"].remove(prod.product_id)
-            if not previous["identifiers"]["tcgplayerProductIds"]:
+            remaining = previous["identifiers"]["tcgplayerProductIds"]
+            remaining.remove(prod.product_id)
+            if not remaining:
                 del previous["identifiers"], previous["tcgplayer"]
+            elif previous["tcgplayer"]["name"] == prod.name and remaining[0] in self.by_id:
+                previous["tcgplayer"]["name"] = self.by_id[remaining[0]].name
         ids = p.setdefault("identifiers", {}).setdefault("tcgplayerProductIds", [])
         if prod.product_id not in ids:
             ids.append(prod.product_id)
             ids.sort()
+        if p.get("source") == SOURCE and not p.get("variant"):
+            match = MINTED
         kept = p.get("tcgplayer")
         if kept is None:
             p["tcgplayer"] = {"name": prod.name, "match": match}
-        elif not (kept["match"] == "number+rarity-from-tcgplayer" and match == "number+rarity"):
-            kept["match"] = match  # a re-keyed print matches exactly on the next run, but keeps its label
+        elif kept["match"] != MINTED and not (kept["match"] == "number+rarity-from-tcgplayer" and match == "number+rarity"):
+            kept["match"] = match  # a re-keyed or minted print matches exactly on the next run, but keeps its label
         self.owner[prod.product_id] = p
         self.landed_in[p["set"]].add(prod.product_id)
+        self.sold_as[card["id"]].add(prod.base_name_and_tags()[0])
         self.stats[p["tcgplayer"]["match"]] += 1
         return True
+
+    def _variant_print(self, card: dict, base: dict, variant: str) -> dict:
+        """The base print's copy for this variant, created on first sight."""
+        pid = ygjson.print_id(base["set"], card["id"], base.get("number"), base["rarity"], variant)
+        before = len(card["prints"])
+        copy = {k: base[k] for k in ("number", "region", "set", "rarity") if k in base}
+        found = self.catalog.attach(card, {"id": pid, **copy, "variant": variant, "source": SOURCE})
+        self.minted_variants += len(card["prints"]) - before
+        return found
+
+    def _group_set(self, prod: tcgcsv.Product) -> str:
+        """The set of the product's group, minting one for a group that matched none. A rerun finds its earlier set
+        by the group id, because a minted set is never a candidate for the name rules."""
+        gid = prod.group_id
+        if gid in self.set_of_group:
+            return self.set_of_group[gid]
+        group = self.groups[gid]
+        old = next((s for s in self.sets.values() if gid in s.get("tcgplayerGroupIds", []) and s["source"] == SOURCE), None)
+        if old is None:
+            released = (group.get("publishedOn") or "")[:10] or None
+            release: dict = {"language": "en", "name": group["name"]}
+            if released:
+                release["releaseDate"] = released
+            kind = set_type(group["name"])
+            old = {"id": _free_id(ygjson.slugify(group["name"]), set(self.sets)),
+                   "code": _code(group.get("abbreviation") or "") or prod.number.split("-")[0],
+                   "name": group["name"], "type": kind, "editions": self._group_editions(gid, kind),
+                   "source": SOURCE, "tcgplayerGroupIds": [gid], "releases": [release]}
+            era = era_of(released, self.eras)
+            if era:
+                old["era"] = era
+            self.sets[old["id"]] = old
+            self.group_rules[MINTED] += 1
+        self.set_of_group[gid] = old["id"]
+        return old["id"]
+
+    def _group_editions(self, gid: int, kind: str) -> list[str]:
+        """The editions TCGplayer prices a group's singles in. With no prices they are a guess: a promo is limited."""
+        singles = (p.product_id for p in self.products.get(gid, []) if p.is_single)
+        priced = _edition_list(set().union(*(self.subtypes.get(i, set()) for i in singles)))
+        return priced or (["limited"] if kind == "promo" else ["unlimited"])
+
+    def _mint_print(self, prod: tcgcsv.Product) -> str | None:
+        """Mint a print for a product whose number no print has. None on success, else why it was not minted."""
+        rarity = rarities.canonical(prod.rarity)
+        if rarity == rarities.UNKNOWN:
+            return "no print has this number, and its rarity is unknown"
+        if prod.number == "N/A":
+            return "no print has this number, and TCGplayer's number is N/A"
+        card = self.catalog.card_named(prod.base_name_and_tags()[0])
+        if card is None:
+            return "no print has this number, and its name is not one card"
+        set_id = self._group_set(prod)
+        fields = {"id": ygjson.print_id(set_id, card["id"], prod.number, rarity), "set": set_id, "number": prod.number,
+                  "rarity": rarity, "source": SOURCE}
+        region = ygjson.region_of(prod.number)
+        if region:
+            fields["region"] = region
+        before = len(card["prints"])
+        p = self.catalog.attach(card, fields)
+        self.minted_prints += len(card["prints"]) - before
+        return None if self._land(card, p, prod, MINTED) else "the minted print holds another product"
 
     def _apply(self, hit, kind: str, set_id: str, prod: tcgcsv.Product, rarity: str, label: str | None) -> bool:
         card, p = hit
@@ -418,7 +607,9 @@ class Importer:
         # A reprint set holds copies of its parent's prints, so it does not make the number ambiguous.
         others = [s for s in others if self.sets[s]["source"] != SOURCE] or others
         if not others:
-            self._review(prod, "no print has this number" + ("" if own else "; the group matched no set"))
+            reason = self._mint_print(prod)
+            if reason:
+                self._review(prod, reason)
             return
         if len(others) > 1:
             self._review(prod, f"the number is in {len(others)} other sets: {', '.join(others[:5])}")
@@ -433,6 +624,23 @@ class Importer:
             self.aliases[prod.group_id][target] += 1
 
     # --- editions ---------------------------------------------------------------------------------------------
+
+    def merge_aliases(self) -> int:
+        """Add to each card the names TCGplayer sells it under. A name another card has is left out, or a listing for
+        that card could price this one. Returns how many cards have aliases."""
+        with_aliases = 0
+        for body in self.catalog.files.values():
+            for card in body["cards"]:
+                own = normalise(card["name"])
+                aliases = [*card.get("aliases", []), *sorted(self.sold_as.get(card["id"], ()))]
+                # A name another card has, or a bare passcode, could price the wrong card.
+                kept = sorted({a for a in aliases if normalise(a) != own and normalise(a) not in self.catalog.by_name
+                               and not a.isdigit()})
+                card.pop("aliases", None)
+                if kept:
+                    card["aliases"] = kept
+                    with_aliases += 1
+        return with_aliases
 
     def merge_editions(self) -> int:
         """Union each set's editions with the subtypes priced on the products that landed in it, then give a print
@@ -455,12 +663,15 @@ class Importer:
         return changed
 
 
-def run(groups, products, prices, sets, files, mapping) -> dict:
+def run(groups, products, prices, sets, files, mapping, eras=None) -> dict:
     """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}."""
-    imp = Importer(sets, files, groups, products, prices, mapping)
+    _remove_minted(sets, files)
+    imp = Importer(sets, files, groups, products, prices, mapping, eras)
     unmatched_groups = imp.match_groups()
     imp.match_singles()
+    _drop_empty_minted_prints(imp.catalog.files)
     editions_changed = imp.merge_editions()
+    cards_with_aliases = imp.merge_aliases()
     imp.catalog.sort_prints()
     group_review = []
     for g in unmatched_groups:
@@ -474,8 +685,11 @@ def run(groups, products, prices, sets, files, mapping) -> dict:
               "conflicts": sorted(imp.conflicts, key=lambda r: r["productId"])}
     stats = {"matches": dict(sorted(imp.stats.items())), "groupRules": dict(imp.group_rules),
              "groupsUnmatched": len(unmatched_groups), "setsEditionsChanged": editions_changed,
-             "rekeyed": imp.rekeyed, "minted": imp.minted, **{k: len(v) for k, v in review.items()}}
-    return {"sets": sorted(imp.sets.values(), key=lambda s: s["id"]), "files": imp.catalog.files, "review": review,
+             "rekeyed": imp.rekeyed, "minted": imp.minted, "mintedPrints": imp.minted_prints,
+             "mintedVariants": imp.minted_variants, "cardsWithAliases": cards_with_aliases,
+             **{k: len(v) for k, v in review.items()}}
+    kept_sets = _drop_empty_minted_sets(list(imp.sets.values()), imp.catalog.files)
+    return {"sets": sorted(kept_sets, key=lambda s: s["id"]), "files": imp.catalog.files, "review": review,
             "stats": stats}
 
 
@@ -484,10 +698,13 @@ def load_mapping(path: Path = MAPPING) -> dict:
 
 
 def main() -> None:
-    groups = tcgcsv.groups(CACHE)
-    products = {g["groupId"]: tcgcsv.products(g["groupId"], CACHE) for g in groups}
-    prices = {g["groupId"]: tcgcsv.prices(g["groupId"], CACHE) for g in groups}
-    out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping())
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--refresh", action="store_true", help="download TCGCSV again (about 1,300 requests)")
+    refresh = parser.parse_args().refresh
+    groups = tcgcsv.groups(CACHE, refresh)
+    products = {g["groupId"]: tcgcsv.products(g["groupId"], CACHE, refresh) for g in groups}
+    prices = {g["groupId"]: tcgcsv.prices(g["groupId"], CACHE, refresh) for g in groups}
+    out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping(), ygjson.load_eras())
     ygjson.save_json(ygjson.SETS, out["sets"])
     for bucket, body in out["files"].items():
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
@@ -498,7 +715,8 @@ def main() -> None:
     singles = sum(1 for ps in products.values() for p in ps if p.is_single)
     print(f"{singles} singles: " + ", ".join(f"{n} {kind}" for kind, n in s["matches"].items()))
     print(f"{s['rekeyed']} prints re-keyed to TCGplayer's rarity, {s['setsEditionsChanged']} sets' editions changed, "
-          f"{s['minted']} reprint prints minted")
+          f"{s['minted']} reprint prints, {s['mintedPrints']} prints and {s['mintedVariants']} variants minted, "
+          f"{s['cardsWithAliases']} cards with aliases")
     print(f"review: {s['groups']} groups, {s['unmatched']} unmatched singles, {s['groupAliases']} aliased groups, "
           f"{s['conflicts']} conflicts")
 

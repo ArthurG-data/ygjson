@@ -437,6 +437,9 @@
    ]
   },
   {
+   "aliases": [
+    "Refuge in Audacity"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "12021072",
@@ -666,6 +669,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snake-Eye Wight Birch"
+   ],
    "archetypes": [
     "snake-eye"
    ],
@@ -727,6 +733,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:12058741:AGOV-EN009:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -807,6 +816,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:12061457:DABL-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -830,6 +842,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zilofthonia Gorgon"
+   ],
    "atk": 100,
    "attribute": "dark",
    "frame": "link",
@@ -875,6 +890,46 @@
    "ocgDate": "2025-04-26",
    "passcode": 12067160,
    "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:12067160:DUAD-EN050:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639387
+      ]
+     },
+     "number": "DUAD-EN050",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gorgon of Zilofthonia"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:12067160:DUAD-EN050:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       641278
+      ]
+     },
+     "number": "DUAD-EN050",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gorgon of Zilofthonia (Starlight Rare)"
+     }
+    },
     {
      "editions": [
       "first"
@@ -1255,6 +1310,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thunder Dragon Goliath"
+   ],
    "archetypes": [
     "thunder-dragon"
    ],
@@ -1333,6 +1391,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gouki Hugbear"
+   ],
    "archetypes": [
     "gouki"
    ],
@@ -1684,6 +1745,9 @@
    ]
   },
   {
+   "aliases": [
+    "Speedroid Roulette"
+   ],
    "archetypes": [
     "speedroid"
    ],
@@ -1877,6 +1941,9 @@
    "passcode": 12157563,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:12157563:BPRO-EN077:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2007,6 +2074,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragonmaid Stern"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -2632,6 +2702,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sheena the Twin Storm Deities of Divine Thunder"
+   ],
    "atk": 2900,
    "attribute": "wind",
    "def": 1500,
@@ -2667,6 +2740,9 @@
    "passcode": 12197223,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:12197223:BPRO-EN027:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2683,6 +2759,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:12197223:BPRO-EN027:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2882,10 +2961,7 @@
      "id": "legendary-duelists-season-2:12206212:LDS2-EN065:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230310,
-       230808,
-       230809,
-       230810
+       230310
       ]
      },
      "number": "LDS2-EN065",
@@ -2896,6 +2972,60 @@
       "match": "number+rarity",
       "name": "Harpie Lady Sisters"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:12206212:LDS2-EN065:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230808
+      ]
+     },
+     "number": "LDS2-EN065",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie Lady Sisters (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:12206212:LDS2-EN065:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230809
+      ]
+     },
+     "number": "LDS2-EN065",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie Lady Sisters (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:12206212:LDS2-EN065:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230810
+      ]
+     },
+     "number": "LDS2-EN065",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie Lady Sisters (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-sisters-of-the-rose:12206212:LED4-EN006:common",
@@ -3009,6 +3139,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:12206212:SBC2-ENH08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600193
+      ]
+     },
+     "number": "SBC2-ENH08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie Lady Sisters"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-duelists-of-tomorrow:12206212:SS02-ENC04:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3104,6 +3251,9 @@
    "passcode": 12210097,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:12210097:ALIN-EN095:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3222,10 +3372,7 @@
      "id": "legendary-duelists-season-2:12213463:LDS2-EN109:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230354,
-       230826,
-       230827,
-       230828
+       230354
       ]
      },
      "number": "LDS2-EN109",
@@ -3236,6 +3383,60 @@
       "match": "number+rarity",
       "name": "White Rose Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:12213463:LDS2-EN109:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230826
+      ]
+     },
+     "number": "LDS2-EN109",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "White Rose Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:12213463:LDS2-EN109:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230827
+      ]
+     },
+     "number": "LDS2-EN109",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "White Rose Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:12213463:LDS2-EN109:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230828
+      ]
+     },
+     "number": "LDS2-EN109",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "White Rose Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "savage-strike-special-edition:12213463:SAST-ENSE4:super_rare",
@@ -4282,6 +4483,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:12266229:BACH-EN034:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4298,6 +4502,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:12266229:BACH-EN034:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4394,6 +4601,13 @@
       "match": "number+rarity",
       "name": "Trifortressops"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:12275533:UP02-EN029:common",
+     "number": "UP02-EN029",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2013-05-17",
@@ -4754,6 +4968,23 @@
       "match": "number+rarity",
       "name": "Prime Material Dragon"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:12298909:SBC2-ENI20:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600267
+      ]
+     },
+     "number": "SBC2-ENI20",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Prime Material Dragon"
+     }
     }
    ],
    "tcgDate": "2008-01-26",
@@ -4861,6 +5092,9 @@
    ]
   },
   {
+   "aliases": [
+    "Purgatorio the Eidolon Beast"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -5405,6 +5639,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elvennotes Power Patron"
+   ],
    "archetypes": [
     "elfnote"
    ],
@@ -5443,6 +5680,9 @@
    "passcode": 12375297,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:12375297:BPRO-EN013:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5467,6 +5707,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon Magia Master"
+   ],
    "atk": 5000,
    "attribute": "light",
    "def": 4000,
@@ -5718,6 +5961,9 @@
    "passcode": 12397569,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:12397569:DUNE-EN090:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5734,6 +5980,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:12397569:DUNE-EN090:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7583,6 +7832,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragunity Knight - Harloon"
+   ],
    "archetypes": [
     "dragunity"
    ],
@@ -7694,6 +7946,9 @@
    "passcode": 12500059,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:12500059:ALIN-EN081:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8202,6 +8457,9 @@
    ]
   },
   {
+   "aliases": [
+    "Malefactors' Command"
+   ],
    "archetypes": [
     "machina"
    ],
@@ -8262,6 +8520,9 @@
    "tcgDate": "2020-04-16"
   },
   {
+   "aliases": [
+    "Symphonic Warrior Guitaars"
+   ],
    "archetypes": [
     "symphonic-warrior"
    ],
@@ -8408,6 +8669,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:12527118:PHHY-EN093:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8805,6 +9069,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infernity Supression"
+   ],
    "archetypes": [
     "infernity"
    ],
@@ -8864,6 +9131,9 @@
    "tcgDate": "2020-11-05"
   },
   {
+   "aliases": [
+    "Sennet Cataract"
+   ],
    "archetypes": [
     "zenet"
    ],
@@ -8894,6 +9164,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Datascape Zhi - Zhizhi"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -9957,6 +10230,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:12607053:SBC2-ENG18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600333
+      ]
+     },
+     "number": "SBC2-ENG18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Waboku"
+     }
+    },
+    {
      "id": "speed-duel-tournament-pack-6:12607053:STP6-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10091,6 +10381,9 @@
    "tcgDate": "2002-03-29"
   },
   {
+   "aliases": [
+    "Douyou Chatsubou"
+   ],
    "atk": 500,
    "attribute": "dark",
    "def": 0,
@@ -10133,6 +10426,9 @@
    "passcode": 12612470,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:12612470:PHNI-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11052,6 +11348,9 @@
    ]
   },
   {
+   "aliases": [
+    "Iron Thunderhammer"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "12682213",
@@ -11106,6 +11405,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:12682213:PHNI-EN080:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11122,6 +11424,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:12682213:PHNI-EN080:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11319,6 +11624,9 @@
    "passcode": 12686296,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:12686296:SUDA-EN034:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11599,6 +11907,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unizong Tune"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "12743620",
@@ -11655,6 +11966,9 @@
    "tcgDate": "2019-01-31"
   },
   {
+   "aliases": [
+    "Number C101"
+   ],
    "archetypes": [
     "number-10x",
     "number-c",
@@ -11873,6 +12187,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mortschlag"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "12760674",
@@ -11948,6 +12265,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Duke Shade, King of the Umbra"
+   ],
    "atk": 500,
    "attribute": "dark",
    "def": 2000,
@@ -12074,6 +12394,9 @@
    "passcode": 12800564,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:12800564:DOOD-EN018:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12090,6 +12413,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:12800564:DOOD-EN018:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12234,6 +12560,9 @@
    ]
   },
   {
+   "aliases": [
+    "Traptrix Orchard"
+   ],
    "archetypes": [
     "traptrix"
    ],
@@ -12335,6 +12664,9 @@
    "passcode": 12804701,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:12804701:PHNI-EN077:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12752,6 +13084,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Awakening of the Crystal Lord"
+   ],
    "archetypes": [
     "crystal"
    ],
@@ -12791,6 +13126,13 @@
    "ocgDate": "2022-06-25",
    "passcode": 12877076,
    "prints": [
+    {
+     "id": "magnificent-maestros:12877076:MAMS-EN106:ultra_rare",
+     "number": "MAMS-EN106",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
     {
      "id": "structure-deck-legend-of-the-crystal-beasts:12877076:SDCB-EN016:common",
      "identifiers": {
@@ -12939,6 +13281,9 @@
    "passcode": 12888461,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:12888461:ALIN-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13018,6 +13363,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:12890860:ROTA-EN087:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13808,6 +14156,9 @@
    "tcgDate": "2012-08-18"
   },
   {
+   "aliases": [
+    "Old Entity Chthugha"
+   ],
    "archetypes": [
     "old-entity"
    ],
@@ -14067,6 +14418,9 @@
    ]
   },
   {
+   "aliases": [
+    "Circle of Faerie"
+   ],
    "atk": 2200,
    "attribute": "wind",
    "def": 2500,
@@ -14125,6 +14479,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:12954226:PHHY-EN042:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14499,6 +14856,9 @@
    "passcode": 12975671,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:12975671:BPRO-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14856,6 +15216,9 @@
    ]
   },
   {
+   "aliases": [
+    "World Legacy Awakening"
+   ],
    "archetypes": [
     "world-legacy"
    ],

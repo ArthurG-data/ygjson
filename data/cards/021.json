@@ -140,6 +140,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Shaddoll Ruq"
+   ],
    "archetypes": [
     "shaddoll"
    ],
@@ -513,6 +516,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kyklos the Circular Fairy"
+   ],
    "archetypes": [
     "circular"
    ],
@@ -574,6 +580,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:21036656:LEDE-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -925,6 +934,9 @@
    "passcode": 21050476,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:21050476:ALIN-EN020:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1194,6 +1206,9 @@
    ]
   },
   {
+   "aliases": [
+    "Armament Swarm"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "21056275",
@@ -1232,6 +1247,9 @@
    "passcode": 21056275,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:21056275:ROTA-EN051:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1319,6 +1337,9 @@
    ]
   },
   {
+   "aliases": [
+    "Firewall Xceed Dragon"
+   ],
    "atk": 2500,
    "attribute": "dark",
    "def": 2000,
@@ -1696,6 +1717,9 @@
    ]
   },
   {
+   "aliases": [
+    "Trickster Reincarnation"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -2239,6 +2263,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cosmic Blazer Dragon"
+   ],
    "atk": 4000,
    "attribute": "wind",
    "def": 4000,
@@ -2603,11 +2630,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:21143940:DL14-EN016:rare",
+     "number": "DL14-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:21143940:DL14-EN016:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77592,
-       80517,
-       80518,
+       80517
+      ]
+     },
+     "number": "DL14-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mask Change (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:21143940:DL14-EN016:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80518
+      ]
+     },
+     "number": "DL14-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mask Change (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:21143940:DL14-EN016:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80519
       ]
      },
@@ -2615,10 +2682,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mask Change (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:21143940:DL14-EN016:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77592
+      ]
+     },
+     "number": "DL14-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Mask Change (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "generation-force:21143940:GENF-EN097:common",
@@ -2797,6 +2884,9 @@
    "passcode": 21147203,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:21147203:SUDA-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3546,6 +3636,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:21219755:IOC-EN101:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3776,6 +3869,23 @@
      "set": "battles-of-legend-chapter-1",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Fossil Dragon Skullgios"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:21225115:SGX4-END21:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543820
+      ]
+     },
+     "number": "SGX4-END21",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Fossil Dragon Skullgios"
      }
     }
@@ -4453,6 +4563,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fabledswarm Leverzebul"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -4586,6 +4699,9 @@
    ]
   },
   {
+   "aliases": [
+    "Carrier Suship - Icefish-Class Auxiliary Dish"
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -4646,6 +4762,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:21293424:BODE-EN049:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4816,6 +4935,13 @@
      }
     },
     {
+     "id": "magnificent-maestros:21296502:MAMS-EN072:ultra_rare",
+     "number": "MAMS-EN072",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "speed-duel-starter-decks-match-of-the-millennium:21296502:SS04-ENB08:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4976,6 +5102,48 @@
    ]
   },
   {
+   "archetypes": [
+    "ashtra"
+   ],
+   "atk": 2400,
+   "attribute": "wind",
+   "def": 3000,
+   "frame": "synchro",
+   "hasEffect": true,
+   "id": "21299968",
+   "identifiers": {
+    "konamiId": 23850,
+    "ygoprodeckId": 21299968
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/21299968.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/21299968.jpg",
+     "id": 21299968,
+     "small": "https://images.ygoprodeck.com/images/cards_small/21299968.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Spellcaster",
+   "name": "Ashtrama Yoami",
+   "names": {
+    "en": "Ashtrama Yoami"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 21299968,
+   "prints": [],
+   "typeline": [
+    "Spellcaster",
+    "Synchro",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Number 14"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -5312,6 +5480,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:21347668:CYAC-EN061:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5507,11 +5678,69 @@
     },
     {
      "id": "duelist-league-15-participation-cards:21350571:DL15-EN020:rare",
+     "number": "DL15-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:21350571:DL15-EN020:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       156221,
-       156222,
-       156223,
+       156221
+      ]
+     },
+     "number": "DL15-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Horn of the Phantom Beast (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:21350571:DL15-EN020:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       156222
+      ]
+     },
+     "number": "DL15-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Horn of the Phantom Beast (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:21350571:DL15-EN020:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       156223
+      ]
+     },
+     "number": "DL15-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Horn of the Phantom Beast (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:21350571:DL15-EN020:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        156224
       ]
      },
@@ -5519,10 +5748,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Horn of the Phantom Beast (Blue)"
-     }
+      "name": "Horn of the Phantom Beast (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-revolution:21350571:DREV-EN075:rare",
@@ -5787,6 +6018,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mayosenju Hitotsumenomuraji"
+   ],
    "archetypes": [
     "yosenju"
    ],
@@ -5856,6 +6090,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mannadium Trilosukda"
+   ],
    "archetypes": [
     "mannadium"
    ],
@@ -5901,6 +6138,9 @@
    "passcode": 21368273,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:21368273:AGOV-EN037:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5917,6 +6157,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:21368273:AGOV-EN037:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5942,6 +6185,9 @@
    ]
   },
   {
+   "aliases": [
+    "Security Force Gravitino"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -6399,6 +6645,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unchained Soul Rage Abominator"
+   ],
    "archetypes": [
     "unchained"
    ],
@@ -6428,13 +6677,36 @@
    ],
    "linkRating": 3,
    "monsterType": "Fiend",
-   "name": "Unchained Soul Rage Abominator",
+   "name": "Unchained Soul of Abominable Rage",
    "names": {
-    "en": "Unchained Soul Rage Abominator"
+    "en": "Unchained Soul of Abominable Rage"
    },
    "ocgDate": "2026-05-30",
    "passcode": 21419436,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:21419436:MAMS-EN057:secret_rare",
+     "number": "MAMS-EN057",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:21419436:MAMS-EN057:starlight_rare",
+     "number": "MAMS-EN057",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:21419436:MAMS-EN057:ultra_rare",
+     "number": "MAMS-EN057",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Fiend",
     "Link",
@@ -6618,6 +6890,9 @@
    ]
   },
   {
+   "aliases": [
+    "Archfiend Staff of Despair"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -6693,6 +6968,9 @@
    "tcgDate": "2021-02-04"
   },
   {
+   "aliases": [
+    "Orphegel Scherzo Skeleton"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -7019,6 +7297,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:21466326:IOC-EN048:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7276,6 +7557,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:21495657:MGED-EN071:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7970,6 +8254,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Hi-Speedroid Mach Hagoita"
+   ],
    "archetypes": [
     "hi-speedroid"
    ],
@@ -8058,6 +8345,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 39"
+   ],
    "archetypes": [
     "number-spell-trap-archetype",
     "utopia"
@@ -8176,6 +8466,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witchcraft Master Verre"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -8873,6 +9166,9 @@
    ]
   },
   {
+   "aliases": [
+    "New Clear World"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "21570001",
@@ -8927,6 +9223,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:21570001:BACH-EN062:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8962,6 +9261,9 @@
    "tcgDate": "2022-02-10"
   },
   {
+   "aliases": [
+    "Draitron Eclipse"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -9200,6 +9502,23 @@
       "match": "number+rarity",
       "name": "Makyura the Destructor"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:21593977:SBC2-END05:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600231
+      ]
+     },
+     "number": "SBC2-END05",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Makyura the Destructor"
+     }
     }
    ],
    "tcgDate": "2004-10-12",
@@ -9329,6 +9648,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:21597117:IOC-EN104:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9468,11 +9790,51 @@
     },
     {
      "id": "duelist-league-2-participation-cards:21598948:DL11-EN018:rare",
+     "number": "DL11-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:21598948:DL11-EN018:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77395,
-       80349,
-       80350,
+       80349
+      ]
+     },
+     "number": "DL11-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fairy Box (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:21598948:DL11-EN018:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80350
+      ]
+     },
+     "number": "DL11-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fairy Box (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:21598948:DL11-EN018:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80351
       ]
      },
@@ -9480,10 +9842,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fairy Box (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:21598948:DL11-EN018:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77395
+      ]
+     },
+     "number": "DL11-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Fairy Box (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "labyrinth-of-nightmare:21598948:LON-024:short_print",
@@ -9546,6 +9928,23 @@
      "set": "legendary-collection-4-joey-s-world-mega-pack",
      "tcgplayer": {
       "match": "number-other-set",
+      "name": "Fairy Box"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:21598948:SBC2-ENC18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600163
+      ]
+     },
+     "number": "SBC2-ENC18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Fairy Box"
      }
     }
@@ -9890,6 +10289,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sky Striker Maneuver - Vectored Blast!"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -10192,6 +10594,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:21637210:CYAC-EN047:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10208,6 +10613,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:21637210:CYAC-EN047:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10354,6 +10762,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kshatri-La Prepare"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -10411,6 +10822,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:21639276:DABL-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10554,6 +10968,9 @@
    "tcgDate": "2015-01-15"
   },
   {
+   "aliases": [
+    "Gravekeeper's Priest"
+   ],
    "archetypes": [
     "gravekeeper-s"
    ],
@@ -10760,6 +11177,9 @@
    "passcode": 21677871,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:21677871:PHHY-EN092:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11169,6 +11589,9 @@
    "tcgDate": "2014-03-28"
   },
   {
+   "aliases": [
+    "Artmage Movement -Lineage-"
+   ],
    "archetypes": [
     "artmage"
    ],
@@ -11209,6 +11632,9 @@
    "passcode": 21720439,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:21720439:DOOD-EN060:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11288,6 +11714,9 @@
    "tcgDate": "2021-07-08"
   },
   {
+   "aliases": [
+    "Therions' \"Leaper\" Fam"
+   ],
    "archetypes": [
     "therion"
    ],
@@ -11349,6 +11778,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:21727231:DIFO-EN004:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11372,6 +11804,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witchcraft Schmitta"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -11717,6 +12152,10 @@
    "tcgDate": "2003-03-01"
   },
   {
+   "aliases": [
+    "Mask Token",
+    "Slime Monster Token"
+   ],
    "archetypes": [
     "slime"
    ],
@@ -12453,6 +12892,9 @@
    "tcgDate": "2013-01-25"
   },
   {
+   "aliases": [
+    "Tenyi Wushuang Strike"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -12548,6 +12990,9 @@
    "tcgDate": "2019-07-25"
   },
   {
+   "aliases": [
+    "Hidden Book of Spell"
+   ],
    "archetypes": [
     "spellbook"
    ],
@@ -13060,6 +13505,9 @@
    "passcode": 21846145,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:21846145:ALIN-EN080:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13232,6 +13680,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number XX: Infinity Dark Utopic"
+   ],
    "archetypes": [
     "number-spell-trap-archetype",
     "utopia"
@@ -13349,6 +13800,9 @@
    "passcode": 21861412,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:21861412:BPRO-EN087:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13373,6 +13827,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shatter the Darkness"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "21862633",
@@ -13500,6 +13957,9 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "Perpetual Engine Argyro System"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "21887075",
@@ -13554,6 +14014,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:21887075:DIFO-EN054:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13573,6 +14036,9 @@
    "tcgDate": "2022-05-19"
   },
   {
+   "aliases": [
+    "Mekk-Knight Crusadia Astram"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -13940,6 +14406,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:21887179:IOC-EN089:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14116,6 +14585,9 @@
    "tcgDate": "2003-03-01"
   },
   {
+   "aliases": [
+    "Star Grail Fairy Ries"
+   ],
    "archetypes": [
     "world-chalice"
    ],
@@ -14198,6 +14670,33 @@
     "Fairy",
     "Effect"
    ]
+  },
+  {
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "21899906",
+   "identifiers": {
+    "konamiId": 23864,
+    "ygoprodeckId": 21899906
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/21899906.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/21899906.jpg",
+     "id": 21899906,
+     "small": "https://images.ygoprodeck.com/images/cards_small/21899906.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Normal",
+   "name": "Elegant Tri-Mirror",
+   "names": {
+    "en": "Elegant Tri-Mirror"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 21899906,
+   "prints": []
   },
   {
    "archetypes": [
@@ -14326,6 +14825,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Pione, the Sylvan Dancer"
+   ],
    "archetypes": [
     "sylvan"
    ],
@@ -14374,6 +14876,9 @@
    "passcode": 21903613,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:21903613:DIFO-EN051:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14531,6 +15036,9 @@
    "passcode": 21915012,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:21915012:BODE-EN046:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14737,9 +15245,7 @@
      "id": "legendary-duelists-season-3:21947653:LDS3-EN028:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276161,
-       276748,
-       276749
+       276161
       ]
      },
      "number": "LDS3-EN028",
@@ -14750,6 +15256,48 @@
       "match": "number+rarity",
       "name": "Evil HERO Lightning Golem"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:21947653:LDS3-EN028:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276748
+      ]
+     },
+     "number": "LDS3-EN028",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Lightning Golem (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:21947653:LDS3-EN028:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276749
+      ]
+     },
+     "number": "LDS3-EN028",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Lightning Golem (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:21947653:SGX3-ENA25:common",
@@ -14821,6 +15369,9 @@
    "passcode": 21949879,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:21949879:DIFO-EN001:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15069,6 +15620,9 @@
    "passcode": 21960890,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:21960890:SUDA-EN081:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15329,6 +15883,9 @@
    "tcgDate": "2018-07-26"
   },
   {
+   "aliases": [
+    "Holy Night Advent"
+   ],
    "archetypes": [
     "starry-knight"
    ],

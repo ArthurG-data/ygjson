@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Exodia, Master of the Guard"
+   ],
    "archetypes": [
     "exodia"
    ],
@@ -401,6 +404,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Dragon Ogre Deity of Tenyi"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -596,6 +602,23 @@
      }
     },
     {
+     "id": "25th-anniversary-tin-dueling-heroes:5043010:TN23-EN008:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       514587
+      ]
+     },
+     "number": "TN23-EN008",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-tin-dueling-heroes",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Firewall Dragon (Quarter Century Secret Rare)"
+     }
+    },
+    {
      "id": "code-of-the-duelist:5043010:COTD-EN043:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -631,6 +654,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:5043010:MGED-EN141:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1032,6 +1058,39 @@
   },
   {
    "archetypes": [
+    "amazoness"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "5059914",
+   "identifiers": {
+    "konamiId": 23885,
+    "ygoprodeckId": 5059914
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/5059914.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/5059914.jpg",
+     "id": 5059914,
+     "small": "https://images.ygoprodeck.com/images/cards_small/5059914.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Normal",
+   "name": "Amazoness Dramatic Rescue",
+   "names": {
+    "en": "Amazoness Dramatic Rescue"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 5059914,
+   "prints": []
+  },
+  {
+   "aliases": [
+    "Flavius - Arena of the Gladiator Beasts"
+   ],
+   "archetypes": [
     "gladiator"
    ],
    "frame": "spell",
@@ -1072,6 +1131,9 @@
    "passcode": 5063379,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:5063379:SUDA-EN060:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1385,6 +1447,9 @@
    "passcode": 5088741,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:5088741:ALIN-EN044:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1445,10 +1510,54 @@
     "pt": "Plataforma de Aterrissagem R.B."
    },
    "passcode": 5109321,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:5109321:DUAD-EN096:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639433
+      ]
+     },
+     "number": "DUAD-EN096",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. Stage Landing"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:5109321:DUAD-EN096:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       641289
+      ]
+     },
+     "number": "DUAD-EN096",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. Stage Landing (Starlight Rare)"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03"
   },
   {
+   "aliases": [
+    "B.E.S. Dellinger Core"
+   ],
    "archetypes": [
     "b-e-s"
    ],
@@ -1482,6 +1591,9 @@
    "passcode": 5121528,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:5121528:BPRO-EN021:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2030,6 +2142,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:5133471:SGX4-ENA17:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543749
+      ]
+     },
+     "number": "SGX4-ENA17",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Galaxy Cyclone"
+     }
+    },
+    {
      "id": "speed-duel-tournament-pack-6:5133471:STP6-EN014:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2049,6 +2178,9 @@
    "tcgDate": "2015-05-14"
   },
   {
+   "aliases": [
+    "Swordsoul Dragon of the Abyss"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -2110,6 +2242,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:5141117:PHHY-EN005:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2255,6 +2390,9 @@
    "tcgDate": "2017-02-09"
   },
   {
+   "aliases": [
+    "Archfiend Glitch"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -2331,6 +2469,9 @@
    "tcgDate": "2022-08-25"
   },
   {
+   "aliases": [
+    "Shiranui Sensei"
+   ],
    "archetypes": [
     "shiranui"
    ],
@@ -2399,6 +2540,9 @@
    ]
   },
   {
+   "aliases": [
+    "Superheavy Samurai Constable"
+   ],
    "archetypes": [
     "superheavy-samurai"
    ],
@@ -2460,6 +2604,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:5182107:DUNE-EN097:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2700,6 +2847,9 @@
    "passcode": 5205146,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:5205146:CYAC-EN022:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2723,6 +2873,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thunder Dragon Skyrumble"
+   ],
    "archetypes": [
     "thunder-dragon"
    ],
@@ -2794,6 +2947,9 @@
    ]
   },
   {
+   "aliases": [
+    "Moving Point Pendulum"
+   ],
    "archetypes": [
     "pendulum"
    ],
@@ -3019,11 +3175,69 @@
     },
     {
      "id": "duelist-league-15-participation-cards:5220687:DL15-EN007:rare",
+     "number": "DL15-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:5220687:DL15-EN007:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       157464,
-       157465,
-       157466,
+       157464
+      ]
+     },
+     "number": "DL15-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super-Nimble Mega Hamster (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:5220687:DL15-EN007:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       157465
+      ]
+     },
+     "number": "DL15-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super-Nimble Mega Hamster (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:5220687:DL15-EN007:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       157466
+      ]
+     },
+     "number": "DL15-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super-Nimble Mega Hamster (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:5220687:DL15-EN007:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        157467
       ]
      },
@@ -3031,10 +3245,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Super-Nimble Mega Hamster (Blue)"
-     }
+      "name": "Super-Nimble Mega Hamster (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "egyptian-god-deck-obelisk-the-tormentor:5220687:EGO1-EN011:common",
@@ -3077,6 +3293,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magibullet Shooter The Kid"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -3340,6 +3559,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exchanging Souls"
+   ],
    "archetypes": [
     "egyptian-god"
    ],
@@ -3544,6 +3766,23 @@
       "match": "number+rarity",
       "name": "Jowls of Dark Demise"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:5257687:SBC2-ENE09:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600214
+      ]
+     },
+     "number": "SBC2-ENE09",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Jowls of Dark Demise"
+     }
     }
    ],
    "tcgDate": "2003-07-18",
@@ -3743,6 +3982,45 @@
    "typeline": [
     "Warrior",
     "Normal"
+   ]
+  },
+  {
+   "archetypes": [
+    "salamangreat"
+   ],
+   "atk": 1600,
+   "attribute": "fire",
+   "def": 1000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "5266584",
+   "identifiers": {
+    "konamiId": 23825,
+    "ygoprodeckId": 5266584
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/5266584.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/5266584.jpg",
+     "id": 5266584,
+     "small": "https://images.ygoprodeck.com/images/cards_small/5266584.jpg"
+    }
+   ],
+   "isTuner": true,
+   "kind": "monster",
+   "level": 3,
+   "monsterType": "Cyberse",
+   "name": "Salamangreat Bastella",
+   "names": {
+    "en": "Salamangreat Bastella"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 5266584,
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Tuner",
+    "Effect"
    ]
   },
   {
@@ -4684,11 +4962,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:5318639:DL09-EN014:rare",
+     "number": "DL09-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:5318639:DL09-EN014:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77370,
-       77716,
-       77717,
+       77370
+      ]
+     },
+     "number": "DL09-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mystical Space Typhoon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:5318639:DL09-EN014:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77716
+      ]
+     },
+     "number": "DL09-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mystical Space Typhoon (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:5318639:DL09-EN014:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77717
+      ]
+     },
+     "number": "DL09-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mystical Space Typhoon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:5318639:DL09-EN014:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77718
       ]
      },
@@ -4696,10 +5032,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Mystical Space Typhoon (Blue)"
-     }
+      "name": "Mystical Space Typhoon (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "duelist-pack-zane-truesdale:5318639:DP04-EN015:common",
@@ -5079,6 +5417,57 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mystical Space Typhoon"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:5318639:SBC2-ENG12:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600250
+      ]
+     },
+     "number": "SBC2-ENG12",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mystical Space Typhoon"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:5318639:SGX4-END14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543813
+      ]
+     },
+     "number": "SGX4-END14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mystical Space Typhoon"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:5318639:SGX4-END14:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543839
+      ]
+     },
+     "number": "SGX4-END14",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mystical Space Typhoon (Secret Rare)"
      }
     },
     {
@@ -5515,6 +5904,13 @@
      }
     },
     {
+     "id": "ultimate-tournament-pack-2:5318639:UP02-EN038:common",
+     "number": "UP02-EN038",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
+    },
+    {
      "id": "warriors-strike-structure-deck:5318639:SDWS-EN023:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5550,6 +5946,9 @@
    "tcgDate": "2002-09-16"
   },
   {
+   "aliases": [
+    "Poison Mayakashi - Tsukahagi"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -5820,6 +6219,9 @@
    "tcgDate": "2012-01-14"
   },
   {
+   "aliases": [
+    "Exorsister Sophia"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -6499,6 +6901,9 @@
    ]
   },
   {
+   "aliases": [
+    "Red Rain"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "5376159",
@@ -6927,6 +7332,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fierce Ogre of Tenyi"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -7224,6 +7632,9 @@
    ]
   },
   {
+   "aliases": [
+    "The World of Spirits"
+   ],
    "archetypes": [
     "ancient-fairy-dragon"
    ],
@@ -7265,6 +7676,9 @@
    "passcode": 5414777,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:5414777:ALIN-EN055:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7284,6 +7698,9 @@
    "tcgDate": "2025-05-01"
   },
   {
+   "aliases": [
+    "Dragon Tail Flame"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -7596,6 +8013,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rekindled Rebirth"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "5439384",
@@ -7726,6 +8146,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:5464695:IOC-EN061:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8537,6 +8960,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exorsister Jibrine"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -9089,6 +9515,9 @@
    "tcgDate": "2002-10-15"
   },
   {
+   "aliases": [
+    "June Pride - Elfnotes"
+   ],
    "archetypes": [
     "elfnote"
    ],
@@ -9168,6 +9597,9 @@
    ]
   },
   {
+   "aliases": [
+    "Destrudo, the Dead Drake of Dread"
+   ],
    "atk": 1000,
    "attribute": "dark",
    "def": 3000,
@@ -9442,6 +9874,9 @@
    "tcgDate": "2026-02-19"
   },
   {
+   "aliases": [
+    "Battleguard #0"
+   ],
    "archetypes": [
     "battleguard"
    ],
@@ -9486,6 +9921,9 @@
    "passcode": 5577149,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:5577149:DIFO-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9766,6 +10204,9 @@
    ]
   },
   {
+   "aliases": [
+    "Valmonica Scelta"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -10004,6 +10445,9 @@
    "tcgDate": "2010-01-15"
   },
   {
+   "aliases": [
+    "Bridge of Salvation"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "5611760",
@@ -10112,8 +10556,7 @@
      "id": "battles-of-legend-chapter-1:5614808:BLC1-EN011:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538483,
-       538643
+       538483
       ]
      },
      "number": "BLC1-EN011",
@@ -10124,6 +10567,27 @@
       "match": "number+rarity",
       "name": "White Aura Whale"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:5614808:BLC1-EN011:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538643
+      ]
+     },
+     "number": "BLC1-EN011",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "White Aura Whale (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "battles-of-legend-light-s-revenge:5614808:BLLR-EN020:secret_rare",
@@ -11804,6 +12268,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:5786513:LEDE-EN052:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11823,6 +12290,9 @@
    "tcgDate": "2024-04-25"
   },
   {
+   "aliases": [
+    "Vampire Territory"
+   ],
    "archetypes": [
     "vampire"
    ],
@@ -12015,6 +12485,9 @@
    "tcgDate": "2014-11-06"
   },
   {
+   "aliases": [
+    "Mystic Mystery of the White Forest"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -12060,6 +12533,9 @@
    "passcode": 5800323,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:5800323:ALIN-EN041:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12709,6 +13185,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Magician the Magical Knight of Dragons"
+   ],
    "archetypes": [
     "dark-magician"
    ],
@@ -12856,10 +13335,7 @@
      "id": "dragons-of-legend-the-complete-series:5832914:DLCS-EN080:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221624,
-       222317,
-       222318,
-       222319
+       221624
       ]
      },
      "number": "DLCS-EN080",
@@ -12870,6 +13346,69 @@
       "match": "number+rarity",
       "name": "Toon Briefcase"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:5832914:DLCS-EN080:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222317
+      ]
+     },
+     "number": "DLCS-EN080",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Briefcase (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:5832914:DLCS-EN080:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222318
+      ]
+     },
+     "number": "DLCS-EN080",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Briefcase (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:5832914:DLCS-EN080:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222319
+      ]
+     },
+     "number": "DLCS-EN080",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Briefcase (Purple)"
+     },
+     "variant": "purple"
     }
    ],
    "tcgDate": "2015-07-16"
@@ -12979,6 +13518,9 @@
    "tcgDate": "2023-03-09"
   },
   {
+   "aliases": [
+    "Melffy God Mommy"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -13037,6 +13579,39 @@
     "Xyz",
     "Effect"
    ]
+  },
+  {
+   "aliases": [
+    "Splendor of the White Crow Witch"
+   ],
+   "archetypes": [
+    "winter-raven"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "5837376",
+   "identifiers": {
+    "konamiId": 23888,
+    "ygoprodeckId": 5837376
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/5837376.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/5837376.jpg",
+     "id": 5837376,
+     "small": "https://images.ygoprodeck.com/images/cards_small/5837376.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Continuous",
+   "name": "Splendor of the Winter Raven Witch",
+   "names": {
+    "en": "Splendor of the Winter Raven Witch"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 5837376,
+   "prints": []
   },
   {
    "archetypes": [
@@ -13147,6 +13722,9 @@
    "passcode": 5848934,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:5848934:DOOD-EN042:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13293,6 +13871,9 @@
    "tcgDate": "2010-11-06"
   },
   {
+   "aliases": [
+    "Xeno Meteoros"
+   ],
    "atk": 2000,
    "attribute": "fire",
    "def": 200,
@@ -13487,6 +14068,40 @@
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Arcana Force Ex - the Light Ruler"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:5861892:SGX4-ENB10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543768
+      ]
+     },
+     "number": "SGX4-ENB10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Arcana Force EX - The Light Ruler"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:5861892:SGX4-ENB10:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543837
+      ]
+     },
+     "number": "SGX4-ENB10",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Arcana Force EX - The Light Ruler (Secret Rare)"
      }
     },
     {
@@ -13824,6 +14439,9 @@
    "passcode": 5914858,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:5914858:BPRO-EN039:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13966,6 +14584,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:5916510:AGOV-EN095:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14148,6 +14769,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:5941982:DIFO-EN075:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14381,11 +15005,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:5973663:DL18-EN012:rare",
+     "number": "DL18-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:5973663:DL18-EN012:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94906,
-       94926,
-       94971,
+       94906
+      ]
+     },
+     "number": "DL18-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "The World Tree (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:5973663:DL18-EN012:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94926
+      ]
+     },
+     "number": "DL18-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "The World Tree (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:5973663:DL18-EN012:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94971
+      ]
+     },
+     "number": "DL18-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "The World Tree (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:5973663:DL18-EN012:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94972
       ]
      },
@@ -14393,10 +15075,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "The World Tree (Blue)"
-     }
+      "name": "The World Tree (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2008-11-01"
@@ -14625,6 +15309,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:5993144:PHNI-EN088:common",
      "identifiers": {
       "tcgplayerProductIds": [

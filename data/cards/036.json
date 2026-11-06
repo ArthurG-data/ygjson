@@ -93,6 +93,9 @@
    "tcgDate": "2014-11-06"
   },
   {
+   "aliases": [
+    "Null, Dreg of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -161,6 +164,9 @@
    ]
   },
   {
+   "aliases": [
+    "Jack A' Booran"
+   ],
    "atk": 1500,
    "attribute": "fire",
    "def": 2200,
@@ -492,6 +498,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cybers Wizard"
+   ],
    "atk": 1800,
    "attribute": "light",
    "def": 800,
@@ -800,11 +809,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:36042004:DL13-EN012:rare",
+     "number": "DL13-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:36042004:DL13-EN012:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77429,
-       80448,
-       80449,
+       80448
+      ]
+     },
+     "number": "DL13-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Babycerasaurus (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:36042004:DL13-EN012:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80449
+      ]
+     },
+     "number": "DL13-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Babycerasaurus (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:36042004:DL13-EN012:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80450
       ]
      },
@@ -812,10 +861,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Babycerasaurus (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:36042004:DL13-EN012:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77429
+      ]
+     },
+     "number": "DL13-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Babycerasaurus (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:36042004:LCJW-EN157:common",
@@ -834,6 +903,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:36042004:MGED-EN056:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -918,6 +990,40 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Babycerasaurus (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:36042004:SGX4-ENC05:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543783
+      ]
+     },
+     "number": "SGX4-ENC05",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Babycerasaurus"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:36042004:SGX4-ENC05:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544276
+      ]
+     },
+     "number": "SGX4-ENC05",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Babycerasaurus (Secret Rare)"
      }
     },
     {
@@ -1055,6 +1161,9 @@
    "tcgDate": "2012-11-09"
   },
   {
+   "aliases": [
+    "Magician's Unite"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "36045450",
@@ -1390,6 +1499,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 73"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -1613,6 +1725,9 @@
    "passcode": 36092504,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:36092504:BODE-EN098:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1632,6 +1747,9 @@
    "tcgDate": "2021-11-04"
   },
   {
+   "aliases": [
+    "Magistus Flame Zoroa"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -1901,6 +2019,23 @@
      "set": "duelist-revolution",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Amazoness Fighting Spirit"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:36100154:SBC2-ENH17:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600102
+      ]
+     },
+     "number": "SBC2-ENH17",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Amazoness Fighting Spirit"
      }
     },
@@ -2391,6 +2526,9 @@
    ]
   },
   {
+   "aliases": [
+    "Life Exstream"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "36148308",
@@ -2428,6 +2566,10 @@
    "passcode": 36148308,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:36148308:POTE-EN099:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2583,6 +2725,9 @@
    "tcgDate": "2015-11-05"
   },
   {
+   "aliases": [
+    "Rockband Groove - Xenoguitarm"
+   ],
    "atk": 1000,
    "attribute": "earth",
    "def": 2000,
@@ -2664,6 +2809,9 @@
    ]
   },
   {
+   "aliases": [
+    "World Legacy End Times"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -2724,6 +2872,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Philo, Messenger Fur Hire"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -2792,6 +2943,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bittron"
+   ],
    "atk": 200,
    "attribute": "earth",
    "def": 2000,
@@ -2947,6 +3101,9 @@
    "passcode": 36218106,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:36218106:DUAD-EN014:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3677,6 +3834,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Red-Eyes B. Chick"
+   ],
    "archetypes": [
     "red-eyes"
    ],
@@ -3859,6 +4019,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ars Magna of Infinity and Finity"
+   ],
    "archetypes": [
     "ars-magna"
    ],
@@ -4508,6 +4671,9 @@
    "passcode": 36320744,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:36320744:DUNE-EN040:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4524,6 +4690,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:36320744:DUNE-EN040:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4615,6 +4784,9 @@
    ]
   },
   {
+   "aliases": [
+    "Live☆Twin Kisikil"
+   ],
    "archetypes": [
     "live-twin"
    ],
@@ -4871,10 +5043,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:36328300:LDS1-EN117:ultra_rare",
+     "number": "LDS1-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:36328300:LDS1-EN117:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217414,
-       217415,
+       217414
+      ]
+     },
+     "number": "LDS1-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ultimate Crystal Magic (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:36328300:LDS1-EN117:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217415
+      ]
+     },
+     "number": "LDS1-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ultimate Crystal Magic (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:36328300:LDS1-EN117:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217416
       ]
      },
@@ -4882,10 +5104,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Ultimate Crystal Magic (Blue)"
-     }
+      "name": "Ultimate Crystal Magic (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "structure-deck-legend-of-the-crystal-beasts:36328300:SDCB-EN037:common",
@@ -5079,6 +5303,9 @@
    ]
   },
   {
+   "aliases": [
+    "Refined Ritual Art"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "36350300",
@@ -5378,6 +5605,40 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:36354007:SBC2-ENC01:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600175
+      ]
+     },
+     "number": "SBC2-ENC01",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gilford the Lightning"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:36354007:SBC2-ENC01:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600174
+      ]
+     },
+     "number": "SBC2-ENC01",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gilford the Lightning (PSR)"
+     }
+    },
+    {
      "id": "star-pack-2013:36354007:SP13-EN040:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5588,11 +5849,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:36361633:DL09-EN020:rare",
+     "number": "DL09-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:36361633:DL09-EN020:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77376,
-       77734,
-       77735,
+       77376
+      ]
+     },
+     "number": "DL09-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Threatening Roar (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:36361633:DL09-EN020:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77734
+      ]
+     },
+     "number": "DL09-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Threatening Roar (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:36361633:DL09-EN020:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77735
+      ]
+     },
+     "number": "DL09-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Threatening Roar (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:36361633:DL09-EN020:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77736
       ]
      },
@@ -5600,10 +5919,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Threatening Roar (Blue)"
-     }
+      "name": "Threatening Roar (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "flaming-eternity:36361633:FET-EN052:common",
@@ -6036,6 +6357,9 @@
    ]
   },
   {
+   "aliases": [
+    "Servist Puppet"
+   ],
    "archetypes": [
     "puppet"
    ],
@@ -6077,6 +6401,9 @@
    "passcode": 36400569,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:36400569:INFO-EN070:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6491,6 +6818,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:36426778:MGED-EN079:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6702,6 +7032,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:36436372:INFO-EN007:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7543,7 +7876,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 36494597,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:36494597:DUAD-EN060:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639397
+      ]
+     },
+     "number": "DUAD-EN060",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Teleport Fusion"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -7683,6 +8037,10 @@
    "passcode": 36521307,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:36521307:POTE-EN028:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8160,6 +8518,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragunity Knight - Gormfabal"
+   ],
    "archetypes": [
     "dragunity"
    ],
@@ -8541,6 +8902,9 @@
    ]
   },
   {
+   "aliases": [
+    "Despian of Tragedy"
+   ],
    "archetypes": [
     "despia"
    ],
@@ -8735,6 +9099,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:36584821:IOC-EN024:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9041,6 +9408,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:36591747:POTE-EN077:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9238,6 +9609,9 @@
    ]
   },
   {
+   "aliases": [
+    "Evil★Twin Lilla"
+   ],
    "archetypes": [
     "evil-twin"
    ],
@@ -9299,6 +9673,23 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Evil Twin Lil-la"
+     }
+    },
+    {
+     "id": "genesis-impact:36609518:GEIM-EN016:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       228646
+      ]
+     },
+     "number": "GEIM-EN016",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "genesis-impact",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Evil Twin Lil-la (CR)"
      }
     },
     {
@@ -9703,6 +10094,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dandy White Lion"
+   ],
    "atk": 300,
    "attribute": "earth",
    "def": 300,
@@ -9760,6 +10154,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:36629635:LEDE-EN097:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9885,6 +10282,9 @@
    ]
   },
   {
+   "aliases": [
+    "Curtain-Raiser of the Branded"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -10281,6 +10681,9 @@
    "tcgDate": "2018-02-01"
   },
   {
+   "aliases": [
+    "Regenesis Pentateuch"
+   ],
    "archetypes": [
     "regenesis"
    ],
@@ -10320,7 +10723,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 36672909,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:36672909:DUAD-EN063:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639400
+      ]
+     },
+     "number": "DUAD-EN063",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Regenesis Cycle"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -10547,6 +10971,23 @@
      "rarity": "common",
      "region": "PT",
      "set": "ots-tournament-pack-14-por"
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:36690018:SGX4-ENB17:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543775
+      ]
+     },
+     "number": "SGX4-ENB17",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Reversal of Fate"
+     }
     }
    ],
    "tcgDate": "2008-05-03"
@@ -10627,6 +11068,9 @@
    "tcgDate": "2015-05-14"
   },
   {
+   "aliases": [
+    "Bitlooper"
+   ],
    "atk": 1500,
    "attribute": "earth",
    "def": 2000,
@@ -10939,6 +11383,9 @@
    "tcgDate": "2015-07-16"
   },
   {
+   "aliases": [
+    "Pasto-Ral Theorealize"
+   ],
    "archetypes": [
     "theorealize"
    ],
@@ -11077,6 +11524,9 @@
    ]
   },
   {
+   "aliases": [
+    "Speedrift"
+   ],
    "archetypes": [
     "roid"
    ],
@@ -11601,6 +12051,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:36742774:DUNE-EN051:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11620,6 +12073,9 @@
    "tcgDate": "2023-07-27"
   },
   {
+   "aliases": [
+    "Vernalizer Fairy of Forests and Awakening"
+   ],
    "archetypes": [
     "vernusylph"
    ],
@@ -11665,6 +12121,10 @@
    "passcode": 36745317,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:36745317:POTE-EN017:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11872,6 +12332,9 @@
    ]
   },
   {
+   "aliases": [
+    "Armiryle the Starguide Dragon"
+   ],
    "atk": 1400,
    "attribute": "dark",
    "frame": "link",
@@ -12171,6 +12634,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rainbow Dragon, the Zenith Crystal Beast"
+   ],
    "archetypes": [
     "crystal-beast"
    ],
@@ -12427,6 +12893,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elemental HERO Grandman"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -12500,6 +12969,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sweet Room-Maid"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "36848764",
@@ -12554,6 +13026,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:36848764:AGOV-EN097:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12725,6 +13200,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:36857073:MGED-EN069:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12938,6 +13416,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mansion of the Underworld Dolls"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "36890111",
@@ -12992,6 +13473,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:36890111:INFO-EN056:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13011,6 +13495,9 @@
    "tcgDate": "2024-07-18"
   },
   {
+   "aliases": [
+    "Endless Emptiness"
+   ],
    "archetypes": [
     "timelord"
    ],
@@ -13323,6 +13810,9 @@
    "tcgDate": "2013-11-08"
   },
   {
+   "aliases": [
+    "The Worlds as One"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "36920182",
@@ -13377,6 +13867,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:36920182:DUNE-EN054:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13848,6 +14341,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:36974120:LEDE-EN087:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13864,6 +14360,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:36974120:LEDE-EN087:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13887,6 +14386,9 @@
    ]
   },
   {
+   "aliases": [
+    "Manhunt"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "36975314",
@@ -13998,6 +14500,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Gishki Icemirror"
+   ],
    "archetypes": [
     "gishki"
    ],
@@ -14039,6 +14544,9 @@
    "passcode": 36982581,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:36982581:PHHY-EN066:common",
      "identifiers": {
       "tcgplayerProductIds": [

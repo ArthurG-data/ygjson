@@ -4,6 +4,11 @@ import pytest
 
 import ygjson
 
+
+def test_print_id_adds_a_variant_only_when_there_is_one():
+    assert ygjson.print_id("lob", "1", "LOB-EN001", "rare") == "lob:1:LOB-EN001:rare"
+    assert ygjson.print_id("lob", "1", "LOB-EN001", "rare", "blue") == "lob:1:LOB-EN001:rare:blue"
+
 SET = "legend-of-blue-eyes-white-dragon"
 PRINT_A = f"{SET}:46986414:LOB-EN005:ultra_rare"
 PRINT_B = f"{SET}:46986414:LOB-EN005:common"

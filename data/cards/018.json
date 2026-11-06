@@ -249,6 +249,36 @@
    ]
   },
   {
+   "archetypes": [
+    "barian-s"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "18016631",
+   "identifiers": {
+    "konamiId": 23876,
+    "ygoprodeckId": 18016631
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/18016631.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/18016631.jpg",
+     "id": 18016631,
+     "small": "https://images.ygoprodeck.com/images/cards_small/18016631.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Normal",
+   "name": "Chaos Barian's Change",
+   "names": {
+    "en": "Chaos Barian's Change"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 18016631,
+   "prints": []
+  },
+  {
    "frame": "spell",
    "hasEffect": true,
    "id": "18027138",
@@ -611,6 +641,23 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Airknight Parshath (Secret)"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:18036057:SBC2-ENF08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600099
+      ]
+     },
+     "number": "SBC2-ENF08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Airknight Parshath"
      }
     },
     {
@@ -1370,6 +1417,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:18106132:BACH-EN094:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1563,6 +1613,9 @@
    "tcgDate": "2013-05-17"
   },
   {
+   "aliases": [
+    "Frightfur Vendor"
+   ],
    "archetypes": [
     "frightfur"
    ],
@@ -1731,6 +1784,24 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Harpie's Feather Duster (Starfoil)"
+     }
+    },
+    {
+     "id": "early-days-collection-promotional-cards:18144507:EDC1-EN001:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       621151,
+       621152
+      ]
+     },
+     "number": "EDC1-EN001",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "early-days-collection-promotional-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie's Feather Duster"
      }
     },
     {
@@ -1918,6 +1989,26 @@
      "editions": [
       "unlimited"
      ],
+     "id": "yu-gi-oh-the-falsebound-kingdom-promotional-cards:18144507:TFK-SP002:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       200195
+      ]
+     },
+     "number": "TFK-SP002",
+     "rarity": "super_rare",
+     "region": "SP",
+     "set": "yu-gi-oh-the-falsebound-kingdom-promotional-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie's Feather Duster (TFK-SP002)"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
      "id": "yu-gi-oh-world-championship-tournament-2004-promotional-cards:18144507:WC4-E003:prismatic_secret",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1955,6 +2046,9 @@
    "tcgDate": "2003-04-15"
   },
   {
+   "aliases": [
+    "Manadome Reframing"
+   ],
    "archetypes": [
     "mannadium"
    ],
@@ -2012,6 +2106,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:18158393:CYAC-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2245,6 +2342,9 @@
    "tcgDate": "2002-09-16"
   },
   {
+   "aliases": [
+    "Memento Dark Blade"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -2647,6 +2747,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:18176525:SUDA-EN091:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2716,6 +2819,9 @@
    ]
   },
   {
+   "aliases": [
+    "Oneiroi, the Dream Mirror Emissary"
+   ],
    "archetypes": [
     "dream-mirror"
    ],
@@ -3275,6 +3381,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prankids Ramp"
+   ],
    "archetypes": [
     "prank-kids"
    ],
@@ -3335,6 +3444,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:18236002:MGED-EN107:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3628,6 +3740,9 @@
    ]
   },
   {
+   "aliases": [
+    "Virtual World Gate - Zhuangwoo"
+   ],
    "archetypes": [
     "virtual-world",
     "virtual-world-gate"
@@ -4170,6 +4285,9 @@
    "passcode": 18300894,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:18300894:DOOD-EN088:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4267,6 +4385,9 @@
    "tcgDate": "2007-08-15"
   },
   {
+   "aliases": [
+    "Ukiyoe P.U.N.K. Carp Rising"
+   ],
    "archetypes": [
     "p-u-n-k"
    ],
@@ -4486,6 +4607,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mirror Master of the Ice Barrier"
+   ],
    "archetypes": [
     "ice-barrier"
    ],
@@ -4666,6 +4790,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hecahands Makibel"
+   ],
    "archetypes": [
     "hecahands"
    ],
@@ -5235,6 +5362,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hare the Sword Mikanko"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -5958,6 +6088,9 @@
    "tcgDate": "2019-09-26"
   },
   {
+   "aliases": [
+    "Thunder Dragon Streamer"
+   ],
    "archetypes": [
     "thunder-dragon"
    ],
@@ -6195,6 +6328,50 @@
    "tcgDate": "2013-03-07"
   },
   {
+   "aliases": [
+    "The Sun God's Destructor - Makyura"
+   ],
+   "archetypes": [
+    "sun-god"
+   ],
+   "atk": 1600,
+   "attribute": "dark",
+   "def": 1200,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "18446859",
+   "identifiers": {
+    "konamiId": 23813,
+    "ygoprodeckId": 18446859
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/18446859.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/18446859.jpg",
+     "id": 18446859,
+     "small": "https://images.ygoprodeck.com/images/cards_small/18446859.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Warrior",
+   "name": "Makyura, Destructor of the Sun God",
+   "names": {
+    "en": "Makyura, Destructor of the Sun God"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 18446859,
+   "prints": [],
+   "typeline": [
+    "Warrior",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "The Sleeping Beauty Tower of Nemleria"
+   ],
    "archetypes": [
     "nemurelia"
    ],
@@ -6236,6 +6413,9 @@
    "passcode": 18458255,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:18458255:CYAC-EN059:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6882,6 +7062,9 @@
    ]
   },
   {
+   "aliases": [
+    "Icejade Aegirine Rahn"
+   ],
    "archetypes": [
     "icejade"
    ],
@@ -6959,6 +7142,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:18494511:CYAC-EN010:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7236,6 +7422,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prankids Rocket"
+   ],
    "archetypes": [
     "prank-kids"
    ],
@@ -7296,6 +7485,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:18514525:MGED-EN111:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7423,6 +7615,9 @@
    "passcode": 18548966,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:18548966:DIFO-EN016:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8041,6 +8236,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cybernetic Revolution (card)"
+   ],
    "archetypes": [
     "cyber-dragon",
     "cybernetic"
@@ -8387,6 +8585,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fire King Avatar Ganesha"
+   ],
    "archetypes": [
     "fire-king",
     "fire-king-avatar"
@@ -8865,6 +9066,9 @@
    "tcgDate": "2013-01-25"
   },
   {
+   "aliases": [
+    "Despian Proscenium"
+   ],
    "archetypes": [
     "despia"
    ],
@@ -9335,6 +9539,9 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "Raremetalfoes Bismagia"
+   ],
    "archetypes": [
     "metalfoes"
    ],
@@ -9514,6 +9721,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:18720257:DIFO-EN063:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9600,6 +9810,9 @@
    ]
   },
   {
+   "aliases": [
+    "Astrolasma Urania"
+   ],
    "atk": 2400,
    "attribute": "light",
    "def": 1000,
@@ -10049,6 +10262,13 @@
     },
     {
      "id": "speed-duel-starter-decks-ultimate-predators:18756904:SS03-ENA22:common",
+     "number": "SS03-ENA22",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-starter-decks-ultimate-predators"
+    },
+    {
+     "id": "speed-duel-starter-decks-ultimate-predators:18756904:SS03-ENA22:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        196260
@@ -10058,13 +10278,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-starter-decks-ultimate-predators",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "White Elephant's Gift (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "id": "speed-duel-starter-decks-ultimate-predators:18756904:SS03-ENB24:common",
+     "number": "SS03-ENB24",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-starter-decks-ultimate-predators"
+    },
+    {
+     "id": "speed-duel-starter-decks-ultimate-predators:18756904:SS03-ENB24:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        196303
@@ -10074,10 +10303,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-starter-decks-ultimate-predators",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "White Elephant's Gift (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -10102,6 +10333,9 @@
    "tcgDate": "2010-11-06"
   },
   {
+   "aliases": [
+    "Crazy Clown"
+   ],
    "atk": 400,
    "attribute": "dark",
    "def": 200,
@@ -10144,6 +10378,9 @@
    "passcode": 18760514,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:18760514:DIFO-EN013:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10168,6 +10405,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dot Scraper"
+   ],
    "atk": 0,
    "attribute": "earth",
    "def": 2100,
@@ -10325,6 +10565,9 @@
    "passcode": 18795635,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:18795635:BPRO-EN096:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11026,6 +11269,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mauled Captain"
+   ],
    "atk": 400,
    "attribute": "earth",
    "def": 1200,
@@ -11170,6 +11416,9 @@
    ]
   },
   {
+   "aliases": [
+    "Minerva, Lightsworn Athena"
+   ],
    "archetypes": [
     "lightsworn"
    ],
@@ -11231,6 +11480,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:18843291:LEDE-EN043:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11247,6 +11499,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:18843291:LEDE-EN043:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11405,6 +11660,9 @@
    ]
   },
   {
+   "aliases": [
+    "Firewing Pegasus, the Crimson Heavenly Horse"
+   ],
    "atk": 2250,
    "attribute": "fire",
    "def": 1800,
@@ -11447,6 +11705,9 @@
    "passcode": 18861006,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:18861006:ALIN-EN032:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11611,6 +11872,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:18890039:BACH-EN090:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11866,6 +12130,9 @@
    "tcgDate": "2005-08-06"
   },
   {
+   "aliases": [
+    "D/D/D Superdoom King Darkness Armageddon"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d",
@@ -12175,6 +12442,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:18940556:MGED-EN014:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12262,6 +12532,9 @@
    ]
   },
   {
+   "aliases": [
+    "Flundereeze x Robina"
+   ],
    "archetypes": [
     "floowandereeze"
    ],
@@ -12323,6 +12596,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:18940725:BODE-EN013:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12535,10 +12811,7 @@
      "id": "dragons-of-legend-the-complete-series:18963306:DLCS-EN125:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221700,
-       222260,
-       222261,
-       222262
+       221700
       ]
      },
      "number": "DLCS-EN125",
@@ -12549,6 +12822,69 @@
       "match": "number+rarity",
       "name": "Galaxy-Eyes Cipher Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:18963306:DLCS-EN125:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222260
+      ]
+     },
+     "number": "DLCS-EN125",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Cipher Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:18963306:DLCS-EN125:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222261
+      ]
+     },
+     "number": "DLCS-EN125",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Cipher Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:18963306:DLCS-EN125:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222262
+      ]
+     },
+     "number": "DLCS-EN125",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Cipher Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:18963306:DRL3-EN029:secret_rare",
@@ -12856,6 +13192,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sangen Superdragon Transcend Dragion"
+   ],
    "archetypes": [
     "sangen"
    ],
@@ -12917,6 +13256,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:18969888:LEDE-EN040:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12973,6 +13315,9 @@
    ]
   },
   {
+   "aliases": [
+    "Paradise Branded"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -13218,6 +13563,26 @@
    },
    "passcode": 18988396,
    "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:18988396:DUAD-EN084:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639421
+      ]
+     },
+     "number": "DUAD-EN084",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Miracle Raven"
+     }
+    },
     {
      "id": "ots-tournament-pack-29:18988396:OP29-EN007:super_rare",
      "identifiers": {

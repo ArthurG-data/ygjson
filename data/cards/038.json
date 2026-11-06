@@ -52,6 +52,9 @@
    "tcgDate": "2026-10-08"
   },
   {
+   "aliases": [
+    "DoomZ Changer"
+   ],
    "archetypes": [
     "change"
    ],
@@ -86,6 +89,9 @@
    "passcode": 38007649,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:38007649:BPRO-EN055:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -589,11 +595,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:38033121:DL18-EN003:rare",
+     "number": "DL18-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:38033121:DL18-EN003:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94896,
-       94917,
-       94949,
+       94896
+      ]
+     },
+     "number": "DL18-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician Girl (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:38033121:DL18-EN003:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94917
+      ]
+     },
+     "number": "DL18-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician Girl (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:38033121:DL18-EN003:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94949
+      ]
+     },
+     "number": "DL18-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician Girl (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:38033121:DL18-EN003:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94950
       ]
      },
@@ -601,10 +665,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Dark Magician Girl (Blue)"
-     }
+      "name": "Dark Magician Girl (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-battle-city:38033121:DPBC-EN009:super_rare",
@@ -793,9 +859,7 @@
      "id": "legendary-duelists-season-3:38033121:LDS3-EN082:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276210,
-       276730,
-       276731
+       276210
       ]
      },
      "number": "LDS3-EN082",
@@ -806,6 +870,48 @@
       "match": "number+rarity",
       "name": "Dark Magician Girl"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:38033121:LDS3-EN082:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276730
+      ]
+     },
+     "number": "LDS3-EN082",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:38033121:LDS3-EN082:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276731
+      ]
+     },
+     "number": "LDS3-EN082",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "magician-s-force:38033121:MFC-000:secret_rare",
@@ -856,10 +962,51 @@
     },
     {
      "id": "quarter-century-bonanza:38033121:RA03-EN123:platinum_secret_rare",
+     "number": "RA03-EN123",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:38033121:RA03-EN123:platinum_secret_rare:a",
      "identifiers": {
       "tcgplayerProductIds": [
-       592812,
-       593847,
+       592812
+      ]
+     },
+     "number": "RA03-EN123",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (Platinum Secret Rare) (A)"
+     },
+     "variant": "a"
+    },
+    {
+     "id": "quarter-century-bonanza:38033121:RA03-EN123:platinum_secret_rare:b",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       593847
+      ]
+     },
+     "number": "RA03-EN123",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (Platinum Secret Rare) (B)"
+     },
+     "variant": "b"
+    },
+    {
+     "id": "quarter-century-bonanza:38033121:RA03-EN123:platinum_secret_rare:c",
+     "identifiers": {
+      "tcgplayerProductIds": [
        593848
       ]
      },
@@ -867,17 +1014,60 @@
      "rarity": "platinum_secret_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Dark Magician Girl (Platinum Secret Rare) (A)"
-     }
+      "name": "Dark Magician Girl (Platinum Secret Rare) (C)"
+     },
+     "variant": "c"
     },
     {
      "id": "quarter-century-bonanza:38033121:RA03-EN123:qc_secret_rare",
+     "number": "RA03-EN123",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:38033121:RA03-EN123:qc_secret_rare:a",
      "identifiers": {
       "tcgplayerProductIds": [
-       592813,
-       593849,
+       592813
+      ]
+     },
+     "number": "RA03-EN123",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (Quarter Century Secret Rare) (A)"
+     },
+     "variant": "a"
+    },
+    {
+     "id": "quarter-century-bonanza:38033121:RA03-EN123:qc_secret_rare:b",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       593849
+      ]
+     },
+     "number": "RA03-EN123",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (Quarter Century Secret Rare) (B)"
+     },
+     "variant": "b"
+    },
+    {
+     "id": "quarter-century-bonanza:38033121:RA03-EN123:qc_secret_rare:c",
+     "identifiers": {
+      "tcgplayerProductIds": [
        593850
       ]
      },
@@ -885,10 +1075,12 @@
      "rarity": "qc_secret_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Dark Magician Girl (Quarter Century Secret Rare) (A)"
-     }
+      "name": "Dark Magician Girl (Quarter Century Secret Rare) (C)"
+     },
+     "variant": "c"
     },
     {
      "id": "quarter-century-stampede:38033121:RA04-EN107:platinum_secret_rare",
@@ -976,6 +1168,40 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Dark Magician Girl"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:38033121:SBC2-ENA13:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600140
+      ]
+     },
+     "number": "SBC2-ENA13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician Girl"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:38033121:SBC2-ENA13:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600139
+      ]
+     },
+     "number": "SBC2-ENA13",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician Girl (PSR)"
      }
     },
     {
@@ -1107,6 +1333,40 @@
      }
     },
     {
+     "id": "world-championship-jpp-cards:38033121:2017-JPP01:ghost_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       194836
+      ]
+     },
+     "number": "2017-JPP01",
+     "rarity": "ghost_rare",
+     "region": "JP",
+     "set": "world-championship-jpp-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician Girl (Ghost Rare)"
+     }
+    },
+    {
+     "id": "world-championship-jpp-cards:38033121:2023-JPP001:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       721862
+      ]
+     },
+     "number": "2023-JPP001",
+     "rarity": "qc_secret_rare",
+     "region": "JP",
+     "set": "world-championship-jpp-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician Girl"
+     }
+    },
+    {
      "editions": [
       "first",
       "unlimited"
@@ -1166,6 +1426,16 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:38033121:YGLD-ENA04:common",
+     "number": "YGLD-ENA04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:38033121:YGLD-ENA04:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        615919
@@ -1175,16 +1445,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Dark Magician Girl (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:38033121:YGLD-ENB03:ultra_rare",
+     "number": "YGLD-ENB03",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:38033121:YGLD-ENB03:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615959
@@ -1194,16 +1476,28 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Dark Magician Girl (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:38033121:YGLD-ENC10:common",
+     "number": "YGLD-ENC10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:38033121:YGLD-ENC10:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        616007
@@ -1213,10 +1507,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Dark Magician Girl (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "editions": [
@@ -1224,6 +1520,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:38033121:YGLD-ENA04:common",
+     "number": "YGLD-ENA04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:38033121:YGLD-ENA04:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        108206
@@ -1233,10 +1540,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Dark Magician Girl (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
@@ -1244,6 +1553,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:38033121:YGLD-ENB03:ultra_rare",
+     "number": "YGLD-ENB03",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:38033121:YGLD-ENB03:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108246
@@ -1253,10 +1573,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Dark Magician Girl (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -1264,6 +1586,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:38033121:YGLD-ENC10:common",
+     "number": "YGLD-ENC10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:38033121:YGLD-ENC10:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        108294
@@ -1273,10 +1606,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Dark Magician Girl (C)"
-     }
+     },
+     "variant": "c"
     }
    ],
    "tcgDate": "2003-10-10",
@@ -1515,6 +1850,9 @@
    "passcode": 38044854,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:38044854:PHNI-EN056:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1698,6 +2036,9 @@
    "tcgDate": "2012-05-25"
   },
   {
+   "aliases": [
+    "Generaid Stage"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -1897,6 +2238,10 @@
    "passcode": 38082437,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:38082437:POTE-EN093:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2149,6 +2494,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mikumari the Sealing Deity Ashtra"
+   ],
    "archetypes": [
     "ashtra"
    ],
@@ -2594,6 +2942,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:38120068:SBC2-ENB15:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600324
+      ]
+     },
+     "number": "SBC2-ENB15",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Trade-In"
+     }
+    },
+    {
      "id": "structure-deck-blue-eyes-white-destiny:38120068:SDWD-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2729,6 +3094,9 @@
    ]
   },
   {
+   "aliases": [
+    "Double Trigger"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "38129297",
@@ -2760,6 +3128,9 @@
    "passcode": 38129297,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:38129297:BPRO-EN052:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3078,6 +3449,9 @@
    "tcgDate": "2008-01-26"
   },
   {
+   "aliases": [
+    "Arcjet Lightcrafter"
+   ],
    "atk": 0,
    "attribute": "light",
    "def": 2100,
@@ -3395,6 +3769,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:38192988:DIFO-EN039:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3976,6 +4353,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chimera the Illusion Magical Beast"
+   ],
    "atk": 3100,
    "attribute": "dark",
    "def": 2800,
@@ -4034,6 +4414,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:38264974:DUNE-EN034:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4648,11 +5031,51 @@
    "prints": [
     {
      "id": "duelist-league-3-participation-cards:38280762:DL12-EN009:rare",
+     "number": "DL12-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:38280762:DL12-EN009:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77406,
-       80379,
-       80380,
+       80379
+      ]
+     },
+     "number": "DL12-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Enishi, Shien's Chancellor (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:38280762:DL12-EN009:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80380
+      ]
+     },
+     "number": "DL12-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Enishi, Shien's Chancellor (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:38280762:DL12-EN009:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80381
       ]
      },
@@ -4660,10 +5083,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Enishi, Shien's Chancellor (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:38280762:DL12-EN009:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77406
+      ]
+     },
+     "number": "DL12-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Enishi, Shien's Chancellor (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gladiator-s-assault:38280762:GLAS-EN032:ultimate_rare",
@@ -5200,6 +5643,9 @@
    "tcgDate": "2018-02-01"
   },
   {
+   "aliases": [
+    "Akasuna the Golden Deity Asutra"
+   ],
    "archetypes": [
     "ashtra"
    ],
@@ -5484,6 +5930,9 @@
    ]
   },
   {
+   "aliases": [
+    "Troymare Unicorn"
+   ],
    "archetypes": [
     "knightmare"
    ],
@@ -5739,6 +6188,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:38342335:MGED-EN034:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5932,6 +6384,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gishki Grim"
+   ],
    "archetypes": [
     "gishki"
    ],
@@ -5993,6 +6448,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:38356857:PHHY-EN018:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6333,6 +6791,9 @@
    ]
   },
   {
+   "aliases": [
+    "Argostars - Eteo the Dragon Slayer"
+   ],
    "archetypes": [
     "argostars"
    ],
@@ -6374,6 +6835,9 @@
    "passcode": 38379052,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:38379052:SUDA-EN073:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6393,6 +6857,9 @@
    "tcgDate": "2025-01-23"
   },
   {
+   "aliases": [
+    "Extracaretops"
+   ],
    "atk": 100,
    "attribute": "earth",
    "def": 100,
@@ -6457,6 +6924,9 @@
    ]
   },
   {
+   "aliases": [
+    "Atlantis, the Dragon City"
+   ],
    "archetypes": [
     "atlantis-city-of-the-sea-dragon"
    ],
@@ -6508,6 +6978,9 @@
    "tcgDate": "2026-10-08"
   },
   {
+   "aliases": [
+    "Ojamatching"
+   ],
    "archetypes": [
     "armed-dragon"
    ],
@@ -6583,6 +7056,9 @@
    "tcgDate": "2018-02-22"
   },
   {
+   "aliases": [
+    "Kaminari Summer Vacation"
+   ],
    "atk": 1600,
    "attribute": "light",
    "frame": "link",
@@ -6708,6 +7184,9 @@
    "passcode": 38409239,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:38409239:DABL-EN090:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6890,6 +7369,9 @@
    "tcgDate": "2003-07-18"
   },
   {
+   "aliases": [
+    "Chosai the Ghost Blocker"
+   ],
    "atk": 1900,
    "attribute": "dark",
    "def": 800,
@@ -6931,6 +7413,9 @@
    "passcode": 38412161,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:38412161:DIFO-EN093:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7009,6 +7494,9 @@
    "passcode": 38423248,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:38423248:BPRO-EN100:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7025,6 +7513,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:38423248:BPRO-EN100:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7183,6 +7674,9 @@
    "tcgDate": "2006-05-17"
   },
   {
+   "aliases": [
+    "Tearalaments Metanoise"
+   ],
    "archetypes": [
     "tearlaments"
    ],
@@ -7224,6 +7718,10 @@
    "passcode": 38436986,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:38436986:POTE-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7595,6 +8093,45 @@
    ]
   },
   {
+   "archetypes": [
+    "reindsurm"
+   ],
+   "atk": 3000,
+   "attribute": "fire",
+   "def": 1100,
+   "frame": "ritual",
+   "hasEffect": true,
+   "id": "38478224",
+   "identifiers": {
+    "konamiId": 23838,
+    "ygoprodeckId": 38478224
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/38478224.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/38478224.jpg",
+     "id": 38478224,
+     "small": "https://images.ygoprodeck.com/images/cards_small/38478224.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Insect",
+   "name": "Reindsurm Gigalovendra",
+   "names": {
+    "en": "Reindsurm Gigalovendra"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 38478224,
+   "prints": [],
+   "typeline": [
+    "Insect",
+    "Ritual",
+    "Effect"
+   ]
+  },
+  {
    "atk": 1600,
    "attribute": "earth",
    "def": 1200,
@@ -7921,6 +8458,9 @@
    "passcode": 38491852,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:38491852:LEDE-EN065:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8185,6 +8725,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:38495396:MGED-EN139:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8226,6 +8769,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mekk-Knight World Scars"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -8316,6 +8862,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mashimarshmallon"
+   ],
    "archetypes": [
     "shining-sarcophagus"
    ],
@@ -8377,6 +8926,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:38505587:LEDE-EN005:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8400,6 +8952,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sinful Spoils of Betrayal - Silvia"
+   ],
    "archetypes": [
     "sinful-spoils"
    ],
@@ -8457,6 +9012,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:38511382:AGOV-EN074:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8671,10 +9229,7 @@
      "id": "legendary-duelists-season-2:38517737:LDS2-EN008:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230230,
-       230757,
-       230758,
-       230759
+       230230
       ]
      },
      "number": "LDS2-EN008",
@@ -8685,6 +9240,60 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Alternative White Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:38517737:LDS2-EN008:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230757
+      ]
+     },
+     "number": "LDS2-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Alternative White Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:38517737:LDS2-EN008:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230758
+      ]
+     },
+     "number": "LDS2-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Alternative White Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:38517737:LDS2-EN008:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230759
+      ]
+     },
+     "number": "LDS2-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Alternative White Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "structure-deck-blue-eyes-white-destiny:38517737:SDWD-EN005:common",
@@ -8700,6 +9309,23 @@
      "set": "structure-deck-blue-eyes-white-destiny",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Blue-Eyes Alternative White Dragon"
+     }
+    },
+    {
+     "id": "world-championship-jpp-cards:38517737:2017-JPP02:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       194837
+      ]
+     },
+     "number": "2017-JPP02",
+     "rarity": "secret_rare",
+     "region": "JP",
+     "set": "world-championship-jpp-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Blue-Eyes Alternative White Dragon"
      }
     },
@@ -9676,6 +10302,9 @@
    "tcgDate": "2009-05-02"
   },
   {
+   "aliases": [
+    "Phantasmal Miscellasaurus"
+   ],
    "atk": 1800,
    "attribute": "fire",
    "def": 1000,
@@ -10249,6 +10878,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cubic Omen"
+   ],
    "archetypes": [
     "cubic"
    ],
@@ -10308,6 +10940,9 @@
    "tcgDate": "2020-03-19"
   },
   {
+   "aliases": [
+    "Do it Early, Do it Together"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "38625110",
@@ -10346,6 +10981,9 @@
    "passcode": 38625110,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:38625110:ALIN-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10365,6 +11003,9 @@
    "tcgDate": "2025-05-01"
   },
   {
+   "aliases": [
+    "Dinorphia Diplos"
+   ],
    "archetypes": [
     "dinomorphia"
    ],
@@ -10426,6 +11067,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:38628859:BACH-EN010:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10507,6 +11151,9 @@
    "tcgDate": "2012-01-14"
   },
   {
+   "aliases": [
+    "Azamina Elzette of the White Forest"
+   ],
    "archetypes": [
     "azamina"
    ],
@@ -10571,6 +11218,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:38648860:SUDA-EN008:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10587,6 +11237,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:38648860:SUDA-EN008:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10735,6 +11388,9 @@
    "passcode": 38669664,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:38669664:SUDA-EN059:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10812,6 +11468,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:38670435:IOC-EN075:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10890,6 +11549,26 @@
      "set": "speed-duel-starter-decks-ultimate-predators",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Black Tyranno"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:38670435:STP7-EN019:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544982
+      ]
+     },
+     "number": "STP7-EN019",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Black Tyranno"
      }
     },
@@ -11091,6 +11770,9 @@
    "tcgDate": "2009-05-02"
   },
   {
+   "aliases": [
+    "Volnyiges the Black Lava Dragoon"
+   ],
    "atk": 2500,
    "attribute": "dark",
    "def": 2100,
@@ -11895,6 +12577,9 @@
    ]
   },
   {
+   "aliases": [
+    "Madolche Mewgnard Meowcaron"
+   ],
    "archetypes": [
     "madolche"
    ],
@@ -11960,6 +12645,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:38745241:INFO-EN050:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11984,6 +12672,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dracoback the Dragon Steed"
+   ],
    "archetypes": [
     "adventurer-token"
    ],
@@ -12142,6 +12833,9 @@
    ]
   },
   {
+   "aliases": [
+    "Burgesstoma Dinomischus"
+   ],
    "archetypes": [
     "paleozoic"
    ],
@@ -12276,6 +12970,9 @@
    "tcgDate": "2016-11-03"
   },
   {
+   "aliases": [
+    "The Caveman that Awoke after a Millennium"
+   ],
    "archetypes": [
     "millennium",
     "sennen"
@@ -12338,6 +13035,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:38775407:INFO-EN001:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12354,6 +13054,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:38775407:INFO-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12377,6 +13080,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unleashing the Sacred Beasts"
+   ],
    "archetypes": [
     "phantasm"
    ],
@@ -12487,6 +13193,9 @@
    "tcgDate": "2014-01-24"
   },
   {
+   "aliases": [
+    "Tune Knight"
+   ],
    "atk": 500,
    "attribute": "fire",
    "def": 500,
@@ -12645,6 +13354,9 @@
    "tcgDate": "2018-10-18"
   },
   {
+   "aliases": [
+    "Fire King Combined Strike"
+   ],
    "archetypes": [
     "fire-king"
    ],
@@ -12705,6 +13417,9 @@
    "tcgDate": "2023-12-07"
   },
   {
+   "aliases": [
+    "Albion the Incandescent Dragon"
+   ],
    "archetypes": [
     "albaz-dragon"
    ],
@@ -12766,6 +13481,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:38811586:CYAC-EN035:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13020,6 +13738,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:38814750:MGED-EN012:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13786,6 +14507,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infernity Hell Archfiend"
+   ],
    "archetypes": [
     "infernity"
    ],
@@ -13870,6 +14594,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fire King Avatar Hanuman"
+   ],
    "archetypes": [
     "fire-king"
    ],
@@ -14020,6 +14747,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lafarl, Hero of the Skyfang Brigade"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -14163,6 +14893,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spell Power Control"
+   ],
    "archetypes": [
     "endymion"
    ],

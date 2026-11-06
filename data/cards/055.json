@@ -705,6 +705,9 @@
    "tcgDate": "2012-02-03"
   },
   {
+   "aliases": [
+    "Security Force Chase"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -765,6 +768,9 @@
    "tcgDate": "2021-06-03"
   },
   {
+   "aliases": [
+    "Orphegel Core"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -1055,6 +1061,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 19"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -1127,6 +1136,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witchcraft Masterpiece"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -1250,6 +1262,9 @@
    "passcode": 55088578,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:55088578:DOOD-EN007:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1772,6 +1787,9 @@
    "passcode": 55125728,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:55125728:DABL-EN025:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2273,6 +2291,9 @@
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "Tremolat of the Icejade"
+   ],
    "archetypes": [
     "icejade"
    ],
@@ -2334,6 +2355,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:55151012:BODE-EN010:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2449,6 +2473,9 @@
    "tcgDate": "2011-02-08"
   },
   {
+   "aliases": [
+    "Ryu-Ge Ascension Gate of Wyrmhaze"
+   ],
    "archetypes": [
     "ryu-ge"
    ],
@@ -2525,6 +2552,9 @@
    "tcgDate": "2024-12-05"
   },
   {
+   "aliases": [
+    "Fusion Recruitment"
+   ],
    "archetypes": [
     "polymerization"
    ],
@@ -2565,6 +2595,9 @@
    "passcode": 55158350,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:55158350:DOOD-EN070:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2584,6 +2617,9 @@
    "tcgDate": "2025-09-25"
   },
   {
+   "aliases": [
+    "Galaxy Braver"
+   ],
    "archetypes": [
     "photon"
    ],
@@ -2774,6 +2810,40 @@
       "match": "number+rarity",
       "name": "Elemental Hero Aqua Neos"
      }
+    },
+    {
+     "id": "redemption-replacement:55171412:POTD-EN031K:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       246235
+      ]
+     },
+     "number": "POTD-EN031K",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "redemption-replacement",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental Hero Aqua Neos (POTD-EN031K)"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:55171412:SGX4-ENA21:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543753
+      ]
+     },
+     "number": "SGX4-ENA21",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental HERO Aqua Neos"
+     }
     }
    ],
    "tcgDate": "2006-08-16",
@@ -2835,8 +2905,7 @@
      "id": "battles-of-legend-chapter-1:55204071:BLC1-EN040:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538512,
-       538673
+       538512
       ]
      },
      "number": "BLC1-EN040",
@@ -2847,6 +2916,27 @@
       "match": "number+rarity",
       "name": "Gimmick Puppet Nightmare"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:55204071:BLC1-EN040:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538673
+      ]
+     },
+     "number": "BLC1-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gimmick Puppet Nightmare (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "number-hunters:55204071:NUMH-EN009:super_rare",
@@ -2915,6 +3005,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dodoremichord Cutea"
+   ],
    "archetypes": [
     "solfachord"
    ],
@@ -3203,6 +3296,9 @@
    "tcgDate": "2003-03-01"
   },
   {
+   "aliases": [
+    "Palladion of the Fiendish Illusion"
+   ],
    "archetypes": [
     "crusadia"
    ],
@@ -3435,6 +3531,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:55256016:SBC2-ENG19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600215
+      ]
+     },
+     "number": "SBC2-ENG19",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Judgment of Anubis"
+     }
+    },
+    {
      "id": "speed-duel-gx-midterm-paradox:55256016:SGX2-END19:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3454,6 +3567,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Amaze Ɐttraction Rapid Racing"
+   ],
    "archetypes": [
     "attraction"
    ],
@@ -3568,6 +3684,9 @@
    "tcgDate": "2011-11-10"
   },
   {
+   "aliases": [
+    "Memento Horn Dragon"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -3636,6 +3755,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ecclesia, the Virtuous in White"
+   ],
    "atk": 1500,
    "attribute": "light",
    "def": 1500,
@@ -3694,6 +3816,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:55273560:BODE-EN007:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3710,6 +3835,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:55273560:BODE-EN007:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3724,6 +3852,27 @@
       "match": "number+rarity",
       "name": "Incredible Ecclesia, the Virtuous (Starlight Rare)"
      }
+    },
+    {
+     "id": "magnificent-maestros:55273560:MAMS-EN034:secret_rare",
+     "number": "MAMS-EN034",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:55273560:MAMS-EN034:starlight_rare",
+     "number": "MAMS-EN034",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:55273560:MAMS-EN034:ultra_rare",
+     "number": "MAMS-EN034",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     },
     {
      "id": "magnificent-mavens:55273560:MAMA-EN059:ultra_rare",
@@ -3782,6 +3931,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ryu-Ge Ascension Crest of Transmigration"
+   ],
    "archetypes": [
     "ryu-ge"
    ],
@@ -4244,6 +4396,9 @@
    ]
   },
   {
+   "aliases": [
+    "Darklord of Delight"
+   ],
    "archetypes": [
     "darklord"
    ],
@@ -4433,6 +4588,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crusade Palladion"
+   ],
    "archetypes": [
     "crusadia"
    ],
@@ -4509,6 +4667,9 @@
    "tcgDate": "2018-07-26"
   },
   {
+   "aliases": [
+    "Bad-Ass Goblin Bikers"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -4571,6 +4732,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:55320758:ROTA-EN012:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4887,6 +5051,9 @@
    ]
   },
   {
+   "aliases": [
+    "Malefic Red-Eyes B. Dragon"
+   ],
    "archetypes": [
     "malefic"
    ],
@@ -4988,6 +5155,9 @@
    ]
   },
   {
+   "aliases": [
+    "Icejade Cradel"
+   ],
    "archetypes": [
     "icejade"
    ],
@@ -5045,6 +5215,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:55343303:BODE-EN056:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5170,6 +5343,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "King Rex the Twin-Headed Dragon"
+   ],
    "atk": 1600,
    "attribute": "earth",
    "def": 1200,
@@ -5228,6 +5404,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:55349196:DUNE-EN007:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5337,6 +5516,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pup Prize"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "55351724",
@@ -5449,6 +5631,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:55359571:INFO-EN087:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5724,6 +5909,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:55397172:SUDA-EN093:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5898,10 +6086,7 @@
      "id": "legendary-duelists-season-2:55410871:LDS2-EN016:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230242,
-       230769,
-       230770,
-       230771
+       230242
       ]
      },
      "number": "LDS2-EN016",
@@ -5912,6 +6097,60 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Chaos MAX Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:55410871:LDS2-EN016:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230769
+      ]
+     },
+     "number": "LDS2-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Chaos MAX Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:55410871:LDS2-EN016:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230770
+      ]
+     },
+     "number": "LDS2-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Chaos MAX Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:55410871:LDS2-EN016:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230771
+      ]
+     },
+     "number": "LDS2-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Chaos MAX Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-white-dragon-abyss:55410871:LED3-EN000:ultra_rare",
@@ -6239,6 +6478,9 @@
    "passcode": 55421040,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:55421040:DOOD-EN086:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6258,6 +6500,9 @@
    "tcgDate": "2025-09-25"
   },
   {
+   "aliases": [
+    "Leo Wizard, the Dark Mage"
+   ],
    "atk": 1350,
    "attribute": "dark",
    "def": 1200,
@@ -6300,6 +6545,9 @@
    "passcode": 55423549,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:55423549:DUAD-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6933,6 +7181,9 @@
    ]
   },
   {
+   "aliases": [
+    "Berfomet the Great Wings"
+   ],
    "atk": 1400,
    "attribute": "dark",
    "def": 1800,
@@ -6991,6 +7242,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:55461744:DUNE-EN004:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7069,6 +7323,9 @@
    "tcgDate": "2009-02-24"
   },
   {
+   "aliases": [
+    "Number 98"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -7156,6 +7413,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sangen Fuuro"
+   ],
    "archetypes": [
     "sangen"
    ],
@@ -7213,6 +7473,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:55484152:ROTA-EN061:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7439,6 +7702,9 @@
    ]
   },
   {
+   "aliases": [
+    "Floowandereeze and the Unknown Wind"
+   ],
    "archetypes": [
     "floowandereeze"
    ],
@@ -7496,6 +7762,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:55521751:BODE-EN059:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7574,6 +7843,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:55537983:INFO-EN090:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7590,6 +7862,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:55537983:INFO-EN090:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7935,6 +8210,23 @@
       "match": "number+rarity",
       "name": "Thunderspeed Summon"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:55557574:SBC2-ENA16:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600320
+      ]
+     },
+     "number": "SBC2-ENA16",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Thunderspeed Summon"
+     }
     }
    ],
    "tcgDate": "2021-07-08"
@@ -8135,6 +8427,9 @@
    "tcgDate": "2018-02-01"
   },
   {
+   "aliases": [
+    "Purery Delicious Memory"
+   ],
    "archetypes": [
     "purrely"
    ],
@@ -8211,6 +8506,9 @@
    "tcgDate": "2023-01-19"
   },
   {
+   "aliases": [
+    "Misstic Call"
+   ],
    "atk": 1600,
    "attribute": "water",
    "def": 800,
@@ -8382,11 +8680,51 @@
    "prints": [
     {
      "id": "duelist-league-15-participation-cards:55589254:DL15-EN005:rare",
+     "number": "DL15-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:55589254:DL15-EN005:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80081,
-       80082,
-       80083,
+       80081
+      ]
+     },
+     "number": "DL15-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Frost and Flame Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:55589254:DL15-EN005:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80082
+      ]
+     },
+     "number": "DL15-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Frost and Flame Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:55589254:DL15-EN005:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80084
       ]
      },
@@ -8394,10 +8732,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Frost and Flame Dragon (Blue)"
-     }
+      "name": "Frost and Flame Dragon (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:55589254:DL15-EN005:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80083
+      ]
+     },
+     "number": "DL15-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Frost and Flame Dragon (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "speed-duel-gx-midterm-paradox:55589254:SGX2-ENE04:common",
@@ -8439,6 +8797,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thunder Dragon Aeon"
+   ],
    "archetypes": [
     "thunder-dragon"
    ],
@@ -8790,6 +9151,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:55610199:POTE-EN044:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9813,6 +10178,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:55697723:ROTA-EN001:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9829,6 +10197,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:55697723:ROTA-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9852,6 +10223,9 @@
    ]
   },
   {
+   "aliases": [
+    "Selkie the Living Memory"
+   ],
    "atk": 800,
    "attribute": "dark",
    "def": 0,
@@ -9978,10 +10352,7 @@
      "id": "legendary-duelists-season-2:55704856:LDS2-EN035:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230269,
-       230793,
-       230794,
-       230795
+       230269
       ]
      },
      "number": "LDS2-EN035",
@@ -9992,6 +10363,60 @@
       "match": "number+rarity",
       "name": "Cyberload Fusion"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:55704856:LDS2-EN035:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230793
+      ]
+     },
+     "number": "LDS2-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyberload Fusion (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:55704856:LDS2-EN035:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230794
+      ]
+     },
+     "number": "LDS2-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyberload Fusion (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:55704856:LDS2-EN035:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230795
+      ]
+     },
+     "number": "LDS2-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyberload Fusion (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-white-dragon-abyss:55704856:LED3-EN014:super_rare",
@@ -10398,6 +10823,60 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:55713623:SBC2-ENB11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600289
+      ]
+     },
+     "number": "SBC2-ENB11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Shrink"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:55713623:SBC2-ENB11:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600288
+      ]
+     },
+     "number": "SBC2-ENB11",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Shrink (PSR)"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:55713623:STP7-EN027:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544990
+      ]
+     },
+     "number": "STP7-EN027",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Shrink"
+     }
+    },
+    {
      "id": "starter-deck-kaiba-reloaded:55713623:YSKR-EN037:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10465,6 +10944,9 @@
    "tcgDate": "2006-05-06"
   },
   {
+   "aliases": [
+    "Prankids Drop"
+   ],
    "archetypes": [
     "prank-kids"
    ],
@@ -10525,6 +11007,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:55725117:MGED-EN108:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10548,6 +11033,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 96"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -10735,6 +11223,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:55733143:ROTA-EN096:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10751,6 +11242,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:55733143:ROTA-EN096:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10764,6 +11258,26 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mimighoul Charm"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "rage-of-the-abyss:55733143:ROTA-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592023
+      ]
+     },
+     "number": "ROTA-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "rage-of-the-abyss",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mimighoul Charm (ROTA-ENSP1)"
      }
     }
    ],
@@ -11034,6 +11548,9 @@
    "tcgDate": "2014-05-16"
   },
   {
+   "aliases": [
+    "Olifant"
+   ],
    "archetypes": [
     "roland"
    ],
@@ -11618,6 +12135,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fabled Regicide"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -12223,6 +12743,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:55795155:AGOV-EN047:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12545,6 +13068,9 @@
    "tcgDate": "2012-02-03"
   },
   {
+   "aliases": [
+    "Krawler Palladion"
+   ],
    "archetypes": [
     "krawler"
    ],
@@ -13051,6 +13577,9 @@
    ]
   },
   {
+   "aliases": [
+    "Levionia the Primordial Chaos Dragon"
+   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 0,
@@ -13328,6 +13857,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C106"
+   ],
    "archetypes": [
     "hand",
     "number-10x",
@@ -13552,6 +14084,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 56"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -13623,6 +14158,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ursarctic Mictanus"
+   ],
    "archetypes": [
     "ursarctic"
    ],
@@ -13745,6 +14283,9 @@
    "tcgDate": "2006-05-01"
   },
   {
+   "aliases": [
+    "Enneacraft θ' \"oknirIA\""
+   ],
    "archetypes": [
     "enneacraft"
    ],
@@ -14228,6 +14769,9 @@
    "tcgDate": "2006-02-18"
   },
   {
+   "aliases": [
+    "Huginn, Wings of the Mysterune"
+   ],
    "archetypes": [
     "runick"
    ],
@@ -14489,6 +15033,9 @@
    "tcgDate": "2003-06-06"
   },
   {
+   "aliases": [
+    "Performapal Handsome Liger"
+   ],
    "archetypes": [
     "performapal"
    ],

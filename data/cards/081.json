@@ -205,6 +205,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ween the Great Spirit of Treats"
+   ],
    "atk": 0,
    "attribute": "light",
    "def": 0,
@@ -247,6 +250,9 @@
    "passcode": 81005500,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:81005500:SUDA-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -270,6 +276,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cheerful Melffys"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -347,6 +356,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:81019803:POTE-EN045:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -885,6 +898,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:81035362:SBC2-ENE07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600165
+      ]
+     },
+     "number": "SBC2-ENE07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Fiendish Rhino Warrior"
+     }
+    },
+    {
      "id": "structure-deck-lair-of-darkness:81035362:SR06-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -908,6 +938,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dream Mirror Dreamrecalling"
+   ],
    "archetypes": [
     "dream-mirror"
    ],
@@ -968,6 +1001,9 @@
    "tcgDate": "2021-02-04"
   },
   {
+   "aliases": [
+    "Performapal Return Tantan"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -1440,6 +1476,9 @@
    "tcgDate": "2011-06-10"
   },
   {
+   "aliases": [
+    "Live☆Twin Lilla Treat"
+   ],
    "archetypes": [
     "lil-la"
    ],
@@ -1601,6 +1640,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:81096431:ROTA-EN002:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1624,6 +1666,9 @@
    ]
   },
   {
+   "aliases": [
+    "Noctilucent Train Bleu Traveler"
+   ],
    "archetypes": [
     "train"
    ],
@@ -1958,6 +2003,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prankids Pulse"
+   ],
    "archetypes": [
     "prank-kids"
    ],
@@ -2018,6 +2066,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:81119816:MGED-EN109:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2211,6 +2262,9 @@
    "tcgDate": "2010-02-12"
   },
   {
+   "aliases": [
+    "Tragic Twin Threads"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "81143465",
@@ -2248,6 +2302,9 @@
    "passcode": 81143465,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:81143465:DOOD-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2764,6 +2821,9 @@
    "tcgDate": "2022-01-27"
   },
   {
+   "aliases": [
+    "Eternal Evolution Burst"
+   ],
    "archetypes": [
     "cyber-dragon"
    ],
@@ -2885,6 +2945,9 @@
    "passcode": 81196066,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:81196066:DUAD-EN031:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3369,6 +3432,16 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:81210420:YGLD-ENA38:common",
+     "number": "YGLD-ENA38",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:81210420:YGLD-ENA38:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        615953
@@ -3378,16 +3451,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Magical Hats (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:81210420:YGLD-ENB34:common",
+     "number": "YGLD-ENB34",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:81210420:YGLD-ENB34:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615990
@@ -3397,10 +3482,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Magical Hats (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -3408,6 +3495,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:81210420:YGLD-ENA38:common",
+     "number": "YGLD-ENA38",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:81210420:YGLD-ENA38:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        108240
@@ -3417,10 +3515,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Magical Hats (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
@@ -3428,6 +3528,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:81210420:YGLD-ENB34:common",
+     "number": "YGLD-ENB34",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:81210420:YGLD-ENB34:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108277
@@ -3437,10 +3548,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Magical Hats (B)"
-     }
+     },
+     "variant": "b"
     }
    ],
    "tcgDate": "2002-10-20"
@@ -3700,6 +3813,9 @@
    "tcgDate": "2014-07-10"
   },
   {
+   "aliases": [
+    "Enneacraft - Archaη.TAIL"
+   ],
    "archetypes": [
     "enneacraft"
    ],
@@ -3872,6 +3988,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mikanko of the Oohime"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -3976,6 +4095,9 @@
    ]
   },
   {
+   "aliases": [
+    "Huldra the Hidden"
+   ],
    "atk": 1500,
    "attribute": "dark",
    "def": 2400,
@@ -4600,6 +4722,9 @@
    ]
   },
   {
+   "aliases": [
+    "Return of the World"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "81306186",
@@ -4782,6 +4907,23 @@
       "match": "number+rarity",
       "name": "Nightmare Penguin"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:81306586:SBC2-ENI13:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600255
+      ]
+     },
+     "number": "SBC2-ENI13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Nightmare Penguin"
+     }
     }
    ],
    "tcgDate": "2004-11-20",
@@ -4791,6 +4933,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ursarctic Micbilis"
+   ],
    "archetypes": [
     "ursarctic"
    ],
@@ -4981,6 +5126,9 @@
    "tcgDate": "2003-10-10"
   },
   {
+   "aliases": [
+    "Number 30"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -5319,6 +5467,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bajilius, Retainer of the Evil Eye"
+   ],
    "archetypes": [
     "evil-eye"
    ],
@@ -6131,6 +6282,9 @@
    ]
   },
   {
+   "aliases": [
+    "Imperial Dragon the Primoredial Dragon"
+   ],
    "archetypes": [
     "primite"
    ],
@@ -6192,6 +6346,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:81418467:ROTA-EN013:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6208,6 +6365,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:81418467:ROTA-EN013:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6870,7 +7030,31 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:81439173:SBC2-ENE21:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600170
+      ]
+     },
+     "number": "SBC2-ENE21",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Foolish Burial"
+     }
+    },
+    {
      "id": "speed-duel-gx-duelists-of-shadows:81439173:SGX3-ENC16:common",
+     "number": "SGX3-ENC16",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duelists-of-shadows"
+    },
+    {
+     "id": "speed-duel-gx-duelists-of-shadows:81439173:SGX3-ENC16:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        489426
@@ -6880,13 +7064,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duelists-of-shadows",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Foolish Burial (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:81439173:SGX3-ENE13:common",
+     "number": "SGX3-ENE13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duelists-of-shadows"
+    },
+    {
+     "id": "speed-duel-gx-duelists-of-shadows:81439173:SGX3-ENE13:common:e",
      "identifiers": {
       "tcgplayerProductIds": [
        489465
@@ -6896,9 +7089,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duelists-of-shadows",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Foolish Burial (E)"
+     },
+     "variant": "e"
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:81439173:SGX4-END15:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543814
+      ]
+     },
+     "number": "SGX4-END15",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Foolish Burial"
      }
     },
     {
@@ -6914,6 +7126,26 @@
      "set": "speed-duel-streets-of-battle-city",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Foolish Burial"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:81439173:STP7-EN004:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544967
+      ]
+     },
+     "number": "STP7-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Foolish Burial"
      }
     },
@@ -7103,6 +7335,9 @@
    "tcgDate": "2011-11-10"
   },
   {
+   "aliases": [
+    "Blackwing - Simoom the Poison Winds"
+   ],
    "archetypes": [
     "blackwing"
    ],
@@ -7295,10 +7530,7 @@
      "id": "legendary-duelists-season-2:81470373:LDS2-EN040:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230275,
-       230796,
-       230797,
-       230798
+       230275
       ]
      },
      "number": "LDS2-EN040",
@@ -7309,6 +7541,60 @@
       "match": "number+rarity",
       "name": "Blackwing - Simoon the Poison Wind"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:81470373:LDS2-EN040:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230796
+      ]
+     },
+     "number": "LDS2-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blackwing - Simoon the Poison Wind (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:81470373:LDS2-EN040:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230797
+      ]
+     },
+     "number": "LDS2-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blackwing - Simoon the Poison Wind (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:81470373:LDS2-EN040:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230798
+      ]
+     },
+     "number": "LDS2-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blackwing - Simoon the Poison Wind (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-white-dragon-abyss:81470373:LED3-EN024:super_rare",
@@ -7420,6 +7706,9 @@
    ]
   },
   {
+   "aliases": [
+    "Serpent Night Dragon, the Wicked Dragon"
+   ],
    "atk": 2350,
    "attribute": "dark",
    "def": 2400,
@@ -7462,6 +7751,9 @@
    "passcode": 81476402,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:81476402:ALIN-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7606,6 +7898,26 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Barrel Dragon"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "hidden-arsenal-chapter-1:81480461:HAC1-EN006:dt_ultra_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       264863
+      ]
+     },
+     "number": "HAC1-EN006",
+     "rarity": "dt_ultra_parallel",
+     "region": "EN",
+     "set": "hidden-arsenal-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Barrel Dragon (Duel Terminal)"
      }
     },
     {
@@ -7817,6 +8129,22 @@
       "match": "number-other-set",
       "name": "Barrel Dragon"
      }
+    },
+    {
+     "id": "the-valuable-book-volume-5:81480461:VB5-003:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       79676
+      ]
+     },
+     "number": "VB5-003",
+     "rarity": "secret_rare",
+     "set": "the-valuable-book-volume-5",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Barrel Dragon"
+     }
     }
    ],
    "tcgDate": "2002-06-26",
@@ -7826,6 +8154,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fluffal Patchwork"
+   ],
    "archetypes": [
     "fluffal"
    ],
@@ -7947,11 +8278,69 @@
    "prints": [
     {
      "id": "duelist-league-16-participation-cards:81489939:DL16-EN019:rare",
+     "number": "DL16-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:81489939:DL16-EN019:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77669,
-       77670,
-       77671,
+       77669
+      ]
+     },
+     "number": "DL16-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Stygian Dirge (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:81489939:DL16-EN019:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77670
+      ]
+     },
+     "number": "DL16-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Stygian Dirge (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:81489939:DL16-EN019:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77671
+      ]
+     },
+     "number": "DL16-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Stygian Dirge (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:81489939:DL16-EN019:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77672
       ]
      },
@@ -7959,10 +8348,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Stygian Dirge (Blue)"
-     }
+      "name": "Stygian Dirge (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "stardust-overdrive:81489939:SOVR-EN078:short_print",
@@ -8042,6 +8433,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lady of the Labrynth"
+   ],
    "archetypes": [
     "labrynth"
    ],
@@ -8119,6 +8513,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:81497285:DABL-EN030:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8135,6 +8532,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:81497285:DABL-EN030:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8230,11 +8630,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:81510157:DL09-EN016:rare",
+     "number": "DL09-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:81510157:DL09-EN016:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77372,
-       77722,
-       77723,
+       77372
+      ]
+     },
+     "number": "DL09-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Soul Taker (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:81510157:DL09-EN016:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77722
+      ]
+     },
+     "number": "DL09-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Soul Taker (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:81510157:DL09-EN016:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77723
+      ]
+     },
+     "number": "DL09-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Soul Taker (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:81510157:DL09-EN016:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77724
       ]
      },
@@ -8242,10 +8700,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Soul Taker (Blue)"
-     }
+      "name": "Soul Taker (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "editions": [
@@ -8357,6 +8817,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Vernusylph of Seedlings and Haze"
+   ],
    "archetypes": [
     "vernusylph"
    ],
@@ -8402,6 +8865,9 @@
    "passcode": 81519836,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:81519836:DABL-EN026:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8484,6 +8950,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:81522098:INFO-EN091:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8508,6 +8977,9 @@
    ]
   },
   {
+   "aliases": [
+    "Palladion of the Vast Sky"
+   ],
    "archetypes": [
     "crusadia"
    ],
@@ -8647,6 +9119,9 @@
    "tcgDate": "2009-02-28"
   },
   {
+   "aliases": [
+    "Ryu-Ge Eternal Recurrence of Trailokya"
+   ],
    "archetypes": [
     "ryu-ge"
    ],
@@ -8784,6 +9259,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:81555617:BODE-EN011:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8989,6 +9467,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:81560239:SUDA-EN095:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9005,6 +9486,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:81560239:SUDA-EN095:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9187,6 +9671,9 @@
    ]
   },
   {
+   "aliases": [
+    "Flame Noble Knight Roland"
+   ],
    "archetypes": [
     "noble-knight"
    ],
@@ -9560,6 +10047,39 @@
   },
   {
    "archetypes": [
+    "rikka"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "81611932",
+   "identifiers": {
+    "konamiId": 23875,
+    "ygoprodeckId": 81611932
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/81611932.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/81611932.jpg",
+     "id": 81611932,
+     "small": "https://images.ygoprodeck.com/images/cards_small/81611932.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Normal",
+   "name": "Rikka June Moon",
+   "names": {
+    "en": "Rikka June Moon"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 81611932,
+   "prints": []
+  },
+  {
+   "aliases": [
+    "Metalphosis Adamante"
+   ],
+   "archetypes": [
     "metalfoes"
    ],
    "atk": 2500,
@@ -9701,6 +10221,9 @@
    "passcode": 81613061,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:81613061:DIFO-EN065:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9720,6 +10243,9 @@
    "tcgDate": "2022-05-19"
   },
   {
+   "aliases": [
+    "Reptilianne Lamification"
+   ],
    "archetypes": [
     "reptilianne"
    ],
@@ -9761,6 +10287,9 @@
    "passcode": 81615450,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:81615450:BODE-EN060:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9951,6 +10480,9 @@
    ]
   },
   {
+   "aliases": [
+    "Power Patron Machine Doom-Z"
+   ],
    "archetypes": [
     "doomz"
    ],
@@ -9995,6 +10527,9 @@
    "passcode": 81650695,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:81650695:DOOD-EN011:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10547,6 +11082,9 @@
    "tcgDate": "2006-05-17"
   },
   {
+   "aliases": [
+    "Memento Tatsunootoshigo"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -10751,6 +11289,9 @@
    ]
   },
   {
+   "aliases": [
+    "Centur-Ion Cimelia"
+   ],
    "archetypes": [
     "centur-ion"
    ],
@@ -10812,6 +11353,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:81696879:ROTA-EN016:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10828,6 +11372,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:81696879:ROTA-EN016:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10851,6 +11398,9 @@
    ]
   },
   {
+   "aliases": [
+    "King Rex the Dragon King"
+   ],
    "atk": 3200,
    "attribute": "earth",
    "def": 1200,
@@ -10909,6 +11459,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:81743801:DUNE-EN008:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11082,6 +11635,9 @@
    ]
   },
   {
+   "aliases": [
+    "End-Exalting Morganite"
+   ],
    "archetypes": [
     "morganite"
    ],
@@ -11123,6 +11679,9 @@
    "passcode": 81756619,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:81756619:ROTA-EN065:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11350,6 +11909,9 @@
    ]
   },
   {
+   "aliases": [
+    "Branded Blade"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -12042,6 +12604,9 @@
    "passcode": 81794107,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:81794107:DOOD-EN090:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12058,6 +12623,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:81794107:DOOD-EN090:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12130,6 +12698,13 @@
       "match": "number+rarity",
       "name": "Angelechy Enlisted"
      }
+    },
+    {
+     "id": "magnificent-maestros:81797573:MAMS-EN095:ultra_rare",
+     "number": "MAMS-EN095",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2026-07-02",
@@ -12506,6 +13081,47 @@
    ]
   },
   {
+   "aliases": [
+    "The Sun God's Torture Device - Viser Des Shock"
+   ],
+   "archetypes": [
+    "sun-god"
+   ],
+   "atk": 800,
+   "attribute": "dark",
+   "def": 1200,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "81839663",
+   "identifiers": {
+    "konamiId": 23815,
+    "ygoprodeckId": 81839663
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/81839663.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/81839663.jpg",
+     "id": 81839663,
+     "small": "https://images.ygoprodeck.com/images/cards_small/81839663.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Fiend",
+   "name": "Viser Des Shock, Tormentor of the Sun God",
+   "names": {
+    "en": "Viser Des Shock, Tormentor of the Sun God"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 81839663,
+   "prints": [],
+   "typeline": [
+    "Fiend",
+    "Effect"
+   ]
+  },
+  {
    "archetypes": [
     "worm"
    ],
@@ -12669,6 +13285,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tin Musical Battlemech"
+   ],
    "atk": 500,
    "attribute": "wind",
    "def": 2200,
@@ -13260,6 +13879,9 @@
    ]
   },
   {
+   "aliases": [
+    "Abyss-sting of Triaina"
+   ],
    "archetypes": [
     "abyss"
    ],
@@ -13317,6 +13939,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:81878201:ROTA-EN062:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13714,6 +14339,9 @@
    "tcgDate": "2007-08-15"
   },
   {
+   "aliases": [
+    "Noh P.U.N.K. Numeral Ogre"
+   ],
    "archetypes": [
     "p-u-n-k"
    ],
@@ -13868,6 +14496,9 @@
    "passcode": 81916745,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:81916745:DOOD-EN087:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13977,6 +14608,26 @@
      "set": "speed-duel-streets-of-battle-city",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Brain Crusher"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:81919143:STP7-EN001:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544959
+      ]
+     },
+     "number": "STP7-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Brain Crusher"
      }
     },
@@ -14150,6 +14801,9 @@
    "tcgDate": "2012-03-16"
   },
   {
+   "aliases": [
+    "Memento Mace"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -14272,11 +14926,31 @@
       "match": "number+rarity",
       "name": "Joker's Wild"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:81945678:SBC2-ENA18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600213
+      ]
+     },
+     "number": "SBC2-ENA18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Joker's Wild"
+     }
     }
    ],
    "tcgDate": "2021-07-08"
   },
   {
+   "aliases": [
+    "Unauthorized Device Malefactor"
+   ],
    "archetypes": [
     "machina"
    ],
@@ -14902,6 +15576,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:81978611:AGOV-EN051:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15129,6 +15806,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:81985784:SBC2-ENB04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600145
+      ]
+     },
+     "number": "SBC2-ENB04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Des Feral Imp"
+     }
+    },
+    {
      "id": "starter-deck-kaiba-reloaded:81985784:YSKR-EN015:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15312,6 +16006,9 @@
    "tcgDate": "2014-05-16"
   },
   {
+   "aliases": [
+    "Prankids House Battle Butler"
+   ],
    "archetypes": [
     "prank-kids"
    ],
@@ -15372,6 +16069,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:81997228:MGED-EN113:rare",
      "identifiers": {
       "tcgplayerProductIds": [

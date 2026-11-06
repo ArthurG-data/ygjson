@@ -39,6 +39,9 @@
    "passcode": 4008212,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:4008212:BODE-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -195,6 +198,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:4019153:MGED-EN086:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -307,6 +313,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chronicler of Fairy Tail Tales"
+   ],
    "archetypes": [
     "fairy-tail"
    ],
@@ -926,6 +935,44 @@
   },
   {
    "archetypes": [
+    "dark-time-wizard"
+   ],
+   "atk": 1500,
+   "attribute": "light",
+   "def": 1300,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "4040906",
+   "identifiers": {
+    "konamiId": 23828,
+    "ygoprodeckId": 4040906
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/4040906.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/4040906.jpg",
+     "id": 4040906,
+     "small": "https://images.ygoprodeck.com/images/cards_small/4040906.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Warrior",
+   "name": "Invincible Rocket Warrior",
+   "names": {
+    "en": "Invincible Rocket Warrior"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 4040906,
+   "prints": [],
+   "typeline": [
+    "Warrior",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
     "ninja"
    ],
    "atk": 1800,
@@ -1231,6 +1278,9 @@
    ]
   },
   {
+   "aliases": [
+    "Orcustrated Knightmare"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -1542,6 +1592,9 @@
    "tcgDate": "2020-09-24"
   },
   {
+   "aliases": [
+    "Medicurius the Power Patron of Illusions"
+   ],
    "archetypes": [
     "power-patron"
    ],
@@ -1680,11 +1733,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:4064256:DL13-EN017:rare",
+     "number": "DL13-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:4064256:DL13-EN017:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77433,
-       80463,
-       80464,
+       80463
+      ]
+     },
+     "number": "DL13-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zombie World (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:4064256:DL13-EN017:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80464
+      ]
+     },
+     "number": "DL13-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zombie World (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:4064256:DL13-EN017:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80465
       ]
      },
@@ -1692,10 +1785,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zombie World (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:4064256:DL13-EN017:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77433
+      ]
+     },
+     "number": "DL13-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Zombie World (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "ghosts-from-the-past-the-2nd-haunting:4064256:GFP2-EN154:ultra_rare",
@@ -1896,6 +2009,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:4064925:LEDE-EN055:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2091,6 +2207,9 @@
    "passcode": 4079728,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:4079728:BPRO-EN045:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2378,6 +2497,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Winged Mayakashi - Tengu"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -2445,6 +2567,36 @@
     "Synchro",
     "Effect"
    ]
+  },
+  {
+   "archetypes": [
+    "bunnillin"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "4104784",
+   "identifiers": {
+    "konamiId": 23891,
+    "ygoprodeckId": 4104784
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/4104784.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/4104784.jpg",
+     "id": 4104784,
+     "small": "https://images.ygoprodeck.com/images/cards_small/4104784.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Continuous",
+   "name": "Bunnillin Soft",
+   "names": {
+    "en": "Bunnillin Soft"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 4104784,
+   "prints": []
   },
   {
    "atk": 1200,
@@ -2609,6 +2761,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zoodiac Ram"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -2780,6 +2935,9 @@
    ]
   },
   {
+   "aliases": [
+    "\"C\" Ranger Shine Black"
+   ],
    "archetypes": [
     "c"
    ],
@@ -2953,6 +3111,9 @@
    "tcgDate": "2003-11-04"
   },
   {
+   "aliases": [
+    "Faith of Centurion"
+   ],
    "archetypes": [
     "centur-ion"
    ],
@@ -3143,6 +3304,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lucifer, Darklord of the Morning Star"
+   ],
    "archetypes": [
     "darklord"
    ],
@@ -3917,11 +4081,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:4206964:DL09-EN017:rare",
+     "number": "DL09-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:4206964:DL09-EN017:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77373,
-       77725,
-       77726,
+       77373
+      ]
+     },
+     "number": "DL09-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Trap Hole (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:4206964:DL09-EN017:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77725
+      ]
+     },
+     "number": "DL09-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Trap Hole (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:4206964:DL09-EN017:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77726
+      ]
+     },
+     "number": "DL09-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Trap Hole (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:4206964:DL09-EN017:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77727
       ]
      },
@@ -3929,10 +4151,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Trap Hole (Blue)"
-     }
+      "name": "Trap Hole (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "hobby-league-3-participation-card-c:4206964:HL03-EN003:ultra_parallel_rare",
@@ -4396,6 +4620,9 @@
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "LollipoYummy"
+   ],
    "archetypes": [
     "yummy"
    ],
@@ -5331,6 +5558,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:4271596:PHNI-EN091:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5354,6 +5584,9 @@
    ]
   },
   {
+   "aliases": [
+    "Summoned Divine Bow - Apolloursa"
+   ],
    "attribute": "wind",
    "frame": "link",
    "hasEffect": true,
@@ -5741,6 +5974,44 @@
    "typeline": [
     "Plant",
     "Synchro",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "bunnillin"
+   ],
+   "atk": 0,
+   "attribute": "light",
+   "def": 2000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "4328355",
+   "identifiers": {
+    "konamiId": 23831,
+    "ygoprodeckId": 4328355
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/4328355.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/4328355.jpg",
+     "id": 4328355,
+     "small": "https://images.ygoprodeck.com/images/cards_small/4328355.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Cyberse",
+   "name": "Bunnillin: Mocha MOD",
+   "names": {
+    "en": "Bunnillin: Mocha MOD"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 4328355,
+   "prints": [],
+   "typeline": [
+    "Cyberse",
     "Effect"
    ]
   },
@@ -6233,6 +6504,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:4335645:SBC2-END13:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600253
+      ]
+     },
+     "number": "SBC2-END13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Newdoria"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-twisted-nightmares:4335645:SS05-ENB17:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6288,6 +6576,9 @@
    ]
   },
   {
+   "aliases": [
+    "Trick or Treat!"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "4341721",
@@ -6326,6 +6617,9 @@
    "passcode": 4341721,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:4341721:SUDA-EN063:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6404,6 +6698,9 @@
    "tcgDate": "2014-03-28"
   },
   {
+   "aliases": [
+    "Zoodiac Rabbina"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -6604,6 +6901,26 @@
       "match": "number+rarity",
       "name": "Familiar-Possessed - Hiita (Alternate Art)"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "the-chronicles-deck-spirit-charmers-all-foil-edition:4376659:CH02-EN006:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       672314
+      ]
+     },
+     "number": "CH02-EN006",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "the-chronicles-deck-spirit-charmers-all-foil-edition",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Familiar-Possessed - Hiita"
+     }
     }
    ],
    "tcgDate": "2005-11-05",
@@ -6745,6 +7062,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witches of the White Forest"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -6786,6 +7106,9 @@
    "passcode": 4398189,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:4398189:ALIN-EN058:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6802,6 +7125,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:4398189:ALIN-EN058:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6884,6 +7210,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exorsister Amento"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -7259,6 +7588,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:4433488:BODE-EN099:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7617,6 +7949,9 @@
    "passcode": 4472318,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:4472318:DABL-EN081:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7818,6 +8153,9 @@
    ]
   },
   {
+   "aliases": [
+    "Full-Active Duprex"
+   ],
    "atk": 2800,
    "attribute": "wind",
    "def": 1000,
@@ -7875,6 +8213,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:4483598:CYAC-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7977,6 +8318,9 @@
    "tcgDate": "2005-08-06"
   },
   {
+   "aliases": [
+    "Chaos Emperor, the Armageddon Dragon"
+   ],
    "archetypes": [
     "chaos"
    ],
@@ -8044,8 +8388,7 @@
      "id": "battles-of-legend-chapter-1:4538826:BLC1-EN026:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538498,
-       538659
+       538498
       ]
      },
      "number": "BLC1-EN026",
@@ -8056,6 +8399,27 @@
       "match": "number+rarity",
       "name": "Chaos Emperor, the Dragon of Armageddon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:4538826:BLC1-EN026:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538659
+      ]
+     },
+     "number": "BLC1-EN026",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chaos Emperor, the Dragon of Armageddon (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "yu-gi-oh-championship-series-2018-prize-card:4538826:YCSW-EN011:super_rare",
@@ -8152,6 +8516,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:4542651:IOC-EN037:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8527,6 +8894,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:4550066:BODE-EN094:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8550,6 +8920,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragocalamity"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "4575541",
@@ -8588,6 +8961,9 @@
    "passcode": 4575541,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:4575541:ALIN-EN061:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8607,6 +8983,9 @@
    "tcgDate": "2025-05-01"
   },
   {
+   "aliases": [
+    "Valmonica of the Guiding Rhythm"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -8826,6 +9205,9 @@
    ]
   },
   {
+   "aliases": [
+    "Return of the Reaper"
+   ],
    "archetypes": [
     "infernity"
    ],
@@ -8901,6 +9283,9 @@
    "tcgDate": "2023-03-09"
   },
   {
+   "aliases": [
+    "Last Hope Numbers"
+   ],
    "archetypes": [
     "galaxy",
     "number-spell-trap-archetype"
@@ -9415,6 +9800,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:4632019:DIFO-EN032:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9497,6 +9885,9 @@
    "tcgDate": "2010-11-06"
   },
   {
+   "aliases": [
+    "ZS - Ascend Sage"
+   ],
    "archetypes": [
     "zexal",
     "zs"
@@ -9582,6 +9973,9 @@
    ]
   },
   {
+   "aliases": [
+    "Clock Tower Prison City - Dark City"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "4663194",
@@ -10046,6 +10440,9 @@
    ]
   },
   {
+   "aliases": [
+    "Stargrail Swordsman Aurum"
+   ],
    "archetypes": [
     "world-chalice"
    ],
@@ -10373,6 +10770,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:4731783:SUDA-EN049:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10389,6 +10789,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:4731783:SUDA-EN049:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10471,6 +10874,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:4732017:IOC-EN064:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10730,6 +11136,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:4754691:DIFO-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10887,8 +11296,7 @@
      "id": "battles-of-legend-chapter-1:4779091:BLC1-EN028:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538500,
-       538661
+       538500
       ]
      },
      "number": "BLC1-EN028",
@@ -10899,6 +11307,27 @@
       "match": "number+rarity",
       "name": "Yubel - Terror Incarnate"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:4779091:BLC1-EN028:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538661
+      ]
+     },
+     "number": "BLC1-EN028",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Yubel - Terror Incarnate (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "legendary-collection-2-the-duel-academy-years-mega-pack:4779091:LCGX-EN198:secret_rare",
@@ -11478,6 +11907,9 @@
    ]
   },
   {
+   "aliases": [
+    "Senka Legend - Champion's Bravery at Changban Bridge"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -11806,6 +12238,9 @@
    "tcgDate": "2016-11-03"
   },
   {
+   "aliases": [
+    "Pawnshop Ledgerbook"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "4825390",
@@ -11860,6 +12295,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:4825390:DIFO-EN078:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12006,6 +12444,9 @@
    ]
   },
   {
+   "aliases": [
+    "Meklord Astro Dragon Triskelia"
+   ],
    "archetypes": [
     "meklord",
     "meklord-astro"
@@ -12074,6 +12515,9 @@
    ]
   },
   {
+   "aliases": [
+    "Raika Ryouran Kuruizaki"
+   ],
    "archetypes": [
     "ragnaraika"
    ],
@@ -12131,6 +12575,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:4841383:LEDE-EN058:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12147,6 +12594,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:4841383:LEDE-EN058:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12166,6 +12616,9 @@
    "tcgDate": "2024-04-25"
   },
   {
+   "aliases": [
+    "Medic Muscler"
+   ],
    "atk": 2200,
    "attribute": "water",
    "def": 100,
@@ -12526,11 +12979,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:4861205:DL17-EN015:rare",
+     "number": "DL17-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:4861205:DL17-EN015:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80588,
-       80589,
-       80590,
+       80589
+      ]
+     },
+     "number": "DL17-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Call of the Mummy (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:4861205:DL17-EN015:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80590
+      ]
+     },
+     "number": "DL17-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Call of the Mummy (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:4861205:DL17-EN015:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80591
       ]
      },
@@ -12538,10 +13031,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Call of the Mummy (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:4861205:DL17-EN015:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80588
+      ]
+     },
+     "number": "DL17-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Call of the Mummy (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gold-series-haunted-mine:4861205:GLD5-EN040:common",
@@ -12729,6 +13242,9 @@
    "tcgDate": "2004-06-01"
   },
   {
+   "aliases": [
+    "Alligator's Sword Dragon Knight"
+   ],
    "archetypes": [
     "dark-time-wizard"
    ],
@@ -12788,6 +13304,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zaren the Chainbound Dragon"
+   ],
    "atk": 2800,
    "attribute": "dark",
    "def": 2100,
@@ -12818,6 +13337,9 @@
    "passcode": 4891376,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:4891376:BPRO-EN042:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12832,6 +13354,13 @@
       "match": "number+rarity",
       "name": "Zalen the Shackled Dragon"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:4891376:UP02-EN005:ultimate_rare",
+     "number": "UP02-EN005",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2026-02-05",
@@ -12904,6 +13433,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:4896788:IOC-EN009:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13501,6 +14033,9 @@
    "passcode": 4909946,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:4909946:BPRO-EN064:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13604,6 +14139,9 @@
    ]
   },
   {
+   "aliases": [
+    "Draculea Vampire"
+   ],
    "archetypes": [
     "vampire"
    ],
@@ -13893,6 +14431,9 @@
    "tcgDate": "2007-09-18"
   },
   {
+   "aliases": [
+    "Tearlaments Kshatri-La"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -13973,6 +14514,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:4928565:PHHY-EN008:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14106,11 +14650,33 @@
     },
     {
      "id": "duelist-league-2-participation-cards:4929256:DL11-EN010:rare",
+     "number": "DL11-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:4929256:DL11-EN010:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77387,
-       80325,
-       80326,
+       80326
+      ]
+     },
+     "number": "DL11-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mobius the Frost Monarch (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:4929256:DL11-EN010:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80327
       ]
      },
@@ -14118,10 +14684,48 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mobius the Frost Monarch (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:4929256:DL11-EN010:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80325
+      ]
+     },
+     "number": "DL11-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mobius the Frost Monarch (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:4929256:DL11-EN010:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77387
+      ]
+     },
+     "number": "DL11-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Mobius the Frost Monarch (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "emperor-of-darkness-structure-deck:4929256:SR01-EN007:common",
@@ -14217,6 +14821,40 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mobius the Frost Monarch (UTR)"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:4929256:SBC2-ENI21:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600242
+      ]
+     },
+     "number": "SBC2-ENI21",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mobius the Frost Monarch"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:4929256:SBC2-ENI21:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600241
+      ]
+     },
+     "number": "SBC2-ENI21",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mobius the Frost Monarch (PSR)"
      }
     },
     {
@@ -14686,6 +15324,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chasmatis, Dragon Ruler of Auroras"
+   ],
    "archetypes": [
     "dragon-ruler"
    ],
@@ -14730,6 +15371,9 @@
    "passcode": 4965193,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:4965193:ALIN-EN047:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14746,6 +15390,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:4965193:ALIN-EN047:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14831,6 +15478,23 @@
      "set": "legendary-duelists-season-3",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Harpie's Pet Dragon - Fearsome Fire Blast"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:4991081:SBC2-ENH01:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600197
+      ]
+     },
+     "number": "SBC2-ENH01",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Harpie's Pet Dragon - Fearsome Fire Blast"
      }
     }

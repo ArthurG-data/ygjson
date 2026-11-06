@@ -33,7 +33,7 @@
   "type": "starter_deck"
  },
  {
-  "code": "STAX",
+  "code": "STAS",
   "editions": [
    "first"
   ],
@@ -1186,7 +1186,8 @@
  {
   "code": "AGOV",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "age-of-overlord",
@@ -1223,7 +1224,8 @@
  {
   "code": "ALIN",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "alliance-insight",
@@ -1807,7 +1809,8 @@
  {
   "code": "BACH",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "battle-of-chaos",
@@ -2323,7 +2326,8 @@
   "code": "BETB",
   "editions": [
    "first",
-   "unlimited"
+   "unlimited",
+   "limited"
   ],
   "era": "sevens",
   "id": "beyond-the-brave",
@@ -2359,7 +2363,8 @@
   "code": "BLZD",
   "editions": [
    "first",
-   "unlimited"
+   "unlimited",
+   "limited"
   ],
   "era": "sevens",
   "id": "blazing-dominion",
@@ -2664,7 +2669,8 @@
  {
   "code": "BODE",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "burst-of-destiny",
@@ -2699,7 +2705,8 @@
  {
   "code": "BPRO",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "burst-protocol",
@@ -3122,7 +3129,8 @@
   "code": "CORI",
   "editions": [
    "first",
-   "unlimited"
+   "unlimited",
+   "limited"
   ],
   "era": "sevens",
   "id": "chaos-origins",
@@ -4132,6 +4140,27 @@
   "type": "tin"
  },
  {
+  "code": "SEALED",
+  "editions": [
+   "limited"
+  ],
+  "era": "vrains",
+  "id": "collector-s-boxes",
+  "name": "Collector's Boxes",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Collector's Boxes",
+    "releaseDate": "2017-09-13"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   2052
+  ],
+  "type": "booster"
+ },
+ {
   "code": "CBLZ",
   "editions": [
    "first",
@@ -4916,7 +4945,8 @@
  {
   "code": "CYAC",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "cyberstorm-access",
@@ -4983,7 +5013,7 @@
   "type": "booster"
  },
  {
-  "code": "DB2",
+  "code": "DB",
   "editions": [
    "unlimited"
   ],
@@ -5430,7 +5460,8 @@
  {
   "code": "DABL",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "darkwing-blast",
@@ -5670,7 +5701,8 @@
  {
   "code": "DIFO",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "dimension-force",
@@ -5851,7 +5883,8 @@
  {
   "code": "DOOD",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "doom-of-dimensions",
@@ -7486,7 +7519,8 @@
  {
   "code": "DUNE",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "duelist-nexus",
@@ -7748,7 +7782,7 @@
   "type": "tin"
  },
  {
-  "code": "DPCT",
+  "code": "DPC5",
   "editions": [
    "limited"
   ],
@@ -8473,7 +8507,8 @@
  {
   "code": "DUAD",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "duelist-s-advance",
@@ -8542,6 +8577,27 @@
    1917
   ],
   "type": "booster"
+ },
+ {
+  "code": "EDC1",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "sevens",
+  "id": "early-days-collection-promotional-cards",
+  "name": "Early Days Collection Promotional Cards",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Early Days Collection Promotional Cards",
+    "releaseDate": "2025-02-28"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   24250
+  ],
+  "type": "promo"
  },
  {
   "code": "EFC1",
@@ -10042,6 +10098,35 @@
    211
   ],
   "type": "special_edition"
+ },
+ {
+  "code": "GLVI",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "sevens",
+  "id": "glorious-victors",
+  "identifiers": {
+   "yugipediaId": 1210873
+  },
+  "name": "Glorious Victors",
+  "releases": [
+   {
+    "keyArt": {
+     "source": "https://ygoprodeck.com/sets/GLVI",
+     "url": "https://images.ygoprodeck.com/images/sets/GLVI.jpg"
+    },
+    "language": "en",
+    "name": "Glorious Victors",
+    "releaseDate": "2026-12-03"
+   }
+  ],
+  "series": "60 Card Set",
+  "source": "ygoprodeck",
+  "tcgplayerGroupIds": [
+   24822
+  ],
+  "type": "box_set"
  },
  {
   "code": "GLD1",
@@ -12561,7 +12646,8 @@
  {
   "code": "LEDE",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "legacy-of-destruction",
@@ -13388,7 +13474,7 @@
    {
     "language": "en",
     "name": "Legendary Dragon Decks (2020 Date Reprint)",
-    "releaseDate": "2026-10-27"
+    "releaseDate": "2026-11-05"
    }
   ],
   "source": "tcgplayer",
@@ -14031,7 +14117,6 @@
  {
   "code": "LODT",
   "editions": [
-   "unlimited",
    "limited"
   ],
   "era": "gx",
@@ -14938,7 +15023,8 @@
  {
   "code": "MGED",
   "editions": [
-   "first"
+   "first",
+   "unlimited"
   ],
   "era": "sevens",
   "id": "maximum-gold-el-dorado",
@@ -14966,6 +15052,32 @@
   "tcgplayerGroupIds": [
    2896
   ],
+  "type": "booster"
+ },
+ {
+  "code": "MZMC",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "sevens",
+  "id": "maze-of-machines",
+  "identifiers": {
+   "yugipediaId": 1237320
+  },
+  "name": "Maze of Machines",
+  "releases": [
+   {
+    "keyArt": {
+     "source": "https://yugipedia.com/wiki/Maze_of_Machines",
+     "url": "https://yugipedia.com/wiki/Special:FilePath/MZMC-BoxEN.png"
+    },
+    "language": "en",
+    "name": "Maze of Machines",
+    "releaseDate": "2027-03-19"
+   }
+  ],
+  "series": "Maze",
+  "source": "ygoprodeck",
   "type": "booster"
  },
  {
@@ -15276,6 +15388,29 @@
    1760
   ],
   "type": "booster"
+ },
+ {
+  "code": "MISC",
+  "editions": [
+   "first",
+   "unlimited",
+   "limited"
+  ],
+  "era": "sevens",
+  "id": "miscellaneous-promotional-cards",
+  "name": "Miscellaneous Promotional Cards",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Miscellaneous Promotional Cards",
+    "releaseDate": "2020-09-22"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   2718
+  ],
+  "type": "promo"
  },
  {
   "code": "MOV",
@@ -17143,7 +17278,8 @@
  {
   "code": "PHNI",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "phantom-nightmare",
@@ -17483,7 +17619,8 @@
  {
   "code": "PHHY",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "photon-hypernova",
@@ -17665,7 +17802,8 @@
   "code": "POTE",
   "editions": [
    "first",
-   "unlimited"
+   "unlimited",
+   "limited"
   ],
   "era": "sevens",
   "id": "power-of-the-elements",
@@ -18196,7 +18334,8 @@
  {
   "code": "ROTA",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "rage-of-the-abyss",
@@ -18580,6 +18719,27 @@
    591
   ],
   "type": "structure_deck"
+ },
+ {
+  "code": "RR",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "gx",
+  "id": "redemption-replacement",
+  "name": "Redemption Replacement",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Redemption Replacement",
+    "releaseDate": "2008-01-01"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   2889
+  ],
+  "type": "booster"
  },
  {
   "code": "SBPR",
@@ -20289,6 +20449,28 @@
   "type": "promo"
  },
  {
+  "code": "SJMP",
+  "editions": [
+   "unlimited",
+   "limited"
+  ],
+  "era": "vrains",
+  "id": "shonen-jump-magazine-promos",
+  "name": "Shonen Jump Magazine Promos",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Shonen Jump Magazine Promos",
+    "releaseDate": "2017-12-01"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   281
+  ],
+  "type": "promo"
+ },
+ {
   "code": "JUMP",
   "editions": [
    "limited"
@@ -21770,6 +21952,27 @@
   "type": "speed_duel"
  },
  {
+  "code": "SBC2",
+  "editions": [
+   "first"
+  ],
+  "era": "sevens",
+  "id": "speed-duel-battle-city-finals",
+  "name": "Speed Duel: Battle City Finals",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Speed Duel: Battle City Finals",
+    "releaseDate": "2024-12-13"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   23652
+  ],
+  "type": "speed_duel"
+ },
+ {
   "code": "DEM5",
   "editions": [
    "unlimited"
@@ -21888,6 +22091,27 @@
   "source": "ygoprodeck",
   "tcgplayerGroupIds": [
    17700
+  ],
+  "type": "speed_duel"
+ },
+ {
+  "code": "SGX4",
+  "editions": [
+   "first"
+  ],
+  "era": "sevens",
+  "id": "speed-duel-gx-midterm-destruction",
+  "name": "Speed Duel GX: Midterm Destruction",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Speed Duel GX: Midterm Destruction",
+    "releaseDate": "2024-03-29"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   23355
   ],
   "type": "speed_duel"
  },
@@ -22368,6 +22592,28 @@
   "source": "ygoprodeck",
   "tcgplayerGroupIds": [
    23292
+  ],
+  "type": "speed_duel"
+ },
+ {
+  "code": "STP7",
+  "editions": [
+   "first",
+   "unlimited"
+  ],
+  "era": "sevens",
+  "id": "speed-duel-tournament-pack-7",
+  "name": "Speed Duel: Tournament Pack 7",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Speed Duel: Tournament Pack 7",
+    "releaseDate": "2024-04-03"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   23484
   ],
   "type": "speed_duel"
  },
@@ -25296,7 +25542,8 @@
  {
   "code": "SUDA",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "supreme-darkness",
@@ -25960,7 +26207,8 @@
  {
   "code": "INFO",
   "editions": [
-   "first"
+   "first",
+   "limited"
   ],
   "era": "sevens",
   "id": "the-infinite-forbidden",
@@ -26026,6 +26274,27 @@
    2398
   ],
   "type": "box_set"
+ },
+ {
+  "code": "LART",
+  "editions": [
+   "limited"
+  ],
+  "era": "sevens",
+  "id": "the-lost-art-promotion",
+  "name": "The Lost Art Promotion",
+  "releases": [
+   {
+    "language": "en",
+    "name": "The Lost Art Promotion",
+    "releaseDate": "2026-11-05"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   2196
+  ],
+  "type": "promo"
  },
  {
   "code": "LART",
@@ -28186,6 +28455,27 @@
   "type": "sneak_peek"
  },
  {
+  "code": "VB5",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "dm",
+  "id": "the-valuable-book-volume-5",
+  "name": "The Valuable Book Volume 5",
+  "releases": [
+   {
+    "language": "en",
+    "name": "The Valuable Book Volume 5",
+    "releaseDate": "2002-10-04"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   1313
+  ],
+  "type": "booster"
+ },
+ {
   "code": "TOCH",
   "editions": [
    "first",
@@ -28496,6 +28786,27 @@
    340
   ],
   "type": "booster"
+ },
+ {
+  "code": "TKN2",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "gx",
+  "id": "toys-r-us-throwdown-promo",
+  "name": "Toys \"R\" Us Throwdown Promo",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Toys \"R\" Us Throwdown Promo",
+    "releaseDate": "2007-04-07"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   1159
+  ],
+  "type": "promo"
  },
  {
   "code": "OPTP",
@@ -28986,6 +29297,38 @@
   "source": "ygoprodeck",
   "tcgplayerGroupIds": [
    24704
+  ],
+  "type": "booster"
+ },
+ {
+  "code": "UP02",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "sevens",
+  "id": "ultimate-tournament-pack-2",
+  "identifiers": {
+   "konamiDatabaseIds": [
+    2000001720000
+   ],
+   "yugipediaId": 1207601
+  },
+  "name": "Ultimate Tournament Pack 2",
+  "releases": [
+   {
+    "keyArt": {
+     "source": "https://ygoprodeck.com/sets/UP02",
+     "url": "https://images.ygoprodeck.com/images/sets/UP02.jpg"
+    },
+    "language": "en",
+    "name": "Ultimate Tournament Pack 2",
+    "releaseDate": "2026-11-05"
+   }
+  ],
+  "series": "Ultimate Tournament Pack",
+  "source": "ygoprodeck",
+  "tcgplayerGroupIds": [
+   24806
   ],
   "type": "booster"
  },
@@ -30130,6 +30473,48 @@
    1929
   ],
   "type": "booster"
+ },
+ {
+  "code": "WCJPP",
+  "editions": [
+   "limited"
+  ],
+  "era": "sevens",
+  "id": "world-championship-jpp-cards",
+  "name": "World Championship JPP Cards",
+  "releases": [
+   {
+    "language": "en",
+    "name": "World Championship JPP Cards",
+    "releaseDate": "2026-11-05"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   2353
+  ],
+  "type": "promo"
+ },
+ {
+  "code": "2024",
+  "editions": [
+   "limited"
+  ],
+  "era": "dm",
+  "id": "world-championship-series",
+  "name": "World Championship Series",
+  "releases": [
+   {
+    "language": "en",
+    "name": "World Championship Series",
+    "releaseDate": "2003-07-13"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   351
+  ],
+  "type": "promo"
  },
  {
   "code": "WSUP",
@@ -31902,6 +32287,27 @@
   "type": "promo"
  },
  {
+  "code": "YCSW",
+  "editions": [
+   "limited"
+  ],
+  "era": "5ds",
+  "id": "yu-gi-oh-championship-series-prize-cards",
+  "name": "Yu-Gi-Oh! Championship Series Prize Cards",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Yu-Gi-Oh! Championship Series Prize Cards",
+    "releaseDate": "2010-05-15"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   1347
+  ],
+  "type": "promo"
+ },
+ {
   "code": "DDS",
   "editions": [
    "unlimited"
@@ -32022,6 +32428,28 @@
   ],
   "source": "ygoprodeck",
   "type": "promo"
+ },
+ {
+  "code": "GBI",
+  "editions": [
+   "unlimited",
+   "limited"
+  ],
+  "era": "dm",
+  "id": "yu-gi-oh-duel-monsters-international-worldwide-edition",
+  "name": "Yu-Gi-Oh! Duel Monsters International: Worldwide Edition",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Yu-Gi-Oh! Duel Monsters International: Worldwide Edition",
+    "releaseDate": "2003-04-17"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   143
+  ],
+  "type": "booster"
  },
  {
   "code": "EHC1",
@@ -33452,6 +33880,27 @@
   "type": "promo"
  },
  {
+  "code": "YMA",
+  "editions": [
+   "limited"
+  ],
+  "era": "dm",
+  "id": "yu-gi-oh-the-movie-ani-manga-promo",
+  "name": "Yu-Gi-Oh! The Movie Ani-Manga Promo",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Yu-Gi-Oh! The Movie Ani-Manga Promo",
+    "releaseDate": "2004-11-23"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   1686
+  ],
+  "type": "promo"
+ },
+ {
   "code": "TSC",
   "editions": [
    "first",
@@ -33485,6 +33934,29 @@
   ],
   "source": "ygoprodeck",
   "type": "promo"
+ },
+ {
+  "code": "TKN",
+  "editions": [
+   "first",
+   "unlimited",
+   "limited"
+  ],
+  "era": "gx",
+  "id": "yu-gi-oh-tokens",
+  "name": "Yu-Gi-Oh! Tokens",
+  "releases": [
+   {
+    "language": "en",
+    "name": "Yu-Gi-Oh! Tokens",
+    "releaseDate": "2006-07-20"
+   }
+  ],
+  "source": "tcgplayer",
+  "tcgplayerGroupIds": [
+   1322
+  ],
+  "type": "booster"
  },
  {
   "code": "EM1",

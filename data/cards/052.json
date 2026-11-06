@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Dinorphia Alert"
+   ],
    "archetypes": [
     "dinomorphia"
    ],
@@ -58,6 +61,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:52020510:BACH-EN069:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -301,6 +307,23 @@
       "match": "number+rarity",
       "name": "Elemental HERO Mudballman"
      }
+    },
+    {
+     "id": "redemption-replacement:52031567:MDP2-EN002K:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       246238
+      ]
+     },
+     "number": "MDP2-EN002K",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "redemption-replacement",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental Hero Mudballman"
+     }
     }
    ],
    "tcgDate": "2006-12-22",
@@ -530,6 +553,9 @@
    ]
   },
   {
+   "aliases": [
+    "Evening Crescent & Autumn Shower"
+   ],
    "atk": 0,
    "attribute": "wind",
    "def": 1800,
@@ -590,6 +616,23 @@
      "set": "2021-tin-of-ancient-battles",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Ghost Mourner & Moonlit Chill"
+     }
+    },
+    {
+     "id": "2022-tin-of-the-pharaoh-s-gods:52038441:MP22-EN260:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       285222
+      ]
+     },
+     "number": "MP22-EN260",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "2022-tin-of-the-pharaoh-s-gods",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Ghost Mourner & Moonlit Chill"
      }
     },
@@ -760,6 +803,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:52038441:MGED-EN023:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -903,10 +949,7 @@
      "id": "legendary-duelists-season-2:52040216:LDS2-EN066:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230311,
-       230811,
-       230812,
-       230813
+       230311
       ]
      },
      "number": "LDS2-EN066",
@@ -917,6 +960,60 @@
       "match": "number+rarity",
       "name": "Harpie's Pet Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:52040216:LDS2-EN066:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230811
+      ]
+     },
+     "number": "LDS2-EN066",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie's Pet Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:52040216:LDS2-EN066:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230812
+      ]
+     },
+     "number": "LDS2-EN066",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie's Pet Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:52040216:LDS2-EN066:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230813
+      ]
+     },
+     "number": "LDS2-EN066",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie's Pet Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "editions": [
@@ -1281,6 +1378,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:52077741:SBC2-ENA09:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600259
+      ]
+     },
+     "number": "SBC2-ENA09",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Obnoxious Celtic Guard"
+     }
+    },
+    {
      "id": "structure-deck-warrior-s-triumph:52077741:SD5-EN007:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1320,6 +1434,9 @@
    ]
   },
   {
+   "aliases": [
+    "Time Thief Tempwhaler"
+   ],
    "archetypes": [
     "time-thief"
    ],
@@ -1525,6 +1642,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:52090844:IOC-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1637,6 +1757,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shield"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "52097679",
@@ -2339,6 +2462,9 @@
    "tcgDate": "2014-07-31"
   },
   {
+   "aliases": [
+    "Coordineral the Gem Transferer"
+   ],
    "atk": 1200,
    "attribute": "earth",
    "frame": "link",
@@ -2646,6 +2772,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:52126602:AGOV-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3119,6 +3248,9 @@
    ]
   },
   {
+   "aliases": [
+    "Raiders' Wing"
+   ],
    "archetypes": [
     "raidraptor",
     "the-phantom-knights"
@@ -3887,6 +4019,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:52253888:DIFO-EN026:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3910,6 +4045,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dimensional Isoallotope Varis"
+   ],
    "atk": 0,
    "attribute": "light",
    "def": 0,
@@ -3951,6 +4089,9 @@
    "passcode": 52254878,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:52254878:PHHY-EN028:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4312,6 +4453,9 @@
    ]
   },
   {
+   "aliases": [
+    "Uncamouflight"
+   ],
    "atk": 1800,
    "attribute": "light",
    "def": 0,
@@ -4502,6 +4646,23 @@
      "set": "phantom-darkness",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Black Veloci"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:52319752:SGX4-ENC06:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543784
+      ]
+     },
+     "number": "SGX4-ENC06",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Black Veloci"
      }
     }
@@ -4703,6 +4864,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tribrigade Lugerou the Silver Bullet"
+   ],
    "archetypes": [
     "tri-brigade"
    ],
@@ -4792,6 +4956,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exosister Bat Mater"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -4865,6 +5032,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:52335937:BPRO-EN066:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5020,6 +5190,9 @@
    "tcgDate": "2012-08-18"
   },
   {
+   "aliases": [
+    "Brandish Mecha Hornet Bit"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -5147,6 +5320,9 @@
    "tcgDate": "2018-05-24"
   },
   {
+   "aliases": [
+    "Token: Sky Striker Ace"
+   ],
    "archetypes": [
     "sky-striker",
     "sky-striker-ace"
@@ -5564,6 +5740,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mathmech Multiplier"
+   ],
    "archetypes": [
     "mathmech"
    ],
@@ -5771,6 +5950,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nemurelia's Dreameater - Réveil"
+   ],
    "archetypes": [
     "nemleria"
    ],
@@ -5816,6 +5998,9 @@
    "passcode": 52382379,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:52382379:DUNE-EN016:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6419,6 +6604,9 @@
    ]
   },
   {
+   "aliases": [
+    "Voiceless Voice Prayer"
+   ],
    "archetypes": [
     "voiceless-voice"
    ],
@@ -6476,6 +6664,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:52472775:PHNI-EN066:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6495,6 +6686,9 @@
    "tcgDate": "2024-02-08"
   },
   {
+   "aliases": [
+    "Speedy Express Bullet Liner"
+   ],
    "archetypes": [
     "train"
    ],
@@ -6543,10 +6737,7 @@
      "id": "legendary-duelists-season-2:52481437:LDS2-EN121:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230366,
-       230841,
-       230842,
-       230843
+       230366
       ]
      },
      "number": "LDS2-EN121",
@@ -6557,6 +6748,60 @@
       "match": "number+rarity",
       "name": "Super Express Bullet Train"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:52481437:LDS2-EN121:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230841
+      ]
+     },
+     "number": "LDS2-EN121",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Super Express Bullet Train (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:52481437:LDS2-EN121:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230842
+      ]
+     },
+     "number": "LDS2-EN121",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Super Express Bullet Train (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:52481437:LDS2-EN121:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230843
+      ]
+     },
+     "number": "LDS2-EN121",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Super Express Bullet Train (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-sisters-of-the-rose:52481437:LED4-EN035:ultra_rare",
@@ -6575,6 +6820,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:52481437:MGED-EN062:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6598,6 +6846,9 @@
    ]
   },
   {
+   "aliases": [
+    "Balameuniere de Nouvellez"
+   ],
    "archetypes": [
     "nouvelles"
    ],
@@ -6824,6 +7075,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Gladiator Beast Atrix"
+   ],
    "archetypes": [
     "gladiator-beast"
    ],
@@ -7193,11 +7447,69 @@
     },
     {
      "id": "duelist-league-16-participation-cards:52512994:DL16-EN007:rare",
+     "number": "DL16-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:52512994:DL16-EN007:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77621,
-       77622,
-       77623,
+       77621
+      ]
+     },
+     "number": "DL16-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kasha (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:52512994:DL16-EN007:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77622
+      ]
+     },
+     "number": "DL16-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kasha (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:52512994:DL16-EN007:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77623
+      ]
+     },
+     "number": "DL16-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kasha (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:52512994:DL16-EN007:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77624
       ]
      },
@@ -7205,10 +7517,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Kasha (Blue)"
-     }
+      "name": "Kasha (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-2-the-duel-academy-years-mega-pack:52512994:LCGX-EN206:ultra_rare",
@@ -7384,6 +7698,9 @@
    "tcgDate": "2018-10-18"
   },
   {
+   "aliases": [
+    "Raika no Yoroi Tokage"
+   ],
    "archetypes": [
     "ragnaraika"
    ],
@@ -7445,6 +7762,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:52543404:LEDE-EN015:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7749,6 +8069,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fusion Over"
+   ],
    "archetypes": [
     "fusion"
    ],
@@ -7806,6 +8129,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:52553471:POTE-EN054:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8012,6 +8339,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:52566270:BACH-EN020:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8447,6 +8777,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:52596406:PHNI-EN006:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8553,6 +8886,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mirage Force"
+   ],
    "archetypes": [
     "mirror-trap"
    ],
@@ -8610,6 +8946,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:52607696:LEDE-EN078:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8982,6 +9321,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thought Cross Archfiend"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -9027,6 +9369,9 @@
    "passcode": 52644170,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:52644170:DUAD-EN039:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9051,6 +9396,9 @@
    ]
   },
   {
+   "aliases": [
+    "Epurery Happiness"
+   ],
    "archetypes": [
     "purrely"
    ],
@@ -9231,6 +9579,9 @@
    "tcgDate": "2004-10-01"
   },
   {
+   "aliases": [
+    "Number S0"
+   ],
    "archetypes": [
     "number-s",
     "number-spell-trap-archetype",
@@ -10055,6 +10406,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:52687916:MGED-EN027:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10165,6 +10519,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cyberse Wickid"
+   ],
    "atk": 800,
    "attribute": "dark",
    "frame": "link",
@@ -10209,6 +10566,13 @@
    "ocgDate": "2018-10-13",
    "passcode": 52698008,
    "prints": [
+    {
+     "id": "magnificent-maestros:52698008:MAMS-EN098:ultra_rare",
+     "number": "MAMS-EN098",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
     {
      "id": "savage-strike:52698008:SAST-EN044:common",
      "identifiers": {
@@ -10375,6 +10739,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:52707042:DIFO-EN086:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10486,6 +10853,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shiranui Spiritsaga"
+   ],
    "archetypes": [
     "shiranui"
    ],
@@ -10793,6 +11163,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Creator"
+   ],
    "archetypes": [
     "fan-made-cards"
    ],
@@ -10818,13 +11191,36 @@
    "kind": "monster",
    "level": 10,
    "monsterType": "Fiend",
-   "name": "Dark Creator",
+   "name": "Lord of Darkness",
    "names": {
-    "en": "Dark Creator"
+    "en": "Lord of Darkness"
    },
    "ocgDate": "2026-03-20",
    "passcode": 52768390,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:52768390:MAMS-EN020:secret_rare",
+     "number": "MAMS-EN020",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:52768390:MAMS-EN020:starlight_rare",
+     "number": "MAMS-EN020",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:52768390:MAMS-EN020:ultra_rare",
+     "number": "MAMS-EN020",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Fiend",
     "Effect"
@@ -10993,6 +11389,9 @@
    ]
   },
   {
+   "aliases": [
+    "Predaplant Spino Dionaea"
+   ],
    "archetypes": [
     "predaplant"
    ],
@@ -11105,6 +11504,51 @@
    ]
   },
   {
+   "aliases": [
+    "Zaltys the White Crow Knight"
+   ],
+   "archetypes": [
+    "winter-raven"
+   ],
+   "atk": 2600,
+   "attribute": "fire",
+   "def": 1700,
+   "frame": "synchro",
+   "hasEffect": true,
+   "id": "52806255",
+   "identifiers": {
+    "konamiId": 23848,
+    "ygoprodeckId": 52806255
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/52806255.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/52806255.jpg",
+     "id": 52806255,
+     "small": "https://images.ygoprodeck.com/images/cards_small/52806255.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 5,
+   "monsterType": "Illusion",
+   "name": "Zaltys, Knight of the Winter Raven",
+   "names": {
+    "en": "Zaltys, Knight of the Winter Raven"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 52806255,
+   "prints": [],
+   "typeline": [
+    "Illusion",
+    "Synchro",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Dinorphia Sonic"
+   ],
    "archetypes": [
     "dinomorphia"
    ],
@@ -11162,6 +11606,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:52807032:BACH-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11661,6 +12108,9 @@
    "tcgDate": "2010-05-07"
   },
   {
+   "aliases": [
+    "Aurora Weathery Pattern"
+   ],
    "archetypes": [
     "the-weather"
    ],
@@ -12097,6 +12547,9 @@
    ]
   },
   {
+   "aliases": [
+    "Simorgh, Bird of Extermination"
+   ],
    "archetypes": [
     "simorgh"
    ],
@@ -12158,6 +12611,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:52843699:BACH-EN023:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12250,6 +12706,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tenyi Spirit - Surya"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -12314,6 +12773,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:52854600:SUDA-EN021:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12330,6 +12792,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:52854600:SUDA-EN021:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12958,6 +13423,9 @@
    ]
   },
   {
+   "aliases": [
+    "Enlightened of Nephthys"
+   ],
    "archetypes": [
     "nephthys"
    ],
@@ -13116,6 +13584,9 @@
    ]
   },
   {
+   "aliases": [
+    "Memento Attic Ghost"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -13177,6 +13648,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:52918032:PHNI-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13277,6 +13751,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:52927340:MGED-EN094:rare",
      "identifiers": {
       "tcgplayerProductIds": [

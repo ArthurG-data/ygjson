@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "TA.I.es"
+   ],
    "archetypes": [
     "a-i"
    ],
@@ -42,6 +45,9 @@
    "passcode": 79015062,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:79015062:ALIN-EN054:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -61,6 +67,9 @@
    "tcgDate": "2025-05-01"
   },
   {
+   "aliases": [
+    "Binal Sorceress"
+   ],
    "atk": 1600,
    "attribute": "earth",
    "frame": "link",
@@ -145,6 +154,9 @@
    ]
   },
   {
+   "aliases": [
+    "Runaway Prankids"
+   ],
    "archetypes": [
     "prank-kids"
    ],
@@ -201,6 +213,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:79059098:MGED-EN118:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1067,6 +1082,40 @@
       "match": "number+rarity",
       "name": "King of the Swamp"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:79109599:SBC2-ENI23:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600220
+      ]
+     },
+     "number": "SBC2-ENI23",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "King of the Swamp"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:79109599:SBC2-ENI23:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600219
+      ]
+     },
+     "number": "SBC2-ENI23",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "King of the Swamp (PSR)"
+     }
     }
    ],
    "tcgDate": "2004-06-01",
@@ -1489,6 +1538,23 @@
       "match": "number+rarity",
       "name": "Inverse Universe"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:79161790:SGX4-ENB20:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543778
+      ]
+     },
+     "number": "SGX4-ENB20",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Inverse Universe"
+     }
     }
    ],
    "tcgDate": "2010-02-12"
@@ -1562,6 +1628,9 @@
    ]
   },
   {
+   "aliases": [
+    "Whirlwind Machine Striborg"
+   ],
    "atk": 2200,
    "attribute": "wind",
    "def": 2200,
@@ -1792,6 +1861,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:79182538:IOC-EN057:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2131,6 +2203,9 @@
    "tcgDate": "2013-01-25"
   },
   {
+   "aliases": [
+    "Gravekeeper's Esper"
+   ],
    "archetypes": [
     "gravekeeper-s"
    ],
@@ -2215,6 +2290,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tellarknight Lyra"
+   ],
    "archetypes": [
     "constellar"
    ],
@@ -2276,6 +2354,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:79210531:CYAC-EN021:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2586,6 +2667,9 @@
    ]
   },
   {
+   "aliases": [
+    "Darkness Metal, the Dark Steel Dragon"
+   ],
    "archetypes": [
     "red-eyes"
    ],
@@ -2658,8 +2742,7 @@
      "id": "battles-of-legend-chapter-1:79266769:BLC1-EN044:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538516,
-       538677
+       538516
       ]
      },
      "number": "BLC1-EN044",
@@ -2670,6 +2753,27 @@
       "match": "number+rarity",
       "name": "Darkness Metal, the Dragon of Dark Steel"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:79266769:BLC1-EN044:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538677
+      ]
+     },
+     "number": "BLC1-EN044",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Darkness Metal, the Dragon of Dark Steel (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "editions": [
@@ -3298,6 +3402,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:79335209:IOC-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3590,6 +3697,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:79371769:BODE-EN080:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3681,6 +3791,9 @@
    "tcgDate": "2021-02-04"
   },
   {
+   "aliases": [
+    "Sentence of the Evil Eye"
+   ],
    "archetypes": [
     "evil-eye"
    ],
@@ -3837,6 +3950,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:79387392:SBC2-END11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600271
+      ]
+     },
+     "number": "SBC2-END11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Reactor Slime"
+     }
+    },
+    {
      "id": "speed-duel-streets-of-battle-city:79387392:SBC1-ENH05:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3860,6 +3990,9 @@
    ]
   },
   {
+   "aliases": [
+    "Watchful Rule of the Evil Eye"
+   ],
    "archetypes": [
     "evil-eye"
    ],
@@ -4276,11 +4409,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:79409334:DL13-EN011:rare",
+     "number": "DL13-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:79409334:DL13-EN011:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77428,
-       80445,
-       80446,
+       80445
+      ]
+     },
+     "number": "DL13-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Black Stego (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:79409334:DL13-EN011:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80446
+      ]
+     },
+     "number": "DL13-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Black Stego (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:79409334:DL13-EN011:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80447
       ]
      },
@@ -4288,10 +4461,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Black Stego (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:79409334:DL13-EN011:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77428
+      ]
+     },
+     "number": "DL13-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Black Stego (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:79409334:LCJW-EN155:common",
@@ -4342,6 +4535,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:79409334:STP7-EN021:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544984
+      ]
+     },
+     "number": "STP7-EN021",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Black Stego"
+     }
+    },
+    {
      "id": "structure-deck-dinosaur-s-rage:79409334:SD09-EN013:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4365,6 +4578,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snake-Eyes Execute Dragon"
+   ],
    "archetypes": [
     "eyes-dragon"
    ],
@@ -4410,6 +4626,9 @@
    "passcode": 79415624,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:79415624:ALIN-EN040:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4426,6 +4645,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:79415624:ALIN-EN040:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4658,7 +4880,28 @@
     "pt": "Foguete R.B. VALCan"
    },
    "passcode": 79436874,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:79436874:DUAD-EN092:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639429
+      ]
+     },
+     "number": "DUAD-EN092",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. VALCan Rocket"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03",
    "typeline": [
     "Machine",
@@ -4915,10 +5158,7 @@
      "id": "dragons-of-legend-the-complete-series:79447365:DLCS-EN079:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221623,
-       222323,
-       222324,
-       222325
+       221623
       ]
      },
      "number": "DLCS-EN079",
@@ -4929,6 +5169,69 @@
       "match": "number+rarity",
       "name": "Toon Mask"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:79447365:DLCS-EN079:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222323
+      ]
+     },
+     "number": "DLCS-EN079",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Mask (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:79447365:DLCS-EN079:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222324
+      ]
+     },
+     "number": "DLCS-EN079",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Mask (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:79447365:DLCS-EN079:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222325
+      ]
+     },
+     "number": "DLCS-EN079",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Mask (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "speed-duel-starter-decks-match-of-the-millennium:79447365:SS04-ENB24:common",
@@ -5161,6 +5464,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bazoo the Soul Eater Beast"
+   ],
    "atk": 2500,
    "attribute": "earth",
    "def": 900,
@@ -5434,6 +5740,9 @@
    ]
   },
   {
+   "aliases": [
+    "Night Wing Priestess"
+   ],
    "atk": 2500,
    "attribute": "wind",
    "def": 2500,
@@ -5469,6 +5778,9 @@
    "passcode": 79519259,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:79519259:BPRO-EN038:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5493,6 +5805,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vampire Scargelet"
+   ],
    "archetypes": [
     "vampire"
    ],
@@ -5918,6 +6233,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:79552283:DIFO-EN074:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6013,6 +6331,9 @@
    "tcgDate": "2015-08-06"
   },
   {
+   "aliases": [
+    "D/D/D Wave High King Executive Caesar"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d"
@@ -6147,6 +6468,9 @@
    ]
   },
   {
+   "aliases": [
+    "Excited Melffys"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -6823,6 +7147,40 @@
       "match": "number+rarity",
       "name": "Injection Fairy Lily"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:79575620:SBC2-ENI14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600206
+      ]
+     },
+     "number": "SBC2-ENI14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Injection Fairy Lily"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:79575620:SBC2-ENI14:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600205
+      ]
+     },
+     "number": "SBC2-ENI14",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Injection Fairy Lily (PSR)"
+     }
     }
    ],
    "tcgDate": "2003-06-06",
@@ -6899,6 +7257,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ancient Warriors - Tyrannical Dong Ying"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -6943,6 +7304,9 @@
    "passcode": 79582540,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:79582540:DIFO-EN024:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6966,6 +7330,9 @@
    ]
   },
   {
+   "aliases": [
+    "Memento Cranium Burst"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -7521,6 +7888,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:79627627:PHNI-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7741,6 +8111,39 @@
     }
    ],
    "tcgDate": "2004-06-01"
+  },
+  {
+   "aliases": [
+    "The Sun God's Protector - Egyptian God Slime"
+   ],
+   "archetypes": [
+    "slime"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "79654215",
+   "identifiers": {
+    "konamiId": 23884,
+    "ygoprodeckId": 79654215
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/79654215.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/79654215.jpg",
+     "id": 79654215,
+     "small": "https://images.ygoprodeck.com/images/cards_small/79654215.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Continuous",
+   "name": "Egyptian God Slime, Protector of the Sun God",
+   "names": {
+    "en": "Egyptian God Slime, Protector of the Sun God"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 79654215,
+   "prints": []
   },
   {
    "archetypes": [
@@ -8145,6 +8548,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Yellow Gurnard Duonigis"
+   ],
    "atk": 1500,
    "attribute": "water",
    "def": 700,
@@ -8286,6 +8692,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:79747096:MGED-EN082:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8311,6 +8720,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon Tail Gramel"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -8913,6 +9325,47 @@
   },
   {
    "archetypes": [
+    "salamangreat"
+   ],
+   "atk": 300,
+   "attribute": "fire",
+   "def": 2100,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "79768885",
+   "identifiers": {
+    "konamiId": 23824,
+    "ygoprodeckId": 79768885
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/79768885.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/79768885.jpg",
+     "id": 79768885,
+     "small": "https://images.ygoprodeck.com/images/cards_small/79768885.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Cyberse",
+   "name": "Salamangreat Markhor",
+   "names": {
+    "en": "Salamangreat Markhor"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 79768885,
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Therions' Standup"
+   ],
+   "archetypes": [
     "therion"
    ],
    "frame": "trap",
@@ -8969,6 +9422,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:79775821:DIFO-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8988,6 +9444,9 @@
    "tcgDate": "2022-05-19"
   },
   {
+   "aliases": [
+    "Barrier Bubble"
+   ],
    "archetypes": [
     "performage"
    ],
@@ -9063,6 +9522,9 @@
    "tcgDate": "2015-08-06"
   },
   {
+   "aliases": [
+    "Shiranui Spectralsword of Sunset"
+   ],
    "archetypes": [
     "shiranui",
     "shiranui-spectralsword"
@@ -9219,6 +9681,9 @@
    ]
   },
   {
+   "aliases": [
+    "CXyz Chaos Barian Hope Dragon"
+   ],
    "archetypes": [
     "xyz"
    ],
@@ -9299,6 +9764,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gold Sarcophagus of Light"
+   ],
    "archetypes": [
     "shining-sarcophagus"
    ],
@@ -9356,6 +9824,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:79791878:LEDE-EN051:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9372,6 +9843,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:79791878:LEDE-EN051:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10620,6 +11094,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:79852326:SBC2-ENE24:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600345
+      ]
+     },
+     "number": "SBC2-ENE24",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Zoma the Spirit"
+     }
+    },
+    {
      "id": "speed-duel-gx-duelists-of-shadows:79852326:SGX3-ENI38:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10687,6 +11178,9 @@
    "tcgDate": "2008-01-26"
   },
   {
+   "aliases": [
+    "Kinetic Soldier"
+   ],
    "archetypes": [
     "cipher"
    ],
@@ -11073,6 +11567,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exorsister Elaine"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -11194,6 +11691,9 @@
    "passcode": 79859067,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:79859067:DOOD-EN096:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11272,6 +11772,9 @@
    "tcgDate": "2015-05-14"
   },
   {
+   "aliases": [
+    "Predaplant Triphyovertum"
+   ],
    "archetypes": [
     "predaplant"
    ],
@@ -11708,6 +12211,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:79870141:STP7-EN017:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544980
+      ]
+     },
+     "number": "STP7-EN017",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mad Sword Beast"
+     }
+    },
+    {
      "id": "starter-deck-kaiba-evolution:79870141:SKE-022:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12015,6 +12538,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prominesis the Guardragon"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -12102,6 +12628,9 @@
    ]
   },
   {
+   "aliases": [
+    "Inviting Rondo of the Mikanko"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -12253,6 +12782,9 @@
    "tcgDate": "2019-07-11"
   },
   {
+   "aliases": [
+    "Victorika the Angel of Courage"
+   ],
    "atk": 1400,
    "attribute": "light",
    "def": 800,
@@ -12317,6 +12849,9 @@
    ]
   },
   {
+   "aliases": [
+    "Purrely Lily"
+   ],
    "archetypes": [
     "purrely"
    ],
@@ -12378,6 +12913,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:79933029:CYAC-EN018:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12417,6 +12955,9 @@
    ]
   },
   {
+   "aliases": [
+    "Northern Cross Fire"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "79936051",
@@ -12556,6 +13097,9 @@
    "tcgDate": "2010-08-07"
   },
   {
+   "aliases": [
+    "Draselea the Blood Tree Dragon Princess"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 0,
@@ -12747,6 +13291,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shadow Art of the Six Samurai"
+   ],
    "archetypes": [
     "six-samurai"
    ],
@@ -13144,6 +13691,51 @@
    ]
   },
   {
+   "aliases": [
+    "Maluth the White Crow Knight"
+   ],
+   "archetypes": [
+    "winter-raven"
+   ],
+   "atk": 1700,
+   "attribute": "light",
+   "def": 0,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "79980427",
+   "identifiers": {
+    "konamiId": 23821,
+    "ygoprodeckId": 79980427
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/79980427.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/79980427.jpg",
+     "id": 79980427,
+     "small": "https://images.ygoprodeck.com/images/cards_small/79980427.jpg"
+    }
+   ],
+   "isTuner": true,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Illusion",
+   "name": "Mart, Knight of the Winter Raven",
+   "names": {
+    "en": "Mart, Knight of the Winter Raven"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 79980427,
+   "prints": [],
+   "typeline": [
+    "Illusion",
+    "Tuner",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Raidraptor - Revolution Falcon - Airraid"
+   ],
    "archetypes": [
     "raidraptor"
    ],

@@ -244,6 +244,34 @@
    ],
    "frame": "spell",
    "hasEffect": true,
+   "id": "100460005",
+   "identifiers": {
+    "ygoprodeckId": 100460005
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460005.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460005.jpg",
+     "id": 100460005,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460005.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Field",
+   "name": "Cubic Dimension",
+   "names": {
+    "en": "Cubic Dimension"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
    "id": "100460006",
    "identifiers": {
     "ygoprodeckId": 100460006
@@ -262,6 +290,34 @@
    "name": "Cubic Bodhi",
    "names": {
     "en": "Cubic Bodhi"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "100460007",
+   "identifiers": {
+    "ygoprodeckId": 100460007
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460007.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460007.jpg",
+     "id": 100460007,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460007.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Counter",
+   "name": "Cubic Defense",
+   "names": {
+    "en": "Cubic Defense"
    },
    "ocgDate": "2026-11-21",
    "prints": []
@@ -441,6 +497,172 @@
    "name": "Marincess Reef Lagoon",
    "names": {
     "en": "Marincess Reef Lagoon"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "atk": 1500,
+   "attribute": "dark",
+   "def": 600,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "100460050",
+   "identifiers": {
+    "ygoprodeckId": 100460050
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460050.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460050.jpg",
+     "id": 100460050,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460050.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 3,
+   "monsterType": "Zombie",
+   "name": "Ghostrick Lich",
+   "names": {
+    "en": "Ghostrick Lich"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "typeline": [
+    "Zombie",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "atk": 900,
+   "attribute": "dark",
+   "def": 900,
+   "frame": "xyz",
+   "hasEffect": true,
+   "id": "100460051",
+   "identifiers": {
+    "ygoprodeckId": 100460051
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460051.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460051.jpg",
+     "id": 100460051,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460051.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "monsterType": "Spellcaster",
+   "name": "Ghostrick Yoko",
+   "names": {
+    "en": "Ghostrick Yoko"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "rank": 2,
+   "typeline": [
+    "Spellcaster",
+    "Xyz",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "atk": 2800,
+   "attribute": "dark",
+   "def": 2600,
+   "frame": "xyz",
+   "hasEffect": true,
+   "id": "100460052",
+   "identifiers": {
+    "ygoprodeckId": 100460052
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460052.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460052.jpg",
+     "id": 100460052,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460052.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "monsterType": "Zombie",
+   "name": "Ghostrick Master Alucard",
+   "names": {
+    "en": "Ghostrick Master Alucard"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": [],
+   "rank": 6,
+   "typeline": [
+    "Zombie",
+    "Xyz",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "100460053",
+   "identifiers": {
+    "ygoprodeckId": 100460053
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460053.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460053.jpg",
+     "id": 100460053,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460053.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Field",
+   "name": "Ghostrick Garden",
+   "names": {
+    "en": "Ghostrick Garden"
+   },
+   "ocgDate": "2026-11-21",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "100460054",
+   "identifiers": {
+    "ygoprodeckId": 100460054
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/100460054.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/100460054.jpg",
+     "id": 100460054,
+     "small": "https://images.ygoprodeck.com/images/cards_small/100460054.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Quick-Play",
+   "name": "Ghostrick Art",
+   "names": {
+    "en": "Ghostrick Art"
    },
    "ocgDate": "2026-11-21",
    "prints": []

@@ -1176,6 +1176,9 @@
    "tcgDate": "2019-01-24"
   },
   {
+   "aliases": [
+    "Destiny Draw Skill"
+   ],
    "frame": "skill",
    "hasEffect": true,
    "id": "300201002",
@@ -2448,6 +2451,26 @@
       "match": "number+rarity",
       "name": "Knight of Legend"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "speed-duel-tournament-pack-7:300204002:STP7-ENS01:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       610114
+      ]
+     },
+     "number": "STP7-ENS01",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Knight of Legend"
+     }
     }
    ],
    "tcgDate": "2020-05-15"
@@ -2497,6 +2520,26 @@
      "set": "speed-duel-starter-decks-match-of-the-millennium",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Thousand-Eyes Spell"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "speed-duel-tournament-pack-7:300204003:STP7-ENS02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       610112
+      ]
+     },
+     "number": "STP7-ENS02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Thousand-Eyes Spell"
      }
     }

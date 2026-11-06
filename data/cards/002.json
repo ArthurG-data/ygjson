@@ -42,6 +42,9 @@
    "passcode": 2006591,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:2006591:SUDA-EN069:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -373,6 +376,23 @@
       "match": "number-other-set",
       "name": "Hidden Soldiers"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:2047519:SBC2-END19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600199
+      ]
+     },
+     "number": "SBC2-END19",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Hidden Soldiers"
+     }
     }
    ],
    "tcgDate": "2006-08-05"
@@ -486,6 +506,9 @@
    "tcgDate": "2014-08-14"
   },
   {
+   "aliases": [
+    "Number 104"
+   ],
    "archetypes": [
     "number-10x",
     "number-spell-trap-archetype"
@@ -650,6 +673,45 @@
    "tcgDate": "2011-10-04",
    "typeline": [
     "Winged Beast",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "reindsurm"
+   ],
+   "atk": 2000,
+   "attribute": "light",
+   "def": 1300,
+   "frame": "ritual",
+   "hasEffect": true,
+   "id": "2083229",
+   "identifiers": {
+    "konamiId": 23837,
+    "ygoprodeckId": 2083229
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/2083229.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/2083229.jpg",
+     "id": 2083229,
+     "small": "https://images.ygoprodeck.com/images/cards_small/2083229.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Insect",
+   "name": "Reindsurm Carcasas",
+   "names": {
+    "en": "Reindsurm Carcasas"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 2083229,
+   "prints": [],
+   "typeline": [
+    "Insect",
+    "Ritual",
     "Effect"
    ]
   },
@@ -1130,6 +1192,9 @@
    "tcgDate": "2016-05-26"
   },
   {
+   "aliases": [
+    "Brynigle"
+   ],
    "atk": 1000,
    "attribute": "water",
    "def": 2600,
@@ -1194,6 +1259,9 @@
    ]
   },
   {
+   "aliases": [
+    "Charging Gaia"
+   ],
    "archetypes": [
     "gaia-the-fierce-knight"
    ],
@@ -1362,6 +1430,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:2111707:SBC2-ENB21:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600339
+      ]
+     },
+     "number": "SBC2-ENB21",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "XY-Dragon Cannon"
+     }
+    },
+    {
      "id": "structure-deck-seto-kaiba:2111707:SDKS-EN043:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1440,6 +1525,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:2116237:AGOV-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1721,10 +1809,7 @@
      "id": "legendary-duelists-season-2:2129638:LDS2-EN019:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230247,
-       230775,
-       230776,
-       230777
+       230247
       ]
      },
      "number": "LDS2-EN019",
@@ -1735,6 +1820,60 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Twin Burst Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:2129638:LDS2-EN019:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230775
+      ]
+     },
+     "number": "LDS2-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Twin Burst Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:2129638:LDS2-EN019:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230776
+      ]
+     },
+     "number": "LDS2-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Twin Burst Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:2129638:LDS2-EN019:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230777
+      ]
+     },
+     "number": "LDS2-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Twin Burst Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "shining-victories:2129638:SHVI-EN099:secret_rare",
@@ -2144,6 +2283,40 @@
       "match": "number+rarity",
       "name": "Asura Priest"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:2134346:SBC2-ENI05:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600113
+      ]
+     },
+     "number": "SBC2-ENI05",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Asura Priest"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:2134346:SBC2-ENI05:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600112
+      ]
+     },
+     "number": "SBC2-ENI05",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Asura Priest (PSR)"
+     }
     }
    ],
    "tcgDate": "2003-06-06",
@@ -2318,6 +2491,9 @@
    ]
   },
   {
+   "aliases": [
+    "Amabie-San"
+   ],
    "atk": 0,
    "attribute": "water",
    "def": 0,
@@ -3149,11 +3325,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:2204140:DL17-EN014:rare",
+     "number": "DL17-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:2204140:DL17-EN014:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80584,
-       80585,
-       80586,
+       80585
+      ]
+     },
+     "number": "DL17-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Book of Life (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:2204140:DL17-EN014:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80586
+      ]
+     },
+     "number": "DL17-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Book of Life (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:2204140:DL17-EN014:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80587
       ]
      },
@@ -3161,10 +3377,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Book of Life (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:2204140:DL17-EN014:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80584
+      ]
+     },
+     "number": "DL17-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Book of Life (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gold-series-haunted-mine:2204140:GLD5-EN039:common",
@@ -3352,6 +3588,9 @@
    "tcgDate": "2003-07-18"
   },
   {
+   "aliases": [
+    "Security Gardna"
+   ],
    "atk": 1000,
    "attribute": "light",
    "frame": "link",
@@ -3583,6 +3822,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:2254222:SUDA-EN007:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3609,6 +3851,9 @@
    ]
   },
   {
+   "aliases": [
+    "Artemate Slay"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "2263869",
@@ -3759,6 +4004,27 @@
      }
     },
     {
+     "id": "magnificent-maestros:2263869:MAMS-EN037:secret_rare",
+     "number": "MAMS-EN037",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:2263869:MAMS-EN037:starlight_rare",
+     "number": "MAMS-EN037",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:2263869:MAMS-EN037:ultra_rare",
+     "number": "MAMS-EN037",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "editions": [
       "first"
      ],
@@ -3778,6 +4044,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:2263869:POTE-EN067:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3794,6 +4064,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:2263869:POTE-EN067:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3813,6 +4087,9 @@
    "tcgDate": "2022-08-04"
   },
   {
+   "aliases": [
+    "Vendread Gathering"
+   ],
    "archetypes": [
     "vendread"
    ],
@@ -4568,6 +4845,9 @@
    "tcgDate": "2016-04-14"
   },
   {
+   "aliases": [
+    "Splight Carrot"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -4629,6 +4909,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:2311090:POTE-EN007:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5395,6 +5679,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:2326738:SBC2-ENG08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600146
+      ]
+     },
+     "number": "SBC2-ENG08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Des Lacooda"
+     }
+    },
+    {
      "id": "zombie-world-structure-deck:2326738:SDZW-EN013:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5517,6 +5818,9 @@
    ]
   },
   {
+   "aliases": [
+    "Geas Gandora the Dragon of Destruction"
+   ],
    "archetypes": [
     "gandora"
    ],
@@ -5578,6 +5882,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:2333466:LEDE-EN001:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5594,6 +5901,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:2333466:LEDE-EN001:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5658,6 +5968,9 @@
    "passcode": 2339825,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:2339825:AGOV-EN070:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5717,6 +6030,26 @@
    "ocgDate": "2025-04-26",
    "passcode": 2344618,
    "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:2344618:DUAD-EN053:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639390
+      ]
+     },
+     "number": "DUAD-EN053",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Lunalight Masquerade"
+     }
+    },
     {
      "editions": [
       "first"
@@ -5863,6 +6196,9 @@
    "passcode": 2347477,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:2347477:MGED-EN102:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5918,6 +6254,9 @@
    ]
   },
   {
+   "aliases": [
+    "Labrynth of the Silver Castle"
+   ],
    "archetypes": [
     "labrynth"
    ],
@@ -5977,6 +6316,27 @@
       "match": "number+rarity",
       "name": "Lovely Labrynth of the Silver Castle"
      }
+    },
+    {
+     "id": "magnificent-maestros:2347656:MAMS-EN031:secret_rare",
+     "number": "MAMS-EN031",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:2347656:MAMS-EN031:starlight_rare",
+     "number": "MAMS-EN031",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:2347656:MAMS-EN031:ultra_rare",
+     "number": "MAMS-EN031",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     },
     {
      "id": "quarter-century-stampede:2347656:RA04-EN295:platinum_secret_rare",
@@ -6370,6 +6730,9 @@
    "tcgDate": "2008-05-03"
   },
   {
+   "aliases": [
+    "Mayakashi Revolt"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -6682,6 +7045,9 @@
    "tcgDate": "2012-01-14"
   },
   {
+   "aliases": [
+    "Chaos Hats"
+   ],
    "archetypes": [
     "light-and-darkness-ritual"
    ],
@@ -6752,6 +7118,9 @@
    "tcgDate": "2026-07-02"
   },
   {
+   "aliases": [
+    "Burgesstoma Eldonia"
+   ],
    "archetypes": [
     "paleozoic"
    ],
@@ -6988,6 +7357,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ojamadification"
+   ],
    "archetypes": [
     "ojama"
    ],
@@ -7357,6 +7729,9 @@
    "passcode": 2405631,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:2405631:DABL-EN089:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7487,6 +7862,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 69"
+   ],
    "archetypes": [
     "heraldry",
     "number-spell-trap-archetype"
@@ -7574,6 +7952,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon Agave"
+   ],
    "atk": 3000,
    "attribute": "earth",
    "frame": "link",
@@ -7660,6 +8041,9 @@
    ]
   },
   {
+   "aliases": [
+    "Interrupt Resistance"
+   ],
    "atk": 0,
    "attribute": "light",
    "def": 2100,
@@ -8360,6 +8744,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fiendsmith Requiem"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -8442,6 +8829,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:2463794:INFO-EN046:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8458,6 +8848,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:2463794:INFO-EN046:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8728,6 +9121,9 @@
    "passcode": 2501624,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:2501624:ALIN-EN004:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8744,6 +9140,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:2501624:ALIN-EN004:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9260,11 +9659,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:2525268:DL14-EN006:rare",
+     "number": "DL14-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:2525268:DL14-EN006:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77582,
-       80487,
-       80488,
+       80487
+      ]
+     },
+     "number": "DL14-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Defender, the Magical Knight (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:2525268:DL14-EN006:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80488
+      ]
+     },
+     "number": "DL14-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Defender, the Magical Knight (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:2525268:DL14-EN006:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80489
       ]
      },
@@ -9272,10 +9711,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Defender, the Magical Knight (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:2525268:DL14-EN006:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77582
+      ]
+     },
+     "number": "DL14-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Defender, the Magical Knight (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "spellcaster-s-command-structure-deck:2525268:SDSC-EN003:common",
@@ -11075,6 +11534,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ormungandr, Generaider Boss of Eternity"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -11317,6 +11779,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:2671330:IOC-EN074:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11438,6 +11903,9 @@
    ]
   },
   {
+   "aliases": [
+    "ARG☆S - Home Stadium"
+   ],
    "archetypes": [
     "argostars"
    ],
@@ -11479,6 +11947,9 @@
    "passcode": 2674965,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:2674965:SUDA-EN058:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11554,6 +12025,23 @@
      "set": "dark-revelation-volume-3",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Medusa Worm"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:2694423:SGX4-END10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543809
+      ]
+     },
+     "number": "SGX4-END10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Medusa Worm"
      }
     },
@@ -11635,6 +12123,9 @@
    "passcode": 2725599,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:2725599:BPRO-EN051:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11651,6 +12142,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:2725599:BPRO-EN051:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11759,6 +12253,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spatial Trunade"
+   ],
    "archetypes": [
     "cyclone"
    ],
@@ -12420,6 +12917,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prisoner Princess of Fruitful Flames"
+   ],
    "atk": 2700,
    "attribute": "fire",
    "frame": "link",
@@ -12466,6 +12966,9 @@
    "passcode": 2772337,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:2772337:PHNI-EN052:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12482,6 +12985,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:2772337:PHNI-EN052:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12885,6 +13391,9 @@
    ]
   },
   {
+   "aliases": [
+    "Senka Champion - Zhang De"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -13022,6 +13531,9 @@
    ]
   },
   {
+   "aliases": [
+    "Divine Oddity of Valmonica - Zebufera"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -13093,6 +13605,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pacifis, City of Mythic Radiance"
+   ],
    "archetypes": [
     "phantasm-spiral"
    ],
@@ -13152,6 +13667,9 @@
    "tcgDate": "2017-05-04"
   },
   {
+   "aliases": [
+    "Mythic Radiance Dragon Token"
+   ],
    "archetypes": [
     "phantasm-spiral"
    ],
@@ -13794,6 +14312,9 @@
    ]
   },
   {
+   "aliases": [
+    "Troymare Phoenix"
+   ],
    "archetypes": [
     "knightmare"
    ],
@@ -14164,6 +14685,9 @@
    ]
   },
   {
+   "aliases": [
+    "Naglfar, Generaider Boss of Flames"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -14500,6 +15024,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ashtrashen - Gateway to the Worlds Beyond"
+   ],
    "archetypes": [
     "ashtra"
    ],
@@ -14697,6 +15224,9 @@
    "tcgDate": "2003-07-18"
   },
   {
+   "aliases": [
+    "Key to the World Legacy"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -15339,6 +15869,9 @@
    ]
   },
   {
+   "aliases": [
+    "Catch Copy"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "2971446",
@@ -15412,6 +15945,9 @@
    "tcgDate": "2020-01-30"
   },
   {
+   "aliases": [
+    "Number 46"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -15729,6 +16265,9 @@
    ]
   },
   {
+   "aliases": [
+    "Meklord Astro Extermination"
+   ],
    "archetypes": [
     "meklord",
     "meklord-astro"
@@ -15847,6 +16386,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:2992467:DUNE-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [

@@ -319,36 +319,6 @@
    "productId": 206301
   },
   {
-   "group": "Collector's Boxes",
-   "groupId": 2052,
-   "name": "Yugi's Collector Box",
-   "productId": 145608
-  },
-  {
-   "group": "Collector's Boxes",
-   "groupId": 2052,
-   "name": "Kaiba's Collector Box",
-   "productId": 149407
-  },
-  {
-   "group": "World Championship JPP Cards",
-   "groupId": 2353,
-   "name": "World Championship 2018 Pack",
-   "productId": 178084
-  },
-  {
-   "group": "World Championship JPP Cards",
-   "groupId": 2353,
-   "name": "World Championship 2019 Pack",
-   "productId": 196864
-  },
-  {
-   "group": "World Championship JPP Cards",
-   "groupId": 2353,
-   "name": "World Championship 2023 Pack",
-   "productId": 721860
-  },
-  {
    "group": "Yu-Gi-Oh! Value Boxes",
    "groupId": 2373,
    "name": "Silver Dragon Value Box",
@@ -359,66 +329,6 @@
    "groupId": 2373,
    "name": "Machine Madness Value Box",
    "productId": 180999
-  },
-  {
-   "group": "Miscellaneous Promotional Cards",
-   "groupId": 2718,
-   "name": "Masterpiece Series: Platinum Blue-Eyes White Dragon",
-   "productId": 247327
-  },
-  {
-   "group": "Miscellaneous Promotional Cards",
-   "groupId": 2718,
-   "name": "Special Card: Dark Magician Girl",
-   "productId": 247494
-  },
-  {
-   "group": "Miscellaneous Promotional Cards",
-   "groupId": 2718,
-   "name": "Masterpiece Series: Platinum Dark Magician",
-   "productId": 528671
-  },
-  {
-   "group": "Miscellaneous Promotional Cards",
-   "groupId": 2718,
-   "name": "Stainless Steel Egyptian God Cards",
-   "productId": 554800
-  },
-  {
-   "group": "Miscellaneous Promotional Cards",
-   "groupId": 2718,
-   "name": "24k Gold Plated Ingot Set - Exodia The Forbidden One (Limited Edition)",
-   "productId": 616823
-  },
-  {
-   "group": "Speed Duel GX: Midterm Destruction",
-   "groupId": 23355,
-   "name": "Speed Duel GX: Midterm Destruction Mini Box",
-   "productId": 530881
-  },
-  {
-   "group": "Speed Duel GX: Midterm Destruction",
-   "groupId": 23355,
-   "name": "Speed Duel GX: Midterm Destruction Mini Box Display",
-   "productId": 530882
-  },
-  {
-   "group": "Speed Duel: Battle City Finals",
-   "groupId": 23652,
-   "name": "Speed Duel: Battle City Finals Box",
-   "productId": 586058
-  },
-  {
-   "group": "Glorious Victors",
-   "groupId": 24822,
-   "name": "Glorious Victors Booster Pack [1st Edition]",
-   "productId": 713237
-  },
-  {
-   "group": "Glorious Victors",
-   "groupId": 24822,
-   "name": "Glorious Victors Booster Box [1st Edition]",
-   "productId": 713238
   }
  ],
  "other": [
@@ -478,6 +388,21 @@
    "set": "duelist-saga"
   },
   {
+   "name": "World Championship 2018 Pack",
+   "productId": 178084,
+   "set": "world-championship-jpp-cards"
+  },
+  {
+   "name": "World Championship 2019 Pack",
+   "productId": 196864,
+   "set": "world-championship-jpp-cards"
+  },
+  {
+   "name": "World Championship 2023 Pack",
+   "productId": 721860,
+   "set": "world-championship-jpp-cards"
+  },
+  {
    "name": "Duel Devastator Box",
    "productId": 195614,
    "set": "duel-devastator"
@@ -496,6 +421,31 @@
    "name": "Speed Duel: Battle City Box",
    "productId": 220429,
    "set": "speed-duel-battle-city-box"
+  },
+  {
+   "name": "Masterpiece Series: Platinum Blue-Eyes White Dragon",
+   "productId": 247327,
+   "set": "miscellaneous-promotional-cards"
+  },
+  {
+   "name": "Special Card: Dark Magician Girl",
+   "productId": 247494,
+   "set": "miscellaneous-promotional-cards"
+  },
+  {
+   "name": "Masterpiece Series: Platinum Dark Magician",
+   "productId": 528671,
+   "set": "miscellaneous-promotional-cards"
+  },
+  {
+   "name": "Stainless Steel Egyptian God Cards",
+   "productId": 554800,
+   "set": "miscellaneous-promotional-cards"
+  },
+  {
+   "name": "24k Gold Plated Ingot Set - Exodia The Forbidden One (Limited Edition)",
+   "productId": 616823,
+   "set": "miscellaneous-promotional-cards"
   },
   {
    "name": "Ghosts From the Past Box [1st Edition]",
@@ -553,6 +503,11 @@
    "set": "battles-of-legend-chapter-1"
   },
   {
+   "name": "Speed Duel GX: Midterm Destruction Mini Box",
+   "productId": 530881,
+   "set": "speed-duel-gx-midterm-destruction"
+  },
+  {
    "name": "25th Anniversary Ultimate Kaiba Set Briefcase",
    "productId": 530853,
    "set": "25th-anniversary-ultimate-kaiba-set"
@@ -576,6 +531,11 @@
    "name": "Retro Pack Box (4-Pack)",
    "productId": 564136,
    "set": "retro-pack-2020-reprint"
+  },
+  {
+   "name": "Speed Duel: Battle City Finals Box",
+   "productId": 586058,
+   "set": "speed-duel-battle-city-finals"
   },
   {
    "name": "Retro Pack 2 (2020 Date Reprint) 4-Pack Box",

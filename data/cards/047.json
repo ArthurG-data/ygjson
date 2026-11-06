@@ -103,6 +103,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C92"
+   ],
    "archetypes": [
     "chaos",
     "number-c",
@@ -209,6 +212,9 @@
    ]
   },
   {
+   "aliases": [
+    "U.A. Playing Manager"
+   ],
    "archetypes": [
     "u-a"
    ],
@@ -503,6 +509,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lil' Maji Mage"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 1200,
@@ -561,6 +570,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:47028805:ROTA-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -728,6 +740,23 @@
    "ocgDate": "2023-06-10",
    "passcode": 47051709,
    "prints": [
+    {
+     "id": "maze-of-millennia:47051709:MZMI-EN024:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       532852
+      ]
+     },
+     "number": "MZMI-EN024",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "maze-of-millennia",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Photon Delta Wing (CR)"
+     }
+    },
     {
      "id": "maze-of-millennia:47051709:MZMI-EN024:ultra_rare",
      "identifiers": {
@@ -1120,6 +1149,9 @@
    "passcode": 47060528,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:47060528:ALIN-EN088:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1446,6 +1478,9 @@
    ]
   },
   {
+   "aliases": [
+    "Regenesis Demiurge"
+   ],
    "archetypes": [
     "regenesis"
    ],
@@ -1490,6 +1525,9 @@
    "passcode": 47082621,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:47082621:DOOD-EN022:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1710,6 +1748,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zenetnakht Sphinx"
+   ],
    "archetypes": [
     "zenet"
    ],
@@ -1735,13 +1776,22 @@
    "kind": "monster",
    "level": 12,
    "monsterType": "Zombie",
-   "name": "Zenetnakht Sphinx",
+   "name": "Zenet-Nakhte Sphinx",
    "names": {
-    "en": "Zenetnakht Sphinx"
+    "en": "Zenet-Nakhte Sphinx"
    },
    "ocgDate": "2026-09-05",
    "passcode": 47095439,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:47095439:GLVI-EN003:starlight_rare",
+     "number": "GLVI-EN003",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Zombie",
     "Ritual",
@@ -2262,6 +2312,9 @@
    "tcgDate": "2021-12-02"
   },
   {
+   "aliases": [
+    "Blaze, Supreme Ruler of Dragons"
+   ],
    "atk": 2800,
    "attribute": "fire",
    "def": 1800,
@@ -2565,6 +2618,9 @@
    ]
   },
   {
+   "aliases": [
+    "Companion Whelp of the Destruction Swordsman"
+   ],
    "archetypes": [
     "destruction-sword"
    ],
@@ -2636,6 +2692,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tri-Brigade Bearbloom the Heavy Hitter"
+   ],
    "archetypes": [
     "tri-brigade"
    ],
@@ -2784,6 +2843,9 @@
    "tcgDate": "2019-01-31"
   },
   {
+   "aliases": [
+    "Yubel - Das Ewig Liebe Wächter"
+   ],
    "archetypes": [
     "yubel"
    ],
@@ -2845,6 +2907,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:47172959:PHNI-EN038:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2861,6 +2926,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:47172959:PHNI-EN038:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2957,6 +3025,9 @@
    "tcgDate": "2017-05-04"
   },
   {
+   "aliases": [
+    "Quartet Wonky"
+   ],
    "atk": 0,
    "attribute": "earth",
    "def": 2600,
@@ -3358,6 +3429,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:47219274:DABL-EN041:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3382,6 +3456,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Magic Circle"
+   ],
    "archetypes": [
     "prophecy"
    ],
@@ -3522,9 +3599,7 @@
      "id": "legendary-duelists-season-3:47222536:LDS3-EN093:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276225,
-       276728,
-       276729
+       276225
       ]
      },
      "number": "LDS3-EN093",
@@ -3535,6 +3610,48 @@
       "match": "number+rarity",
       "name": "Dark Magical Circle"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:47222536:LDS3-EN093:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276728
+      ]
+     },
+     "number": "LDS3-EN093",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magical Circle (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:47222536:LDS3-EN093:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276729
+      ]
+     },
+     "number": "LDS3-EN093",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magical Circle (Red)"
+     },
+     "variant": "red"
     },
     {
      "editions": [
@@ -3598,6 +3715,9 @@
    "tcgDate": "2016-08-04"
   },
   {
+   "aliases": [
+    "Lighdron Leo"
+   ],
    "atk": 2000,
    "attribute": "earth",
    "def": 0,
@@ -3891,6 +4011,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Conduction Knight Plasma Magnum"
+   ],
    "atk": 2300,
    "attribute": "earth",
    "def": 2800,
@@ -3926,6 +4049,9 @@
    "passcode": 47247792,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:47247792:BPRO-EN034:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4639,11 +4765,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:47325505:DL13-EN018:rare",
+     "number": "DL13-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:47325505:DL13-EN018:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77434,
-       80466,
-       80467,
+       80466
+      ]
+     },
+     "number": "DL13-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fossil Dig (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:47325505:DL13-EN018:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80467
+      ]
+     },
+     "number": "DL13-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fossil Dig (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:47325505:DL13-EN018:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80468
       ]
      },
@@ -4651,10 +4817,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fossil Dig (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:47325505:DL13-EN018:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77434
+      ]
+     },
+     "number": "DL13-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Fossil Dig (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:47325505:LCJW-EN164:common",
@@ -4673,6 +4859,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:47325505:MGED-EN057:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4750,6 +4939,40 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:47325505:SGX4-ENC14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543792
+      ]
+     },
+     "number": "SGX4-ENC14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Fossil Dig"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:47325505:SGX4-ENC14:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544287
+      ]
+     },
+     "number": "SGX4-ENC14",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Fossil Dig (Secret Rare)"
+     }
+    },
+    {
      "id": "wild-survivors:47325505:WISU-EN055:collectors_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4785,6 +5008,9 @@
    "tcgDate": "2009-09-01"
   },
   {
+   "aliases": [
+    "Hapy, Vanguard of Horus"
+   ],
    "archetypes": [
     "horus"
    ],
@@ -4846,6 +5072,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:47330808:AGOV-EN013:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4888,6 +5117,9 @@
    ]
   },
   {
+   "aliases": [
+    "Doublecross Frog"
+   ],
    "archetypes": [
     "frog"
    ],
@@ -5038,6 +5270,9 @@
    ]
   },
   {
+   "aliases": [
+    "Startime Magician"
+   ],
    "atk": 2400,
    "attribute": "dark",
    "def": 1200,
@@ -5450,6 +5685,40 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:47355498:SBC2-ENF14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600252
+      ]
+     },
+     "number": "SBC2-ENF14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Necrovalley"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:47355498:SBC2-ENF14:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600251
+      ]
+     },
+     "number": "SBC2-ENF14",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Necrovalley (PSR)"
+     }
+    },
+    {
      "id": "structure-deck-marik-tcg:47355498:SDMA-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5628,6 +5897,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:47363932:MGED-EN061:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5782,6 +6054,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 8"
+   ],
    "archetypes": [
     "heraldic",
     "number-spell-trap-archetype"
@@ -5869,6 +6144,9 @@
    ]
   },
   {
+   "aliases": [
+    "Guardragon of Corruption"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -6110,6 +6388,9 @@
    "passcode": 47404795,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:47404795:PHHY-EN049:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6482,6 +6763,9 @@
    "passcode": 47425162,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:47425162:BPRO-EN023:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6498,6 +6782,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:47425162:BPRO-EN023:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6900,6 +7187,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Ruthless Drop Off"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "47439573",
@@ -7077,6 +7367,9 @@
    "tcgDate": "2004-11-20"
   },
   {
+   "aliases": [
+    "Magical Name - \"Great Beast\""
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -7244,6 +7537,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Bayoneter the Magical Scope"
+   ],
    "atk": 500,
    "attribute": "dark",
    "def": 0,
@@ -8188,6 +8484,23 @@
      }
     },
     {
+     "id": "redemption-replacement:47529357:MDP2-EN005K:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       617867
+      ]
+     },
+     "number": "MDP2-EN005K",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "redemption-replacement",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mist Body"
+     }
+    },
+    {
      "id": "spellcaster-s-command-structure-deck:47529357:SDSC-EN022:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8699,6 +9012,26 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
+     "id": "miscellaneous-promotional-cards:47596607:OPTP-EN005:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       477256
+      ]
+     },
+     "number": "OPTP-EN005",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "miscellaneous-promotional-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Skyscraper 2 - Hero City"
+     }
+    },
+    {
      "id": "quarter-century-bonanza:47596607:RA03-EN175:platinum_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8979,6 +9312,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:47606319:IOC-EN021:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9177,6 +9513,9 @@
    ]
   },
   {
+   "aliases": [
+    "Space Omajinai Usagi"
+   ],
    "atk": 0,
    "attribute": "light",
    "def": 1500,
@@ -9219,6 +9558,9 @@
    "passcode": 47643326,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:47643326:DOOD-EN097:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9243,6 +9585,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rex, Gale Fur Hire"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -9281,6 +9626,9 @@
    "passcode": 47647354,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:47647354:BPRO-EN017:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9679,6 +10027,9 @@
    ]
   },
   {
+   "aliases": [
+    "Adamatia Rise - Leonite"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -9764,6 +10115,9 @@
    ]
   },
   {
+   "aliases": [
+    "Reckless Magic Circle"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -10261,6 +10615,9 @@
    ]
   },
   {
+   "aliases": [
+    "Swordsoul Catastrophe - Qixing Longyuan"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -10306,6 +10663,9 @@
    "passcode": 47710198,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:47710198:BACH-EN041:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10542,6 +10902,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crystron Eleskeletas"
+   ],
    "archetypes": [
     "crystron"
    ],
@@ -10603,6 +10966,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:47736165:SUDA-EN041:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11049,6 +11415,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:47759571:POTE-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11373,6 +11743,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 20"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -11495,6 +11868,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magical Musket - Bloody Crown"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -11782,6 +12158,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:47829960:IOC-EN018:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12520,6 +12899,9 @@
    "tcgDate": "2021-06-03"
   },
   {
+   "aliases": [
+    "Illusionist of Jongleurghoul"
+   ],
    "atk": 2000,
    "attribute": "dark",
    "def": 0,
@@ -12578,6 +12960,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:47894537:PHNI-EN035:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12601,6 +12986,9 @@
    ]
   },
   {
+   "aliases": [
+    "Adamatia Crysta - Leonite"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -13252,6 +13640,9 @@
    "passcode": 47960073,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:47960073:DOOD-EN025:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13268,6 +13659,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:47960073:DOOD-EN025:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13329,6 +13723,9 @@
    "passcode": 47961342,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:47961342:AGOV-EN099:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13531,9 +13928,7 @@
      "id": "legendary-duelists-season-3:47963370:LDS3-EN089:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276218,
-       276760,
-       276761
+       276218
       ]
      },
      "number": "LDS3-EN089",
@@ -13544,6 +13939,48 @@
       "match": "number+rarity",
       "name": "Magician of Chaos"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:47963370:LDS3-EN089:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276760
+      ]
+     },
+     "number": "LDS3-EN089",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magician of Chaos (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:47963370:LDS3-EN089:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276761
+      ]
+     },
+     "number": "LDS3-EN089",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magician of Chaos (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2019-04-03",

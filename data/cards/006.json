@@ -42,6 +42,9 @@
    "passcode": 6004133,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:6004133:PHHY-EN063:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -396,11 +399,69 @@
     },
     {
      "id": "duelist-league-16-participation-cards:6021033:DL16-EN011:rare",
+     "number": "DL16-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:6021033:DL16-EN011:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77637,
-       77638,
-       77639,
+       77637
+      ]
+     },
+     "number": "DL16-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Doomkaiser Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:6021033:DL16-EN011:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77638
+      ]
+     },
+     "number": "DL16-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Doomkaiser Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:6021033:DL16-EN011:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77639
+      ]
+     },
+     "number": "DL16-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Doomkaiser Dragon (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:6021033:DL16-EN011:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77640
       ]
      },
@@ -408,10 +469,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Doomkaiser Dragon (Blue)"
-     }
+      "name": "Doomkaiser Dragon (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "ots-tournament-pack-10-por:6021033:OP10-PT033:common",
@@ -512,6 +575,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vampire Fräulein"
+   ],
    "archetypes": [
     "vampire"
    ],
@@ -635,7 +701,28 @@
     "pt": "Perfurador R.B. Ga10"
    },
    "passcode": 6043161,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:6043161:DUAD-EN090:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639427
+      ]
+     },
+     "number": "DUAD-EN090",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. Ga10 Driller"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03",
    "typeline": [
     "Machine",
@@ -866,13 +953,39 @@
    },
    "ocgDate": "2026-05-30",
    "passcode": 6071005,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:6071005:MAMS-EN047:secret_rare",
+     "number": "MAMS-EN047",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:6071005:MAMS-EN047:starlight_rare",
+     "number": "MAMS-EN047",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:6071005:MAMS-EN047:ultra_rare",
+     "number": "MAMS-EN047",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Spellcaster",
     "Effect"
    ]
   },
   {
+   "aliases": [
+    "Pulse of Trishula"
+   ],
    "archetypes": [
     "ice-barrier"
    ],
@@ -1172,6 +1285,9 @@
    "tcgDate": "2015-05-14"
   },
   {
+   "aliases": [
+    "Diabrocken of the Ghost Light"
+   ],
    "atk": 2000,
    "attribute": "fire",
    "def": 2000,
@@ -1648,6 +1764,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:6116731:PHNI-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1662,6 +1781,23 @@
       "match": "number+rarity",
       "name": "Swarm of Centipedes"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:6116731:SBC2-ENG05:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600302
+      ]
+     },
+     "number": "SBC2-ENG05",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Swarm of Centipedes"
+     }
     }
    ],
    "tcgDate": "2024-02-08",
@@ -1671,6 +1807,9 @@
    ]
   },
   {
+   "aliases": [
+    "Wight Baking"
+   ],
    "archetypes": [
     "wight"
    ],
@@ -2366,6 +2505,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ketu Dragon Tail"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -2482,6 +2624,9 @@
    "tcgDate": "2025-07-31"
   },
   {
+   "aliases": [
+    "Number C88"
+   ],
    "archetypes": [
     "gimmick-puppet",
     "number-c",
@@ -3136,6 +3281,9 @@
    "tcgDate": "2021-12-02"
   },
   {
+   "aliases": [
+    "Exstellarknight Constellar Ptolemy Omega 7"
+   ],
    "archetypes": [
     "constellar"
    ],
@@ -3215,6 +3363,9 @@
    ]
   },
   {
+   "aliases": [
+    "Two Frogs with One Hop"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "6203182",
@@ -3412,6 +3563,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:6214163:CYAC-EN079:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3595,6 +3749,9 @@
    ]
   },
   {
+   "aliases": [
+    "Supreme Celestial King Odd-Eyes Arc-Ray Dragon"
+   ],
    "archetypes": [
     "odd-eyes"
    ],
@@ -3640,6 +3797,9 @@
    "passcode": 6218704,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:6218704:AGOV-EN030:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3656,6 +3816,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:6218704:AGOV-EN030:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3720,6 +3883,9 @@
    ]
   },
   {
+   "aliases": [
+    "Borreload xCharge Dragon"
+   ],
    "archetypes": [
     "borrel"
    ],
@@ -4016,6 +4182,9 @@
    "passcode": 6260560,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:6260560:DOOD-EN053:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4040,6 +4209,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Ninja mdl 919"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -4106,6 +4278,9 @@
    ]
   },
   {
+   "aliases": [
+    "Seishou Ruten"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "6278008",
@@ -4144,6 +4319,9 @@
    "passcode": 6278008,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:6278008:AGOV-EN079:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4232,6 +4410,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snowflower Saint Kanzashi"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -4742,6 +4923,9 @@
    "tcgDate": "2026-05-07"
   },
   {
+   "aliases": [
+    "Fu-Ri the Orb Mikanko"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -4803,6 +4987,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:6327734:CYAC-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5197,6 +5384,23 @@
      }
     },
     {
+     "id": "maze-of-millennia:6351147:MZMI-EN038:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       532268
+      ]
+     },
+     "number": "MZMI-EN038",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "maze-of-millennia",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Transaction Rollback (CR)"
+     }
+    },
+    {
      "id": "maze-of-millennia:6351147:MZMI-EN038:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5558,6 +5762,9 @@
    ]
   },
   {
+   "aliases": [
+    "Y-Dragon Yearhead"
+   ],
    "archetypes": [
     "a-to-z"
    ],
@@ -6054,6 +6261,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:6368038:STP7-EN006:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544969
+      ]
+     },
+     "number": "STP7-EN006",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gaia The Fierce Knight"
+     }
+    },
+    {
      "id": "starter-deck-yugi-evolution:6368038:SYE-007:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6196,6 +6423,9 @@
    "tcgDate": "2021-06-03"
   },
   {
+   "aliases": [
+    "Number C6"
+   ],
    "archetypes": [
     "chaos",
     "number-c",
@@ -6699,6 +6929,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Ancient Warriors - Scheming Jia Wen"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -7215,6 +7448,9 @@
    ]
   },
   {
+   "aliases": [
+    "Jealous Disruption of the Evil Eye"
+   ],
    "archetypes": [
     "evil-eye"
    ],
@@ -7293,6 +7529,9 @@
    "tcgDate": "2019-03-21"
   },
   {
+   "aliases": [
+    "Fusion Dispatch"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "6498706",
@@ -8025,6 +8264,9 @@
    ]
   },
   {
+   "aliases": [
+    "Clown Clan \"New Face\""
+   ],
    "archetypes": [
     "clown-crew"
    ],
@@ -8162,6 +8404,9 @@
    ]
   },
   {
+   "aliases": [
+    "When A.I. First Met You"
+   ],
    "archetypes": [
     "a-i"
    ],
@@ -8459,6 +8704,9 @@
    "passcode": 6560411,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:6560411:DOOD-EN039:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8475,6 +8723,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:6560411:DOOD-EN039:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8489,6 +8740,13 @@
       "match": "number+rarity",
       "name": "Bramble Rose Dragon (Starlight Rare)"
      }
+    },
+    {
+     "id": "magnificent-maestros:6560411:MAMS-EN094:ultra_rare",
+     "number": "MAMS-EN094",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2025-09-25",
@@ -8567,6 +8825,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shadow Six Samurai - Kizaru"
+   ],
    "archetypes": [
     "secret-six-samurai"
    ],
@@ -8834,6 +9095,9 @@
    ]
   },
   {
+   "aliases": [
+    "Calamity Upon the Hidden City"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "6589707",
@@ -8888,6 +9152,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:6589707:DABL-EN069:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9200,6 +9467,9 @@
    ]
   },
   {
+   "aliases": [
+    "Noh-P.U.N.K. Dia Note"
+   ],
    "archetypes": [
     "p-u-n-k"
    ],
@@ -9277,6 +9547,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:6609736:DIFO-EN022:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9955,6 +10228,9 @@
    ]
   },
   {
+   "aliases": [
+    "EvilTwin Ki-sikil Deal"
+   ],
    "archetypes": [
     "evil-twin"
    ],
@@ -10002,6 +10278,9 @@
    "passcode": 6636319,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:6636319:ALIN-EN052:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10026,6 +10305,9 @@
    ]
   },
   {
+   "aliases": [
+    "Byssted Druidwurm"
+   ],
    "archetypes": [
     "bystial"
    ],
@@ -10103,6 +10385,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:6637331:DABL-EN008:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10438,6 +10723,9 @@
    "tcgDate": "2013-01-25"
   },
   {
+   "aliases": [
+    "Archnemesys Protos"
+   ],
    "archetypes": [
     "nemeses"
    ],
@@ -10851,6 +11139,9 @@
    ]
   },
   {
+   "aliases": [
+    "Branded Exile"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -10908,6 +11199,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:6763530:DIFO-EN072:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11027,6 +11321,9 @@
    ]
   },
   {
+   "aliases": [
+    "D/D/D Gust Emperor Executive Alexander"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d"
@@ -11097,6 +11394,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tearalaments Scream"
+   ],
    "archetypes": [
     "tearlaments"
    ],
@@ -11138,6 +11438,9 @@
    "passcode": 6767771,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:6767771:DABL-EN058:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11157,6 +11460,39 @@
    "tcgDate": "2022-10-20"
   },
   {
+   "archetypes": [
+    "season"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "6771402",
+   "identifiers": {
+    "konamiId": 23882,
+    "ygoprodeckId": 6771402
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/6771402.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/6771402.jpg",
+     "id": 6771402,
+     "small": "https://images.ygoprodeck.com/images/cards_small/6771402.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Field",
+   "name": "Autumn",
+   "names": {
+    "en": "Autumn"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 6771402,
+   "prints": []
+  },
+  {
+   "aliases": [
+    "Invoked Okeanos"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -11217,6 +11553,9 @@
    ]
   },
   {
+   "aliases": [
+    "Blastant"
+   ],
    "atk": 1500,
    "attribute": "earth",
    "def": 1000,
@@ -11685,7 +12024,48 @@
     "pt": "Impulsionador R.B. VALCan"
    },
    "passcode": 6821579,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:6821579:DUAD-EN093:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       641286
+      ]
+     },
+     "number": "DUAD-EN093",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. VALCan Booster (Starlight Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:6821579:DUAD-EN093:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639430
+      ]
+     },
+     "number": "DUAD-EN093",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. VALCan Booster"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03",
    "typeline": [
     "Machine",
@@ -12009,11 +12389,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:6849042:DL17-EN004:rare",
+     "number": "DL17-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:6849042:DL17-EN004:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80544,
-       80545,
-       80546,
+       80545
+      ]
+     },
+     "number": "DL17-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super-Ancient Dinobeast (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:6849042:DL17-EN004:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80546
+      ]
+     },
+     "number": "DL17-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super-Ancient Dinobeast (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:6849042:DL17-EN004:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80547
       ]
      },
@@ -12021,10 +12441,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super-Ancient Dinobeast (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:6849042:DL17-EN004:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80544
+      ]
+     },
+     "number": "DL17-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Super-Ancient Dinobeast (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "editions": [
@@ -12245,6 +12685,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Gospel of Revival"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "6853254",
@@ -12465,6 +12908,9 @@
    "tcgDate": "2016-07-07"
   },
   {
+   "aliases": [
+    "Masquerade, the Crimsongleam Dragon"
+   ],
    "archetypes": [
     "despia"
    ],
@@ -12638,6 +13084,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:6855503:BODE-EN038:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13031,6 +13480,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rubisapphirus the Jewel of Maximum Mohs"
+   ],
    "atk": 2700,
    "attribute": "earth",
    "def": 1600,
@@ -13088,6 +13540,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:6906306:ROTA-EN044:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13113,6 +13568,9 @@
    ]
   },
   {
+   "aliases": [
+    "Raika no Kusarigami"
+   ],
    "archetypes": [
     "ragnaraika"
    ],
@@ -13179,6 +13637,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:6908161:LEDE-EN049:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13639,10 +14100,7 @@
      "id": "dragons-of-legend-the-complete-series:6958551:DLCS-EN076:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221619,
-       222299,
-       222300,
-       222301
+       221619
       ]
      },
      "number": "DLCS-EN076",
@@ -13653,6 +14111,69 @@
       "match": "number+rarity",
       "name": "Shadow Toon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:6958551:DLCS-EN076:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222299
+      ]
+     },
+     "number": "DLCS-EN076",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Shadow Toon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:6958551:DLCS-EN076:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222300
+      ]
+     },
+     "number": "DLCS-EN076",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Shadow Toon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:6958551:DLCS-EN076:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222301
+      ]
+     },
+     "number": "DLCS-EN076",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Shadow Toon (Purple)"
+     },
+     "variant": "purple"
     }
    ],
    "tcgDate": "2015-07-16"
@@ -13685,9 +14206,35 @@
    },
    "ocgDate": "2026-05-30",
    "passcode": 6958567,
-   "prints": []
+   "prints": [
+    {
+     "id": "magnificent-maestros:6958567:MAMS-EN050:secret_rare",
+     "number": "MAMS-EN050",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:6958567:MAMS-EN050:starlight_rare",
+     "number": "MAMS-EN050",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:6958567:MAMS-EN050:ultra_rare",
+     "number": "MAMS-EN050",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12"
   },
   {
+   "aliases": [
+    "Cliff the Trap Remover"
+   ],
    "archetypes": [
     "dark-scorpion"
    ],
@@ -14096,6 +14643,9 @@
    ]
   },
   {
+   "aliases": [
+    "Andrake the Guardragon"
+   ],
    "archetypes": [
     "guardragon"
    ],

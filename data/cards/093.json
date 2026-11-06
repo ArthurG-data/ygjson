@@ -526,6 +526,9 @@
    "tcgDate": "2003-06-06"
   },
   {
+   "aliases": [
+    "Melffy Cathy"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -610,6 +613,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mekk-Knight Flickering Flame"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -821,6 +827,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:93023479:SBC2-ENF12:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600182
+      ]
+     },
+     "number": "SBC2-ENF12",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gravekeeper's Recruiter"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-destiny-masters:93023479:SS01-ENB08:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -938,6 +961,9 @@
    "tcgDate": "2020-01-30"
   },
   {
+   "aliases": [
+    "Stellar Nemesis T-PHON - Doomsday Star"
+   ],
    "atk": 2900,
    "attribute": "dark",
    "def": 2900,
@@ -995,6 +1021,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:93039339:AGOV-EN042:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1011,6 +1040,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:93039339:AGOV-EN042:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1044,6 +1076,27 @@
       "match": "number+rarity",
       "name": "Super Starslayer TY-PHON - Sky Crisis"
      }
+    },
+    {
+     "id": "magnificent-maestros:93039339:MAMS-EN035:secret_rare",
+     "number": "MAMS-EN035",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:93039339:MAMS-EN035:starlight_rare",
+     "number": "MAMS-EN035",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:93039339:MAMS-EN035:ultra_rare",
+     "number": "MAMS-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     },
     {
      "id": "ots-tournament-pack-30:93039339:OP30-EN003:ultimate_rare",
@@ -1167,6 +1220,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dogmatikalamity Alba System"
+   ],
    "archetypes": [
     "albaz-dragon"
    ],
@@ -1250,6 +1306,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dice Try Again"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "93078761",
@@ -1322,6 +1381,9 @@
    "tcgDate": "2020-08-06"
   },
   {
+   "aliases": [
+    "Hakaishin Arba"
+   ],
    "archetypes": [
     "unchained",
     "unchained-soul"
@@ -1791,11 +1853,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:93107608:DL13-EN007:rare",
+     "number": "DL13-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:93107608:DL13-EN007:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77424,
-       80433,
-       80434,
+       80433
+      ]
+     },
+     "number": "DL13-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Howling Insect (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:93107608:DL13-EN007:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80434
+      ]
+     },
+     "number": "DL13-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Howling Insect (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:93107608:DL13-EN007:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80435
       ]
      },
@@ -1803,10 +1905,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Howling Insect (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:93107608:DL13-EN007:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77424
+      ]
+     },
+     "number": "DL13-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Howling Insect (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "soul-of-the-duelist:93107608:SOD-EN025:common",
@@ -2079,6 +2201,16 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:93108433:YGLD-ENA27:common",
+     "number": "YGLD-ENA27",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:93108433:YGLD-ENA27:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        615942
@@ -2088,16 +2220,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Monster Recovery (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:93108433:YGLD-ENB29:common",
+     "number": "YGLD-ENB29",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:93108433:YGLD-ENB29:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615985
@@ -2107,10 +2251,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Monster Recovery (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -2118,6 +2264,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:93108433:YGLD-ENA27:common",
+     "number": "YGLD-ENA27",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:93108433:YGLD-ENA27:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        108229
@@ -2127,10 +2284,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Monster Recovery (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
@@ -2138,6 +2297,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:93108433:YGLD-ENB29:common",
+     "number": "YGLD-ENB29",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:93108433:YGLD-ENB29:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108272
@@ -2147,15 +2317,20 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Monster Recovery (B)"
-     }
+     },
+     "variant": "b"
     }
    ],
    "tcgDate": "2002-10-20"
   },
   {
+   "aliases": [
+    "Number 58"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -2379,6 +2554,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:93125329:CYAC-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2914,6 +3092,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vanquish Soul Holy Sue"
+   ],
    "archetypes": [
     "vanquish-soul"
    ],
@@ -2959,6 +3140,9 @@
    "passcode": 93156774,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:93156774:DUAD-EN022:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2975,6 +3159,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:93156774:DUAD-EN022:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3218,6 +3405,9 @@
    ]
   },
   {
+   "aliases": [
+    "Clown Clan Meteor"
+   ],
    "archetypes": [
     "clown-crew"
    ],
@@ -3466,6 +3656,9 @@
    "passcode": 93191801,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:93191801:MGED-EN127:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3501,6 +3694,9 @@
    "tcgDate": "2020-04-03"
   },
   {
+   "aliases": [
+    "LollipoYummy Way"
+   ],
    "archetypes": [
     "yummy"
    ],
@@ -4226,6 +4422,9 @@
    "tcgDate": "2006-02-18"
   },
   {
+   "aliases": [
+    "Token: Phantasmal Martyr"
+   ],
    "archetypes": [
     "phantasm"
    ],
@@ -4286,6 +4485,9 @@
    "tcgDate": "2020-07-09"
   },
   {
+   "aliases": [
+    "Mysterune of the Raging Storm"
+   ],
    "archetypes": [
     "runick"
    ],
@@ -4362,6 +4564,9 @@
    "tcgDate": "2022-08-25"
   },
   {
+   "aliases": [
+    "Battle for the World Legacy"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -4579,6 +4784,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:93260132:SBC2-ENA17:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600294
+      ]
+     },
+     "number": "SBC2-ENA17",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Spell Shattering Arrow"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-match-of-the-millennium:93260132:SS04-ENA20:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4591,6 +4813,26 @@
      "set": "speed-duel-starter-decks-match-of-the-millennium",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Spell Shattering Arrow"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:93260132:STP7-EN013:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544976
+      ]
+     },
+     "number": "STP7-EN013",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Spell Shattering Arrow"
      }
     },
@@ -4685,6 +4927,9 @@
    "tcgDate": "2008-10-21"
   },
   {
+   "aliases": [
+    "Ipt al Hecahands"
+   ],
    "archetypes": [
     "hecahands"
    ],
@@ -5040,6 +5285,9 @@
    "passcode": 93317313,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:93317313:DOOD-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5130,8 +5378,7 @@
      "id": "battles-of-legend-chapter-1:93332803:BLC1-EN033:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538505,
-       538666
+       538505
       ]
      },
      "number": "BLC1-EN033",
@@ -5142,6 +5389,27 @@
       "match": "number+rarity",
       "name": "Dogoran, the Mad Flame Kaiju"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:93332803:BLC1-EN033:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538666
+      ]
+     },
+     "number": "BLC1-EN033",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dogoran, the Mad Flame Kaiju (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "clash-of-rebellions:93332803:CORE-EN087:rare",
@@ -5623,6 +5891,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magibullet - Cross-Dominator"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -5683,6 +5954,10 @@
    "tcgDate": "2017-11-16"
   },
   {
+   "aliases": [
+    "Yummysment★Acrockie",
+    "YummyusmentAcroquey"
+   ],
    "archetypes": [
     "yummy"
    ],
@@ -6016,6 +6291,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sword of Toxic Solitude"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "93377803",
@@ -6592,7 +6870,28 @@
    },
    "ocgDate": "2025-01-21",
    "passcode": 93413793,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:93413793:DUAD-EN098:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639435
+      ]
+     },
+     "number": "DUAD-EN098",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ukanomitsune-no-Tamayura"
+     }
+    }
+   ],
    "typeline": [
     "Beast",
     "Tuner",
@@ -6806,6 +7105,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bingo Machine GO! GO!"
+   ],
    "archetypes": [
     "blue-eyes"
    ],
@@ -7252,6 +7554,9 @@
    "passcode": 93453053,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:93453053:ALIN-EN064:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7271,6 +7576,9 @@
    "tcgDate": "2025-05-01"
   },
   {
+   "aliases": [
+    "Naturia Molcricket"
+   ],
    "archetypes": [
     "naturia"
    ],
@@ -7332,6 +7640,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:93454062:DABL-EN020:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7413,6 +7724,9 @@
    "tcgDate": "2009-02-28"
   },
   {
+   "aliases": [
+    "Amaze Ɐttraction Wonder Wheel"
+   ],
    "archetypes": [
     "attraction"
    ],
@@ -7512,6 +7826,9 @@
    "passcode": 93481594,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:93481594:DOOD-EN065:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7730,6 +8047,9 @@
    ]
   },
   {
+   "aliases": [
+    "Long Yuan, the Swordsoul Tactician"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -7775,6 +8095,9 @@
    "passcode": 93490856,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:93490856:BODE-EN005:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7830,6 +8153,9 @@
    ]
   },
   {
+   "aliases": [
+    "Altergeist Prime Banshee"
+   ],
    "archetypes": [
     "altergeist"
    ],
@@ -8197,6 +8523,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kuaiba, Rugged Ryu-Ge of Dinocrag"
+   ],
    "archetypes": [
     "ryu-ge"
    ],
@@ -8711,6 +9040,9 @@
    "tcgDate": "2005-11-05"
   },
   {
+   "aliases": [
+    "Number 80"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -8796,6 +9128,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gouki Trainer"
+   ],
    "archetypes": [
     "gouki"
    ],
@@ -8880,6 +9215,9 @@
    ]
   },
   {
+   "aliases": [
+    "Judgment of Stigmatika"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -9201,6 +9539,9 @@
    "tcgDate": "2015-01-29"
   },
   {
+   "aliases": [
+    "Dualwiel Dragon"
+   ],
    "atk": 2500,
    "attribute": "dark",
    "def": 1500,
@@ -9243,6 +9584,9 @@
    "passcode": 93612434,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:93612434:BODE-EN002:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9880,6 +10224,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:93672138:BODE-EN051:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9896,6 +10243,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:93672138:BODE-EN051:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9976,6 +10326,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:93683815:INFO-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10080,6 +10433,9 @@
    "tcgDate": "2019-10-24"
   },
   {
+   "aliases": [
+    "Rox Rose Dragon"
+   ],
    "archetypes": [
     "rose"
    ],
@@ -10264,6 +10620,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 24"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -10314,10 +10673,7 @@
      "id": "dragons-of-legend-the-complete-series:93713837:DLCS-EN118:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221687,
-       222284,
-       222285,
-       222286
+       221687
       ]
      },
      "number": "DLCS-EN118",
@@ -10328,6 +10684,69 @@
       "match": "number+rarity",
       "name": "Number 24: Dragulas the Vampiric Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:93713837:DLCS-EN118:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222284
+      ]
+     },
+     "number": "DLCS-EN118",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 24: Dragulas the Vampiric Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:93713837:DLCS-EN118:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222285
+      ]
+     },
+     "number": "DLCS-EN118",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 24: Dragulas the Vampiric Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:93713837:DLCS-EN118:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222286
+      ]
+     },
+     "number": "DLCS-EN118",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 24: Dragulas the Vampiric Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:93713837:DRL3-EN022:secret_rare",
@@ -10550,10 +10969,7 @@
      "id": "legendary-duelists-season-2:93717133:LDS2-EN047:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230288,
-       230799,
-       230800,
-       230801
+       230288
       ]
      },
      "number": "LDS2-EN047",
@@ -10564,6 +10980,60 @@
       "match": "number+rarity",
       "name": "Galaxy-Eyes Photon Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:93717133:LDS2-EN047:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230799
+      ]
+     },
+     "number": "LDS2-EN047",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Photon Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:93717133:LDS2-EN047:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230800
+      ]
+     },
+     "number": "LDS2-EN047",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Photon Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:93717133:LDS2-EN047:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230801
+      ]
+     },
+     "number": "LDS2-EN047",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Photon Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-white-dragon-abyss:93717133:LED3-EN039:super_rare",
@@ -10701,6 +11171,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Fiend of the White Forest"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -10758,6 +11231,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:93723936:ROTA-EN056:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10777,6 +11253,9 @@
    "tcgDate": "2024-07-27"
   },
   {
+   "aliases": [
+    "Karakuri Ninja mdl 339"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -10820,6 +11299,9 @@
    "passcode": 93724592,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "starstrike-blast:93724592:STBL-EN022:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10964,6 +11446,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:93729896:LEDE-EN061:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10980,6 +11465,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:93729896:LEDE-EN061:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11167,6 +11655,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sajita, Solitary of the Skyfang Brigade"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -12005,6 +12496,9 @@
    ]
   },
   {
+   "aliases": [
+    "Beat, Swordsman of the Skyfang Brigade"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -12108,6 +12602,9 @@
    ]
   },
   {
+   "aliases": [
+    "Xiangjianmen the Grand Spiritual Swordsoul Peak"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -12149,6 +12646,9 @@
    "passcode": 93850690,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:93850690:BODE-EN054:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12184,6 +12684,9 @@
    "tcgDate": "2021-11-04"
   },
   {
+   "aliases": [
+    "Dingirsu, Orcust of Sheol"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -12388,6 +12891,27 @@
      }
     },
     {
+     "id": "magnificent-maestros:93854893:MAMS-EN036:secret_rare",
+     "number": "MAMS-EN036",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:93854893:MAMS-EN036:starlight_rare",
+     "number": "MAMS-EN036",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:93854893:MAMS-EN036:ultra_rare",
+     "number": "MAMS-EN036",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "ots-tournament-pack-11-por:93854893:OP11-PT001:ultimate_rare",
      "number": "OP11-PT001",
      "rarity": "ultimate_rare",
@@ -12508,6 +13032,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:93860227:INFO-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12532,6 +13059,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Flute of Guiding Dragon"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "93871599",
@@ -12722,6 +13252,23 @@
      "set": "king-s-court",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Arcana Triumph Joker"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:93880808:SBC2-ENA07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600110
+      ]
+     },
+     "number": "SBC2-ENA07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Arcana Triumph Joker"
      }
     }
@@ -13213,6 +13760,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unchained Syncretism"
+   ],
    "archetypes": [
     "unchained"
    ],
@@ -13234,13 +13784,36 @@
    "isTuner": false,
    "kind": "trap",
    "monsterType": "Normal",
-   "name": "Unchained Syncretism",
+   "name": "Unchained Hunger",
    "names": {
-    "en": "Unchained Syncretism"
+    "en": "Unchained Hunger"
    },
    "ocgDate": "2026-05-30",
    "passcode": 93898740,
-   "prints": []
+   "prints": [
+    {
+     "id": "magnificent-maestros:93898740:MAMS-EN059:secret_rare",
+     "number": "MAMS-EN059",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:93898740:MAMS-EN059:starlight_rare",
+     "number": "MAMS-EN059",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:93898740:MAMS-EN059:ultra_rare",
+     "number": "MAMS-EN059",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12"
   },
   {
    "atk": 1250,
@@ -13429,6 +14002,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Transcendent Flight"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "93918159",
@@ -13486,6 +14062,9 @@
    "tcgDate": "2023-06-01"
   },
   {
+   "aliases": [
+    "World Legacy - \"World Scepter\""
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -13754,11 +14333,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:93920745:DL09-EN002:rare",
+     "number": "DL09-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:93920745:DL09-EN002:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77358,
-       77680,
-       77681,
+       77358
+      ]
+     },
+     "number": "DL09-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Penguin Soldier (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:93920745:DL09-EN002:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77680
+      ]
+     },
+     "number": "DL09-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Penguin Soldier (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:93920745:DL09-EN002:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77681
+      ]
+     },
+     "number": "DL09-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Penguin Soldier (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:93920745:DL09-EN002:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77682
       ]
      },
@@ -13766,10 +14403,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Penguin Soldier (Blue)"
-     }
+      "name": "Penguin Soldier (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "ots-tournament-pack-17-por:93920745:OP17-PT013:common",
@@ -13845,6 +14484,23 @@
      "set": "retro-pack",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Penguin Soldier"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:93920745:SBC2-ENC07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600265
+      ]
+     },
+     "number": "SBC2-ENC07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Penguin Soldier"
      }
     },
@@ -14174,6 +14830,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:93953933:POTE-EN039:common",
      "identifiers": {
       "tcgplayerProductIds": [

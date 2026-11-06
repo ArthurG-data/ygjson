@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Brandish Mechanism Multi-Roll"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -399,6 +402,9 @@
    ]
   },
   {
+   "aliases": [
+    "March of Darkness"
+   ],
    "archetypes": [
     "lightsworn"
    ],
@@ -587,6 +593,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snake Lily of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -899,6 +908,9 @@
    "tcgDate": "2002-03-29"
   },
   {
+   "aliases": [
+    "Symphonic Warrior Rocks"
+   ],
    "archetypes": [
     "symphonic-warrior"
    ],
@@ -944,6 +956,9 @@
    "passcode": 24070330,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:24070330:DIFO-EN042:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -970,6 +985,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gouki Suplex"
+   ],
    "archetypes": [
     "gouki"
    ],
@@ -1102,6 +1120,9 @@
    ]
   },
   {
+   "aliases": [
+    "Goblin Biker Dug the Assaulter"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -1164,6 +1185,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:24079759:PHNI-EN008:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1180,6 +1204,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:24079759:PHNI-EN008:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1203,6 +1230,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tainted Treasure of Treason - Snake-Eye"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24081957",
@@ -1257,6 +1287,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:24081957:DUNE-EN060:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1273,6 +1306,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:24081957:DUNE-EN060:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1410,6 +1446,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:24087580:DABL-EN094:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1513,6 +1552,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elvennotes ~Maddening Rhapsodia~"
+   ],
    "archetypes": [
     "elfnote"
    ],
@@ -1547,6 +1589,9 @@
    "passcode": 24092792,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:24092792:BPRO-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1561,11 +1606,21 @@
       "match": "number+rarity",
       "name": "Elfnotes: Rhapsodia of Madness"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:24092792:UP02-EN015:super_rare",
+     "number": "UP02-EN015",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2026-02-05"
   },
   {
+   "aliases": [
+    "Heavymetalfoes Electrum"
+   ],
    "archetypes": [
     "metalfoes"
    ],
@@ -2010,6 +2065,26 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "hidden-arsenal-chapter-1:24094653:HAC1-EN022:dt_ultra_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       264902
+      ]
+     },
+     "number": "HAC1-EN022",
+     "rarity": "dt_ultra_parallel",
+     "region": "EN",
+     "set": "hidden-arsenal-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Polymerization (Duel Terminal)"
+     }
+    },
+    {
      "id": "justice-hunters:24094653:JUSH-EN014:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2296,9 +2371,15 @@
     },
     {
      "id": "quarter-century-bonanza:24094653:RA03-EN051:collectors_rare",
+     "number": "RA03-EN051",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:24094653:RA03-EN051:collectors_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       592522,
        593874
       ]
      },
@@ -2306,112 +2387,162 @@
      "rarity": "collectors_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Polymerization (A) (Alternate Art) (PCR)"
-     }
+      "name": "Polymerization (B) (HERO Art) (PCR)"
+     },
+     "variant": "b"
     },
     {
      "id": "quarter-century-bonanza:24094653:RA03-EN051:platinum_secret_rare",
+     "number": "RA03-EN051",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:24094653:RA03-EN051:platinum_secret_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       592523,
-       593868
+       592523
       ]
      },
      "number": "RA03-EN051",
      "rarity": "platinum_secret_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B) (HERO Art) (Platinum Secret Rare)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "quarter-century-bonanza:24094653:RA03-EN051:qc_secret_rare",
+     "number": "RA03-EN051",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:24094653:RA03-EN051:qc_secret_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       592524,
-       593879
+       592524
       ]
      },
      "number": "RA03-EN051",
      "rarity": "qc_secret_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B) (HERO Art) (Quarter Century Secret Rare)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "quarter-century-bonanza:24094653:RA03-EN051:secret_rare",
+     "number": "RA03-EN051",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:24094653:RA03-EN051:secret_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       592525,
-       593867
+       592525
       ]
      },
      "number": "RA03-EN051",
      "rarity": "secret_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B) (HERO Art) (Secret Rare)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "quarter-century-bonanza:24094653:RA03-EN051:super_rare",
+     "number": "RA03-EN051",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:24094653:RA03-EN051:super_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       592526,
-       593866
+       592526
       ]
      },
      "number": "RA03-EN051",
      "rarity": "super_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B) (HERO Art)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "quarter-century-bonanza:24094653:RA03-EN051:ultimate_rare",
+     "number": "RA03-EN051",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:24094653:RA03-EN051:ultimate_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       592527,
-       593870
+       592527
       ]
      },
      "number": "RA03-EN051",
      "rarity": "ultimate_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B) (HERO Art) (PUR)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "quarter-century-bonanza:24094653:RA03-EN051:ultra_rare",
+     "number": "RA03-EN051",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza"
+    },
+    {
+     "id": "quarter-century-bonanza:24094653:RA03-EN051:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       592528,
-       593877
+       592528
       ]
      },
      "number": "RA03-EN051",
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B) (HERO Art) (UR)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -2469,6 +2600,13 @@
     },
     {
      "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENA12:common",
+     "number": "SGX1-ENA12",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duel-academy-box"
+    },
+    {
+     "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENA12:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        266073
@@ -2478,13 +2616,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duel-academy-box",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENA12:secret_rare",
+     "number": "SGX1-ENA12",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-duel-academy-box"
+    },
+    {
+     "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENA12:secret_rare:a",
      "identifiers": {
       "tcgplayerProductIds": [
        266296
@@ -2494,13 +2641,22 @@
      "rarity": "secret_rare",
      "region": "EN",
      "set": "speed-duel-gx-duel-academy-box",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (A) (Secret Rare)"
-     }
+     },
+     "variant": "a"
     },
     {
      "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENB10:common",
+     "number": "SGX1-ENB10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duel-academy-box"
+    },
+    {
+     "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENB10:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        266164
@@ -2510,13 +2666,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duel-academy-box",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENC12:common",
+     "number": "SGX1-ENC12",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duel-academy-box"
+    },
+    {
+     "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENC12:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        266230
@@ -2526,13 +2691,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duel-academy-box",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENG11:common",
+     "number": "SGX1-ENG11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duel-academy-box"
+    },
+    {
+     "id": "speed-duel-gx-duel-academy-box:24094653:SGX1-ENG11:common:g",
      "identifiers": {
       "tcgplayerProductIds": [
        266197
@@ -2542,10 +2716,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duel-academy-box",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (G)"
-     }
+     },
+     "variant": "g"
     },
     {
      "id": "speed-duel-gx-midterm-paradox:24094653:SGX2-ENA12:common",
@@ -2581,6 +2757,13 @@
     },
     {
      "id": "speed-duel-starter-decks-match-of-the-millennium:24094653:SS04-ENA18:common",
+     "number": "SS04-ENA18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-starter-decks-match-of-the-millennium"
+    },
+    {
+     "id": "speed-duel-starter-decks-match-of-the-millennium:24094653:SS04-ENA18:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        213983
@@ -2590,13 +2773,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-starter-decks-match-of-the-millennium",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "id": "speed-duel-starter-decks-match-of-the-millennium:24094653:SS04-ENB22:common",
+     "number": "SS04-ENB22",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-starter-decks-match-of-the-millennium"
+    },
+    {
+     "id": "speed-duel-starter-decks-match-of-the-millennium:24094653:SS04-ENB22:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        214052
@@ -2606,13 +2798,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-starter-decks-match-of-the-millennium",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "speed-duel-streets-of-battle-city:24094653:SBC1-ENB13:common",
+     "number": "SBC1-ENB13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:24094653:SBC1-ENB13:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        512256
@@ -2622,10 +2823,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "speed-duel-streets-of-battle-city:24094653:SBC1-ENH15:common",
@@ -2727,6 +2930,16 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:24094653:YGLD-ENA35:common",
+     "number": "YGLD-ENA35",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:24094653:YGLD-ENA35:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        615950
@@ -2736,16 +2949,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:24094653:YGLD-ENB30:common",
+     "number": "YGLD-ENB30",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:24094653:YGLD-ENB30:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615986
@@ -2755,16 +2980,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:24094653:YGLD-ENC28:common",
+     "number": "YGLD-ENC28",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:24094653:YGLD-ENC28:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        616025
@@ -2774,10 +3011,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "editions": [
@@ -2785,6 +3024,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:24094653:YGLD-ENA35:common",
+     "number": "YGLD-ENA35",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:24094653:YGLD-ENA35:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        108237
@@ -2794,10 +3044,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
@@ -2805,6 +3057,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:24094653:YGLD-ENB30:common",
+     "number": "YGLD-ENB30",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:24094653:YGLD-ENB30:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108273
@@ -2814,10 +3077,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -2825,6 +3090,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:24094653:YGLD-ENC28:common",
+     "number": "YGLD-ENC28",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:24094653:YGLD-ENC28:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        108312
@@ -2834,10 +3110,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Polymerization (C)"
-     }
+     },
+     "variant": "c"
     }
    ],
    "tcgDate": "2002-03-08"
@@ -3724,6 +4002,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Muso mdl 818"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -4013,6 +4294,9 @@
    ]
   },
   {
+   "aliases": [
+    "Meteoaurora Drytron"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -4070,6 +4354,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:24166324:INFO-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4089,6 +4376,9 @@
    "tcgDate": "2024-07-18"
   },
   {
+   "aliases": [
+    "Sacred Azure Phoenix of Nephthys"
+   ],
    "archetypes": [
     "nephthys"
    ],
@@ -4158,6 +4448,9 @@
    ]
   },
   {
+   "aliases": [
+    "Potluck Party"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24181936",
@@ -4342,6 +4635,9 @@
    ]
   },
   {
+   "aliases": [
+    "The World's Greatest Gallant Thief"
+   ],
    "atk": 2500,
    "attribute": "wind",
    "def": 2000,
@@ -4665,6 +4961,9 @@
    "tcgDate": "2016-03-17"
   },
   {
+   "aliases": [
+    "Infernal Grave Squirmer"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 0,
@@ -4723,6 +5022,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:24215921:LEDE-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5084,6 +5386,10 @@
    ]
   },
   {
+   "aliases": [
+    "Called by the Grave - L26D-ENX20",
+    "Designator From the Grave"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24224830",
@@ -5594,6 +5900,9 @@
    "passcode": 24226942,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:24226942:BACH-EN025:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5673,6 +5982,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:24232799:DUNE-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5801,6 +6113,9 @@
    "tcgDate": "2008-08-09"
   },
   {
+   "aliases": [
+    "Unchained Soul King Yama"
+   ],
    "archetypes": [
     "unchained",
     "unchained-soul"
@@ -5866,6 +6181,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:24269961:DUNE-EN049:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5882,6 +6200,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:24269961:DUNE-EN049:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5896,6 +6217,13 @@
       "match": "number+rarity",
       "name": "Unchained Soul Lord of Yama"
      }
+    },
+    {
+     "id": "magnificent-maestros:24269961:MAMS-EN100:ultra_rare",
+     "number": "MAMS-EN100",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     },
     {
      "id": "magnificent-maestros:24269961:MAMS-EN125:starlight_rare",
@@ -6260,6 +6588,9 @@
    "tcgDate": "2002-10-20"
   },
   {
+   "aliases": [
+    "Just One Forbidden Drop"
+   ],
    "archetypes": [
     "forbidden"
    ],
@@ -6888,11 +7219,15 @@
     },
     {
      "id": "duelist-league-2-participation-cards:24317029:DL11-EN009:rare",
+     "number": "DL11-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:24317029:DL11-EN009:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77386,
-       80322,
-       80323,
        80324
       ]
      },
@@ -6900,10 +7235,66 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gravekeeper's Spy (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:24317029:DL11-EN009:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80322
+      ]
+     },
+     "number": "DL11-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gravekeeper's Spy (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:24317029:DL11-EN009:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80323
+      ]
+     },
+     "number": "DL11-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gravekeeper's Spy (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:24317029:DL11-EN009:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77386
+      ]
+     },
+     "number": "DL11-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Gravekeeper's Spy (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gold-series-4-pyramids-edition:24317029:GLD4-EN010:gold_rare",
@@ -7068,6 +7459,40 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Gravekeeper's Spy"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:24317029:SBC2-ENF10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600184
+      ]
+     },
+     "number": "SBC2-ENF10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gravekeeper's Spy"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:24317029:SBC2-ENF10:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600183
+      ]
+     },
+     "number": "SBC2-ENF10",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gravekeeper's Spy (PSR)"
      }
     },
     {
@@ -7329,6 +7754,9 @@
    "tcgDate": "2015-05-14"
   },
   {
+   "aliases": [
+    "Hieratic Seal of the Celestial Spheres"
+   ],
    "archetypes": [
     "hieratic"
    ],
@@ -7895,6 +8323,9 @@
    ]
   },
   {
+   "aliases": [
+    "Suship Roll Specials"
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -8278,6 +8709,9 @@
    "tcgDate": "2018-02-01"
   },
   {
+   "aliases": [
+    "Tellusrion the Magna Warrior"
+   ],
    "archetypes": [
     "magna-warrior"
    ],
@@ -8316,6 +8750,9 @@
    "passcode": 24431911,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:24431911:BPRO-EN004:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8527,6 +8964,9 @@
    ]
   },
   {
+   "aliases": [
+    "Epurery Plump"
+   ],
    "archetypes": [
     "purrely"
    ],
@@ -8710,6 +9150,9 @@
    ]
   },
   {
+   "aliases": [
+    "Silhouhatte"
+   ],
    "archetypes": [
     "trap-monster"
    ],
@@ -8767,6 +9210,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:24440742:INFO-EN079:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8783,6 +9229,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:24440742:INFO-EN079:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8915,6 +9364,9 @@
    "passcode": 24454387,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:24454387:DUNE-EN081:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8938,6 +9390,9 @@
    ]
   },
   {
+   "aliases": [
+    "Corrupted Ritual Records"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24461358",
@@ -8986,6 +9441,9 @@
    "tcgDate": "2026-07-02"
   },
   {
+   "aliases": [
+    "Gem-Knight Phantom Core"
+   ],
    "archetypes": [
     "gem",
     "gem-knight"
@@ -9145,6 +9603,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chronomaly Acámbaro Figure"
+   ],
    "archetypes": [
     "chronomaly"
    ],
@@ -9685,6 +10146,13 @@
       "match": "number+rarity",
       "name": "D.D. Crow"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:24508238:UP02-EN025:common",
+     "number": "UP02-EN025",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2007-02-28",
@@ -9798,6 +10266,9 @@
    "passcode": 24521325,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:24521325:SUDA-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9821,6 +10292,9 @@
    ]
   },
   {
+   "aliases": [
+    "Landscaper Goldilocks"
+   ],
    "atk": 0,
    "attribute": "earth",
    "def": 3000,
@@ -10270,6 +10744,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tenyi Dragon Sthana"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -10926,6 +11403,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Komachi mdl 224"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -11164,6 +11644,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:24634594:PHHY-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11188,6 +11671,9 @@
    ]
   },
   {
+   "aliases": [
+    "Qadoshaddoll Keios"
+   ],
    "archetypes": [
     "shaddoll"
    ],
@@ -11273,6 +11759,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rice Suship"
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -11480,6 +11969,9 @@
    "tcgDate": "2005-11-05"
   },
   {
+   "aliases": [
+    "Liberator Etho"
+   ],
    "atk": 4000,
    "attribute": "dark",
    "def": 0,
@@ -11522,6 +12014,9 @@
    "passcode": 24643913,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:24643913:SUDA-EN023:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11538,6 +12033,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:24643913:SUDA-EN023:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11685,6 +12183,9 @@
    ]
   },
   {
+   "aliases": [
+    "Protean"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24649931",
@@ -11739,6 +12240,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:24649931:PHNI-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12306,6 +12810,9 @@
    "tcgDate": "2010-02-12"
   },
   {
+   "aliases": [
+    "Aromalylith Rosalina"
+   ],
    "archetypes": [
     "aroma"
    ],
@@ -12351,6 +12858,9 @@
    "passcode": 24689197,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:24689197:PHNI-EN022:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12634,6 +13144,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infinitrack Reverstorm"
+   ],
    "archetypes": [
     "infinitrack"
    ],
@@ -12976,6 +13489,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Guidance of Spell Salvation"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24721709",
@@ -13416,6 +13932,9 @@
    "tcgDate": "2026-07-02"
   },
   {
+   "aliases": [
+    "Rcia of the White Woods"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -13493,6 +14012,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:24779554:INFO-EN016:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13576,6 +14098,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gizmek Myth - Khronicles of the Klockwork Kreatures "
+   ],
    "archetypes": [
     "gizmek"
    ],
@@ -13668,6 +14193,9 @@
    "tcgDate": "2021-08-12"
   },
   {
+   "aliases": [
+    "Dragonmaid Strahl"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -13828,6 +14356,9 @@
    "tcgDate": "2006-11-15"
   },
   {
+   "aliases": [
+    "Trap Gather"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24839398",
@@ -13882,6 +14413,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:24839398:INFO-EN065:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14829,6 +15363,9 @@
    "passcode": 24892828,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:24892828:AGOV-EN087:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14911,6 +15448,9 @@
    ]
   },
   {
+   "aliases": [
+    "Burgesstoma Pikaia"
+   ],
    "archetypes": [
     "paleozoic"
    ],
@@ -15075,6 +15615,9 @@
    ]
   },
   {
+   "aliases": [
+    "Grand-Guignol the Finale Dragon"
+   ],
    "atk": 2500,
    "attribute": "light",
    "def": 2500,
@@ -15149,6 +15692,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:24915933:PHHY-EN033:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15165,6 +15711,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:24915933:PHHY-EN033:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15407,6 +15956,9 @@
    ]
   },
   {
+   "aliases": [
+    "Light of Sekka"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "24940422",

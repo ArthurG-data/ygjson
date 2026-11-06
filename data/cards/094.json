@@ -108,6 +108,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:94004268:SBC2-ENH11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600107
+      ]
+     },
+     "number": "SBC2-ENH11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Amazoness Swords Woman"
+     }
+    },
+    {
      "id": "speed-duel-gx-duelists-of-shadows:94004268:SGX3-END02:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -195,6 +212,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unchained Enma Lord Yama"
+   ],
    "archetypes": [
     "unchained"
    ],
@@ -225,13 +245,36 @@
    ],
    "linkRating": 4,
    "monsterType": "Fiend",
-   "name": "Unchained Enma Lord Yama",
+   "name": "Unchained Firelord of Yama",
    "names": {
-    "en": "Unchained Enma Lord Yama"
+    "en": "Unchained Firelord of Yama"
    },
    "ocgDate": "2026-05-30",
    "passcode": 94014327,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:94014327:MAMS-EN056:secret_rare",
+     "number": "MAMS-EN056",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:94014327:MAMS-EN056:starlight_rare",
+     "number": "MAMS-EN056",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:94014327:MAMS-EN056:ultra_rare",
+     "number": "MAMS-EN056",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Fiend",
     "Link",
@@ -239,6 +282,9 @@
    ]
   },
   {
+   "aliases": [
+    "Abyssal Adjudicator"
+   ],
    "archetypes": [
     "herald"
    ],
@@ -489,6 +535,9 @@
    ]
   },
   {
+   "aliases": [
+    "Orphegel Canon Cannon"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -640,6 +689,9 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "Donpa, Marksman of the Skyfang Brigade"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -724,6 +776,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hidden Jewel of the Hydrosphere - Katrin"
+   ],
    "atk": 500,
    "attribute": "water",
    "def": 1600,
@@ -782,6 +837,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:94076521:POTE-EN036:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -801,6 +860,45 @@
    "tcgDate": "2022-08-04",
    "typeline": [
     "Rock",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "rikka"
+   ],
+   "atk": 3200,
+   "attribute": "water",
+   "def": 3200,
+   "frame": "xyz",
+   "hasEffect": true,
+   "id": "94078362",
+   "identifiers": {
+    "konamiId": 23852,
+    "ygoprodeckId": 94078362
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/94078362.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/94078362.jpg",
+     "id": 94078362,
+     "small": "https://images.ygoprodeck.com/images/cards_small/94078362.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "monsterType": "Plant",
+   "name": "Teardrop the Rikka Sacred Queen",
+   "names": {
+    "en": "Teardrop the Rikka Sacred Queen"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 94078362,
+   "prints": [],
+   "rank": 10,
+   "typeline": [
+    "Plant",
+    "Xyz",
     "Effect"
    ]
   },
@@ -888,6 +986,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shiny Black"
+   ],
    "archetypes": [
     "c"
    ],
@@ -948,11 +1049,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:94081496:DL14-EN007:rare",
+     "number": "DL14-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:94081496:DL14-EN007:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77583,
-       80490,
-       80491,
+       80490
+      ]
+     },
+     "number": "DL14-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Shiny Black \"C\" (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:94081496:DL14-EN007:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80491
+      ]
+     },
+     "number": "DL14-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Shiny Black \"C\" (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:94081496:DL14-EN007:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80492
       ]
      },
@@ -960,10 +1101,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Shiny Black \"C\" (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:94081496:DL14-EN007:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77583
+      ]
+     },
+     "number": "DL14-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Shiny Black \"C\" (Red)"
-     }
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2009-09-01",
@@ -1209,6 +1370,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magnifistorming Summoning Technique"
+   ],
    "archetypes": [
     "radiant-typhoon"
    ],
@@ -1249,6 +1413,9 @@
    "passcode": 94103142,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:94103142:DOOD-EN062:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1641,6 +1808,9 @@
    ]
   },
   {
+   "aliases": [
+    "Transcendrake Glacesaurus"
+   ],
    "archetypes": [
     "transcendosaurus"
    ],
@@ -1943,6 +2113,9 @@
    ]
   },
   {
+   "aliases": [
+    "Droll"
+   ],
    "atk": 0,
    "attribute": "wind",
    "def": 0,
@@ -2270,6 +2443,23 @@
      }
     },
     {
+     "id": "structure-deck-fire-kings:94145021:SR14-EN023:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       528519
+      ]
+     },
+     "number": "SR14-EN023",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-fire-kings",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Droll & Lock Bird"
+     }
+    },
+    {
      "id": "structure-deck-order-of-the-spellcasters:94145021:SR08-EN021:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2282,6 +2472,40 @@
      "set": "structure-deck-order-of-the-spellcasters",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Droll & Lock Bird"
+     }
+    },
+    {
+     "id": "tactical-masters:94145021:TAMA-EN047:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       282360
+      ]
+     },
+     "number": "TAMA-EN047",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "tactical-masters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Droll & Lock Bird (CR)"
+     }
+    },
+    {
+     "id": "tactical-masters:94145021:TAMA-EN047:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       282359
+      ]
+     },
+     "number": "TAMA-EN047",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "tactical-masters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Droll & Lock Bird"
      }
     }
@@ -2448,6 +2672,9 @@
    "passcode": 94151981,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:94151981:AGOV-EN039:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2555,6 +2782,9 @@
    "tcgDate": "2013-08-08"
   },
   {
+   "aliases": [
+    "Mariamune, the True Dracophoenix"
+   ],
    "archetypes": [
     "true-draco"
    ],
@@ -2822,6 +3052,9 @@
    "tcgDate": "2003-03-01"
   },
   {
+   "aliases": [
+    "Loptr, Shadow of the Generaider Boss"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -3085,6 +3318,9 @@
    "tcgDate": "2024-06-20"
   },
   {
+   "aliases": [
+    "Draitron Nova"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -3492,11 +3728,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:94192409:DL09-EN019:rare",
+     "number": "DL09-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:94192409:DL09-EN019:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77375,
-       77731,
-       77732,
+       77375
+      ]
+     },
+     "number": "DL09-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Compulsory Evacuation Device (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:94192409:DL09-EN019:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77731
+      ]
+     },
+     "number": "DL09-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Compulsory Evacuation Device (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:94192409:DL09-EN019:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77732
+      ]
+     },
+     "number": "DL09-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Compulsory Evacuation Device (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:94192409:DL09-EN019:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77733
       ]
      },
@@ -3504,10 +3798,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Compulsory Evacuation Device (Blue)"
-     }
+      "name": "Compulsory Evacuation Device (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "gold-series-2009:94192409:GLD2-EN046:common",
@@ -3558,6 +3854,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:94192409:IOC-EN103:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4260,6 +4559,23 @@
       "match": "number+rarity",
       "name": "Destiny Board"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:94212438:SBC2-ENE13:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600148
+      ]
+     },
+     "number": "SBC2-ENE13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Destiny Board"
+     }
     }
    ],
    "tcgDate": "2003-03-01"
@@ -4460,6 +4776,9 @@
    "tcgDate": "2014-03-28"
   },
   {
+   "aliases": [
+    "Eldlixir of White Fate"
+   ],
    "archetypes": [
     "eldlich"
    ],
@@ -4501,6 +4820,9 @@
    "passcode": 94224458,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:94224458:MGED-EN124:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4899,6 +5221,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:94256039:IOC-EN050:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5156,6 +5481,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fabled Gamygyn"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -5298,6 +5626,9 @@
    "tcgDate": "2009-02-28"
   },
   {
+   "aliases": [
+    "Secret Hot Springs of the Far East"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "94317736",
@@ -5429,6 +5760,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:94326720:DOOD-EN059:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5997,6 +6331,9 @@
    "tcgDate": "2003-03-01"
   },
   {
+   "aliases": [
+    "Number 103"
+   ],
    "archetypes": [
     "number-10x",
     "number-spell-trap-archetype"
@@ -6468,6 +6805,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kshatri-La Ogre"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -6529,6 +6869,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:94392192:DABL-EN014:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6552,6 +6895,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cockathorium, the Superheavy Shining Soarer"
+   ],
    "atk": 1300,
    "attribute": "wind",
    "def": 900,
@@ -6874,6 +7220,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magibullet Shooter Wild"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -6942,6 +7291,9 @@
    ]
   },
   {
+   "aliases": [
+    "Simult Archfiends"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -6998,6 +7350,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:94423983:DABL-EN078:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7257,6 +7612,9 @@
    "tcgDate": "2015-01-15"
   },
   {
+   "aliases": [
+    "Mysterune of Destruction"
+   ],
    "archetypes": [
     "runick"
    ],
@@ -7333,6 +7691,9 @@
    "tcgDate": "2022-08-25"
   },
   {
+   "aliases": [
+    "Pair Look"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "94446564",
@@ -7625,6 +7986,9 @@
    "passcode": 94467314,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:94467314:BPRO-EN086:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7715,6 +8079,9 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "Cerzebuth, Laimargia of the Ebon Irons"
+   ],
    "atk": 700,
    "attribute": "dark",
    "def": 2500,
@@ -7755,6 +8122,9 @@
    "passcode": 94503794,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:94503794:DOOD-EN048:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8681,6 +9051,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Magic Lab"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "94599451",
@@ -9010,6 +9383,9 @@
    "tcgDate": "2011-11-10"
   },
   {
+   "aliases": [
+    "Trickstar Sweet Devil"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -9248,6 +9624,9 @@
    "passcode": 94641726,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:94641726:BPRO-EN089:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9272,6 +9651,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nebulous, Dragon Ruler of Shadows"
+   ],
    "archetypes": [
     "dragon-ruler"
    ],
@@ -9317,6 +9699,9 @@
    "passcode": 94655777,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:94655777:ALIN-EN019:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9333,6 +9718,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:94655777:ALIN-EN019:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9534,6 +9922,9 @@
    ]
   },
   {
+   "aliases": [
+    "Approaching Machine"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "94661166",
@@ -9588,6 +9979,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:94661166:ROTA-EN050:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9922,6 +10316,9 @@
    ]
   },
   {
+   "aliases": [
+    "Beast Ninja Baku"
+   ],
    "archetypes": [
     "ninja"
    ],
@@ -9982,6 +10379,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:94670654:DABL-EN017:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10119,6 +10519,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ib the World Chalice Miko"
+   ],
    "archetypes": [
     "world-chalice"
    ],
@@ -11301,6 +11704,9 @@
    "passcode": 94749594,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:94749594:SUDA-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11678,6 +12084,23 @@
      "set": "retro-pack-2",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Spirit Message \"A\""
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:94772232:SBC2-ENE16:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600295
+      ]
+     },
+     "number": "SBC2-ENE16",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Spirit Message \"A\""
      }
     }
@@ -12087,6 +12510,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Gunkan Suship Uni-class Superdreadnought"
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -12147,6 +12573,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:94798725:BODE-EN048:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12646,6 +13075,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Amazement Administrator (Ɐrlechino)"
+   ],
    "archetypes": [
     "amazement"
    ],
@@ -12791,6 +13223,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sacred Azamina"
+   ],
    "archetypes": [
     "azamina"
    ],
@@ -12848,6 +13283,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:94845588:ROTA-EN053:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14033,6 +14471,9 @@
    "tcgDate": "2006-02-18"
   },
   {
+   "aliases": [
+    "Kragen Spawn"
+   ],
    "archetypes": [
     "stealth-kragen"
    ],
@@ -14671,6 +15112,9 @@
    "passcode": 94979322,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:94979322:DUAD-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14694,6 +15138,9 @@
    ]
   },
   {
+   "aliases": [
+    "Draius III, the True Dracoknight"
+   ],
    "archetypes": [
     "true-draco"
    ],

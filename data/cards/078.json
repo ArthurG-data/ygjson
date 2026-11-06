@@ -487,6 +487,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:78010363:SBC2-ENI08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600337
+      ]
+     },
+     "number": "SBC2-ENI08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Witch of the Black Forest"
+     }
+    },
+    {
      "id": "starter-deck-kaiba-evolution:78010363:SKE-020:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -572,6 +589,9 @@
    ]
   },
   {
+   "aliases": [
+    "Weaver of Fairy Tail Tales"
+   ],
    "archetypes": [
     "fairy-tail"
    ],
@@ -794,6 +814,9 @@
    "tcgDate": "2003-07-18"
   },
   {
+   "aliases": [
+    "Killer Tune Synchro"
+   ],
    "archetypes": [
     "kewl-tune",
     "killer-tune"
@@ -929,6 +952,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:78060096:IOC-EN060:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1069,10 +1095,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:78063197:LDS1-EN049:ultra_rare",
+     "number": "LDS1-EN049",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:78063197:LDS1-EN049:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217387,
-       217388,
+       217387
+      ]
+     },
+     "number": "LDS1-EN049",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Relinquished Fusion (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:78063197:LDS1-EN049:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217388
+      ]
+     },
+     "number": "LDS1-EN049",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Relinquished Fusion (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:78063197:LDS1-EN049:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217389
       ]
      },
@@ -1080,15 +1156,20 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Relinquished Fusion (Blue)"
-     }
+      "name": "Relinquished Fusion (Purple)"
+     },
+     "variant": "purple"
     }
    ],
    "tcgDate": "2018-02-22"
   },
   {
+   "aliases": [
+    "Diabolica, Dragon Fiend Commander"
+   ],
    "atk": 2300,
    "attribute": "dark",
    "def": 0,
@@ -1146,6 +1227,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:78077209:DUNE-EN096:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1480,6 +1564,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sword Emperor - Tsumuhakutsunagi"
+   ],
    "atk": 3000,
    "attribute": "wind",
    "def": 3000,
@@ -1522,6 +1609,9 @@
    "passcode": 78098950,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:78098950:CYAC-EN024:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1536,6 +1626,26 @@
       "match": "number+rarity",
       "name": "Tsumuha-Kutsunagi the Lord of Swords"
      }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "cyberstorm-access:78098950:CYAC-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       493960
+      ]
+     },
+     "number": "CYAC-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "cyberstorm-access",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Tsumuha-Kutsunagi the Lord of Swords"
+     }
     }
    ],
    "tcgDate": "2023-05-04",
@@ -1546,6 +1656,9 @@
    ]
   },
   {
+   "aliases": [
+    "Solemn Report"
+   ],
    "archetypes": [
     "solemn"
    ],
@@ -1730,6 +1843,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exorsister Caspitelle"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -1815,6 +1931,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Armed, the Annihilation Dragon"
+   ],
    "atk": 2800,
    "attribute": "dark",
    "def": 1000,
@@ -2052,6 +2171,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dribrave"
+   ],
    "atk": 1500,
    "attribute": "fire",
    "def": 1000,
@@ -2109,6 +2231,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:78161361:BODE-EN093:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2861,6 +2986,16 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:78193831:YGLD-ENB04:common",
+     "number": "YGLD-ENB04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:78193831:YGLD-ENB04:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615960
@@ -2870,16 +3005,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Buster Blader (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:78193831:YGLD-ENC11:common",
+     "number": "YGLD-ENC11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:78193831:YGLD-ENC11:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        616008
@@ -2889,10 +3036,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Buster Blader (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "editions": [
@@ -2900,6 +3049,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:78193831:YGLD-ENB04:common",
+     "number": "YGLD-ENB04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:78193831:YGLD-ENB04:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108247
@@ -2909,10 +3069,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Buster Blader (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -2920,6 +3082,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:78193831:YGLD-ENC11:common",
+     "number": "YGLD-ENC11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:78193831:YGLD-ENC11:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        108295
@@ -2929,10 +3102,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Buster Blader (C)"
-     }
+     },
+     "variant": "c"
     }
    ],
    "tcgDate": "2002-10-20",
@@ -2942,6 +3117,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mikanko Catfight"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -3273,6 +3451,9 @@
    "tcgDate": "2005-08-06"
   },
   {
+   "aliases": [
+    "Evolution Result Burst"
+   ],
    "archetypes": [
     "cyber-dragon"
    ],
@@ -3493,6 +3674,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragonmaids' Hospitality"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -3550,6 +3734,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:78231355:MGED-EN149:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3755,6 +3942,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:78243409:IOC-EN063:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4109,6 +4299,9 @@
    ]
   },
   {
+   "aliases": [
+    "Philias Diabell"
+   ],
    "archetypes": [
     "diabell"
    ],
@@ -4150,6 +4343,9 @@
    "passcode": 78293584,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:78293584:ALIN-EN057:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4724,6 +4920,9 @@
    ]
   },
   {
+   "aliases": [
+    "Midday Sentinel"
+   ],
    "atk": 2300,
    "attribute": "earth",
    "def": 1500,
@@ -4781,6 +4980,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:78360952:DIFO-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4804,6 +5006,9 @@
    ]
   },
   {
+   "aliases": [
+    "Icefish Suship"
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -4865,6 +5070,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:78362751:BODE-EN023:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5041,8 +5249,7 @@
      "id": "battles-of-legend-chapter-1:78371393:BLC1-EN027:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538499,
-       538660
+       538499
       ]
      },
      "number": "BLC1-EN027",
@@ -5053,6 +5260,27 @@
       "match": "number+rarity",
       "name": "Yubel"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:78371393:BLC1-EN027:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538660
+      ]
+     },
+     "number": "BLC1-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Yubel (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "legendary-collection-2-the-duel-academy-years-mega-pack:78371393:LCGX-EN197:secret_rare",
@@ -5364,6 +5592,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ecclesia of the Black Dragon"
+   ],
    "archetypes": [
     "ecclesia"
    ],
@@ -5403,6 +5634,9 @@
    "passcode": 78397661,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:78397661:BPRO-EN041:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5419,6 +5653,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:78397661:BPRO-EN041:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5490,6 +5727,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dinorphia Frenzy"
+   ],
    "archetypes": [
     "dinomorphia"
    ],
@@ -5547,6 +5787,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:78420796:DIFO-EN077:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5804,6 +6047,36 @@
     "Fiend",
     "Normal"
    ]
+  },
+  {
+   "archetypes": [
+    "reindsurm"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "78432667",
+   "identifiers": {
+    "konamiId": 23887,
+    "ygoprodeckId": 78432667
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/78432667.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/78432667.jpg",
+     "id": 78432667,
+     "small": "https://images.ygoprodeck.com/images/cards_small/78432667.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Counter",
+   "name": "Reindsurm Encounter",
+   "names": {
+    "en": "Reindsurm Encounter"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 78432667,
+   "prints": []
   },
   {
    "archetypes": [
@@ -6369,6 +6642,40 @@
       "match": "number+rarity",
       "name": "Breakthrough Skill"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:78474168:SBC2-ENI25:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600127
+      ]
+     },
+     "number": "SBC2-ENI25",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Breakthrough Skill"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:78474168:SBC2-ENI25:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600126
+      ]
+     },
+     "number": "SBC2-ENI25",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Breakthrough Skill (PSR)"
+     }
     }
    ],
    "tcgDate": "2013-01-25"
@@ -6666,6 +6973,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cinderella"
+   ],
    "archetypes": [
     "golden-castle-of-stromberg"
    ],
@@ -6733,6 +7043,9 @@
    ]
   },
   {
+   "aliases": [
+    "Scareclaw Kshatri-La"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -6810,6 +7123,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:78534861:PHHY-EN007:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6833,6 +7149,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mariña, Princess of Sunflowers"
+   ],
    "atk": 2800,
    "attribute": "fire",
    "def": 1600,
@@ -6932,6 +7251,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kujikiri Amulet"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "78543464",
@@ -7561,6 +7883,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Valmonica Intonare"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -7867,6 +8192,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:78613627:IOC-EN005:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8108,6 +8436,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:78625448:MGED-EN085:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8523,6 +8854,9 @@
    "tcgDate": "2008-05-12"
   },
   {
+   "aliases": [
+    "Golden Idol"
+   ],
    "archetypes": [
     "eyes-restrict"
    ],
@@ -8586,6 +8920,44 @@
    "tcgDate": "2021-07-08",
    "typeline": [
     "Spellcaster",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "rikka"
+   ],
+   "atk": 0,
+   "attribute": "water",
+   "def": 0,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "78646298",
+   "identifiers": {
+    "konamiId": 23827,
+    "ygoprodeckId": 78646298
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/78646298.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/78646298.jpg",
+     "id": 78646298,
+     "small": "https://images.ygoprodeck.com/images/cards_small/78646298.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 6,
+   "monsterType": "Plant",
+   "name": "Rikka Black Princess",
+   "names": {
+    "en": "Rikka Black Princess"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 78646298,
+   "prints": [],
+   "typeline": [
+    "Plant",
     "Effect"
    ]
   },
@@ -9211,6 +9583,9 @@
    ]
   },
   {
+   "aliases": [
+    "Phantomaker Dragon Phantazmei"
+   ],
    "atk": 2400,
    "attribute": "dark",
    "def": 1800,
@@ -9673,11 +10048,21 @@
       "match": "number+rarity",
       "name": "Ancient Chant"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:78665705:UP02-EN013:super_rare",
+     "number": "UP02-EN013",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2020-09-24"
   },
   {
+   "aliases": [
+    "Silence Towards the Future"
+   ],
    "archetypes": [
     "shining-sarcophagus"
    ],
@@ -9735,6 +10120,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:78679226:LEDE-EN054:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9751,6 +10139,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:78679226:LEDE-EN054:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9770,6 +10161,9 @@
    "tcgDate": "2024-04-25"
   },
   {
+   "aliases": [
+    "Jura the Curse-Thunder Deity"
+   ],
    "atk": 3100,
    "attribute": "earth",
    "def": 3100,
@@ -9812,6 +10206,9 @@
    "passcode": 78693036,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:78693036:ALIN-EN043:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9828,6 +10225,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:78693036:ALIN-EN043:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10143,6 +10543,40 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:78700060:SBC2-ENE04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600150
+      ]
+     },
+     "number": "SBC2-ENE04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Doomcaliber Knight"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:78700060:SBC2-ENE04:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600149
+      ]
+     },
+     "number": "SBC2-ENE04",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Doomcaliber Knight (PSR)"
+     }
+    },
+    {
      "id": "turbo-pack-booster-one:78700060:TU01-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10155,6 +10589,23 @@
      "set": "turbo-pack-booster-one",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Doomcaliber Knight"
+     }
+    },
+    {
+     "id": "world-championship-series:78700060:2024-ENP01:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       633384
+      ]
+     },
+     "number": "2024-ENP01",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "world-championship-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Doomcaliber Knight"
      }
     }
@@ -10323,8 +10774,59 @@
     "pt": "Doca do Funk R.B."
    },
    "passcode": 78710386,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:78710386:DUAD-EN095:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639432
+      ]
+     },
+     "number": "DUAD-EN095",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. Funk Dock"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03"
+  },
+  {
+   "archetypes": [
+    "power-patron"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "78716089",
+   "identifiers": {
+    "konamiId": 23890,
+    "ygoprodeckId": 78716089
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/78716089.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/78716089.jpg",
+     "id": 78716089,
+     "small": "https://images.ygoprodeck.com/images/cards_small/78716089.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Normal",
+   "name": "Theorealize Ephemeral Lull",
+   "names": {
+    "en": "Theorealize Ephemeral Lull"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 78716089,
+   "prints": []
   },
   {
    "archetypes": [
@@ -10394,6 +10896,9 @@
    ]
   },
   {
+   "aliases": [
+    "Doom Regina Archfiend"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -10698,6 +11203,9 @@
    "tcgDate": "2017-02-09"
   },
   {
+   "aliases": [
+    "Frightfur Whale"
+   ],
    "archetypes": [
     "frightfur"
    ],
@@ -11054,6 +11562,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:78783557:PHNI-EN090:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11070,6 +11581,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:78783557:PHNI-EN090:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11084,6 +11598,13 @@
       "match": "number+rarity",
       "name": "Veidos the Eruption Dragon of Extinction"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:78783557:UP02-EN035:common",
+     "number": "UP02-EN035",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2024-02-08",
@@ -11171,6 +11692,9 @@
    "tcgDate": "2016-08-18"
   },
   {
+   "aliases": [
+    "Ogdoadic Dawn of Creation"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -11228,6 +11752,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:78789356:AGOV-EN063:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11697,6 +12224,9 @@
    ]
   },
   {
+   "aliases": [
+    "Swordsoul Research"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -11738,6 +12268,9 @@
    "passcode": 78836195,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:78836195:BODE-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12119,6 +12652,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:78868119:MGED-EN130:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12493,6 +13029,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zoodiac Marmorat"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -12696,6 +13235,9 @@
    ]
   },
   {
+   "aliases": [
+    "Centurion Emet VI"
+   ],
    "archetypes": [
     "centur-ion"
    ],
@@ -12836,6 +13378,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:78905039:PHNI-EN087:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12971,6 +13516,9 @@
    "passcode": 78910832,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:78910832:BPRO-EN020:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12994,6 +13542,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon Immortal of Tenyi"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -13249,6 +13800,9 @@
    "tcgDate": "2012-01-14"
   },
   {
+   "aliases": [
+    "Rickshaw Mayakashi - Shafu"
+   ],
    "archetypes": [
     "mayakashi"
    ],

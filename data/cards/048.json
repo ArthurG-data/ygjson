@@ -235,6 +235,26 @@
       "match": "number+rarity-from-tcgplayer",
       "name": "Charmers of the Grand Circle"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "the-chronicles-deck-spirit-charmers-all-foil-edition:48016074:CH02-EN041:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       672308
+      ]
+     },
+     "number": "CH02-EN041",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "the-chronicles-deck-spirit-charmers-all-foil-edition",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Charmers of the Grand Circle (Starlight Rare)"
+     }
     }
    ],
    "tcgDate": "2026-01-22",
@@ -245,6 +265,9 @@
    ]
   },
   {
+   "aliases": [
+    "EM:P Gremeowde"
+   ],
    "atk": 800,
    "attribute": "dark",
    "def": 0,
@@ -303,6 +326,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:48017189:PHNI-EN032:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -319,6 +345,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:48017189:PHNI-EN032:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -457,6 +486,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Keeper of Dragonic Magic"
+   ],
    "atk": 1800,
    "attribute": "dark",
    "def": 1300,
@@ -1516,6 +1548,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Super Poly"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "48130397",
@@ -2172,6 +2207,9 @@
    "tcgDate": "2015-11-05"
   },
   {
+   "aliases": [
+    "Infernity Conjuror"
+   ],
    "archetypes": [
     "infernity"
    ],
@@ -2321,6 +2359,9 @@
    ]
   },
   {
+   "aliases": [
+    "Destiny HERO - Drawguy"
+   ],
    "archetypes": [
     "destiny-hero"
    ],
@@ -2408,6 +2449,9 @@
    ]
   },
   {
+   "aliases": [
+    "Darklord Divinity"
+   ],
    "archetypes": [
     "darklord"
    ],
@@ -2463,6 +2507,20 @@
       "match": "number+rarity",
       "name": "The Sanctified Darklord"
      }
+    },
+    {
+     "id": "magnificent-maestros:48152161:MAMS-EN114:ultra_rare",
+     "number": "MAMS-EN114",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:48152161:MAMS-EN117:ultra_rare",
+     "number": "MAMS-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2018-05-03"
@@ -2655,6 +2713,9 @@
    ]
   },
   {
+   "aliases": [
+    "Astrograph Sorcerer, the Star Magician"
+   ],
    "archetypes": [
     "magician"
    ],
@@ -2820,10 +2881,7 @@
      "id": "dragons-of-legend-the-complete-series:48179391:DLCS-EN137:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221715,
-       222311,
-       222312,
-       222313
+       221715
       ]
      },
      "number": "DLCS-EN137",
@@ -2834,6 +2892,69 @@
       "match": "number+rarity",
       "name": "The Seal of Orichalcos"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:48179391:DLCS-EN137:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222311
+      ]
+     },
+     "number": "DLCS-EN137",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Seal of Orichalcos (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:48179391:DLCS-EN137:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222312
+      ]
+     },
+     "number": "DLCS-EN137",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Seal of Orichalcos (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:48179391:DLCS-EN137:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222313
+      ]
+     },
+     "number": "DLCS-EN137",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Seal of Orichalcos (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:48179391:DRL3-EN070:ultra_rare",
@@ -3228,6 +3349,9 @@
    ]
   },
   {
+   "aliases": [
+    "New Style Fur Hire"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -3416,6 +3540,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:48228390:LEDE-EN081:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3502,11 +3629,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:48229808:DL17-EN002:rare",
+     "number": "DL17-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:48229808:DL17-EN002:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80536,
-       80537,
-       80538,
+       80537
+      ]
+     },
+     "number": "DL17-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Horus the Black Flame Dragon LV8 (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:48229808:DL17-EN002:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80538
+      ]
+     },
+     "number": "DL17-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Horus the Black Flame Dragon LV8 (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:48229808:DL17-EN002:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80539
       ]
      },
@@ -3514,10 +3681,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Horus the Black Flame Dragon LV8 (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:48229808:DL17-EN002:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80536
+      ]
+     },
+     "number": "DL17-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Horus the Black Flame Dragon LV8 (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "elemental-energy-special-edition:48229808:EEN-ENSE1:secret_rare",
@@ -3747,6 +3934,9 @@
    "tcgDate": "2004-11-20"
   },
   {
+   "aliases": [
+    "Springans Merry-Maker"
+   ],
    "archetypes": [
     "springans"
    ],
@@ -4004,6 +4194,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spiral Crash of the Mythic Radiance Dragon"
+   ],
    "archetypes": [
     "phantasm-spiral"
    ],
@@ -4543,6 +4736,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:48348921:PHHY-EN043:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5112,6 +5308,9 @@
    ]
   },
   {
+   "aliases": [
+    "Singing Cuckoo"
+   ],
    "atk": 800,
    "attribute": "fire",
    "def": 1000,
@@ -5170,6 +5369,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:48386462:DUNE-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5226,6 +5428,9 @@
    "passcode": 48393693,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-monsters:48393693:MAMO-EN012:grand_master_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6222,6 +6427,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:48452496:AGOV-EN010:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6238,6 +6446,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:48452496:AGOV-EN010:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6436,6 +6647,9 @@
    ]
   },
   {
+   "aliases": [
+    "Violet Poison Magician"
+   ],
    "archetypes": [
     "fusion-dragon",
     "magician"
@@ -6507,6 +6721,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fiend Prodigy"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 2000,
@@ -6588,6 +6805,9 @@
    ]
   },
   {
+   "aliases": [
+    "Doom Emperor Archfiend"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -6626,6 +6846,9 @@
    "passcode": 48469380,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:48469380:BPRO-EN031:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6642,6 +6865,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:48469380:BPRO-EN031:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6913,6 +7139,9 @@
    ]
   },
   {
+   "aliases": [
+    "Adamatia Seeker"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -7788,6 +8017,9 @@
    ]
   },
   {
+   "aliases": [
+    "Celestial Knight Lord Parshath"
+   ],
    "archetypes": [
     "parshath"
    ],
@@ -8000,6 +8232,9 @@
    "tcgDate": "2017-02-09"
   },
   {
+   "aliases": [
+    "Lyrical Luscinia - Assembly Nightingale"
+   ],
    "archetypes": [
     "lyrilusc"
    ],
@@ -8197,6 +8432,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kshatri-La Ariseheart"
+   ],
    "archetypes": [
     "heart"
    ],
@@ -8241,6 +8479,9 @@
    "passcode": 48626373,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:48626373:PHHY-EN046:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8257,6 +8498,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:48626373:PHHY-EN046:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8366,6 +8610,9 @@
    ]
   },
   {
+   "aliases": [
+    "U.A. MVP"
+   ],
    "archetypes": [
     "u-a"
    ],
@@ -8771,6 +9018,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:48654267:LEDE-EN100:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8797,6 +9047,9 @@
    ]
   },
   {
+   "aliases": [
+    "White Exalted of Dogmatika"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -8842,6 +9095,9 @@
    "passcode": 48654323,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:48654323:BACH-EN035:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9818,6 +10074,9 @@
    "passcode": 48705086,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:48705086:ALIN-EN100:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10030,6 +10289,23 @@
    "ocgDate": "2008-04-19",
    "passcode": 48716139,
    "prints": [
+    {
+     "id": "speed-duel-battle-city-finals:48716139:SBC2-ENI06:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600305
+      ]
+     },
+     "number": "SBC2-ENI06",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Sword of Kusanagi"
+     }
+    },
     {
      "id": "the-duelist-genesis:48716139:TDGS-EN054:common",
      "identifiers": {
@@ -10318,6 +10594,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 101"
+   ],
    "archetypes": [
     "number-10x",
     "number-spell-trap-archetype"
@@ -10617,6 +10896,26 @@
      "set": "battles-of-legend-glorious-gallery",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Theorealize"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:48739627:DUAD-EN055:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639392
+      ]
+     },
+     "number": "DUAD-EN055",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Theorealize"
      }
     }
@@ -11122,6 +11421,27 @@
      }
     },
     {
+     "id": "magnificent-maestros:48770333:MAMS-EN029:secret_rare",
+     "number": "MAMS-EN029",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:48770333:MAMS-EN029:starlight_rare",
+     "number": "MAMS-EN029",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:48770333:MAMS-EN029:ultra_rare",
+     "number": "MAMS-EN029",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "editions": [
       "first"
      ],
@@ -11367,6 +11687,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:48784854:BODE-EN000:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11386,6 +11709,9 @@
    "tcgDate": "2021-11-04"
   },
   {
+   "aliases": [
+    "Magallanica the Eidolon Beast"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -11647,6 +11973,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:48800175:SBC2-ENI24:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600313
+      ]
+     },
+     "number": "SBC2-ENI24",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "The Melody of Awakening Dragon"
+     }
+    },
+    {
      "id": "structure-deck-blue-eyes-white-destiny:48800175:SDWD-EN022:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11683,6 +12026,9 @@
    "tcgDate": "2015-05-14"
   },
   {
+   "aliases": [
+    "Traptrix Allure"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "48805472",
@@ -11756,6 +12102,9 @@
    "tcgDate": "2023-02-23"
   },
   {
+   "aliases": [
+    "Therions' \"Empress\" Arasia"
+   ],
    "archetypes": [
     "therion"
    ],
@@ -11817,6 +12166,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:48806195:POTE-EN008:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11840,6 +12193,9 @@
    ]
   },
   {
+   "aliases": [
+    "Feed Back"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "48814566",
@@ -11897,6 +12253,9 @@
    "tcgDate": "2020-11-05"
   },
   {
+   "aliases": [
+    "Hiita the Blazing Fire Charmer"
+   ],
    "archetypes": [
     "charmer"
    ],
@@ -11964,6 +12323,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:48815792:MGED-EN119:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12258,6 +12620,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dinorphia Kentregina"
+   ],
    "archetypes": [
     "dinomorphia"
    ],
@@ -12319,6 +12684,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:48832775:BACH-EN038:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12555,6 +12923,9 @@
    "passcode": 48882106,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:48882106:ALIN-EN085:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12667,6 +13038,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zoodiac Drancia"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -12769,6 +13143,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 83"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -13117,6 +13494,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sennet Thunderfall"
+   ],
    "archetypes": [
     "zenet"
    ],
@@ -13306,6 +13686,9 @@
    "passcode": 48958757,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:48958757:SUDA-EN038:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13617,6 +14000,9 @@
    "tcgDate": "2007-02-07"
   },
   {
+   "aliases": [
+    "Number 88"
+   ],
    "archetypes": [
     "gimmick-puppet",
     "number-spell-trap-archetype"
@@ -13775,6 +14161,23 @@
      "set": "legendary-collection-2-the-duel-academy-years-mega-pack",
      "tcgplayer": {
       "match": "number-other-set",
+      "name": "Elemental HERO Grand Neos"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:48996569:SGX4-ENA24:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543756
+      ]
+     },
+     "number": "SGX4-ENA24",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Elemental HERO Grand Neos"
      }
     },

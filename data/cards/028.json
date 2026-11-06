@@ -155,6 +155,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rex, Cargo Fur Hire"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -216,6 +219,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:28004531:DABL-EN027:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -239,6 +245,9 @@
    ]
   },
   {
+   "aliases": [
+    "Metalphosis Orihulk"
+   ],
    "archetypes": [
     "metalfoes"
    ],
@@ -361,6 +370,9 @@
    ]
   },
   {
+   "aliases": [
+    "Palladion of the Hundred Beasts"
+   ],
    "archetypes": [
     "crusadia"
    ],
@@ -920,6 +932,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ignihorse Dragonith"
+   ],
    "atk": 2400,
    "attribute": "fire",
    "def": 1000,
@@ -1238,6 +1253,13 @@
      }
     },
     {
+     "id": "magnificent-maestros:28112535:MAMS-EN069:ultra_rare",
+     "number": "MAMS-EN069",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "speed-duel-starter-decks-match-of-the-millennium:28112535:SS04-ENB06:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1262,6 +1284,9 @@
    ]
   },
   {
+   "aliases": [
+    "Midoremichord Elitea"
+   ],
    "archetypes": [
     "solfachord"
    ],
@@ -1659,6 +1684,9 @@
    ]
   },
   {
+   "aliases": [
+    "Floowandereeze and the Mysterious Map"
+   ],
    "archetypes": [
     "floowandereeze"
    ],
@@ -1716,6 +1744,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:28126717:BODE-EN058:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1874,6 +1905,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:28143384:INFO-EN089:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2110,6 +2144,9 @@
    ]
   },
   {
+   "aliases": [
+    "Speedroid Domino Butterfly"
+   ],
    "archetypes": [
     "roid-2"
    ],
@@ -2180,6 +2217,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rock of Vanquisher"
+   ],
    "archetypes": [
     "vanquish-soul"
    ],
@@ -2601,6 +2641,9 @@
    ]
   },
   {
+   "aliases": [
+    "T.G. - Break Limiter"
+   ],
    "archetypes": [
     "t-g"
    ],
@@ -2642,6 +2685,9 @@
    "passcode": 28189908,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:28189908:AGOV-EN049:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2658,6 +2704,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:28189908:AGOV-EN049:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2945,6 +2994,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tearalaments Kaleido-Heart"
+   ],
    "archetypes": [
     "heart"
    ],
@@ -2990,6 +3042,10 @@
    "passcode": 28226490,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:28226490:POTE-EN043:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3014,6 +3070,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spiritual Energy Entanglement"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "28234578",
@@ -3367,6 +3426,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:28273805:ROTA-EN063:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3440,6 +3502,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:28279365:LEDE-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3858,6 +3923,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dinorphia Reversion"
+   ],
    "archetypes": [
     "dinomorphia"
    ],
@@ -3915,6 +3983,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:28292031:BACH-EN073:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4092,6 +4163,9 @@
    "passcode": 28306253,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:28306253:DUAD-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4413,11 +4487,31 @@
       "match": "number+rarity",
       "name": "Court of Cards"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:28340377:SBC2-ENA19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600131
+      ]
+     },
+     "number": "SBC2-ENA19",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Court of Cards"
+     }
     }
    ],
    "tcgDate": "2021-07-08"
   },
   {
+   "aliases": [
+    "Galaxy-Eyes Cipher Ex Dragon"
+   ],
    "archetypes": [
     "galaxy-eyes"
    ],
@@ -4977,6 +5071,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fire Opalhead"
+   ],
    "atk": 2500,
    "attribute": "fire",
    "def": 1000,
@@ -5035,6 +5132,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:28363749:BACH-EN092:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5121,6 +5221,9 @@
    "tcgDate": "2016-11-03"
   },
   {
+   "aliases": [
+    "Geri, Fangs of the Mysterune"
+   ],
    "archetypes": [
     "runick"
    ],
@@ -5502,6 +5605,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 97: Dragravion"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -5664,6 +5770,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:28403802:POTE-EN046:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5726,6 +5836,9 @@
    ]
   },
   {
+   "aliases": [
+    "D/D Griffon"
+   ],
    "archetypes": [
     "d-d-2"
    ],
@@ -5787,6 +5900,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:28406301:BACH-EN013:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5986,6 +6102,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:28427869:BACH-EN095:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6152,6 +6271,9 @@
    ]
   },
   {
+   "aliases": [
+    "Enneacraft - Astaγ.PIXIEA"
+   ],
    "archetypes": [
     "enneacraft"
    ],
@@ -6477,6 +6599,9 @@
    ]
   },
   {
+   "aliases": [
+    "Replenishment Squad"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "28486799",
@@ -6697,6 +6822,9 @@
    "passcode": 28497830,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:28497830:CYAC-EN087:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6850,11 +6978,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:28529976:DL12-EN017:rare",
+     "number": "DL12-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:28529976:DL12-EN017:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77414,
-       80400,
-       80401,
+       80400
+      ]
+     },
+     "number": "DL12-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super Solar Nutrient (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:28529976:DL12-EN017:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80401
+      ]
+     },
+     "number": "DL12-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super Solar Nutrient (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:28529976:DL12-EN017:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80402
       ]
      },
@@ -6862,10 +7030,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super Solar Nutrient (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:28529976:DL12-EN017:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77414
+      ]
+     },
+     "number": "DL12-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Super Solar Nutrient (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "fusion-enforcers:28529976:FUEN-EN055:super_rare",
@@ -6887,6 +7075,9 @@
    "tcgDate": "2009-02-28"
   },
   {
+   "aliases": [
+    "Apocaries"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "28531163",
@@ -6924,6 +7115,9 @@
    "passcode": 28531163,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:28531163:DOOD-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7283,6 +7477,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:28553439:MGED-EN040:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8506,6 +8703,9 @@
    "tcgDate": "2005-11-05"
   },
   {
+   "aliases": [
+    "Simorgh Arrival"
+   ],
    "archetypes": [
     "simorgh"
    ],
@@ -8799,6 +8999,9 @@
    ]
   },
   {
+   "aliases": [
+    "K9 - 66a Jokull"
+   ],
    "archetypes": [
     "k9"
    ],
@@ -8974,6 +9177,9 @@
    "tcgDate": "2011-02-08"
   },
   {
+   "aliases": [
+    "Mano A.I. Mano"
+   ],
    "archetypes": [
     "a-i"
    ],
@@ -9274,11 +9480,31 @@
       "match": "number+rarity",
       "name": "Embodiment of Apophis"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:28649820:SBC2-ENG14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600157
+      ]
+     },
+     "number": "SBC2-ENG14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Embodiment of Apophis"
+     }
     }
    ],
    "tcgDate": "2005-08-06"
   },
   {
+   "aliases": [
+    "Raviel, Lord of Phantasms - Heaven-Crushing Fist"
+   ],
    "archetypes": [
     "sacred-beast"
    ],
@@ -9400,6 +9626,9 @@
    "passcode": 28653611,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:28653611:DOOD-EN069:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9510,6 +9739,9 @@
    "tcgDate": "2011-11-10"
   },
   {
+   "aliases": [
+    "Ryu-Ge Ascension Gate of Serpentfall"
+   ],
    "archetypes": [
     "ryu-ge"
    ],
@@ -9653,8 +9885,7 @@
      "id": "battles-of-legend-chapter-1:28674152:BLC1-EN035:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538507,
-       538668
+       538507
       ]
      },
      "number": "BLC1-EN035",
@@ -9665,6 +9896,27 @@
       "match": "number+rarity",
       "name": "Radian, the Multidimensional Kaiju"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:28674152:BLC1-EN035:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538668
+      ]
+     },
+     "number": "BLC1-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Radian, the Multidimensional Kaiju (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "dimension-of-chaos:28674152:DOCS-EN087:rare",
@@ -9858,6 +10110,23 @@
       "match": "number+rarity",
       "name": "Elemental Hero Dark Neos"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:28677304:SGX4-ENA23:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543755
+      ]
+     },
+     "number": "SGX4-ENA23",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental HERO Dark Neos"
+     }
     }
    ],
    "tcgDate": "2006-08-16",
@@ -9868,6 +10137,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mekk-Knight Purple Dusk"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -10028,6 +10300,13 @@
      }
     },
     {
+     "id": "magnificent-maestros:28711704:MAMS-EN076:ultra_rare",
+     "number": "MAMS-EN076",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "quarter-century-bonanza:28711704:RA03-EN272:platinum_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10100,6 +10379,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ursarctic Megapola"
+   ],
    "archetypes": [
     "ursarctic"
    ],
@@ -10230,6 +10512,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:28720123:DABL-EN024:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10559,6 +10844,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tinola of the Icejade"
+   ],
    "archetypes": [
     "icejade"
    ],
@@ -10620,6 +10908,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:28762303:BODE-EN009:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10809,6 +11100,9 @@
    ]
   },
   {
+   "aliases": [
+    "Raiders' Knight"
+   ],
    "archetypes": [
     "phantom-knights",
     "the-phantom-knights"
@@ -10933,6 +11227,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dual Avatar Lion Envoys - Ah-Un"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -10977,6 +11274,9 @@
    "passcode": 28798938,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:28798938:CYAC-EN038:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11001,6 +11301,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lacrima the Scarlet Sorrow"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -11081,6 +11384,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:28803166:ROTA-EN014:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11097,6 +11403,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:28803166:ROTA-EN014:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11120,6 +11429,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cloudy Weathery Sleet"
+   ],
    "archetypes": [
     "the-weather"
    ],
@@ -11187,6 +11499,9 @@
    ]
   },
   {
+   "aliases": [
+    "Into the VRAINS!"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "28827503",
@@ -11441,6 +11756,9 @@
    ]
   },
   {
+   "aliases": [
+    "Traptrix Ginalloa"
+   ],
    "archetypes": [
     "traptrix"
    ],
@@ -11631,6 +11949,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Doom-Z Five - Amalthe"
+   ],
    "archetypes": [
     "doomz"
    ],
@@ -11675,6 +11996,9 @@
    "passcode": 28877382,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:28877382:DOOD-EN009:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11691,6 +12015,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:28877382:DOOD-EN009:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11994,6 +12321,9 @@
    "passcode": 28903523,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:28903523:ALIN-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12062,6 +12392,13 @@
       "match": "number+rarity",
       "name": "Angelechy Bastion"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:28904860:UP02-EN010:super_rare",
+     "number": "UP02-EN010",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2026-07-02",
@@ -12222,6 +12559,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragunity Legion (card)"
+   ],
    "archetypes": [
     "dragunity"
    ],
@@ -12706,6 +13046,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mirror Swordsman"
+   ],
    "atk": 1900,
    "attribute": "light",
    "def": 300,
@@ -12764,6 +13107,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:28954097:DUNE-EN006:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12787,6 +13133,9 @@
    ]
   },
   {
+   "aliases": [
+    "Evil Eye of Gorgone"
+   ],
    "archetypes": [
     "evil-eye"
    ],
@@ -12919,6 +13268,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:28958464:INFO-EN099:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [

@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Number 34"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -861,6 +864,9 @@
    ]
   },
   {
+   "aliases": [
+    "You & A.I."
+   ],
    "archetypes": [
     "a-i"
    ],
@@ -1656,6 +1662,9 @@
    ]
   },
   {
+   "aliases": [
+    "Reptilianne Melsine"
+   ],
    "archetypes": [
     "reptilianne"
    ],
@@ -1701,6 +1710,9 @@
    "passcode": 32138660,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:32138660:BODE-EN043:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1808,6 +1820,9 @@
    ]
   },
   {
+   "aliases": [
+    "Decline Scareclaw"
+   ],
    "archetypes": [
     "scareclaw"
    ],
@@ -1865,6 +1880,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:32152870:DABL-EN059:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2085,6 +2103,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:32176662:BODE-EN092:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2234,6 +2255,9 @@
    "tcgDate": "2008-11-01"
   },
   {
+   "aliases": [
+    "Ama-no-Iwato"
+   ],
    "atk": 1900,
    "attribute": "earth",
    "def": 1200,
@@ -2533,7 +2557,48 @@
     "pt": "R.B. O Bruto do Blues"
    },
    "passcode": 32216688,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:32216688:DUAD-EN094:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       641287
+      ]
+     },
+     "number": "DUAD-EN094",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. The Brute Blues (Starlight Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:32216688:DUAD-EN094:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639431
+      ]
+     },
+     "number": "DUAD-EN094",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "R.B. The Brute Blues"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03",
    "typeline": [
     "Machine",
@@ -2730,6 +2795,9 @@
    ]
   },
   {
+   "aliases": [
+    "D/D/D Wisdom King Solomon"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d"
@@ -2774,6 +2842,9 @@
    "passcode": 32232538,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:32232538:DOOD-EN043:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3077,6 +3148,9 @@
    ]
   },
   {
+   "aliases": [
+    "Contract of Destiny"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "32245230",
@@ -3134,6 +3208,9 @@
    "tcgDate": "2021-12-02"
   },
   {
+   "aliases": [
+    "The Absolute Divine Beast"
+   ],
    "archetypes": [
     "egyptian-god"
    ],
@@ -3232,11 +3309,51 @@
    "prints": [
     {
      "id": "duelist-league-15-participation-cards:32268901:DL15-EN013:rare",
+     "number": "DL15-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:32268901:DL15-EN013:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80064,
-       80065,
-       80066,
+       80066
+      ]
+     },
+     "number": "DL15-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Salamandra (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:32268901:DL15-EN013:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80064
+      ]
+     },
+     "number": "DL15-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Salamandra (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:32268901:DL15-EN013:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80067
       ]
      },
@@ -3244,10 +3361,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Salamandra (Green)"
-     }
+      "name": "Salamandra (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:32268901:DL15-EN013:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80065
+      ]
+     },
+     "number": "DL15-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Salamandra (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:32268901:LCJW-EN062:common",
@@ -3463,6 +3600,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ties of Friendship"
+   ],
    "archetypes": [
     "shining-sarcophagus"
    ],
@@ -3520,6 +3660,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:32270212:LEDE-EN053:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3536,6 +3679,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:32270212:LEDE-EN053:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3909,6 +4055,9 @@
    ]
   },
   {
+   "aliases": [
+    "Surface Aqua Jet"
+   ],
    "archetypes": [
     "aqua-jet"
    ],
@@ -3966,6 +4115,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:32278723:ROTA-EN048:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4409,6 +4561,9 @@
    "tcgDate": "2004-06-01"
   },
   {
+   "aliases": [
+    "Al Dhampir - Vampire Sheridan"
+   ],
    "archetypes": [
     "vampire"
    ],
@@ -4646,6 +4801,9 @@
    ]
   },
   {
+   "aliases": [
+    "Haunted Zombie"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "32335697",
@@ -4700,6 +4858,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:32335697:DIFO-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5011,7 +5172,30 @@
    },
    "ocgDate": "2026-05-30",
    "passcode": 32353566,
-   "prints": []
+   "prints": [
+    {
+     "id": "magnificent-maestros:32353566:MAMS-EN051:secret_rare",
+     "number": "MAMS-EN051",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:32353566:MAMS-EN051:starlight_rare",
+     "number": "MAMS-EN051",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:32353566:MAMS-EN051:ultra_rare",
+     "number": "MAMS-EN051",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12"
   },
   {
    "archetypes": [
@@ -5070,6 +5254,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:32354768:MGED-EN073:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5673,6 +5860,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ancient Warriors - Wise Zhuge Kong"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -5979,6 +6169,9 @@
    "tcgDate": "2008-08-09"
   },
   {
+   "aliases": [
+    "Doom-Z Raider"
+   ],
    "archetypes": [
     "doomz"
    ],
@@ -6019,6 +6212,9 @@
    "passcode": 32442017,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:32442017:DOOD-EN057:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6038,6 +6234,9 @@
    "tcgDate": "2025-09-25"
   },
   {
+   "aliases": [
+    "Number C43"
+   ],
    "archetypes": [
     "chaos",
     "number-c",
@@ -6615,6 +6814,9 @@
    ]
   },
   {
+   "aliases": [
+    "El Shaddoll Meshachrer"
+   ],
    "archetypes": [
     "shaddoll"
    ],
@@ -6990,6 +7192,9 @@
    "passcode": 32480825,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:32480825:AGOV-EN034:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7367,6 +7572,13 @@
      }
     },
     {
+     "id": "maze-of-machines:32491822:MZMC-EN000:starlight_rare",
+     "number": "MZMC-EN000",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "maze-of-machines"
+    },
+    {
      "id": "shadow-of-infinity:32491822:SOI-EN002:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7461,6 +7673,9 @@
    ]
   },
   {
+   "aliases": [
+    "Warrior Monk of Tenyi"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -7605,6 +7820,9 @@
    ]
   },
   {
+   "aliases": [
+    "Granite Loyalist"
+   ],
    "atk": 2300,
    "attribute": "earth",
    "def": 1800,
@@ -8147,6 +8365,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rahu Dragon Tail"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -8346,6 +8567,9 @@
    "tcgDate": "2023-06-22"
   },
   {
+   "aliases": [
+    "Silent Snowflower"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -8406,6 +8630,9 @@
    "tcgDate": "2020-04-03"
   },
   {
+   "aliases": [
+    "Number C9"
+   ],
    "archetypes": [
     "chaos",
     "number-c",
@@ -8819,6 +9046,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:32600024:MGED-EN022:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9755,6 +9985,9 @@
    "passcode": 32665564,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:32665564:DOOD-EN054:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10085,6 +10318,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:32692693:BACH-EN059:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10541,6 +10777,9 @@
    "tcgDate": "2005-08-06"
   },
   {
+   "aliases": [
+    "The Byssted Lubellion"
+   ],
    "archetypes": [
     "bystial"
    ],
@@ -10618,6 +10857,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:32731036:DABL-EN009:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11274,6 +11516,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:32756828:DABL-EN073:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11533,6 +11778,13 @@
    "passcode": 32762201,
    "prints": [
     {
+     "id": "magnificent-maestros:32762201:MAMS-EN080:ultra_rare",
+     "number": "MAMS-EN080",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "maze-of-the-master:32762201:MZTM-EN045:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11616,6 +11868,9 @@
    "tcgDate": "2020-04-30"
   },
   {
+   "aliases": [
+    "Eternal Cyber"
+   ],
    "archetypes": [
     "cyber"
    ],
@@ -11676,6 +11931,9 @@
    "tcgDate": "2021-10-14"
   },
   {
+   "aliases": [
+    "Manifested Skull Archfiend"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -11744,6 +12002,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fairwelcome Labrynth"
+   ],
    "archetypes": [
     "labrynth",
     "welcome-labrynth"
@@ -11821,6 +12082,9 @@
    "tcgDate": "2022-08-25"
   },
   {
+   "aliases": [
+    "Performapal La Panda"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -12528,7 +12792,31 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:32807846:SBC2-ENC14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600274
+      ]
+     },
+     "number": "SBC2-ENC14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Reinforcement of the Army"
+     }
+    },
+    {
      "id": "speed-duel-gx-duel-academy-box:32807846:SGX1-ENA14:common",
+     "number": "SGX1-ENA14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duel-academy-box"
+    },
+    {
+     "id": "speed-duel-gx-duel-academy-box:32807846:SGX1-ENA14:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        266075
@@ -12538,13 +12826,22 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duel-academy-box",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Reinforcement of the Army (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "id": "speed-duel-gx-duel-academy-box:32807846:SGX1-ENB11:common",
+     "number": "SGX1-ENB11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duel-academy-box"
+    },
+    {
+     "id": "speed-duel-gx-duel-academy-box:32807846:SGX1-ENB11:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        266165
@@ -12554,10 +12851,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "speed-duel-gx-duel-academy-box",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Reinforcement of the Army (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:32807846:SGX3-END11:common",
@@ -13073,6 +13372,9 @@
    ]
   },
   {
+   "aliases": [
+    "Endless of the World"
+   ],
    "archetypes": [
     "demise"
    ],
@@ -13187,6 +13489,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Magibullet Shooter Caspar"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -13397,6 +13702,9 @@
    "tcgDate": "2010-08-07"
   },
   {
+   "aliases": [
+    "Gargardo the Necroforger Fiend"
+   ],
    "atk": 2000,
    "attribute": "fire",
    "def": 2000,
@@ -13605,6 +13913,9 @@
    "tcgDate": "2019-09-26"
   },
   {
+   "aliases": [
+    "Smiling Prosperity"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "32887445",
@@ -13743,6 +14054,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kshatri-La Fenrir"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -13804,6 +14118,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:32909498:DABL-EN012:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14496,6 +14813,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ninjitsu Art Equipment Kanamugura"
+   ],
    "archetypes": [
     "ninjitsu-art"
    ],
@@ -14552,6 +14872,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:32939238:DABL-EN062:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14699,6 +15022,9 @@
    "passcode": 32975247,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:32975247:DIFO-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14807,6 +15133,9 @@
    ]
   },
   {
+   "aliases": [
+    "Georgius, Swordsman of the Ice Barrier"
+   ],
    "archetypes": [
     "ice-barrier"
    ],
@@ -14876,6 +15205,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fiendsmith's Agnusdei"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -14941,6 +15273,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:32991300:ROTA-EN045:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [

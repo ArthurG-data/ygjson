@@ -43,7 +43,7 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 - `sets/sets.json` lists every set, sorted by id. A set has a `type`, and may have a `series`, a `parent` and an
   `era`. It lists the `editions` it was printed in, the TCGplayer groups that sell it (`tcgplayerGroupIds`), and
   `identifiers` for YGOJSON, Yugipedia and Konami's card database. `source` is `ygoprodeck` for a set YGOPRODeck lists
-  (1,036 sets) and `tcgplayer` for a set minted for a TCGplayer group YGOPRODeck lacks (10 sets).
+  and `tcgplayer` for a set minted for a TCGplayer group YGOPRODeck lacks, such as `Speed Duel: Battle City Finals`.
 - `sets/eras.json` holds the seven eras and their date windows.
 - `data/cards/<bucket>.json` holds the cards, bucketed by the millions of the card id (`89631139` lives in
   `089.json`). A card holds its facts and its `prints`.
@@ -68,7 +68,7 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 - **Card id.** YGOPRODeck's card id, as a string. `passcode` is the same number when it is below 100,000,000, which is
   the 8-digit number printed on the card. YGOPRODeck gives cards that have no passcode an id above that line, and
   those cards have no `passcode`.
-- **Print id.** `<set id>:<card id>:<set number or empty>:<rarity code>`. The same card in the same set at another
+- **Print id.** `<set id>:<card id>:<set number or empty>:<rarity code>[:<variant>]`. The same card in the same set at another
   rarity is another print. `legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare` is the Ultra Rare Blue-Eyes
   White Dragon in Legend of Blue Eyes White Dragon.
 - **Printing id.** `<print id>:<language>:<edition>`, where the edition is `first`, `unlimited` or `limited`. The
@@ -202,6 +202,27 @@ products only when they are the same card at the same rarity, like the Red and B
 | `number+rarity-from-tcgplayer` | 187 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
 | `number` | 443 | the group's set has exactly one print of this number |
 | `number-other-set` | 2,707 | the group's set lacks the number, and exactly one other set has it |
+| `minted` | | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
+
+**Prints from TCGplayer.** YGOPRODeck lags TCGplayer and omits whole sets. When no print anywhere has a product's number
+and its name is exactly one card, `import_tcgcsv.py` creates the print with `source: "tcgplayer"`, in the group's set, or
+in a set it creates for a group that matched none. The same card at a second rarity under one number gets its own print
+too. A token product lands only on a token card: `Token: Grinder Golem` is not the card Grinder Golem. Each run drops
+and creates these prints again.
+
+**Variants.** A product whose name carries a foil colour (`Blue`, `Green`, `Purple`, `Red`, `Silver`, `Bronze`), an art
+letter (`A` to `G`) or `Version <n>` has a price of its own: Zaborg the Thunder Monarch lists at 129.99 in Blue and 4.49 in
+Green under one number and rarity. It lands on its own print, a copy of the base print with `variant` set (`blue`, `b`,
+`version-2`) and that variant at the end of the print id. A base print whose products are all colours keeps no product
+and stays, because YGOPRODeck lists it and its id does not change. A product whose tags name two versions goes to review.
+
+Stamps and alternate arts are not variants yet. A stamped product with no colour still lands on the plain print, so that
+print can hold two prices: 247 prints hold more than one product. Its TCGplayer price is not reliable until these become
+variants too.
+
+**Aliases.** A card's `aliases` are other English names shops sell it under: YGOPRODeck's `beta_name` (`Red-Eyes B.
+Dragon`) and TCGplayer's product name at any of its prints (`Stellarnova Binding`). A name another card has is never an
+alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`.
 
 1,760 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card or rarity.

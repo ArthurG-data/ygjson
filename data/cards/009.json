@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Performapal Drago Remora"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -147,6 +150,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:9012916:DABL-EN100:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -484,6 +490,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cataclysmic Cheerful Calcragra"
+   ],
    "atk": 2600,
    "attribute": "earth",
    "def": 200,
@@ -537,6 +546,23 @@
      "set": "ignition-assault",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Cataclysmic Crusted Calcifida"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:9028399:SBC2-ENF02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600128
+      ]
+     },
+     "number": "SBC2-ENF02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Cataclysmic Crusted Calcifida"
      }
     }
@@ -858,11 +884,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:9053187:DL17-EN012:rare",
+     "number": "DL17-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:9053187:DL17-EN012:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80576,
-       80577,
-       80578,
+       80577
+      ]
+     },
+     "number": "DL17-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gagagigo the Risen (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:9053187:DL17-EN012:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80578
+      ]
+     },
+     "number": "DL17-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gagagigo the Risen (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:9053187:DL17-EN012:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80579
       ]
      },
@@ -870,10 +936,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gagagigo the Risen (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:9053187:DL17-EN012:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80576
+      ]
+     },
+     "number": "DL17-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Gagagigo the Risen (Red)"
-     }
+     },
+     "variant": "red"
     }
    ],
    "rank": 4,
@@ -1107,6 +1193,9 @@
    "tcgDate": "2010-05-07"
   },
   {
+   "aliases": [
+    "Fabled Andraith"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -1192,6 +1281,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Factory of Increased Production"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "9064354",
@@ -1351,6 +1443,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon King's Aura"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "9070454",
@@ -1405,6 +1500,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:9070454:POTE-EN079:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1602,11 +1701,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:9076207:DL13-EN001:rare",
+     "number": "DL13-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:9076207:DL13-EN001:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77418,
-       80415,
-       80416,
+       80415
+      ]
+     },
+     "number": "DL13-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Armed Ninja (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:9076207:DL13-EN001:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80416
+      ]
+     },
+     "number": "DL13-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Armed Ninja (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:9076207:DL13-EN001:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80417
       ]
      },
@@ -1614,10 +1753,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Armed Ninja (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:9076207:DL13-EN001:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77418
+      ]
+     },
+     "number": "DL13-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Armed Ninja (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition:9076207:LOB-EN106:rare",
@@ -1783,6 +1942,9 @@
    "passcode": 9091064,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:9091064:AGOV-EN018:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1799,6 +1961,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:9091064:AGOV-EN018:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2073,6 +2238,9 @@
    ]
   },
   {
+   "aliases": [
+    "Electro Gunner"
+   ],
    "atk": 1800,
    "attribute": "fire",
    "def": 1400,
@@ -3075,6 +3243,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 6"
+   ],
    "archetypes": [
     "chronomaly",
     "number-spell-trap-archetype"
@@ -3165,6 +3336,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tallyho! Springans!"
+   ],
    "archetypes": [
     "springans"
    ],
@@ -3222,6 +3396,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:9175957:PHHY-EN054:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3454,6 +3631,9 @@
    "tcgDate": "2008-05-03"
   },
   {
+   "aliases": [
+    "Evil★Twin Kisikil"
+   ],
    "archetypes": [
     "evil-twin"
    ],
@@ -3684,6 +3864,9 @@
    "passcode": 9213491,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:9213491:DUAD-EN013:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3787,6 +3970,9 @@
    "tcgDate": "2012-09-28"
   },
   {
+   "aliases": [
+    "Vernalizer Fairy of Mountains and Melting Snow"
+   ],
    "archetypes": [
     "vernusylph"
    ],
@@ -3832,6 +4018,10 @@
    "passcode": 9238125,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:9238125:POTE-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3855,6 +4045,9 @@
    ]
   },
   {
+   "aliases": [
+    "Goldfish Rescue"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "9251497",
@@ -4340,6 +4533,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:9275482:AGOV-EN021:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4363,6 +4559,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rebellion of the Monarchs"
+   ],
    "archetypes": [
     "monarch",
     "monarch-spell-trap-archetype"
@@ -4403,7 +4602,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 9283801,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:9283801:DUAD-EN062:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639399
+      ]
+     },
+     "number": "DUAD-EN062",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "The Monarchs Revolt"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -5053,10 +5273,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:9334391:LDS1-EN112:ultra_rare",
+     "number": "LDS1-EN112",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:9334391:LDS1-EN112:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217411,
-       217412,
+       217411
+      ]
+     },
+     "number": "LDS1-EN112",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crystal Bond (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:9334391:LDS1-EN112:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217412
+      ]
+     },
+     "number": "LDS1-EN112",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crystal Bond (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:9334391:LDS1-EN112:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217413
       ]
      },
@@ -5064,10 +5334,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Crystal Bond (Blue)"
-     }
+      "name": "Crystal Bond (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "magnificent-mavens:9334391:MAMA-EN114:pharaohs_rare",
@@ -5165,6 +5437,9 @@
    "tcgDate": "2018-10-04"
   },
   {
+   "aliases": [
+    "Adamatia Relieve"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -5441,6 +5716,9 @@
    ]
   },
   {
+   "aliases": [
+    "Divine Treebeast High Peryton"
+   ],
    "atk": 2600,
    "attribute": "earth",
    "def": 1900,
@@ -5523,6 +5801,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vernalizer Fairy of Hills and Blooms"
+   ],
    "archetypes": [
     "vernusylph"
    ],
@@ -5568,6 +5849,10 @@
    "passcode": 9350312,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:9350312:POTE-EN016:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5948,11 +6233,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:9373534:DL14-EN011:rare",
+     "number": "DL14-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:9373534:DL14-EN011:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77587,
-       80502,
-       80503,
+       80502
+      ]
+     },
+     "number": "DL14-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fuhma Shuriken (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:9373534:DL14-EN011:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80503
+      ]
+     },
+     "number": "DL14-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fuhma Shuriken (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:9373534:DL14-EN011:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80504
       ]
      },
@@ -5960,12 +6285,35 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fuhma Shuriken (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:9373534:DL14-EN011:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77587
+      ]
+     },
+     "number": "DL14-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Fuhma Shuriken (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:9373534:IOC-EN031:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6114,6 +6462,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mirror Magic Master of the Ice Barrier"
+   ],
    "archetypes": [
     "ice-barrier"
    ],
@@ -6183,6 +6534,9 @@
    ]
   },
   {
+   "aliases": [
+    "Phlogi, Haze of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -6352,6 +6706,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nonexistence"
+   ],
    "archetypes": [
     "timelord"
    ],
@@ -6462,8 +6819,7 @@
      "id": "battles-of-legend-chapter-1:9411399:BLC1-EN030:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538502,
-       538663
+       538502
       ]
      },
      "number": "BLC1-EN030",
@@ -6474,6 +6830,27 @@
       "match": "number+rarity",
       "name": "Destiny HERO - Malicious"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:9411399:BLC1-EN030:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538663
+      ]
+     },
+     "number": "BLC1-EN030",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destiny HERO - Malicious (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "editions": [
@@ -6805,6 +7182,10 @@
    "passcode": 9416697,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:9416697:POTE-EN088:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7225,6 +7606,9 @@
    "passcode": 9453320,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:9453320:SUDA-EN046:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7250,6 +7634,9 @@
    ]
   },
   {
+   "aliases": [
+    "Adamatia Rise - Dragite"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -7351,6 +7738,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magistus Master Endymion"
+   ],
    "archetypes": [
     "endymion"
    ],
@@ -7541,6 +7931,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spiriting-Away Onibimaru"
+   ],
    "atk": 1900,
    "attribute": "dark",
    "def": 1600,
@@ -7582,6 +7975,9 @@
    "passcode": 9486959,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:9486959:BACH-EN046:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7668,6 +8064,9 @@
    "passcode": 9491461,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:9491461:DUAD-EN002:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7691,6 +8090,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magistus Grimoire Crowley"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -7944,6 +8346,9 @@
    ]
   },
   {
+   "aliases": [
+    "Euler Circuit"
+   ],
    "archetypes": [
     "tindangle"
    ],
@@ -8061,6 +8466,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:9551692:PHNI-EN040:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8692,6 +9100,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:9596126:IOC-EN023:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8829,6 +9240,9 @@
    ]
   },
   {
+   "aliases": [
+    "A World Shrouded in Darkness"
+   ],
    "archetypes": [
     "ninjitsu-art"
    ],
@@ -8885,6 +9299,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:9597987:PHHY-EN065:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8904,6 +9321,9 @@
    "tcgDate": "2023-02-09"
   },
   {
+   "aliases": [
+    "Witchcrafter Vice-Master"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -9205,6 +9625,9 @@
    ]
   },
   {
+   "aliases": [
+    "Regulex Palladion"
+   ],
    "archetypes": [
     "crusadia"
    ],
@@ -9483,6 +9906,9 @@
    "passcode": 9627299,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:9627299:DOOD-EN030:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9507,6 +9933,9 @@
    ]
   },
   {
+   "aliases": [
+    "Beetle Amalgamaton Zekstagger"
+   ],
    "atk": 1500,
    "attribute": "wind",
    "def": 2600,
@@ -9548,6 +9977,9 @@
    "passcode": 9627468,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:9627468:PHHY-EN099:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10255,6 +10687,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snake-Eye Excel"
+   ],
    "archetypes": [
     "snake-eye"
    ],
@@ -10316,6 +10751,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:9674034:AGOV-EN007:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10411,6 +10849,9 @@
    "tcgDate": "2018-06-28"
   },
   {
+   "aliases": [
+    "Gaia Blaze, the Force of Blazing Sun"
+   ],
    "archetypes": [
     "gaia-knight"
    ],
@@ -10472,6 +10913,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:9709452:DUNE-EN042:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10694,6 +11138,23 @@
      "set": "light-of-destruction",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Owner's Seal"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:9720537:SBC2-END16:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600264
+      ]
+     },
+     "number": "SBC2-END16",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Owner's Seal"
      }
     },
@@ -11211,11 +11672,69 @@
     },
     {
      "id": "duelist-league-15-participation-cards:9748752:DL15-EN006:rare",
+     "number": "DL15-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:9748752:DL15-EN006:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       122719,
-       122720,
-       122721,
+       122719
+      ]
+     },
+     "number": "DL15-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Caius the Shadow Monarch (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:9748752:DL15-EN006:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       122720
+      ]
+     },
+     "number": "DL15-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Caius the Shadow Monarch (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:9748752:DL15-EN006:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       122721
+      ]
+     },
+     "number": "DL15-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Caius the Shadow Monarch (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:9748752:DL15-EN006:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        122722
       ]
      },
@@ -11223,10 +11742,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Caius the Shadow Monarch (Blue)"
-     }
+      "name": "Caius the Shadow Monarch (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "emperor-of-darkness-structure-deck:9748752:SR01-EN004:common",
@@ -11454,6 +11975,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:9753964:MGED-EN068:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11584,6 +12108,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:9763474:LEDE-EN089:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11819,6 +12346,9 @@
    "passcode": 9785661,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:9785661:ROTA-EN032:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12041,6 +12571,9 @@
    ]
   },
   {
+   "aliases": [
+    "Astro Knightmare Idlee"
+   ],
    "archetypes": [
     "knightmare"
    ],
@@ -12128,6 +12661,9 @@
    ]
   },
   {
+   "aliases": [
+    "Plufiness the Unconventional Commander"
+   ],
    "atk": 1800,
    "attribute": "dark",
    "def": 0,
@@ -12319,6 +12855,9 @@
    ]
   },
   {
+   "aliases": [
+    "King of the Sky Prison"
+   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 3000,
@@ -12377,6 +12916,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:9822220:BODE-EN030:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12696,6 +13238,9 @@
    ]
   },
   {
+   "aliases": [
+    "Moonhaze Dragon Vagnawa"
+   ],
    "atk": 1500,
    "attribute": "dark",
    "def": 1500,
@@ -12754,6 +13299,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:9839115:PHNI-EN043:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12778,6 +13326,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lyna the Light Charmer, Shining"
+   ],
    "archetypes": [
     "charmer"
    ],
@@ -13113,6 +13664,9 @@
    ]
   },
   {
+   "aliases": [
+    "Farewell"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "9852718",
@@ -13811,6 +14365,9 @@
    "passcode": 9940036,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:9940036:DABL-EN046:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13943,6 +14500,9 @@
    "tcgDate": "2008-01-26"
   },
   {
+   "aliases": [
+    "X-Saber Perina"
+   ],
    "archetypes": [
     "saber"
    ],

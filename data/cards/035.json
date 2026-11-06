@@ -55,6 +55,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:35011819:SGX4-ENB19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543777
+      ]
+     },
+     "number": "SGX4-ENB19",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "By Order of the Emperor"
+     }
+    },
+    {
      "id": "the-dark-emperor-structure-deck:35011819:SDDE-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -74,6 +91,9 @@
    "tcgDate": "2008-04-02"
   },
   {
+   "aliases": [
+    "Limitover Drive"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "35014241",
@@ -480,6 +500,9 @@
    "tcgDate": "2005-02-26"
   },
   {
+   "aliases": [
+    "Burgesstoma Olenoides"
+   ],
    "archetypes": [
     "paleozoic"
    ],
@@ -637,6 +660,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:35035985:LEDE-EN093:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -948,6 +974,9 @@
    ]
   },
   {
+   "aliases": [
+    "Battlewasp - Gran Partisan the Revolution"
+   ],
    "archetypes": [
     "battlewasp"
    ],
@@ -993,6 +1022,9 @@
    "passcode": 35057188,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:35057188:ROTA-EN036:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1479,6 +1511,9 @@
    "passcode": 35095329,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:35095329:ALIN-EN005:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1502,6 +1537,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witchcrafter Confusion"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -1618,6 +1656,9 @@
    "tcgDate": "2019-08-22"
   },
   {
+   "aliases": [
+    "Evolzar Razh"
+   ],
    "archetypes": [
     "evol"
    ],
@@ -1678,6 +1719,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:35103106:DUNE-EN043:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1694,6 +1738,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:35103106:DUNE-EN043:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1825,6 +1872,9 @@
    ]
   },
   {
+   "aliases": [
+    "Revival of the True King"
+   ],
    "archetypes": [
     "true-draco"
    ],
@@ -2175,11 +2225,69 @@
     },
     {
      "id": "duelist-league-16-participation-cards:35149085:DL16-EN015:rare",
+     "number": "DL16-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:35149085:DL16-EN015:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77653,
-       77654,
-       77655,
+       77653
+      ]
+     },
+     "number": "DL16-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Beast Soul Swap (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:35149085:DL16-EN015:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77654
+      ]
+     },
+     "number": "DL16-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Beast Soul Swap (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:35149085:DL16-EN015:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77655
+      ]
+     },
+     "number": "DL16-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Beast Soul Swap (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:35149085:DL16-EN015:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77656
       ]
      },
@@ -2187,10 +2295,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Beast Soul Swap (Blue)"
-     }
+      "name": "Beast Soul Swap (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "flaming-eternity:35149085:FET-EN055:common",
@@ -2272,6 +2382,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:35151572:LEDE-EN090:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2365,6 +2478,9 @@
    "tcgDate": "2026-06-04"
   },
   {
+   "aliases": [
+    "World Legacy Guardragon Melodark"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -2612,6 +2728,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magician of Black Illusion"
+   ],
    "archetypes": [
     "dark-magician"
    ],
@@ -2799,6 +2918,9 @@
    ]
   },
   {
+   "aliases": [
+    "Trickster Lycorissica"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -3380,6 +3502,9 @@
    "tcgDate": "2026-03-13"
   },
   {
+   "aliases": [
+    "Datascape Beast Jiujiu"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -3683,6 +3808,9 @@
    "tcgDate": "2017-08-03"
   },
   {
+   "aliases": [
+    "Pot of Cupidity"
+   ],
    "archetypes": [
     "greed"
    ],
@@ -3971,6 +4099,13 @@
      }
     },
     {
+     "id": "ultimate-tournament-pack-2:35261759:UP02-EN044:common",
+     "number": "UP02-EN044",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
+    },
+    {
      "id": "yu-gi-oh-championship-series-2025-prize-cards:35261759:25YC-ENP10:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4045,6 +4180,9 @@
    "tcgDate": "2010-08-07"
   },
   {
+   "aliases": [
+    "Ooyatsu Tsumamuhime"
+   ],
    "atk": 1600,
    "attribute": "light",
    "def": 200,
@@ -4087,6 +4225,9 @@
    "passcode": 35263180,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:35263180:AGOV-EN022:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4165,6 +4306,9 @@
    "tcgDate": "2009-09-01"
   },
   {
+   "aliases": [
+    "Token: Ghost"
+   ],
    "frame": "token",
    "hasEffect": true,
    "id": "35268888",
@@ -4188,9 +4332,34 @@
     "en": "Ghost Token"
    },
    "passcode": 35268888,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "ancient-prophecy:35268888:ANPR-ENTK1:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81317
+      ]
+     },
+     "number": "ANPR-ENTK1",
+     "rarity": "common",
+     "region": "ENTK",
+     "set": "ancient-prophecy",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ghost"
+     }
+    }
+   ]
   },
   {
+   "aliases": [
+    "Triple Tactic Tasking",
+    "Triple Tactics Thrust - L26D-ENX24"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "35269904",
@@ -4334,6 +4503,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:35269904:PHHY-EN069:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4696,6 +4868,9 @@
    ]
   },
   {
+   "aliases": [
+    "Flame Buddy Erca the Fire Beast Tamer"
+   ],
    "atk": 1500,
    "attribute": "fire",
    "def": 200,
@@ -4753,6 +4928,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:35283277:POTE-EN034:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4953,6 +5132,9 @@
    ]
   },
   {
+   "aliases": [
+    "Soldrapom Fengli"
+   ],
    "atk": 800,
    "attribute": "fire",
    "def": 0,
@@ -4995,6 +5177,9 @@
    "passcode": 35311929,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:35311929:BODE-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5398,6 +5583,9 @@
    ]
   },
   {
+   "aliases": [
+    "Security Force Justify"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -5629,6 +5817,9 @@
    "tcgDate": "2002-10-20"
   },
   {
+   "aliases": [
+    "Trickster Lightstage"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -5753,6 +5944,9 @@
    "tcgDate": "2017-08-03"
   },
   {
+   "aliases": [
+    "Frozen Domain Leading to the Ice Barrier"
+   ],
    "archetypes": [
     "ice-barrier"
    ],
@@ -5813,6 +6007,9 @@
    "tcgDate": "2024-06-20"
   },
   {
+   "aliases": [
+    "Daruma Otoshi"
+   ],
    "atk": 700,
    "attribute": "earth",
    "def": 1800,
@@ -5893,6 +6090,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kurikara, Avatar of the Immovable"
+   ],
    "atk": 1500,
    "attribute": "fire",
    "def": 1500,
@@ -5967,6 +6167,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:35405755:POTE-EN031:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5983,6 +6187,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:35405755:POTE-EN031:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6436,6 +6644,9 @@
    "tcgDate": "2006-05-17"
   },
   {
+   "aliases": [
+    "Terrible Dust Trunades"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "35479109",
@@ -6505,6 +6716,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:35479109:POTE-EN080:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6809,6 +7024,13 @@
       "match": "number+rarity",
       "name": "Book of Eclipse"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:35480699:UP02-EN043:common",
+     "number": "UP02-EN043",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2008-08-09"
@@ -7436,6 +7658,9 @@
    ]
   },
   {
+   "aliases": [
+    "Synch Blast Wave"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "35537860",
@@ -7613,6 +7838,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:35539880:STP7-EN015:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544978
+      ]
+     },
+     "number": "STP7-EN015",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Birthright"
+     }
+    },
+    {
      "id": "starter-deck-kaiba-reloaded:35539880:YSKR-EN047:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7758,6 +8003,9 @@
    "tcgDate": "2015-01-15"
   },
   {
+   "aliases": [
+    "Scars Caused by the World Legacy"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -7891,6 +8139,26 @@
    "passcode": 35550352,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:35550352:DUAD-EN066:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639403
+      ]
+     },
+     "number": "DUAD-EN066",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Vanquish Soul, Start!"
+     }
+    },
+    {
      "id": "ots-tournament-pack-30:35550352:OP30-EN012:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7910,6 +8178,9 @@
    "tcgDate": "2025-07-03"
   },
   {
+   "aliases": [
+    "Fiendsmith Sanctus"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -7967,6 +8238,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:35552985:INFO-EN062:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8233,6 +8507,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dogmatikatrix"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -8274,6 +8551,9 @@
    "passcode": 35569555,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:35569555:PHHY-EN055:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8483,6 +8763,9 @@
    ]
   },
   {
+   "aliases": [
+    "Perpetual King Archfiend"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -8617,6 +8900,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:35614780:INFO-EN010:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8938,6 +9224,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:35622739:POTE-EN020:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9463,6 +9753,9 @@
    ]
   },
   {
+   "aliases": [
+    "Apparition with Eyes of Blue"
+   ],
    "archetypes": [
     "with-eyes-of-blue"
    ],
@@ -9520,6 +9813,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:35659410:BACH-EN050:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9849,6 +10145,9 @@
    ]
   },
   {
+   "aliases": [
+    "Foolish Burial with Belongings"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "35726888",
@@ -10162,6 +10461,9 @@
    "tcgDate": "2023-06-22"
   },
   {
+   "aliases": [
+    "Xenovader△ of Emptiness Gehenna"
+   ],
    "archetypes": [
     "trirealm-rift"
    ],
@@ -10254,6 +10556,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:35762283:IOC-EN032:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10375,6 +10680,9 @@
    "passcode": 35763582,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:35763582:DUAD-EN006:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10563,6 +10871,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 67: Paradicesmasher"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -10680,6 +10991,9 @@
    ]
   },
   {
+   "aliases": [
+    "Beware the White Woods"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -10737,6 +11051,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:35778533:INFO-EN059:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10832,6 +11149,23 @@
      "set": "light-of-destruction",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Arcana Force III - The Empress"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:35781051:SGX4-ENB04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543762
+      ]
+     },
+     "number": "SGX4-ENB04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Arcana Force III - The Empress"
      }
     }
@@ -11476,6 +11810,23 @@
      }
     },
     {
+     "id": "redemption-replacement:35809262:TLM-EN035K:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       246237
+      ]
+     },
+     "number": "TLM-EN035K",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "redemption-replacement",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental HERO Flame Wingman (TLM-EN035K)"
+     }
+    },
+    {
      "id": "speed-duel-gx-duel-academy-box:35809262:SGX1-ENA21:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11567,6 +11918,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magikey Unsealing"
+   ],
    "archetypes": [
     "magikey"
    ],
@@ -11850,6 +12204,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fishlamp"
+   ],
    "atk": 1200,
    "attribute": "fire",
    "def": 400,
@@ -11908,6 +12265,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:35834119:PHNI-EN044:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12017,6 +12377,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thode Ryzeal"
+   ],
    "archetypes": [
     "ryzeal"
    ],
@@ -12255,6 +12618,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gouki Finisher"
+   ],
    "archetypes": [
     "gouki"
    ],
@@ -12378,6 +12744,9 @@
    "passcode": 35871958,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:35871958:BACH-EN047:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12402,6 +12771,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magistus Saint Aiwass"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -12575,6 +12947,9 @@
    "passcode": 35886170,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:35886170:DUAD-EN003:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12878,10 +13253,7 @@
      "id": "legendary-duelists-season-2:35950025:LDS2-EN049:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230292,
-       230802,
-       230803,
-       230804
+       230292
       ]
      },
      "number": "LDS2-EN049",
@@ -12892,6 +13264,60 @@
       "match": "number+rarity",
       "name": "Galaxy Knight"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:35950025:LDS2-EN049:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230802
+      ]
+     },
+     "number": "LDS2-EN049",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy Knight (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:35950025:LDS2-EN049:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230803
+      ]
+     },
+     "number": "LDS2-EN049",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy Knight (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:35950025:LDS2-EN049:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230804
+      ]
+     },
+     "number": "LDS2-EN049",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy Knight (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-white-dragon-abyss:35950025:LED3-EN040:super_rare",
@@ -13143,6 +13569,9 @@
    "tcgDate": "2008-01-26"
   },
   {
+   "aliases": [
+    "Cupid Archery"
+   ],
    "archetypes": [
     "cupid"
    ],
@@ -13472,6 +13901,9 @@
    "tcgDate": "2026-06-04"
   },
   {
+   "aliases": [
+    "Zoha, Haze of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],

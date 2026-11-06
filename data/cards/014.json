@@ -434,6 +434,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mathmech Formula"
+   ],
    "archetypes": [
     "mathmech"
    ],
@@ -653,6 +656,9 @@
    ]
   },
   {
+   "aliases": [
+    "Soothing Burial"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "14055212",
@@ -1200,6 +1206,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:14087893:MGED-EN039:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1336,6 +1345,23 @@
      "set": "speed-duel-battle-city-box",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Book of Moon"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:14087893:SBC2-ENG13:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600124
+      ]
+     },
+     "number": "SBC2-ENG13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Book of Moon"
      }
     },
@@ -1578,6 +1604,13 @@
       "match": "number+rarity",
       "name": "Book of Moon"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:14087893:UP02-EN039:common",
+     "number": "UP02-EN039",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2003-07-18"
@@ -2044,6 +2077,9 @@
    ]
   },
   {
+   "aliases": [
+    "Flower Crown of the Vernalizer Fairy"
+   ],
    "archetypes": [
     "vernusylph"
    ],
@@ -2085,6 +2121,10 @@
    "passcode": 14108995,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:14108995:POTE-EN061:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2104,6 +2144,9 @@
    "tcgDate": "2022-08-04"
   },
   {
+   "aliases": [
+    "Elemental HERO Honesty Neos"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -2222,9 +2265,7 @@
      "id": "legendary-duelists-season-3:14124483:LDS3-EN102:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276170,
-       276740,
-       276741
+       276170
       ]
      },
      "number": "LDS3-EN102",
@@ -2235,6 +2276,48 @@
       "match": "number+rarity",
       "name": "Elemental HERO Honest Neos"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:14124483:LDS3-EN102:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276740
+      ]
+     },
+     "number": "LDS3-EN102",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental HERO Honest Neos (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:14124483:LDS3-EN102:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276741
+      ]
+     },
+     "number": "LDS3-EN102",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental HERO Honest Neos (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2017-03-30",
@@ -2433,6 +2516,9 @@
    ]
   },
   {
+   "aliases": [
+    "Big Core"
+   ],
    "archetypes": [
     "b-e-s"
    ],
@@ -2810,6 +2896,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Recette de Viande"
+   ],
    "archetypes": [
     "recipe"
    ],
@@ -2870,6 +2959,9 @@
    "tcgDate": "2023-06-01"
   },
   {
+   "aliases": [
+    "Aromage Laurier"
+   ],
    "archetypes": [
     "aroma"
    ],
@@ -3396,6 +3488,9 @@
    ]
   },
   {
+   "aliases": [
+    "Branded Central Dogmatika"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -3469,6 +3564,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:14220547:POTE-EN058:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3913,6 +4012,40 @@
       "match": "number+rarity",
       "name": "Gaia Plate the Earth Giant"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:14258627:SGX4-END01:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543800
+      ]
+     },
+     "number": "SGX4-END01",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gaia Plate the Earth Giant"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:14258627:SGX4-END01:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544293
+      ]
+     },
+     "number": "SGX4-END01",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gaia Plate the Earth Giant (Secret Rare)"
+     }
     }
    ],
    "tcgDate": "2009-09-01",
@@ -4000,6 +4133,10 @@
    ]
   },
   {
+   "aliases": [
+    "Concours de Cuisine",
+    "Concours de Cuisine (Confectionery Contest)"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "14283055",
@@ -4038,6 +4175,9 @@
    "passcode": 14283055,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:14283055:AGOV-EN064:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4113,6 +4253,9 @@
    "tcgDate": "2012-08-18"
   },
   {
+   "aliases": [
+    "Gradius's Option"
+   ],
    "attribute": "light",
    "frame": "effect",
    "hasEffect": true,
@@ -4253,6 +4396,9 @@
    "passcode": 14301396,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:14301396:DUAD-EN044:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4346,6 +4492,9 @@
    ]
   },
   {
+   "aliases": [
+    "Diabell, Fiendess of the White Woods"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -4407,6 +4556,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:14307929:INFO-EN040:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4423,6 +4575,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:14307929:INFO-EN040:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5231,6 +5386,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:14357527:BODE-EN087:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5326,6 +5484,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Occultism"
+   ],
    "archetypes": [
     "spirit-message"
    ],
@@ -5399,6 +5560,23 @@
       "match": "number+rarity",
       "name": "Dark Spirit's Mastery"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:14386013:SBC2-ENE18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600144
+      ]
+     },
+     "number": "SBC2-ENE18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Spirit's Mastery"
+     }
     }
    ],
    "tcgDate": "2019-09-26"
@@ -5465,6 +5643,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:14391625:AGOV-EN004:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5481,6 +5662,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:14391625:AGOV-EN004:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5621,6 +5805,9 @@
    "tcgDate": "2004-07-25"
   },
   {
+   "aliases": [
+    "Processlayer Induction"
+   ],
    "archetypes": [
     "mathmech"
    ],
@@ -5782,7 +5969,30 @@
    },
    "ocgDate": "2026-03-20",
    "passcode": 14425515,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:14425515:MAMS-EN025:secret_rare",
+     "number": "MAMS-EN025",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:14425515:MAMS-EN025:starlight_rare",
+     "number": "MAMS-EN025",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:14425515:MAMS-EN025:ultra_rare",
+     "number": "MAMS-EN025",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Fiend",
     "Effect"
@@ -5855,6 +6065,9 @@
    ]
   },
   {
+   "aliases": [
+    "Juke Joint \"Killer Tune\""
+   ],
    "archetypes": [
     "kewl-tune",
     "killer-tune"
@@ -6415,6 +6628,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crystal Protector"
+   ],
    "archetypes": [
     "crystal-beast"
    ],
@@ -6591,6 +6807,10 @@
    "tcgDate": "2017-10-19"
   },
   {
+   "aliases": [
+    "Ojama Red Token",
+    "Token: Ojama"
+   ],
    "archetypes": [
     "ojama"
    ],
@@ -6652,7 +6872,163 @@
    },
    "ocgDate": "2017-07-01",
    "passcode": 14470846,
-   "prints": [],
+   "prints": [
+    {
+     "id": "toys-r-us-throwdown-promo:14470846:TKN2-EN001:common:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71276
+      ]
+     },
+     "number": "TKN2-EN001",
+     "rarity": "common",
+     "region": "EN",
+     "set": "toys-r-us-throwdown-promo",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "toys-r-us-throwdown-promo:14470846:TKN2-EN002:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71277
+      ]
+     },
+     "number": "TKN2-EN002",
+     "rarity": "common",
+     "region": "EN",
+     "set": "toys-r-us-throwdown-promo",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Yellow)"
+     }
+    },
+    {
+     "id": "toys-r-us-throwdown-promo:14470846:TKN2-EN003:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       71278
+      ]
+     },
+     "number": "TKN2-EN003",
+     "rarity": "common",
+     "region": "EN",
+     "set": "toys-r-us-throwdown-promo",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Black)"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yu-gi-oh-tokens:14470846:TKN4-EN008:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81323
+      ]
+     },
+     "number": "TKN4-EN008",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-tokens",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Yellow)"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yu-gi-oh-tokens:14470846:TKN4-EN009:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81324
+      ]
+     },
+     "number": "TKN4-EN009",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-tokens",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Black)"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yu-gi-oh-tokens:14470846:TKN4-EN010:super_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81325
+      ]
+     },
+     "number": "TKN4-EN010",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-tokens",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yu-gi-oh-tokens:14470846:TKN4-EN011:super_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81326
+      ]
+     },
+     "number": "TKN4-EN011",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-tokens",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yu-gi-oh-tokens:14470846:TKN4-EN012:super_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81327
+      ]
+     },
+     "number": "TKN4-EN012",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-tokens",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Ojama (Red)"
+     },
+     "variant": "red"
+    }
+   ],
    "tcgDate": "2017-07-01"
   },
   {
@@ -6823,6 +7199,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:14478717:DIFO-EN091:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6887,6 +7266,9 @@
    "passcode": 14504454,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:14504454:BACH-EN028:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7585,6 +7967,9 @@
    "passcode": 14513273,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:14513273:AGOV-EN001:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7721,6 +8106,9 @@
    "tcgDate": "2016-11-17"
   },
   {
+   "aliases": [
+    "Mementomictlan Tecuhtlica - Combined Conqueror"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -7814,6 +8202,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:14529511:INFO-EN037:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8784,6 +9175,9 @@
    "passcode": 14554127,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:14554127:ALIN-EN089:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8858,6 +9252,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ash Blossom"
+   ],
    "atk": 0,
    "attribute": "fire",
    "def": 1800,
@@ -9652,6 +10049,9 @@
    ]
   },
   {
+   "aliases": [
+    "Wind Witch - Winter Bell"
+   ],
    "archetypes": [
     "windwitch"
    ],
@@ -9845,6 +10245,9 @@
    "tcgDate": "2020-09-10"
   },
   {
+   "aliases": [
+    "World Legacy's Beginning"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -10044,11 +10447,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:14618326:DL13-EN004:rare",
+     "number": "DL13-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:14618326:DL13-EN004:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77421,
-       80424,
-       80425,
+       80424
+      ]
+     },
+     "number": "DL13-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Crimson Ninja (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:14618326:DL13-EN004:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80425
+      ]
+     },
+     "number": "DL13-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Crimson Ninja (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:14618326:DL13-EN004:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80426
       ]
      },
@@ -10056,12 +10499,35 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Crimson Ninja (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:14618326:DL13-EN004:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77421
+      ]
+     },
+     "number": "DL13-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Crimson Ninja (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:14618326:IOC-EN006:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10205,6 +10671,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragonmaid Reception"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -11378,6 +11847,9 @@
    ]
   },
   {
+   "aliases": [
+    "Penguin Champion"
+   ],
    "archetypes": [
     "penguin"
    ],
@@ -11422,6 +11894,9 @@
    "passcode": 14761450,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:14761450:BODE-EN024:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12338,6 +12813,9 @@
    ]
   },
   {
+   "aliases": [
+    "Salamangreat Veilynx"
+   ],
    "archetypes": [
     "salamangreat"
    ],
@@ -12593,6 +13071,9 @@
    "tcgDate": "2015-11-05"
   },
   {
+   "aliases": [
+    "Tribrigade Nabel"
+   ],
    "archetypes": [
     "tri-brigade"
    ],
@@ -12700,6 +13181,9 @@
    ]
   },
   {
+   "aliases": [
+    "Swordsoul Sudden Shift"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -12741,6 +13225,9 @@
    "passcode": 14821890,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:14821890:BODE-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12943,6 +13430,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bangpoline"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "14839621",
@@ -13335,6 +13825,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:14878871:MGED-EN006:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13566,6 +14059,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:14883228:SGX4-ENC17:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543795
+      ]
+     },
+     "number": "SGX4-ENC17",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Typhoon"
+     }
+    },
+    {
      "id": "thank-you-pack:14883228:TYP1-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13604,6 +14114,9 @@
    "tcgDate": "2014-07-31"
   },
   {
+   "aliases": [
+    "Datascape Capital - Jiulong"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -14519,6 +15032,9 @@
    ]
   },
   {
+   "aliases": [
+    "Otoshidamashii"
+   ],
    "atk": 1000,
    "attribute": "earth",
    "def": 1000,
@@ -14600,6 +15116,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ultimate Knight Alpha Ursatron"
+   ],
    "archetypes": [
     "ursarctic"
    ],
@@ -14645,6 +15164,9 @@
    "passcode": 14959144,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:14959144:DUNE-EN021:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14668,6 +15190,9 @@
    ]
   },
   {
+   "aliases": [
+    "Multiplying Kuriboh!"
+   ],
    "archetypes": [
     "kuriboh"
    ],
@@ -14882,6 +15407,9 @@
    "passcode": 14972952,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:14972952:ROTA-EN078:common",
      "identifiers": {
       "tcgplayerProductIds": [

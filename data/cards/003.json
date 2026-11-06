@@ -451,6 +451,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chaos Ruler the Chaotic Demonic Dragon"
+   ],
    "archetypes": [
     "chaos"
    ],
@@ -552,6 +555,9 @@
    ]
   },
   {
+   "aliases": [
+    "Angelo Valmonica"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -694,6 +700,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:3055018:PHNI-EN094:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -877,6 +886,23 @@
      "rarity": "super_rare",
      "region": "E",
      "set": "magic-ruler"
+    },
+    {
+     "id": "speed-duel-battle-city-finals:3056267:SBC2-ENC09:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600208
+      ]
+     },
+     "number": "SBC2-ENC09",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Invader of the Throne"
+     }
     },
     {
      "id": "spell-ruler-25th-anniversary-edition:3056267:SRL-EN026:super_rare",
@@ -1290,6 +1316,9 @@
    ]
   },
   {
+   "aliases": [
+    "Timaeus the Dragon of Destiny"
+   ],
    "archetypes": [
     "legendary-knight"
    ],
@@ -1351,6 +1380,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:3078380:BACH-EN003:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1601,6 +1633,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:3084730:PHHY-EN014:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1834,6 +1869,45 @@
   },
   {
    "atk": 0,
+   "attribute": "light",
+   "def": 0,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "3106767",
+   "identifiers": {
+    "konamiId": 23834,
+    "ygoprodeckId": 3106767
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/3106767.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/3106767.jpg",
+     "id": 3106767,
+     "small": "https://images.ygoprodeck.com/images/cards_small/3106767.jpg"
+    }
+   ],
+   "isTuner": true,
+   "kind": "monster",
+   "level": 1,
+   "monsterType": "Winged Beast",
+   "name": "The Secret Crane Princess Who Returns A Favor",
+   "names": {
+    "en": "The Secret Crane Princess Who Returns A Favor"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 3106767,
+   "prints": [],
+   "typeline": [
+    "Winged Beast",
+    "Tuner",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Hooked Shinin' Syncher"
+   ],
+   "atk": 0,
    "attribute": "water",
    "def": 2600,
    "frame": "effect",
@@ -1956,10 +2030,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:3113667:LDS1-EN077:ultra_rare",
+     "number": "LDS1-EN077",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:3113667:LDS1-EN077:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217399,
-       217400,
+       217399
+      ]
+     },
+     "number": "LDS1-EN077",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Heavy Metal Raiders (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:3113667:LDS1-EN077:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217400
+      ]
+     },
+     "number": "LDS1-EN077",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Heavy Metal Raiders (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:3113667:LDS1-EN077:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217401
       ]
      },
@@ -1967,10 +2091,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Heavy Metal Raiders (Blue)"
-     }
+      "name": "Heavy Metal Raiders (Purple)"
+     },
+     "variant": "purple"
     }
    ],
    "tcgDate": "2018-02-22"
@@ -2289,6 +2415,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:3121655:PHNI-EN099:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2312,6 +2441,9 @@
    ]
   },
   {
+   "aliases": [
+    "Delta of Temptation"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "3129133",
@@ -2350,6 +2482,9 @@
    "passcode": 3129133,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:3129133:SUDA-EN066:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2369,6 +2504,9 @@
    "tcgDate": "2025-01-23"
   },
   {
+   "aliases": [
+    "Sleeping Scapegoats"
+   ],
    "archetypes": [
     "dark-time-wizard"
    ],
@@ -2505,6 +2643,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:3129635:SBC2-ENG15:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600321
+      ]
+     },
+     "number": "SBC2-ENG15",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Tiki Curse"
+     }
+    },
+    {
      "id": "storm-of-ragnarok:3129635:STOR-EN079:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2629,6 +2784,9 @@
    ]
   },
   {
+   "aliases": [
+    "Orphegel Orchestrion"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -2867,6 +3025,9 @@
    "passcode": 3137279,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:3137279:DABL-EN086:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3029,6 +3190,9 @@
    "passcode": 3149401,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:3149401:ROTA-EN000:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3713,6 +3877,9 @@
    "tcgDate": "2016-01-14"
   },
   {
+   "aliases": [
+    "Psychic Wheelder"
+   ],
    "atk": 600,
    "attribute": "earth",
    "def": 0,
@@ -3960,6 +4127,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:3248469:CYAC-EN031:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4035,6 +4205,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:3259760:DABL-EN000:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4195,6 +4368,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rite of Aramesia"
+   ],
    "archetypes": [
     "adventurer"
    ],
@@ -4361,6 +4537,9 @@
    ]
   },
   {
+   "aliases": [
+    "Perl, Hermit of Dark World"
+   ],
    "archetypes": [
     "dark-world"
    ],
@@ -4428,6 +4607,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hieratic Heavenly Dragon Overlord of Heliopolis"
+   ],
    "archetypes": [
     "hieratic"
    ],
@@ -4770,6 +4952,9 @@
    ]
   },
   {
+   "aliases": [
+    "Wolf-Rayet the Stellar Wind Wolf"
+   ],
    "atk": 2500,
    "attribute": "wind",
    "def": 0,
@@ -4852,6 +5037,9 @@
    ]
   },
   {
+   "aliases": [
+    "Icejade Empress Cosmocroix"
+   ],
    "archetypes": [
     "icejade"
    ],
@@ -4913,6 +5101,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:3355732:BACH-EN006:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4936,6 +5127,9 @@
    ]
   },
   {
+   "aliases": [
+    "Galaxy-Eyes Sol Flare Dragon"
+   ],
    "atk": 2000,
    "attribute": "light",
    "frame": "link",
@@ -5022,6 +5216,9 @@
    ]
   },
   {
+   "aliases": [
+    "Yukai na Rin no Kitsunebi Yurara"
+   ],
    "atk": 200,
    "attribute": "fire",
    "def": 1900,
@@ -5079,6 +5276,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:3361010:CYAC-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5661,6 +5861,9 @@
    "passcode": 3376703,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:3376703:SUDA-EN004:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6036,6 +6239,9 @@
    ]
   },
   {
+   "aliases": [
+    "Abyssal Dragon Alba Renatus"
+   ],
    "atk": 2500,
    "attribute": "dark",
    "def": 2500,
@@ -6094,6 +6300,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:3410461:DIFO-EN035:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6110,6 +6319,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:3410461:DIFO-EN035:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6673,6 +6885,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shimmering Shatterer of the Sacred Beasts"
+   ],
    "archetypes": [
     "sacred-beast"
    ],
@@ -6724,6 +6939,9 @@
    "tcgDate": "2026-10-08"
   },
   {
+   "aliases": [
+    "Lament of the Immortal Bushi"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "3461403",
@@ -6778,6 +6996,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:3461403:AGOV-EN067:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6797,6 +7018,9 @@
    "tcgDate": "2023-10-19"
   },
   {
+   "aliases": [
+    "Beautiful Mayakashi - Youko"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -7099,6 +7323,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:3493978:IOC-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7216,6 +7443,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:3496543:SUDA-EN055:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7426,6 +7656,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:3510565:IOC-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7521,6 +7754,9 @@
    "passcode": 3519195,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:3519195:SUDA-EN052:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7755,6 +7991,9 @@
    ]
   },
   {
+   "aliases": [
+    "Allvain, the Final Nothingness"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 2100,
@@ -8481,6 +8720,9 @@
    ]
   },
   {
+   "aliases": [
+    "Majespecter Draco"
+   ],
    "archetypes": [
     "majespecter"
    ],
@@ -8525,6 +8767,9 @@
    "passcode": 3594985,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:3594985:PHNI-EN049:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8541,6 +8786,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:3594985:PHNI-EN049:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8613,6 +8861,9 @@
    "passcode": 3598351,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:3598351:SUDA-EN001:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8629,6 +8880,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:3598351:SUDA-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8855,6 +9109,26 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:3606728:DUAD-EN101:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639438
+      ]
+     },
+     "number": "DUAD-EN101",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gagaga Girl (Alternate Art)"
+     }
+    },
+    {
      "id": "order-of-chaos:3606728:ORCS-EN003:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8894,6 +9168,9 @@
    ]
   },
   {
+   "aliases": [
+    "Endymion, the Founding Sorcerer Supreme"
+   ],
    "archetypes": [
     "endymion"
    ],
@@ -10308,6 +10585,9 @@
    "tcgDate": "2006-08-16"
   },
   {
+   "aliases": [
+    "Troymare Mermaid"
+   ],
    "archetypes": [
     "knightmare"
    ],
@@ -10480,11 +10760,31 @@
       "match": "number+rarity",
       "name": "Double Snare"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:3682106:SBC2-ENG10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600152
+      ]
+     },
+     "number": "SBC2-ENG10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Double Snare"
+     }
     }
    ],
    "tcgDate": "2003-06-06"
   },
   {
+   "aliases": [
+    "CXyz Gimmick Puppet Fanatix Makina"
+   ],
    "archetypes": [
     "cxyz"
    ],
@@ -10529,6 +10829,9 @@
    "passcode": 3685372,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:3685372:INFO-EN043:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10554,6 +10857,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Cash Lodge"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -10672,6 +10978,9 @@
    "tcgDate": "2007-12-07"
   },
   {
+   "aliases": [
+    "Meklord Army Arsenal of Obbligato"
+   ],
    "archetypes": [
     "meklord",
     "meklord-army"
@@ -10918,6 +11227,9 @@
    "passcode": 3723262,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:3723262:ALIN-EN001:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11077,6 +11389,9 @@
    "tcgDate": "2014-11-06"
   },
   {
+   "aliases": [
+    "End of the World Ruler"
+   ],
    "archetypes": [
     "end-of-the-world"
    ],
@@ -11156,6 +11471,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ferociously Angered Sabersaurus"
+   ],
    "archetypes": [
     "saber"
    ],
@@ -11200,6 +11518,9 @@
    "passcode": 3743515,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:3743515:ALIN-EN050:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11225,6 +11546,9 @@
    ]
   },
   {
+   "aliases": [
+    "Performapal Le-Bellman"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -11456,6 +11780,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:3773196:IOC-EN012:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11731,6 +12058,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gladiator Beast Andabatae"
+   ],
    "archetypes": [
     "gladiator-beast"
    ],
@@ -11879,6 +12209,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 65"
+   ],
    "archetypes": [
     "djinn",
     "number-spell-trap-archetype"
@@ -12281,6 +12614,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:3806388:PHHY-EN011:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12945,6 +13281,9 @@
    ]
   },
   {
+   "aliases": [
+    "Strenae the Rikka Queen"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -13094,6 +13433,9 @@
    ]
   },
   {
+   "aliases": [
+    "Destratification Dino Stratiae"
+   ],
    "atk": 0,
    "attribute": "fire",
    "frame": "link",
@@ -13270,6 +13612,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Soldier mdl 236"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -13384,6 +13729,9 @@
    "passcode": 3859859,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:3859859:SUDA-EN099:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13658,11 +14006,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:3897065:DL12-EN011:rare",
+     "number": "DL12-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:3897065:DL12-EN011:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77408,
-       80412,
-       80413,
+       80412
+      ]
+     },
+     "number": "DL12-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super Vehicroid - Stealth Union (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:3897065:DL12-EN011:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80413
+      ]
+     },
+     "number": "DL12-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super Vehicroid - Stealth Union (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:3897065:DL12-EN011:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80414
       ]
      },
@@ -13670,10 +14058,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Super Vehicroid - Stealth Union (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:3897065:DL12-EN011:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77408
+      ]
+     },
+     "number": "DL12-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Super Vehicroid - Stealth Union (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gladiator-s-assault:3897065:GLAS-EN041:secret_rare",
@@ -14166,6 +14574,9 @@
    "passcode": 3957130,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:3957130:BPRO-EN048:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [

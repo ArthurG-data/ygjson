@@ -567,6 +567,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:68007326:IOC-EN087:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -650,6 +653,13 @@
     },
     {
      "id": "yu-gi-oh-at-home-sweepstakes:68007326:SBPR-EN002:secret_rare",
+     "number": "SBPR-EN002",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-at-home-sweepstakes"
+    },
+    {
+     "id": "yu-gi-oh-at-home-sweepstakes:68007326:SBPR-EN002:secret_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
        244965
@@ -659,10 +669,12 @@
      "rarity": "secret_rare",
      "region": "EN",
      "set": "yu-gi-oh-at-home-sweepstakes",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Guardian Angel Joan (Blue)"
-     }
+     },
+     "variant": "blue"
     }
    ],
    "tcgDate": "2004-03-01",
@@ -736,6 +748,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magibullet Shooter Calamity"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -820,6 +835,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ninjitsu Art of Fallen Leaves' Dance"
+   ],
    "archetypes": [
     "ninjitsu-art"
    ],
@@ -876,6 +894,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:68038375:DABL-EN077:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -895,6 +916,9 @@
    "tcgDate": "2022-10-20"
   },
   {
+   "aliases": [
+    "Bujintersection"
+   ],
    "archetypes": [
     "bujin"
    ],
@@ -1375,6 +1399,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:68073522:IOC-EN046:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1444,6 +1471,9 @@
    "tcgDate": "2004-03-01"
   },
   {
+   "aliases": [
+    "Power Pro Knight Girls"
+   ],
    "atk": 1200,
    "attribute": "light",
    "def": 2400,
@@ -2227,6 +2257,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hecahands Goddus"
+   ],
    "archetypes": [
     "hecahands"
    ],
@@ -2503,6 +2536,23 @@
      "set": "legacy-of-darkness",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "A Feint Plan"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:68170903:SGX4-END18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543817
+      ]
+     },
+     "number": "SGX4-END18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "A Feint Plan"
      }
     }
@@ -2937,6 +2987,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "World Legacy Mekkmory"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -3013,6 +3066,9 @@
    "tcgDate": "2018-06-07"
   },
   {
+   "aliases": [
+    "Hoarr, Generaider Boss of Thunder"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -3514,6 +3570,9 @@
    "passcode": 68231287,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:68231287:DOOD-EN044:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3530,6 +3589,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:68231287:DOOD-EN044:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3544,6 +3606,26 @@
       "match": "number+rarity",
       "name": "Jupiter the Power Patron of Destruction"
      }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "doom-of-dimensions:68231287:DOOD-ENSP1:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       654634
+      ]
+     },
+     "number": "DOOD-ENSP1",
+     "rarity": "secret_rare",
+     "region": "ENSP",
+     "set": "doom-of-dimensions",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Jupiter the Power Patron of Destruction (SR) (DOOD-ENSP1)"
+     }
     }
    ],
    "rank": 10,
@@ -3555,6 +3637,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magibullet Shooter Doctor"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -3623,6 +3708,9 @@
    ]
   },
   {
+   "aliases": [
+    "Splight Double Cross"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -3664,6 +3752,9 @@
    "passcode": 68250822,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:68250822:DABL-EN074:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3683,6 +3774,9 @@
    "tcgDate": "2022-10-20"
   },
   {
+   "aliases": [
+    "ZS - Arms Sage"
+   ],
    "archetypes": [
     "zexal",
     "zs"
@@ -3847,6 +3941,9 @@
    ]
   },
   {
+   "aliases": [
+    "Link Mail Archfiend"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -4042,6 +4139,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magikey-Possessed Spirit - Weparthu"
+   ],
    "archetypes": [
     "magikey"
    ],
@@ -4101,6 +4201,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:68300121:BODE-EN047:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4126,6 +4229,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kshatri-La Unicorn"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -4187,6 +4293,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:68304193:DABL-EN013:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4448,11 +4557,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:68304813:DL14-EN012:rare",
+     "number": "DL14-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68304813:DL14-EN012:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77588,
-       80505,
-       80506,
+       80505
+      ]
+     },
+     "number": "DL14-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Precious Cards from Beyond (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68304813:DL14-EN012:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80506
+      ]
+     },
+     "number": "DL14-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Precious Cards from Beyond (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68304813:DL14-EN012:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80507
       ]
      },
@@ -4460,10 +4609,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Precious Cards from Beyond (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68304813:DL14-EN012:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77588
+      ]
+     },
+     "number": "DL14-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Precious Cards from Beyond (Red)"
-     }
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2003-12-01"
@@ -4857,6 +5026,27 @@
       "match": "number+rarity",
       "name": "Maliss in Underground"
      }
+    },
+    {
+     "id": "magnificent-maestros:68337209:MAMS-EN038:secret_rare",
+     "number": "MAMS-EN038",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:68337209:MAMS-EN038:starlight_rare",
+     "number": "MAMS-EN038",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:68337209:MAMS-EN038:ultra_rare",
+     "number": "MAMS-EN038",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2024-12-05"
@@ -5221,6 +5411,9 @@
    "passcode": 68378605,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:68378605:BPRO-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5401,6 +5594,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C107"
+   ],
    "archetypes": [
     "galaxy-eyes",
     "galaxy-eyes-tachyon-dragon",
@@ -6394,11 +6590,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:68462976:DL14-EN013:rare",
+     "number": "DL14-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68462976:DL14-EN013:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77589,
-       80508,
-       80509,
+       80508
+      ]
+     },
+     "number": "DL14-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Secret Village of the Spellcasters (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68462976:DL14-EN013:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80509
+      ]
+     },
+     "number": "DL14-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Secret Village of the Spellcasters (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68462976:DL14-EN013:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80510
       ]
      },
@@ -6406,10 +6642,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Secret Village of the Spellcasters (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:68462976:DL14-EN013:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77589
+      ]
+     },
+     "number": "DL14-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Secret Village of the Spellcasters (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "editions": [
@@ -6618,6 +6874,9 @@
    "passcode": 68464358,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:68464358:MGED-EN020:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6807,6 +7066,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nullius Filius of Albus"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -6978,6 +7240,27 @@
       "match": "number+rarity",
       "name": "Fallen of Albaz (UR)"
      }
+    },
+    {
+     "id": "magnificent-maestros:68468459:MAMS-EN033:secret_rare",
+     "number": "MAMS-EN033",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:68468459:MAMS-EN033:starlight_rare",
+     "number": "MAMS-EN033",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:68468459:MAMS-EN033:ultra_rare",
+     "number": "MAMS-EN033",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     },
     {
      "id": "ots-tournament-pack-19-por:68468459:OP19-PT001:ultimate_rare",
@@ -7282,6 +7565,9 @@
    "tcgDate": "2016-08-04"
   },
   {
+   "aliases": [
+    "The Great Soul"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "68490573",
@@ -8840,6 +9126,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unchained Malevolent Magistrate Kamura"
+   ],
    "archetypes": [
     "unchained"
    ],
@@ -8865,13 +9154,36 @@
    "kind": "monster",
    "level": 8,
    "monsterType": "Fiend",
-   "name": "Unchained Malevolent Magistrate Kamura",
+   "name": "Unchained Zealot - Kamra",
    "names": {
-    "en": "Unchained Malevolent Magistrate Kamura"
+    "en": "Unchained Zealot - Kamra"
    },
    "ocgDate": "2026-05-30",
    "passcode": 68625623,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:68625623:MAMS-EN055:secret_rare",
+     "number": "MAMS-EN055",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:68625623:MAMS-EN055:starlight_rare",
+     "number": "MAMS-EN055",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:68625623:MAMS-EN055:ultra_rare",
+     "number": "MAMS-EN055",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Fiend",
     "Effect"
@@ -8965,6 +9277,9 @@
    ]
   },
   {
+   "aliases": [
+    "Numbers Protect"
+   ],
    "archetypes": [
     "number",
     "number-spell-trap-archetype"
@@ -9026,6 +9341,10 @@
    "tcgDate": "2021-12-02"
   },
   {
+   "aliases": [
+    "Frog The Jam",
+    "Frog the Jam"
+   ],
    "archetypes": [
     "frog"
    ],
@@ -9337,6 +9656,9 @@
    "tcgDate": "2013-08-08"
   },
   {
+   "aliases": [
+    "Reincarnate Unveil Mail"
+   ],
    "archetypes": [
     "armored-xyz",
     "xyz"
@@ -9379,6 +9701,9 @@
    "passcode": 68663427,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:68663427:ROTA-EN049:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9576,6 +9901,9 @@
    ]
   },
   {
+   "aliases": [
+    "Leo Utopia Ray"
+   ],
    "archetypes": [
     "number",
     "number-c",
@@ -10582,6 +10910,9 @@
    ]
   },
   {
+   "aliases": [
+    "CookyYummy"
+   ],
    "archetypes": [
     "yummy"
    ],
@@ -10912,6 +11243,23 @@
      "set": "legendary-duelists-season-2",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Harpie Dancer"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:68815132:SBC2-ENH02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600190
+      ]
+     },
+     "number": "SBC2-ENH02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Harpie Dancer"
      }
     },
@@ -11247,6 +11595,9 @@
    "passcode": 68829754,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:68829754:MGED-EN049:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11415,6 +11766,9 @@
    "tcgDate": "2020-04-03"
   },
   {
+   "aliases": [
+    "Doom-Z Command \"D.O.O.M.D.U.R.G.\""
+   ],
    "archetypes": [
     "doomz"
    ],
@@ -11455,6 +11809,9 @@
    "passcode": 68831625,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:68831625:DOOD-EN058:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12091,6 +12448,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Fabled Behillmoth"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -12456,6 +12816,9 @@
    "tcgDate": "2013-05-17"
   },
   {
+   "aliases": [
+    "Snowflower Sheet"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -12602,6 +12965,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mysterune of the Brilliant Flame"
+   ],
    "archetypes": [
     "runick"
    ],
@@ -12850,8 +13216,7 @@
      "id": "battles-of-legend-chapter-1:68987122:BLC1-EN019:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538491,
-       538651
+       538491
       ]
      },
      "number": "BLC1-EN019",
@@ -12862,6 +13227,27 @@
       "match": "number+rarity",
       "name": "Borrelguard Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:68987122:BLC1-EN019:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538651
+      ]
+     },
+     "number": "BLC1-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Borrelguard Dragon (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "battles-of-legend-relentless-revenge:68987122:BLRR-EN044:secret_rare",
@@ -12888,6 +13274,9 @@
    ]
   },
   {
+   "aliases": [
+    "T.G. Over Dragner"
+   ],
    "archetypes": [
     "t-g"
    ],
@@ -12933,6 +13322,9 @@
    "passcode": 68989420,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:68989420:AGOV-EN035:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12949,6 +13341,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:68989420:AGOV-EN035:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [

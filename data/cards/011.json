@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Iustia the Guardragon"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -402,6 +405,9 @@
    ]
   },
   {
+   "aliases": [
+    "Purrfect Lander"
+   ],
    "atk": 200,
    "attribute": "earth",
    "def": 200,
@@ -460,6 +466,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:11024707:ROTA-EN026:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -484,6 +493,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shichigosan Shugo"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "11035075",
@@ -515,6 +527,9 @@
    "passcode": 11035075,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:11035075:BPRO-EN080:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -770,6 +785,9 @@
    "tcgDate": "2016-08-04"
   },
   {
+   "aliases": [
+    "Token: Hippo"
+   ],
    "frame": "token",
    "hasEffect": true,
    "id": "11050416",
@@ -858,6 +876,13 @@
     },
     {
      "id": "starter-deck-yuya:11050416:YS16-ENT03:common",
+     "number": "YS16-ENT03",
+     "rarity": "common",
+     "region": "EN",
+     "set": "starter-deck-yuya"
+    },
+    {
+     "id": "starter-deck-yuya:11050416:YS16-ENT03:common:blue",
      "identifiers": {
       "tcgplayerProductIds": [
        118515
@@ -867,10 +892,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "starter-deck-yuya",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Token: Hippo (Blue)"
-     }
+     },
+     "variant": "blue"
     }
    ],
    "tcgDate": "2016-05-26"
@@ -1238,9 +1265,7 @@
      "id": "legendary-duelists-season-3:11069680:LDS3-EN118:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276135,
-       276758,
-       276759
+       276135
       ]
      },
      "number": "LDS3-EN118",
@@ -1251,6 +1276,48 @@
       "match": "number+rarity",
       "name": "Junk Converter"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:11069680:LDS3-EN118:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276758
+      ]
+     },
+     "number": "LDS3-EN118",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Junk Converter (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:11069680:LDS3-EN118:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276759
+      ]
+     },
+     "number": "LDS3-EN118",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Junk Converter (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2020-01-16",
@@ -1260,6 +1327,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zirdras, the Magicrystal Dragon"
+   ],
    "atk": 2200,
    "attribute": "dark",
    "def": 1200,
@@ -1404,10 +1474,7 @@
      "id": "dragons-of-legend-the-complete-series:11082056:DLCS-EN058:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221594,
-       222308,
-       222309,
-       222310
+       221594
       ]
      },
      "number": "DLCS-EN058",
@@ -1418,6 +1485,69 @@
       "match": "number+rarity",
       "name": "The Fang of Critias"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:11082056:DLCS-EN058:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222308
+      ]
+     },
+     "number": "DLCS-EN058",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Fang of Critias (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:11082056:DLCS-EN058:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222309
+      ]
+     },
+     "number": "DLCS-EN058",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Fang of Critias (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:11082056:DLCS-EN058:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222310
+      ]
+     },
+     "number": "DLCS-EN058",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Fang of Critias (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:11082056:DRL3-EN060:ultra_rare",
@@ -2088,6 +2218,9 @@
    "tcgDate": "2021-06-03"
   },
   {
+   "aliases": [
+    "The Grass is Always Tastier on the Other Side"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "11110587",
@@ -2393,6 +2526,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:11132674:PHHY-EN045:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2418,6 +2554,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crystal Counter"
+   ],
    "archetypes": [
     "crystal-beast"
    ],
@@ -2955,6 +3094,9 @@
    "tcgDate": "2016-05-05"
   },
   {
+   "aliases": [
+    "Diabolic Dragon Fortress - Draluvice"
+   ],
    "atk": 2300,
    "attribute": "dark",
    "def": 2500,
@@ -3577,6 +3719,9 @@
    "passcode": 11248645,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:11248645:BPRO-EN016:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3851,6 +3996,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Elysion the Eidolon Beast"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -4003,6 +4151,9 @@
    ]
   },
   {
+   "aliases": [
+    "Adamatia Analyzer"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -4408,6 +4559,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:11321089:BACH-EN040:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4856,6 +5010,9 @@
    ]
   },
   {
+   "aliases": [
+    "Master-Model Diploman"
+   ],
    "atk": 2000,
    "attribute": "dark",
    "def": 2000,
@@ -5035,6 +5192,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:11335209:AGOV-EN012:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5051,6 +5211,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:11335209:AGOV-EN012:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5064,6 +5227,26 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Duamutef, Blessing of Horus"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "age-of-overlord:11335209:AGOV-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       521465
+      ]
+     },
+     "number": "AGOV-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "age-of-overlord",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Duamutef, Blessing of Horus (AGOV-ENSP1)"
      }
     },
     {
@@ -5848,6 +6031,9 @@
    "tcgDate": "2017-02-09"
   },
   {
+   "aliases": [
+    "Number 10"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -6473,6 +6659,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:11443677:BACH-EN037:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6673,6 +6862,9 @@
    ]
   },
   {
+   "aliases": [
+    "Glacial Aqua Madoor"
+   ],
    "archetypes": [
     "madoor"
    ],
@@ -6947,6 +7139,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fiendsmith's Rex Tremendae"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -6992,6 +7187,9 @@
    "passcode": 11464648,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:11464648:SUDA-EN037:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7008,6 +7206,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:11464648:SUDA-EN037:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7172,6 +7373,9 @@
    ]
   },
   {
+   "aliases": [
+    "Performapal Pop-Up"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -7428,6 +7632,9 @@
    "passcode": 11496832,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:11496832:PHNI-EN034:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7654,6 +7861,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zoodiac Tigress"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -7901,6 +8111,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C69"
+   ],
    "archetypes": [
     "heraldry",
     "number-c",
@@ -8430,6 +8643,9 @@
    "tcgDate": "2022-09-15"
   },
   {
+   "aliases": [
+    "Dora Draco"
+   ],
    "atk": 400,
    "attribute": "fire",
    "def": 200,
@@ -8488,6 +8704,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:11590299:INFO-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9034,6 +9253,9 @@
    ]
   },
   {
+   "aliases": [
+    "S-Force Sorted World"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -9476,6 +9698,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:11677278:ROTA-EN090:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9744,6 +9969,9 @@
    ]
   },
   {
+   "aliases": [
+    "Solfachord Primoria"
+   ],
    "archetypes": [
     "solfachord"
    ],
@@ -9789,6 +10017,9 @@
    "passcode": 11688916,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:11688916:DOOD-EN021:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9833,6 +10064,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Toad Oil"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -9973,6 +10207,9 @@
    "tcgDate": "2014-11-06"
   },
   {
+   "aliases": [
+    "Senka Legend - The Three Visit"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -10675,6 +10912,9 @@
    ]
   },
   {
+   "aliases": [
+    "Soukoku the Souten Kicker"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -11189,6 +11429,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:11765832:POTE-EN082:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11407,6 +11651,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Epic Poem of Charles"
+   ],
    "archetypes": [
     "noble-knight"
    ],
@@ -11464,6 +11711,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:11802691:DUNE-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11744,6 +11994,23 @@
       "match": "number+rarity",
       "name": "Arcana Reading"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:11819473:SGX4-ENB11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543769
+      ]
+     },
+     "number": "SGX4-ENB11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Arcana Reading"
+     }
     }
    ],
    "tcgDate": "2020-11-05"
@@ -11894,6 +12161,9 @@
    ]
   },
   {
+   "aliases": [
+    "War Ninja Meisen"
+   ],
    "archetypes": [
     "ninja"
    ],
@@ -11954,6 +12224,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:11825276:DABL-EN040:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11978,6 +12251,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magicalize Fusion"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "11827244",
@@ -12406,6 +12682,9 @@
    ]
   },
   {
+   "aliases": [
+    "High Cupit"
+   ],
    "atk": 600,
    "attribute": "light",
    "def": 600,
@@ -12487,6 +12766,9 @@
    ]
   },
   {
+   "aliases": [
+    "D/D/D Sage King Alfred"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d"
@@ -12526,6 +12808,9 @@
    "passcode": 11852093,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:11852093:BPRO-EN033:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13102,6 +13387,9 @@
    ]
   },
   {
+   "aliases": [
+    "B. Skull Dragon"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -13368,6 +13656,9 @@
    ]
   },
   {
+   "aliases": [
+    "Guardragon's Awakening"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -13492,6 +13783,26 @@
      "tcgplayer": {
       "match": "number+rarity-from-tcgplayer",
       "name": "Spellbook of the Grand Circle"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "the-chronicles-deck-spirit-charmers-all-foil-edition:11911336:CH02-EN028:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       672306
+      ]
+     },
+     "number": "CH02-EN028",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "the-chronicles-deck-spirit-charmers-all-foil-edition",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Spellbook of the Grand Circle (Starlight Rare)"
      }
     }
    ],
@@ -13662,6 +13973,26 @@
      "set": "speed-duel-starter-decks-ultimate-predators",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Hunting Instinct"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:11925569:STP7-EN031:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544994
+      ]
+     },
+     "number": "STP7-EN031",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Hunting Instinct"
      }
     },
@@ -14138,6 +14469,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:11969228:MGED-EN142:rare",
      "identifiers": {
       "tcgplayerProductIds": [

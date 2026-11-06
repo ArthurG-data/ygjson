@@ -126,6 +126,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:13014905:DUNE-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -299,6 +302,9 @@
    "passcode": 13023431,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:13023431:DOOD-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1651,6 +1657,9 @@
    "passcode": 13070280,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:13070280:AGOV-EN090:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1800,6 +1809,9 @@
    "passcode": 13076804,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:13076804:PHHY-EN039:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2443,6 +2455,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pisty the Guardragon"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -2666,6 +2681,9 @@
    "tcgDate": "2014-05-16"
   },
   {
+   "aliases": [
+    "Dragonmaid Laudry"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -3019,6 +3037,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vaylantz Var - The Land of Beginning"
+   ],
    "archetypes": [
     "vaylantz"
    ],
@@ -3395,7 +3416,30 @@
    },
    "ocgDate": "2026-03-20",
    "passcode": 13203964,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:13203964:MAMS-EN028:secret_rare",
+     "number": "MAMS-EN028",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:13203964:MAMS-EN028:starlight_rare",
+     "number": "MAMS-EN028",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:13203964:MAMS-EN028:ultra_rare",
+     "number": "MAMS-EN028",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Cyberse",
     "Link",
@@ -3458,6 +3502,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:13204145:INFO-EN095:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3809,6 +3856,9 @@
    ]
   },
   {
+   "aliases": [
+    "Yatanomisaki the Mechanical Bird"
+   ],
    "archetypes": [
     "gizmek"
    ],
@@ -3953,6 +4003,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:13234975:BODE-EN090:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4238,6 +4291,9 @@
    ]
   },
   {
+   "aliases": [
+    "Machina Defense Region"
+   ],
    "archetypes": [
     "machina"
    ],
@@ -4454,6 +4510,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:13256226:POTE-EN001:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4622,6 +4682,9 @@
    "passcode": 13289758,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:13289758:DUAD-EN047:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4799,9 +4862,7 @@
      "id": "legendary-duelists-season-3:13293158:LDS3-EN030:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276165,
-       276754,
-       276755
+       276165
       ]
      },
      "number": "LDS3-EN030",
@@ -4812,6 +4873,48 @@
       "match": "number+rarity",
       "name": "Evil HERO Wild Cyclone"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:13293158:LDS3-EN030:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276754
+      ]
+     },
+     "number": "LDS3-EN030",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Wild Cyclone (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:13293158:LDS3-EN030:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276755
+      ]
+     },
+     "number": "LDS3-EN030",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Wild Cyclone (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:13293158:SGX3-ENA23:common",
@@ -4838,6 +4941,9 @@
    ]
   },
   {
+   "aliases": [
+    "Yaguramaru the Armored Ninja"
+   ],
    "archetypes": [
     "ninja"
    ],
@@ -4882,6 +4988,9 @@
    "passcode": 13298352,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:13298352:PHHY-EN036:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5039,6 +5148,9 @@
    "passcode": 13302026,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:13302026:PHHY-EN094:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5358,6 +5470,9 @@
    "tcgDate": "2017-02-09"
   },
   {
+   "aliases": [
+    "Supreme King Dragon Zarc"
+   ],
    "archetypes": [
     "supreme-king"
    ],
@@ -5575,6 +5690,9 @@
    "passcode": 13332685,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:13332685:ALIN-EN092:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5797,6 +5915,9 @@
    ]
   },
   {
+   "aliases": [
+    "Datascape Gate - Zhuque"
+   ],
    "archetypes": [
     "virtual-world",
     "virtual-world-gate"
@@ -5874,6 +5995,9 @@
    "tcgDate": "2020-11-05"
   },
   {
+   "aliases": [
+    "Archfiend's Vigor"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -5908,6 +6032,9 @@
    "passcode": 13379114,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:13379114:BPRO-EN074:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5927,6 +6054,9 @@
    "tcgDate": "2026-02-05"
   },
   {
+   "aliases": [
+    "Catnip Li Hua"
+   ],
    "atk": 0,
    "attribute": "wind",
    "def": 0,
@@ -5968,6 +6098,9 @@
    "passcode": 13382806,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:13382806:BACH-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6032,6 +6165,10 @@
    "passcode": 13386407,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:13386407:POTE-EN064:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7139,6 +7276,9 @@
    ]
   },
   {
+   "aliases": [
+    "Impcantation Secret Study"
+   ],
    "archetypes": [
     "impcantation"
    ],
@@ -7199,6 +7339,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Raidraptor - Phantom Knights' Claw"
+   ],
    "archetypes": [
     "raidraptor"
    ],
@@ -7551,6 +7694,9 @@
    "passcode": 13510157,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:13510157:DUNE-EN087:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7702,6 +7848,9 @@
    "tcgDate": "2013-09-12"
   },
   {
+   "aliases": [
+    "Ruin, Graceful Queen of Oblivion"
+   ],
    "archetypes": [
     "demise"
    ],
@@ -8098,6 +8247,9 @@
    ]
   },
   {
+   "aliases": [
+    "Caligula the Eidolon Beast"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -8283,6 +8435,9 @@
    ]
   },
   {
+   "aliases": [
+    "Splight Jet"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -8344,6 +8499,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:13533678:POTE-EN004:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8545,6 +8704,9 @@
    "passcode": 13536606,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:13536606:DIFO-EN099:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8654,6 +8816,9 @@
    "tcgDate": "2019-07-11"
   },
   {
+   "aliases": [
+    "Etermakina Carnord"
+   ],
    "atk": 3000,
    "attribute": "light",
    "def": 2500,
@@ -8696,6 +8861,9 @@
    "passcode": 13567610,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:13567610:PHNI-EN024:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8712,6 +8880,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:13567610:PHNI-EN024:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8865,6 +9036,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elvennotes Lucina"
+   ],
    "archetypes": [
     "elfnote"
    ],
@@ -8903,6 +9077,9 @@
    "passcode": 13597785,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:13597785:BPRO-EN010:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8919,6 +9096,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:13597785:BPRO-EN010:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8933,6 +9113,13 @@
       "match": "number+rarity",
       "name": "Elfnote Lucina (Starlight Rare)"
      }
+    },
+    {
+     "id": "magnificent-maestros:13597785:MAMS-EN087:ultra_rare",
+     "number": "MAMS-EN087",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2026-02-05",
@@ -9480,6 +9667,9 @@
    ]
   },
   {
+   "aliases": [
+    "Evil HERO Aduster Gold"
+   ],
    "archetypes": [
     "evil-hero"
    ],
@@ -9563,9 +9753,7 @@
      "id": "legendary-duelists-season-3:13650422:LDS3-EN025:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276156,
-       276742,
-       276743
+       276156
       ]
      },
      "number": "LDS3-EN025",
@@ -9576,6 +9764,48 @@
       "match": "number+rarity",
       "name": "Evil HERO Adusted Gold"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:13650422:LDS3-EN025:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276742
+      ]
+     },
+     "number": "LDS3-EN025",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Adusted Gold (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:13650422:LDS3-EN025:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276743
+      ]
+     },
+     "number": "LDS3-EN025",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Adusted Gold (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "quarter-century-stampede:13650422:RA04-EN029:collectors_rare",
@@ -10048,6 +10278,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Hashashiyan Dogmatika"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -10280,6 +10513,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:13708888:SUDA-EN031:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10296,6 +10532,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:13708888:SUDA-EN031:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10553,6 +10792,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dracrown of Mysterion"
+   ],
    "atk": 3000,
    "attribute": "light",
    "def": 1500,
@@ -10712,6 +10954,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:13744068:PHNI-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11128,6 +11373,9 @@
    ]
   },
   {
+   "aliases": [
+    "Two as One"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -11359,6 +11607,23 @@
       "match": "number+rarity",
       "name": "Mokey Mokey King"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:13803864:SGX4-ENE08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543831
+      ]
+     },
+     "number": "SGX4-ENE08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mokey Mokey King"
+     }
     }
    ],
    "tcgDate": "2004-11-20",
@@ -11474,6 +11739,9 @@
    ]
   },
   {
+   "aliases": [
+    "Behemoth the King of All Wars"
+   ],
    "atk": 2700,
    "attribute": "earth",
    "def": 1500,
@@ -11532,6 +11800,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:13836592:DUNE-EN024:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12273,6 +12544,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mardell, Generaider Boss of Light"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -12357,6 +12631,9 @@
    ]
   },
   {
+   "aliases": [
+    "Senka Tactician - Lu Jing"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -12424,6 +12701,9 @@
    ]
   },
   {
+   "aliases": [
+    "Raidraptor - Barrage"
+   ],
    "archetypes": [
     "raidraptor"
    ],
@@ -12481,6 +12761,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:13927359:PHNI-EN074:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12652,6 +12935,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:13944422:IOC-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12707,6 +12993,23 @@
      "rarity": "short_print",
      "region": "EN",
      "set": "invasion-of-chaos"
+    },
+    {
+     "id": "speed-duel-battle-city-finals:13944422:SBC2-END08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600176
+      ]
+     },
+     "number": "SBC2-END08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Granadora"
+     }
     }
    ],
    "tcgDate": "2004-03-01",
@@ -13254,6 +13557,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shiranui Story Saga"
+   ],
    "archetypes": [
     "shiranui"
    ],
