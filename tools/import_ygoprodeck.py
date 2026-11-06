@@ -146,6 +146,8 @@ def card_entry(raw: dict) -> dict:
         card["passcode"] = raw["id"]
     if misc.get("konami_id") is not None:
         card["identifiers"]["konamiId"] = misc["konami_id"]
+    if misc.get("beta_name") and misc["beta_name"] != raw["name"]:
+        card["aliases"] = [misc["beta_name"]]
     if raw.get("attribute"):
         card["attribute"] = raw["attribute"].lower()
     if raw.get("race"):
@@ -230,7 +232,8 @@ def merge_card(card: dict, prev: dict | None, tcgplayer_sets: set[str], foreign_
             if key in old_prints.get(p["id"], {}):
                 p[key] = old_prints[p["id"]][key]
     ours = {p["id"] for p in card["prints"]}
-    card["prints"] += [p for p in prev.get("prints", []) if p["id"] not in ours and p["set"] in tcgplayer_sets]
+    card["prints"] += [p for p in prev.get("prints", []) if p["id"] not in ours
+                       and (p["set"] in tcgplayer_sets or p.get("source") == "tcgplayer")]
     card["prints"].sort(key=lambda p: p["id"])
     return card
 
@@ -291,6 +294,7 @@ def main() -> None:
     card_list = ygoprodeck.cards(cache, refresh)
     set_list = ygoprodeck.sets(cache, refresh)
     archetype_names = ygoprodeck.archetypes(cache, refresh)
+    ygoprodeck.db_version(cache, refresh)  # build.py names this snapshot in meta.sources
 
     existing_sets = ygjson.load_sets() if ygjson.SETS.exists() else []
     existing_archetypes = ygjson.load_archetypes() if ygjson.ARCHETYPES.exists() else {}

@@ -297,15 +297,102 @@ def test_rule_5_review_reasons():
     out = go([mkgroup(1, "Legend of Blue Eyes", "LOB")], products, {}, [LOB, *two], cards)
     reasons = {r["productId"]: r["reason"] for r in out["review"]["unmatched"]}
     assert reasons[1].startswith("the number is in 2 other sets: s1, s2")
-    assert reasons[2] == "no print has this number"
+    assert reasons[2] == "no print has this number, and its name is not one card"
     assert reasons[3] == "TCGplayer gives it no card number"
     assert {"productId": 1, "name": "A", "groupId": 1, "number": "AAA-EN001", "rarity": "Rare",
             "reason": reasons[1]} in out["review"]["unmatched"]
 
 
-def test_a_product_in_a_group_with_no_set_and_no_matching_number_says_so():
+def test_a_product_in_a_group_with_no_set_whose_name_is_no_card_goes_to_review_and_mints_no_set():
     out = go([mkgroup(1, "Mystery Promos", "")], {1: [single(1, "A", "ZZZ-EN001", "Rare", 2)]}, {}, [LOB], [])
-    assert out["review"]["unmatched"][0]["reason"] == "no print has this number; the group matched no set"
+    assert out["review"]["unmatched"][0]["reason"] == "no print has this number, and its name is not one card"
+    assert set(out["sets_by_id"]) == {"lob"}
+
+
+def test_a_number_no_print_has_mints_a_print_in_the_groups_set():
+    w = world([mkprint("lob", "100", "LOB-EN001", "rare")])
+    out = go(products={1: [single(1, "Alpha", "LOB-EN999", "Super Rare", 7)]}, **w)
+    p = prints_of(out, "100")["lob:100:LOB-EN999:super_rare"]
+    assert p["source"] == "tcgplayer" and p["region"] == "EN" and p["number"] == "LOB-EN999"
+    assert p["tcgplayer"]["match"] == "minted" and p["identifiers"]["tcgplayerProductIds"] == [7]
+    assert out["review"]["unmatched"] == []
+
+
+def test_a_group_with_no_set_mints_one_set_and_finds_it_again_on_a_rerun():
+    card = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])
+    group = mkgroup(23652, "Speed Duel: Battle City Finals", "SBC2", "2026-07-24T00:00:00")
+    products = {23652: [single(23652, "Alpha (SR)", "SBC2-EN001", "Super Rare", 7)]}
+    prices = {23652: [{"productId": 7, "subTypeName": "1st Edition"}]}
+    out = go([group], products, prices, [LOB], [card])
+    s = out["sets_by_id"]["speed-duel-battle-city-finals"]
+    assert (s["source"], s["code"], s["type"], s["editions"]) == ("tcgplayer", "SBC2", "speed_duel", ["first"])
+    assert s["releases"][0]["releaseDate"] == "2026-07-24" and s["tcgplayerGroupIds"] == [23652]
+    assert "speed-duel-battle-city-finals:100:SBC2-EN001:super_rare" in prints_of(out, "100")
+    again = imp.run([group], products, prices, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["sets"] == out["sets"] and again["files"] == out["files"]
+    assert prints_of(again | {"cards": {c["id"]: c for c in again["files"]["000"]["cards"]}}, "100")[
+        "speed-duel-battle-city-finals:100:SBC2-EN001:super_rare"]["tcgplayer"]["match"] == "minted"
+
+
+def test_tcgplayers_other_name_for_a_card_becomes_an_alias_unless_another_card_has_it():
+    w = world([mkprint("lob", "100", "LOB-EN001", "rare"), mkprint("lob", "100", "LOB-EN002", "rare")])
+    w["cards"].append(mkcard("200", "Luster", [mkprint("lob", "200", "LOB-EN003", "rare")]))
+    products = {1: [single(1, "Old Alpha (Rare)", "LOB-EN001", "Rare", 7), single(1, "Luster", "LOB-EN002", "Rare", 8)]}
+    out = go(products=products, **w)
+    assert out["cards"]["100"]["aliases"] == ["Old Alpha"] and "aliases" not in out["cards"]["200"]
+
+
+def test_a_beta_name_alias_mints_a_print_when_no_card_has_that_name():
+    card = mkcard("100", "Red-Eyes Black Dragon", [mkprint("lob", "100", "LOB-070", "ultra_rare")])
+    card["aliases"] = ["Red-Eyes B. Dragon"]
+    group = mkgroup(1, "Legend of Blue Eyes", "LOB")
+    out = go([group], {1: [single(1, "Red-Eyes B. Dragon", "LOB-999", "Rare", 7)]}, {}, [LOB], [card])
+    assert "lob:100:LOB-999:rare" in prints_of(out, "100") and out["cards"]["100"]["aliases"] == ["Red-Eyes B. Dragon"]
+
+
+def test_a_skill_card_product_reads_as_its_card_and_a_promo_group_with_no_prices_is_limited():
+    card = mkcard("100", "Sky God Revelation (Skill Card)", [mkprint("lob", "100", "LOB-001", "common")])
+    group = mkgroup(9, "Yu-Gi-Oh! Promotional Cards", "PROMO")
+    out = go([group], {9: [single(9, "Sky God Revelation", "SBC2-ENS01", "Common", 7)]}, {}, [LOB], [card])
+    s = next(s for s in out["sets"] if s["source"] == "tcgplayer")
+    assert s["editions"] == ["limited"] and s["type"] == "promo"
+    assert f"{s['id']}:100:SBC2-ENS01:common" in prints_of(out, "100")
+
+
+def test_a_token_product_reads_as_its_token_card():
+    w = world([mkprint("lob", "100", "LOB-EN001", "rare")])
+    token = mkcard("200", "Sheep Token", [mkprint("lob", "200", "LOB-EN002", "common")])
+    token["kind"] = "token"
+    w["cards"] += [token, mkcard("300", "Grinder Golem", [mkprint("lob", "300", "LOB-EN003", "common")])]
+    products = {1: [single(1, "Token: Sheep", "TKN1-EN001", "Common", 7),
+                    single(1, "Token: Grinder Golem", "TKN3-EN001", "Common", 8)]}
+    out = go(products=products, **w)
+    assert "lob:200:TKN1-EN001:common" in prints_of(out, "200")
+    assert "lob:300:TKN3-EN001:common" not in prints_of(out, "300")
+    assert [r["productId"] for r in out["review"]["unmatched"]] == [8]
+
+
+def test_a_minted_print_and_its_set_leave_when_the_product_does():
+    card = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])
+    group = mkgroup(9, "Speed Duel: Finals", "SBC2")
+    products = {9: [single(9, "Alpha", "SBC2-EN001", "Rare", 7)]}
+    out = go([group], products, {}, [LOB], [card])
+    assert "speed-duel-finals" in out["sets_by_id"]
+    again = imp.run([group], {9: []}, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert {s["id"] for s in again["sets"]} == {"lob"}
+    assert [p["id"] for p in again["files"]["000"]["cards"][0]["prints"]] == ["lob:100:LOB-EN001:rare"]
+
+
+def test_a_number_with_an_unknown_rarity_or_na_or_two_cards_of_a_name_is_not_minted():
+    w = world([mkprint("lob", "100", "LOB-EN001", "rare")])
+    w["cards"].append(mkcard("200", "Twin", [mkprint("lob", "200", "LOB-EN002", "rare")]))
+    w["cards"].append(mkcard("300", "Twin", [mkprint("lob", "300", "LOB-EN003", "rare")]))
+    products = {1: [single(1, "Alpha", "LOB-EN900", "Mystery", 7), single(1, "Alpha", "N/A", "Rare", 8),
+                    single(1, "Twin", "LOB-EN901", "Rare", 9)]}
+    out = go(products=products, **w)
+    reasons = {r["productId"]: r["reason"] for r in out["review"]["unmatched"]}
+    assert "unknown" in reasons[7] and "N/A" in reasons[8] and "not one card" in reasons[9]
+    assert not any(p.get("source") for c in out["cards"].values() for p in c["prints"])
 
 
 def test_two_cards_sharing_a_number_and_rarity_are_told_apart_by_name():
@@ -317,18 +404,54 @@ def test_two_cards_sharing_a_number_and_rarity_are_told_apart_by_name():
     assert out["review"]["unmatched"][0]["reason"].startswith("ambiguous: 2 prints of LOB-EN001 at rare")
 
 
-def test_name_variants_of_one_card_at_one_rarity_share_a_print_and_anything_else_is_a_conflict():
+def test_colour_products_get_their_own_prints_and_anything_else_is_a_conflict():
     w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    plain = single(1, "Alpha", "LOB-EN001", "Common", 6)
     red = single(1, "Alpha (Red)", "LOB-EN001", "Common", 7)
     blue = single(1, "Alpha (Blue)", "LOB-EN001", "Common", 8)
     other = single(1, "Beta", "LOB-EN001", "Common", 9)
     rare = single(1, "Alpha (Rare)", "LOB-EN001", "Rare", 10)
-    out = go(products={1: [red, blue, other, rare]}, **w)
-    p = prints_of(out, "100")["lob:100:LOB-EN001:common"]
-    assert p["identifiers"]["tcgplayerProductIds"] == [7, 8] and p["tcgplayer"]["name"] == "Alpha (Red)"
+    out = go(products={1: [plain, red, blue, other, rare]}, **w)
+    prints = prints_of(out, "100")
+    assert prints["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [6]
+    assert prints["lob:100:LOB-EN001:common:red"]["identifiers"]["tcgplayerProductIds"] == [7]
+    assert prints["lob:100:LOB-EN001:common:blue"]["tcgplayer"]["name"] == "Alpha (Blue)"
+    assert prints["lob:100:LOB-EN001:common:blue"]["variant"] == "blue"
+    assert prints["lob:100:LOB-EN001:common:blue"]["source"] == "tcgplayer"
     conflicts = {c["productId"]: c for c in out["review"]["conflicts"]}
-    assert set(conflicts) == {9, 10} and conflicts[9]["heldBy"] == [7, 8]
-    assert conflicts[9]["print"] == p["id"]
+    assert set(conflicts) == {9} and conflicts[9]["heldBy"] == [6, 7, 8]
+    assert conflicts[9]["print"] == "lob:100:LOB-EN001:common"
+    assert prints["lob:100:LOB-EN001:rare"]["identifiers"]["tcgplayerProductIds"] == [10]
+    assert prints["lob:100:LOB-EN001:rare"]["source"] == "tcgplayer"
+
+
+def test_a_stranger_is_refused_when_every_product_of_a_print_is_a_colour():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    out = go(products={1: [single(1, "Alpha (Red)", "LOB-EN001", "Common", 7),
+                           single(1, "Beta", "LOB-EN001", "Common", 9)]}, **w)
+    assert "identifiers" not in prints_of(out, "100")["lob:100:LOB-EN001:common"]
+    assert {c["productId"] for c in out["review"]["conflicts"]} == {9}
+
+
+def test_a_rerun_moves_a_colour_off_the_base_print_and_changes_nothing_after():
+    base = mkprint("lob", "100", "LOB-EN001", "common", identifiers={"tcgplayerProductIds": [6, 7]},
+                   tcgplayer={"name": "Alpha (Red)", "match": "number+rarity"})
+    w = world([base])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha (Red)", "LOB-EN001", "Common", 7)]}
+    out = go(products=products, **w)
+    p = prints_of(out, "100")["lob:100:LOB-EN001:common"]
+    assert p["identifiers"]["tcgplayerProductIds"] == [6] and p["tcgplayer"]["name"] == "Alpha"
+    assert prints_of(out, "100")["lob:100:LOB-EN001:common:red"]["identifiers"]["tcgplayerProductIds"] == [7]
+    again = imp.run(w["groups"], products, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["files"] == out["files"] and again["review"]["conflicts"] == []
+
+
+@pytest.mark.parametrize("name, slug", [("Alpha (Blue)", "blue"), ("Alpha (B) (Ultra Rare)", "b"),
+                                        ("Alpha (Version 2)", "version-2"), ("Alpha (Silver)", "silver"),
+                                        ("Alpha", None), ("Alpha (Ultra Rare)", None), ("Alpha (Alternate Art)", None),
+                                        ("Alpha (Blue) (Red)", None)])
+def test_variant_of(name, slug):
+    assert imp.variant_of(single(1, name, "LOB-EN001", "Ultra Rare")) == slug
 
 
 def test_tcgplayers_own_rarity_spellings_are_understood():

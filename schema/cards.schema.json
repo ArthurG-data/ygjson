@@ -56,6 +56,8 @@
               "yugipediaIds": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}}
             }
           },
+          "aliases": {"type": "array", "uniqueItems": true, "minItems": 1, "items": {"type": "string", "minLength": 1},
+                      "description": "Other English names shops sell this card under: YGOPRODeck's beta name (Red-Eyes B. Dragon) and TCGplayer's product name at one of its prints. Never another card's name."},
           "prints": {"type": "array", "items": {"$ref": "#/$defs/print"}}
         }
       }
@@ -67,8 +69,12 @@
       "additionalProperties": false,
       "required": ["id", "set", "rarity"],
       "properties": {
-        "id": {"type": "string", "pattern": "^[a-z0-9-]+:[0-9]+:[A-Za-z0-9-]*:[a-z0-9_]+$",
-               "description": "<set id>:<card id>:<set number or empty>:<rarity code>. The same card in the same set at a different rarity is another print."},
+        "id": {"type": "string", "pattern": "^[a-z0-9-]+:[0-9]+:[A-Za-z0-9-]*:[a-z0-9_]+(:[a-z0-9-]+)?$",
+               "description": "<set id>:<card id>:<set number or empty>:<rarity code>[:<variant>]. The same card in the same set at a different rarity is another print, and so is a version with its own TCGplayer product."},
+        "variant": {"type": "string", "pattern": "^[a-z0-9-]+$",
+                    "description": "A version of the print that shares its number and rarity and has its own TCGplayer product: a foil colour (blue), an art letter (b) or a numbered art (version-1). The print without one is the unmarked product."},
+        "source": {"enum": ["tcgplayer"],
+                   "description": "Present on a print YGOPRODeck does not list: minted from a TCGplayer product."},
         "set": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
         "number": {"type": "string", "minLength": 1, "description": "The set number printed on the card (LOB-EN005). Absent on the few prints YGOPRODeck gives none."},
         "region": {"type": "string", "pattern": "^[A-Z]+$", "description": "The letters between the prefix and the digits of the number (EN, E, PT). Absent when the number has none (LOB-001)."},

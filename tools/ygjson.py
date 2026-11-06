@@ -61,8 +61,10 @@ def card_bucket(card_id: str) -> str:
     return f"{int(card_id) // 1_000_000:03d}"
 
 
-def print_id(set_id: str, card_id: str, number: str | None, rarity: str) -> str:
-    return f"{set_id}:{card_id}:{number or ''}:{rarity}"
+def print_id(set_id: str, card_id: str, number: str | None, rarity: str, variant: str | None = None) -> str:
+    """A version of a print (the Blue foil, art B) adds its variant, so ids without one never change."""
+    base = f"{set_id}:{card_id}:{number or ''}:{rarity}"
+    return f"{base}:{variant}" if variant else base
 
 
 def printing_id(print_id: str, language: str, edition: str) -> str:
@@ -179,8 +181,9 @@ def _check_cards(sets: list[dict], files: dict[str, dict], archetype_slugs: set[
                 if pid in print_ids:
                     errors.append(f"print {pid} is listed twice ({print_ids[pid]} and {cid})")
                 print_ids[pid] = cid
-                if pid != print_id(p["set"], cid, p.get("number"), p["rarity"]):
-                    errors.append(f"print {pid}: id must be {print_id(p['set'], cid, p.get('number'), p['rarity'])}")
+                expected = print_id(p["set"], cid, p.get("number"), p["rarity"], p.get("variant"))
+                if pid != expected:
+                    errors.append(f"print {pid}: id must be {expected}")
                 if p["set"] not in set_ids:
                     errors.append(f"print {pid}: set {p['set']} is not in sets.json")
                 for product_id in p.get("identifiers", {}).get("tcgplayerProductIds", []):
@@ -284,7 +287,7 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
                     pid = printing_id(p["id"], "en", edition)
                     out["printings"][pid] = {
                         "id": pid, "print": p["id"], "card": cid, "set": p["set"],
-                        **{k: p[k] for k in ("number", "region") if k in p},
+                        **{k: p[k] for k in ("number", "region", "variant") if k in p},
                         "rarity": p["rarity"],
                         **({"rarityTier": rarity_tier} if rarity_tier is not None else {}),
                         "language": "en", "edition": edition,
