@@ -68,7 +68,21 @@ _SKILL_CARD = " (Skill Card)"
 # The tags that name a separately priced version of one print: a foil colour, an art letter, a numbered art. Rarity and
 # treatment tags are not here: a rarity is already part of the print, and the stamps and alternate arts stay on it.
 _VARIANT_TAG = re.compile(r"^(Blue|Green|Purple|Red|Silver|Bronze|[A-G]|Version \d+)$")
+# A treatment on top of a variant is a further version the catalogue has no print for.
+_TREATMENT_TAG = re.compile(r"stamp|alternate art|extended art|new art|misprint|emblazoned|oversized|japanese artwork", re.I)
 _TOKEN_PREFIX = "Token: "
+
+
+def unplaceable_tags(prod: tcgcsv.Product) -> bool:
+    """True when the tags name versions no one print can hold: two variants, or a variant with a treatment."""
+    tags = prod.base_name_and_tags()[1]
+    variants = [t for t in tags if _VARIANT_TAG.match(t)]
+    return len(variants) > 1 or (len(variants) == 1 and any(_TREATMENT_TAG.search(t) for t in tags))
+
+
+def has_rarity_tag(prod: tcgcsv.Product) -> bool:
+    """True when the name itself says which rarity this is, beyond the Rarity field: "(PCR)", "(Secret Rare)"."""
+    return any(not _VARIANT_TAG.match(t) and not _TREATMENT_TAG.search(t) for t in prod.base_name_and_tags()[1])
 
 
 def variant_of(prod: tcgcsv.Product) -> str | None:
@@ -269,6 +283,14 @@ def _remove_minted(sets: list[dict], files: dict[str, dict]) -> None:
             card["prints"] = [p for p in card["prints"] if p.get("source") != SOURCE]
 
 
+def _drop_empty_minted_prints(files: dict[str, dict]) -> None:
+    """A minted print exists to hold a product. One whose product was refused, or moved to a variant, is dropped, or a shop
+    listing could price a print no source vouches for."""
+    for body in files.values():
+        for card in body["cards"]:
+            card["prints"] = [p for p in card["prints"] if p.get("source") != SOURCE or _product_ids(p)]
+
+
 def _drop_empty_minted_sets(sets: list[dict], files: dict[str, dict]) -> list[dict]:
     used = {p["set"] for body in files.values() for card in body["cards"] for p in card["prints"]}
     return [s for s in sets if s["source"] != SOURCE or "parent" in s or s["id"] in used]
@@ -424,10 +446,11 @@ class Importer:
 
     def _land(self, card: dict, p: dict, prod: tcgcsv.Product, match: str) -> bool:
         """Put the product on the print, or on the print's variant when the product names one. False (and a review
-        entry) when the print holds another card or rarity."""
-        variant = variant_of(prod)
-        if variant and not p.get("variant"):
-            p = self._variant_print(card, p, variant)
+        entry) when the print holds another card or rarity. A variant print is created only after those checks, so a
+        refused product leaves no empty print behind."""
+        if unplaceable_tags(prod):
+            self._review(prod, "its tags name two versions, and no print can hold both")
+            return False
         # A base print and its variants are one card at one rarity, so a stranger is refused whichever of them it hits.
         family = [q for q in card["prints"]
                   if (q["set"], q.get("number"), q["rarity"]) == (p["set"], p.get("number"), p["rarity"])]
@@ -436,17 +459,22 @@ class Importer:
         for i in held:
             other = self.by_id[i]
             theirs = (normalise(other.base_name_and_tags()[0]), rarities.canonical(other.rarity))
-            if theirs != mine and theirs[0] == mine[0] and mine[1] != rarities.UNKNOWN and not p.get("variant"):
-                # The same card at another rarity under one number: Number 107 is Ultra and Collector's in RA04.
+            sibling_id = ygjson.print_id(p["set"], card["id"], p.get("number"), mine[1])
+            if theirs != mine and theirs[0] == mine[0] and mine[1] != rarities.UNKNOWN and sibling_id != p["id"] \
+                    and has_rarity_tag(prod):
+                # The same card at another rarity under one number, as its name says: "Number 107 (PCR)" in RA04. A
+                # rarity only the Rarity field states stays a conflict, because a mislabel would become a real print.
                 sibling = {k: p[k] for k in ("number", "region", "set") if k in p}
-                fields = {"id": ygjson.print_id(p["set"], card["id"], p.get("number"), mine[1]), **sibling,
-                          "rarity": mine[1], "source": SOURCE}
+                fields = {"id": sibling_id, **sibling, "rarity": mine[1], "source": SOURCE}
                 return self._land(card, self.catalog.attach(card, fields), prod, MINTED)
             if theirs != mine:
                 self.conflicts.append({"productId": prod.product_id, "name": prod.name, "groupId": prod.group_id,
                                        "print": p["id"], "heldBy": held,
                                        "reason": "the print holds a product of another name or rarity"})
                 return False
+        variant = variant_of(prod)
+        if variant and not p.get("variant"):
+            p = self._variant_print(card, p, variant)
         previous = self.owner.get(prod.product_id)
         if previous is not None and previous is not p:
             remaining = previous["identifiers"]["tcgplayerProductIds"]
@@ -604,12 +632,13 @@ class Importer:
         for body in self.catalog.files.values():
             for card in body["cards"]:
                 own = normalise(card["name"])
-                aliases = {a: None for a in card.get("aliases", [])}
-                for name in sorted(self.sold_as.get(card["id"], ())):
-                    if normalise(name) != own and normalise(name) not in self.catalog.by_name:
-                        aliases[name] = None
-                if aliases:
-                    card["aliases"] = sorted(aliases)
+                aliases = [*card.get("aliases", []), *sorted(self.sold_as.get(card["id"], ()))]
+                # A name another card has, or a bare passcode, could price the wrong card.
+                kept = sorted({a for a in aliases if normalise(a) != own and normalise(a) not in self.catalog.by_name
+                               and not a.isdigit()})
+                card.pop("aliases", None)
+                if kept:
+                    card["aliases"] = kept
                     with_aliases += 1
         return with_aliases
 
@@ -640,6 +669,7 @@ def run(groups, products, prices, sets, files, mapping, eras=None) -> dict:
     imp = Importer(sets, files, groups, products, prices, mapping, eras)
     unmatched_groups = imp.match_groups()
     imp.match_singles()
+    _drop_empty_minted_prints(imp.catalog.files)
     editions_changed = imp.merge_editions()
     cards_with_aliases = imp.merge_aliases()
     imp.catalog.sort_prints()

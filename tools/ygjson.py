@@ -287,7 +287,7 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
                     pid = printing_id(p["id"], "en", edition)
                     out["printings"][pid] = {
                         "id": pid, "print": p["id"], "card": cid, "set": p["set"],
-                        **{k: p[k] for k in ("number", "region", "variant") if k in p},
+                        **{k: p[k] for k in ("number", "region", "variant", "source") if k in p},
                         "rarity": p["rarity"],
                         **({"rarityTier": rarity_tier} if rarity_tier is not None else {}),
                         "language": "en", "edition": edition,

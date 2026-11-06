@@ -425,6 +425,54 @@ def test_colour_products_get_their_own_prints_and_anything_else_is_a_conflict():
     assert prints["lob:100:LOB-EN001:rare"]["source"] == "tcgplayer"
 
 
+def test_a_print_holding_another_rarity_at_its_own_rarity_goes_to_conflicts_and_does_not_recurse():
+    base = mkprint("lob", "100", "LOB-EN001", "ultra_rare", identifiers={"tcgplayerProductIds": [6]},
+                   tcgplayer={"name": "Alpha (Secret Rare)", "match": "number"})
+    w = world([base])
+    products = {1: [single(1, "Alpha (Secret Rare)", "LOB-EN001", "Secret Rare", 6),
+                    single(1, "Alpha (Ultra Rare)", "LOB-EN001", "Ultra Rare", 7)]}
+    out = go(products=products, **w)
+    assert {c["productId"] for c in out["review"]["conflicts"]} == {7}
+
+
+def test_a_rarity_only_the_field_states_is_a_conflict_and_not_a_new_print():
+    w = world([mkprint("lob", "100", "LOB-EN001", "ultra_rare")])
+    products = {1: [single(1, "Alpha (UR)", "LOB-EN001", "Ultra Rare", 6), single(1, "Alpha", "LOB-EN001", "Rare", 7)]}
+    out = go(products=products, **w)
+    assert "lob:100:LOB-EN001:rare" not in prints_of(out, "100")
+    assert {c["productId"] for c in out["review"]["conflicts"]} == {7}
+
+
+def test_tags_naming_two_versions_go_to_review_and_a_refused_colour_leaves_no_print():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    products = {1: [single(1, "Alpha (Blue) (Green)", "LOB-EN001", "Common", 7),
+                    single(1, "Alpha (Silver) (Alternate Art)", "LOB-EN001", "Common", 8),
+                    single(1, "Alpha", "LOB-EN001", "Common", 6),
+                    single(1, "Beta (Red)", "LOB-EN001", "Common", 9)]}
+    out = go(products=products, **w)
+    assert {r["productId"] for r in out["review"]["unmatched"]} == {7, 8}
+    assert {c["productId"] for c in out["review"]["conflicts"]} == {9}
+    assert set(prints_of(out, "100")) == {"lob:100:LOB-EN001:common"}
+
+
+def test_a_minted_print_left_with_no_product_is_dropped():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    w["cards"].append(mkcard("200", "Beta", [mkprint("lob", "200", "LOB-EN002", "common")]))
+    # The base number has only colours, so a same-number stranger mints nothing and a colour-only mint keeps its variant.
+    products = {1: [single(1, "Beta (Red)", "LOB-EN777", "Common", 7)]}
+    out = go(products=products, **w)
+    prints = prints_of(out, "200")
+    assert "lob:200:LOB-EN777:common" not in prints and "lob:200:LOB-EN777:common:red" in prints
+
+
+def test_another_cards_name_and_a_passcode_are_never_aliases():
+    alpha = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])
+    alpha["aliases"] = ["Beta", "43147039", "Old Alpha"]
+    beta = mkcard("200", "Beta", [mkprint("lob", "200", "LOB-EN002", "rare")])
+    out = go([mkgroup(1, "Legend of Blue Eyes", "LOB")], {}, {}, [LOB], [alpha, beta])
+    assert out["cards"]["100"]["aliases"] == ["Old Alpha"]
+
+
 def test_a_stranger_is_refused_when_every_product_of_a_print_is_a_colour():
     w = world([mkprint("lob", "100", "LOB-EN001", "common")])
     out = go(products={1: [single(1, "Alpha (Red)", "LOB-EN001", "Common", 7),

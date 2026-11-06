@@ -214,7 +214,11 @@ and creates these prints again.
 letter (`A` to `G`) or `Version <n>` has a price of its own: Zaborg the Thunder Monarch lists at 129.99 in Blue and 4.49 in
 Green under one number and rarity. It lands on its own print, a copy of the base print with `variant` set (`blue`, `b`,
 `version-2`) and that variant at the end of the print id. A base print whose products are all colours keeps no product
-and stays, because YGOPRODeck lists it and its id does not change. Stamps and alternate arts are not variants yet.
+and stays, because YGOPRODeck lists it and its id does not change. A product whose tags name two versions goes to review.
+
+Stamps and alternate arts are not variants yet. A stamped product with no colour still lands on the plain print, so that
+print can hold two prices: 247 prints hold more than one product. Its TCGplayer price is not reliable until these become
+variants too.
 
 **Aliases.** A card's `aliases` are other English names shops sell it under: YGOPRODeck's `beta_name` (`Red-Eyes B.
 Dragon`) and TCGplayer's product name at any of its prints (`Stellarnova Binding`). A name another card has is never an
