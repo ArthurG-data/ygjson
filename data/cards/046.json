@@ -278,6 +278,9 @@
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "Kick-Ass Goblin Bikers"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -323,6 +326,9 @@
    "passcode": 46014517,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:46014517:SUDA-EN044:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -339,6 +345,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:46014517:SUDA-EN044:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -480,6 +489,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:46033517:BODE-EN028:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -766,6 +778,10 @@
    "passcode": 46037983,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:46037983:POTE-EN086:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1075,11 +1091,21 @@
       "match": "number+rarity",
       "name": "Advanced Ritual Art"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:46052429:UP02-EN042:common",
+     "number": "UP02-EN042",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2007-02-28"
   },
   {
+   "aliases": [
+    "Reincarnating Shamisen Calico"
+   ],
    "atk": 1600,
    "attribute": "dark",
    "def": 1200,
@@ -1138,6 +1164,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:46057733:DABL-EN044:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1163,6 +1192,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elemental Triangle of the Zoodiac"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -1507,6 +1539,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crawler Dendrite"
+   ],
    "archetypes": [
     "krawler"
    ],
@@ -1709,6 +1744,9 @@
    "tcgDate": "2010-11-06"
   },
   {
+   "aliases": [
+    "Cyberse Whitehat"
+   ],
    "atk": 1800,
    "attribute": "light",
    "def": 2400,
@@ -1833,6 +1871,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:46123974:BACH-EN000:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1846,6 +1887,26 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Libromancer Geek Boy"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "battle-of-chaos:46123974:BACH-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       265398
+      ]
+     },
+     "number": "BACH-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "battle-of-chaos",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Libromancer Geek Boy (Premier Edition)"
      }
     }
    ],
@@ -2368,6 +2429,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chakravartin Sphinx"
+   ],
    "archetypes": [
     "sphinx-2"
    ],
@@ -2412,6 +2476,9 @@
    "passcode": 46148485,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:46148485:DOOD-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2652,11 +2719,69 @@
     },
     {
      "id": "duelist-league-15-participation-cards:46173679:DL15-EN014:rare",
+     "number": "DL15-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:46173679:DL15-EN014:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       156213,
-       156214,
-       156215,
+       156213
+      ]
+     },
+     "number": "DL15-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fires of Doomsday (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:46173679:DL15-EN014:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       156214
+      ]
+     },
+     "number": "DL15-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fires of Doomsday (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:46173679:DL15-EN014:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       156215
+      ]
+     },
+     "number": "DL15-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fires of Doomsday (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:46173679:DL15-EN014:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        156216
       ]
      },
@@ -2664,10 +2789,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Fires of Doomsday (Blue)"
-     }
+      "name": "Fires of Doomsday (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "phantom-darkness:46173679:PTDN-EN055:rare",
@@ -2826,6 +2953,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:46174776:ROTA-EN033:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2842,6 +2972,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:46174776:ROTA-EN033:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3044,6 +3177,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:46186135:LEDE-EN038:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3325,10 +3461,7 @@
      "id": "dragons-of-legend-the-complete-series:46232525:DLCS-EN064:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221603,
-       222302,
-       222303,
-       222304
+       221603
       ]
      },
      "number": "DLCS-EN064",
@@ -3339,6 +3472,69 @@
       "match": "number+rarity",
       "name": "The Claw of Hermos"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:46232525:DLCS-EN064:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222302
+      ]
+     },
+     "number": "DLCS-EN064",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Claw of Hermos (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:46232525:DLCS-EN064:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222303
+      ]
+     },
+     "number": "DLCS-EN064",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Claw of Hermos (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:46232525:DLCS-EN064:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222304
+      ]
+     },
+     "number": "DLCS-EN064",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Claw of Hermos (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:46232525:DRL3-EN067:ultra_rare",
@@ -3684,6 +3880,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tiamaton the Steel Battalion Dragon"
+   ],
    "atk": 2000,
    "attribute": "dark",
    "def": 0,
@@ -3973,6 +4172,9 @@
    "tcgDate": "2015-11-05"
   },
   {
+   "aliases": [
+    "Galaktikuriboh"
+   ],
    "archetypes": [
     "galaxy"
    ],
@@ -4018,6 +4220,9 @@
    "passcode": 46261704,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:46261704:PHHY-EN003:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4332,6 +4537,9 @@
    ]
   },
   {
+   "aliases": [
+    "Beresennet Em Heru"
+   ],
    "archetypes": [
     "zenet"
    ],
@@ -4362,6 +4570,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Stronghold Whale"
+   ],
    "archetypes": [
     "umi"
    ],
@@ -4426,10 +4637,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:46290741:LDS1-EN027:ultra_rare",
+     "number": "LDS1-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:46290741:LDS1-EN027:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217381,
-       217382,
+       217381
+      ]
+     },
+     "number": "LDS1-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Citadel Whale (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:46290741:LDS1-EN027:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217382
+      ]
+     },
+     "number": "LDS1-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Citadel Whale (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:46290741:LDS1-EN027:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217383
       ]
      },
@@ -4437,10 +4698,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Citadel Whale (Blue)"
-     }
+      "name": "Citadel Whale (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists:46290741:LEDU-EN016:ultra_rare",
@@ -5404,6 +5667,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:46382143:PHHY-EN052:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5709,6 +5975,9 @@
    ]
   },
   {
+   "aliases": [
+    "Azamina Rhea Silvera"
+   ],
    "archetypes": [
     "azamina"
    ],
@@ -5818,6 +6087,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:46396218:ROTA-EN030:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6038,6 +6310,13 @@
       "match": "number+rarity",
       "name": "Metamorphosis (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:46411259:UP02-EN040:common",
+     "number": "UP02-EN040",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2003-07-18"
@@ -6901,6 +7180,9 @@
    "tcgDate": "2009-09-01"
   },
   {
+   "aliases": [
+    "Poissoniere de Nouvelles"
+   ],
    "archetypes": [
     "nouvelles"
    ],
@@ -6946,6 +7228,9 @@
    "passcode": 46485778,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:46485778:AGOV-EN019:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6971,6 +7256,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ton-Ton"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "46497537",
@@ -7008,6 +7296,9 @@
    "passcode": 46497537,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:46497537:CYAC-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7027,6 +7318,9 @@
    "tcgDate": "2023-05-04"
   },
   {
+   "aliases": [
+    "Metamor Formation"
+   ],
    "archetypes": [
     "metalfoes"
    ],
@@ -7211,6 +7505,9 @@
    "tcgDate": "2009-09-01"
   },
   {
+   "aliases": [
+    "Retaliating"
+   ],
    "archetypes": [
     "c"
    ],
@@ -7477,6 +7774,9 @@
    ]
   },
   {
+   "aliases": [
+    "Neferabyss, the Ogdoadic Overlord"
+   ],
    "archetypes": [
     "abyss"
    ],
@@ -7522,6 +7822,9 @@
    "passcode": 46518210,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:46518210:AGOV-EN016:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7545,6 +7848,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pity"
+   ],
    "atk": 0,
    "attribute": "light",
    "def": 0,
@@ -7587,6 +7893,9 @@
    "passcode": 46533533,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:46533533:ALIN-EN097:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7727,6 +8036,9 @@
    ]
   },
   {
+   "aliases": [
+    "Adamatia Raputite"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -7912,6 +8224,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:46565218:STP7-EN023:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544986
+      ]
+     },
+     "number": "STP7-EN023",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Santa Claws"
+     }
+    },
+    {
      "id": "yu-gi-oh-advent-calendar-2018:46565218:AC18-EN012:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7991,6 +8323,9 @@
    "tcgDate": "2022-11-17"
   },
   {
+   "aliases": [
+    "Vampire Orchis"
+   ],
    "atk": 1700,
    "attribute": "earth",
    "def": 1000,
@@ -8173,6 +8508,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lyrilusc - Celeste Wagtail"
+   ],
    "archetypes": [
     "lyrilusc"
    ],
@@ -8328,6 +8666,9 @@
    ]
   },
   {
+   "aliases": [
+    "D/D/D Amnesty King Des Makina"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d"
@@ -8389,6 +8730,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:46593546:BACH-EN044:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8416,6 +8760,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nemesys Umbrella"
+   ],
    "archetypes": [
     "nemeses"
    ],
@@ -8487,6 +8834,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chaos End Master"
+   ],
    "archetypes": [
     "chaos"
    ],
@@ -8679,6 +9029,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fiendsmith Lacrimosa"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -8857,6 +9210,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:46640168:INFO-EN035:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8881,6 +9237,9 @@
    ]
   },
   {
+   "aliases": [
+    "World Legacy - World Lance"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -8981,6 +9340,9 @@
    ]
   },
   {
+   "aliases": [
+    "Token: World Legacy"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -10093,6 +10455,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Staring at the Blue Sky"
+   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 2700,
@@ -10128,6 +10493,9 @@
    "passcode": 46708514,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:46708514:BPRO-EN026:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10296,6 +10664,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cyber Dragon Zieger"
+   ],
    "archetypes": [
     "cyber-dragon"
    ],
@@ -10586,8 +10957,7 @@
      "id": "battles-of-legend-chapter-1:46772449:BLC1-EN015:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538487,
-       538647
+       538487
       ]
      },
      "number": "BLC1-EN015",
@@ -10598,6 +10968,27 @@
       "match": "number+rarity",
       "name": "Evilswarm Exciton Knight"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:46772449:BLC1-EN015:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538647
+      ]
+     },
+     "number": "BLC1-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evilswarm Exciton Knight (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "battles-of-legend-light-s-revenge:46772449:BLLR-EN068:ultra_rare",
@@ -10768,6 +11159,9 @@
    "passcode": 46789706,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:46789706:SUDA-EN097:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10946,6 +11340,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gizmek Mikoto, the Cut-throat Cyclone Canine"
+   ],
    "archetypes": [
     "gizmek"
    ],
@@ -11074,6 +11471,17 @@
    "passcode": 46815301,
    "prints": [
     {
+     "id": "magnificent-maestros:46815301:MAMS-EN093:ultra_rare",
+     "number": "MAMS-EN093",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:46815301:POTE-EN089:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11627,6 +12035,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 55"
+   ],
    "archetypes": [
     "gogogo",
     "number-spell-trap-archetype"
@@ -11820,6 +12231,9 @@
    "tcgDate": "2007-02-28"
   },
   {
+   "aliases": [
+    "Scareclaw Acroa"
+   ],
    "archetypes": [
     "scareclaw"
    ],
@@ -11881,6 +12295,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:46877100:DIFO-EN011:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12385,6 +12802,9 @@
    "tcgDate": "2002-06-26"
   },
   {
+   "aliases": [
+    "Beat Raptor"
+   ],
    "atk": 1400,
    "attribute": "earth",
    "def": 2000,
@@ -12568,6 +12988,9 @@
    ]
   },
   {
+   "aliases": [
+    "Herald of Mirages"
+   ],
    "archetypes": [
     "herald"
    ],
@@ -13020,6 +13443,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:46956301:PHNI-EN041:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13220,6 +13646,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Dwimmered Magicite"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "46984349",
@@ -13414,6 +13843,23 @@
    "passcode": 46986420,
    "prints": [
     {
+     "id": "2-player-starter-set:46986420:STAX-EN005:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       533097
+      ]
+     },
+     "number": "STAX-EN005",
+     "rarity": "common",
+     "region": "EN",
+     "set": "2-player-starter-set",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician"
+     }
+    },
+    {
      "id": "2016-mega-tins:46986420:CT13-EN003:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13442,6 +13888,43 @@
      "set": "2017-mega-tins",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Dark Magician"
+     }
+    },
+    {
+     "id": "25th-anniversary-tin-dueling-heroes:46986420:TN23-EN001:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       514571
+      ]
+     },
+     "number": "TN23-EN001",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-tin-dueling-heroes",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battle-of-chaos:46986420:25TH-EN001:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       263114
+      ]
+     },
+     "number": "25TH-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battle-of-chaos",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dark Magician"
      }
     },
@@ -13475,6 +13958,23 @@
      "set": "collectible-tins-2003",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Dark Magician"
+     }
+    },
+    {
+     "id": "collector-s-boxes:46986420:YUCB-EN001:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       146150
+      ]
+     },
+     "number": "YUCB-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "collector-s-boxes",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dark Magician"
      }
     },
@@ -13567,11 +14067,33 @@
     },
     {
      "id": "duelist-league-2-participation-cards:46986420:DL11-EN001:rare",
+     "number": "DL11-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:46986420:DL11-EN001:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80297,
-       80298,
-       80299,
+       80298
+      ]
+     },
+     "number": "DL11-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:46986420:DL11-EN001:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80300
       ]
      },
@@ -13579,10 +14101,48 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:46986420:DL11-EN001:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80299
+      ]
+     },
+     "number": "DL11-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:46986420:DL11-EN001:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80297
+      ]
+     },
+     "number": "DL11-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Dark Magician (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-battle-city:46986420:DPBC-EN008:super_rare",
@@ -13671,6 +14231,26 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "hidden-arsenal-chapter-1:46986420:HAC1-EN002:dt_ultra_parallel",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       264852
+      ]
+     },
+     "number": "HAC1-EN002",
+     "rarity": "dt_ultra_parallel",
+     "region": "EN",
+     "set": "hidden-arsenal-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Duel Terminal)"
+     }
+    },
+    {
      "id": "kc-grand-tournament-2021-prize-card:46986420:2021-EN001:extra_secret_rare",
      "number": "2021-EN001",
      "rarity": "extra_secret_rare",
@@ -13748,6 +14328,23 @@
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Dark Magician"
+     }
+    },
+    {
+     "id": "legendary-collection:46986420:LC01-EN005:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       491812
+      ]
+     },
+     "number": "LC01-EN005",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "legendary-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Quarter Century Secret Rare)"
      }
     },
     {
@@ -13845,6 +14442,26 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:46986420:MGED-EN002:premium_gold_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       253907
+      ]
+     },
+     "number": "MGED-EN002",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician"
+     }
+    },
+    {
      "id": "maximum-gold:46986420:MAGO-EN002:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13857,6 +14474,159 @@
      "set": "maximum-gold",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Dark Magician"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "miscellaneous-promotional-cards:46986420:ADC1-EN001:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       478804
+      ]
+     },
+     "number": "ADC1-EN001",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "miscellaneous-promotional-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Adidas Exclusive)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:46986420:RA03-EN080:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592726
+      ]
+     },
+     "number": "RA03-EN080",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Platinum Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:46986420:RA03-EN080:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592727
+      ]
+     },
+     "number": "RA03-EN080",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN001:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626676
+      ]
+     },
+     "number": "RA04-EN001",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (New Art) (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627267,
+       627268,
+       627269,
+       627270,
+       627271
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Arkana) (Platinum Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627272,
+       627273,
+       627274,
+       627275,
+       627276
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Arkana) (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "rarity-collection-5:46986420:RA05-EN083:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687196
+      ]
+     },
+     "number": "RA05-EN083",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "rarity-collection-5",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Starlight Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "rarity-collection-5:46986420:RA05-EN083:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687197
+      ]
+     },
+     "number": "RA05-EN083",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "rarity-collection-5",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dark Magician"
      }
     },
@@ -13947,6 +14717,40 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:46986420:SBC2-ENA12:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600138
+      ]
+     },
+     "number": "SBC2-ENA12",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:46986420:SBC2-ENA12:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600137
+      ]
+     },
+     "number": "SBC2-ENA12",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (PSR)"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-destiny-masters:46986420:SS01-ENA01:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13977,6 +14781,110 @@
       "match": "number+rarity",
       "name": "Dark Magician"
      }
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENA01:common",
+     "number": "SBC1-ENA01",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENA01:common:a",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512195
+      ]
+     },
+     "number": "SBC1-ENA01",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (A)"
+     },
+     "variant": "a"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENA01:secret_rare",
+     "number": "SBC1-ENA01",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENA01:secret_rare:a",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512196
+      ]
+     },
+     "number": "SBC1-ENA01",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (A) (Secret Rare)"
+     },
+     "variant": "a"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENG01:secret_rare",
+     "number": "SBC1-ENG01",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENG01:secret_rare:g",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512387
+      ]
+     },
+     "number": "SBC1-ENG01",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (G) (Secret Rare)"
+     },
+     "variant": "g"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENG10:common",
+     "number": "SBC1-ENG10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer"
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:46986420:SBC1-ENG10:common:g",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512388
+      ]
+     },
+     "number": "SBC1-ENG10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (G)"
+     },
+     "variant": "g"
     },
     {
      "id": "speed-duel-tournament-pack-1:46986420:STP1-EN001:ultra_rare",
@@ -14092,6 +15000,23 @@
      "set": "structure-deck-yugi-muto",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Dark Magician"
+     }
+    },
+    {
+     "id": "world-championship-jpp-cards:46986420:2018-JPP02:normal_parallel_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       178045
+      ]
+     },
+     "number": "2018-JPP02",
+     "rarity": "normal_parallel_rare",
+     "region": "JP",
+     "set": "world-championship-jpp-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dark Magician"
      }
     },
@@ -14259,6 +15184,96 @@
       "match": "number+rarity",
       "name": "Dark Magician"
      }
+    },
+    {
+     "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENA03:common",
+     "number": "YGLD-ENA03",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENA03:common:a",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       108205,
+       615918
+      ]
+     },
+     "number": "YGLD-ENA03",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician (A)"
+     },
+     "variant": "a"
+    },
+    {
+     "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENB02:ultra_rare",
+     "number": "YGLD-ENB02",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENB02:ultra_rare:b",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       108245,
+       615958
+      ]
+     },
+     "number": "YGLD-ENB02",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician (B)"
+     },
+     "variant": "b"
+    },
+    {
+     "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENC09:ultra_rare",
+     "number": "YGLD-ENC09",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENC09:ultra_rare:c",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       108293,
+       616006
+      ]
+     },
+     "number": "YGLD-ENC09",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician (C)"
+     },
+     "variant": "c"
     }
    ],
    "tcgDate": "2002-03-08",
@@ -14268,6 +15283,9 @@
    ]
   },
   {
+   "aliases": [
+    "Saambell the Reuniter"
+   ],
    "atk": 1400,
    "attribute": "wind",
    "def": 1300,

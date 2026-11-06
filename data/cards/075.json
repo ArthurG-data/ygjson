@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Dragon Tail Lucias"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -263,6 +266,9 @@
    "tcgDate": "2009-03-31"
   },
   {
+   "aliases": [
+    "Revenants Running Rampant"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "75025112",
@@ -473,6 +479,13 @@
       "match": "number+rarity",
       "name": "Clock Tower Prison"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:75041269:UP02-EN041:common",
+     "number": "UP02-EN041",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2006-05-17"
@@ -749,6 +762,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:75047173:POTE-EN069:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -977,6 +994,40 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:75064463:SBC2-ENH03:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600195
+      ]
+     },
+     "number": "SBC2-ENH03",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie Queen"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:75064463:SBC2-ENH03:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600194
+      ]
+     },
+     "number": "SBC2-ENH03",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie Queen (PSR)"
+     }
+    },
+    {
      "id": "the-lost-art-promotion-2020-i:75064463:LART-EN021:ultra_rare",
      "number": "LART-EN021",
      "rarity": "ultra_rare",
@@ -1176,6 +1227,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pairen the Skylark Dragon"
+   ],
    "atk": 2700,
    "attribute": "wind",
    "def": 1300,
@@ -1731,11 +1785,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:75132317:DL18-EN009:rare",
+     "number": "DL18-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75132317:DL18-EN009:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94903,
-       94923,
-       94941,
+       94903
+      ]
+     },
+     "number": "DL18-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Brotherhood of the Fire Fist - Snake (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75132317:DL18-EN009:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94923
+      ]
+     },
+     "number": "DL18-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Brotherhood of the Fire Fist - Snake (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75132317:DL18-EN009:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94941
+      ]
+     },
+     "number": "DL18-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Brotherhood of the Fire Fist - Snake (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75132317:DL18-EN009:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94942
       ]
      },
@@ -1743,10 +1855,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Brotherhood of the Fire Fist - Snake (Blue)"
-     }
+      "name": "Brotherhood of the Fire Fist - Snake (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2013-01-25",
@@ -1882,6 +1996,9 @@
    "tcgDate": "2008-05-03"
   },
   {
+   "aliases": [
+    "Sky Striker Ace - Sieg"
+   ],
    "archetypes": [
     "sky-striker",
     "sky-striker-ace"
@@ -1990,6 +2107,9 @@
    ]
   },
   {
+   "aliases": [
+    "Creature Disconnect"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "75153328",
@@ -2046,6 +2166,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Souten's Duty"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -2147,11 +2270,69 @@
    "prints": [
     {
      "id": "duelist-league-16-participation-cards:75162696:DL16-EN008:rare",
+     "number": "DL16-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:75162696:DL16-EN008:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77625,
-       77626,
-       77627,
+       77625
+      ]
+     },
+     "number": "DL16-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Victoria (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:75162696:DL16-EN008:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77626
+      ]
+     },
+     "number": "DL16-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Victoria (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:75162696:DL16-EN008:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77627
+      ]
+     },
+     "number": "DL16-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Victoria (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:75162696:DL16-EN008:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77628
       ]
      },
@@ -2159,10 +2340,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Victoria (Blue)"
-     }
+      "name": "Victoria (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "lost-sanctuary-structure-deck:75162696:SDLS-EN011:common",
@@ -2822,6 +3005,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dreadnought Suship - Roe-class First Wardish"
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -2907,6 +3093,9 @@
    ]
   },
   {
+   "aliases": [
+    "Armored Dragon"
+   ],
    "archetypes": [
     "armed-dragon"
    ],
@@ -3208,6 +3397,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 72"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -3386,6 +3578,9 @@
    ]
   },
   {
+   "aliases": [
+    "Merkabah the Eidolon Beast"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -3463,6 +3658,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:75286621:MGED-EN025:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3535,6 +3733,9 @@
    ]
   },
   {
+   "aliases": [
+    "Therions' Irregular"
+   ],
    "archetypes": [
     "therion"
    ],
@@ -3596,6 +3797,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:75290703:POTE-EN009:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3619,6 +3824,9 @@
    ]
   },
   {
+   "aliases": [
+    "Poseidon Giant Beetle"
+   ],
    "atk": 2500,
    "attribute": "earth",
    "def": 2300,
@@ -3685,6 +3893,9 @@
    ]
   },
   {
+   "aliases": [
+    "Delusion Trap Hole"
+   ],
    "archetypes": [
     "trap-hole"
    ],
@@ -3888,6 +4099,9 @@
    "passcode": 75311421,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:75311421:CYAC-EN094:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4220,6 +4434,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ragnaraika Tortoise Tyrant"
+   ],
    "archetypes": [
     "ragnaraika"
    ],
@@ -4285,6 +4502,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:75352507:INFO-EN048:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4542,6 +4762,9 @@
    ]
   },
   {
+   "aliases": [
+    "Stalemate"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "75364199",
@@ -4934,6 +5157,23 @@
       "match": "number+rarity",
       "name": "Total Defense Shogun"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:75372290:SBC2-ENC02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600323
+      ]
+     },
+     "number": "SBC2-ENC02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Total Defense Shogun"
+     }
     }
    ],
    "tcgDate": "2004-09-01",
@@ -5230,10 +5470,7 @@
      "id": "dragons-of-legend-the-complete-series:75380687:DLCS-EN005:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221526,
-       222235,
-       222236,
-       222237
+       221526
       ]
      },
      "number": "DLCS-EN005",
@@ -5244,6 +5481,69 @@
       "match": "number+rarity",
       "name": "Amulet Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:75380687:DLCS-EN005:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222235
+      ]
+     },
+     "number": "DLCS-EN005",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Amulet Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:75380687:DLCS-EN005:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222236
+      ]
+     },
+     "number": "DLCS-EN005",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Amulet Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:75380687:DLCS-EN005:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222237
+      ]
+     },
+     "number": "DLCS-EN005",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Amulet Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:75380687:DRL3-EN043:ultra_rare",
@@ -5466,6 +5766,9 @@
    "tcgDate": "2004-11-20"
   },
   {
+   "aliases": [
+    "Dragonic Utopia Ray"
+   ],
    "archetypes": [
     "number",
     "number-c",
@@ -5995,6 +6298,9 @@
    "tcgDate": "2017-05-04"
   },
   {
+   "aliases": [
+    "Number 40"
+   ],
    "archetypes": [
     "gimmick-puppet",
     "number-spell-trap-archetype"
@@ -6216,6 +6522,9 @@
    ]
   },
   {
+   "aliases": [
+    "Generaider Quest"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -6276,6 +6585,9 @@
    "tcgDate": "2019-11-21"
   },
   {
+   "aliases": [
+    "Troymare Cerberus"
+   ],
    "archetypes": [
     "knightmare"
    ],
@@ -6574,6 +6886,9 @@
    "passcode": 75493362,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:75493362:ALIN-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6672,11 +6987,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:75498415:DL17-EN007:rare",
+     "number": "DL17-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:75498415:DL17-EN007:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80556,
-       80557,
-       80558,
+       80557
+      ]
+     },
+     "number": "DL17-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Sirocco the Dawn (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:75498415:DL17-EN007:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80558
+      ]
+     },
+     "number": "DL17-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Sirocco the Dawn (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:75498415:DL17-EN007:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80559
       ]
      },
@@ -6684,10 +7039,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Sirocco the Dawn (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:75498415:DL17-EN007:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80556
+      ]
+     },
+     "number": "DL17-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Blackwing - Sirocco the Dawn (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gold-series-3:75498415:GLD3-EN023:common",
@@ -6761,6 +7136,9 @@
    ]
   },
   {
+   "aliases": [
+    "Master  Expert"
+   ],
    "atk": 1200,
    "attribute": "earth",
    "def": 1000,
@@ -6982,11 +7360,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:75500286:DL18-EN011:rare",
+     "number": "DL18-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75500286:DL18-EN011:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94905,
-       94925,
-       94961,
+       94905
+      ]
+     },
+     "number": "DL18-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gold Sarcophagus (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75500286:DL18-EN011:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94925
+      ]
+     },
+     "number": "DL18-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gold Sarcophagus (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75500286:DL18-EN011:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94961
+      ]
+     },
+     "number": "DL18-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gold Sarcophagus (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:75500286:DL18-EN011:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94962
       ]
      },
@@ -6994,10 +7430,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Gold Sarcophagus (Blue)"
-     }
+      "name": "Gold Sarcophagus (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-revolution-special-edition:75500286:DREV-ENSE2:super_rare",
@@ -7119,6 +7557,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:75500286:MGED-EN041:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8497,6 +8938,9 @@
    "tcgDate": "2010-08-07"
   },
   {
+   "aliases": [
+    "Hel, Generaider Boss of Doom"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -8864,6 +9308,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Toad mdl 4624 \"Shirokunishi\""
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -8933,6 +9380,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spiral Hold of the Mythic Radiance Dragon"
+   ],
    "archetypes": [
     "phantasm-spiral"
    ],
@@ -8992,6 +9442,9 @@
    "tcgDate": "2017-05-04"
   },
   {
+   "aliases": [
+    "Prometeoron the Burning Asteroid"
+   ],
    "atk": 2800,
    "attribute": "fire",
    "def": 1000,
@@ -9131,6 +9584,9 @@
    "tcgDate": "2018-02-01"
   },
   {
+   "aliases": [
+    "Sarv Sarga"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "75728539",
@@ -9185,6 +9641,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:75728539:AGOV-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9204,6 +9663,9 @@
    "tcgDate": "2023-10-19"
   },
   {
+   "aliases": [
+    "Labrynth Servant Arianne"
+   ],
    "archetypes": [
     "labrynth"
    ],
@@ -9592,6 +10054,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "legacy-of-darkness:75745607:LOD-EN070:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9642,6 +10107,23 @@
      "set": "retro-pack-2",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Hino-Kagu-Tsuchi"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:75745607:SBC2-ENI03:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600200
+      ]
+     },
+     "number": "SBC2-ENI03",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Hino-Kagu-Tsuchi"
      }
     }
@@ -9768,6 +10250,9 @@
    "passcode": 75771170,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:75771170:DUNE-EN032:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9784,6 +10269,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:75771170:DUNE-EN032:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10014,6 +10502,23 @@
       "match": "number+rarity",
       "name": "Dyna Tank"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:75780818:SGX4-ENC21:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543799
+      ]
+     },
+     "number": "SGX4-ENC21",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dyna Tank"
+     }
     }
    ],
    "tcgDate": "2022-11-17",
@@ -10161,6 +10666,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:75782277:SBC2-ENH15:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600198
+      ]
+     },
+     "number": "SBC2-ENH15",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpies' Hunting Ground"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-duelists-of-tomorrow:75782277:SS02-ENC13:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10196,6 +10718,9 @@
    "tcgDate": "2004-11-20"
   },
   {
+   "aliases": [
+    "Odd-Eyes Pendulum Dragon, Four Heavenly Dragons"
+   ],
    "archetypes": [
     "odd-eyes"
    ],
@@ -10941,6 +11466,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ojamaparty"
+   ],
    "archetypes": [
     "armed-dragon"
    ],
@@ -11286,6 +11814,9 @@
    ]
   },
   {
+   "aliases": [
+    "Paladin of Armored Dragon"
+   ],
    "archetypes": [
     "paladins-of-dragons"
    ],
@@ -11423,6 +11954,23 @@
      "set": "ots-tournament-pack-21",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Trap Hole of Spikes"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:75902998:SBC2-ENC17:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600325
+      ]
+     },
+     "number": "SBC2-ENC17",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Trap Hole of Spikes"
      }
     }
@@ -11593,6 +12141,9 @@
    ]
   },
   {
+   "aliases": [
+    "Splight Red"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -11670,6 +12221,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:75922381:POTE-EN006:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11882,7 +12437,16 @@
    },
    "ocgDate": "2026-09-05",
    "passcode": 75934716,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:75934716:GLVI-EN016:starlight_rare",
+     "number": "GLVI-EN016",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Spellcaster",
     "Effect"
@@ -12115,6 +12679,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:75946257:IOC-EN016:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12180,6 +12747,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vaylantz Vorld - Koenig Wissen"
+   ],
    "archetypes": [
     "vaylantz"
    ],
@@ -12422,6 +12992,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gagaga Hope Tactics"
+   ],
    "archetypes": [
     "gagaga"
    ],
@@ -12461,7 +13034,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 75956913,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:75956913:DUAD-EN052:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639389
+      ]
+     },
+     "number": "DUAD-EN052",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gagaga Utopic Tactics"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -12541,6 +13135,9 @@
    "tcgDate": "2008-05-03"
   },
   {
+   "aliases": [
+    "Mystic Box of Chaos"
+   ],
    "archetypes": [
     "light-and-darkness-ritual"
    ],
@@ -12715,6 +13312,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Superheavy Samurai Swordmaster Musha - C"
+   ],
    "archetypes": [
     "superheavy"
    ],

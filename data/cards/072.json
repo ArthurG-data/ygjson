@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Mekk-Knight Morning Star"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -299,6 +302,9 @@
    "tcgDate": "2012-09-28"
   },
   {
+   "aliases": [
+    "Supreme King Castle"
+   ],
    "archetypes": [
     "evil-hero"
    ],
@@ -765,6 +771,9 @@
    "passcode": 72064891,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:72064891:DIFO-EN097:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -910,6 +919,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Nemesys Corridor"
+   ],
    "archetypes": [
     "nemeses"
    ],
@@ -1093,6 +1105,9 @@
    ]
   },
   {
+   "aliases": [
+    "Predator Blast"
+   ],
    "archetypes": [
     "predaplant"
    ],
@@ -2153,6 +2168,9 @@
    "tcgDate": "2007-02-07"
   },
   {
+   "aliases": [
+    "Cross Rose Dragon"
+   ],
    "archetypes": [
     "rose-dragon"
    ],
@@ -2236,10 +2254,7 @@
      "id": "legendary-duelists-season-2:72218246:LDS2-EN114:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230359,
-       230835,
-       230836,
-       230837
+       230359
       ]
      },
      "number": "LDS2-EN114",
@@ -2250,6 +2265,60 @@
       "match": "number+rarity",
       "name": "Crossrose Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:72218246:LDS2-EN114:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230835
+      ]
+     },
+     "number": "LDS2-EN114",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crossrose Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:72218246:LDS2-EN114:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230836
+      ]
+     },
+     "number": "LDS2-EN114",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crossrose Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:72218246:LDS2-EN114:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230837
+      ]
+     },
+     "number": "LDS2-EN114",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crossrose Dragon (Purple)"
+     },
+     "variant": "purple"
     }
    ],
    "tcgDate": "2020-03-19",
@@ -2260,6 +2329,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magias Palladion"
+   ],
    "archetypes": [
     "crusadia"
    ],
@@ -2347,6 +2419,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lil-la-Rap"
+   ],
    "archetypes": [
     "lil-la"
    ],
@@ -2404,6 +2479,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:72233469:AGOV-EN098:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2486,6 +2564,9 @@
    ]
   },
   {
+   "aliases": [
+    "Node Raizeol"
+   ],
    "archetypes": [
     "ryzeal"
    ],
@@ -2653,6 +2734,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:72246674:SUDA-EN048:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2785,6 +2869,9 @@
    ]
   },
   {
+   "aliases": [
+    "Diabellestarr the Dark Witch"
+   ],
    "archetypes": [
     "diabellstar"
    ],
@@ -2846,6 +2933,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:72270339:AGOV-EN006:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2862,6 +2952,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:72270339:AGOV-EN006:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3395,6 +3488,9 @@
    "tcgDate": "2011-05-27"
   },
   {
+   "aliases": [
+    "Sennet Per Akh"
+   ],
    "archetypes": [
     "zenet"
    ],
@@ -4034,11 +4130,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:72302403:DL09-EN013:rare",
+     "number": "DL09-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:72302403:DL09-EN013:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77369,
-       77713,
-       77714,
+       77369
+      ]
+     },
+     "number": "DL09-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Swords of Revealing Light (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:72302403:DL09-EN013:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77713
+      ]
+     },
+     "number": "DL09-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Swords of Revealing Light (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:72302403:DL09-EN013:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77714
+      ]
+     },
+     "number": "DL09-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Swords of Revealing Light (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:72302403:DL09-EN013:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77715
       ]
      },
@@ -4046,10 +4200,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Swords of Revealing Light (Blue)"
-     }
+      "name": "Swords of Revealing Light (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "duelist-pack-yugi:72302403:DPYG-EN018:common",
@@ -4441,6 +4597,57 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:72302403:SBC2-ENA14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600307
+      ]
+     },
+     "number": "SBC2-ENA14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Swords of Revealing Light (SBC2-ENA14)"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:72302403:SBC2-ENA14:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600306
+      ]
+     },
+     "number": "SBC2-ENA14",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Swords of Revealing Light (PSR)"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:72302403:SBC2-ENG11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600308
+      ]
+     },
+     "number": "SBC2-ENG11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Swords of Revealing Light (SBC2-ENG11)"
+     }
+    },
+    {
      "id": "spellcaster-s-command-structure-deck:72302403:SDSC-EN026:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4616,10 +4823,37 @@
      }
     },
     {
+     "id": "world-championship-series:72302403:2024-ENP02:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       633383
+      ]
+     },
+     "number": "2024-ENP02",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "world-championship-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Swords of Revealing Light"
+     }
+    },
+    {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:72302403:YGLD-ENA24:common",
+     "number": "YGLD-ENA24",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:72302403:YGLD-ENA24:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        615939
@@ -4629,16 +4863,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Swords of Revealing Light (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:72302403:YGLD-ENB17:ultra_rare",
+     "number": "YGLD-ENB17",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:72302403:YGLD-ENB17:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615973
@@ -4648,16 +4894,28 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Swords of Revealing Light (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:72302403:YGLD-ENC25:common",
+     "number": "YGLD-ENC25",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:72302403:YGLD-ENC25:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        616022
@@ -4667,10 +4925,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Swords of Revealing Light (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "editions": [
@@ -4678,6 +4938,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:72302403:YGLD-ENA24:common",
+     "number": "YGLD-ENA24",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:72302403:YGLD-ENA24:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        108226
@@ -4687,10 +4958,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Swords of Revealing Light (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
@@ -4698,6 +4971,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:72302403:YGLD-ENB17:ultra_rare",
+     "number": "YGLD-ENB17",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:72302403:YGLD-ENB17:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108260
@@ -4707,10 +4991,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Swords of Revealing Light (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -4718,6 +5004,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:72302403:YGLD-ENC25:common",
+     "number": "YGLD-ENC25",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:72302403:YGLD-ENC25:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        108309
@@ -4727,15 +5024,20 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Swords of Revealing Light (C)"
-     }
+     },
+     "variant": "c"
     }
    ],
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "Geminize Lord Goldknight"
+   ],
    "atk": 1500,
    "attribute": "earth",
    "def": 500,
@@ -4777,6 +5079,9 @@
    "passcode": 72305034,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:72305034:BODE-EN032:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4844,6 +5149,10 @@
    "passcode": 72309040,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:72309040:POTE-EN000:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4857,6 +5166,26 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Ghoti of the Deep Beyond"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "power-of-the-elements:72309040:POTE-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       448628
+      ]
+     },
+     "number": "POTE-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "power-of-the-elements",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghoti of the Deep Beyond (POTE-ENSP1)"
      }
     },
     {
@@ -5358,6 +5687,9 @@
    ]
   },
   {
+   "aliases": [
+    "Splight Sprind"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -5438,6 +5770,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:72329844:DABL-EN048:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5462,6 +5797,9 @@
    ]
   },
   {
+   "aliases": [
+    "Simorgh, Bird of Kings"
+   ],
    "archetypes": [
     "simorgh"
    ],
@@ -6126,6 +6464,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thorns of Violet Poison"
+   ],
    "archetypes": [
     "predap"
    ],
@@ -6262,6 +6603,9 @@
    ]
   },
   {
+   "aliases": [
+    "Aquamirror Focalization"
+   ],
    "archetypes": [
     "aquamirror"
    ],
@@ -6303,6 +6647,9 @@
    "passcode": 72386290,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:72386290:PHHY-EN067:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6322,6 +6669,9 @@
    "tcgDate": "2023-02-09"
   },
   {
+   "aliases": [
+    "D/D/D Superdoom King Whitest Armageddon"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d",
@@ -6535,11 +6885,51 @@
     },
     {
      "id": "duelist-league-2-participation-cards:72405967:DL11-EN017:rare",
+     "number": "DL11-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:72405967:DL11-EN017:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77394,
-       80346,
-       80347,
+       80346
+      ]
+     },
+     "number": "DL11-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Royal Tribute (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:72405967:DL11-EN017:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80347
+      ]
+     },
+     "number": "DL11-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Royal Tribute (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:72405967:DL11-EN017:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80348
       ]
      },
@@ -6547,10 +6937,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Royal Tribute (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:72405967:DL11-EN017:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77394
+      ]
+     },
+     "number": "DL11-EN017",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Royal Tribute (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-3-yugi-s-world-mega-pack:72405967:LCYW-EN195:ultra_rare",
@@ -6631,6 +7041,9 @@
    "passcode": 72409226,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:72409226:SUDA-EN045:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6862,6 +7275,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mimetizing Man-Eater Bug"
+   ],
    "archetypes": [
     "man-eater-bug"
    ],
@@ -6922,6 +7338,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:72427512:BODE-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7411,6 +7830,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:72444406:PHNI-EN042:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7427,6 +7849,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:72444406:PHNI-EN042:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7507,6 +7932,9 @@
    "tcgDate": "2007-02-28"
   },
   {
+   "aliases": [
+    "Delay of Game"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "72453068",
@@ -7792,6 +8220,9 @@
    "tcgDate": "2013-11-08"
   },
   {
+   "aliases": [
+    "Magistus Verre Cendrillon"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -8022,6 +8453,9 @@
    ]
   },
   {
+   "aliases": [
+    "Topologic Tulisbaena"
+   ],
    "atk": 2500,
    "attribute": "dark",
    "frame": "link",
@@ -8372,6 +8806,9 @@
    "tcgDate": "2011-10-04"
   },
   {
+   "aliases": [
+    "Branded Light"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -8445,6 +8882,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:72554664:PHHY-EN056:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8787,6 +9227,9 @@
    "tcgDate": "2003-10-10"
   },
   {
+   "aliases": [
+    "Protostar Dragon of the Void"
+   ],
    "atk": 2500,
    "attribute": "light",
    "def": 2500,
@@ -8861,6 +9304,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:72578374:ROTA-EN034:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8956,6 +9402,26 @@
       "match": "number+rarity",
       "name": "Block Golem"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:72580321:STP7-EN022:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544985
+      ]
+     },
+     "number": "STP7-EN022",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Block Golem"
+     }
     }
    ],
    "tcgDate": "2012-08-18",
@@ -8965,6 +9431,9 @@
    ]
   },
   {
+   "aliases": [
+    "Goddess of Sweet Revenge - LC06-EN001"
+   ],
    "atk": 1800,
    "attribute": "light",
    "def": 2000,
@@ -9206,9 +9675,7 @@
      "id": "legendary-duelists-season-3:72630549:LDS3-EN083:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276211,
-       276726,
-       276727
+       276211
       ]
      },
      "number": "LDS3-EN083",
@@ -9219,6 +9686,48 @@
       "match": "number+rarity",
       "name": "Chaos Command Magician"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:72630549:LDS3-EN083:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276726
+      ]
+     },
+     "number": "LDS3-EN083",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chaos Command Magician (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:72630549:LDS3-EN083:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276727
+      ]
+     },
+     "number": "LDS3-EN083",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chaos Command Magician (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "magician-s-force:72630549:MFC-068:ultra_rare",
@@ -9355,6 +9864,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tri-Headed Behemoth"
+   ],
    "atk": 1500,
    "attribute": "wind",
    "def": 1200,
@@ -9396,6 +9908,9 @@
    "passcode": 72632190,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:72632190:DOOD-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9774,6 +10289,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:72656408:PHHY-EN004:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10259,6 +10777,13 @@
    "ocgDate": "2025-03-13",
    "passcode": 72705654,
    "prints": [
+    {
+     "id": "magnificent-maestros:72705654:MAMS-EN079:ultra_rare",
+     "number": "MAMS-EN079",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
     {
      "id": "maze-of-the-master:72705654:MZTM-EN012:rare",
      "identifiers": {
@@ -10871,6 +11396,9 @@
    ]
   },
   {
+   "aliases": [
+    "Doll Monster Miss Madchen"
+   ],
    "archetypes": [
     "doll-monster"
    ],
@@ -10931,6 +11459,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:72717433:BACH-EN093:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11084,6 +11615,9 @@
    "tcgDate": "2016-08-04"
   },
   {
+   "aliases": [
+    "Icejade Eminence Emergence"
+   ],
    "archetypes": [
     "icejade"
    ],
@@ -11141,6 +11675,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:72776252:PHHY-EN053:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11204,6 +11741,9 @@
    "passcode": 72782945,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:72782945:SUDA-EN098:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11227,6 +11767,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hi-Speedroid GOM Gun"
+   ],
    "archetypes": [
     "hi-speedroid"
    ],
@@ -12081,6 +12624,9 @@
    "passcode": 72860663,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:72860663:BACH-EN048:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12308,6 +12854,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:72880377:AGOV-EN020:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12324,6 +12873,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:72880377:AGOV-EN020:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13169,6 +13721,9 @@
    ]
   },
   {
+   "aliases": [
+    "Comic Cat"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 0,
@@ -13191,13 +13746,36 @@
    "kind": "monster",
    "level": 1,
    "monsterType": "Beast",
-   "name": "Comic Cat",
+   "name": "Animimicat",
    "names": {
-    "en": "Comic Cat"
+    "en": "Animimicat"
    },
    "ocgDate": "2026-05-30",
    "passcode": 72921536,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:72921536:MAMS-EN040:secret_rare",
+     "number": "MAMS-EN040",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:72921536:MAMS-EN040:starlight_rare",
+     "number": "MAMS-EN040",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:72921536:MAMS-EN040:ultra_rare",
+     "number": "MAMS-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Beast",
     "Effect"
@@ -13531,10 +14109,7 @@
      "id": "dragons-of-legend-the-complete-series:72930878:DLCS-EN032:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221562,
-       222238,
-       222239,
-       222240
+       221562
       ]
      },
      "number": "DLCS-EN032",
@@ -13545,6 +14120,69 @@
       "match": "number+rarity",
       "name": "Black Sonic"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:72930878:DLCS-EN032:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222238
+      ]
+     },
+     "number": "DLCS-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Black Sonic (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:72930878:DLCS-EN032:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222239
+      ]
+     },
+     "number": "DLCS-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Black Sonic (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:72930878:DLCS-EN032:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222240
+      ]
+     },
+     "number": "DLCS-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Black Sonic (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend:72930878:DRLG-EN030:secret_rare",
@@ -13566,6 +14204,9 @@
    "tcgDate": "2014-04-25"
   },
   {
+   "aliases": [
+    "Abyss-scale of Mizuchi"
+   ],
    "archetypes": [
     "mermail"
    ],
@@ -13643,6 +14284,9 @@
    "tcgDate": "2013-05-17"
   },
   {
+   "aliases": [
+    "Adamatia Sign"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -14025,6 +14669,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:72989439:IOC-EN025:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [

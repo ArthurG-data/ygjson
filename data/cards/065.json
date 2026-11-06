@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Snow Weathery Ciel"
+   ],
    "archetypes": [
     "the-weather"
    ],
@@ -45,6 +48,9 @@
    "passcode": 65017789,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:65017789:MGED-EN016:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -336,6 +342,9 @@
    ]
   },
   {
+   "aliases": [
+    "Queen of the Azamina"
+   ],
    "archetypes": [
     "azamina"
    ],
@@ -381,6 +390,9 @@
    "passcode": 65033975,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:65033975:SUDA-EN009:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -397,6 +409,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:65033975:SUDA-EN009:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -465,6 +480,9 @@
    "passcode": 65037172,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:65037172:CYAC-EN033:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -490,6 +508,9 @@
    ]
   },
   {
+   "aliases": [
+    "Teamwork of the Possessed"
+   ],
    "archetypes": [
     "possessed"
    ],
@@ -697,6 +718,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:65064143:IOC-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -869,6 +893,9 @@
    "tcgDate": "2009-05-02"
   },
   {
+   "aliases": [
+    "Link In-Flyer"
+   ],
    "atk": 0,
    "attribute": "wind",
    "def": 1800,
@@ -950,6 +977,9 @@
    ]
   },
   {
+   "aliases": [
+    "Red Vinegar Crossing"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "65107325",
@@ -1004,6 +1034,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:65107325:PHHY-EN079:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1023,6 +1056,9 @@
    "tcgDate": "2023-02-09"
   },
   {
+   "aliases": [
+    "Seven Star Sky Style Battojutsu - \"Hagun\""
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "65114115",
@@ -1061,6 +1097,9 @@
    "passcode": 65114115,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:65114115:ALIN-EN069:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1131,6 +1170,9 @@
    "tcgDate": "2026-10-08"
   },
   {
+   "aliases": [
+    "Hollow of Dragon Chakra"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -1412,6 +1454,9 @@
    "tcgDate": "2012-01-14"
   },
   {
+   "aliases": [
+    "Speedroid Clackernel"
+   ],
    "archetypes": [
     "roid-2"
    ],
@@ -1457,6 +1502,9 @@
    "passcode": 65155517,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:65155517:SUDA-EN006:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1936,6 +1984,9 @@
    "tcgDate": "2002-09-16"
   },
   {
+   "aliases": [
+    "Mastar Boy"
+   ],
    "atk": 1400,
    "attribute": "water",
    "frame": "link",
@@ -2091,6 +2142,9 @@
    ]
   },
   {
+   "aliases": [
+    "Corpse Dragon Lord Felgrand"
+   ],
    "archetypes": [
     "felgrand"
    ],
@@ -2152,6 +2206,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:65187687:DIFO-EN040:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2568,6 +2625,9 @@
    ]
   },
   {
+   "aliases": [
+    "Xenovader△ Judgment"
+   ],
    "archetypes": [
     "trirealm-rift"
    ],
@@ -2812,6 +2872,9 @@
    "tcgDate": "2016-11-03"
   },
   {
+   "aliases": [
+    "Big Shield Guardna"
+   ],
    "atk": 100,
    "attribute": "earth",
    "def": 2600,
@@ -2950,11 +3013,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:65240384:DL09-EN004:rare",
+     "number": "DL09-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:65240384:DL09-EN004:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77360,
-       77686,
-       77687,
+       77360
+      ]
+     },
+     "number": "DL09-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Big Shield Gardna (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:65240384:DL09-EN004:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77686
+      ]
+     },
+     "number": "DL09-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Big Shield Gardna (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:65240384:DL09-EN004:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77687
+      ]
+     },
+     "number": "DL09-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Big Shield Gardna (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:65240384:DL09-EN004:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77688
       ]
      },
@@ -2962,10 +3083,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Big Shield Gardna (Blue)"
-     }
+      "name": "Big Shield Gardna (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "duelist-pack-yugi:65240384:DPYG-EN009:common",
@@ -3073,6 +3196,23 @@
      "set": "legendary-dragon-decks",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Big Shield Gardna"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:65240384:SBC2-ENA08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600117
+      ]
+     },
+     "number": "SBC2-ENA08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Big Shield Gardna"
      }
     },
@@ -3407,6 +3547,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:65261141:PHNI-EN054:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3426,6 +3569,9 @@
    "tcgDate": "2024-02-08"
   },
   {
+   "aliases": [
+    "Awakening of the Possessed - Archfiend Reaper of Nef"
+   ],
    "archetypes": [
     "possessed"
    ],
@@ -3795,6 +3941,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:65287621:IOC-EN073:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3857,6 +4006,23 @@
      "set": "legendary-collection-4-joey-s-world-mega-pack",
      "tcgplayer": {
       "match": "number-other-set",
+      "name": "Dark Driceratops"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:65287621:SGX4-ENC10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543788
+      ]
+     },
+     "number": "SGX4-ENC10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dark Driceratops"
      }
     },
@@ -3941,6 +4107,9 @@
    "passcode": 65289956,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:65289956:SUDA-EN057:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4143,6 +4312,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number F0"
+   ],
    "archetypes": [
     "number-spell-trap-archetype",
     "utopic-future"
@@ -4261,6 +4433,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sanctuary of the Fire Kings"
+   ],
    "archetypes": [
     "fire-king"
    ],
@@ -4388,6 +4563,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kuzuha the Bewitching Deity Ashtra"
+   ],
    "archetypes": [
     "ashtra"
    ],
@@ -4447,6 +4625,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tenpai Dragon Fadora"
+   ],
    "archetypes": [
     "tenpai-dragon"
    ],
@@ -4508,6 +4689,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:65326118:LEDE-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4531,6 +4715,9 @@
    ]
   },
   {
+   "aliases": [
+    "Troymare Gryphon"
+   ],
    "archetypes": [
     "knightmare"
    ],
@@ -4837,6 +5024,9 @@
    ]
   },
   {
+   "aliases": [
+    "Endymion Lab"
+   ],
    "archetypes": [
     "endymion"
    ],
@@ -4940,6 +5130,9 @@
    "passcode": 65351555,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:65351555:PHHY-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4963,6 +5156,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zombie Struggle"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "65357623",
@@ -5513,6 +5709,9 @@
    "tcgDate": "2003-10-10"
   },
   {
+   "aliases": [
+    "Infernoble Knight General Oliver"
+   ],
    "archetypes": [
     "infernoble-knight"
    ],
@@ -5766,6 +5965,23 @@
      "set": "dark-revelation-volume-2",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "The End of Anubis"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:65403020:SBC2-ENG03:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600310
+      ]
+     },
+     "number": "SBC2-ENG03",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "The End of Anubis"
      }
     },
@@ -6627,6 +6843,13 @@
       "match": "number+rarity",
       "name": "Toon Mermaid"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:65458948:UP02-EN020:common",
+     "number": "UP02-EN020",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2002-09-16",
@@ -6637,6 +6860,9 @@
    ]
   },
   {
+   "aliases": [
+    "Psycho Bounder"
+   ],
    "archetypes": [
     "jinzo"
    ],
@@ -6925,6 +7151,9 @@
    "passcode": 65477143,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:65477143:PHHY-EN016:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6950,6 +7179,9 @@
    ]
   },
   {
+   "aliases": [
+    "Security Force Dog Tag"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -7142,6 +7374,9 @@
    "passcode": 65496951,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:65496951:LEDE-EN066:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7161,6 +7396,9 @@
    "tcgDate": "2024-04-25"
   },
   {
+   "aliases": [
+    "Squint Squid"
+   ],
    "atk": 0,
    "attribute": "water",
    "def": 1800,
@@ -7406,6 +7644,9 @@
    "passcode": 65514302,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:65514302:BPRO-EN053:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8162,6 +8403,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragma, the Country of Conviction"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -8454,6 +8698,9 @@
    ]
   },
   {
+   "aliases": [
+    "Demon Emperor Angmar"
+   ],
    "archetypes": [
     "monarch"
    ],
@@ -8756,6 +9003,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:65622692:SBC2-ENB08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600342
+      ]
+     },
+     "number": "SBC2-ENB08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Y-Dragon Head"
+     }
+    },
+    {
      "id": "structure-deck-seto-kaiba:65622692:SDKS-EN006:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8846,6 +9110,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gullinbursti of the Nordic Beasts"
+   ],
    "archetypes": [
     "nordic",
     "nordic-beast"
@@ -8891,6 +9158,9 @@
    "passcode": 65626958,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:65626958:BACH-EN011:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9065,6 +9335,9 @@
    "tcgDate": "2012-05-25"
   },
   {
+   "aliases": [
+    "The Elegant Harpie Lady"
+   ],
    "archetypes": [
     "harpie"
    ],
@@ -9141,6 +9414,9 @@
    "tcgDate": "2019-01-10"
   },
   {
+   "aliases": [
+    "Number 32"
+   ],
    "archetypes": [
     "number",
     "number-spell-trap-archetype",
@@ -9850,6 +10126,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Allied Generals of Ancient Warriors - Shuanglong"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -10001,6 +10280,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:65726770:LEDE-EN003:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10017,6 +10299,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:65726770:LEDE-EN003:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10031,6 +10316,26 @@
       "match": "number+rarity",
       "name": "Silent Magician Zero"
      }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "legacy-of-destruction:65726770:LEDE-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       547226
+      ]
+     },
+     "number": "LEDE-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "legacy-of-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Silent Magician Zero (LEDE-ENSP1)"
+     }
     }
    ],
    "tcgDate": "2024-04-25",
@@ -10040,6 +10345,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rescue-ACE Air Hoister"
+   ],
    "archetypes": [
     "rescue-ace"
    ],
@@ -10189,6 +10497,9 @@
    ]
   },
   {
+   "aliases": [
+    "I:P Maskerena"
+   ],
    "atk": 800,
    "attribute": "dark",
    "frame": "link",
@@ -10371,6 +10682,40 @@
      }
     },
     {
+     "id": "battles-of-legend-monstrous-revenge:65741786:BLMR-EN085:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       500502
+      ]
+     },
+     "number": "BLMR-EN085",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "battles-of-legend-monstrous-revenge",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "I:P Masquerena (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "battles-of-legend-monstrous-revenge:65741786:BLMR-EN085:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       500500
+      ]
+     },
+     "number": "BLMR-EN085",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "battles-of-legend-monstrous-revenge",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "I:P Masquerena"
+     }
+    },
+    {
      "editions": [
       "first"
      ],
@@ -10501,6 +10846,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:65741786:MGED-EN035:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10882,6 +11230,9 @@
    ]
   },
   {
+   "aliases": [
+    "Atlantis Call"
+   ],
    "archetypes": [
     "atlantis-city-of-the-sea-dragon"
    ],
@@ -11119,6 +11470,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Vicious Astroud"
+   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 3000,
@@ -11177,6 +11531,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:65815684:CYAC-EN036:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11490,6 +11847,9 @@
    ]
   },
   {
+   "aliases": [
+    "DoomZ XIII Over - Graflario"
+   ],
    "archetypes": [
     "doomz"
    ],
@@ -11637,6 +11997,9 @@
    ]
   },
   {
+   "aliases": [
+    "YummyRedemption"
+   ],
    "archetypes": [
     "yummy"
    ],
@@ -11759,9 +12122,55 @@
       "match": "number+rarity",
       "name": "Fallen Paradise of the Sacred Beasts"
      }
+    },
+    {
+     "id": "magnificent-maestros:65861210:MAMS-EN111:ultra_rare",
+     "number": "MAMS-EN111",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2026-07-02"
+  },
+  {
+   "archetypes": [
+    "reindsurm"
+   ],
+   "atk": 3300,
+   "attribute": "dark",
+   "def": 1300,
+   "frame": "ritual",
+   "hasEffect": true,
+   "id": "65866932",
+   "identifiers": {
+    "konamiId": 23839,
+    "ygoprodeckId": 65866932
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/65866932.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/65866932.jpg",
+     "id": 65866932,
+     "small": "https://images.ygoprodeck.com/images/cards_small/65866932.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Insect",
+   "name": "Reindsurm Giriakarma",
+   "names": {
+    "en": "Reindsurm Giriakarma"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 65866932,
+   "prints": [],
+   "typeline": [
+    "Insect",
+    "Ritual",
+    "Effect"
+   ]
   },
   {
    "archetypes": [
@@ -12109,6 +12518,9 @@
    ]
   },
   {
+   "aliases": [
+    "Argostars - Tydel the Purple Lightning"
+   ],
    "archetypes": [
     "argostars"
    ],
@@ -12150,6 +12562,9 @@
    "passcode": 65889305,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:65889305:SUDA-EN071:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12166,6 +12581,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:65889305:SUDA-EN071:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12185,6 +12603,9 @@
    "tcgDate": "2025-01-23"
   },
   {
+   "aliases": [
+    "Brionac, the Dragon of Icy Malevolence"
+   ],
    "atk": 2300,
    "attribute": "water",
    "def": 1400,
@@ -12293,6 +12714,9 @@
    "passcode": 65892585,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:65892585:CYAC-EN088:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12309,6 +12733,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:65892585:CYAC-EN088:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12374,6 +12801,9 @@
    "passcode": 65898344,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:65898344:DABL-EN091:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12505,6 +12935,9 @@
    "passcode": 65910922,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:65910922:DABL-EN088:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12585,6 +13018,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:65914127:CYAC-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12604,6 +13040,9 @@
    "tcgDate": "2023-05-04"
   },
   {
+   "aliases": [
+    "Yoko-Tuner-Tug-of-War"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "65938950",
@@ -12660,6 +13099,9 @@
    "tcgDate": "2023-06-22"
   },
   {
+   "aliases": [
+    "Noble Arms of Light - Dannel"
+   ],
    "archetypes": [
     "adventurer"
    ],
@@ -13154,6 +13596,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kewl Tune Back 2 Back"
+   ],
    "archetypes": [
     "kewl-tune"
    ],
@@ -13469,6 +13914,9 @@
    ]
   },
   {
+   "aliases": [
+    "Excessive Burial"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "65993085",

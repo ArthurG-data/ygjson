@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Gladiator Beast Dragacius"
+   ],
    "archetypes": [
     "gladiator-beast"
    ],
@@ -151,6 +154,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:62002838:INFO-EN011:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -219,6 +225,9 @@
    "passcode": 62006866,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:62006866:DUAD-EN001:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -327,6 +336,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ghost Reaper"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 1800,
@@ -390,6 +402,23 @@
      "set": "2017-mega-tin-mega-pack",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Ghost Reaper & Winter Cherries"
+     }
+    },
+    {
+     "id": "2022-tin-of-the-pharaoh-s-gods:62015409:MP22-EN256:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       285214
+      ]
+     },
+     "number": "MP22-EN256",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "2022-tin-of-the-pharaoh-s-gods",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Ghost Reaper & Winter Cherries"
      }
     },
@@ -479,6 +508,143 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Ghost Reaper & Winter Cherries"
+     }
+    },
+    {
+     "id": "ots-tournament-pack-20:62015409:OP20-EN001:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       450438
+      ]
+     },
+     "number": "OP20-EN001",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "ots-tournament-pack-20",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (UTR)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592258
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art) (PCR)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592259
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art) (Platinum Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592260,
+       594897
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592261
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art) (Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592262
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592263
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art) (PUR)"
+     }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592264
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art) (UR)"
      }
     },
     {
@@ -638,6 +804,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bond of the Branded"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -831,6 +1000,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infinitrack Rock Anchor"
+   ],
    "archetypes": [
     "infinitrack"
    ],
@@ -1065,6 +1237,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 94"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -1179,6 +1354,9 @@
    "passcode": 62076252,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:62076252:SUDA-EN018:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1195,6 +1373,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:62076252:SUDA-EN018:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1218,6 +1399,9 @@
    ]
   },
   {
+   "aliases": [
+    "The True Light"
+   ],
    "archetypes": [
     "blue-eyes"
    ],
@@ -1370,6 +1554,9 @@
    "tcgDate": "2024-01-18"
   },
   {
+   "aliases": [
+    "Evil★Twins Kisikil-Lilla"
+   ],
    "archetypes": [
     "evil-twin"
    ],
@@ -2061,6 +2248,9 @@
    "tcgDate": "2015-01-01"
   },
   {
+   "aliases": [
+    "Vernalizer Fairy of Flowers and Fields"
+   ],
    "archetypes": [
     "vernusylph"
    ],
@@ -2106,6 +2296,10 @@
    "passcode": 62133026,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:62133026:POTE-EN018:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2253,6 +2447,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:62156277:LEDE-EN091:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2276,6 +2473,9 @@
    ]
   },
   {
+   "aliases": [
+    "Illusion Balloon"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -2443,6 +2643,9 @@
    "tcgDate": "2019-10-24"
   },
   {
+   "aliases": [
+    "Whispers of the Sinful Spoils"
+   ],
    "archetypes": [
     "sinful-spoils"
    ],
@@ -2500,6 +2703,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:62173132:INFO-EN060:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2726,6 +2932,9 @@
    "tcgDate": "2013-09-27"
   },
   {
+   "aliases": [
+    "Rock Ogre Grotto 2"
+   ],
    "atk": 700,
    "attribute": "earth",
    "def": 1400,
@@ -2768,6 +2977,9 @@
    ]
   },
   {
+   "aliases": [
+    "Suship Galley \"Kaisen\""
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -2953,6 +3165,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ghost Meets Girl - A Mayakashi and Shiranui's Tale"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -3080,6 +3295,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:62242678:MGED-EN070:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3136,6 +3354,9 @@
    ]
   },
   {
+   "aliases": [
+    "Possessed Awakening"
+   ],
    "archetypes": [
     "charmer"
    ],
@@ -3642,11 +3863,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:62279055:DL12-EN019:rare",
+     "number": "DL12-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:62279055:DL12-EN019:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77416,
-       80406,
-       80407,
+       80406
+      ]
+     },
+     "number": "DL12-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Magic Cylinder (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:62279055:DL12-EN019:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80407
+      ]
+     },
+     "number": "DL12-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Magic Cylinder (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:62279055:DL12-EN019:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80408
       ]
      },
@@ -3654,10 +3915,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Magic Cylinder (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:62279055:DL12-EN019:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77416
+      ]
+     },
+     "number": "DL12-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Magic Cylinder (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "invasion-of-chaos-special-edition:62279055:IOC-SE2:ultra_rare",
@@ -4092,6 +4373,23 @@
      }
     },
     {
+     "id": "world-championship-jpp-cards:62279055:2023-JPP002:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       721861
+      ]
+     },
+     "number": "2023-JPP002",
+     "rarity": "qc_secret_rare",
+     "region": "JP",
+     "set": "world-championship-jpp-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Magic Cylinder"
+     }
+    },
+    {
      "editions": [
       "unlimited"
      ],
@@ -4210,6 +4508,9 @@
    "tcgDate": "2018-05-03"
   },
   {
+   "aliases": [
+    "Salvegent Driver"
+   ],
    "atk": 2200,
    "attribute": "light",
    "def": 2100,
@@ -4425,6 +4726,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pristine Planets Amritara"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "62314831",
@@ -4463,6 +4767,9 @@
    "passcode": 62314831,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:62314831:DUNE-EN055:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4548,6 +4855,9 @@
    ]
   },
   {
+   "aliases": [
+    "Samsara Regenerating Lotus"
+   ],
    "archetypes": [
     "relinquished"
    ],
@@ -4609,6 +4919,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:62318994:PHNI-EN003:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4632,6 +4945,9 @@
    ]
   },
   {
+   "aliases": [
+    "Agido the Ancient Sentry"
+   ],
    "archetypes": [
     "exchange-of-the-spirit"
    ],
@@ -5329,6 +5645,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ars Magna of Purification and Corruption"
+   ],
    "archetypes": [
     "ars-magna"
    ],
@@ -5444,6 +5763,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Gouki Rematch"
+   ],
    "archetypes": [
     "gouki"
    ],
@@ -5664,6 +5986,9 @@
    ]
   },
   {
+   "aliases": [
+    "Curse, Dawn of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -6123,6 +6448,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nihil, Dreg of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -6207,6 +6535,9 @@
    ]
   },
   {
+   "aliases": [
+    "Evilcella Lutea"
+   ],
    "atk": 1800,
    "attribute": "earth",
    "def": 100,
@@ -7125,11 +7456,51 @@
     },
     {
      "id": "duelist-league-15-participation-cards:62476815:DL15-EN010:rare",
+     "number": "DL15-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:62476815:DL15-EN010:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80077,
-       80078,
-       80079,
+       80077
+      ]
+     },
+     "number": "DL15-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gogogo Golem (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:62476815:DL15-EN010:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80078
+      ]
+     },
+     "number": "DL15-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gogogo Golem (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:62476815:DL15-EN010:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80080
       ]
      },
@@ -7137,10 +7508,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Gogogo Golem (Blue)"
-     }
+      "name": "Gogogo Golem (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:62476815:DL15-EN010:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80079
+      ]
+     },
+     "number": "DL15-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gogogo Golem (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "generation-force:62476815:GENF-EN002:common",
@@ -7353,6 +7744,9 @@
    "tcgDate": "2022-11-17"
   },
   {
+   "aliases": [
+    "Trickstar Fes"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -7738,6 +8132,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 39"
+   ],
    "archetypes": [
     "number-spell-trap-archetype",
     "utopia"
@@ -7828,6 +8225,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ancient Warriors Saga - Southeast Wind"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -7887,6 +8287,9 @@
    "tcgDate": "2020-08-06"
   },
   {
+   "aliases": [
+    "Whisper of the World Legacy"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -7963,6 +8366,9 @@
    "tcgDate": "2018-02-01"
   },
   {
+   "aliases": [
+    "Number 77"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -8013,8 +8419,7 @@
      "id": "battles-of-legend-chapter-1:62541668:BLC1-EN038:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538510,
-       538671
+       538510
       ]
      },
      "number": "BLC1-EN038",
@@ -8025,6 +8430,27 @@
       "match": "number+rarity",
       "name": "Number 77: The Seven Sins"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:62541668:BLC1-EN038:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538671
+      ]
+     },
+     "number": "BLC1-EN038",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 77: The Seven Sins (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "premium-gold-infinite-gold:62541668:PGL3-EN011:gold_secret_rare",
@@ -8052,6 +8478,9 @@
    ]
   },
   {
+   "aliases": [
+    "Destiny HERO - Doom Liege"
+   ],
    "archetypes": [
     "destiny-hero"
    ],
@@ -8203,6 +8632,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:62543393:IOC-EN027:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8265,6 +8697,23 @@
      "set": "legendary-collection-4-joey-s-world-mega-pack",
      "tcgplayer": {
       "match": "number-other-set",
+      "name": "Lekunga"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:62543393:SBC2-END07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600226
+      ]
+     },
+     "number": "SBC2-END07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Lekunga"
      }
     }
@@ -8500,6 +8949,9 @@
    "passcode": 62592805,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:62592805:DUNE-EN044:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8516,6 +8968,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:62592805:DUNE-EN044:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8679,6 +9134,9 @@
    "passcode": 62606805,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:62606805:DUAD-EN015:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8703,6 +9161,9 @@
    ]
   },
   {
+   "aliases": [
+    "ZEXAL Construction"
+   ],
    "archetypes": [
     "zexal"
    ],
@@ -8867,6 +9328,9 @@
    ]
   },
   {
+   "aliases": [
+    "Margin Trade"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "62632427",
@@ -9028,6 +9492,9 @@
    "tcgDate": "2005-02-26"
   },
   {
+   "aliases": [
+    "The Phantom Knights of Wrong Magnet Ring"
+   ],
    "archetypes": [
     "phantom-knights",
     "the-phantom-knights"
@@ -9292,6 +9759,23 @@
      "set": "speed-duel-battle-city-box",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "X-Head Cannon"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:62651957:SBC2-ENB07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600338
+      ]
+     },
+     "number": "SBC2-ENB07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "X-Head Cannon"
      }
     },
@@ -9610,6 +10094,9 @@
    ]
   },
   {
+   "aliases": [
+    "Draconet"
+   ],
    "atk": 1400,
    "attribute": "dark",
    "def": 1200,
@@ -9896,6 +10383,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:62709239:MGED-EN080:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10021,6 +10511,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:62714453:DUNE-EN041:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10441,7 +10934,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 62767644,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:62767644:DUAD-EN064:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639401
+      ]
+     },
+     "number": "DUAD-EN064",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Inferno of the Ashened"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -10794,6 +11308,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:62803464:POTE-EN032:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10810,6 +11328,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:62803464:POTE-EN032:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10911,6 +11433,9 @@
    "tcgDate": "2016-03-17"
   },
   {
+   "aliases": [
+    "Orphegel Einsatz"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -10971,6 +11496,9 @@
    "tcgDate": "2018-10-18"
   },
   {
+   "aliases": [
+    "Good"
+   ],
    "archetypes": [
     "burning-abyss"
    ],
@@ -11047,6 +11575,9 @@
    "tcgDate": "2015-01-15"
   },
   {
+   "aliases": [
+    "Xiangjian Swordmaster of the Illusory Iris"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -11259,6 +11790,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cataclysmic Crisp Chilblain"
+   ],
    "archetypes": [
     "cataclysmic"
    ],
@@ -11888,6 +12422,9 @@
    "passcode": 62880279,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:62880279:DUAD-EN004:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11904,6 +12441,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:62880279:DUAD-EN004:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12118,6 +12658,23 @@
      "rarity": "common",
      "region": "PT",
      "set": "ots-tournament-pack-14-por"
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:62892347:SGX4-ENB02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543760
+      ]
+     },
+     "number": "SGX4-ENB02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Arcana Force 0 - The Fool"
+     }
     }
    ],
    "tcgDate": "2008-05-03",
@@ -12466,6 +13023,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sprigguns Ship Exblower"
+   ],
    "archetypes": [
     "springans"
    ],
@@ -12855,6 +13415,9 @@
    ]
   },
   {
+   "aliases": [
+    "Albért, Jester of Despia"
+   ],
    "archetypes": [
     "despia"
    ],
@@ -13205,6 +13768,9 @@
    "tcgDate": "2003-06-06"
   },
   {
+   "aliases": [
+    "Sacred Sheep Tree, Baromet"
+   ],
    "atk": 1900,
    "attribute": "earth",
    "def": 2000,
@@ -13246,6 +13812,9 @@
    "passcode": 62967433,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:62967433:CYAC-EN097:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13749,6 +14318,9 @@
    "tcgDate": "2008-08-09"
   },
   {
+   "aliases": [
+    "Woes of the White Woods"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -13806,6 +14378,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:62995268:INFO-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [

@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Brandish Airspace Area Zero"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -371,6 +374,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mementotlan Mystical Sheep"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -432,6 +438,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:50042011:INFO-EN020:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -804,6 +813,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mystical Celtic Sage"
+   ],
    "archetypes": [
     "light-and-darkness-ritual"
    ],
@@ -1488,6 +1500,13 @@
    "passcode": 50088247,
    "prints": [
     {
+     "id": "magnificent-maestros:50088247:MAMS-EN068:ultra_rare",
+     "number": "MAMS-EN068",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "photon-shockwave:50088247:PHSW-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1899,6 +1918,9 @@
    "passcode": 50123605,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:50123605:ROTA-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1923,6 +1945,9 @@
    ]
   },
   {
+   "aliases": [
+    "White-Eye Pressure"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "50134646",
@@ -1961,6 +1986,9 @@
    "passcode": 50134646,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:50134646:PHNI-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2152,6 +2180,9 @@
    ]
   },
   {
+   "aliases": [
+    "Destruction Chant of the Sacred Beast"
+   ],
    "archetypes": [
     "phantasm"
    ],
@@ -2665,6 +2696,9 @@
    ]
   },
   {
+   "aliases": [
+    "Guardragon's Barrier"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -2841,6 +2875,9 @@
    ]
   },
   {
+   "aliases": [
+    "Selective Reborn"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "50213848",
@@ -3004,6 +3041,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Dark Magicians - The Ultimate Wizards"
+   ],
    "archetypes": [
     "dark-magician"
    ],
@@ -3049,6 +3089,9 @@
    "passcode": 50237654,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:50237654:BACH-EN100:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3276,6 +3319,9 @@
    "tcgDate": "2013-11-08"
   },
   {
+   "aliases": [
+    "Hamon, Lord of Striking Thunder - Sacred Beast of Sinful Catastrophe"
+   ],
    "archetypes": [
     "phantasm"
    ],
@@ -3473,6 +3519,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 36"
+   ],
    "archetypes": [
     "chronomaly",
     "number-spell-trap-archetype"
@@ -3603,6 +3652,9 @@
    ]
   },
   {
+   "aliases": [
+    "Datascape Gate - Qinglong"
+   ],
    "archetypes": [
     "virtual-world",
     "virtual-world-gate"
@@ -3703,6 +3755,9 @@
    "tcgDate": "2020-11-05"
   },
   {
+   "aliases": [
+    "Clotheep"
+   ],
    "atk": 700,
    "attribute": "earth",
    "frame": "link",
@@ -4170,6 +4225,9 @@
    "passcode": 50281477,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:50281477:AGOV-EN088:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4186,6 +4244,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:50281477:AGOV-EN088:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4778,9 +4839,7 @@
      "id": "legendary-duelists-season-3:50304345:LDS3-EN024:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276154,
-       276744,
-       276745
+       276154
       ]
      },
      "number": "LDS3-EN024",
@@ -4791,6 +4850,48 @@
       "match": "number+rarity",
       "name": "Evil HERO Infernal Prodigy"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:50304345:LDS3-EN024:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276744
+      ]
+     },
+     "number": "LDS3-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Infernal Prodigy (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:50304345:LDS3-EN024:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276745
+      ]
+     },
+     "number": "LDS3-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Infernal Prodigy (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:50304345:SGX3-ENA08:common",
@@ -4832,6 +4933,9 @@
    ]
   },
   {
+   "aliases": [
+    "Goblin Biker Stampede"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -4890,6 +4994,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:50311058:PHNI-EN075:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5348,6 +5455,9 @@
    "tcgDate": "2006-11-15"
   },
   {
+   "aliases": [
+    "Origin Gaia the Fierce Knight"
+   ],
    "archetypes": [
     "gaia-the-fierce-knight"
    ],
@@ -5451,6 +5561,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mirror Formation of the Ten Sacred Treasures"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "50357013",
@@ -5505,6 +5618,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:50357013:DUNE-EN064:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5521,6 +5637,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:50357013:DUNE-EN064:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6243,6 +6362,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:50415441:INFO-EN093:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6323,6 +6445,9 @@
    "tcgDate": "2009-09-01"
   },
   {
+   "aliases": [
+    "Degrenade Buster"
+   ],
    "atk": 2500,
    "attribute": "fire",
    "def": 2500,
@@ -6862,6 +6987,9 @@
    ]
   },
   {
+   "aliases": [
+    "Speedroid Party Horn Kid"
+   ],
    "archetypes": [
     "speedroid"
    ],
@@ -7033,6 +7161,9 @@
    ]
   },
   {
+   "aliases": [
+    "Amazoness Warrior Chief"
+   ],
    "archetypes": [
     "amazoness"
    ],
@@ -7093,6 +7224,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:50486289:DABL-EN095:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7656,6 +7790,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prompt Horn"
+   ],
    "atk": 200,
    "attribute": "dark",
    "def": 400,
@@ -7855,6 +7992,9 @@
    "tcgDate": "2016-03-17"
   },
   {
+   "aliases": [
+    "Crystron Needlefiber"
+   ],
    "archetypes": [
     "crystron"
    ],
@@ -7967,6 +8107,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elvennotes ~Oracle Aristeia~"
+   ],
    "archetypes": [
     "elfnote"
    ],
@@ -7997,6 +8140,9 @@
    "passcode": 50590801,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:50590801:BPRO-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8155,6 +8301,9 @@
    "tcgDate": "2025-06-13"
   },
   {
+   "aliases": [
+    "Leaplaice, the Withered Laceleaf Flatfish"
+   ],
    "attribute": "dark",
    "frame": "effect",
    "hasEffect": true,
@@ -8195,6 +8344,9 @@
    "passcode": 50599453,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:50599453:BACH-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8256,6 +8408,9 @@
    "passcode": 50604072,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:50604072:BPRO-EN008:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8532,6 +8687,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Ninja mdl 7749"
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -8742,6 +8900,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gagaku P.U.N.K. Wagon"
+   ],
    "archetypes": [
     "p-u-n-k"
    ],
@@ -8865,6 +9026,9 @@
    "passcode": 50643638,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:50643638:DOOD-EN083:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8889,6 +9053,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nephthys the Sacred Palladium"
+   ],
    "archetypes": [
     "nephthys"
    ],
@@ -8961,6 +9128,9 @@
    ]
   },
   {
+   "aliases": [
+    "As the Master of Beasts Pleases"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "50675040",
@@ -9109,6 +9279,9 @@
    "tcgDate": "2006-08-16"
   },
   {
+   "aliases": [
+    "Vaylantz of the Wireframe Abyss - Arctus XII"
+   ],
    "archetypes": [
     "vaylantz"
    ],
@@ -9154,6 +9327,9 @@
    "passcode": 50687050,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:50687050:PHHY-EN037:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9180,6 +9356,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cathy Eve L2"
+   ],
    "atk": 800,
    "attribute": "light",
    "def": 600,
@@ -9454,6 +9633,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:50699850:POTE-EN092:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9972,6 +10155,9 @@
    "passcode": 50727844,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:50727844:DUNE-EN085:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10171,6 +10357,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crowley the Origin of Prophecy"
+   ],
    "archetypes": [
     "spellbook"
    ],
@@ -10529,6 +10718,9 @@
    ]
   },
   {
+   "aliases": [
+    "Deep Sea Princess Primadonna"
+   ],
    "atk": 1500,
    "attribute": "water",
    "def": 2700,
@@ -10674,6 +10866,9 @@
    "tcgDate": "2021-08-12"
   },
   {
+   "aliases": [
+    "Tribrigade Ceras"
+   ],
    "archetypes": [
     "tri-brigade"
    ],
@@ -10758,6 +10953,9 @@
    ]
   },
   {
+   "aliases": [
+    "Simorgh, Bird of Beginnings"
+   ],
    "archetypes": [
     "simorgh"
    ],
@@ -10970,6 +11168,9 @@
    ]
   },
   {
+   "aliases": [
+    "Three as One"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "50838440",
@@ -11008,6 +11209,9 @@
    "passcode": 50838440,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:50838440:INFO-EN080:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11027,6 +11231,9 @@
    "tcgDate": "2024-07-18"
   },
   {
+   "aliases": [
+    "Hope of Nephthys"
+   ],
    "archetypes": [
     "nephthys"
    ],
@@ -11175,6 +11382,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:50855622:BODE-EN088:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11199,6 +11409,9 @@
    ]
   },
   {
+   "aliases": [
+    "Machina Radiator"
+   ],
    "archetypes": [
     "machina"
    ],
@@ -11531,6 +11744,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gimzek Inaba, the Lagomorph of Legendary Land"
+   ],
    "archetypes": [
     "gizmek"
    ],
@@ -11713,6 +11929,23 @@
       "match": "number+rarity",
       "name": "Blue Flame Swordsman"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:50903514:SBC2-ENC05:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600120
+      ]
+     },
+     "number": "SBC2-ENC05",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Blue Flame Swordsman"
+     }
     }
    ],
    "tcgDate": "2013-10-11",
@@ -11722,6 +11955,9 @@
    ]
   },
   {
+   "aliases": [
+    "El Shaddoll Apkalone"
+   ],
    "archetypes": [
     "shaddoll"
    ],
@@ -11959,6 +12195,9 @@
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "Goddess of Duality"
+   ],
    "atk": 950,
    "attribute": "light",
    "def": 700,
@@ -12001,6 +12240,9 @@
    "passcode": 50915474,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:50915474:SUDA-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12287,6 +12529,13 @@
       "match": "number+rarity",
       "name": "Neo the Magic Swordsman"
      }
+    },
+    {
+     "id": "magnificent-maestros:50930991:MAMS-EN060:ultra_rare",
+     "number": "MAMS-EN060",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     },
     {
      "id": "starter-deck-yugi-evolution:50930991:SYE-012:common",
@@ -12765,6 +13014,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:50951254:PHNI-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [

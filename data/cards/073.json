@@ -58,6 +58,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:73001017:IOC-EN022:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -416,6 +419,23 @@
    "passcode": 73046708,
    "prints": [
     {
+     "id": "maze-of-millennia:73046708:MZMI-EN025:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       533001
+      ]
+     },
+     "number": "MZMI-EN025",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "maze-of-millennia",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Armored Xyz (CR)"
+     }
+    },
+    {
      "id": "maze-of-millennia:73046708:MZMI-EN025:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -669,6 +689,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shinobird Calling"
+   ],
    "archetypes": [
     "shinobird"
    ],
@@ -1002,6 +1025,9 @@
    "tcgDate": "2002-10-20"
   },
   {
+   "aliases": [
+    "Adamatia Rise - Raptite"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -1204,6 +1230,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Undead Vampire"
+   ],
    "archetypes": [
     "vampire"
    ],
@@ -1264,6 +1293,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:73082255:BACH-EN045:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1347,6 +1379,9 @@
    ]
   },
   {
+   "aliases": [
+    "Irohamomiji"
+   ],
    "atk": 2100,
    "attribute": "wind",
    "def": 2600,
@@ -1405,6 +1440,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:73104892:BACH-EN042:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1474,6 +1512,9 @@
    "passcode": 73121813,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:73121813:SUDA-EN042:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1490,6 +1531,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:73121813:SUDA-EN042:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1592,11 +1636,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:73125233:DL14-EN008:rare",
+     "number": "DL14-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:73125233:DL14-EN008:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77584,
-       80493,
-       80494,
+       80493
+      ]
+     },
+     "number": "DL14-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Raiza the Storm Monarch (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:73125233:DL14-EN008:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80494
+      ]
+     },
+     "number": "DL14-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Raiza the Storm Monarch (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:73125233:DL14-EN008:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80495
       ]
      },
@@ -1604,10 +1688,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Raiza the Storm Monarch (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:73125233:DL14-EN008:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77584
+      ]
+     },
+     "number": "DL14-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Raiza the Storm Monarch (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "emperor-of-darkness-structure-deck:73125233:SR01-EN009:common",
@@ -1748,6 +1852,9 @@
    ]
   },
   {
+   "aliases": [
+    "Soul of Gaia the Fierce Knight"
+   ],
    "archetypes": [
     "gaia-the-fierce-knight",
     "mireniamu"
@@ -2194,6 +2301,23 @@
       "match": "number+rarity",
       "name": "Cross Porter"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:73146473:SGX4-ENA04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543736
+      ]
+     },
+     "number": "SGX4-ENA04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Cross Porter"
+     }
     }
    ],
    "tcgDate": "2008-05-03",
@@ -2258,6 +2382,9 @@
    "tcgDate": "2007-03-07"
   },
   {
+   "aliases": [
+    "Aromalylith Magnolia"
+   ],
    "archetypes": [
     "aroma"
    ],
@@ -2303,6 +2430,9 @@
    "passcode": 73167098,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:73167098:PHNI-EN039:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2679,6 +2809,9 @@
    "tcgDate": "2011-11-10"
   },
   {
+   "aliases": [
+    "World Legacy Finale"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -2758,6 +2891,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Revered Banner of the Revolution"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "73193552",
@@ -2994,6 +3130,23 @@
      "rarity": "common",
      "region": "PT",
      "set": "ots-tournament-pack-14-por"
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:73206827:SGX4-ENB12:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543770
+      ]
+     },
+     "number": "SGX4-ENB12",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Light Barrier"
+     }
     }
    ],
    "tcgDate": "2008-05-03"
@@ -3343,6 +3496,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:73218989:DABL-EN042:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3702,6 +3858,10 @@
    "passcode": 73244186,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:73244186:POTE-EN084:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3721,6 +3881,9 @@
    "tcgDate": "2022-08-04"
   },
   {
+   "aliases": [
+    "A Cell Scatter Burst"
+   ],
    "archetypes": [
     "alien"
    ],
@@ -3959,11 +4122,69 @@
    "prints": [
     {
      "id": "duelist-league-18-participation-cards:73285669:DL18-EN010:rare",
+     "number": "DL18-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:73285669:DL18-EN010:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94904,
-       94924,
-       94959,
+       94904
+      ]
+     },
+     "number": "DL18-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gladiator Beast Essedarii (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:73285669:DL18-EN010:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94924
+      ]
+     },
+     "number": "DL18-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gladiator Beast Essedarii (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:73285669:DL18-EN010:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94959
+      ]
+     },
+     "number": "DL18-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gladiator Beast Essedarii (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:73285669:DL18-EN010:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94960
       ]
      },
@@ -3971,10 +4192,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Gladiator Beast Essedarii (Blue)"
-     }
+      "name": "Gladiator Beast Essedarii (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "extreme-victory:73285669:EXVC-EN086:ultimate_rare",
@@ -4225,6 +4448,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zoo King Alpha"
+   ],
    "atk": 3000,
    "attribute": "earth",
    "def": 2500,
@@ -4450,6 +4676,9 @@
    ]
   },
   {
+   "aliases": [
+    "Eria the Water Charmer, Clear"
+   ],
    "archetypes": [
     "charmer"
    ],
@@ -4552,6 +4781,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:73309655:MGED-EN122:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5004,6 +5236,9 @@
    ]
   },
   {
+   "aliases": [
+    "Benghalances of the Samsaric Cycle"
+   ],
    "atk": 2500,
    "attribute": "light",
    "frame": "link",
@@ -5231,6 +5466,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dogmatika Fleurdelis, the Thunderous"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -5276,6 +5514,9 @@
    "passcode": 73355772,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:73355772:DOOD-EN026:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5292,6 +5533,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:73355772:DOOD-EN026:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5306,6 +5550,13 @@
       "match": "number+rarity",
       "name": "Dogmatika Fleurdelis, the Thunderbolt (Starlight Rare)"
      }
+    },
+    {
+     "id": "magnificent-maestros:73355772:MAMS-EN086:ultra_rare",
+     "number": "MAMS-EN086",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2025-09-25",
@@ -5369,6 +5620,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:73355951:AGOV-EN100:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5752,6 +6006,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:73391962:ROTA-EN031:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5768,6 +6025,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:73391962:ROTA-EN031:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5989,6 +6249,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dream Absorber"
+   ],
    "atk": 0,
    "attribute": "water",
    "def": 0,
@@ -6047,6 +6310,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:73413514:ROTA-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6311,6 +6577,10 @@
    "passcode": 73421698,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:73421698:POTE-EN087:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6612,11 +6882,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:73431236:DL12-EN006:rare",
+     "number": "DL12-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:73431236:DL12-EN006:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77403,
-       80370,
-       80371,
+       80370
+      ]
+     },
+     "number": "DL12-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Iron Blacksmith Kotetsu (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:73431236:DL12-EN006:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80371
+      ]
+     },
+     "number": "DL12-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Iron Blacksmith Kotetsu (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:73431236:DL12-EN006:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80372
       ]
      },
@@ -6624,10 +6934,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Iron Blacksmith Kotetsu (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:73431236:DL12-EN006:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77403
+      ]
+     },
+     "number": "DL12-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Iron Blacksmith Kotetsu (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "speed-duel-scars-of-battle:73431236:SBSC-EN034:common",
@@ -6740,6 +7070,9 @@
    "tcgDate": "2026-09-03"
   },
   {
+   "aliases": [
+    "Number 22"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -7161,6 +7494,13 @@
       "match": "number+rarity",
       "name": "Set Rotation"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:73468603:UP02-EN045:common",
+     "number": "UP02-EN045",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2017-05-04"
@@ -7227,6 +7567,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:73478096:PHHY-EN001:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7482,6 +7825,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tausennet Wadjet"
+   ],
    "archetypes": [
     "zenet"
    ],
@@ -7561,6 +7907,9 @@
    "passcode": 73490417,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:73490417:LEDE-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7740,6 +8089,9 @@
    "tcgDate": "2009-09-01"
   },
   {
+   "aliases": [
+    "Performapal Fugolem"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -8140,6 +8492,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:73539069:MGED-EN145:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8164,6 +8519,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kshatri-La Shangri-La"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -8224,6 +8582,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:73542331:DABL-EN045:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8466,6 +8827,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cynet Recover"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "73558460",
@@ -8691,6 +9055,9 @@
    ]
   },
   {
+   "aliases": [
+    "Subteror Succession"
+   ],
    "archetypes": [
     "subterror"
    ],
@@ -9089,10 +9456,7 @@
      "id": "legendary-duelists-season-2:73580471:LDS2-EN110:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230355,
-       230829,
-       230830,
-       230831
+       230355
       ]
      },
      "number": "LDS2-EN110",
@@ -9103,6 +9467,60 @@
       "match": "number+rarity",
       "name": "Black Rose Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:73580471:LDS2-EN110:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230829
+      ]
+     },
+     "number": "LDS2-EN110",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Black Rose Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:73580471:LDS2-EN110:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230830
+      ]
+     },
+     "number": "LDS2-EN110",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Black Rose Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:73580471:LDS2-EN110:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230831
+      ]
+     },
+     "number": "LDS2-EN110",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Black Rose Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-sisters-of-the-rose:73580471:LED4-EN028:common",
@@ -9156,6 +9574,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:73580471:MGED-EN026:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9309,6 +9730,9 @@
    ]
   },
   {
+   "aliases": [
+    "Metalphosis Fusion"
+   ],
    "archetypes": [
     "metalfoes"
    ],
@@ -9555,6 +9979,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:73602965:AGOV-EN017:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9571,6 +9998,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:73602965:AGOV-EN017:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11028,6 +11458,9 @@
    ]
   },
   {
+   "aliases": [
+    "Penguin Priest"
+   ],
    "archetypes": [
     "penguin"
    ],
@@ -11072,6 +11505,9 @@
    "passcode": 73640163,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:73640163:BODE-EN026:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11095,6 +11531,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ghost Belle"
+   ],
    "atk": 0,
    "attribute": "earth",
    "def": 1800,
@@ -11271,6 +11710,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:73642296:DIFO-EN100:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12914,11 +13356,51 @@
     },
     {
      "id": "duelist-league-15-participation-cards:73752131:DL15-EN001:rare",
+     "number": "DL15-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:73752131:DL15-EN001:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80073,
-       80074,
-       80075,
+       80073
+      ]
+     },
+     "number": "DL15-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Skilled Dark Magician (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:73752131:DL15-EN001:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80074
+      ]
+     },
+     "number": "DL15-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Skilled Dark Magician (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:73752131:DL15-EN001:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80076
       ]
      },
@@ -12926,10 +13408,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Skilled Dark Magician (Blue)"
-     }
+      "name": "Skilled Dark Magician (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:73752131:DL15-EN001:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80075
+      ]
+     },
+     "number": "DL15-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Skilled Dark Magician (Red)"
+     },
+     "variant": "red"
     },
     {
      "editions": [
@@ -12997,6 +13499,26 @@
      "set": "speed-duel-streets-of-battle-city",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Skilled Dark Magician"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:73752131:STP7-EN009:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544972
+      ]
+     },
+     "number": "STP7-EN009",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Skilled Dark Magician"
      }
     },
@@ -13502,6 +14024,9 @@
    "tcgDate": "2010-05-07"
   },
   {
+   "aliases": [
+    "Live☆Twin Lilla"
+   ],
    "archetypes": [
     "live-twin"
    ],
@@ -13734,6 +14259,9 @@
    "passcode": 73819701,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:73819701:BPRO-EN024:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13750,6 +14278,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:73819701:BPRO-EN024:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14293,6 +14824,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:73872164:STP7-EN032:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544995
+      ]
+     },
+     "number": "STP7-EN032",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Eliminating the League"
+     }
+    },
+    {
      "id": "strike-of-neos:73872164:STON-EN052:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14548,6 +15099,9 @@
    ]
   },
   {
+   "aliases": [
+    "Seasonal Direction of the Zodiac Beasts"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -14865,6 +15419,23 @@
       "match": "number+rarity",
       "name": "White-Horned Dragon"
      }
+    },
+    {
+     "id": "redemption-replacement:73891874:MDP2-EN006K:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       246240
+      ]
+     },
+     "number": "MDP2-EN006K",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "redemption-replacement",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "White-Horned Dragon (MDP2-EN006K)"
+     }
     }
    ],
    "tcgDate": "2006-12-22",
@@ -14874,6 +15445,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dyna Mond"
+   ],
    "atk": 2200,
    "attribute": "earth",
    "frame": "link",
@@ -14970,6 +15544,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:73898890:PHHY-EN050:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15151,6 +15728,9 @@
    "tcgDate": "2013-08-08"
   },
   {
+   "aliases": [
+    "Saber Slasher"
+   ],
    "atk": 1450,
    "attribute": "dark",
    "def": 1500,
@@ -15422,11 +16002,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:73915051:DL09-EN015:rare",
+     "number": "DL09-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:73915051:DL09-EN015:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77371,
-       77719,
-       77720,
+       77371
+      ]
+     },
+     "number": "DL09-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Scapegoat (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:73915051:DL09-EN015:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77719
+      ]
+     },
+     "number": "DL09-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Scapegoat (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:73915051:DL09-EN015:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77720
+      ]
+     },
+     "number": "DL09-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Scapegoat (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:73915051:DL09-EN015:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77721
       ]
      },
@@ -15434,10 +16072,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Scapegoat (Blue)"
-     }
+      "name": "Scapegoat (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "hobby-league-5-participation-card-f:73915051:HL05-EN006:ultra_parallel_rare",
@@ -15772,6 +16412,11 @@
    "tcgDate": "2003-03-30"
   },
   {
+   "aliases": [
+    "Blue Sheep Token",
+    "Token: Scapegoat",
+    "Token: Sheep"
+   ],
    "frame": "token",
    "hasEffect": true,
    "id": "73915052",
@@ -15831,6 +16476,16 @@
       "limited"
      ],
      "id": "legendary-collection-4-joey-s-world:73915052:LC04-EN004:ultra_rare",
+     "number": "LC04-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-4-joey-s-world"
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "legendary-collection-4-joey-s-world:73915052:LC04-EN004:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
        77438
@@ -15840,10 +16495,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-collection-4-joey-s-world",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Token: Sheep (Blue)"
-     }
+     },
+     "variant": "blue"
     },
     {
      "editions": [
@@ -15901,6 +16558,13 @@
     },
     {
      "id": "san-diego-comic-con-promotional-cards:73915052:TKN1-EN001:common",
+     "number": "TKN1-EN001",
+     "rarity": "common",
+     "region": "EN",
+     "set": "san-diego-comic-con-promotional-cards"
+    },
+    {
+     "id": "san-diego-comic-con-promotional-cards:73915052:TKN1-EN001:common:blue",
      "identifiers": {
       "tcgplayerProductIds": [
        81303
@@ -15910,10 +16574,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "san-diego-comic-con-promotional-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Token: Sheep (Blue)"
-     }
+     },
+     "variant": "blue"
     },
     {
      "id": "san-diego-comic-con-promotional-cards:73915052:TKN1-EN002:common",
@@ -15949,6 +16615,13 @@
     },
     {
      "id": "san-diego-comic-con-promotional-cards:73915052:TKN1-EN004:common",
+     "number": "TKN1-EN004",
+     "rarity": "common",
+     "region": "EN",
+     "set": "san-diego-comic-con-promotional-cards"
+    },
+    {
+     "id": "san-diego-comic-con-promotional-cards:73915052:TKN1-EN004:common:red",
      "identifiers": {
       "tcgplayerProductIds": [
        81306
@@ -15958,10 +16631,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "san-diego-comic-con-promotional-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Token: Scapegoat (Red)"
-     }
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2006-07-20"
@@ -16121,6 +16796,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tearalaments Reinoheart"
+   ],
    "archetypes": [
     "tearlaments"
    ],
@@ -16182,6 +16860,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:73956664:POTE-EN015:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -16494,6 +17176,9 @@
    ]
   },
   {
+   "aliases": [
+    "Umbreacum Couple"
+   ],
    "atk": 500,
    "attribute": "water",
    "def": 1500,

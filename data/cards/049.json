@@ -230,11 +230,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:49003716:DL09-EN011:rare",
+     "number": "DL09-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:49003716:DL09-EN011:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77367,
-       77707,
-       77708,
+       77367
+      ]
+     },
+     "number": "DL09-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Bora the Spear (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:49003716:DL09-EN011:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77707
+      ]
+     },
+     "number": "DL09-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Bora the Spear (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:49003716:DL09-EN011:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77708
+      ]
+     },
+     "number": "DL09-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Blackwing - Bora the Spear (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:49003716:DL09-EN011:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77709
       ]
      },
@@ -242,10 +300,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Blackwing - Bora the Spear (Blue)"
-     }
+      "name": "Blackwing - Bora the Spear (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "duelist-pack-crow:49003716:DP11-EN002:rare",
@@ -487,6 +547,40 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:49010598:SGX4-ENB18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543776
+      ]
+     },
+     "number": "SGX4-ENB18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Divine Wrath"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:49010598:SGX4-ENB18:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544274
+      ]
+     },
+     "number": "SGX4-ENB18",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Divine Wrath (Secret Rare)"
+     }
+    },
+    {
      "id": "starter-deck-yu-gi-oh-5d-s:49010598:5DS1-EN038:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -590,6 +684,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 81"
+   ],
    "archetypes": [
     "number-spell-trap-archetype",
     "train"
@@ -651,6 +748,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:49032236:MGED-EN065:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -715,6 +815,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Unspeakable Trapezohedron"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "49033797",
@@ -867,6 +970,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:49036338:MGED-EN074:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1406,6 +1512,9 @@
    "tcgDate": "2020-01-30"
   },
   {
+   "aliases": [
+    "Datascape Lady - Ruirui"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -1643,6 +1752,13 @@
      }
     },
     {
+     "id": "magnificent-maestros:49105782:MAMS-EN099:ultra_rare",
+     "number": "MAMS-EN099",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "rising-rampage:49105782:RIRA-EN082:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1667,6 +1783,9 @@
    ]
   },
   {
+   "aliases": [
+    "Uruka the Magic Star"
+   ],
    "atk": 1500,
    "attribute": "wind",
    "def": 400,
@@ -1725,6 +1844,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:49109013:DUNE-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1891,6 +2013,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shinonome, Priestess of the Vaylantz"
+   ],
    "archetypes": [
     "vaylantz"
    ],
@@ -1977,6 +2102,9 @@
    ]
   },
   {
+   "aliases": [
+    "Estranger Big Bang"
+   ],
    "atk": 2100,
    "attribute": "light",
    "def": 500,
@@ -2019,6 +2147,9 @@
    "passcode": 49139666,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:49139666:PHNI-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2314,6 +2445,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Souten Exorcism"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -2470,6 +2604,9 @@
    ]
   },
   {
+   "aliases": [
+    "Threat Armed Dragon"
+   ],
    "archetypes": [
     "armed-dragon"
    ],
@@ -2508,6 +2645,9 @@
    "passcode": 49181828,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:49181828:BPRO-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2598,6 +2738,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C65"
+   ],
    "archetypes": [
     "number-c",
     "number-spell-trap-archetype"
@@ -2668,6 +2811,9 @@
    ]
   },
   {
+   "aliases": [
+    "Black Luster Soldier, the Chaos Warrior"
+   ],
    "archetypes": [
     "black-luster-soldier"
    ],
@@ -3217,6 +3363,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C32"
+   ],
    "archetypes": [
     "number-c",
     "number-spell-trap-archetype",
@@ -3338,6 +3487,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pot of Indulgence"
+   ],
    "archetypes": [
     "greed"
    ],
@@ -3529,6 +3681,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:49238328:MGED-EN046:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3958,6 +4113,9 @@
    "tcgDate": "2010-08-07"
   },
   {
+   "aliases": [
+    "Nidhegg, Generaider Boss of Ice"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -4026,6 +4184,9 @@
    ]
   },
   {
+   "aliases": [
+    "Karakuri Monk mdl 9763 \"Kunamusan\""
+   ],
    "archetypes": [
     "karakuri"
    ],
@@ -4094,6 +4255,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rumpel Teufel"
+   ],
    "archetypes": [
     "toy"
    ],
@@ -4170,6 +4334,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:49299410:PHNI-EN078:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4186,6 +4353,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:49299410:PHNI-EN078:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4271,6 +4441,23 @@
      "set": "duelist-saga",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "White Veil"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:49306994:SGX4-ENE06:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543829
+      ]
+     },
+     "number": "SGX4-ENE06",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "White Veil"
      }
     }
@@ -4397,6 +4584,26 @@
       "match": "number+rarity",
       "name": "Spiral Spear Strike"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:49328340:STP7-EN028:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544991
+      ]
+     },
+     "number": "STP7-EN028",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Spiral Spear Strike"
+     }
     }
    ],
    "tcgDate": "2005-02-26"
@@ -4474,6 +4681,23 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Elemental Hero Storm Neos"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:49352945:SGX4-ENA25:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543757
+      ]
+     },
+     "number": "SGX4-ENA25",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental HERO Storm Neos"
      }
     }
    ],
@@ -4618,6 +4842,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:49370016:POTE-EN065:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5457,6 +5685,9 @@
    ]
   },
   {
+   "aliases": [
+    "True Draco Succession"
+   ],
    "archetypes": [
     "true-draco"
    ],
@@ -5716,6 +5947,26 @@
    "passcode": 49451215,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:49451215:DUAD-EN051:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639388
+      ]
+     },
+     "number": "DUAD-EN051",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ukanomitsune-no-Onari"
+     }
+    },
+    {
      "id": "ots-tournament-pack-30:49451215:OP30-EN010:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5740,6 +5991,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C104"
+   ],
    "archetypes": [
     "number-10x",
     "number-c",
@@ -6117,6 +6371,9 @@
    "tcgDate": "2008-01-26"
   },
   {
+   "aliases": [
+    "Vendread Strix"
+   ],
    "archetypes": [
     "vendread"
    ],
@@ -6356,6 +6613,9 @@
    "tcgDate": "2018-02-22"
   },
   {
+   "aliases": [
+    "Raideen the Eidolon Beast"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -6541,6 +6801,23 @@
      "set": "gold-series-haunted-mine",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Tiki Soul"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:49514333:SBC2-ENG16:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600322
+      ]
+     },
+     "number": "SBC2-ENG16",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Tiki Soul"
      }
     },
@@ -6858,6 +7135,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:49565413:PHHY-EN040:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6882,6 +7162,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vaylantz Vorld - Shinrabansho"
+   ],
    "archetypes": [
     "vaylantz"
    ],
@@ -6942,6 +7225,9 @@
    "tcgDate": "2022-08-25"
   },
   {
+   "aliases": [
+    "Dragonmaid Fluss"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -7543,6 +7829,9 @@
    "passcode": 49604192,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:49604192:ALIN-EN096:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7802,6 +8091,9 @@
    ]
   },
   {
+   "aliases": [
+    "Arsenal Organization"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "49652661",
@@ -7833,6 +8125,9 @@
    "passcode": 49652661,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:49652661:BPRO-EN078:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7936,6 +8231,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unlimited Free Radio Jamming"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "49658464",
@@ -8005,6 +8303,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:49658464:POTE-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8231,6 +8533,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 102"
+   ],
    "archetypes": [
     "number-10x",
     "number-spell-trap-archetype",
@@ -8639,6 +8944,9 @@
    ]
   },
   {
+   "aliases": [
+    "Iris Magician"
+   ],
    "archetypes": [
     "magician"
    ],
@@ -8709,6 +9017,9 @@
    ]
   },
   {
+   "aliases": [
+    "Madolche Queen Tiara-a-la-Fraise"
+   ],
    "archetypes": [
     "madolche"
    ],
@@ -8769,6 +9080,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:49689480:INFO-EN044:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8947,6 +9261,9 @@
    "passcode": 49721684,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:49721684:ALIN-EN093:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9117,6 +9434,9 @@
    ]
   },
   {
+   "aliases": [
+    "Three Burst Blast Dragon"
+   ],
    "atk": 2400,
    "attribute": "dark",
    "frame": "link",
@@ -9204,6 +9524,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kongrade, Primate of Conglomerates"
+   ],
    "atk": 3000,
    "attribute": "earth",
    "def": 2000,
@@ -9269,6 +9592,9 @@
    ]
   },
   {
+   "aliases": [
+    "Souten's Return"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -9407,6 +9733,9 @@
    ]
   },
   {
+   "aliases": [
+    "Peacelia"
+   ],
    "atk": 700,
    "attribute": "light",
    "def": 2000,
@@ -9448,6 +9777,9 @@
    "passcode": 49776811,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:49776811:BACH-EN032:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9881,6 +10213,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exoskeletal Dragon Gaiarm"
+   ],
    "atk": 2000,
    "attribute": "earth",
    "def": 1300,
@@ -9963,6 +10298,9 @@
    ]
   },
   {
+   "aliases": [
+    "Performapal Gatling Ghoul"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -10269,6 +10607,13 @@
       "match": "number+rarity",
       "name": "Officiating Reverie"
      }
+    },
+    {
+     "id": "magnificent-maestros:49828011:MAMS-EN089:ultra_rare",
+     "number": "MAMS-EN089",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2026-05-07",
@@ -10553,6 +10898,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fiendsmith Sequentia"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -10633,6 +10981,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:49867899:INFO-EN047:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11370,6 +11721,9 @@
    "passcode": 49904658,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:49904658:ALIN-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11660,6 +12014,9 @@
    ]
   },
   {
+   "aliases": [
+    "Splight Pixies"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -11721,6 +12078,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:49928686:POTE-EN005:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12093,6 +12454,9 @@
    ]
   },
   {
+   "aliases": [
+    "Staysailor Romaryne"
+   ],
    "atk": 1600,
    "attribute": "light",
    "def": 300,
@@ -12175,6 +12539,9 @@
    ]
   },
   {
+   "aliases": [
+    "Datascape Qilin - Linlin"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -12318,6 +12685,9 @@
    "tcgDate": "2015-11-05"
   },
   {
+   "aliases": [
+    "Metaphysical Regeneration"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "49980185",

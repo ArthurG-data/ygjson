@@ -279,6 +279,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:42009836:MGED-EN008:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -324,6 +327,40 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Fossil Dyna Pachycephalo (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:42009836:SGX4-END02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543801
+      ]
+     },
+     "number": "SGX4-END02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Fossil Dyna Pachycephalo"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:42009836:SGX4-END02:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543718
+      ]
+     },
+     "number": "SGX4-END02",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Fossil Dyna Pachycephalo (Secret Rare)"
      }
     }
    ],
@@ -460,11 +497,31 @@
       "match": "number+rarity",
       "name": "Neo Space (UTR)"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:42015635:SGX4-ENA11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543743
+      ]
+     },
+     "number": "SGX4-ENA11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Neo Space"
+     }
     }
    ],
    "tcgDate": "2006-08-16"
   },
   {
+   "aliases": [
+    "Dogurado the Moving Stone Relic"
+   ],
    "atk": 1000,
    "attribute": "earth",
    "frame": "link",
@@ -511,6 +568,9 @@
    "passcode": 42021064,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:42021064:ALIN-EN053:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1025,6 +1085,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragonmaid Flamme"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -1166,6 +1229,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:42071342:IOC-EN059:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1327,6 +1393,9 @@
    "tcgDate": "2009-02-28"
   },
   {
+   "aliases": [
+    "Secret Stash Slipshod Squirrel"
+   ],
    "atk": 200,
    "attribute": "earth",
    "def": 100,
@@ -1474,6 +1543,9 @@
    ]
   },
   {
+   "aliases": [
+    "Reptilianne Nyaminy"
+   ],
    "archetypes": [
     "reptilianne"
    ],
@@ -1519,6 +1591,9 @@
    "passcode": 42090294,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:42090294:BODE-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1583,6 +1658,9 @@
    "passcode": 42091632,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:42091632:DOOD-EN079:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1599,6 +1677,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:42091632:DOOD-EN079:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2031,6 +2112,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dracotail Shaurus"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -2069,6 +2153,9 @@
    "passcode": 42125140,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:42125140:BPRO-EN037:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2085,6 +2172,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:42125140:BPRO-EN037:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2170,6 +2260,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:42129512:IOC-EN004:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2293,6 +2386,9 @@
    "tcgDate": "2026-02-19"
   },
   {
+   "aliases": [
+    "Mulcharmy Fuwaross"
+   ],
    "archetypes": [
     "mulcharmy"
    ],
@@ -2504,6 +2600,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:42141493:ROTA-EN024:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2520,6 +2619,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:42141493:ROTA-EN024:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2661,6 +2763,9 @@
    ]
   },
   {
+   "aliases": [
+    "Disposable Learning Device"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "42149850",
@@ -2887,6 +2992,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:42158279:DIFO-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2906,6 +3014,9 @@
    "tcgDate": "2022-05-19"
   },
   {
+   "aliases": [
+    "Supreme King Servant Dragon Dark Rebellion"
+   ],
    "archetypes": [
     "rebellion",
     "supreme-king",
@@ -3267,6 +3378,9 @@
    "tcgDate": "2010-02-12"
   },
   {
+   "aliases": [
+    "Rebirth Revision"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -3399,6 +3513,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:42175079:SGX4-ENC19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543797
+      ]
+     },
+     "number": "SGX4-ENC19",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Volcanic Eruption"
+     }
+    },
+    {
      "id": "structure-deck-dinosaur-s-rage:42175079:SD09-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3418,6 +3549,9 @@
    "tcgDate": "2006-10-20"
   },
   {
+   "aliases": [
+    "Valmonica Versare"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -3539,6 +3673,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:42198835:DIFO-EN023:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3638,6 +3775,9 @@
    "tcgDate": "2014-11-06"
   },
   {
+   "aliases": [
+    "Azamina Hamartia"
+   ],
    "archetypes": [
     "azamina"
    ],
@@ -3695,6 +3835,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:42201897:ROTA-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3759,6 +3902,9 @@
    "passcode": 42209438,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:42209438:ALIN-EN042:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4000,6 +4146,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:42230449:MGED-EN084:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4597,10 +4746,7 @@
      "id": "dragons-of-legend-the-complete-series:42291297:DLCS-EN135:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221713,
-       222254,
-       222255,
-       222256
+       221713
       ]
      },
      "number": "DLCS-EN135",
@@ -4611,6 +4757,69 @@
       "match": "number+rarity",
       "name": "Flower Cardian Lightshower"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:42291297:DLCS-EN135:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222254
+      ]
+     },
+     "number": "DLCS-EN135",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flower Cardian Lightshower (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:42291297:DLCS-EN135:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222255
+      ]
+     },
+     "number": "DLCS-EN135",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flower Cardian Lightshower (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:42291297:DLCS-EN135:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222256
+      ]
+     },
+     "number": "DLCS-EN135",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Flower Cardian Lightshower (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:42291297:DRL3-EN039:secret_rare",
@@ -4637,6 +4846,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elvennotes Seraphim Stlitzia"
+   ],
    "archetypes": [
     "elfnote"
    ],
@@ -4674,6 +4886,9 @@
    "passcode": 42302563,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:42302563:BPRO-EN040:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4690,6 +4905,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:42302563:BPRO-EN040:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4782,6 +5000,9 @@
    ]
   },
   {
+   "aliases": [
+    "Raika no Daiouga"
+   ],
    "archetypes": [
     "ragnaraika"
    ],
@@ -4849,6 +5070,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:42307760:LEDE-EN050:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4865,6 +5089,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:42307760:LEDE-EN050:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5320,6 +5547,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:42352091:MGED-EN081:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5553,6 +5783,51 @@
    ]
   },
   {
+   "aliases": [
+    "Sinful Spoils of the White Crow Forest"
+   ],
+   "archetypes": [
+    "sinful-spoils"
+   ],
+   "atk": 2500,
+   "attribute": "fire",
+   "def": 2000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "42373771",
+   "identifiers": {
+    "konamiId": 23823,
+    "ygoprodeckId": 42373771
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/42373771.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/42373771.jpg",
+     "id": 42373771,
+     "small": "https://images.ygoprodeck.com/images/cards_small/42373771.jpg"
+    }
+   ],
+   "isTuner": true,
+   "kind": "monster",
+   "level": 7,
+   "monsterType": "Spellcaster",
+   "name": "Sinful Spoils of the Winter Raven's Forest",
+   "names": {
+    "en": "Sinful Spoils of the Winter Raven's Forest"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 42373771,
+   "prints": [],
+   "typeline": [
+    "Spellcaster",
+    "Tuner",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Urchin Suship"
+   ],
    "archetypes": [
     "gunkan"
    ],
@@ -5614,6 +5889,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:42377643:BODE-EN022:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6409,6 +6687,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 85"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -6682,6 +6963,9 @@
    ]
   },
   {
+   "aliases": [
+    "Splight Gamma Burst"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -6739,6 +7023,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:42431833:POTE-EN056:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6877,6 +7165,33 @@
     "Fiend",
     "Normal"
    ]
+  },
+  {
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "42443968",
+   "identifiers": {
+    "konamiId": 23886,
+    "ygoprodeckId": 42443968
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/42443968.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/42443968.jpg",
+     "id": 42443968,
+     "small": "https://images.ygoprodeck.com/images/cards_small/42443968.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Continuous",
+   "name": "Eyelluring Mirror Wall",
+   "names": {
+    "en": "Eyelluring Mirror Wall"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 42443968,
+   "prints": []
   },
   {
    "archetypes": [
@@ -7273,6 +7588,9 @@
    ]
   },
   {
+   "aliases": [
+    "Centurion Trudea"
+   ],
    "archetypes": [
     "centur-ion"
    ],
@@ -7332,6 +7650,13 @@
       "match": "number+rarity",
       "name": "Centur-Ion Trudea"
      }
+    },
+    {
+     "id": "magnificent-maestros:42493140:MAMS-EN078:ultra_rare",
+     "number": "MAMS-EN078",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     },
     {
      "id": "valiant-smashers:42493140:VASM-EN017:collectors_rare",
@@ -7556,6 +7881,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:42510430:PHNI-EN086:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7648,6 +7976,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:42516299:AGOV-EN059:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7982,6 +8313,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:42541548:IOC-EN015:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8039,6 +8373,9 @@
    ]
   },
   {
+   "aliases": [
+    "Beautiful Mayakashi - Dakki"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -8124,6 +8461,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spoon, the Seal of Magistus"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -8164,6 +8504,9 @@
    "passcode": 42544773,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:42544773:BPRO-EN098:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8180,6 +8523,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:42544773:BPRO-EN098:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8203,6 +8549,9 @@
    ]
   },
   {
+   "aliases": [
+    "Weights"
+   ],
    "archetypes": [
     "wind-up"
    ],
@@ -8381,6 +8730,9 @@
    "passcode": 42560034,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:42560034:BODE-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9108,6 +9460,9 @@
    ]
   },
   {
+   "aliases": [
+    "Draccoon Lamp"
+   ],
    "atk": 500,
    "attribute": "fire",
    "def": 2000,
@@ -9586,6 +9941,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mathmech Processor Final Sigma"
+   ],
    "archetypes": [
     "mathmech"
    ],
@@ -9765,6 +10123,44 @@
    "tcgDate": "2003-06-06",
    "typeline": [
     "Fiend",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "rikka"
+   ],
+   "atk": 2600,
+   "attribute": "water",
+   "def": 2600,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "42651293",
+   "identifiers": {
+    "konamiId": 23826,
+    "ygoprodeckId": 42651293
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/42651293.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/42651293.jpg",
+     "id": 42651293,
+     "small": "https://images.ygoprodeck.com/images/cards_small/42651293.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Plant",
+   "name": "Primrose the Twin Rikka Fairy",
+   "names": {
+    "en": "Primrose the Twin Rikka Fairy"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 42651293,
+   "prints": [],
+   "typeline": [
+    "Plant",
     "Effect"
    ]
   },
@@ -11314,6 +11710,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exorsister Mikhaelise"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -11624,6 +12023,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:42752141:MGED-EN029:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11697,6 +12099,9 @@
    ]
   },
   {
+   "aliases": [
+    "Clown Clan Flair"
+   ],
    "archetypes": [
     "clown-crew"
    ],
@@ -11920,6 +12325,9 @@
    "tcgDate": "2014-04-25"
   },
   {
+   "aliases": [
+    "Killer Tune Track Maker"
+   ],
    "archetypes": [
     "kewl-tune",
     "killer-tune"
@@ -12084,6 +12492,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:42790071:MGED-EN095:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12358,6 +12769,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tellarknight Altea"
+   ],
    "archetypes": [
     "constellar"
    ],
@@ -12419,6 +12833,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:42822433:CYAC-EN020:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12736,6 +13153,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:42868711:IOC-EN066:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13133,6 +13553,9 @@
    ]
   },
   {
+   "aliases": [
+    "Death Control of the Evil Eye"
+   ],
    "archetypes": [
     "evil-eye"
    ],
@@ -13511,6 +13934,9 @@
    ]
   },
   {
+   "aliases": [
+    "Photon Transformation (card)"
+   ],
    "archetypes": [
     "galaxy-eyes"
    ],
@@ -13587,6 +14013,9 @@
    "tcgDate": "2018-09-27"
   },
   {
+   "aliases": [
+    "Nether Prediction Princess Tarotreith"
+   ],
    "archetypes": [
     "prediction-princess"
    ],
@@ -13631,6 +14060,9 @@
    "passcode": 42932862,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:42932862:DABL-EN038:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13714,6 +14146,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:42940335:ROTA-EN094:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13730,6 +14165,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:42940335:ROTA-EN094:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14016,6 +14454,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:42941100:IOC-EN001:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14221,6 +14662,9 @@
    "tcgDate": "2005-08-06"
   },
   {
+   "aliases": [
+    "Opposing Mirrors of the Underworld"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "42952160",
@@ -14275,6 +14719,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:42952160:DUNE-EN079:common",
      "identifiers": {
       "tcgplayerProductIds": [

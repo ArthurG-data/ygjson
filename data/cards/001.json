@@ -617,6 +617,9 @@
    "tcgDate": "2006-05-17"
   },
   {
+   "aliases": [
+    "Breaking Branded"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -674,6 +677,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:1041278:POTE-EN070:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -741,11 +748,69 @@
    "prints": [
     {
      "id": "duelist-league-18-participation-cards:1045143:DL18-EN007:rare",
+     "number": "DL18-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:1045143:DL18-EN007:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94900,
-       94921,
-       94957,
+       94900
+      ]
+     },
+     "number": "DL18-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Geargiano Mk-II (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:1045143:DL18-EN007:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94921
+      ]
+     },
+     "number": "DL18-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Geargiano Mk-II (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:1045143:DL18-EN007:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94957
+      ]
+     },
+     "number": "DL18-EN007",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Geargiano Mk-II (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:1045143:DL18-EN007:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94958
       ]
      },
@@ -753,10 +818,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Geargiano Mk-II (Blue)"
-     }
+      "name": "Geargiano Mk-II (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "geargia-rampage-structure-deck:1045143:SDGR-EN005:common",
@@ -855,6 +922,23 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Fighting Flame Swordsman"
+     }
+    },
+    {
+     "id": "maze-of-millennia:1047075:MZMI-EN001:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       532192
+      ]
+     },
+     "number": "MZMI-EN001",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "maze-of-millennia",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Fighting Flame Swordsman (CR)"
      }
     },
     {
@@ -1526,6 +1610,9 @@
    ]
   },
   {
+   "aliases": [
+    "Power of the Guardians (card)"
+   ],
    "archetypes": [
     "guardian"
    ],
@@ -1602,6 +1689,9 @@
    "tcgDate": "2018-02-01"
   },
   {
+   "aliases": [
+    "Artmegia Vandalism - Assault"
+   ],
    "archetypes": [
     "artmage"
    ],
@@ -1641,7 +1731,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 1122030,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:1122030:DUAD-EN057:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639394
+      ]
+     },
+     "number": "DUAD-EN057",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Artmage Vandalism -Assault-"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -1703,6 +1814,9 @@
    "tcgDate": "2013-08-08"
   },
   {
+   "aliases": [
+    "Cyber Dragon Nächster"
+   ],
    "archetypes": [
     "cyber-dragon"
    ],
@@ -1771,10 +1885,7 @@
      "id": "legendary-duelists-season-2:1142880:LDS2-EN032:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230266,
-       230787,
-       230788,
-       230789
+       230266
       ]
      },
      "number": "LDS2-EN032",
@@ -1785,6 +1896,60 @@
       "match": "number+rarity",
       "name": "Cyber Dragon Nachster"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:1142880:LDS2-EN032:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230787
+      ]
+     },
+     "number": "LDS2-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon Nachster (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:1142880:LDS2-EN032:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230788
+      ]
+     },
+     "number": "LDS2-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon Nachster (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:1142880:LDS2-EN032:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230789
+      ]
+     },
+     "number": "LDS2-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon Nachster (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "structure-deck-cyber-strike:1142880:SDCS-EN007:common",
@@ -1988,6 +2153,9 @@
    ]
   },
   {
+   "aliases": [
+    "Burgesstoma Leanchoilia"
+   ],
    "archetypes": [
     "paleozoic"
    ],
@@ -2212,6 +2380,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:1164211:INFO-EN003:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2228,6 +2399,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:1164211:INFO-EN003:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2251,6 +2425,9 @@
    ]
   },
   {
+   "aliases": [
+    "Drytron Mu-Beta Fafnir"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -2602,6 +2779,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gusto Tailwind"
+   ],
    "archetypes": [
     "gusto"
    ],
@@ -2661,6 +2841,9 @@
    "tcgDate": "2021-08-12"
   },
   {
+   "aliases": [
+    "Spiral Wave of the Mythic Radiance Dragon"
+   ],
    "archetypes": [
     "phantasm-spiral"
    ],
@@ -2969,6 +3152,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:1224927:SBC2-END18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600233
+      ]
+     },
+     "number": "SBC2-END18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Malevolent Catastrophe"
+     }
+    },
+    {
      "id": "structure-deck-marik-tcg:1224927:SDMA-EN035:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2988,6 +3188,9 @@
    "tcgDate": "2007-10-24"
   },
   {
+   "aliases": [
+    "Labrynth Servant Arianna"
+   ],
    "archetypes": [
     "labrynth"
    ],
@@ -3427,6 +3630,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rainbowlution Lab"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "1259814",
@@ -3483,6 +3689,9 @@
    "tcgDate": "2023-06-22"
   },
   {
+   "aliases": [
+    "Skyfire of the Sacred Beast"
+   ],
    "archetypes": [
     "phantasm"
    ],
@@ -3917,6 +4126,9 @@
    ]
   },
   {
+   "aliases": [
+    "Atlantis Advent"
+   ],
    "archetypes": [
     "atlantis-city-of-the-sea-dragon"
    ],
@@ -4339,6 +4551,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:1295442:POTE-EN010:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4471,6 +4687,9 @@
    ]
   },
   {
+   "aliases": [
+    "SPYRAL The Double Helix"
+   ],
    "archetypes": [
     "spyral"
    ],
@@ -4563,6 +4782,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tearalaments Crime"
+   ],
    "archetypes": [
     "tearlaments"
    ],
@@ -4604,6 +4826,10 @@
    "passcode": 1329620,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:1329620:POTE-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4623,6 +4849,9 @@
    "tcgDate": "2022-08-04"
   },
   {
+   "aliases": [
+    "Valar, Vaalmonican Hallow Hymn"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -4671,6 +4900,9 @@
    "passcode": 1340142,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:1340142:INFO-EN049:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4695,6 +4927,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pendulumgraph of Spacetime"
+   ],
    "archetypes": [
     "magician",
     "pendulumgraph"
@@ -5090,6 +5325,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:1353770:SGX4-ENB15:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543773
+      ]
+     },
+     "number": "SGX4-ENB15",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Valhalla, Hall of the Fallen"
+     }
+    },
+    {
      "id": "structure-deck-wave-of-light:1353770:SR05-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5372,6 +5624,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vampire Koala"
+   ],
    "archetypes": [
     "koala"
    ],
@@ -5718,6 +5973,9 @@
    ]
   },
   {
+   "aliases": [
+    "Trickstar Hoodie"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -5864,6 +6122,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 48"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -6067,6 +6328,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:1434352:IOC-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6840,6 +7104,9 @@
    "tcgDate": "2008-01-26"
   },
   {
+   "aliases": [
+    "Clara"
+   ],
    "atk": 0,
    "attribute": "earth",
    "frame": "link",
@@ -6909,6 +7176,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cosmic Pincer Ze'loor"
+   ],
    "archetypes": [
     "alien"
    ],
@@ -7035,6 +7305,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:1490690:AGOV-EN076:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7139,6 +7412,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon Tail Fymena"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -7730,6 +8006,9 @@
    ]
   },
   {
+   "aliases": [
+    "Wiz, Sage of the Skyfang Brigade"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -7814,6 +8093,9 @@
    ]
   },
   {
+   "aliases": [
+    "Top Hat Hare the Silhouette Magician"
+   ],
    "atk": 1500,
    "attribute": "light",
    "frame": "link",
@@ -7910,6 +8192,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:1528054:INFO-EN052:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7926,6 +8211,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:1528054:INFO-EN052:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8253,11 +8541,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:1546123:DL17-EN010:rare",
+     "number": "DL17-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:1546123:DL17-EN010:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80568,
-       80569,
-       80570,
+       80569
+      ]
+     },
+     "number": "DL17-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Cyber End Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:1546123:DL17-EN010:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80570
+      ]
+     },
+     "number": "DL17-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Cyber End Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:1546123:DL17-EN010:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80571
       ]
      },
@@ -8265,10 +8593,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Cyber End Dragon (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:1546123:DL17-EN010:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80568
+      ]
+     },
+     "number": "DL17-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Cyber End Dragon (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-zane-truesdale:1546123:DP04-EN012:rare",
@@ -8603,11 +8951,69 @@
     },
     {
      "id": "duelist-league-16-participation-cards:1557341:DL16-EN005:rare",
+     "number": "DL16-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:1557341:DL16-EN005:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77613,
-       77614,
-       77615,
+       77613
+      ]
+     },
+     "number": "DL16-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Rose, Warrior of Revenge (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:1557341:DL16-EN005:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77614
+      ]
+     },
+     "number": "DL16-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Rose, Warrior of Revenge (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:1557341:DL16-EN005:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77615
+      ]
+     },
+     "number": "DL16-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Rose, Warrior of Revenge (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:1557341:DL16-EN005:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77616
       ]
      },
@@ -8615,10 +9021,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Rose, Warrior of Revenge (Blue)"
-     }
+      "name": "Rose, Warrior of Revenge (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2008-11-01",
@@ -9027,11 +9435,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:1571945:DL13-EN009:rare",
+     "number": "DL13-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:1571945:DL13-EN009:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77426,
-       80439,
-       80440,
+       80439
+      ]
+     },
+     "number": "DL13-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "White Ninja (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:1571945:DL13-EN009:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80440
+      ]
+     },
+     "number": "DL13-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "White Ninja (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:1571945:DL13-EN009:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80441
       ]
      },
@@ -9039,10 +9487,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "White Ninja (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:1571945:DL13-EN009:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77426
+      ]
+     },
+     "number": "DL13-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "White Ninja (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "the-lost-millennium:1571945:TLM-EN025:common",
@@ -9069,6 +9537,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dinomist Stegosaurer"
+   ],
    "archetypes": [
     "dinomist"
    ],
@@ -9356,6 +9827,13 @@
       "match": "number+rarity",
       "name": "Dimension Fortress Weapon"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:1596508:UP02-EN027:common",
+     "number": "UP02-EN027",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2009-02-28",
@@ -9417,6 +9895,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:1607603:LEDE-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10132,6 +10613,9 @@
    "passcode": 1665819,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:1665819:ALIN-EN087:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10393,6 +10877,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:1686814:MGED-EN138:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10774,6 +11261,9 @@
    ]
   },
   {
+   "aliases": [
+    "Yoa the Plague Deity Ashtra"
+   ],
    "archetypes": [
     "ashtra"
    ],
@@ -10908,6 +11398,9 @@
    "tcgDate": "2021-08-12"
   },
   {
+   "aliases": [
+    "Wind-Up Maintenance Zenmaicon"
+   ],
    "archetypes": [
     "wind-up"
    ],
@@ -10980,6 +11473,9 @@
    ]
   },
   {
+   "aliases": [
+    "Devil's Portrait"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "1759808",
@@ -11052,6 +11548,9 @@
    "tcgDate": "2020-01-30"
   },
   {
+   "aliases": [
+    "Nekogal 1"
+   ],
    "atk": 1100,
    "attribute": "earth",
    "def": 900,
@@ -11206,6 +11705,9 @@
    ]
   },
   {
+   "aliases": [
+    "Chimera the Phantom Beast King"
+   ],
    "archetypes": [
     "chimera"
    ],
@@ -11267,6 +11769,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:1769875:DUNE-EN033:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11283,6 +11788,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:1769875:DUNE-EN033:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11658,10 +12166,7 @@
      "id": "dragons-of-legend-the-complete-series:1784686:DLCS-EN007:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221529,
-       222305,
-       222306,
-       222307
+       221529
       ]
      },
      "number": "DLCS-EN007",
@@ -11672,6 +12177,69 @@
       "match": "number+rarity",
       "name": "The Eye of Timaeus"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:1784686:DLCS-EN007:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222305
+      ]
+     },
+     "number": "DLCS-EN007",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Eye of Timaeus (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:1784686:DLCS-EN007:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222306
+      ]
+     },
+     "number": "DLCS-EN007",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Eye of Timaeus (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:1784686:DLCS-EN007:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222307
+      ]
+     },
+     "number": "DLCS-EN007",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Eye of Timaeus (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:1784686:DRL3-EN045:ultra_rare",
@@ -12122,6 +12690,9 @@
    "tcgDate": "2003-07-18"
   },
   {
+   "aliases": [
+    "Super Quantal Combination - Magnaformation"
+   ],
    "archetypes": [
     "super-quant"
    ],
@@ -12832,6 +13403,9 @@
    "tcgDate": "2006-11-15"
   },
   {
+   "aliases": [
+    "Scar Vendread"
+   ],
    "archetypes": [
     "vendread"
    ],
@@ -12877,6 +13451,10 @@
    "passcode": 1855886,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:1855886:POTE-EN024:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13056,6 +13634,23 @@
    "ocgDate": "2017-03-25",
    "passcode": 1861629,
    "prints": [
+    {
+     "id": "25th-anniversary-tin-dueling-heroes:1861629:TN23-EN009:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       514591
+      ]
+     },
+     "number": "TN23-EN009",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-tin-dueling-heroes",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Decode Talker (Quarter Century Secret Rare)"
+     }
+    },
     {
      "id": "duel-devastator:1861629:DUDE-EN023:ultra_rare",
      "identifiers": {
@@ -13276,6 +13871,10 @@
    "passcode": 1876841,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:1876841:POTE-EN095:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13355,6 +13954,9 @@
    "tcgDate": "2008-01-26"
   },
   {
+   "aliases": [
+    "Splind the Steel Dragon"
+   ],
    "atk": 2500,
    "attribute": "dark",
    "def": 2000,
@@ -13672,6 +14274,9 @@
    ]
   },
   {
+   "aliases": [
+    "Generaider Reward"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -13939,8 +14544,7 @@
      "id": "battles-of-legend-chapter-1:1948619:BLC1-EN031:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538503,
-       538664
+       538503
       ]
      },
      "number": "BLC1-EN031",
@@ -13951,6 +14555,27 @@
       "match": "number+rarity",
       "name": "Xtra HERO Wonder Driver"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:1948619:BLC1-EN031:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538664
+      ]
+     },
+     "number": "BLC1-EN031",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Xtra HERO Wonder Driver (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "legendary-hero-decks:1948619:LEHD-ENA37:ultra_rare",
@@ -14171,6 +14796,9 @@
    "tcgDate": "2004-11-20"
   },
   {
+   "aliases": [
+    "The Abominable Unchained Soul"
+   ],
    "archetypes": [
     "unchained-soul"
    ],
@@ -14314,6 +14942,9 @@
    "tcgDate": "2013-07-12"
   },
   {
+   "aliases": [
+    "Hop-Eared Flying Squad"
+   ],
    "atk": 300,
    "attribute": "wind",
    "def": 600,
@@ -14389,6 +15020,13 @@
       "match": "number+rarity",
       "name": "Hop Ear Squadron"
      }
+    },
+    {
+     "id": "magnificent-maestros:1980574:MAMS-EN075:ultra_rare",
+     "number": "MAMS-EN075",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2019-10-24",
@@ -14399,6 +15037,9 @@
    ]
   },
   {
+   "aliases": [
+    "Disciple from Nadir"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "1984618",
@@ -14600,6 +15241,9 @@
    "tcgDate": "2020-08-06"
   },
   {
+   "aliases": [
+    "Number 9"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -14676,6 +15320,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:1992816:MGED-EN089:rare",
      "identifiers": {
       "tcgplayerProductIds": [

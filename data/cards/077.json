@@ -479,11 +479,51 @@
     },
     {
      "id": "duelist-league-2-participation-cards:77044671:DL11-EN008:rare",
+     "number": "DL11-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:77044671:DL11-EN008:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77385,
-       80319,
-       80320,
+       80319
+      ]
+     },
+     "number": "DL11-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Pyramid Turtle (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:77044671:DL11-EN008:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80320
+      ]
+     },
+     "number": "DL11-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Pyramid Turtle (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:77044671:DL11-EN008:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80321
       ]
      },
@@ -491,10 +531,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Pyramid Turtle (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:77044671:DL11-EN008:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77385
+      ]
+     },
+     "number": "DL11-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Pyramid Turtle (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gold-series-haunted-mine:77044671:GLD5-EN003:common",
@@ -943,6 +1003,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:77066768:AGOV-EN066:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1365,6 +1428,9 @@
    ]
   },
   {
+   "aliases": [
+    "Poison Mayakashi - Tsuchigumo"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -1559,6 +1625,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ruined Realm Perlereino"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "77103950",
@@ -1709,6 +1778,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:77103950:POTE-EN060:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1878,6 +1951,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:77121851:IOC-EN067:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2008,6 +2084,9 @@
    "passcode": 77124096,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:77124096:SUDA-EN051:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2789,6 +2868,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C96"
+   ],
    "archetypes": [
     "number-c",
     "number-spell-trap-archetype"
@@ -3554,6 +3636,9 @@
    ]
   },
   {
+   "aliases": [
+    "Abyss Playhouse - Fantastic Theatre"
+   ],
    "archetypes": [
     "abyss-actor"
    ],
@@ -3779,6 +3864,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:77312273:PHHY-EN010:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3802,6 +3890,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rciela, Wicked of the White Woods"
+   ],
    "archetypes": [
     "white-forest"
    ],
@@ -3863,6 +3954,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:77313225:INFO-EN039:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3879,6 +3973,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:77313225:INFO-EN039:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4549,6 +4646,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sasuke Samurai 3"
+   ],
    "atk": 1000,
    "attribute": "light",
    "def": 1000,
@@ -4606,6 +4706,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:77379481:IOC-EN011:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4911,6 +5014,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:77392987:AGOV-EN003:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4927,6 +5033,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:77392987:AGOV-EN003:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5006,6 +5115,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:77402960:MGED-EN088:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5025,6 +5137,9 @@
    "tcgDate": "2020-07-23"
   },
   {
+   "aliases": [
+    "Giltia the D. Knight Soul Spear"
+   ],
    "atk": 1850,
    "attribute": "light",
    "def": 1500,
@@ -5752,6 +5867,9 @@
    ]
   },
   {
+   "aliases": [
+    "One with the Sun God"
+   ],
    "archetypes": [
     "egyptian-god"
    ],
@@ -5935,6 +6053,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:77449773:BODE-EN096:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6298,6 +6419,9 @@
    "tcgDate": "2014-11-06"
   },
   {
+   "aliases": [
+    "Swift Panther Warrior"
+   ],
    "archetypes": [
     "warrior"
    ],
@@ -6472,6 +6596,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:77491079:IOC-EN008:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6936,6 +7063,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragonmaid Relaxation"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -7518,6 +7648,9 @@
    "tcgDate": "2007-09-18"
   },
   {
+   "aliases": [
+    "Senka Adonis - Zhou Gong"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -7697,6 +7830,9 @@
    ]
   },
   {
+   "aliases": [
+    "Truth Centurion"
+   ],
    "archetypes": [
     "centur-ion"
    ],
@@ -7982,11 +8118,51 @@
     },
     {
      "id": "duelist-league-15-participation-cards:77561728:DL15-EN019:rare",
+     "number": "DL15-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:77561728:DL15-EN019:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80068,
-       80069,
-       80070,
+       80070
+      ]
+     },
+     "number": "DL15-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Disturbance Strategy (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:77561728:DL15-EN019:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80068
+      ]
+     },
+     "number": "DL15-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Disturbance Strategy (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:77561728:DL15-EN019:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80071
       ]
      },
@@ -7994,10 +8170,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Disturbance Strategy (Green)"
-     }
+      "name": "Disturbance Strategy (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:77561728:DL15-EN019:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80069
+      ]
+     },
+     "number": "DL15-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Disturbance Strategy (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "ots-tournament-pack-6:77561728:OP06-EN023:common",
@@ -8399,6 +8595,9 @@
    "passcode": 77571454,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:77571454:ALIN-EN046:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8415,6 +8614,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:77571454:ALIN-EN046:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8440,6 +8642,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ragnaraika Bleached Wisteria"
+   ],
    "archetypes": [
     "ragnaraika"
    ],
@@ -8481,6 +8686,9 @@
    "passcode": 77573354,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:77573354:ROTA-EN077:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8748,11 +8956,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:77585513:DL12-EN005:rare",
+     "number": "DL12-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:77585513:DL12-EN005:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77402,
-       80367,
-       80368,
+       80367
+      ]
+     },
+     "number": "DL12-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Jinzo (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:77585513:DL12-EN005:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80368
+      ]
+     },
+     "number": "DL12-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Jinzo (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:77585513:DL12-EN005:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80369
       ]
      },
@@ -8760,10 +9008,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Jinzo (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:77585513:DL12-EN005:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77402
+      ]
+     },
+     "number": "DL12-EN005",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Jinzo (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-battle-city:77585513:DPBC-EN027:rare",
@@ -9076,6 +9344,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:77585513:SBC2-ENC03:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600210
+      ]
+     },
+     "number": "SBC2-ENC03",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Jinzo"
+     }
+    },
+    {
      "id": "speed-duel-streets-of-battle-city:77585513:SBC1-ENE01:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9104,6 +9389,26 @@
      "set": "speed-duel-tournament-pack-5",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Jinzo"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:77585513:STP7-EN007:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544970
+      ]
+     },
+     "number": "STP7-EN007",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Jinzo"
      }
     },
@@ -9449,6 +9754,9 @@
    ]
   },
   {
+   "aliases": [
+    "Flundereeze and the Scary Sea"
+   ],
    "archetypes": [
     "floowandereeze"
    ],
@@ -9506,6 +9814,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:77610503:BODE-EN075:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9525,6 +9836,9 @@
    "tcgDate": "2021-11-04"
   },
   {
+   "aliases": [
+    "Eve the World Chalice Shrine Maiden"
+   ],
    "archetypes": [
     "world-chalice"
    ],
@@ -9995,6 +10309,9 @@
    ]
   },
   {
+   "aliases": [
+    "LANpholinkus"
+   ],
    "atk": 1200,
    "attribute": "light",
    "frame": "link",
@@ -10164,6 +10481,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infernoble Knight Emperor - Charlemagne"
+   ],
    "archetypes": [
     "noble-knight"
    ],
@@ -10265,6 +10585,9 @@
    ]
   },
   {
+   "aliases": [
+    "Motor Violence"
+   ],
    "atk": 2100,
    "attribute": "dark",
    "def": 1200,
@@ -10307,6 +10630,9 @@
    "passcode": 77672444,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:77672444:DIFO-EN092:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10368,6 +10694,9 @@
    "passcode": 77675029,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:77675029:BPRO-EN044:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10384,6 +10713,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:77675029:BPRO-EN044:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10538,6 +10870,9 @@
    "passcode": 77683371,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:77683371:BACH-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10561,6 +10896,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fullmetalphosis Alkahest"
+   ],
    "archetypes": [
     "metalfoes"
    ],
@@ -10830,6 +11168,9 @@
    ]
   },
   {
+   "aliases": [
+    "Skeleton Mayakashi - Yasha"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -11073,6 +11414,9 @@
    ]
   },
   {
+   "aliases": [
+    "Slapdash Summer Schoolwork Success"
+   ],
    "archetypes": [
     "schoolwork"
    ],
@@ -11114,6 +11458,9 @@
    "passcode": 77751766,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:77751766:ROTA-EN080:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11133,6 +11480,9 @@
    "tcgDate": "2024-07-27"
   },
   {
+   "aliases": [
+    "Super Armored Robot Weapon - Black Iron C"
+   ],
    "archetypes": [
     "c"
    ],
@@ -11431,6 +11781,9 @@
    "tcgDate": "2004-03-23"
   },
   {
+   "aliases": [
+    "Emblema of Oath"
+   ],
    "archetypes": [
     "centur-ion"
    ],
@@ -11608,6 +11961,23 @@
      "set": "legendary-duelists-season-2",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Hysteric Party"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:77778835:SBC2-ENH18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600202
+      ]
+     },
+     "number": "SBC2-ENH18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Hysteric Party"
      }
     },
@@ -11850,6 +12220,9 @@
    "passcode": 77799846,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2014-mega-tin-mega-pack:77799846:MP14-EN098:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11887,6 +12260,44 @@
    "typeline": [
     "Machine",
     "Xyz",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "atlantis-city-of-the-sea-dragon"
+   ],
+   "atk": 2000,
+   "attribute": "water",
+   "def": 2400,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "77823650",
+   "identifiers": {
+    "konamiId": 23830,
+    "ygoprodeckId": 77823650
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/77823650.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/77823650.jpg",
+     "id": 77823650,
+     "small": "https://images.ygoprodeck.com/images/cards_small/77823650.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 5,
+   "monsterType": "Sea Serpent",
+   "name": "Rampant Wings of Atlantis",
+   "names": {
+    "en": "Rampant Wings of Atlantis"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 77823650,
+   "prints": [],
+   "typeline": [
+    "Sea Serpent",
     "Effect"
    ]
   },
@@ -12034,6 +12445,9 @@
    "tcgDate": "2016-01-14"
   },
   {
+   "aliases": [
+    "Trial of Hell"
+   ],
    "atk": 1300,
    "attribute": "dark",
    "def": 900,
@@ -12148,6 +12562,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thestalos the Shadow Firestorm Monarch"
+   ],
    "archetypes": [
     "monarch",
     "monarch-spell-trap-archetype"
@@ -12194,6 +12611,9 @@
    "passcode": 77832858,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:77832858:DUNE-EN023:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12217,6 +12637,9 @@
    ]
   },
   {
+   "aliases": [
+    "Super Cocoon of Evolution"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "77840540",
@@ -12453,6 +12876,9 @@
    "tcgDate": "2011-02-08"
   },
   {
+   "aliases": [
+    "Madolche Puddingsis"
+   ],
    "archetypes": [
     "madolche"
    ],
@@ -12600,6 +13026,9 @@
    "passcode": 77855162,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:77855162:DABL-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12884,6 +13313,9 @@
    "tcgDate": "2003-07-18"
   },
   {
+   "aliases": [
+    "Exorsister Vadis"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -13004,6 +13436,9 @@
    "passcode": 77894049,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:77894049:DUAD-EN046:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13344,6 +13779,9 @@
    "tcgDate": "2003-06-06"
   },
   {
+   "aliases": [
+    "Exorsister Pax"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -13627,9 +14065,7 @@
      "id": "legendary-duelists-season-3:77936940:LDS3-EN004:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276113,
-       276756,
-       276757
+       276113
       ]
      },
      "number": "LDS3-EN004",
@@ -13640,6 +14076,48 @@
       "match": "number+rarity",
       "name": "Gernia"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:77936940:LDS3-EN004:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276756
+      ]
+     },
+     "number": "LDS3-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gernia (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:77936940:LDS3-EN004:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276757
+      ]
+     },
+     "number": "LDS3-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gernia (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "zombie-world-structure-deck:77936940:SDZW-EN004:common",
@@ -13665,6 +14143,9 @@
    ]
   },
   {
+   "aliases": [
+    "Eternal Perfection of the Tenyi"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -13706,6 +14187,9 @@
    "passcode": 77946022,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:77946022:SUDA-EN062:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [

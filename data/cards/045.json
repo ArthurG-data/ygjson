@@ -61,6 +61,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:45001322:BACH-EN088:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -85,6 +88,9 @@
    ]
   },
   {
+   "aliases": [
+    "Arch-Lord Palladion"
+   ],
    "archetypes": [
     "crusadia"
    ],
@@ -235,6 +241,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:45005708:CYAC-EN008:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -393,6 +402,9 @@
    ]
   },
   {
+   "aliases": [
+    "Taotao the Chanter"
+   ],
    "atk": 900,
    "attribute": "earth",
    "def": 600,
@@ -434,6 +446,9 @@
    "passcode": 45016904,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:45016904:DOOD-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1184,6 +1199,9 @@
    "tcgDate": "2021-12-02"
   },
   {
+   "aliases": [
+    "Manadome Abscission"
+   ],
    "archetypes": [
     "mannadium"
    ],
@@ -1225,6 +1243,9 @@
    "passcode": 45065541,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:45065541:CYAC-EN057:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1379,6 +1400,23 @@
      "set": "legendary-duelists",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Cyberdark Cannon"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:45078193:SGX4-ENE02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543825
+      ]
+     },
+     "number": "SGX4-ENE02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Cyberdark Cannon"
      }
     },
@@ -1562,6 +1600,9 @@
    ]
   },
   {
+   "aliases": [
+    "World Ocean Dragon - Zealantis"
+   ],
    "atk": 2500,
    "attribute": "water",
    "frame": "link",
@@ -1625,6 +1666,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:45112597:DABL-EN050:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1761,6 +1805,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ancient Warriors Saga - Defying the Warlord's Demand"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -1801,6 +1848,9 @@
    "passcode": 45115956,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:45115956:DIFO-EN064:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1820,6 +1870,9 @@
    "tcgDate": "2022-05-19"
   },
   {
+   "aliases": [
+    "Heavy Knight Babel Decker"
+   ],
    "archetypes": [
     "train"
    ],
@@ -2613,6 +2666,9 @@
    ]
   },
   {
+   "aliases": [
+    "Am Duasennet"
+   ],
    "archetypes": [
     "zenet"
    ],
@@ -2643,6 +2699,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Al Ghoul Mazera"
+   ],
    "archetypes": [
     "zera"
    ],
@@ -2688,6 +2747,9 @@
    "passcode": 45154513,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:45154513:DIFO-EN014:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3042,6 +3104,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:45171524:SUDA-EN094:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3232,6 +3297,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elemental HERO Solidman"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -3801,6 +3869,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magical King of the Swamp"
+   ],
    "archetypes": [
     "swamp"
    ],
@@ -3858,6 +3929,36 @@
     "Spellcaster",
     "Effect"
    ]
+  },
+  {
+   "archetypes": [
+    "salamangreat"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "45227328",
+   "identifiers": {
+    "konamiId": 23874,
+    "ygoprodeckId": 45227328
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/45227328.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/45227328.jpg",
+     "id": 45227328,
+     "small": "https://images.ygoprodeck.com/images/cards_small/45227328.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Equip",
+   "name": "Salamangreat Gearblade",
+   "names": {
+    "en": "Salamangreat Gearblade"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 45227328,
+   "prints": []
   },
   {
    "atk": 1800,
@@ -4092,6 +4193,40 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Flame Swordsman"
+     }
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:45231178:SBC1-ENB22:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512265
+      ]
+     },
+     "number": "SBC1-ENB22",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Flame Swordsman"
+     }
+    },
+    {
+     "id": "speed-duel-streets-of-battle-city:45231178:SBC1-ENB22:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       512266
+      ]
+     },
+     "number": "SBC1-ENB22",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-streets-of-battle-city",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Flame Swordsman (Secret Rare)"
      }
     },
     {
@@ -5012,6 +5147,9 @@
    "passcode": 45337544,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:45337544:DIFO-EN061:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5441,7 +5579,28 @@
     "pt": "Luce, a Escuridão do Crepúsculo"
    },
    "passcode": 45409943,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:45409943:DUAD-EN082:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639419
+      ]
+     },
+     "number": "DUAD-EN082",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Luce the Dusk's Dark"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03",
    "typeline": [
     "Fiend",
@@ -5544,6 +5703,9 @@
    "tcgDate": "2015-07-16"
   },
   {
+   "aliases": [
+    "Grozer the Thunderclap Tyrant"
+   ],
    "atk": 2800,
    "attribute": "dark",
    "def": 2800,
@@ -5602,6 +5764,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:45420955:BACH-EN097:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5722,6 +5887,47 @@
    "tcgDate": "2004-02-10",
    "typeline": [
     "Plant",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "The Sun God's Terror Machine - Gil Garth"
+   ],
+   "archetypes": [
+    "sun-god"
+   ],
+   "atk": 1800,
+   "attribute": "dark",
+   "def": 1200,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "45430558",
+   "identifiers": {
+    "konamiId": 23814,
+    "ygoprodeckId": 45430558
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/45430558.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/45430558.jpg",
+     "id": 45430558,
+     "small": "https://images.ygoprodeck.com/images/cards_small/45430558.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Fiend",
+   "name": "Gil Garth, Exterminator of the Sun God",
+   "names": {
+    "en": "Gil Garth, Exterminator of the Sun God"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 45430558,
+   "prints": [],
+   "typeline": [
+    "Fiend",
     "Effect"
    ]
   },
@@ -6200,6 +6406,9 @@
    ]
   },
   {
+   "aliases": [
+    "Inverted Code Talker"
+   ],
    "archetypes": [
     "code-talker"
    ],
@@ -6392,6 +6601,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:45462149:MGED-EN106:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6623,6 +6835,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gold Pride - Annihilator"
+   ],
    "archetypes": [
     "gold-pride"
    ],
@@ -6668,6 +6883,9 @@
    "passcode": 45464587,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:45464587:LEDE-EN041:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6684,6 +6902,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:45464587:LEDE-EN041:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7163,6 +7384,9 @@
    "passcode": 45488703,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:45488703:ALIN-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7370,6 +7594,9 @@
    ]
   },
   {
+   "aliases": [
+    "Possessed Resonance"
+   ],
    "archetypes": [
     "possessed"
    ],
@@ -7624,13 +7851,39 @@
    },
    "ocgDate": "2026-05-30",
    "passcode": 45536531,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:45536531:MAMS-EN039:secret_rare",
+     "number": "MAMS-EN039",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:45536531:MAMS-EN039:starlight_rare",
+     "number": "MAMS-EN039",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:45536531:MAMS-EN039:ultra_rare",
+     "number": "MAMS-EN039",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Beast",
     "Effect"
    ]
   },
   {
+   "aliases": [
+    "Familiars of the Spiritual Arts"
+   ],
    "archetypes": [
     "familiar-possessed"
    ],
@@ -8791,6 +9044,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Magikey-Evoked Beast - Ansya-Labolas"
+   ],
    "archetypes": [
     "magikey"
    ],
@@ -8943,9 +9199,7 @@
      "id": "legendary-duelists-season-3:45659520:LDS3-EN026:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276157,
-       276752,
-       276753
+       276157
       ]
      },
      "number": "LDS3-EN026",
@@ -8956,6 +9210,48 @@
       "match": "number+rarity",
       "name": "Evil HERO Sinister Necrom"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:45659520:LDS3-EN026:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276752
+      ]
+     },
+     "number": "LDS3-EN026",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Sinister Necrom (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:45659520:LDS3-EN026:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276753
+      ]
+     },
+     "number": "LDS3-EN026",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Sinister Necrom (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "ots-tournament-pack-27:45659520:OP27-EN017:common",
@@ -9069,6 +9365,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snake-Eye Oark"
+   ],
    "archetypes": [
     "snake-eye"
    ],
@@ -9130,6 +9429,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:45663742:AGOV-EN008:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9153,6 +9455,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nemesys Adrasteia"
+   ],
    "archetypes": [
     "nemeses"
    ],
@@ -9285,6 +9590,9 @@
    ]
   },
   {
+   "aliases": [
+    "Machina Uncruspare"
+   ],
    "archetypes": [
     "machina"
    ],
@@ -9369,6 +9677,9 @@
    ]
   },
   {
+   "aliases": [
+    "Branded Etude"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -9426,6 +9737,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:45675980:CYAC-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10160,6 +10474,9 @@
    "tcgDate": "2013-05-17"
   },
   {
+   "aliases": [
+    "Adamatia Resonance"
+   ],
    "archetypes": [
     "adamancipator"
    ],
@@ -10319,6 +10636,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kleinant"
+   ],
    "atk": 1500,
    "attribute": "light",
    "def": 1500,
@@ -10621,6 +10941,10 @@
    "passcode": 45792753,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:45792753:POTE-EN091:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10640,6 +10964,9 @@
    "tcgDate": "2022-08-04"
   },
   {
+   "aliases": [
+    "Maha Vailo of Apramanabha"
+   ],
    "atk": 1550,
    "attribute": "light",
    "def": 1400,
@@ -11487,6 +11814,9 @@
    ]
   },
   {
+   "aliases": [
+    "Selene, the Sacred Sovereign of Magic"
+   ],
    "archetypes": [
     "endymion"
    ],
@@ -11707,6 +12037,9 @@
    ]
   },
   {
+   "aliases": [
+    "Earthbound Overwalker"
+   ],
    "archetypes": [
     "earthbound"
    ],
@@ -11810,6 +12143,9 @@
    ]
   },
   {
+   "aliases": [
+    "Twins of the Eclipse"
+   ],
    "atk": 2500,
    "attribute": "light",
    "def": 1200,
@@ -11851,6 +12187,9 @@
    "passcode": 45852939,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:45852939:SUDA-EN047:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12079,6 +12418,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magikey Cannon - Garesvet"
+   ],
    "archetypes": [
     "magikey"
    ],
@@ -12224,6 +12566,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:45883110:CYAC-EN011:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12240,6 +12585,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:45883110:CYAC-EN011:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12689,6 +13037,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:45894482:SGX4-ENC11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543789
+      ]
+     },
+     "number": "SGX4-ENC11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gilasaurus"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-ultimate-predators:45894482:SS03-ENA10:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13116,6 +13481,40 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:45906428:SGX4-ENE05:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543828
+      ]
+     },
+     "number": "SGX4-ENE05",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Miracle Fusion"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:45906428:SGX4-ENE05:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543833
+      ]
+     },
+     "number": "SGX4-ENE05",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Miracle Fusion (Secret Rare)"
+     }
+    },
+    {
      "id": "turbo-pack-booster-five:45906428:TU05-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13195,6 +13594,9 @@
    ]
   },
   {
+   "aliases": [
+    "Volo, the Doom-Originator Vassal Dragon"
+   ],
    "atk": 2400,
    "attribute": "dark",
    "def": 1300,
@@ -13252,6 +13654,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:45935145:DABL-EN047:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13609,6 +14014,9 @@
    "tcgDate": "2007-02-28"
   },
   {
+   "aliases": [
+    "Torpedo Take Down"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "45943123",
@@ -13862,6 +14270,9 @@
    ]
   },
   {
+   "aliases": [
+    "Super Soldier Origin"
+   ],
    "archetypes": [
     "black-luster-soldier"
    ],
@@ -14148,6 +14559,9 @@
    "tcgDate": "2025-09-04"
   },
   {
+   "aliases": [
+    "Catoblepas, Retainer of the Evil Eye"
+   ],
    "archetypes": [
     "evil-eye"
    ],

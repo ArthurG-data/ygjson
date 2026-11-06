@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Xtra HERO Crossguy"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -289,6 +292,9 @@
    ]
   },
   {
+   "aliases": [
+    "Giant Ball Park"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "58012707",
@@ -574,6 +580,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:58019984:DUNE-EN070:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -593,6 +602,9 @@
    "tcgDate": "2023-07-27"
   },
   {
+   "aliases": [
+    "Exciting Melffy Time"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -693,6 +705,9 @@
    "passcode": 58036229,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:58036229:CYAC-EN048:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -717,6 +732,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Psalms of Kings"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "58053438",
@@ -755,6 +773,9 @@
    "passcode": 58053438,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:58053438:ALIN-EN078:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -771,6 +792,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:58053438:ALIN-EN078:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1172,6 +1196,9 @@
    ]
   },
   {
+   "aliases": [
+    "Alien Buster"
+   ],
    "archetypes": [
     "alien"
    ],
@@ -1516,6 +1543,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snake-Eyes Damned Dragon"
+   ],
    "archetypes": [
     "eyes-dragon"
    ],
@@ -1694,6 +1724,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:58071334:SUDA-EN035:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1710,6 +1743,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:58071334:SUDA-EN035:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1778,6 +1814,9 @@
    "passcode": 58074177,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:58074177:DIFO-EN098:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1955,6 +1994,9 @@
    ]
   },
   {
+   "aliases": [
+    "Performapal Empyrean Magician"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -2022,9 +2064,7 @@
      "id": "legendary-duelists-season-3:58092907:LDS3-EN130:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276119,
-       276769,
-       276770
+       276119
       ]
      },
      "number": "LDS3-EN130",
@@ -2035,6 +2075,48 @@
       "match": "number+rarity",
       "name": "Performapal Celestial Magician"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:58092907:LDS3-EN130:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276769
+      ]
+     },
+     "number": "LDS3-EN130",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Celestial Magician (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:58092907:LDS3-EN130:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276770
+      ]
+     },
+     "number": "LDS3-EN130",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Performapal Celestial Magician (Red)"
+     },
+     "variant": "red"
     }
    ],
    "scale": 8,
@@ -2110,6 +2192,9 @@
    ]
   },
   {
+   "aliases": [
+    "Senka Legend - The Sun-Liu Alliance"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -2240,11 +2325,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:58120309:DL17-EN020:rare",
+     "number": "DL17-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:58120309:DL17-EN020:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80608,
-       80609,
-       80610,
+       80609
+      ]
+     },
+     "number": "DL17-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Starlight Road (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:58120309:DL17-EN020:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80610
+      ]
+     },
+     "number": "DL17-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Starlight Road (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:58120309:DL17-EN020:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80611
       ]
      },
@@ -2252,10 +2377,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Starlight Road (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:58120309:DL17-EN020:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80608
+      ]
+     },
+     "number": "DL17-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Starlight Road (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "editions": [
@@ -2325,6 +2470,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:58120309:MGED-EN053:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2654,6 +2802,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witchcraft Edel"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -2858,6 +3009,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:58143852:LEDE-EN029:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2874,6 +3028,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:58143852:LEDE-EN029:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3287,6 +3444,23 @@
      "set": "secrets-of-eternity",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Wall of Disruption"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:58169731:SBC2-ENF19:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600334
+      ]
+     },
+     "number": "SBC2-ENF19",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Wall of Disruption"
      }
     },
@@ -3769,6 +3943,9 @@
    "tcgDate": "2015-05-14"
   },
   {
+   "aliases": [
+    "Spector, Dragon Ruler of Rays"
+   ],
    "archetypes": [
     "dragon-ruler"
    ],
@@ -3814,6 +3991,9 @@
    "passcode": 58201062,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:58201062:ALIN-EN018:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3830,6 +4010,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:58201062:ALIN-EN018:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3907,6 +4090,13 @@
       "match": "number+rarity",
       "name": "Sea Stealth II"
      }
+    },
+    {
+     "id": "magnificent-maestros:58203736:MAMS-EN105:ultra_rare",
+     "number": "MAMS-EN105",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2022-06-16"
@@ -3956,6 +4146,9 @@
    "passcode": 58205203,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:58205203:DOOD-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4419,6 +4612,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magistry Alchemist"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -4709,6 +4905,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:58288565:ROTA-EN088:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5022,6 +5221,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:58308221:DIFO-EN052:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5259,6 +5461,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gandora Giga Rays the Dragon of Destruction"
+   ],
    "archetypes": [
     "gandora"
    ],
@@ -5455,6 +5660,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infernoble Knight - Olivier"
+   ],
    "archetypes": [
     "noble-knight"
    ],
@@ -5579,6 +5787,9 @@
    "passcode": 58354899,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:58354899:SUDA-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5603,6 +5814,9 @@
    ]
   },
   {
+   "aliases": [
+    "Security Force Platina"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -5786,6 +6000,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crystal Protection"
+   ],
    "archetypes": [
     "crystal"
    ],
@@ -5845,6 +6062,9 @@
    "tcgDate": "2022-09-29"
   },
   {
+   "aliases": [
+    "Holy Night Blast"
+   ],
    "archetypes": [
     "starry-knight"
    ],
@@ -5907,6 +6127,9 @@
    "tcgDate": "2021-04-15"
   },
   {
+   "aliases": [
+    "World Legacy Resistance"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -6158,6 +6381,9 @@
    "tcgDate": "2005-05-28"
   },
   {
+   "aliases": [
+    "World Chalice's Beckoned"
+   ],
    "archetypes": [
     "world-chalice"
    ],
@@ -6242,6 +6468,9 @@
    ]
   },
   {
+   "aliases": [
+    "Holy Night Sky"
+   ],
    "archetypes": [
     "starry-knight"
    ],
@@ -6302,6 +6531,36 @@
     }
    ],
    "tcgDate": "2021-04-15"
+  },
+  {
+   "archetypes": [
+    "ra"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "58406693",
+   "identifiers": {
+    "konamiId": 23862,
+    "ygoprodeckId": 58406693
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/58406693.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/58406693.jpg",
+     "id": 58406693,
+     "small": "https://images.ygoprodeck.com/images/cards_small/58406693.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Quick-Play",
+   "name": "The Immortal Sun God",
+   "names": {
+    "en": "The Immortal Sun God"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 58406693,
+   "prints": []
   },
   {
    "frame": "spell",
@@ -6413,6 +6672,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:58419204:SGX4-ENC18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543796
+      ]
+     },
+     "number": "SGX4-ENC18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Survival Instinct"
+     }
+    },
+    {
      "id": "structure-deck-dinosaur-s-rage:58419204:SD09-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6432,6 +6708,9 @@
    "tcgDate": "2006-10-20"
   },
   {
+   "aliases": [
+    "Tactical Exchamber"
+   ],
    "archetypes": [
     "rokket"
    ],
@@ -6730,6 +7009,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pulse Bomb"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "58464739",
@@ -9101,6 +9383,9 @@
    "tcgDate": "2003-07-18"
   },
   {
+   "aliases": [
+    "Defradragun"
+   ],
    "atk": 1000,
    "attribute": "dark",
    "def": 600,
@@ -9182,6 +9467,9 @@
    ]
   },
   {
+   "aliases": [
+    "Security Force Professor Digamma"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -9601,6 +9889,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:58607704:IOC-EN102:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9724,6 +10015,23 @@
      "set": "crossed-souls",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Doomdog Octhros"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:58616392:SBC2-ENE10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600151
+      ]
+     },
+     "number": "SBC2-ENE10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Doomdog Octhros"
      }
     }
@@ -10229,6 +10537,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gravekeeper's Medium"
+   ],
    "archetypes": [
     "gravekeeper-s"
    ],
@@ -10460,6 +10771,42 @@
    "tcgDate": "2024-06-20",
    "typeline": [
     "Thunder",
+    "Effect"
+   ]
+  },
+  {
+   "atk": 1000,
+   "attribute": "water",
+   "def": 2100,
+   "frame": "synchro",
+   "hasEffect": true,
+   "id": "58683667",
+   "identifiers": {
+    "konamiId": 23851,
+    "ygoprodeckId": 58683667
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/58683667.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/58683667.jpg",
+     "id": 58683667,
+     "small": "https://images.ygoprodeck.com/images/cards_small/58683667.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Sea Serpent",
+   "name": "Lethargisaurus",
+   "names": {
+    "en": "Lethargisaurus"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 58683667,
+   "prints": [],
+   "typeline": [
+    "Sea Serpent",
+    "Synchro",
     "Effect"
    ]
   },
@@ -10732,6 +11079,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cherubini, Black Angel of the Burning Abyss"
+   ],
    "archetypes": [
     "burning-abyss"
    ],
@@ -10936,6 +11286,9 @@
    ]
   },
   {
+   "aliases": [
+    "Disablaster the Matchless Turret"
+   ],
    "atk": 500,
    "attribute": "light",
    "def": 2000,
@@ -10994,6 +11347,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:58707981:INFO-EN026:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11010,6 +11366,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:58707981:INFO-EN026:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11336,6 +11695,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shipment Error"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "58761791",
@@ -11372,7 +11734,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 58761791,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:58761791:DUAD-EN079:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639416
+      ]
+     },
+     "number": "DUAD-EN079",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Shipping Error"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -11413,6 +11796,9 @@
    "passcode": 58769832,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:58769832:BPRO-EN014:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11429,6 +11815,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:58769832:BPRO-EN014:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11732,6 +12121,9 @@
    "tcgDate": "2017-03-30"
   },
   {
+   "aliases": [
+    "Draitron Fafnir"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -12234,6 +12626,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 95"
+   ],
    "archetypes": [
     "galaxy-eyes",
     "number-spell-trap-archetype"
@@ -12319,6 +12714,9 @@
    ]
   },
   {
+   "aliases": [
+    "Armored Dragon Ritual"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "58827995",
@@ -12568,6 +12966,9 @@
    ]
   },
   {
+   "aliases": [
+    "Antagonistic Intelligence ME-PSY-YA"
+   ],
    "atk": 2500,
    "attribute": "light",
    "def": 3000,
@@ -12736,6 +13137,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:58851034:IOC-EN049:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13000,6 +13404,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:58858807:CYAC-EN045:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13319,11 +13726,51 @@
    "prints": [
     {
      "id": "duelist-league-14-participation-cards:58873391:DL14-EN018:rare",
+     "number": "DL14-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:58873391:DL14-EN018:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77594,
-       80526,
-       80527,
+       80526
+      ]
+     },
+     "number": "DL14-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fish Depth Charge (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:58873391:DL14-EN018:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80527
+      ]
+     },
+     "number": "DL14-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fish Depth Charge (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:58873391:DL14-EN018:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80528
       ]
      },
@@ -13331,10 +13778,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fish Depth Charge (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:58873391:DL14-EN018:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77594
+      ]
+     },
+     "number": "DL14-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Fish Depth Charge (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "speed-duel-streets-of-battle-city:58873391:SBC1-ENC19:common",
@@ -13412,6 +13879,9 @@
    "passcode": 58882608,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:58882608:DUNE-EN091:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13478,6 +13948,9 @@
    "passcode": 58884063,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:58884063:PHHY-EN090:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13692,6 +14165,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crack Blitzclique"
+   ],
    "archetypes": [
     "blitzclique"
    ],
@@ -13761,6 +14237,13 @@
       "match": "number+rarity",
       "name": "Crackle Blitzclique (Starlight Rare)"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:58916810:UP02-EN003:ultimate_rare",
+     "number": "UP02-EN003",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2026-07-02",
@@ -14188,6 +14671,9 @@
    "tcgDate": "2010-11-06"
   },
   {
+   "aliases": [
+    "Dragon Master Lord"
+   ],
    "archetypes": [
     "25th-anniversary-monsters"
    ],
@@ -14232,6 +14718,9 @@
    "passcode": 58931850,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:58931850:ALIN-EN000:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14560,6 +15049,9 @@
    ]
   },
   {
+   "aliases": [
+    "Performapal Lady Ange"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -14605,6 +15097,9 @@
    "passcode": 58938528,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:58938528:DIFO-EN002:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14749,6 +15244,9 @@
    ]
   },
   {
+   "aliases": [
+    "Yosenju Saburoukaze"
+   ],
    "archetypes": [
     "yosenju"
    ],
@@ -14816,6 +15314,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dynamite Knuckle, the True Dracofighter"
+   ],
    "archetypes": [
     "true-draco"
    ],
@@ -15072,6 +15573,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:58990362:MGED-EN072:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15171,6 +15675,9 @@
    "tcgDate": "2009-05-02"
   },
   {
+   "aliases": [
+    "First Striker Advantage"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "58995660",

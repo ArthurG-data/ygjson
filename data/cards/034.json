@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Goblin Biker Big-Head Gabonga"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -62,6 +65,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:34001672:PHNI-EN047:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -78,6 +84,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:34001672:PHNI-EN047:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -229,6 +238,13 @@
       "match": "number+rarity",
       "name": "The Big Saturn"
      }
+    },
+    {
+     "id": "magnificent-maestros:34004470:MAMS-EN065:ultra_rare",
+     "number": "MAMS-EN065",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2010-02-19",
@@ -238,6 +254,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cynet Optimize"
+   ],
    "archetypes": [
     "code-talker"
    ],
@@ -718,6 +737,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ex Ryzeal"
+   ],
    "archetypes": [
     "ryzeal"
    ],
@@ -1122,6 +1144,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fissioning Mother Spider"
+   ],
    "archetypes": [
     "spider"
    ],
@@ -1189,6 +1214,9 @@
    ]
   },
   {
+   "aliases": [
+    "Empire of Endymion"
+   ],
    "archetypes": [
     "endymion"
    ],
@@ -1240,6 +1268,9 @@
    "tcgDate": "2026-06-04"
   },
   {
+   "aliases": [
+    "Gigantic Thunder Cross"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "34047456",
@@ -1294,6 +1325,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:34047456:PHHY-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1355,6 +1389,9 @@
    "passcode": 34072799,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:34072799:BODE-EN037:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1699,6 +1736,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rebranded"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -1756,6 +1796,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:34090915:DABL-EN053:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2626,6 +2669,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hairon, the Timelord"
+   ],
    "archetypes": [
     "timelord"
    ],
@@ -2770,6 +2816,9 @@
    ]
   },
   {
+   "aliases": [
+    "Burial Bicorn Carnovorus"
+   ],
    "atk": 2000,
    "attribute": "fire",
    "def": 200,
@@ -2812,6 +2861,9 @@
    "passcode": 34149150,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:34149150:DOOD-EN098:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2971,6 +3023,9 @@
    ]
   },
   {
+   "aliases": [
+    "Aron, King of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -3273,6 +3328,9 @@
    ]
   },
   {
+   "aliases": [
+    "Meutering"
+   ],
    "atk": 1400,
    "attribute": "earth",
    "def": 1100,
@@ -3330,6 +3388,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:34198387:BODE-EN034:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3423,6 +3484,13 @@
       "match": "number+rarity",
       "name": "Magical Scientist"
      }
+    },
+    {
+     "id": "magnificent-maestros:34206604:MAMS-EN061:ultra_rare",
+     "number": "MAMS-EN061",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2003-10-10",
@@ -3432,6 +3500,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tearlaments Perlregia"
+   ],
    "archetypes": [
     "tearlaments"
    ],
@@ -3489,6 +3560,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:34225426:PHHY-EN061:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3554,11 +3628,69 @@
    "prints": [
     {
      "id": "duelist-league-18-participation-cards:34230233:DL18-EN006:rare",
+     "number": "DL18-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:34230233:DL18-EN006:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94899,
-       94920,
-       94935,
+       94899
+      ]
+     },
+     "number": "DL18-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Grapha, Dragon Lord of Dark World (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:34230233:DL18-EN006:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94920
+      ]
+     },
+     "number": "DL18-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Grapha, Dragon Lord of Dark World (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:34230233:DL18-EN006:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94935
+      ]
+     },
+     "number": "DL18-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Grapha, Dragon Lord of Dark World (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:34230233:DL18-EN006:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94936
       ]
      },
@@ -3566,10 +3698,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Grapha, Dragon Lord of Dark World (Blue)"
-     }
+      "name": "Grapha, Dragon Lord of Dark World (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "gates-of-the-underworld-structure-deck:34230233:SDGU-EN001:ultra_rare",
@@ -3691,6 +3825,9 @@
    ]
   },
   {
+   "aliases": [
+    "Legendary Klesha Six Samurai - Shi En"
+   ],
    "archetypes": [
     "six-samurai"
    ],
@@ -3752,6 +3889,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:34235530:ROTA-EN039:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3768,6 +3908,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:34235530:ROTA-EN039:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3963,6 +4106,9 @@
    ]
   },
   {
+   "aliases": [
+    "Which Starling"
+   ],
    "atk": 1000,
    "attribute": "wind",
    "def": 1500,
@@ -4858,11 +5004,69 @@
    "prints": [
     {
      "id": "duelist-league-16-participation-cards:34294855:DL16-EN003:rare",
+     "number": "DL16-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34294855:DL16-EN003:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77605,
-       77606,
-       77607,
+       77605
+      ]
+     },
+     "number": "DL16-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Vampire's Curse (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34294855:DL16-EN003:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77606
+      ]
+     },
+     "number": "DL16-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Vampire's Curse (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34294855:DL16-EN003:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77607
+      ]
+     },
+     "number": "DL16-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Vampire's Curse (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34294855:DL16-EN003:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77608
       ]
      },
@@ -4870,10 +5074,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Vampire's Curse (Blue)"
-     }
+      "name": "Vampire's Curse (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:34294855:LCJW-EN204:common",
@@ -4985,10 +5191,37 @@
    "names": {
     "en": "Mind Scan"
    },
+   "ocgDate": "2026-05-30",
    "passcode": 34298391,
-   "prints": []
+   "prints": [
+    {
+     "id": "magnificent-maestros:34298391:MAMS-EN045:secret_rare",
+     "number": "MAMS-EN045",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:34298391:MAMS-EN045:starlight_rare",
+     "number": "MAMS-EN045",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:34298391:MAMS-EN045:ultra_rare",
+     "number": "MAMS-EN045",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12"
   },
   {
+   "aliases": [
+    "Clashing Whirlpool of the Mythic Radiance Dragon"
+   ],
    "archetypes": [
     "phantasm-spiral"
    ],
@@ -5076,7 +5309,30 @@
    },
    "ocgDate": "2026-05-30",
    "passcode": 34314989,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:34314989:MAMS-EN042:secret_rare",
+     "number": "MAMS-EN042",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:34314989:MAMS-EN042:starlight_rare",
+     "number": "MAMS-EN042",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:34314989:MAMS-EN042:ultra_rare",
+     "number": "MAMS-EN042",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Illusion",
     "Effect"
@@ -5666,6 +5922,9 @@
    ]
   },
   {
+   "aliases": [
+    "Evil★Twin Easy Game"
+   ],
    "archetypes": [
     "evil-twin"
    ],
@@ -5779,6 +6038,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:34370473:IOC-EN091:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6122,6 +6384,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sky Striker Alternative - Lemnis Gate"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -6162,6 +6427,46 @@
    "ocgDate": "2025-04-26",
    "passcode": 34433770,
    "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:34433770:DUAD-EN069:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       641283
+      ]
+     },
+     "number": "DUAD-EN069",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Sky Striker Special Maneuver - Lemnisgate! (Starlight Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:34433770:DUAD-EN069:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639406
+      ]
+     },
+     "number": "DUAD-EN069",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Sky Striker Special Maneuver - Lemnisgate!"
+     }
+    },
     {
      "editions": [
       "first"
@@ -6377,6 +6682,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kashtira Papiyas"
+   ],
    "archetypes": [
     "kashtira"
    ],
@@ -6434,6 +6742,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:34447918:PHHY-EN058:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6531,6 +6842,9 @@
    "tcgDate": "2016-08-04"
   },
   {
+   "aliases": [
+    "Love Magus - Ciela"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -6654,11 +6968,69 @@
     },
     {
      "id": "duelist-league-16-participation-cards:34460239:DL16-EN016:rare",
+     "number": "DL16-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34460239:DL16-EN016:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77657,
-       77658,
-       77659,
+       77657
+      ]
+     },
+     "number": "DL16-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Generation Shift (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34460239:DL16-EN016:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77658
+      ]
+     },
+     "number": "DL16-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Generation Shift (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34460239:DL16-EN016:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77659
+      ]
+     },
+     "number": "DL16-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Generation Shift (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:34460239:DL16-EN016:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77660
       ]
      },
@@ -6666,10 +7038,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Generation Shift (Blue)"
-     }
+      "name": "Generation Shift (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "shadow-of-infinity:34460239:SOI-EN055:common",
@@ -7216,6 +7590,9 @@
    ]
   },
   {
+   "aliases": [
+    "Grenosaurus the Magic-Head Cannon"
+   ],
    "atk": 2200,
    "attribute": "fire",
    "def": 2000,
@@ -7273,6 +7650,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:34481518:DUNE-EN046:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7590,6 +7970,9 @@
    ]
   },
   {
+   "aliases": [
+    "Superheavy Samurai Daihachi"
+   ],
    "archetypes": [
     "superheavy"
    ],
@@ -7973,6 +8356,9 @@
    ]
   },
   {
+   "aliases": [
+    "Branded Servants"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -8014,6 +8400,9 @@
    "passcode": 34536828,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:34536828:BACH-EN053:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8033,6 +8422,9 @@
    "tcgDate": "2022-02-10"
   },
   {
+   "aliases": [
+    "Tao the Great Chanter"
+   ],
    "atk": 1200,
    "attribute": "earth",
    "def": 900,
@@ -8091,6 +8483,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:34541543:AGOV-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8133,6 +8528,9 @@
    ]
   },
   {
+   "aliases": [
+    "A Cell Breeding Device"
+   ],
    "archetypes": [
     "alien"
    ],
@@ -8191,6 +8589,9 @@
    "tcgDate": "2007-05-16"
   },
   {
+   "aliases": [
+    "Artmegia Finemelt"
+   ],
    "archetypes": [
     "artmage"
    ],
@@ -8236,6 +8637,9 @@
    "passcode": 34541940,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:34541940:DUAD-EN009:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8252,6 +8656,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:34541940:DUAD-EN009:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8333,6 +8740,9 @@
    "tcgDate": "2009-09-01"
   },
   {
+   "aliases": [
+    "Lyrical Luscinia - Cobalt Sparrow"
+   ],
    "archetypes": [
     "lyrilusc"
    ],
@@ -8702,6 +9112,23 @@
       "match": "number+rarity",
       "name": "Arcana Force VII - The Chariot"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:34568403:SGX4-ENB07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543765
+      ]
+     },
+     "number": "SGX4-ENB07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Arcana Force VII - The Chariot"
+     }
     }
    ],
    "tcgDate": "2008-05-03",
@@ -9001,6 +9428,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snowflower Sprite Cyclan"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -9454,6 +9884,9 @@
    ]
   },
   {
+   "aliases": [
+    "Xenovader△ of Scarlet Naraka"
+   ],
    "archetypes": [
     "trirealm-rift"
    ],
@@ -9545,6 +9978,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:34646691:IOC-EN035:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10119,6 +10555,9 @@
    ]
   },
   {
+   "aliases": [
+    "Arametir, the Forbidden Spell"
+   ],
    "archetypes": [
     "adventurer"
    ],
@@ -10176,6 +10615,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:34690953:DABL-EN067:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10876,6 +11318,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magistus Maiden Artemis"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -11622,6 +12067,9 @@
    ]
   },
   {
+   "aliases": [
+    "Melffy Sealy"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -11699,6 +12147,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:34800281:POTE-EN023:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11779,6 +12231,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:34813443:LEDE-EN096:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11798,6 +12253,9 @@
    "tcgDate": "2024-04-25"
   },
   {
+   "aliases": [
+    "Naturia Spring Breeze"
+   ],
    "archetypes": [
     "naturia"
    ],
@@ -11855,6 +12313,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:34813545:DABL-EN064:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12404,6 +12865,9 @@
    "tcgDate": "2013-03-07"
   },
   {
+   "aliases": [
+    "Brigand the Stigmatavorous Dragon"
+   ],
    "atk": 2500,
    "attribute": "dark",
    "def": 2000,
@@ -12727,6 +13191,9 @@
    "passcode": 34873741,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:34873741:ALIN-EN008:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12750,6 +13217,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nafil Asylum Heth Knight"
+   ],
    "atk": 1700,
    "attribute": "water",
    "def": 2700,
@@ -12848,6 +13318,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pendulum of Souls"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "34884015",
@@ -13103,6 +13576,9 @@
    "tcgDate": "2003-10-10"
   },
   {
+   "aliases": [
+    "Ryzeal Deadnader"
+   ],
    "archetypes": [
     "ryzeal"
    ],
@@ -13481,6 +13957,9 @@
    "tcgDate": "2020-12-03"
   },
   {
+   "aliases": [
+    "Outer Entity Azzathoth"
+   ],
    "archetypes": [
     "outer-entity"
    ],
@@ -13995,6 +14474,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bloom Harmonist the Melodious Virtuoso"
+   ],
    "archetypes": [
     "melodious"
    ],
@@ -14067,6 +14549,9 @@
    ]
   },
   {
+   "aliases": [
+    "Blackwing - Chinook the Snowstrike"
+   ],
    "archetypes": [
     "blackwing"
    ],
@@ -14128,6 +14613,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:34976176:DABL-EN003:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14167,6 +14655,9 @@
    ]
   },
   {
+   "aliases": [
+    "Riplodocus"
+   ],
    "atk": 800,
    "attribute": "earth",
    "frame": "link",
@@ -14276,6 +14767,9 @@
    ]
   },
   {
+   "aliases": [
+    "Stigmatika of White"
+   ],
    "archetypes": [
     "branded"
    ],

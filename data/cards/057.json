@@ -547,10 +547,7 @@
      "id": "legendary-duelists-season-2:57043986:LDS2-EN014:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230239,
-       230766,
-       230767,
-       230768
+       230239
       ]
      },
      "number": "LDS2-EN014",
@@ -561,6 +558,60 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Solid Dragon"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:57043986:LDS2-EN014:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230766
+      ]
+     },
+     "number": "LDS2-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Solid Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:57043986:LDS2-EN014:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230767
+      ]
+     },
+     "number": "LDS2-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Solid Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:57043986:LDS2-EN014:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230768
+      ]
+     },
+     "number": "LDS2-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Solid Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists-white-dragon-abyss:57043986:LED3-EN002:ultra_rare",
@@ -1144,11 +1195,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:57103969:DL18-EN014:rare",
+     "number": "DL18-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:57103969:DL18-EN014:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94908,
-       94928,
-       94953,
+       94908
+      ]
+     },
+     "number": "DL18-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fire Formation - Tenki (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:57103969:DL18-EN014:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94928
+      ]
+     },
+     "number": "DL18-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fire Formation - Tenki (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:57103969:DL18-EN014:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94953
+      ]
+     },
+     "number": "DL18-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fire Formation - Tenki (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:57103969:DL18-EN014:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94954
       ]
      },
@@ -1156,10 +1265,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Fire Formation - Tenki (Blue)"
-     }
+      "name": "Fire Formation - Tenki (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "fire-fists-special-edition:57103969:FFSE-EN001:super_rare",
@@ -1232,6 +1343,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:57103969:MGED-EN042:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1383,6 +1497,13 @@
      }
     },
     {
+     "id": "ultimate-tournament-pack-2:57103969:UP02-EN016:super_rare",
+     "number": "UP02-EN016",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
+    },
+    {
      "id": "wild-survivors:57103969:WISU-EN028:collectors_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1502,6 +1623,9 @@
    ]
   },
   {
+   "aliases": [
+    "Therions' \"Duke\" Jule"
+   ],
    "archetypes": [
     "therion"
    ],
@@ -1563,6 +1687,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:57111330:DIFO-EN005:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1602,6 +1729,9 @@
    ]
   },
   {
+   "aliases": [
+    "Maliss C TB-11"
+   ],
    "archetypes": [
     "maliss"
    ],
@@ -1853,11 +1983,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:57116033:DL12-EN008:rare",
+     "number": "DL12-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:57116033:DL12-EN008:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77405,
-       80376,
-       80377,
+       80376
+      ]
+     },
+     "number": "DL12-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Winged Kuriboh (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:57116033:DL12-EN008:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80377
+      ]
+     },
+     "number": "DL12-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Winged Kuriboh (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:57116033:DL12-EN008:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80378
       ]
      },
@@ -1865,10 +2035,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Winged Kuriboh (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:57116033:DL12-EN008:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77405
+      ]
+     },
+     "number": "DL12-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Winged Kuriboh (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-jaden-yuki:57116033:DP1-EN005:rare",
@@ -2455,6 +2645,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:57139487:IOC-EN052:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2883,6 +3076,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:57160136:MGED-EN148:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3229,6 +3425,9 @@
    "passcode": 57232301,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:57232301:SUDA-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3423,6 +3622,9 @@
    "passcode": 57256127,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:57256127:BPRO-EN088:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3803,6 +4005,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:57281778:IOC-EN090:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3924,6 +4129,9 @@
    ]
   },
   {
+   "aliases": [
+    "World Source Regalia Demiurgear"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -4014,6 +4222,39 @@
   },
   {
    "archetypes": [
+    "amazoness"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "57283005",
+   "identifiers": {
+    "konamiId": 23865,
+    "ygoprodeckId": 57283005
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/57283005.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/57283005.jpg",
+     "id": 57283005,
+     "small": "https://images.ygoprodeck.com/images/cards_small/57283005.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Quick-Play",
+   "name": "Harpie & Amazoness Rakshasa Formation",
+   "names": {
+    "en": "Harpie & Amazoness Rakshasa Formation"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 57283005,
+   "prints": []
+  },
+  {
+   "aliases": [
+    "Therions' Charge"
+   ],
+   "archetypes": [
     "therion"
    ],
    "frame": "spell",
@@ -4070,6 +4311,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:57285770:DIFO-EN055:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4174,6 +4418,9 @@
    ]
   },
   {
+   "aliases": [
+    "World Legacy - World Chalice"
+   ],
    "archetypes": [
     "world-legacy"
    ],
@@ -4352,6 +4599,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nemurelia Louve"
+   ],
    "archetypes": [
     "nemleria"
    ],
@@ -4393,6 +4643,9 @@
    "passcode": 57296396,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:57296396:DUNE-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4624,10 +4877,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:57312333:LDS1-EN024:ultra_rare",
+     "number": "LDS1-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:57312333:LDS1-EN024:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217378,
-       217379,
+       217378
+      ]
+     },
+     "number": "LDS1-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Amazoness Call (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:57312333:LDS1-EN024:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217379
+      ]
+     },
+     "number": "LDS1-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Amazoness Call (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:57312333:LDS1-EN024:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217380
       ]
      },
@@ -4635,10 +4938,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Amazoness Call (Blue)"
-     }
+      "name": "Amazoness Call (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "legendary-duelists:57312333:LEDU-EN010:rare",
@@ -4655,11 +4960,31 @@
       "match": "number+rarity",
       "name": "Amazoness Call"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:57312333:SBC2-ENH16:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600100
+      ]
+     },
+     "number": "SBC2-ENH16",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Amazoness Call"
+     }
     }
    ],
    "tcgDate": "2017-09-07"
   },
   {
+   "aliases": [
+    "Number 100"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -4838,10 +5163,7 @@
      "id": "dragons-of-legend-the-complete-series:57314798:DLCS-EN117:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221685,
-       222281,
-       222282,
-       222283
+       221685
       ]
      },
      "number": "DLCS-EN117",
@@ -4852,6 +5174,69 @@
       "match": "number+rarity",
       "name": "Number 100: Numeron Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:57314798:DLCS-EN117:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222281
+      ]
+     },
+     "number": "DLCS-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 100: Numeron Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:57314798:DLCS-EN117:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222282
+      ]
+     },
+     "number": "DLCS-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 100: Numeron Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:57314798:DLCS-EN117:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222283
+      ]
+     },
+     "number": "DLCS-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 100: Numeron Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:57314798:DRL3-EN021:secret_rare",
@@ -5344,6 +5729,9 @@
    "tcgDate": "2010-08-07"
   },
   {
+   "aliases": [
+    "Salamangreat Wheesel"
+   ],
    "archetypes": [
     "salamangreat"
    ],
@@ -5471,6 +5859,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Winged Dragon, Guardian of the Fortress 2"
+   ],
    "atk": 1200,
    "attribute": "wind",
    "def": 1000,
@@ -5669,6 +6060,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragonmaid Clean-Up"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -5934,6 +6328,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:57420265:LEDE-EN032:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6236,6 +6633,9 @@
    "tcgDate": "2019-07-11"
   },
   {
+   "aliases": [
+    "Danger! Suspense! Secrets!"
+   ],
    "archetypes": [
     "danger"
    ],
@@ -6415,6 +6815,9 @@
    "passcode": 57448410,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:57448410:ALIN-EN021:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6440,6 +6843,9 @@
    ]
   },
   {
+   "aliases": [
+    "Super Quantal Mech Beast Lusterex"
+   ],
    "archetypes": [
     "super-quant",
     "super-quantal-mech-beast"
@@ -7181,6 +7587,9 @@
    "tcgDate": "2017-03-30"
   },
   {
+   "aliases": [
+    "Reincarnation of the Seven Emperors"
+   ],
    "archetypes": [
     "seventh"
    ],
@@ -7238,6 +7647,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:57499304:CYAC-EN098:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7314,6 +7726,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:57511992:DABL-EN092:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7337,6 +7752,9 @@
    ]
   },
   {
+   "aliases": [
+    "Merfae Fenny"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -7844,6 +8262,36 @@
   },
   {
    "archetypes": [
+    "reindsurm"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "57561463",
+   "identifiers": {
+    "konamiId": 23868,
+    "ygoprodeckId": 57561463
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/57561463.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/57561463.jpg",
+     "id": 57561463,
+     "small": "https://images.ygoprodeck.com/images/cards_small/57561463.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Normal",
+   "name": "Reindsurm Butterfly",
+   "names": {
+    "en": "Reindsurm Butterfly"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 57561463,
+   "prints": []
+  },
+  {
+   "archetypes": [
     "mikanko"
    ],
    "atk": 0,
@@ -7974,6 +8422,9 @@
    ]
   },
   {
+   "aliases": [
+    "Marie the Fallen One"
+   ],
    "archetypes": [
     "darklord"
    ],
@@ -8151,6 +8602,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:57585212:IOC-EN105:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9149,6 +9603,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fabled Marchosia"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -9233,6 +9690,9 @@
    ]
   },
   {
+   "aliases": [
+    "Reptilianne Hydraling"
+   ],
    "archetypes": [
     "reptilianne"
    ],
@@ -9561,11 +10021,69 @@
    "prints": [
     {
      "id": "duelist-league-16-participation-cards:57666212:DL16-EN004:rare",
+     "number": "DL16-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:57666212:DL16-EN004:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77609,
-       77610,
-       77611,
+       77609
+      ]
+     },
+     "number": "DL16-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kuraz the Light Monarch (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:57666212:DL16-EN004:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77610
+      ]
+     },
+     "number": "DL16-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kuraz the Light Monarch (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:57666212:DL16-EN004:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77611
+      ]
+     },
+     "number": "DL16-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kuraz the Light Monarch (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:57666212:DL16-EN004:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77612
       ]
      },
@@ -9573,10 +10091,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Kuraz the Light Monarch (Blue)"
-     }
+      "name": "Kuraz the Light Monarch (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "light-of-destruction-special-edition:57666212:LODT-ENSE1:super_rare",
@@ -9782,6 +10302,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 21"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -9851,6 +10374,9 @@
    ]
   },
   {
+   "aliases": [
+    "Konohana Sakuya"
+   ],
    "atk": 1300,
    "attribute": "earth",
    "def": 1300,
@@ -10028,9 +10554,39 @@
       "unlimited"
      ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:57728570:LCKC-EN046:ultra_rare",
+     "number": "LCKC-EN046",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-kaiba-mega-pack-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "legendary-collection-kaiba-mega-pack-2020-reprint:57728570:LCKC-EN046:ultra_rare:version-1",
      "identifiers": {
       "tcgplayerProductIds": [
-       658920,
+       658920
+      ]
+     },
+     "number": "LCKC-EN046",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-kaiba-mega-pack-2020-reprint",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crush Card Virus (Version 1)"
+     },
+     "variant": "version-1"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "legendary-collection-kaiba-mega-pack-2020-reprint:57728570:LCKC-EN046:ultra_rare:version-2",
+     "identifiers": {
+      "tcgplayerProductIds": [
        658921
       ]
      },
@@ -10038,16 +10594,42 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-collection-kaiba-mega-pack-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Crush Card Virus (Version 1)"
-     }
+      "name": "Crush Card Virus (Version 2)"
+     },
+     "variant": "version-2"
     },
     {
      "id": "legendary-collection-kaiba-mega-pack:57728570:LCKC-EN046:ultra_rare",
+     "number": "LCKC-EN046",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-kaiba-mega-pack"
+    },
+    {
+     "id": "legendary-collection-kaiba-mega-pack:57728570:LCKC-EN046:ultra_rare:version-1",
      "identifiers": {
       "tcgplayerProductIds": [
-       161972,
+       161972
+      ]
+     },
+     "number": "LCKC-EN046",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-kaiba-mega-pack",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Crush Card Virus (Version 1)"
+     },
+     "variant": "version-1"
+    },
+    {
+     "id": "legendary-collection-kaiba-mega-pack:57728570:LCKC-EN046:ultra_rare:version-2",
+     "identifiers": {
+      "tcgplayerProductIds": [
        162086
       ]
      },
@@ -10055,10 +10637,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-collection-kaiba-mega-pack",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Crush Card Virus (Version 1)"
-     }
+      "name": "Crush Card Virus (Version 2)"
+     },
+     "variant": "version-2"
     },
     {
      "editions": [
@@ -10417,6 +11001,9 @@
    "tcgDate": "2014-05-16"
   },
   {
+   "aliases": [
+    "Dance of the Mikanko - Fascinating Bird"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -10474,6 +11061,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:57736667:CYAC-EN062:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10548,6 +11138,9 @@
    "tcgDate": "2007-05-16"
   },
   {
+   "aliases": [
+    "Da'at Metatron, the True Dracomechsoldier"
+   ],
    "archetypes": [
     "true-draco"
    ],
@@ -10770,8 +11363,7 @@
      "id": "battles-of-legend-chapter-1:57774843:BLC1-EN012:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538484,
-       538644
+       538484
       ]
      },
      "number": "BLC1-EN012",
@@ -10782,6 +11374,27 @@
       "match": "number+rarity",
       "name": "Judgment Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:57774843:BLC1-EN012:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538644
+      ]
+     },
+     "number": "BLC1-EN012",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Judgment Dragon (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "battles-of-legend-light-s-revenge:57774843:BLLR-EN041:ultra_rare",
@@ -11005,6 +11618,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fabled Realm Resurrection"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -11391,6 +12007,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hecahands Tartarus"
+   ],
    "archetypes": [
     "hecahands"
    ],
@@ -11543,6 +12162,9 @@
    "tcgDate": "2015-01-15"
   },
   {
+   "aliases": [
+    "Simorgh Storms Forth"
+   ],
    "archetypes": [
     "simorgh"
    ],
@@ -11743,6 +12365,9 @@
    "tcgDate": "2016-11-03"
   },
   {
+   "aliases": [
+    "Orphegel Divertimento Devil"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -12033,11 +12658,51 @@
     },
     {
      "id": "duelist-league-2-participation-cards:57839750:DL12-EN004:rare",
+     "number": "DL12-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:57839750:DL12-EN004:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77401,
-       80055,
-       80056,
+       77401
+      ]
+     },
+     "number": "DL12-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mother Grizzly (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:57839750:DL12-EN004:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80055
+      ]
+     },
+     "number": "DL12-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mother Grizzly (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:57839750:DL12-EN004:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80057
       ]
      },
@@ -12045,10 +12710,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Mother Grizzly (Blue)"
-     }
+      "name": "Mother Grizzly (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:57839750:DL12-EN004:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80056
+      ]
+     },
+     "number": "DL12-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mother Grizzly (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-3-yugi-s-world-mega-pack:57839750:LCYW-EN237:secret_rare",
@@ -12330,6 +13015,9 @@
    ]
   },
   {
+   "aliases": [
+    "Clown Clan \"Matinee\""
+   ],
    "archetypes": [
     "clown-crew"
    ],
@@ -12777,6 +13465,9 @@
    "passcode": 57900671,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:57900671:CYAC-EN051:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12950,6 +13641,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witchcraft Creation"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -13056,6 +13750,13 @@
       "match": "number+rarity",
       "name": "Witchcrafter Creation"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:57916305:UP02-EN046:common",
+     "number": "UP02-EN046",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2019-03-21"
@@ -13167,6 +13868,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:57940938:CYAC-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13230,6 +13934,9 @@
    "passcode": 57946551,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:57946551:BACH-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13485,6 +14192,45 @@
   },
   {
    "archetypes": [
+    "number"
+   ],
+   "atk": 100,
+   "attribute": "dark",
+   "def": 1000,
+   "frame": "xyz",
+   "hasEffect": true,
+   "id": "57961015",
+   "identifiers": {
+    "konamiId": 23854,
+    "ygoprodeckId": 57961015
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/57961015.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/57961015.jpg",
+     "id": 57961015,
+     "small": "https://images.ygoprodeck.com/images/cards_small/57961015.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "monsterType": "Fiend",
+   "name": "Number 96: Dark Manipulator",
+   "names": {
+    "en": "Number 96: Dark Manipulator"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 57961015,
+   "prints": [],
+   "rank": 2,
+   "typeline": [
+    "Fiend",
+    "Xyz",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
     "wind-up"
    ],
    "atk": 600,
@@ -13550,6 +14296,9 @@
    ]
   },
   {
+   "aliases": [
+    "White Arbitration"
+   ],
    "archetypes": [
     "white"
    ],
@@ -13609,6 +14358,9 @@
    "tcgDate": "2024-06-20"
   },
   {
+   "aliases": [
+    "Draitron Asterism"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -13727,6 +14479,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:57985393:INFO-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13751,6 +14506,9 @@
    ]
   },
   {
+   "aliases": [
+    "Foolish Mass Burial"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "57995165",

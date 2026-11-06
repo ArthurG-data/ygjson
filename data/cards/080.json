@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Enneacraft - Rebirth"
+   ],
    "archetypes": [
     "enneacraft"
    ],
@@ -127,10 +130,7 @@
      "id": "dragons-of-legend-the-complete-series:80019195:DLCS-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221520,
-       222272,
-       222273,
-       222274
+       221520
       ]
      },
      "number": "DLCS-EN001",
@@ -141,6 +141,69 @@
       "match": "number+rarity",
       "name": "Legendary Knight Timaeus"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:80019195:DLCS-EN001:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222272
+      ]
+     },
+     "number": "DLCS-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Legendary Knight Timaeus (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:80019195:DLCS-EN001:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222273
+      ]
+     },
+     "number": "DLCS-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Legendary Knight Timaeus (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:80019195:DLCS-EN001:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222274
+      ]
+     },
+     "number": "DLCS-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Legendary Knight Timaeus (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:80019195:DRL3-EN041:ultra_rare",
@@ -585,6 +648,9 @@
    "passcode": 80040886,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:80040886:DIFO-EN082:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -609,6 +675,9 @@
    ]
   },
   {
+   "aliases": [
+    "Blazing Dance of the Mikanko"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -767,6 +836,9 @@
    ]
   },
   {
+   "aliases": [
+    "Supersonic Chick"
+   ],
    "atk": 300,
    "attribute": "earth",
    "def": 300,
@@ -871,6 +943,9 @@
    "passcode": 80071619,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:80071619:DOOD-EN093:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -887,6 +962,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:80071619:DOOD-EN093:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1084,6 +1162,9 @@
    "passcode": 80073414,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:80073414:DUAD-EN034:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1335,6 +1416,9 @@
    ]
   },
   {
+   "aliases": [
+    "Traptrick"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "80101899",
@@ -1389,6 +1473,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:80101899:MGED-EN152:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1611,6 +1698,13 @@
       "match": "number+rarity",
       "name": "Trap Trick"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:80101899:UP02-EN019:super_rare",
+     "number": "UP02-EN019",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2018-10-18"
@@ -1816,6 +1910,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 11"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -2125,6 +2222,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bearrier"
+   ],
    "atk": 1600,
    "attribute": "dark",
    "def": 0,
@@ -3018,6 +3118,10 @@
    "passcode": 80170678,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:80170678:POTE-EN051:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3037,6 +3141,9 @@
    "tcgDate": "2022-08-04"
   },
   {
+   "aliases": [
+    "\"Case of K9\""
+   ],
    "archetypes": [
     "k9"
    ],
@@ -3240,6 +3347,23 @@
       "match": "number-other-set",
       "name": "Destroyersaurus"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:80186010:SGX4-ENC08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543786
+      ]
+     },
+     "number": "SGX4-ENC08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Destroyersaurus"
+     }
     }
    ],
    "tcgDate": "2007-05-16",
@@ -3434,6 +3558,23 @@
      "set": "magician-s-force",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Dramatic Rescue"
+     }
+    },
+    {
+     "id": "speed-duel-gx-duelists-of-shadows:80193356:SGX3-END18:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       489450
+      ]
+     },
+     "number": "SGX3-END18",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-duelists-of-shadows",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dramatic Rescue"
      }
     }
@@ -3684,6 +3825,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon Tail Sting"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -3743,6 +3887,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:80208225:DOOD-EN077:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4239,6 +4386,9 @@
    ]
   },
   {
+   "aliases": [
+    "Autovullet Dragon"
+   ],
    "archetypes": [
     "rokket"
    ],
@@ -4407,6 +4557,9 @@
    ]
   },
   {
+   "aliases": [
+    "Black Bird Close"
+   ],
    "archetypes": [
     "blackwing"
    ],
@@ -4499,6 +4652,9 @@
    "tcgDate": "2018-09-27"
   },
   {
+   "aliases": [
+    "Laughing Puffin the Jester Bird"
+   ],
    "atk": 1000,
    "attribute": "dark",
    "def": 1700,
@@ -4557,6 +4713,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:80275707:DABL-EN033:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4769,6 +4928,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:80280944:MGED-EN055:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4936,6 +5098,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:80304126:SBC2-ENI07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600229
+      ]
+     },
+     "number": "SBC2-ENI07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Magician's Valkyria"
+     }
+    },
+    {
      "id": "spellcaster-s-command-structure-deck-special-edition:80304126:SDSC-ENSE1:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4975,6 +5154,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Seven Spirit Gates Unleashed"
+   ],
    "archetypes": [
     "sacred-beast"
    ],
@@ -5247,6 +5429,23 @@
       "match": "number+rarity",
       "name": "Cyber Harpie Lady"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:80316585:SBC2-ENH07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600133
+      ]
+     },
+     "number": "SBC2-ENH07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Cyber Harpie Lady"
+     }
     }
    ],
    "tcgDate": "2005-02-26",
@@ -5256,6 +5455,9 @@
    ]
   },
   {
+   "aliases": [
+    "Doom-Z Destruction"
+   ],
    "archetypes": [
     "doomz"
    ],
@@ -5296,6 +5498,9 @@
    "passcode": 80320877,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:80320877:DOOD-EN074:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5465,6 +5670,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prayers with Eyes of Blue"
+   ],
    "archetypes": [
     "with-eyes-of-blue"
    ],
@@ -5834,6 +6042,40 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:80344569:SGX4-ENA10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543742
+      ]
+     },
+     "number": "SGX4-ENA10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Neo-Spacian Grand Mole"
+     }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:80344569:SGX4-ENA10:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543717
+      ]
+     },
+     "number": "SGX4-ENA10",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Neo-Spacian Grand Mole (Secret Rare)"
+     }
+    },
+    {
      "id": "strike-of-neos:80344569:STON-EN005:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6158,6 +6400,9 @@
    "tcgDate": "2009-02-28"
   },
   {
+   "aliases": [
+    "Floowandereeze & Strich"
+   ],
    "archetypes": [
     "floowandereeze"
    ],
@@ -6219,6 +6464,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:80433039:BODE-EN015:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6361,6 +6609,23 @@
      "set": "speed-duel-battle-city-box",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Keldo"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:80441106:SBC2-ENF06:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600218
+      ]
+     },
+     "number": "SBC2-ENF06",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Keldo"
      }
     }
@@ -7489,6 +7754,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:80534031:ROTA-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7508,6 +7776,9 @@
    "tcgDate": "2024-07-27"
   },
   {
+   "aliases": [
+    "Magnifistorming Suen"
+   ],
    "archetypes": [
     "radiant-typhoon"
    ],
@@ -7552,6 +7823,9 @@
    "passcode": 80538047,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:80538047:DOOD-EN014:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7568,6 +7842,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:80538047:DOOD-EN014:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7582,6 +7859,13 @@
       "match": "number+rarity",
       "name": "Radiant Typhoon Swen"
      }
+    },
+    {
+     "id": "magnificent-maestros:80538047:MAMS-EN085:ultra_rare",
+     "number": "MAMS-EN085",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2025-09-25",
@@ -7857,6 +8141,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:80551022:ROTA-EN092:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8586,6 +8873,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:80570228:ROTA-EN019:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8610,6 +8900,9 @@
    ]
   },
   {
+   "aliases": [
+    "Snowy Weathery Pattern"
+   ],
    "archetypes": [
     "the-weather"
    ],
@@ -8650,6 +8943,9 @@
    "passcode": 80577258,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:80577258:MGED-EN098:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8899,11 +9195,15 @@
     },
     {
      "id": "duelist-league-13-participation-cards:80604092:DL13-EN019:rare",
+     "number": "DL13-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:80604092:DL13-EN019:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77435,
-       80107,
-       80108,
        80109
       ]
      },
@@ -8911,10 +9211,66 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Ultimate Offering (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:80604092:DL13-EN019:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80108
+      ]
+     },
+     "number": "DL13-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Ultimate Offering (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:80604092:DL13-EN019:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77435
+      ]
+     },
+     "number": "DL13-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Ultimate Offering (Purple)"
-     }
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:80604092:DL13-EN019:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80107
+      ]
+     },
+     "number": "DL13-EN019",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Ultimate Offering (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "quarter-century-bonanza:80604092:RA03-EN088:platinum_secret_rare",
@@ -9090,6 +9446,9 @@
    "tcgDate": "2002-03-29"
   },
   {
+   "aliases": [
+    "Flundereeze x Empen"
+   ],
    "archetypes": [
     "floowandereeze"
    ],
@@ -9151,6 +9510,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:80611581:BODE-EN017:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9165,6 +9527,26 @@
       "match": "number+rarity",
       "name": "Floowandereeze & Empen"
      }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "burst-of-destiny:80611581:BODE-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       252552
+      ]
+     },
+     "number": "BODE-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "burst-of-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Floowandereeze & Empen (BODE-ENSP1)"
+     }
     }
    ],
    "tcgDate": "2021-11-04",
@@ -9174,6 +9556,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mannadium Trid"
+   ],
    "archetypes": [
     "mannadium"
    ],
@@ -9235,6 +9620,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:80621253:DUNE-EN011:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9502,6 +9890,9 @@
    ]
   },
   {
+   "aliases": [
+    "Invoked Dee Anima"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -10132,6 +10523,9 @@
    ]
   },
   {
+   "aliases": [
+    "Deviritual Talismandra"
+   ],
    "archetypes": [
     "impcantation"
    ],
@@ -10255,6 +10649,9 @@
    ]
   },
   {
+   "aliases": [
+    "Memento Bone Party"
+   ],
    "archetypes": [
     "memento"
    ],
@@ -10484,11 +10881,69 @@
     },
     {
      "id": "duelist-league-16-participation-cards:80723580:DL16-EN018:rare",
+     "number": "DL16-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:80723580:DL16-EN018:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77665,
-       77666,
-       77667,
+       77665
+      ]
+     },
+     "number": "DL16-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Giant Trap Hole (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:80723580:DL16-EN018:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77666
+      ]
+     },
+     "number": "DL16-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Giant Trap Hole (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:80723580:DL16-EN018:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77667
+      ]
+     },
+     "number": "DL16-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Giant Trap Hole (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:80723580:DL16-EN018:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77668
       ]
      },
@@ -10496,10 +10951,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Giant Trap Hole (Blue)"
-     }
+      "name": "Giant Trap Hole (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:80723580:LCJW-EN276:common",
@@ -10689,6 +11146,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vanquish Soul Calamity Kaiser"
+   ],
    "archetypes": [
     "vanquish-soul"
    ],
@@ -11108,6 +11568,9 @@
    "tcgDate": "2020-06-18"
   },
   {
+   "aliases": [
+    "Number 44"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -11515,6 +11978,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dodoremichord Coeuria"
+   ],
    "archetypes": [
     "solfachord"
    ],
@@ -11734,6 +12200,9 @@
    ]
   },
   {
+   "aliases": [
+    "Flame Buffalo"
+   ],
    "atk": 1400,
    "attribute": "fire",
    "def": 200,
@@ -11838,6 +12307,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 70: Deadly Sin"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -11907,6 +12379,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hakai Dual Dirge"
+   ],
    "archetypes": [
     "unchained"
    ],
@@ -12647,6 +13122,13 @@
       "match": "number+rarity",
       "name": "Mixousia the Confounder"
      }
+    },
+    {
+     "id": "magnificent-maestros:80843006:MAMS-EN092:ultra_rare",
+     "number": "MAMS-EN092",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2026-07-02",
@@ -12657,6 +13139,9 @@
    ]
   },
   {
+   "aliases": [
+    "\"The Sinful Spoils Hunter Fiend\""
+   ],
    "archetypes": [
     "sinful-spoils"
    ],
@@ -12714,6 +13199,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:80845034:AGOV-EN054:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12730,6 +13218,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:80845034:AGOV-EN054:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12845,6 +13336,9 @@
    "tcgDate": "2023-10-19"
   },
   {
+   "aliases": [
+    "Null and Void"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "80863132",
@@ -12994,6 +13488,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:80870883:ROTA-EN005:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13010,6 +13507,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:80870883:ROTA-EN005:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13492,6 +13992,9 @@
    "passcode": 80893872,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:80893872:BODE-EN063:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14201,6 +14704,9 @@
    "tcgDate": "2008-11-01"
   },
   {
+   "aliases": [
+    "Mythical Beast Basilisk"
+   ],
    "archetypes": [
     "mythical-beast"
    ],
@@ -14270,6 +14776,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mathmech Addion"
+   ],
    "archetypes": [
     "mathmech"
    ],
@@ -14354,6 +14863,9 @@
    ]
   },
   {
+   "aliases": [
+    "Flying"
+   ],
    "archetypes": [
     "c"
    ],
@@ -14644,6 +15156,9 @@
    "tcgDate": "2008-11-01"
   },
   {
+   "aliases": [
+    "Subspecies King Asura-Oh"
+   ],
    "atk": 2100,
    "attribute": "earth",
    "def": 0,
@@ -14701,6 +15216,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:80993256:POTE-EN048:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [

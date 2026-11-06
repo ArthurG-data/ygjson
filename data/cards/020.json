@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Mo Ye, the Swordsoul Swordmaster"
+   ],
    "archetypes": [
     "swordsoul"
    ],
@@ -46,6 +49,9 @@
    "passcode": 20001443,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:20001443:BODE-EN003:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -101,6 +107,9 @@
    ]
   },
   {
+   "aliases": [
+    "Merfae Puppy"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -384,6 +393,9 @@
    "passcode": 20011655,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:20011655:SUDA-EN087:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -582,6 +594,9 @@
    "passcode": 20049870,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:20049870:BPRO-EN090:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -605,6 +620,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crystron Citri"
+   ],
    "archetypes": [
     "crystron"
    ],
@@ -921,6 +939,9 @@
    ]
   },
   {
+   "aliases": [
+    "Musket Ninja Kagero"
+   ],
    "archetypes": [
     "ninja"
    ],
@@ -981,6 +1002,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:20065259:DABL-EN018:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1123,6 +1147,23 @@
      "set": "ra-yellow-mega-pack",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "The Flute of Summoning Kuriboh"
+     }
+    },
+    {
+     "id": "redemption-replacement:20065322:MDP2-EN004K:rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       617869
+      ]
+     },
+     "number": "MDP2-EN004K",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "redemption-replacement",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "The Flute of Summoning Kuriboh"
      }
     },
@@ -1287,6 +1328,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Heavy Trigger"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "20071842",
@@ -1325,6 +1369,9 @@
    "passcode": 20071842,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:20071842:BODE-EN052:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1465,6 +1512,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:20087414:INFO-EN083:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1642,6 +1692,9 @@
    ]
   },
   {
+   "aliases": [
+    "Merfae Rabby"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -2008,6 +2061,9 @@
    "passcode": 20145685,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:20145685:AGOV-EN040:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2100,6 +2156,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zoodiac Cluckle"
+   ],
    "archetypes": [
     "zoodiac"
    ],
@@ -2391,11 +2450,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:20188127:DL17-EN016:rare",
+     "number": "DL17-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20188127:DL17-EN016:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80592,
-       80593,
-       80594,
+       80593
+      ]
+     },
+     "number": "DL17-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fairy of the Spring (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20188127:DL17-EN016:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80594
+      ]
+     },
+     "number": "DL17-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fairy of the Spring (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20188127:DL17-EN016:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80595
       ]
      },
@@ -2403,10 +2502,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fairy of the Spring (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20188127:DL17-EN016:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80592
+      ]
+     },
+     "number": "DL17-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Fairy of the Spring (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "structure-deck-warrior-s-triumph:20188127:SD5-EN028:common",
@@ -2602,6 +2721,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gladiator Beast Comeback"
+   ],
    "archetypes": [
     "gladiator-beast"
    ],
@@ -2744,6 +2866,9 @@
    ]
   },
   {
+   "aliases": [
+    "Stray Purery Street"
+   ],
    "archetypes": [
     "purrely"
    ],
@@ -2820,6 +2945,9 @@
    "tcgDate": "2023-01-19"
   },
   {
+   "aliases": [
+    "Recklessly Reaching for Riches"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "20216608",
@@ -3997,6 +4125,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:20295753:BODE-EN081:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4237,6 +4368,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thunder Dragon Origin"
+   ],
    "archetypes": [
     "thunder-dragon"
    ],
@@ -4421,6 +4555,13 @@
       "match": "number+rarity",
       "name": "Madolche Teacher Glassouffle"
      }
+    },
+    {
+     "id": "magnificent-maestros:20343502:MAMS-EN096:ultra_rare",
+     "number": "MAMS-EN096",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "rank": 4,
@@ -4432,6 +4573,9 @@
    ]
   },
   {
+   "aliases": [
+    "Seal, Staff Officer of the Skyfang Brigade"
+   ],
    "archetypes": [
     "fur-hire"
    ],
@@ -4934,6 +5078,46 @@
     },
     {
      "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-glorious-gallery:20366275:BLGG-EN006:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       695562
+      ]
+     },
+     "number": "BLGG-EN006",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "battles-of-legend-glorious-gallery",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "El Shaddoll Construct"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-glorious-gallery:20366275:BLGG-EN006:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       696504
+      ]
+     },
+     "number": "BLGG-EN006",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "battles-of-legend-glorious-gallery",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "El Shaddoll Construct (Starlight Rare)"
+     }
+    },
+    {
+     "editions": [
       "first",
       "unlimited"
      ],
@@ -4982,6 +5166,42 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "El Shaddoll Construct"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:20366275:RA04-EN229:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627531,
+       627533
+      ]
+     },
+     "number": "RA04-EN229",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "El Shaddoll Construct (Platinum Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:20366275:RA04-EN229:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627532,
+       627534
+      ]
+     },
+     "number": "RA04-EN229",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "El Shaddoll Construct (Quarter Century Secret Rare)"
      }
     },
     {
@@ -5247,6 +5467,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:20374520:IOC-EN107:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5728,6 +5951,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hecahands"
+   ],
    "archetypes": [
     "hecahands"
    ],
@@ -5780,6 +6006,9 @@
    "tcgDate": "2025-12-04"
   },
   {
+   "aliases": [
+    "Star-Crossed Meeting"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "20417688",
@@ -5834,6 +6063,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:20417688:DABL-EN079:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5853,6 +6085,9 @@
    "tcgDate": "2022-10-20"
   },
   {
+   "aliases": [
+    "Gunslinger Execution"
+   ],
    "archetypes": [
     "borrel"
    ],
@@ -5912,6 +6147,9 @@
    "tcgDate": "2019-08-15"
   },
   {
+   "aliases": [
+    "Sprigguns Rocky"
+   ],
    "archetypes": [
     "springans"
    ],
@@ -6365,6 +6603,9 @@
    "tcgDate": "2016-11-03"
   },
   {
+   "aliases": [
+    "Clown Clan \"Rehearsal\""
+   ],
    "archetypes": [
     "clown-crew"
    ],
@@ -6490,11 +6731,33 @@
     },
     {
      "id": "duelist-league-2-participation-cards:20450925:DL11-EN011:rare",
+     "number": "DL11-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:20450925:DL11-EN011:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77388,
-       80328,
-       80329,
+       80328
+      ]
+     },
+     "number": "DL11-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Hanewata (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:20450925:DL11-EN011:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80330
       ]
      },
@@ -6502,10 +6765,48 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Hanewata (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:20450925:DL11-EN011:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77388
+      ]
+     },
+     "number": "DL11-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Hanewata (Purple)"
-     }
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:20450925:DL11-EN011:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80329
+      ]
+     },
+     "number": "DL11-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Hanewata (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "lost-sanctuary-structure-deck:20450925:SDLS-EN021:common",
@@ -6593,6 +6894,9 @@
    "passcode": 20455229,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:20455229:CYAC-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6888,6 +7192,48 @@
    ]
   },
   {
+   "archetypes": [
+    "rikka"
+   ],
+   "atk": 2000,
+   "attribute": "water",
+   "def": 2000,
+   "frame": "xyz",
+   "hasEffect": true,
+   "id": "20477370",
+   "identifiers": {
+    "konamiId": 23853,
+    "ygoprodeckId": 20477370
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/20477370.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/20477370.jpg",
+     "id": 20477370,
+     "small": "https://images.ygoprodeck.com/images/cards_small/20477370.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "monsterType": "Plant",
+   "name": "Rikka Empress Strenna",
+   "names": {
+    "en": "Rikka Empress Strenna"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 20477370,
+   "prints": [],
+   "rank": 6,
+   "typeline": [
+    "Plant",
+    "Xyz",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Rockin'-Outlet"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "20501450",
@@ -6961,6 +7307,9 @@
    "tcgDate": "2018-10-18"
   },
   {
+   "aliases": [
+    "Magnifistorming Sight Trance"
+   ],
    "archetypes": [
     "radiant-typhoon"
    ],
@@ -7001,6 +7350,9 @@
    "passcode": 20508881,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:20508881:DOOD-EN063:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7272,6 +7624,9 @@
    "passcode": 20515672,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:20515672:CYAC-EN050:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7349,6 +7704,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:20522190:IOC-EN054:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7551,6 +7909,9 @@
    ]
   },
   {
+   "aliases": [
+    "Jack Knight of the Blue Sky"
+   ],
    "archetypes": [
     "mekk-knight"
    ],
@@ -7667,6 +8028,9 @@
    ]
   },
   {
+   "aliases": [
+    "Key Mace 2"
+   ],
    "atk": 1050,
    "attribute": "dark",
    "def": 1200,
@@ -7893,6 +8257,9 @@
    ]
   },
   {
+   "aliases": [
+    "Overeager Mr. & Mrs. Tanuki"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 1600,
@@ -7951,6 +8318,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:20560620:POTE-EN037:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7974,6 +8345,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number C80"
+   ],
    "archetypes": [
     "number-c",
     "number-spell-trap-archetype"
@@ -8044,6 +8418,9 @@
    ]
   },
   {
+   "aliases": [
+    "Jurrac Stigo"
+   ],
    "archetypes": [
     "jurrac"
    ],
@@ -8539,6 +8916,9 @@
    "passcode": 20590515,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:20590515:MGED-EN054:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8634,6 +9014,9 @@
    "tcgDate": "2015-03-19"
   },
   {
+   "aliases": [
+    "Eldlixir of Red Splatter"
+   ],
    "archetypes": [
     "eldlich"
    ],
@@ -8675,6 +9058,9 @@
    "passcode": 20612097,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:20612097:MGED-EN125:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8829,6 +9215,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mysterune of the Golden Droplets"
+   ],
    "archetypes": [
     "runick"
    ],
@@ -9379,6 +9768,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:20644748:IOC-EN051:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9687,6 +10079,9 @@
    ]
   },
   {
+   "aliases": [
+    "Amphibious Warship Ambrowhale"
+   ],
    "atk": 2600,
    "attribute": "fire",
    "frame": "link",
@@ -10069,6 +10464,9 @@
    ]
   },
   {
+   "aliases": [
+    "Endymion, the Crescent of Magistus"
+   ],
    "archetypes": [
     "endymion"
    ],
@@ -10116,6 +10514,9 @@
    "passcode": 20714553,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:20714553:DOOD-EN099:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10140,6 +10541,9 @@
    ]
   },
   {
+   "aliases": [
+    "D/D/D Zero Demise King Zero Machinex"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d"
@@ -10186,6 +10590,9 @@
    "passcode": 20715411,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:20715411:DOOD-EN003:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10202,6 +10609,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:20715411:DOOD-EN003:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10563,6 +10973,26 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
+     "id": "miscellaneous-promotional-cards:20721928:OPTP-EN004:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       477257
+      ]
+     },
+     "number": "OPTP-EN004",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "miscellaneous-promotional-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental HERO Sparkman"
+     }
+    },
+    {
      "id": "ra-yellow-mega-pack:20721928:RYMP-EN003:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10714,6 +11144,9 @@
    ]
   },
   {
+   "aliases": [
+    "Maliss C GWC-06"
+   ],
    "archetypes": [
     "maliss"
    ],
@@ -10973,6 +11406,9 @@
    "tcgDate": "2019-10-24"
   },
   {
+   "aliases": [
+    "Magibullet - Death-perado"
+   ],
    "archetypes": [
     "magical-musket"
    ],
@@ -11611,6 +12047,9 @@
    "tcgDate": "2005-05-28"
   },
   {
+   "aliases": [
+    "Number C103"
+   ],
    "archetypes": [
     "number-10x",
     "number-c",
@@ -11838,6 +12277,9 @@
    ]
   },
   {
+   "aliases": [
+    "Virtual World Rabbit - Tutu"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -12651,6 +13093,9 @@
    "tcgDate": "2002-09-01"
   },
   {
+   "aliases": [
+    "A Draconian Prison of Snow and Sky"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "20899496",
@@ -12868,6 +13313,9 @@
    "tcgDate": "2020-08-06"
   },
   {
+   "aliases": [
+    "Yuanba, Abyssal Ryu-Ge of Serpentfall"
+   ],
    "archetypes": [
     "ryu-ge"
    ],
@@ -13076,11 +13524,51 @@
     },
     {
      "id": "duelist-league-17-participation-cards:20932152:DL17-EN008:rare",
+     "number": "DL17-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20932152:DL17-EN008:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80560,
-       80561,
-       80562,
+       80561
+      ]
+     },
+     "number": "DL17-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Quickdraw Synchron (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20932152:DL17-EN008:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80562
+      ]
+     },
+     "number": "DL17-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Quickdraw Synchron (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20932152:DL17-EN008:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80563
       ]
      },
@@ -13088,10 +13576,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Quickdraw Synchron (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-17-participation-cards:20932152:DL17-EN008:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80560
+      ]
+     },
+     "number": "DL17-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-17-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Quickdraw Synchron (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-yusei-2:20932152:DP09-EN010:common",
@@ -13148,9 +13656,7 @@
      "id": "legendary-duelists-season-3:20932152:LDS3-EN117:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276134,
-       276775,
-       276776
+       276134
       ]
      },
      "number": "LDS3-EN117",
@@ -13161,6 +13667,48 @@
       "match": "number+rarity",
       "name": "Quickdraw Synchron"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:20932152:LDS3-EN117:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276775
+      ]
+     },
+     "number": "LDS3-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Quickdraw Synchron (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:20932152:LDS3-EN117:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276776
+      ]
+     },
+     "number": "LDS3-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Quickdraw Synchron (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "quarter-century-bonanza:20932152:RA03-EN228:platinum_secret_rare",
@@ -13267,6 +13815,9 @@
    ]
   },
   {
+   "aliases": [
+    "Azamina Ofeiletis"
+   ],
    "archetypes": [
     "azamina"
    ],
@@ -13324,6 +13875,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:20934683:ROTA-EN054:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13457,6 +14011,9 @@
    "passcode": 20936251,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:20936251:MGED-EN051:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13476,6 +14033,9 @@
    "tcgDate": "2021-11-18"
   },
   {
+   "aliases": [
+    "Maliss P March Hare"
+   ],
    "archetypes": [
     "maliss"
    ],
@@ -13510,6 +14070,9 @@
    "passcode": 20938824,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:20938824:ALIN-EN023:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13526,6 +14089,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:20938824:ALIN-EN023:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13851,6 +14417,9 @@
    "tcgDate": "2016-07-21"
   },
   {
+   "aliases": [
+    "Detonator Circle "
+   ],
    "archetypes": [
     "alien"
    ],
@@ -13909,6 +14478,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Amazement Family Face"
+   ],
    "archetypes": [
     "amazement"
    ],
@@ -13968,6 +14540,9 @@
    "tcgDate": "2021-06-03"
   },
   {
+   "aliases": [
+    "Numbers Evaille"
+   ],
    "archetypes": [
     "number",
     "number-spell-trap-archetype"
@@ -14009,6 +14584,9 @@
    "passcode": 20994205,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:20994205:CYAC-EN000:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [

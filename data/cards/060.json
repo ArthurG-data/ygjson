@@ -223,6 +223,9 @@
    ]
   },
   {
+   "aliases": [
+    "Duel Link Dragon"
+   ],
    "archetypes": [
     "power-tool"
    ],
@@ -328,6 +331,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ancient Warriors - Herald Zhang Yuan"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -398,6 +404,9 @@
    ]
   },
   {
+   "aliases": [
+    "Draitron El-Gamma"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -1008,6 +1017,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:60082869:SBC2-ENA21:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600155
+      ]
+     },
+     "number": "SBC2-ENA21",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dust Tornado"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-match-of-the-millennium:60082869:SS04-ENB26:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1298,6 +1324,9 @@
    "tcgDate": "2002-10-20"
   },
   {
+   "aliases": [
+    "Vaylantz Vakening - Solo Activation"
+   ],
    "archetypes": [
     "vaylantz"
    ],
@@ -1339,6 +1368,9 @@
    "passcode": 60095092,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:60095092:DABL-EN068:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1552,6 +1584,9 @@
    "passcode": 60145298,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:60145298:ALIN-EN012:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1575,6 +1610,9 @@
    ]
   },
   {
+   "aliases": [
+    "Eternity of the Seven Emperors"
+   ],
    "archetypes": [
     "seventh"
    ],
@@ -2138,6 +2176,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infinitrack Colossal Mountain"
+   ],
    "archetypes": [
     "infinitrack"
    ],
@@ -2302,6 +2343,9 @@
    "tcgDate": "2012-11-09"
   },
   {
+   "aliases": [
+    "Gold Pride - Assassinator"
+   ],
    "archetypes": [
     "gold-pride"
    ],
@@ -2347,6 +2391,9 @@
    "passcode": 60203670,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:60203670:LEDE-EN020:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2794,11 +2841,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:60229110:DL13-EN008:rare",
+     "number": "DL13-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:60229110:DL13-EN008:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77425,
-       80436,
-       80437,
+       80436
+      ]
+     },
+     "number": "DL13-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Granmarg the Rock Monarch (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:60229110:DL13-EN008:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80437
+      ]
+     },
+     "number": "DL13-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Granmarg the Rock Monarch (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:60229110:DL13-EN008:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80438
       ]
      },
@@ -2806,10 +2893,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Granmarg the Rock Monarch (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:60229110:DL13-EN008:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77425
+      ]
+     },
+     "number": "DL13-EN008",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Granmarg the Rock Monarch (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "emperor-of-darkness-structure-deck:60229110:SR01-EN006:common",
@@ -2892,6 +2999,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:60229110:STP7-EN020:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544983
+      ]
+     },
+     "number": "STP7-EN020",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Granmarg the Rock Monarch"
+     }
+    },
+    {
      "id": "tournament-pack-8:60229110:TP8-EN007:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2970,6 +3097,9 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "Gaia the Souten Brawler"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -3038,6 +3168,9 @@
    ]
   },
   {
+   "aliases": [
+    "Interdimensional Matter Translocator"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "60238002",
@@ -3092,6 +3225,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:60238002:INFO-EN066:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3111,6 +3247,9 @@
    "tcgDate": "2024-07-18"
   },
   {
+   "aliases": [
+    "Byssted Saronir"
+   ],
    "archetypes": [
     "bystial"
    ],
@@ -3188,6 +3327,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:60242223:DABL-EN007:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3601,6 +3743,9 @@
    "passcode": 60268386,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:60268386:ALIN-EN009:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3758,6 +3903,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:60283232:DUNE-EN001:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4000,6 +4148,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:60303245:MGED-EN144:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4024,6 +4175,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ecclesia the Dragma Saint"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -4307,6 +4461,9 @@
    ]
   },
   {
+   "aliases": [
+    "No Entry!"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "60306104",
@@ -4758,6 +4915,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:60329973:PHHY-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4775,6 +4935,50 @@
     }
    ],
    "tcgDate": "2023-02-09"
+  },
+  {
+   "archetypes": [
+    "ars-magna"
+   ],
+   "atk": 2500,
+   "attribute": "light",
+   "frame": "link",
+   "hasEffect": true,
+   "id": "60344723",
+   "identifiers": {
+    "konamiId": 23856,
+    "ygoprodeckId": 60344723
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/60344723.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/60344723.jpg",
+     "id": 60344723,
+     "small": "https://images.ygoprodeck.com/images/cards_small/60344723.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "linkArrows": [
+    "Top",
+    "Left",
+    "Right",
+    "Bottom"
+   ],
+   "linkRating": 4,
+   "monsterType": "Fairy",
+   "name": "Ars Magna Artmage",
+   "names": {
+    "en": "Ars Magna Artmage"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 60344723,
+   "prints": [],
+   "typeline": [
+    "Fairy",
+    "Link",
+    "Effect"
+   ]
   },
   {
    "atk": 3000,
@@ -4890,6 +5094,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tearlaments Heartbeats"
+   ],
    "archetypes": [
     "heart"
    ],
@@ -4931,6 +5138,9 @@
    "passcode": 60362066,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:60362066:DABL-EN057:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5049,6 +5259,23 @@
      "set": "dark-revelation-volume-1",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Shinato's Ark"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:60365591:SBC2-ENI02:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600286
+      ]
+     },
+     "number": "SBC2-ENI02",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Shinato's Ark"
      }
     }
@@ -5275,6 +5502,9 @@
    "tcgDate": "2003-10-10"
   },
   {
+   "aliases": [
+    "Ryzeal Plug-In"
+   ],
    "archetypes": [
     "ryzeal"
    ],
@@ -6278,6 +6508,9 @@
    "tcgDate": "2015-04-16"
   },
   {
+   "aliases": [
+    "Arrow of Regulus"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "60439482",
@@ -6326,6 +6559,9 @@
    "tcgDate": "2026-06-04"
   },
   {
+   "aliases": [
+    "Inevitably Branded"
+   ],
    "archetypes": [
     "branded"
    ],
@@ -6383,6 +6619,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:60442460:PHHY-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6402,6 +6641,9 @@
    "tcgDate": "2023-02-09"
   },
   {
+   "aliases": [
+    "Depths of the Abhyss"
+   ],
    "archetypes": [
     "ogdoadic"
    ],
@@ -6462,6 +6704,9 @@
    "tcgDate": "2021-04-29"
   },
   {
+   "aliases": [
+    "Gouki Rising Scorpio"
+   ],
    "archetypes": [
     "gouki"
    ],
@@ -6578,6 +6823,9 @@
    ]
   },
   {
+   "aliases": [
+    "Destiny HERO - Destroy Phoenix Enforcer"
+   ],
    "archetypes": [
     "destiny-hero"
    ],
@@ -6655,6 +6903,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:60461804:BODE-EN039:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6671,6 +6922,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:60461804:POTE-EN100:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6865,6 +7120,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:60465049:DIFO-EN043:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6947,6 +7205,13 @@
      }
     },
     {
+     "id": "magnificent-maestros:60470713:MAMS-EN103:ultra_rare",
+     "number": "MAMS-EN103",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
      "id": "ots-tournament-pack-15-por:60470713:OP15-PT036:common",
      "number": "OP15-PT036",
      "rarity": "common",
@@ -6957,6 +7222,9 @@
    "tcgDate": "2012-11-09"
   },
   {
+   "aliases": [
+    "Metalphosis Steeleren"
+   ],
    "archetypes": [
     "metalfoes"
    ],
@@ -7456,6 +7724,9 @@
    "tcgDate": "2021-12-02"
   },
   {
+   "aliases": [
+    "Possessed Resonance - Wynn"
+   ],
    "archetypes": [
     "familiar-possessed"
    ],
@@ -7516,6 +7787,9 @@
    ]
   },
   {
+   "aliases": [
+    "Poseidra Abyss, the Atlantean Dragon Deity"
+   ],
    "archetypes": [
     "abyss"
    ],
@@ -7608,6 +7882,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:60517697:ROTA-EN043:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7624,6 +7901,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:60517697:ROTA-EN043:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8070,6 +8350,9 @@
    "tcgDate": "2011-02-08"
   },
   {
+   "aliases": [
+    "Twin Long Rods 1"
+   ],
    "atk": 900,
    "attribute": "water",
    "def": 700,
@@ -8113,6 +8396,9 @@
    ]
   },
   {
+   "aliases": [
+    "Emergency Cyber"
+   ],
    "archetypes": [
     "cyber-dragon"
    ],
@@ -8276,7 +8562,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 60600821,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:60600821:DUAD-EN073:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639410
+      ]
+     },
+     "number": "DUAD-EN073",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Spring"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -8395,6 +8702,9 @@
    ]
   },
   {
+   "aliases": [
+    "Giant Ballshoot"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "60619435",
@@ -8448,6 +8758,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:60619435:PHHY-EN062:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8578,6 +8891,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:60623203:PHHY-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8763,6 +9079,9 @@
    ]
   },
   {
+   "aliases": [
+    "Null Nun & Blooming Dogwood"
+   ],
    "atk": 0,
    "attribute": "water",
    "def": 1800,
@@ -9395,6 +9714,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dinomist Howling"
+   ],
    "archetypes": [
     "dinomist"
    ],
@@ -10518,6 +10840,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:60764581:IOC-EN092:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10619,6 +10944,9 @@
    "tcgDate": "2005-10-20"
   },
   {
+   "aliases": [
+    "Token: Lamb"
+   ],
    "frame": "token",
    "hasEffect": true,
    "id": "60764582",
@@ -10659,10 +10987,54 @@
    },
    "ocgDate": "2017-04-01",
    "passcode": 60764582,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "legendary-collection-4-joey-s-world:60764582:LC04-EN008:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77442
+      ]
+     },
+     "number": "LC04-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-4-joey-s-world",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Lamb (White)"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "legendary-collection-4-joey-s-world:60764582:LC04-EN009:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77443
+      ]
+     },
+     "number": "LC04-EN009",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-4-joey-s-world",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Lamb (Pink)"
+     }
+    }
+   ],
    "tcgDate": "2017-04-01"
   },
   {
+   "aliases": [
+    "The Fiendsmith"
+   ],
    "archetypes": [
     "fiendsmith"
    ],
@@ -10820,6 +11192,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:60764609:INFO-EN017:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10836,6 +11211,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:60764609:INFO-EN017:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10971,11 +11349,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:60800381:DL12-EN012:rare",
+     "number": "DL12-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60800381:DL12-EN012:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77409,
-       80385,
-       80386,
+       80385
+      ]
+     },
+     "number": "DL12-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Junk Warrior (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60800381:DL12-EN012:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80386
+      ]
+     },
+     "number": "DL12-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Junk Warrior (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60800381:DL12-EN012:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80387
       ]
      },
@@ -10983,10 +11401,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Junk Warrior (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60800381:DL12-EN012:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77409
+      ]
+     },
+     "number": "DL12-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Junk Warrior (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-yusei:60800381:DP08-EN012:rare",
@@ -11069,6 +11507,26 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "starter-deck-yu-gi-oh-5d-s:60800381:5DS1-EN041:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       183029
+      ]
+     },
+     "number": "5DS1-EN041",
+     "rarity": "common",
+     "region": "EN",
+     "set": "starter-deck-yu-gi-oh-5d-s",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Junk Warrior"
+     }
+    },
+    {
      "id": "starter-deck-yu-gi-oh-5d-s:60800381:5DS1-EN041:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11109,6 +11567,10 @@
    ]
   },
   {
+   "aliases": [
+    "Kuwagata",
+    "Kuwagata Alpha"
+   ],
    "atk": 1250,
    "attribute": "earth",
    "def": 1000,
@@ -11274,11 +11736,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:60806437:DL12-EN002:rare",
+     "number": "DL12-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60806437:DL12-EN002:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77399,
-       80361,
-       80362,
+       80361
+      ]
+     },
+     "number": "DL12-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "UFO Turtle (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60806437:DL12-EN002:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80362
+      ]
+     },
+     "number": "DL12-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "UFO Turtle (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60806437:DL12-EN002:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80363
       ]
      },
@@ -11286,10 +11788,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "UFO Turtle (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:60806437:DL12-EN002:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77399
+      ]
+     },
+     "number": "DL12-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "UFO Turtle (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-3-yugi-s-world-mega-pack:60806437:LCYW-EN233:secret_rare",
@@ -11486,6 +12008,9 @@
    ]
   },
   {
+   "aliases": [
+    "Emptiness Devouring Xenovader△ Jahannam"
+   ],
    "archetypes": [
     "trirealm-rift"
    ],
@@ -11517,7 +12042,16 @@
    },
    "ocgDate": "2026-09-05",
    "passcode": 60811211,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:60811211:GLVI-EN038:starlight_rare",
+     "number": "GLVI-EN038",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Psychic",
     "Effect"
@@ -11633,6 +12167,9 @@
    "passcode": 60823690,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:60823690:AGOV-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11657,6 +12194,9 @@
    ]
   },
   {
+   "aliases": [
+    "Void Blaze-Up"
+   ],
    "archetypes": [
     "void"
    ],
@@ -12294,6 +12834,9 @@
    "tcgDate": "2014-04-25"
   },
   {
+   "aliases": [
+    "Snowflower Sprite Helleborus"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -12419,6 +12962,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:60883493:AGOV-EN078:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12438,6 +12984,9 @@
    "tcgDate": "2023-10-19"
   },
   {
+   "aliases": [
+    "Vast Desert - Gold Golgonda"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "60884672",
@@ -12551,6 +13100,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:60912752:IOC-EN040:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12620,6 +13172,9 @@
    "tcgDate": "2004-03-01"
   },
   {
+   "aliases": [
+    "Dogmatikabre"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -12677,6 +13232,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:60921537:BACH-EN054:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12751,6 +13309,9 @@
    "tcgDate": "2008-08-09"
   },
   {
+   "aliases": [
+    "Tenyi Dragon Manira"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -12933,6 +13494,9 @@
    "tcgDate": "2018-06-28"
   },
   {
+   "aliases": [
+    "Artmegia Graphlare"
+   ],
    "archetypes": [
     "artmage"
    ],
@@ -12978,6 +13542,9 @@
    "passcode": 60946049,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:60946049:DUAD-EN010:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12994,6 +13561,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:60946049:DUAD-EN010:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13017,6 +13587,9 @@
    ]
   },
   {
+   "aliases": [
+    "Otherworld - The A Zone"
+   ],
    "archetypes": [
     "alien"
    ],
@@ -13355,6 +13928,23 @@
      "rarity": "common",
      "region": "PT",
      "set": "ots-tournament-pack-14-por"
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:60953118:SGX4-ENB08:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543766
+      ]
+     },
+     "number": "SGX4-ENB08",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Arcana Force XIV - Temperance"
+     }
     }
    ],
    "tcgDate": "2008-05-03",
@@ -13448,6 +14038,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lyrical Luscinia - Sapphire Swallow"
+   ],
    "archetypes": [
     "lyrilusc"
    ],

@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Holy Night Bellfire"
+   ],
    "archetypes": [
     "starry-knight"
    ],
@@ -144,6 +147,48 @@
    "tcgDate": "2011-09-29",
    "typeline": [
     "Fiend",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "prophecy"
+   ],
+   "atk": 900,
+   "attribute": "wind",
+   "frame": "link",
+   "hasEffect": true,
+   "id": "22011594",
+   "identifiers": {
+    "konamiId": 23861,
+    "ygoprodeckId": 22011594
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/22011594.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/22011594.jpg",
+     "id": 22011594,
+     "small": "https://images.ygoprodeck.com/images/cards_small/22011594.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "linkArrows": [
+    "Bottom-Left",
+    "Bottom-Right"
+   ],
+   "linkRating": 2,
+   "monsterType": "Dragon",
+   "name": "Necromancer of Dragon Magic",
+   "names": {
+    "en": "Necromancer of Dragon Magic"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 22011594,
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Link",
     "Effect"
    ]
   },
@@ -514,6 +559,9 @@
    "passcode": 22024279,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:22024279:DUNE-EN069:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -762,6 +810,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "retro-pack:22046459:RP01-EN061:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1268,6 +1319,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tetradragmaton, the Cardinal Crux of Conviction"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -1637,6 +1691,9 @@
    ]
   },
   {
+   "aliases": [
+    "God Phoenix Gearfried"
+   ],
    "atk": 3000,
    "attribute": "fire",
    "def": 2200,
@@ -1832,6 +1889,9 @@
    "passcode": 22106558,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:22106558:BPRO-EN081:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2314,6 +2374,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:22125101:DIFO-EN048:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2669,6 +2732,9 @@
    "tcgDate": "2006-08-16"
   },
   {
+   "aliases": [
+    "Trickstar Magicorolla"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -2832,9 +2898,7 @@
      "id": "legendary-duelists-season-3:22160245:LDS3-EN027:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276171,
-       276746,
-       276747
+       276171
       ]
      },
      "number": "LDS3-EN027",
@@ -2845,6 +2909,48 @@
       "match": "number+rarity",
       "name": "Evil HERO Inferno Wing"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:22160245:LDS3-EN027:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276746
+      ]
+     },
+     "number": "LDS3-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Inferno Wing (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:22160245:LDS3-EN027:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276747
+      ]
+     },
+     "number": "LDS3-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Inferno Wing (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "speed-duel-gx-duelists-of-shadows:22160245:SGX3-ENA22:common",
@@ -3018,6 +3124,9 @@
    ]
   },
   {
+   "aliases": [
+    "Security Force Rappa Chiyomaru"
+   ],
    "archetypes": [
     "s-force"
    ],
@@ -4273,6 +4382,23 @@
       "match": "number+rarity",
       "name": "Mirror Wall"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:22359980:SBC2-ENH20:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600240
+      ]
+     },
+     "number": "SBC2-ENH20",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Mirror Wall"
+     }
     }
    ],
    "tcgDate": "2002-10-20"
@@ -4439,6 +4565,9 @@
    "tcgDate": "2019-07-25"
   },
   {
+   "aliases": [
+    "Trapholic"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "22377092",
@@ -4475,7 +4604,48 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 22377092,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:22377092:DUAD-EN078:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       641285
+      ]
+     },
+     "number": "DUAD-EN078",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Trap Holic (Starlight Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:22377092:DUAD-EN078:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639415
+      ]
+     },
+     "number": "DUAD-EN078",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Trap Holic"
+     }
+    }
+   ]
   },
   {
    "atk": 1500,
@@ -4741,6 +4911,9 @@
    "passcode": 22390469,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:22390469:PHHY-EN089:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4765,6 +4938,9 @@
    ]
   },
   {
+   "aliases": [
+    "Meteornis Draitron"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -4953,6 +5129,9 @@
    "tcgDate": "2020-12-03"
   },
   {
+   "aliases": [
+    "Power Patron Shadows of the End Times"
+   ],
    "archetypes": [
     "power-patron"
    ],
@@ -5346,6 +5525,9 @@
    ]
   },
   {
+   "aliases": [
+    "Draitron Lta-Delta"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -5602,6 +5784,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:22431243:IOC-EN097:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5687,6 +5872,9 @@
    "tcgDate": "2004-03-01"
   },
   {
+   "aliases": [
+    "Drytron Nu2"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -5748,6 +5936,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:22435424:INFO-EN022:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6186,6 +6377,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:22493811:IOC-EN098:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6978,6 +7172,9 @@
    "tcgDate": "2010-11-06"
   },
   {
+   "aliases": [
+    "Stairway to the Fabled World"
+   ],
    "archetypes": [
     "fabled"
    ],
@@ -7353,6 +7550,9 @@
    ]
   },
   {
+   "aliases": [
+    "Darkness Simorgh"
+   ],
    "archetypes": [
     "simorgh"
    ],
@@ -7669,6 +7869,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:22589918:IOC-EN045:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7834,6 +8037,9 @@
    "tcgDate": "2004-03-01"
   },
   {
+   "aliases": [
+    "Topologic Gamble Dragon"
+   ],
    "atk": 3000,
    "attribute": "dark",
    "frame": "link",
@@ -7993,6 +8199,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:22609617:IOC-EN086:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9000,6 +9209,9 @@
    ]
   },
   {
+   "aliases": [
+    "Amazement Assistant (Delia)"
+   ],
    "archetypes": [
     "amazement"
    ],
@@ -9168,6 +9380,9 @@
    ]
   },
   {
+   "aliases": [
+    "Eldlixir of the Exalted Golden Land"
+   ],
    "archetypes": [
     "eldlixir"
    ],
@@ -9209,6 +9424,9 @@
    "passcode": 22669793,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:22669793:ALIN-EN077:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9377,6 +9595,9 @@
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "Shiivertake"
+   ],
    "atk": 1400,
    "attribute": "light",
    "def": 0,
@@ -9435,6 +9656,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:22712877:INFO-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9458,6 +9682,9 @@
    ]
   },
   {
+   "aliases": [
+    "Colorless, Chaos King of Dark World"
+   ],
    "archetypes": [
     "dark-world"
    ],
@@ -9524,6 +9751,9 @@
    ]
   },
   {
+   "aliases": [
+    "The Orchestrator of the Sacred Beasts"
+   ],
    "archetypes": [
     "phantasm"
    ],
@@ -10007,6 +10237,9 @@
    ]
   },
   {
+   "aliases": [
+    "Wisdom Magus - Himmel"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -10216,6 +10449,9 @@
    "tcgDate": "2003-12-01"
   },
   {
+   "aliases": [
+    "Blind Ruination"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "22802010",
@@ -10444,10 +10680,7 @@
      "id": "dragons-of-legend-the-complete-series:22804644:DLCS-EN055:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       221590,
-       222251,
-       222252,
-       222253
+       221590
       ]
      },
      "number": "DLCS-EN055",
@@ -10458,6 +10691,69 @@
       "match": "number+rarity",
       "name": "Doom Virus Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:22804644:DLCS-EN055:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222251
+      ]
+     },
+     "number": "DLCS-EN055",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Doom Virus Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:22804644:DLCS-EN055:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222252
+      ]
+     },
+     "number": "DLCS-EN055",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Doom Virus Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "dragons-of-legend-the-complete-series:22804644:DLCS-EN055:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       222253
+      ]
+     },
+     "number": "DLCS-EN055",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "dragons-of-legend-the-complete-series",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Doom Virus Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "dragons-of-legend-unleashed:22804644:DRL3-EN057:ultra_rare",
@@ -10656,6 +10952,9 @@
    ]
   },
   {
+   "aliases": [
+    "Regenesis God Deuteronomion"
+   ],
    "archetypes": [
     "regenesis"
    ],
@@ -10701,6 +11000,9 @@
    "passcode": 22812963,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:22812963:ALIN-EN017:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10717,6 +11019,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:22812963:ALIN-EN017:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10813,6 +11118,13 @@
       "match": "number+rarity",
       "name": "Fish Sonar"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:22819092:UP02-EN018:super_rare",
+     "number": "UP02-EN018",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2022-06-16"
@@ -11473,6 +11785,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:22850702:CYAC-EN044:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12485,6 +12800,9 @@
    "tcgDate": "2013-11-08"
   },
   {
+   "aliases": [
+    "Elemental HERO Sunriser"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -12776,6 +13094,9 @@
    ]
   },
   {
+   "aliases": [
+    "Star Grail's Chosen"
+   ],
    "archetypes": [
     "world-chalice"
    ],
@@ -12915,6 +13236,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:22916418:ROTA-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13118,6 +13442,9 @@
    "tcgDate": "2020-01-30"
   },
   {
+   "aliases": [
+    "Regenesis Sage Shemot"
+   ],
    "archetypes": [
     "regenesis"
    ],
@@ -13163,6 +13490,9 @@
    "passcode": 22938501,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:22938501:ALIN-EN014:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13179,6 +13509,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:22938501:ALIN-EN014:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13403,6 +13736,9 @@
    "tcgDate": "2002-10-20"
   },
   {
+   "aliases": [
+    "Wightsworn"
+   ],
    "archetypes": [
     "wight"
    ],
@@ -13464,6 +13800,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:22970795:LEDE-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [

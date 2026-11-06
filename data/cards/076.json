@@ -219,11 +219,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:76039636:DL14-EN004:rare",
+     "number": "DL14-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:76039636:DL14-EN004:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77580,
-       80481,
-       80482,
+       80481
+      ]
+     },
+     "number": "DL14-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Doom Dozer (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:76039636:DL14-EN004:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80482
+      ]
+     },
+     "number": "DL14-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Doom Dozer (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:76039636:DL14-EN004:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80483
       ]
      },
@@ -231,10 +271,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Doom Dozer (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:76039636:DL14-EN004:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77580
+      ]
+     },
+     "number": "DL14-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Doom Dozer (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gold-series:76039636:GLD1-EN025:common",
@@ -625,6 +685,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 66"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -777,6 +840,46 @@
      "editions": [
       "first"
      ],
+     "id": "duelist-s-advance:76072561:DUAD-EN049:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639386
+      ]
+     },
+     "number": "DUAD-EN049",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Sky Striker Ace = Zero"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:76072561:DUAD-EN049:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       641277
+      ]
+     },
+     "number": "DUAD-EN049",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Sky Striker Ace = Zero (Starlight Rare)"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-modern-decks-2026:76072561:L26D-ENS34:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -801,6 +904,9 @@
    ]
   },
   {
+   "aliases": [
+    "Valiants' Genesis - Granduke"
+   ],
    "archetypes": [
     "vaylantz"
    ],
@@ -1009,6 +1115,9 @@
    "tcgDate": "2022-11-17"
   },
   {
+   "aliases": [
+    "Heretical Phoboscobos"
+   ],
    "atk": 2100,
    "attribute": "dark",
    "def": 1500,
@@ -1066,6 +1175,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:76078185:INFO-EN045:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1468,6 +1580,9 @@
    "passcode": 76133574,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:76133574:DABL-EN085:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1733,6 +1848,9 @@
    ]
   },
   {
+   "aliases": [
+    "Orphegel Longirus"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -1823,6 +1941,9 @@
    ]
   },
   {
+   "aliases": [
+    "Splight Blue"
+   ],
    "archetypes": [
     "spright"
    ],
@@ -1900,6 +2021,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:76145933:POTE-EN003:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2450,6 +2575,9 @@
    ]
   },
   {
+   "aliases": [
+    "Megalith Emersion"
+   ],
    "archetypes": [
     "megalith"
    ],
@@ -3396,6 +3524,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gimmick Puppet Fantasix Makina"
+   ],
    "archetypes": [
     "gimmick-puppet"
    ],
@@ -3478,6 +3609,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:76290637:INFO-EN042:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3646,6 +3780,9 @@
    "passcode": 76302448,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:76302448:SUDA-EN054:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3883,6 +4020,9 @@
    ]
   },
   {
+   "aliases": [
+    "Invocation - \"Chalice\""
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "76334960",
@@ -4031,6 +4171,9 @@
    ]
   },
   {
+   "aliases": [
+    "Changshi the Spiritualist"
+   ],
    "atk": 2000,
    "attribute": "dark",
    "def": 0,
@@ -4073,6 +4216,9 @@
    "passcode": 76352503,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:76352503:DIFO-EN096:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4358,6 +4504,9 @@
    ]
   },
   {
+   "aliases": [
+    "Spellkarst Cave"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "76375976",
@@ -4431,6 +4580,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:76375976:MGED-EN047:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4450,6 +4602,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Dvergs, Generaider Boss of Iron"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -4731,6 +4886,9 @@
    "tcgDate": "2009-02-28"
   },
   {
+   "aliases": [
+    "Senka Justice - Guan Yun"
+   ],
    "archetypes": [
     "ancient-warriors"
    ],
@@ -5021,6 +5179,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hero's Bond"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -5589,6 +5750,9 @@
    "tcgDate": "2019-07-25"
   },
   {
+   "aliases": [
+    "Number 39: Utopia the Envoy of Light"
+   ],
    "archetypes": [
     "number"
    ],
@@ -6770,6 +6934,9 @@
    ]
   },
   {
+   "aliases": [
+    "Pod of Greed"
+   ],
    "archetypes": [
     "jar"
    ],
@@ -6831,6 +6998,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:76593718:DUNE-EN029:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7101,6 +7271,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:76615300:DUNE-EN026:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7117,6 +7290,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:76615300:DUNE-EN026:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7159,6 +7335,9 @@
    ]
   },
   {
+   "aliases": [
+    "Graceful &amp; Skull Dice"
+   ],
    "archetypes": [
     "dark-time-wizard"
    ],
@@ -7471,6 +7650,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Transcendental Polymerization"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "76647978",
@@ -7684,6 +7866,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fisherman, Legend of the Sea"
+   ],
    "archetypes": [
     "dark-time-wizard"
    ],
@@ -7868,6 +8053,23 @@
       "match": "number+rarity-from-tcgplayer",
       "name": "The Dragon that Devours the Dogma (Secret Rare)"
      }
+    },
+    {
+     "id": "the-chronicles-deck-the-fallen-the-virtuous-all-foil-edition:76666602:CH01-EN041:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       658278
+      ]
+     },
+     "number": "CH01-EN041",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "the-chronicles-deck-the-fallen-the-virtuous-all-foil-edition",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "The Dragon that Devours the Dogma (Starlight Rare)"
+     }
     }
    ],
    "tcgDate": "2025-10-23",
@@ -7878,6 +8080,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark World Library"
+   ],
    "archetypes": [
     "dark-world"
    ],
@@ -8425,6 +8630,9 @@
    "passcode": 76725398,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:76725398:ALIN-EN094:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8524,10 +8732,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:76728962:LDS1-EN076:ultra_rare",
+     "number": "LDS1-EN076",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:76728962:LDS1-EN076:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217396,
-       217397,
+       217396
+      ]
+     },
+     "number": "LDS1-EN076",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Desperado Barrel Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:76728962:LDS1-EN076:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217397
+      ]
+     },
+     "number": "LDS1-EN076",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Desperado Barrel Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:76728962:LDS1-EN076:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217398
       ]
      },
@@ -8535,10 +8793,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Desperado Barrel Dragon (Blue)"
-     }
+      "name": "Desperado Barrel Dragon (Purple)"
+     },
+     "variant": "purple"
     }
    ],
    "tcgDate": "2018-02-22",
@@ -9016,6 +9276,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:76774528:MGED-EN060:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9188,6 +9451,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragonmaid Erde"
+   ],
    "archetypes": [
     "dragonmaid"
    ],
@@ -9972,6 +10238,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lyrical Luscinia - Independent Nightingale"
+   ],
    "archetypes": [
     "lyrilusc"
    ],
@@ -10041,6 +10310,9 @@
    ]
   },
   {
+   "aliases": [
+    "Odd Deity of Valmonica - Giurarme"
+   ],
    "archetypes": [
     "vaalmonica"
    ],
@@ -10112,6 +10384,9 @@
    ]
   },
   {
+   "aliases": [
+    "Terminal Offering"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "76823930",
@@ -10165,6 +10440,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:76823930:PHNI-EN100:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10278,6 +10556,13 @@
       "match": "number+rarity",
       "name": "Infinitrack Brutal Dozer"
      }
+    },
+    {
+     "id": "magnificent-maestros:76830505:MAMS-EN074:ultra_rare",
+     "number": "MAMS-EN074",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2019-10-24",
@@ -10287,6 +10572,9 @@
    ]
   },
   {
+   "aliases": [
+    "Merfae Mammy"
+   ],
    "archetypes": [
     "melffy"
    ],
@@ -10436,6 +10724,9 @@
    "passcode": 76840111,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:76840111:AGOV-EN069:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10746,6 +11037,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rikka Arrival"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -10803,6 +11097,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:76869711:POTE-EN066:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10984,11 +11282,51 @@
    "prints": [
     {
      "id": "duelist-league-3-participation-cards:76895648:DL12-EN016:rare",
+     "number": "DL12-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:76895648:DL12-EN016:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77413,
-       80397,
-       80398,
+       80397
+      ]
+     },
+     "number": "DL12-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dangerous Machine Type-6 (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:76895648:DL12-EN016:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80398
+      ]
+     },
+     "number": "DL12-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dangerous Machine Type-6 (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:76895648:DL12-EN016:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80399
       ]
      },
@@ -10996,10 +11334,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dangerous Machine Type-6 (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:76895648:DL12-EN016:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77413
+      ]
+     },
+     "number": "DL12-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Dangerous Machine Type-6 (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:76895648:LCJW-EN072:common",
@@ -11391,11 +11749,51 @@
     },
     {
      "id": "duelist-league-15-participation-cards:76909279:DL15-EN002:rare",
+     "number": "DL15-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:76909279:DL15-EN002:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80093,
-       80094,
-       80095,
+       80093
+      ]
+     },
+     "number": "DL15-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Enraged Battle Ox (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:76909279:DL15-EN002:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80094
+      ]
+     },
+     "number": "DL15-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Enraged Battle Ox (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:76909279:DL15-EN002:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80096
       ]
      },
@@ -11403,10 +11801,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Enraged Battle Ox (Blue)"
-     }
+      "name": "Enraged Battle Ox (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:76909279:DL15-EN002:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80095
+      ]
+     },
+     "number": "DL15-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Enraged Battle Ox (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-kaiba:76909279:DPKB-EN018:common",
@@ -11425,6 +11843,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:76909279:IOC-EN070:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12114,6 +12535,9 @@
    ]
   },
   {
+   "aliases": [
+    "Daigusto Raprampilica"
+   ],
    "archetypes": [
     "gusto"
    ],
@@ -12226,6 +12650,9 @@
    "passcode": 76948970,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:76948970:ALIN-EN091:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12373,6 +12800,9 @@
    "passcode": 76978105,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:76978105:SUDA-EN003:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12453,6 +12883,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:76981308:POTE-EN063:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [

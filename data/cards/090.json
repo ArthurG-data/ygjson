@@ -186,6 +186,9 @@
    "tcgDate": "2009-05-02"
   },
   {
+   "aliases": [
+    "Breechborrel Dragon"
+   ],
    "archetypes": [
     "borrel"
    ],
@@ -611,6 +614,9 @@
    "passcode": 90027012,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:90027012:PHHY-EN023:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -867,6 +873,9 @@
    "tcgDate": "2011-04-30"
   },
   {
+   "aliases": [
+    "Dark Rebellion Xyz Dragon of the Four Heavenly Dragons"
+   ],
    "archetypes": [
     "phantom-knights"
    ],
@@ -929,6 +938,9 @@
    ]
   },
   {
+   "aliases": [
+    "General of Atlantis"
+   ],
    "archetypes": [
     "atlantis-city-of-the-sea-dragon"
    ],
@@ -1159,6 +1171,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 5"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -1301,6 +1316,45 @@
     }
    ],
    "tcgDate": "2007-11-14"
+  },
+  {
+   "archetypes": [
+    "amazoness"
+   ],
+   "atk": 2600,
+   "attribute": "earth",
+   "def": 2200,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "90139089",
+   "identifiers": {
+    "konamiId": 23843,
+    "ygoprodeckId": 90139089
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/90139089.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/90139089.jpg",
+     "id": 90139089,
+     "small": "https://images.ygoprodeck.com/images/cards_small/90139089.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 7,
+   "monsterType": "Warrior",
+   "name": "Amazoness Swordmaster",
+   "names": {
+    "en": "Amazoness Swordmaster"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 90139089,
+   "prints": [],
+   "typeline": [
+    "Warrior",
+    "Fusion",
+    "Effect"
+   ]
   },
   {
    "archetypes": [
@@ -1703,6 +1757,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 35"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -1812,6 +1869,9 @@
    "passcode": 90164606,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:90164606:CYAC-EN092:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1907,6 +1967,9 @@
    "tcgDate": "2018-10-18"
   },
   {
+   "aliases": [
+    "Neiroy, the Dream Mirror Heretic"
+   ],
    "archetypes": [
     "dream-mirror"
    ],
@@ -1952,6 +2015,9 @@
    "passcode": 90176467,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:90176467:BACH-EN018:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1975,6 +2041,9 @@
    ]
   },
   {
+   "aliases": [
+    "Despian of Comedy"
+   ],
    "archetypes": [
     "despia"
    ],
@@ -2496,6 +2565,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:90219263:SBC2-ENH14:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600156
+      ]
+     },
+     "number": "SBC2-ENH14",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elegant Egotist"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-duelists-of-tomorrow:90219263:SS02-ENC10:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2627,10 +2713,7 @@
      "id": "legendary-duelists-season-2:90238142:LDS2-EN073:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       230318,
-       230814,
-       230815,
-       230816
+       230318
       ]
      },
      "number": "LDS2-EN073",
@@ -2641,6 +2724,60 @@
       "match": "number+rarity",
       "name": "Harpie Channeler"
      }
+    },
+    {
+     "id": "legendary-duelists-season-2:90238142:LDS2-EN073:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230814
+      ]
+     },
+     "number": "LDS2-EN073",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie Channeler (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "legendary-duelists-season-2:90238142:LDS2-EN073:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230815
+      ]
+     },
+     "number": "LDS2-EN073",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie Channeler (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "legendary-duelists-season-2:90238142:LDS2-EN073:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       230816
+      ]
+     },
+     "number": "LDS2-EN073",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie Channeler (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "lord-of-the-tachyon-galaxy:90238142:LTGY-EN035:ultimate_rare",
@@ -2704,6 +2841,40 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Harpie Channeler (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:90238142:SBC2-ENH04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600189
+      ]
+     },
+     "number": "SBC2-ENH04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie Channeler"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:90238142:SBC2-ENH04:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600188
+      ]
+     },
+     "number": "SBC2-ENH04",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie Channeler (PSR)"
      }
     },
     {
@@ -2786,6 +2957,9 @@
    "tcgDate": "2009-05-02"
   },
   {
+   "aliases": [
+    "Snake-Eyes Populus"
+   ],
    "archetypes": [
     "snake-eye"
    ],
@@ -2879,6 +3053,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:90241276:PHNI-EN012:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2895,6 +3072,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:90241276:PHNI-EN012:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3294,6 +3474,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:90276649:LEDE-EN010:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3319,6 +3502,9 @@
    ]
   },
   {
+   "aliases": [
+    "Guard of the Agents - Moon"
+   ],
    "archetypes": [
     "the-agent"
    ],
@@ -3390,6 +3576,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vampire Ghost Ogre"
+   ],
    "archetypes": [
     "vampire"
    ],
@@ -3435,6 +3624,9 @@
    "passcode": 90299015,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:90299015:BACH-EN015:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3571,6 +3763,9 @@
    ]
   },
   {
+   "aliases": [
+    "K9 - EX \"Werewolf\""
+   ],
    "archetypes": [
     "k9"
    ],
@@ -3955,6 +4150,9 @@
    ]
   },
   {
+   "aliases": [
+    "Lost Sanctuary"
+   ],
    "archetypes": [
     "the-sanctuary-in-the-sky"
    ],
@@ -4014,6 +4212,9 @@
    "tcgDate": "2022-05-05"
   },
   {
+   "aliases": [
+    "Jet Shark"
+   ],
    "archetypes": [
     "shark"
    ],
@@ -4059,6 +4260,9 @@
    "passcode": 90315086,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:90315086:SUDA-EN013:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4222,6 +4426,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:90337190:IOC-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4286,6 +4493,9 @@
    ]
   },
   {
+   "aliases": [
+    "Orphegel Babel"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -4599,6 +4809,9 @@
    "passcode": 90359458,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:90359458:BACH-EN064:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4703,6 +4916,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gizmek Inari, the Rice Rocket Reynard"
+   ],
    "archetypes": [
     "gizmek"
    ],
@@ -4977,6 +5193,9 @@
    "tcgDate": "2005-11-05"
   },
   {
+   "aliases": [
+    "Extreme Nova Burst"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "90384300",
@@ -5033,6 +5252,9 @@
    "tcgDate": "2019-07-25"
   },
   {
+   "aliases": [
+    "Sinless Sinful Spoils"
+   ],
    "archetypes": [
     "sinful-spoils"
    ],
@@ -5074,6 +5296,9 @@
    "passcode": 90386276,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:90386276:ALIN-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5625,6 +5850,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:90432163:MGED-EN078:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6200,6 +6428,9 @@
    ]
   },
   {
+   "aliases": [
+    "Negalogia AA-Zeus"
+   ],
    "atk": 3000,
    "attribute": "light",
    "def": 3000,
@@ -6638,6 +6869,9 @@
    ]
   },
   {
+   "aliases": [
+    "Manadome Prime-Heart"
+   ],
    "archetypes": [
     "heart"
    ],
@@ -6699,6 +6933,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:90465153:CYAC-EN043:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7861,6 +8098,9 @@
    ]
   },
   {
+   "aliases": [
+    "Yakusa-Ikazuchi-no-Kami"
+   ],
    "atk": 2000,
    "attribute": "light",
    "def": 2000,
@@ -7902,6 +8142,9 @@
    "passcode": 90583279,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:90583279:DIFO-EN095:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7925,6 +8168,9 @@
    ]
   },
   {
+   "aliases": [
+    "Superheavy Samurai General Shanao"
+   ],
    "archetypes": [
     "superheavy-samurai"
    ],
@@ -7970,6 +8216,9 @@
    "passcode": 90587641,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:90587641:CYAC-EN040:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7996,6 +8245,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 41: Tapirnysus the Stupor Beast"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -8097,6 +8349,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:90590303:MGED-EN090:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8676,6 +8931,9 @@
    ]
   },
   {
+   "aliases": [
+    "Morphtronic Convert Unit"
+   ],
    "archetypes": [
     "morphtronic"
    ],
@@ -8732,6 +8990,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:90659259:POTE-EN098:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8751,6 +9013,9 @@
    "tcgDate": "2022-08-04"
   },
   {
+   "aliases": [
+    "Meteor B. Dragon"
+   ],
    "archetypes": [
     "red-eyes"
    ],
@@ -8873,6 +9138,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ryu-Ge Ruin"
+   ],
    "archetypes": [
     "ryu-ge"
    ],
@@ -8914,6 +9182,9 @@
    "passcode": 90664684,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:90664684:ALIN-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8933,6 +9204,9 @@
    "tcgDate": "2025-05-01"
   },
   {
+   "aliases": [
+    "Datascape Shell - Jiajia"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -9131,6 +9405,9 @@
    "tcgDate": "2003-10-10"
   },
   {
+   "aliases": [
+    "Brandish Maiden Shizuku"
+   ],
    "archetypes": [
     "sky-striker",
     "sky-striker-ace"
@@ -9622,6 +9899,9 @@
    ]
   },
   {
+   "aliases": [
+    "Grand Arrival of the Goblin Riders"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -9680,6 +9960,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:90711610:PHNI-EN061:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9696,6 +9979,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:90711610:PHNI-EN061:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9709,6 +9995,26 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Goblin Biker Grand Entrance"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "phantom-nightmare:90711610:PHNI-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       537606
+      ]
+     },
+     "number": "PHNI-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "phantom-nightmare",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Goblin Biker Grand Entrance (PHNI-ENSP1)"
      }
     }
    ],
@@ -9968,6 +10274,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ars Magna - \"Philosophirum\""
+   ],
    "archetypes": [
     "ars-magna"
    ],
@@ -10171,6 +10480,9 @@
    ]
   },
   {
+   "aliases": [
+    "Archfiend's Strategy Game"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -10205,6 +10517,9 @@
    "passcode": 90764871,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:90764871:BPRO-EN060:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11304,6 +11619,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:90829280:PHNI-EN001:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11327,6 +11645,9 @@
    ]
   },
   {
+   "aliases": [
+    "Radiant Seiyaryu"
+   ],
    "archetypes": [
     "holy-knight"
    ],
@@ -11725,6 +12046,9 @@
    "tcgDate": "2003-10-10"
   },
   {
+   "aliases": [
+    "\"Flame Noble Arms - Joyeuse\""
+   ],
    "archetypes": [
     "noble-knight"
    ],
@@ -11924,6 +12248,9 @@
    "tcgDate": "2005-11-01"
   },
   {
+   "aliases": [
+    "Theorealize Medius"
+   ],
    "archetypes": [
     "medius"
    ],
@@ -12190,6 +12517,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:90876561:SBC2-ENA04:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600209
+      ]
+     },
+     "number": "SBC2-ENA04",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Jack's Knight"
+     }
+    },
+    {
      "id": "speed-duel-demo-deck-2020:90876561:DEM6-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12258,6 +12602,16 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENB06:common",
+     "number": "YGLD-ENB06",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENB06:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615962
@@ -12267,16 +12621,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Jack's Knight (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENC13:common",
+     "number": "YGLD-ENC13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENC13:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        616010
@@ -12286,10 +12652,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Jack's Knight (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "editions": [
@@ -12297,6 +12665,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:90876561:YGLD-ENB06:common",
+     "number": "YGLD-ENB06",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:90876561:YGLD-ENB06:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108249
@@ -12306,10 +12685,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Jack's Knight (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -12317,6 +12698,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:90876561:YGLD-ENC13:common",
+     "number": "YGLD-ENC13",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:90876561:YGLD-ENC13:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        108297
@@ -12326,10 +12718,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Jack's Knight (C)"
-     }
+     },
+     "variant": "c"
     }
    ],
    "tcgDate": "2005-11-05",
@@ -12339,6 +12733,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elvennotes ~Reunion Tercet~"
+   ],
    "archetypes": [
     "elfnote"
    ],
@@ -12373,6 +12770,9 @@
    "passcode": 90880453,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:90880453:BPRO-EN057:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12392,6 +12792,9 @@
    "tcgDate": "2026-02-05"
   },
   {
+   "aliases": [
+    "Phantasmal Lord Ultimitl Bishbaalki"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 0,
@@ -12623,6 +13026,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Steel Ogre Grotto 2"
+   ],
    "atk": 1900,
    "attribute": "earth",
    "def": 2200,
@@ -12741,6 +13147,47 @@
    "typeline": [
     "Machine",
     "Normal"
+   ]
+  },
+  {
+   "archetypes": [
+    "power-patron"
+   ],
+   "atk": 4000,
+   "attribute": "dark",
+   "def": 4000,
+   "frame": "fusion_pendulum",
+   "hasEffect": true,
+   "id": "90917401",
+   "identifiers": {
+    "konamiId": 23846,
+    "ygoprodeckId": 90917401
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/90917401.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/90917401.jpg",
+     "id": 90917401,
+     "small": "https://images.ygoprodeck.com/images/cards_small/90917401.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 12,
+   "monsterType": "Dragon",
+   "name": "Omega Vidolium the Power Patron of Heaven's End",
+   "names": {
+    "en": "Omega Vidolium the Power Patron of Heaven's End"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 90917401,
+   "prints": [],
+   "scale": 11,
+   "typeline": [
+    "Dragon",
+    "Fusion",
+    "Pendulum",
+    "Effect"
    ]
   },
   {
@@ -12918,11 +13365,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:90928333:DL13-EN015:rare",
+     "number": "DL13-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:90928333:DL13-EN015:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77431,
-       80457,
-       80458,
+       80457
+      ]
+     },
+     "number": "DL13-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Factory of Mass Production (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:90928333:DL13-EN015:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80458
+      ]
+     },
+     "number": "DL13-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Factory of Mass Production (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:90928333:DL13-EN015:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80459
       ]
      },
@@ -12930,10 +13417,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Factory of Mass Production (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:90928333:DL13-EN015:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77431
+      ]
+     },
+     "number": "DL13-EN015",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Dark Factory of Mass Production (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "editions": [
@@ -13136,6 +13643,9 @@
    "tcgDate": "2013-02-01"
   },
   {
+   "aliases": [
+    "Six Strike - Legendary Lord's Sextuple Impact"
+   ],
    "archetypes": [
     "six-strike"
    ],
@@ -13177,6 +13687,9 @@
    "passcode": 90939874,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:90939874:SUDA-EN078:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13196,6 +13709,9 @@
    "tcgDate": "2025-01-23"
   },
   {
+   "aliases": [
+    "Goblin Biker Pile-Up"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -13254,6 +13770,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:90946420:LEDE-EN073:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14065,6 +14584,9 @@
    "passcode": 90969892,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:90969892:BACH-EN078:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14209,6 +14731,23 @@
      "set": "retro-pack-2",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Dark Jeroid"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:90980792:SBC2-END12:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600136
+      ]
+     },
+     "number": "SBC2-END12",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dark Jeroid"
      }
     },

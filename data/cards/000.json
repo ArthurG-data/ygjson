@@ -40,9 +40,33 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 483,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:483:DUAD-EN059:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639396
+      ]
+     },
+     "number": "DUAD-EN059",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Parallel Teleport"
+     }
+    }
+   ]
   },
   {
+   "aliases": [
+    "Labrynth Cuclock"
+   ],
    "archetypes": [
     "labrynth"
    ],
@@ -277,6 +301,23 @@
      }
     },
     {
+     "id": "speed-duel-gx-midterm-destruction:27551:SGX4-ENA20:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543752
+      ]
+     },
+     "number": "SGX4-ENA20",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Limit Reverse"
+     }
+    },
+    {
      "id": "starter-deck-dawn-of-the-xyz:27551:YS11-EN039:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -501,6 +542,9 @@
    ]
   },
   {
+   "aliases": [
+    "Assault Sniper"
+   ],
    "atk": 1600,
    "attribute": "earth",
    "def": 800,
@@ -790,6 +834,9 @@
    "passcode": 43227,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:43227:DUNE-EN036:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -858,6 +905,9 @@
    "passcode": 44818,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:44818:BODE-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1149,6 +1199,9 @@
    "tcgDate": "2005-08-30"
   },
   {
+   "aliases": [
+    "Competition - Cross Dimension"
+   ],
    "archetypes": [
     "ancient-gear"
    ],
@@ -1227,6 +1280,9 @@
    "tcgDate": "2018-02-22"
   },
   {
+   "aliases": [
+    "Magia Magic - Thor Hammer"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -1959,6 +2015,40 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:102380:SBC2-END09:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600225
+      ]
+     },
+     "number": "SBC2-END09",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Lava Golem"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:102380:SBC2-END09:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600224
+      ]
+     },
+     "number": "SBC2-END09",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Lava Golem (PSR)"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-twisted-nightmares:102380:SS05-ENB01:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1987,6 +2077,26 @@
      "set": "speed-duel-tournament-pack-3",
      "tcgplayer": {
       "match": "number+rarity",
+      "name": "Lava Golem"
+     }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "speed-duel-tournament-pack-7:102380:STP7-EN018:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       544981
+      ]
+     },
+     "number": "STP7-EN018",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-tournament-pack-7",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Lava Golem"
      }
     },
@@ -2021,6 +2131,13 @@
       "match": "number+rarity",
       "name": "Lava Golem"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:102380:UP02-EN022:common",
+     "number": "UP02-EN022",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2003-07-18",
@@ -2075,6 +2192,9 @@
    "passcode": 109401,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:109401:BACH-EN043:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2751,6 +2871,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rikka Snow Princess"
+   ],
    "archetypes": [
     "rikka"
    ],
@@ -2812,6 +2935,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:132308:POTE-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2899,6 +3026,9 @@
    ]
   },
   {
+   "aliases": [
+    "Double Header Anger Knuckle"
+   ],
    "archetypes": [
     "train"
    ],
@@ -3255,6 +3385,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "HERO Flash!!"
+   ],
    "archetypes": [
     "elemental-hero"
    ],
@@ -3413,6 +3546,9 @@
    "tcgDate": "2006-05-17"
   },
   {
+   "aliases": [
+    "Exosister Litania"
+   ],
    "archetypes": [
     "exosister"
    ],
@@ -3470,6 +3606,10 @@
      }
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:197042:POTE-EN076:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3679,8 +3819,7 @@
      "id": "battles-of-legend-chapter-1:213326:BLC1-EN032:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538504,
-       538665
+       538504
       ]
      },
      "number": "BLC1-EN032",
@@ -3691,6 +3830,27 @@
       "match": "number+rarity",
       "name": "E - Emergency Call"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:213326:BLC1-EN032:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538665
+      ]
+     },
+     "number": "BLC1-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "E - Emergency Call (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "dark-revelation-volume-4:213326:DR04-EN219:common",
@@ -3868,6 +4028,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:218704:IOC-EN020:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3941,6 +4104,9 @@
    ]
   },
   {
+   "aliases": [
+    "Performapal Turntrooper"
+   ],
    "archetypes": [
     "performapal"
    ],
@@ -4220,6 +4386,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Hitori Boushi"
+   ],
    "atk": 100,
    "attribute": "earth",
    "def": 100,
@@ -4675,6 +4844,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dual Avatar - Empowered Mi-Gyo"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -4809,6 +4981,9 @@
    ]
   },
   {
+   "aliases": [
+    "Thought-Converging Dragon"
+   ],
    "archetypes": [
     "majestic"
    ],
@@ -5695,6 +5870,23 @@
    "passcode": 324483,
    "prints": [
     {
+     "id": "maze-of-millennia:324483:MZMI-EN004:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       532205
+      ]
+     },
+     "number": "MZMI-EN004",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "maze-of-millennia",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ultimate Flame Swordsman (CR)"
+     }
+    },
+    {
      "id": "maze-of-millennia:324483:MZMI-EN004:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5719,6 +5911,9 @@
    ]
   },
   {
+   "aliases": [
+    "Vritra Magistus"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -5904,7 +6099,28 @@
    },
    "ocgDate": "2025-03-19",
    "passcode": 336601,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:336601:DUAD-EN100:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639437
+      ]
+     },
+     "number": "DUAD-EN100",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Moon Gardna"
+     }
+    }
+   ],
    "typeline": [
     "Spellcaster",
     "Effect"
@@ -5994,6 +6210,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dark Magician the Ebon Sorcerer"
+   ],
    "archetypes": [
     "dark-magician"
    ],
@@ -6058,6 +6277,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:342673:INFO-EN006:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6074,6 +6296,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:342673:INFO-EN006:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6201,6 +6426,9 @@
    ]
   },
   {
+   "aliases": [
+    "Arriving Miracle"
+   ],
    "archetypes": [
     "stardust"
    ],
@@ -6366,6 +6594,9 @@
    ]
   },
   {
+   "aliases": [
+    "Festive Flame"
+   ],
    "atk": 800,
    "attribute": "fire",
    "def": 200,
@@ -6514,6 +6745,9 @@
    ]
   },
   {
+   "aliases": [
+    "Exodd Blaze"
+   ],
    "archetypes": [
     "exodd"
    ],
@@ -6571,6 +6805,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:402416:INFO-EN055:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7447,6 +7684,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:423705:SBC2-ENC11:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600173
+      ]
+     },
+     "number": "SBC2-ENC11",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Gearfried the Iron Knight"
+     }
+    },
+    {
      "id": "speed-duel-starter-decks-duelists-of-tomorrow:423705:SS02-ENB10:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7667,6 +7921,9 @@
    ]
   },
   {
+   "aliases": [
+    "Blitzclique - Stepped Leader"
+   ],
    "archetypes": [
     "blitzclique"
    ],
@@ -7856,6 +8113,9 @@
    ]
   },
   {
+   "aliases": [
+    "Scripture of Law"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -8774,6 +9034,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tearalaments Seiren"
+   ],
    "archetypes": [
     "tearlaments"
    ],
@@ -8819,6 +9082,10 @@
    "passcode": 572850,
    "prints": [
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "power-of-the-elements:572850:POTE-EN014:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9702,6 +9969,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cyverse Gadget"
+   ],
    "archetypes": [
     "gadget"
    ],
@@ -9763,6 +10033,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:645087:MGED-EN135:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9972,6 +10245,9 @@
    ]
   },
   {
+   "aliases": [
+    "Synchro Over Top"
+   ],
    "archetypes": [
     "synchro"
    ],
@@ -10029,6 +10305,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:653675:DUNE-EN050:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10805,11 +11084,69 @@
    "prints": [
     {
      "id": "duelist-league-16-participation-cards:698785:DL16-EN012:rare",
+     "number": "DL16-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:698785:DL16-EN012:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77641,
-       77642,
-       77643,
+       77641
+      ]
+     },
+     "number": "DL16-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Thunder End Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:698785:DL16-EN012:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77642
+      ]
+     },
+     "number": "DL16-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Thunder End Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:698785:DL16-EN012:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77643
+      ]
+     },
+     "number": "DL16-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Thunder End Dragon (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:698785:DL16-EN012:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77644
       ]
      },
@@ -10817,10 +11154,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Thunder End Dragon (Blue)"
-     }
+      "name": "Thunder End Dragon (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "photon-shockwave:698785:PHSW-EN044:ultimate_rare",
@@ -10896,6 +11235,9 @@
    ]
   },
   {
+   "aliases": [
+    "Orcustrated Climax"
+   ],
    "archetypes": [
     "orcust"
    ],
@@ -11308,6 +11650,9 @@
    "tcgDate": "2010-08-07"
   },
   {
+   "aliases": [
+    "Generaider Bite"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -11533,6 +11878,9 @@
    ]
   },
   {
+   "aliases": [
+    "Voritcular Drumgon"
+   ],
    "atk": 1000,
    "attribute": "dark",
    "frame": "link",
@@ -11620,6 +11968,9 @@
    ]
   },
   {
+   "aliases": [
+    "Utgard, Generaider Boss of Lies"
+   ],
    "archetypes": [
     "generaider"
    ],
@@ -12009,6 +12360,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witching Hour"
+   ],
    "archetypes": [
     "shiranui"
    ],
@@ -12368,6 +12722,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:821049:DUNE-EN039:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12384,6 +12741,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:821049:DUNE-EN039:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12466,6 +12826,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:844056:AGOV-EN096:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12631,6 +12994,9 @@
    "tcgDate": "2013-07-12"
   },
   {
+   "aliases": [
+    "Draw of Destiny"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "856784",
@@ -12769,6 +13135,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:863795:PHHY-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12792,6 +13161,9 @@
    ]
   },
   {
+   "aliases": [
+    "Crowley, the Gifted of Magistus"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -13095,6 +13467,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:885016:LEDE-EN086:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13187,6 +13562,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:897409:PHHY-EN051:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13461,6 +13839,10 @@
    "tcgDate": "2013-08-08"
   },
   {
+   "aliases": [
+    "Token: Mecha Phantom Beast",
+    "Token: Mecha Phantom Beast (A) - \"Dracossack\""
+   ],
    "archetypes": [
     "phantom-beast"
    ],
@@ -13522,6 +13904,35 @@
       "match": "number+rarity",
       "name": "Token: Mecha Phantom Beast (A) - \"Dracossack\""
      }
+    },
+    {
+     "id": "yu-gi-oh-tokens:904186:TKN4-EN013:super_rare",
+     "number": "TKN4-EN013",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-tokens",
+     "source": "tcgplayer"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yu-gi-oh-tokens:904186:TKN4-EN013:super_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       81328
+      ]
+     },
+     "number": "TKN4-EN013",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "yu-gi-oh-tokens",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Mecha Phantom Beast (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2018-12-06"
@@ -13933,6 +14344,9 @@
    ]
   },
   {
+   "aliases": [
+    "Traptrix Utricularia"
+   ],
    "archetypes": [
     "traptrix"
    ],
@@ -14141,6 +14555,9 @@
    "tcgDate": "2005-02-26"
   },
   {
+   "aliases": [
+    "Great Fortress Zelos"
+   ],
    "archetypes": [
     "b-e-s"
    ],

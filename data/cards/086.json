@@ -123,6 +123,9 @@
    "tcgDate": "2009-06-09"
   },
   {
+   "aliases": [
+    "Propitious Warrior Lady"
+   ],
    "atk": 1000,
    "attribute": "earth",
    "def": 800,
@@ -229,6 +232,9 @@
    "passcode": 86038337,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:86038337:DOOD-EN084:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -842,6 +848,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:86066372:MGED-EN037:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1042,6 +1051,9 @@
    "passcode": 86098176,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:86098176:BPRO-EN009:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1293,7 +1305,28 @@
     "zh-CN": "提斯蒂娜的哨兵"
    },
    "passcode": 86111442,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-nexus:86111442:DUNE-EN086:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       504975
+      ]
+     },
+     "number": "DUNE-EN086",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "duelist-nexus",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Sentinel of the Tistina"
+     }
+    }
+   ],
    "tcgDate": "2023-07-27",
    "typeline": [
     "Aqua",
@@ -1301,6 +1334,9 @@
    ]
   },
   {
+   "aliases": [
+    "Aleister the Eidolon Summoner"
+   ],
    "archetypes": [
     "invoked"
    ],
@@ -1384,6 +1420,159 @@
      }
     },
     {
+     "id": "quarter-century-stampede:86120752:RA04-EN024:collectors_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626807
+      ]
+     },
+     "number": "RA04-EN024",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Alternate Art) (PCR)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN024:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626808
+      ]
+     },
+     "number": "RA04-EN024",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Alternate Art) (Platinum Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN024:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626809
+      ]
+     },
+     "number": "RA04-EN024",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Alternate Art) (Quarter Century Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN024:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626810
+      ]
+     },
+     "number": "RA04-EN024",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Alternate Art) (Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN024:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626811
+      ]
+     },
+     "number": "RA04-EN024",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Alternate Art)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN024:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626812
+      ]
+     },
+     "number": "RA04-EN024",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Alternate Art) (PUR)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN024:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626813
+      ]
+     },
+     "number": "RA04-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Alternate Art) (UR)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN278:platinum_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627631
+      ]
+     },
+     "number": "RA04-EN278",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Platinum Secret Rare)"
+     }
+    },
+    {
+     "id": "quarter-century-stampede:86120752:RA04-EN278:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627632
+      ]
+     },
+     "number": "RA04-EN278",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker (Quarter Century Secret Rare)"
+     }
+    },
+    {
      "id": "shadows-in-valhalla:86120752:SHVA-EN040:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1398,6 +1587,26 @@
       "match": "number+rarity",
       "name": "Aleister the Invoker"
      }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "ultimate-tournament-pack-1:86120752:UP01-EN029:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       704994
+      ]
+     },
+     "number": "UP01-EN029",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Aleister the Invoker"
+     }
     }
    ],
    "tcgDate": "2017-02-23",
@@ -1407,6 +1616,9 @@
    ]
   },
   {
+   "aliases": [
+    "Demise, Fiend of Armageddon"
+   ],
    "archetypes": [
     "demise"
    ],
@@ -1475,6 +1687,9 @@
    ]
   },
   {
+   "aliases": [
+    "Divine Abyss of the Sacred Beast"
+   ],
    "archetypes": [
     "phantasm"
    ],
@@ -1690,6 +1905,9 @@
    ]
   },
   {
+   "aliases": [
+    "Elpy the Guardragon"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -2188,9 +2406,7 @@
      "id": "legendary-duelists-season-3:86165817:LDS3-EN033:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276159,
-       276750,
-       276751
+       276159
       ]
      },
      "number": "LDS3-EN033",
@@ -2201,6 +2417,48 @@
       "match": "number+rarity",
       "name": "Evil HERO Malicious Bane"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:86165817:LDS3-EN033:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276750
+      ]
+     },
+     "number": "LDS3-EN033",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Malicious Bane (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:86165817:LDS3-EN033:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276751
+      ]
+     },
+     "number": "LDS3-EN033",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil HERO Malicious Bane (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "ots-tournament-pack-27:86165817:OP27-EN021:common",
@@ -2227,6 +2485,9 @@
    ]
   },
   {
+   "aliases": [
+    "Falchionβ"
+   ],
    "atk": 1200,
    "attribute": "light",
    "def": 800,
@@ -3083,6 +3344,9 @@
    "passcode": 86221741,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:86221741:MGED-EN140:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3578,6 +3842,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mechabeast Dareton"
+   ],
    "attribute": "dark",
    "def": 0,
    "frame": "effect",
@@ -3618,6 +3885,9 @@
    "passcode": 86271510,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:86271510:BACH-EN033:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3711,6 +3981,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gusto Vether"
+   ],
    "archetypes": [
     "gusto"
    ],
@@ -3886,6 +4159,9 @@
    ]
   },
   {
+   "aliases": [
+    "Evil HERO Dark Knight"
+   ],
    "archetypes": [
     "evil-hero"
    ],
@@ -3931,6 +4207,9 @@
    "passcode": 86282581,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:86282581:SUDA-EN033:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3955,6 +4234,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magnet Warrior Ω+"
+   ],
    "archetypes": [
     "magnet"
    ],
@@ -4019,6 +4301,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tempura of Chance - EBI"
+   ],
    "atk": 1600,
    "attribute": "fire",
    "def": 0,
@@ -4061,6 +4346,9 @@
    "passcode": 86304179,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:86304179:SUDA-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4181,6 +4469,9 @@
    "tcgDate": "2013-10-11"
   },
   {
+   "aliases": [
+    "Voiceless Voice Authority"
+   ],
    "archetypes": [
     "voiceless-voice"
    ],
@@ -4238,6 +4529,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:86310763:PHNI-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4392,6 +4686,9 @@
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "Magical Name - \"Rosa Mundi\""
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "86319972",
@@ -4794,6 +5091,40 @@
       "match": "number+rarity",
       "name": "Shinato, King of a Higher Plane"
      }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:86327225:SBC2-ENI01:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600285
+      ]
+     },
+     "number": "SBC2-ENI01",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Shinato, King of a Higher Plane"
+     }
+    },
+    {
+     "id": "speed-duel-battle-city-finals:86327225:SBC2-ENI01:prismatic_secret",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600284
+      ]
+     },
+     "number": "SBC2-ENI01",
+     "rarity": "prismatic_secret",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Shinato, King of a Higher Plane (PSR)"
+     }
     }
    ],
    "tcgDate": "2003-12-01",
@@ -4930,6 +5261,9 @@
    ]
   },
   {
+   "aliases": [
+    "Time Rewinder"
+   ],
    "atk": 1200,
    "attribute": "light",
    "def": 2400,
@@ -4988,6 +5322,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:86346363:PHNI-EN026:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5091,6 +5428,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:86346643:MGED-EN137:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5243,6 +5583,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ahrima, King of Wickedness"
+   ],
    "atk": 1700,
    "attribute": "dark",
    "def": 0,
@@ -5324,6 +5667,9 @@
    ]
   },
   {
+   "aliases": [
+    "Tribrigade Oath"
+   ],
    "archetypes": [
     "tri-brigade"
    ],
@@ -5400,6 +5746,9 @@
    "tcgDate": "2020-11-05"
   },
   {
+   "aliases": [
+    "Wynn the Wind Medium"
+   ],
    "archetypes": [
     "charmer"
    ],
@@ -6483,6 +6832,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Datascape Savant - Laolao"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -6842,9 +7194,7 @@
      "id": "legendary-duelists-season-3:86509711:LDS3-EN099:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       276164,
-       276763,
-       276764
+       276164
       ]
      },
      "number": "LDS3-EN099",
@@ -6855,6 +7205,48 @@
       "match": "number+rarity",
       "name": "Magicians' Combination"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:86509711:LDS3-EN099:ultra_rare:blue",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276763
+      ]
+     },
+     "number": "LDS3-EN099",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magicians' Combination (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-3:86509711:LDS3-EN099:ultra_rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       276764
+      ]
+     },
+     "number": "LDS3-EN099",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-3",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magicians' Combination (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2020-01-16"
@@ -7013,6 +7405,23 @@
       "match": "number+rarity",
       "name": "Fossil Warrior Skull Bone"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:86520461:SGX4-END23:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543822
+      ]
+     },
+     "number": "SGX4-END23",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Fossil Warrior Skull Bone"
+     }
     }
    ],
    "tcgDate": "2020-07-23",
@@ -7058,6 +7467,9 @@
    "passcode": 86527709,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:86527709:ROTA-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7077,6 +7489,9 @@
    "tcgDate": "2024-10-10"
   },
   {
+   "aliases": [
+    "Number S39"
+   ],
    "archetypes": [
     "number-s",
     "number-spell-trap-archetype",
@@ -7464,6 +7879,9 @@
    "passcode": 86553594,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:86553594:AGOV-EN092:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8055,6 +8473,9 @@
    ]
   },
   {
+   "aliases": [
+    "Qardan the Great Sage"
+   ],
    "atk": 1400,
    "attribute": "earth",
    "def": 1000,
@@ -8097,6 +8518,9 @@
    "passcode": 86605515,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:86605515:PHHY-EN095:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8195,6 +8619,9 @@
    "tcgDate": "2018-05-03"
   },
   {
+   "aliases": [
+    "Holy Night Flamel"
+   ],
    "archetypes": [
     "starry-knight"
    ],
@@ -8632,6 +9059,9 @@
    ]
   },
   {
+   "aliases": [
+    "Icejade Aegirine Gymir"
+   ],
    "archetypes": [
     "icejade"
    ],
@@ -8709,6 +9139,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:86682165:PHHY-EN038:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9014,6 +9447,9 @@
    "tcgDate": "2006-08-16"
   },
   {
+   "aliases": [
+    "Trickstar Foxywitch"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -9092,6 +9528,9 @@
    ]
   },
   {
+   "aliases": [
+    "Amazoness Secret Technique"
+   ],
    "archetypes": [
     "amazoness"
    ],
@@ -9148,6 +9587,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:86758746:DABL-EN099:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9167,6 +9609,9 @@
    "tcgDate": "2022-10-20"
   },
   {
+   "aliases": [
+    "Impcantation Celebration"
+   ],
    "archetypes": [
     "impcantation"
    ],
@@ -9227,6 +9672,9 @@
    "tcgDate": "2019-01-31"
   },
   {
+   "aliases": [
+    "AssistYummy!"
+   ],
    "archetypes": [
     "yummy"
    ],
@@ -9261,6 +9709,9 @@
    "passcode": 86762958,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:86762958:BPRO-EN076:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9505,11 +9956,51 @@
     },
     {
      "id": "duelist-league-15-participation-cards:86780027:DL15-EN016:rare",
+     "number": "DL15-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:86780027:DL15-EN016:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80060,
-       80061,
-       80062,
+       80062
+      ]
+     },
+     "number": "DL15-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Solidarity (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:86780027:DL15-EN016:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80060
+      ]
+     },
+     "number": "DL15-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Solidarity (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:86780027:DL15-EN016:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80063
       ]
      },
@@ -9517,10 +10008,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Solidarity (Green)"
-     }
+      "name": "Solidarity (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:86780027:DL15-EN016:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80061
+      ]
+     },
+     "number": "DL15-EN016",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Solidarity (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "lost-sanctuary-structure-deck:86780027:SDLS-EN031:common",
@@ -9948,6 +10459,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:86809440:INFO-EN094:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9964,6 +10478,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:86809440:INFO-EN094:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10482,6 +10999,9 @@
    ]
   },
   {
+   "aliases": [
+    "Machina Reformation"
+   ],
    "archetypes": [
     "machina"
    ],
@@ -10935,6 +11455,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Altergeist Emulelf"
+   ],
    "archetypes": [
     "altergeist"
    ],
@@ -11213,6 +11736,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shiranui Splendidsaga"
+   ],
    "archetypes": [
     "shiranui"
    ],
@@ -11962,6 +12488,9 @@
    ]
   },
   {
+   "aliases": [
+    "Speedroid Magic Hound"
+   ],
    "archetypes": [
     "speedroid"
    ],
@@ -12170,6 +12699,9 @@
    "passcode": 86993168,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:86993168:BACH-EN030:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12312,6 +12844,9 @@
    "passcode": 86999951,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:86999951:DUNE-EN089:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12328,6 +12863,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:86999951:DUNE-EN089:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [

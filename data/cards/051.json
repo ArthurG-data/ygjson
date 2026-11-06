@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Trickstar Bloody Mary"
+   ],
    "archetypes": [
     "trickstar"
    ],
@@ -152,6 +155,9 @@
    ]
   },
   {
+   "aliases": [
+    "Rishaddoll Wendi"
+   ],
    "archetypes": [
     "shaddoll"
    ],
@@ -650,6 +656,9 @@
    "tcgDate": "2016-11-03"
   },
   {
+   "aliases": [
+    "Majespecter Porcupine - Yamaarashi"
+   ],
    "archetypes": [
     "majespecter"
    ],
@@ -711,6 +720,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:51073802:PHNI-EN023:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -869,6 +881,9 @@
    ]
   },
   {
+   "aliases": [
+    "Blasting Wire"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "51091138",
@@ -942,6 +957,9 @@
    "tcgDate": "2017-10-19"
   },
   {
+   "aliases": [
+    "Tribrigade Airborne"
+   ],
    "archetypes": [
     "tri-brigade"
    ],
@@ -1458,6 +1476,9 @@
    ]
   },
   {
+   "aliases": [
+    "Great Knight of the Red Lotus"
+   ],
    "atk": 2100,
    "attribute": "fire",
    "def": 1800,
@@ -1500,6 +1521,9 @@
    "passcode": 51132012,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "supreme-darkness:51132012:SUDA-EN024:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1938,6 +1962,9 @@
    ]
   },
   {
+   "aliases": [
+    "Krawler Glia"
+   ],
    "archetypes": [
     "krawler"
    ],
@@ -2067,6 +2094,9 @@
    "tcgDate": "2019-01-31"
   },
   {
+   "aliases": [
+    "Blast Held by Fate"
+   ],
    "archetypes": [
     "exchange-of-the-spirit"
    ],
@@ -2126,6 +2156,9 @@
    "tcgDate": "2022-11-03"
   },
   {
+   "aliases": [
+    "Mayakashi Cycle"
+   ],
    "archetypes": [
     "mayakashi"
    ],
@@ -2186,6 +2219,9 @@
    "tcgDate": "2019-05-02"
   },
   {
+   "aliases": [
+    "Brandish Mecha Shark Cannon"
+   ],
    "archetypes": [
     "sky-striker"
    ],
@@ -2536,6 +2572,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:51250293:PHNI-EN069:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3139,6 +3178,9 @@
    ]
   },
   {
+   "aliases": [
+    "Saffira, the Wise Voiceless Voice Queen"
+   ],
    "archetypes": [
     "voiceless-voice"
    ],
@@ -3200,6 +3242,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:51296484:PHNI-EN020:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3216,6 +3261,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:51296484:PHNI-EN020:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3278,6 +3326,9 @@
    "passcode": 51303014,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:51303014:AGOV-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3508,6 +3559,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Bound Link"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "51335426",
@@ -3938,11 +3992,51 @@
     },
     {
      "id": "duelist-league-15-participation-cards:51355346:DL15-EN004:rare",
+     "number": "DL15-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:51355346:DL15-EN004:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       80101,
-       80102,
-       80103,
+       80101
+      ]
+     },
+     "number": "DL15-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gaia Soul the Combustible Collective (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:51355346:DL15-EN004:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80102
+      ]
+     },
+     "number": "DL15-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gaia Soul the Combustible Collective (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:51355346:DL15-EN004:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80104
       ]
      },
@@ -3950,10 +4044,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Gaia Soul the Combustible Collective (Blue)"
-     }
+      "name": "Gaia Soul the Combustible Collective (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:51355346:DL15-EN004:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80103
+      ]
+     },
+     "number": "DL15-EN004",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gaia Soul the Combustible Collective (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "rise-of-destiny:51355346:RDS-EN028:rare",
@@ -4090,6 +4204,9 @@
    "tcgDate": "2012-04-28"
   },
   {
+   "aliases": [
+    "Blitzkrieg Bombardment"
+   ],
    "archetypes": [
     "train"
    ],
@@ -4405,6 +4522,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cemetery Bomb"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "51394546",
@@ -4612,11 +4732,69 @@
    "prints": [
     {
      "id": "duelist-league-16-participation-cards:51402908:DL16-EN010:rare",
+     "number": "DL16-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:51402908:DL16-EN010:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77633,
-       77634,
-       77635,
+       77633
+      ]
+     },
+     "number": "DL16-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "The Supremacy Sun (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:51402908:DL16-EN010:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77634
+      ]
+     },
+     "number": "DL16-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "The Supremacy Sun (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:51402908:DL16-EN010:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77635
+      ]
+     },
+     "number": "DL16-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "The Supremacy Sun (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-16-participation-cards:51402908:DL16-EN010:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77636
       ]
      },
@@ -4624,10 +4802,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-16-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "The Supremacy Sun (Blue)"
-     }
+      "name": "The Supremacy Sun (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "shonen-jump-vol-10-issue-1-promotional-card:51402908:JUMP-EN057:ultra_rare",
@@ -4821,6 +5001,9 @@
    "tcgDate": "2012-08-18"
   },
   {
+   "aliases": [
+    "Lindwurm the Hammer Dragon"
+   ],
    "archetypes": [
     "albaz-dragon"
    ],
@@ -4978,6 +5161,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:51409648:PHHY-EN034:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5647,6 +5833,9 @@
    "tcgDate": "2003-10-01"
   },
   {
+   "aliases": [
+    "Goblin Biker Clutter the Noisy"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -5709,6 +5898,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "phantom-nightmare:51473858:PHNI-EN009:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5732,6 +5924,9 @@
    ]
   },
   {
+   "aliases": [
+    "Yamoimori"
+   ],
    "atk": 0,
    "attribute": "water",
    "def": 0,
@@ -6113,6 +6308,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:51482758:SBC2-END17:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600275
+      ]
+     },
+     "number": "SBC2-END17",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Remove Trap"
+     }
+    },
+    {
      "id": "starter-deck-joey:51482758:SDJ-034:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6205,6 +6417,9 @@
    "tcgDate": "2002-03-08"
   },
   {
+   "aliases": [
+    "D/D/D Boulder King Darius"
+   ],
    "archetypes": [
     "d-d-2",
     "d-d-d"
@@ -6275,6 +6490,9 @@
    ]
   },
   {
+   "aliases": [
+    "Bound Magikeys"
+   ],
    "archetypes": [
     "magikey"
    ],
@@ -6350,6 +6568,9 @@
    "tcgDate": "2021-08-12"
   },
   {
+   "aliases": [
+    "White Zoa of Dogmatika"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -6395,6 +6616,9 @@
    "passcode": 51522296,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:51522296:PHHY-EN031:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6691,6 +6915,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 99"
+   ],
    "archetypes": [
     "number-spell-trap-archetype",
     "utopia"
@@ -6808,7 +7035,30 @@
    },
    "ocgDate": "2026-03-20",
    "passcode": 51546708,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:51546708:MAMS-EN023:secret_rare",
+     "number": "MAMS-EN023",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:51546708:MAMS-EN023:starlight_rare",
+     "number": "MAMS-EN023",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:51546708:MAMS-EN023:ultra_rare",
+     "number": "MAMS-EN023",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Warrior",
     "Tuner",
@@ -6855,6 +7105,9 @@
    "passcode": 51548207,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:51548207:BPRO-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7455,6 +7708,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:51578214:BODE-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7612,6 +7868,9 @@
    "tcgDate": "2016-03-17"
   },
   {
+   "aliases": [
+    "Epigonen the Imitarian"
+   ],
    "atk": 2000,
    "attribute": "light",
    "def": 2000,
@@ -7653,6 +7912,9 @@
    "passcode": 51611041,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:51611041:BACH-EN026:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7676,6 +7938,9 @@
    ]
   },
   {
+   "aliases": [
+    "Riot"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "51612489",
@@ -7707,6 +7972,9 @@
    "passcode": 51612489,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:51612489:BPRO-EN069:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8548,6 +8816,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-infinite-forbidden:51650038:INFO-EN077:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8567,6 +8838,9 @@
    "tcgDate": "2024-07-18"
   },
   {
+   "aliases": [
+    "Null Power Patron Realm - Vidria"
+   ],
    "archetypes": [
     "power-patron"
    ],
@@ -8678,6 +8952,9 @@
    "tcgDate": "2007-11-14"
   },
   {
+   "aliases": [
+    "Dragon Cycle of Celestial Illusions"
+   ],
    "archetypes": [
     "tenyi"
    ],
@@ -8770,6 +9047,9 @@
    "tcgDate": "2020-08-06"
   },
   {
+   "aliases": [
+    "Kendochourai"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "51686645",
@@ -8826,6 +9106,9 @@
    "tcgDate": "2020-08-06"
   },
   {
+   "aliases": [
+    "Jack in the Hand"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "51697825",
@@ -9232,6 +9515,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 50"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -9535,6 +9821,9 @@
    "tcgDate": "2023-09-21"
   },
   {
+   "aliases": [
+    "Protector of Nephthys"
+   ],
    "archetypes": [
     "nephthys"
    ],
@@ -9603,6 +9892,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nebula, the Star Cloud Dragon"
+   ],
    "atk": 2000,
    "attribute": "light",
    "def": 0,
@@ -9703,6 +9995,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ancient Gear Chaos Giant"
+   ],
    "archetypes": [
     "ancient-gear"
    ],
@@ -10089,6 +10384,9 @@
    ]
   },
   {
+   "aliases": [
+    "Expurery Happiness"
+   ],
    "archetypes": [
     "purrely"
    ],
@@ -10174,6 +10472,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magnet Warrior Σ＋"
+   ],
    "archetypes": [
     "magnet"
    ],
@@ -10212,6 +10513,9 @@
    "passcode": 51826619,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:51826619:BPRO-EN005:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10715,6 +11019,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragunity Purgatory"
+   ],
    "archetypes": [
     "dragunity"
    ],
@@ -10819,6 +11126,9 @@
    "passcode": 51849482,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-nexus:51849482:DUNE-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11282,6 +11592,9 @@
    ]
   },
   {
+   "aliases": [
+    "Plasma Blast"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "51869363",
@@ -11786,11 +12099,51 @@
     },
     {
      "id": "duelist-league-14-participation-cards:51934376:DL14-EN001:rare",
+     "number": "DL14-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:51934376:DL14-EN001:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77577,
-       80472,
-       80473,
+       80472
+      ]
+     },
+     "number": "DL14-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kabazauls (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:51934376:DL14-EN001:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80473
+      ]
+     },
+     "number": "DL14-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kabazauls (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:51934376:DL14-EN001:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80474
       ]
      },
@@ -11798,10 +12151,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Kabazauls (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-14-participation-cards:51934376:DL14-EN001:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77577
+      ]
+     },
+     "number": "DL14-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-14-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Kabazauls (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:51934376:LCJW-EN142:secret_rare",
@@ -11999,11 +12372,69 @@
     },
     {
      "id": "duelist-league-2010-participation-cards:51945556:DL09-EN009:rare",
+     "number": "DL09-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:51945556:DL09-EN009:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77365,
-       77701,
-       77702,
+       77365
+      ]
+     },
+     "number": "DL09-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zaborg the Thunder Monarch (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:51945556:DL09-EN009:rare:bronze",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77701
+      ]
+     },
+     "number": "DL09-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zaborg the Thunder Monarch (Bronze)"
+     },
+     "variant": "bronze"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:51945556:DL09-EN009:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77702
+      ]
+     },
+     "number": "DL09-EN009",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Zaborg the Thunder Monarch (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2010-participation-cards:51945556:DL09-EN009:rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
        77703
       ]
      },
@@ -12011,10 +12442,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2010-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Zaborg the Thunder Monarch (Blue)"
-     }
+      "name": "Zaborg the Thunder Monarch (Silver)"
+     },
+     "variant": "silver"
     },
     {
      "id": "emperor-of-darkness-structure-deck:51945556:SR01-EN005:common",
@@ -12451,6 +12884,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Dark Spirit of the Denial"
+   ],
    "atk": 1600,
    "attribute": "dark",
    "def": 0,

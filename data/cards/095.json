@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Majesty Maiden, the True Dracomage"
+   ],
    "archetypes": [
     "true-draco"
    ],
@@ -335,6 +338,9 @@
    ]
   },
   {
+   "aliases": [
+    "Seven Realms of the Golden Land"
+   ],
    "archetypes": [
     "golden-land"
    ],
@@ -712,6 +718,9 @@
    ]
   },
   {
+   "aliases": [
+    "Three-Strike Barrier"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "95081386",
@@ -1094,6 +1103,9 @@
    "passcode": 95091919,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "duelist-s-advance:95091919:DUAD-EN016:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1117,6 +1129,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gaia Prominence, the Kindling Seraph"
+   ],
    "archetypes": [
     "gaia-knight"
    ],
@@ -1162,6 +1177,9 @@
    "passcode": 95095116,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:95095116:AGOV-EN033:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1433,6 +1451,9 @@
    "tcgDate": "2004-04-06"
   },
   {
+   "aliases": [
+    "Hecahands Gygas"
+   ],
    "archetypes": [
     "hecahands"
    ],
@@ -1517,6 +1538,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 99: Utopia Dragner"
+   ],
    "archetypes": [
     "number",
     "number-spell-trap-archetype"
@@ -1625,6 +1649,9 @@
    ]
   },
   {
+   "aliases": [
+    "Unchained Ogre Shara"
+   ],
    "archetypes": [
     "unchained"
    ],
@@ -1650,13 +1677,36 @@
    "kind": "monster",
    "level": 4,
    "monsterType": "Fiend",
-   "name": "Unchained Ogre Shara",
+   "name": "Unchained Oni of Shara",
    "names": {
-    "en": "Unchained Ogre Shara"
+    "en": "Unchained Oni of Shara"
    },
    "ocgDate": "2026-05-30",
    "passcode": 95136979,
-   "prints": [],
+   "prints": [
+    {
+     "id": "magnificent-maestros:95136979:MAMS-EN053:secret_rare",
+     "number": "MAMS-EN053",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:95136979:MAMS-EN053:starlight_rare",
+     "number": "MAMS-EN053",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
+    {
+     "id": "magnificent-maestros:95136979:MAMS-EN053:ultra_rare",
+     "number": "MAMS-EN053",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    }
+   ],
+   "tcgDate": "2026-11-12",
    "typeline": [
     "Fiend",
     "Effect"
@@ -2212,11 +2262,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:95178994:DL12-EN003:rare",
+     "number": "DL12-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:95178994:DL12-EN003:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77400,
-       80364,
-       80365,
+       80364
+      ]
+     },
+     "number": "DL12-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Giant Germ (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:95178994:DL12-EN003:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80365
+      ]
+     },
+     "number": "DL12-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Giant Germ (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:95178994:DL12-EN003:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80366
       ]
      },
@@ -2224,10 +2314,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Giant Germ (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:95178994:DL12-EN003:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77400
+      ]
+     },
+     "number": "DL12-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Giant Germ (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-3-yugi-s-world-mega-pack:95178994:LCYW-EN234:common",
@@ -2481,6 +2591,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:95194279:IOC-EN044:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2666,6 +2779,9 @@
    "tcgDate": "2024-06-20"
   },
   {
+   "aliases": [
+    "Draitron Meteornis=QUA"
+   ],
    "archetypes": [
     "drytron"
    ],
@@ -2804,6 +2920,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:95214051:IOC-EN100:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3304,6 +3423,9 @@
    ]
   },
   {
+   "aliases": [
+    "Virtual World Tiger - Huhu"
+   ],
    "archetypes": [
     "virtual-world"
    ],
@@ -3348,6 +3470,9 @@
    "passcode": 95243515,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:95243515:CYAC-EN046:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3373,6 +3498,9 @@
    ]
   },
   {
+   "aliases": [
+    "Witchcraft Pittore"
+   ],
    "archetypes": [
     "witchcrafter"
    ],
@@ -3517,6 +3645,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:95245571:DABL-EN075:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4131,6 +4262,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:95283172:PHHY-EN091:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4541,6 +4675,48 @@
    "tcgDate": "2010-08-07",
    "typeline": [
     "Warrior",
+    "Effect"
+   ]
+  },
+  {
+   "aliases": [
+    "Aitvaras the White Crow Knight"
+   ],
+   "archetypes": [
+    "winter-raven"
+   ],
+   "atk": 900,
+   "attribute": "fire",
+   "def": 2600,
+   "frame": "synchro",
+   "hasEffect": true,
+   "id": "95294854",
+   "identifiers": {
+    "konamiId": 23849,
+    "ygoprodeckId": 95294854
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/95294854.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/95294854.jpg",
+     "id": 95294854,
+     "small": "https://images.ygoprodeck.com/images/cards_small/95294854.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 5,
+   "monsterType": "Illusion",
+   "name": "Aitvaras, Knight of the Winter Raven",
+   "names": {
+    "en": "Aitvaras, Knight of the Winter Raven"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 95294854,
+   "prints": [],
+   "typeline": [
+    "Illusion",
+    "Synchro",
     "Effect"
    ]
   },
@@ -5139,6 +5315,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hecahands Ibel"
+   ],
    "archetypes": [
     "hecahands"
    ],
@@ -5386,6 +5565,9 @@
    "tcgDate": "2015-01-15"
   },
   {
+   "aliases": [
+    "Regenesis Commandments"
+   ],
    "archetypes": [
     "regenesis"
    ],
@@ -5425,7 +5607,28 @@
    },
    "ocgDate": "2025-04-26",
    "passcode": 95382988,
-   "prints": []
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:95382988:DUAD-EN077:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639414
+      ]
+     },
+     "number": "DUAD-EN077",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Regenesis Commands"
+     }
+    }
+   ]
   },
   {
    "archetypes": [
@@ -5645,6 +5848,9 @@
    ]
   },
   {
+   "aliases": [
+    "Golden Lord Eldorichie"
+   ],
    "archetypes": [
     "eldlich"
    ],
@@ -5831,6 +6037,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:95440946:MGED-EN024:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5940,6 +6149,9 @@
    ]
   },
   {
+   "aliases": [
+    "Number 31"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -6133,6 +6345,9 @@
    ]
   },
   {
+   "aliases": [
+    "Gouki Fighting Spirit"
+   ],
    "archetypes": [
     "gouki"
    ],
@@ -6173,6 +6388,9 @@
    "passcode": 95448372,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:95448372:DOOD-EN056:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6450,6 +6668,9 @@
    ]
   },
   {
+   "aliases": [
+    "Maliss Q White Binder"
+   ],
    "archetypes": [
     "maliss"
    ],
@@ -6849,6 +7070,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:95471006:BACH-EN061:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6921,6 +7145,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:95472621:IOC-EN047:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6974,6 +7201,9 @@
    "tcgDate": "2004-03-01"
   },
   {
+   "aliases": [
+    "Number 89: Cybeast Diablosis"
+   ],
    "archetypes": [
     "number-spell-trap-archetype"
    ],
@@ -7075,6 +7305,9 @@
    ]
   },
   {
+   "aliases": [
+    "Magician Salvation"
+   ],
    "archetypes": [
     "dark-magician"
    ],
@@ -7470,6 +7703,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:95492061:IOC-EN088:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7640,6 +7876,9 @@
    ]
   },
   {
+   "aliases": [
+    "True Super Quantal Mech King Blaster Magna"
+   ],
    "archetypes": [
     "super-quant"
    ],
@@ -8084,6 +8323,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shadowreaver Knight 21"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 0,
@@ -8235,6 +8477,9 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "World Chalice-Bearing Priestess"
+   ],
    "archetypes": [
     "world-chalice"
    ],
@@ -8581,6 +8826,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:95515518:DIFO-EN050:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8605,6 +8853,9 @@
    ]
   },
   {
+   "aliases": [
+    "Red Cartesia, the Virtuous"
+   ],
    "atk": 1500,
    "attribute": "light",
    "def": 1500,
@@ -8679,6 +8930,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:95515789:DABL-EN011:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8695,6 +8949,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:95515789:DABL-EN011:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9003,6 +9260,9 @@
    ]
   },
   {
+   "aliases": [
+    "Novel Ninjitsu Art Book"
+   ],
    "archetypes": [
     "ninjitsu-art"
    ],
@@ -9059,6 +9319,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "darkwing-blast:95545183:DABL-EN061:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9116,6 +9379,13 @@
    },
    "passcode": 95561146,
    "prints": [
+    {
+     "id": "magnificent-maestros:95561146:MAMS-EN116:ultra_rare",
+     "number": "MAMS-EN116",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
+    },
     {
      "id": "maze-of-the-master:95561146:MZTM-EN010:ultra_rare",
      "identifiers": {
@@ -9304,6 +9574,9 @@
    "passcode": 95589901,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:95589901:BPRO-EN083:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9547,6 +9820,9 @@
    ]
   },
   {
+   "aliases": [
+    "Kairyu-Shin of the Reef"
+   ],
    "archetypes": [
     "kairyu-shin"
    ],
@@ -9601,11 +9877,21 @@
       "match": "number+rarity",
       "name": "Kairyu-Shin's Dark Reef"
      }
+    },
+    {
+     "id": "magnificent-maestros:95602345:MAMS-EN115:ultra_rare",
+     "number": "MAMS-EN115",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros"
     }
    ],
    "tcgDate": "2022-06-16"
   },
   {
+   "aliases": [
+    "Reverse of the World"
+   ],
    "archetypes": [
     "demise"
    ],
@@ -9725,6 +10011,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:95614612:IOC-EN085:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9914,6 +10203,9 @@
    ]
   },
   {
+   "aliases": [
+    "Doom-Z End - Drastrius"
+   ],
    "archetypes": [
     "doomz"
    ],
@@ -9958,6 +10250,9 @@
    "passcode": 95626382,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:95626382:DOOD-EN045:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9974,6 +10269,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:95626382:DOOD-EN045:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9995,6 +10293,48 @@
    "typeline": [
     "Machine",
     "Xyz",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "atlantis-city-of-the-sea-dragon"
+   ],
+   "atk": 1400,
+   "attribute": "water",
+   "frame": "link",
+   "hasEffect": true,
+   "id": "95627840",
+   "identifiers": {
+    "konamiId": 23860,
+    "ygoprodeckId": 95627840
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/95627840.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/95627840.jpg",
+     "id": 95627840,
+     "small": "https://images.ygoprodeck.com/images/cards_small/95627840.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "linkArrows": [
+    "Right",
+    "Bottom"
+   ],
+   "linkRating": 2,
+   "monsterType": "Sea Serpent",
+   "name": "Codaedalus",
+   "names": {
+    "en": "Codaedalus"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 95627840,
+   "prints": [],
+   "typeline": [
+    "Sea Serpent",
+    "Link",
     "Effect"
    ]
   },
@@ -10374,6 +10714,9 @@
    "tcgDate": "2016-08-18"
   },
   {
+   "aliases": [
+    "ZEXAL Catapult"
+   ],
    "archetypes": [
     "zexal"
    ],
@@ -10523,6 +10866,9 @@
    "tcgDate": "2015-08-06"
   },
   {
+   "aliases": [
+    "Maximus Dragma"
+   ],
    "archetypes": [
     "dogmatika"
    ],
@@ -11019,6 +11365,9 @@
    "tcgDate": "2011-08-06"
   },
   {
+   "aliases": [
+    "Regenesis Archfiend Bemidbar"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -11064,6 +11413,9 @@
    "passcode": 95718355,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:95718355:ALIN-EN016:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11080,6 +11432,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:95718355:ALIN-EN016:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11093,6 +11448,26 @@
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Regenesis Archfiend"
+     }
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "alliance-insight:95718355:ALIN-ENSP1:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       631509
+      ]
+     },
+     "number": "ALIN-ENSP1",
+     "rarity": "ultra_rare",
+     "region": "ENSP",
+     "set": "alliance-insight",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Regenesis Archfiend (ALIN-ENSP1)"
      }
     },
     {
@@ -11199,11 +11574,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:95727991:DL18-EN001:rare",
+     "number": "DL18-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:95727991:DL18-EN001:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94894,
-       94915,
-       94943,
+       94894
+      ]
+     },
+     "number": "DL18-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Catapult Turtle (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:95727991:DL18-EN001:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94915
+      ]
+     },
+     "number": "DL18-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Catapult Turtle (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:95727991:DL18-EN001:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94943
+      ]
+     },
+     "number": "DL18-EN001",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Catapult Turtle (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:95727991:DL18-EN001:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94944
       ]
      },
@@ -11211,10 +11644,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Catapult Turtle (Blue)"
-     }
+      "name": "Catapult Turtle (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-yugi:95727991:DPYG-EN006:common",
@@ -11930,6 +12365,9 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "Flying Mary"
+   ],
    "atk": 0,
    "attribute": "water",
    "frame": "link",
@@ -11991,6 +12429,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:95784714:ROTA-EN047:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12007,6 +12448,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:95784714:ROTA-EN047:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12231,6 +12675,9 @@
    ]
   },
   {
+   "aliases": [
+    "Almarduk the World Chalice Guardragon"
+   ],
    "archetypes": [
     "guardragon"
    ],
@@ -12399,6 +12846,9 @@
    ]
   },
   {
+   "aliases": [
+    "Physalia"
+   ],
    "archetypes": [
     "umi"
    ],
@@ -12457,6 +12907,13 @@
       "match": "number+rarity",
       "name": "Electric Jellyfish"
      }
+    },
+    {
+     "id": "ultimate-tournament-pack-2:95824983:UP02-EN034:common",
+     "number": "UP02-EN034",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2"
     }
    ],
    "tcgDate": "2022-06-16",
@@ -12466,6 +12923,9 @@
    ]
   },
   {
+   "aliases": [
+    "Advent Skull Archfiend"
+   ],
    "archetypes": [
     "archfiend"
    ],
@@ -13045,6 +13505,9 @@
    ]
   },
   {
+   "aliases": [
+    "Zoroa, the Magistus Daimon"
+   ],
    "archetypes": [
     "magistus"
    ],
@@ -13125,6 +13588,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-of-destiny:95911373:BODE-EN045:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13850,6 +14316,9 @@
    ]
   },
   {
+   "aliases": [
+    "Infernoble Knight - Astolfo"
+   ],
    "archetypes": [
     "noble-knight"
    ],
@@ -14029,11 +14498,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:95956346:DL13-EN002:rare",
+     "number": "DL13-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:95956346:DL13-EN002:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77419,
-       80418,
-       80419,
+       80418
+      ]
+     },
+     "number": "DL13-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Shining Angel (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:95956346:DL13-EN002:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80419
+      ]
+     },
+     "number": "DL13-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Shining Angel (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:95956346:DL13-EN002:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80420
       ]
      },
@@ -14041,10 +14550,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Shining Angel (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:95956346:DL13-EN002:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77419
+      ]
+     },
+     "number": "DL13-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Shining Angel (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "hobby-league-6-participation-card-f:95956346:HL06-EN006:ultra_parallel_rare",
@@ -14190,6 +14719,23 @@
      }
     },
     {
+     "id": "speed-duel-battle-city-finals:95956346:SBC2-ENI10:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       600287
+      ]
+     },
+     "number": "SBC2-ENI10",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-battle-city-finals",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Shining Angel"
+     }
+    },
+    {
      "id": "spell-ruler-25th-anniversary-edition:95956346:SRL-EN088:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14321,6 +14867,9 @@
    "passcode": 95973569,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:95973569:AGOV-EN036:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14337,6 +14886,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "age-of-overlord:95973569:AGOV-EN036:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14361,6 +14913,9 @@
    ]
   },
   {
+   "aliases": [
+    "Security Force Orifice"
+   ],
    "archetypes": [
     "s-force"
    ],

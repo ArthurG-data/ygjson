@@ -1,6 +1,9 @@
 {
  "cards": [
   {
+   "aliases": [
+    "Black Chaos the Dark Chaos Magician"
+   ],
    "archetypes": [
     "light-and-darkness-ritual"
    ],
@@ -99,6 +102,9 @@
    ]
   },
   {
+   "aliases": [
+    "Hydralander the Orbital Shadowlite Weapon"
+   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 1500,
@@ -614,6 +620,9 @@
    "tcgDate": "2017-04-13"
   },
   {
+   "aliases": [
+    "Token: Ancient Gear"
+   ],
    "archetypes": [
     "ancient-gear"
    ],
@@ -944,6 +953,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Dream Pillow Parasomnia"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "44092304",
@@ -981,6 +993,9 @@
    "passcode": 44092304,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:44092304:DIFO-EN067:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1229,11 +1244,69 @@
     },
     {
      "id": "duelist-league-15-participation-cards:44095762:DL15-EN018:rare",
+     "number": "DL15-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:44095762:DL15-EN018:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       156228,
-       156229,
-       156230,
+       156228
+      ]
+     },
+     "number": "DL15-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mirror Force (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:44095762:DL15-EN018:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       156229
+      ]
+     },
+     "number": "DL15-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mirror Force (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:44095762:DL15-EN018:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       156230
+      ]
+     },
+     "number": "DL15-EN018",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Mirror Force (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-15-participation-cards:44095762:DL15-EN018:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        156231
       ]
      },
@@ -1241,10 +1314,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-15-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Mirror Force (Blue)"
-     }
+      "name": "Mirror Force (Red)"
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-pack-yugi:44095762:DPYG-EN027:ultra_rare",
@@ -1779,6 +1854,16 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:44095762:YGLD-ENA37:common",
+     "number": "YGLD-ENA37",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:44095762:YGLD-ENA37:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        615952
@@ -1788,16 +1873,28 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mirror Force (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:44095762:YGLD-ENB33:ultra_rare",
+     "number": "YGLD-ENB33",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:44095762:YGLD-ENB33:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
        615989
@@ -1807,16 +1904,28 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mirror Force (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks-2020-reprint:44095762:YGLD-ENC36:common",
+     "number": "YGLD-ENC36",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks-2020-reprint"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks-2020-reprint:44095762:YGLD-ENC36:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        616033
@@ -1826,10 +1935,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks-2020-reprint",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mirror Force (C)"
-     }
+     },
+     "variant": "c"
     },
     {
      "editions": [
@@ -1837,6 +1948,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:44095762:YGLD-ENA37:common",
+     "number": "YGLD-ENA37",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:44095762:YGLD-ENA37:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
        108239
@@ -1846,10 +1968,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mirror Force (A)"
-     }
+     },
+     "variant": "a"
     },
     {
      "editions": [
@@ -1857,6 +1981,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:44095762:YGLD-ENB33:ultra_rare",
+     "number": "YGLD-ENB33",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:44095762:YGLD-ENB33:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
        108276
@@ -1866,10 +2001,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mirror Force (B)"
-     }
+     },
+     "variant": "b"
     },
     {
      "editions": [
@@ -1877,6 +2014,17 @@
       "unlimited"
      ],
      "id": "yugi-s-legendary-decks:44095762:YGLD-ENC36:common",
+     "number": "YGLD-ENC36",
+     "rarity": "common",
+     "region": "EN",
+     "set": "yugi-s-legendary-decks"
+    },
+    {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
+     "id": "yugi-s-legendary-decks:44095762:YGLD-ENC36:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
        108320
@@ -1886,10 +2034,12 @@
      "rarity": "common",
      "region": "EN",
      "set": "yugi-s-legendary-decks",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mirror Force (C)"
-     }
+     },
+     "variant": "c"
     }
    ],
    "tcgDate": "2002-06-26"
@@ -2052,6 +2202,9 @@
    ]
   },
   {
+   "aliases": [
+    "Cursed Eye of Selene"
+   ],
    "archetypes": [
     "evil-eye"
    ],
@@ -2269,6 +2422,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "photon-hypernova:44146295:PHHY-EN100:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2719,6 +2875,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:44175358:ROTA-EN100:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3207,6 +3366,9 @@
    ]
   },
   {
+   "aliases": [
+    "Mirah and Matchnoko"
+   ],
    "atk": 0,
    "attribute": "fire",
    "def": 0,
@@ -3850,6 +4012,9 @@
    ]
   },
   {
+   "aliases": [
+    "Goblin Biker Grialle Trio"
+   ],
    "archetypes": [
     "goblin",
     "goblin-biker"
@@ -3911,6 +4076,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legacy-of-destruction:44241999:LEDE-EN044:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4155,6 +4323,9 @@
    "passcode": 44265115,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "alliance-insight:44265115:ALIN-EN033:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4424,6 +4595,9 @@
    ]
   },
   {
+   "aliases": [
+    "Megalith Nortra Phulra"
+   ],
    "archetypes": [
     "megalith"
    ],
@@ -4468,6 +4642,9 @@
    "passcode": 44293356,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:44293356:DOOD-EN034:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4554,8 +4731,7 @@
      "id": "battles-of-legend-chapter-1:44297127:BLC1-EN025:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       538497,
-       538658
+       538497
       ]
      },
      "number": "BLC1-EN025",
@@ -4566,11 +4742,35 @@
       "match": "number+rarity",
       "name": "Miracle Rupture"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:44297127:BLC1-EN025:ultra_rare:silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538658
+      ]
+     },
+     "number": "BLC1-EN025",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Miracle Rupture (Silver)"
+     },
+     "variant": "silver"
     }
    ],
    "tcgDate": "2020-07-23"
   },
   {
+   "aliases": [
+    "Vessel Miko of the Ice Barrier"
+   ],
    "archetypes": [
     "ice-barrier"
    ],
@@ -4850,11 +5050,51 @@
     },
     {
      "id": "duelist-league-13-participation-cards:44330098:DL13-EN013:rare",
+     "number": "DL13-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:44330098:DL13-EN013:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77430,
-       80451,
-       80452,
+       80451
+      ]
+     },
+     "number": "DL13-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gorz the Emissary of Darkness (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:44330098:DL13-EN013:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80452
+      ]
+     },
+     "number": "DL13-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gorz the Emissary of Darkness (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:44330098:DL13-EN013:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80453
       ]
      },
@@ -4862,10 +5102,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Gorz the Emissary of Darkness (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-13-participation-cards:44330098:DL13-EN013:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77430
+      ]
+     },
+     "number": "DL13-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-13-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Gorz the Emissary of Darkness (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "gold-series-haunted-mine:44330098:GLD5-EN024:ghost_gold_rare",
@@ -5032,6 +5292,9 @@
    ]
   },
   {
+   "aliases": [
+    "Token: Emissary of Darkness"
+   ],
    "frame": "token",
    "hasEffect": true,
    "id": "44330099",
@@ -5068,7 +5331,25 @@
    },
    "ocgDate": "2013-02-21",
    "passcode": 44330099,
-   "prints": [],
+   "prints": [
+    {
+     "id": "legendary-collection-3-yugi-s-world:44330099:LC03-EN005:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       66798
+      ]
+     },
+     "number": "LC03-EN005",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection-3-yugi-s-world",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Token: Emissary of Darkness"
+     }
+    }
+   ],
    "tcgDate": "2013-02-21"
   },
   {
@@ -5130,6 +5411,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:44335251:MGED-EN015:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5829,6 +6113,9 @@
    ]
   },
   {
+   "aliases": [
+    "Destruction Dragon - LC06-EN003"
+   ],
    "archetypes": [
     "legendary-knight"
    ],
@@ -5972,7 +6259,28 @@
     "pt": "ASHLAN U1000"
    },
    "passcode": 44376395,
-   "prints": [],
+   "prints": [
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "duelist-s-advance:44376395:DUAD-EN085:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       639422
+      ]
+     },
+     "number": "DUAD-EN085",
+     "rarity": "common",
+     "region": "EN",
+     "set": "duelist-s-advance",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "ASHLAN U1000"
+     }
+    }
+   ],
    "tcgDate": "2025-07-03",
    "typeline": [
     "Cyberse",
@@ -6570,10 +6878,60 @@
       "first"
      ],
      "id": "legendary-duelists-season-1:44405066:LDS1-EN015:ultra_rare",
+     "number": "LDS1-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:44405066:LDS1-EN015:ultra_rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       217372,
-       217373,
+       217372
+      ]
+     },
+     "number": "LDS1-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red-Eyes Flare Metal Dragon (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:44405066:LDS1-EN015:ultra_rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       217373
+      ]
+     },
+     "number": "LDS1-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red-Eyes Flare Metal Dragon (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "legendary-duelists-season-1:44405066:LDS1-EN015:ultra_rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        217374
       ]
      },
@@ -6581,10 +6939,12 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "legendary-duelists-season-1",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Red-Eyes Flare Metal Dragon (Blue)"
-     }
+      "name": "Red-Eyes Flare Metal Dragon (Purple)"
+     },
+     "variant": "purple"
     },
     {
      "id": "premium-gold-infinite-gold:44405066:PGL3-EN078:gold_rare",
@@ -7037,6 +7397,9 @@
    ]
   },
   {
+   "aliases": [
+    "Nemesys Keystone"
+   ],
    "archetypes": [
     "nemeses"
    ],
@@ -7186,6 +7549,9 @@
    ]
   },
   {
+   "aliases": [
+    "Fire King Consort Ulkanix"
+   ],
    "archetypes": [
     "fire-king"
    ],
@@ -7247,6 +7613,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:44455560:ROTA-EN098:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7263,6 +7632,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "rage-of-the-abyss:44455560:ROTA-EN098:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7651,6 +8023,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragon Tail Pan"
+   ],
    "archetypes": [
     "dracotail"
    ],
@@ -7809,6 +8184,36 @@
   },
   {
    "archetypes": [
+    "bunnillin"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "44504746",
+   "identifiers": {
+    "konamiId": 23877,
+    "ygoprodeckId": 44504746
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/44504746.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/44504746.jpg",
+     "id": 44504746,
+     "small": "https://images.ygoprodeck.com/images/cards_small/44504746.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Continuous",
+   "name": "Bunnillin Extract",
+   "names": {
+    "en": "Bunnillin Extract"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 44504746,
+   "prints": []
+  },
+  {
+   "archetypes": [
     "inzektor"
    ],
    "atk": 1000,
@@ -7960,6 +8365,23 @@
    "ocgDate": "2008-04-19",
    "passcode": 44508094,
    "prints": [
+    {
+     "id": "25th-anniversary-tin-dueling-heroes:44508094:TN23-EN016:qc_secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       514641
+      ]
+     },
+     "number": "TN23-EN016",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-tin-dueling-heroes",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Stardust Dragon (Quarter Century Secret Rare)"
+     }
+    },
     {
      "id": "collectible-tins-2008-wave-1:44508094:CT05-EN001:secret_rare",
      "identifiers": {
@@ -8260,6 +8682,9 @@
    ]
   },
   {
+   "aliases": [
+    "Prankids Weather"
+   ],
    "archetypes": [
     "prank-kids"
    ],
@@ -8320,6 +8745,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "maximum-gold-el-dorado:44509529:MGED-EN112:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8608,11 +9036,51 @@
     },
     {
      "id": "duelist-league-2-participation-cards:44519536:DL11-EN003:rare",
+     "number": "DL11-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:44519536:DL11-EN003:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77380,
-       80304,
-       80305,
+       80305
+      ]
+     },
+     "number": "DL11-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Left Leg of the Forbidden One (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:44519536:DL11-EN003:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80304
+      ]
+     },
+     "number": "DL11-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Left Leg of the Forbidden One (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:44519536:DL11-EN003:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80306
       ]
      },
@@ -8620,10 +9088,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Left Leg of the Forbidden One (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-2-participation-cards:44519536:DL11-EN003:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77380
+      ]
+     },
+     "number": "DL11-EN003",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-2-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Left Leg of the Forbidden One (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition:44519536:LOB-EN121:ultra_rare",
@@ -8950,6 +9438,9 @@
    "tcgDate": "2019-09-26"
   },
   {
+   "aliases": [
+    "World of Boundless Consciousness"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "44553392",
@@ -9004,6 +9495,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:44553392:CYAC-EN074:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9064,6 +9558,9 @@
    "passcode": 44573911,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "doom-of-dimensions:44573911:DOOD-EN092:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9348,11 +9845,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:44595286:DL12-EN020:rare",
+     "number": "DL12-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44595286:DL12-EN020:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77417,
-       80409,
-       80410,
+       80409
+      ]
+     },
+     "number": "DL12-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Light of Judgment (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44595286:DL12-EN020:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80410
+      ]
+     },
+     "number": "DL12-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Light of Judgment (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44595286:DL12-EN020:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80411
       ]
      },
@@ -9360,10 +9897,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Light of Judgment (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44595286:DL12-EN020:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77417
+      ]
+     },
+     "number": "DL12-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Light of Judgment (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "structure-deck-wave-of-light:44595286:SR05-EN032:common",
@@ -9437,9 +9994,64 @@
       "match": "number+rarity",
       "name": "Survival's End"
      }
+    },
+    {
+     "id": "speed-duel-gx-midterm-destruction:44612603:SGX4-ENE07:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       543830
+      ]
+     },
+     "number": "SGX4-ENE07",
+     "rarity": "common",
+     "region": "EN",
+     "set": "speed-duel-gx-midterm-destruction",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Survival's End"
+     }
     }
    ],
    "tcgDate": "2017-04-13"
+  },
+  {
+   "archetypes": [
+    "amazoness"
+   ],
+   "atk": 1500,
+   "attribute": "earth",
+   "def": 1300,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "44618916",
+   "identifiers": {
+    "konamiId": 23817,
+    "ygoprodeckId": 44618916
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/44618916.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/44618916.jpg",
+     "id": 44618916,
+     "small": "https://images.ygoprodeck.com/images/cards_small/44618916.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Warrior",
+   "name": "Amazoness Fighter - Instant Kill Dance",
+   "names": {
+    "en": "Amazoness Fighter - Instant Kill Dance"
+   },
+   "ocgDate": "2026-10-31",
+   "passcode": 44618916,
+   "prints": [],
+   "typeline": [
+    "Warrior",
+    "Effect"
+   ]
   },
   {
    "archetypes": [
@@ -9681,6 +10293,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dual Avatar Turning"
+   ],
    "archetypes": [
     "dual-avatar"
    ],
@@ -9740,6 +10355,9 @@
    "tcgDate": "2021-02-04"
   },
   {
+   "aliases": [
+    "The Great Mikanko of Legend"
+   ],
    "archetypes": [
     "mikanko"
    ],
@@ -10075,11 +10693,51 @@
     },
     {
      "id": "duelist-league-3-participation-cards:44656491:DL12-EN013:rare",
+     "number": "DL12-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44656491:DL12-EN013:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       77410,
-       80388,
-       80389,
+       80388
+      ]
+     },
+     "number": "DL12-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Messenger of Peace (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44656491:DL12-EN013:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       80389
+      ]
+     },
+     "number": "DL12-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Messenger of Peace (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44656491:DL12-EN013:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
        80390
       ]
      },
@@ -10087,10 +10745,30 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Messenger of Peace (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-3-participation-cards:44656491:DL12-EN013:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       77410
+      ]
+     },
+     "number": "DL12-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-3-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
       "name": "Messenger of Peace (Red)"
-     }
+     },
+     "variant": "red"
     },
     {
      "id": "legendary-collection-3-yugi-s-world-mega-pack:44656491:LCYW-EN266:common",
@@ -10614,6 +11292,9 @@
    "tcgDate": "2005-11-05"
   },
   {
+   "aliases": [
+    "Storm Dragon"
+   ],
    "atk": 1500,
    "attribute": "wind",
    "def": 200,
@@ -10824,6 +11505,9 @@
    ]
   },
   {
+   "aliases": [
+    "Shadow Six Samurai - Hatsume"
+   ],
    "archetypes": [
     "secret-six-samurai"
    ],
@@ -11136,6 +11820,9 @@
    "prints": []
   },
   {
+   "aliases": [
+    "Transient Masquerader of Illusion"
+   ],
    "atk": 2400,
    "attribute": "earth",
    "def": 0,
@@ -11192,6 +11879,9 @@
    ]
   },
   {
+   "aliases": [
+    "Dragluxion"
+   ],
    "atk": 2500,
    "attribute": "light",
    "def": 3000,
@@ -11373,6 +12063,9 @@
    ]
   },
   {
+   "aliases": [
+    "Ukiyoe P.U.N.K. Amazing Dragon"
+   ],
    "archetypes": [
     "p-u-n-k"
    ],
@@ -11647,6 +12340,9 @@
    ]
   },
   {
+   "aliases": [
+    "Toll Increase"
+   ],
    "frame": "trap",
    "hasEffect": true,
    "id": "44716890",
@@ -11987,6 +12683,9 @@
    ]
   },
   {
+   "aliases": [
+    "Manadome Meek"
+   ],
    "archetypes": [
     "mannadium"
    ],
@@ -12048,6 +12747,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:44760562:CYAC-EN014:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12982,6 +13684,9 @@
    "tcgDate": "2021-02-04"
   },
   {
+   "aliases": [
+    "Conduction Warrior Linear Magnum ±"
+   ],
    "atk": 2700,
    "attribute": "earth",
    "def": 1300,
@@ -13017,6 +13722,9 @@
    "passcode": 44839512,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "burst-protocol:44839512:BPRO-EN099:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13040,6 +13748,9 @@
    ]
   },
   {
+   "aliases": [
+    "Sweet Dreams, Nemurelia"
+   ],
    "archetypes": [
     "nemurelia"
    ],
@@ -13097,6 +13808,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "cyberstorm-access:44843954:CYAC-EN060:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13712,6 +14426,9 @@
    "tcgDate": "2005-08-06"
   },
   {
+   "aliases": [
+    "Apex Polymerization"
+   ],
    "archetypes": [
     "polymerization"
    ],
@@ -13993,6 +14710,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "battle-of-chaos:44889144:BACH-EN091:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14392,11 +15112,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:44920699:DL18-EN020:rare",
+     "number": "DL18-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:44920699:DL18-EN020:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94914,
-       94934,
-       94955,
+       94914
+      ]
+     },
+     "number": "DL18-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fire Formation - Tensen (Blue)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:44920699:DL18-EN020:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94934
+      ]
+     },
+     "number": "DL18-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fire Formation - Tensen (Green)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:44920699:DL18-EN020:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94955
+      ]
+     },
+     "number": "DL18-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Fire Formation - Tensen (Purple)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:44920699:DL18-EN020:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94956
       ]
      },
@@ -14404,10 +15182,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Fire Formation - Tensen (Blue)"
-     }
+      "name": "Fire Formation - Tensen (Red)"
+     },
+     "variant": "red"
     }
    ],
    "tcgDate": "2013-01-25"
@@ -14558,6 +15338,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "dimension-force:44932065:DIFO-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
