@@ -1,7 +1,7 @@
 """Write dist/AllSets.json, AllCards.json, AllPrintings.json, AllArchetypes.json, AllProducts.json and Legality.json.
 Refuses to build invalid data.
 
-    uv run python tools/build.py --version 0.1.0
+    uv run python tools/build.py --version 0.2.0
 
 Every file is {"meta": {"version", "date", "sources"}, "data": ...}. `sources` says which snapshot of each source the
 data was last imported from, read from the caches under .cache when they are there: YGOPRODeck's database_version,
