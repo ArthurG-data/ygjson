@@ -214,12 +214,16 @@ and creates these prints again.
 letter (`A` to `G`) or `Version <n>` has a price of its own: Zaborg the Thunder Monarch lists at 129.99 in Blue and 4.49 in
 Green under one number and rarity. It lands on its own print, a copy of the base print with `variant` set (`blue`, `b`,
 `version-2`) and that variant at the end of the print id. A base print whose products are all versions keeps no product
-and stays if YGOPRODeck lists it, and its id does not change. A product whose tags name two versions goes to review.
+and stays if YGOPRODeck lists it, and its id does not change.
 
-A treatment does the same when another product shares its number and rarity: a stamp (`judge-stamp`), an art
-(`alternate-art`, `extended-art`, `7th-art`), `emblazoned`, a misprint or a reissue (`25th-anniversary-edition`). Cyberse
-Code Magician is 0.29 plain and 8.80 in Extended Art under `MAMO-EN017`. Alone under its number a treatment is the print:
-Ghost Reaper & Winter Cherries (Alternate Art) is `RA03-EN014`, and no plain card has that number.
+A treatment does the same when another product shares its number and rarity and would stay on the base print: a stamp
+(`judge-stamp`), an art (`alternate-art`, `extended-art`, `7th-art`), `emblazoned`, a misprint or a reissue
+(`25th-anniversary-edition`). Cyberse Code Magician is 0.29 plain and 8.80 in Extended Art under `MAMO-EN017`. Alone under
+its number a treatment is the print: Ghost Reaper & Winter Cherries (Alternate Art) is `RA03-EN014`, and no plain card has
+that number.
+
+A colour or art with a treatment is one version, with the tags joined in the order the name gives them
+(`alternate-art-silver`, `a-alternate-art`). A product naming two colours or two treatments goes to review.
 
 A print has one price per edition, so it holds several products only when they price different editions: 10 prints hold an
 original and its 2020 reprint, which is sold as another edition. When two products of one card, rarity and version price

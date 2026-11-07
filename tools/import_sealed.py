@@ -145,6 +145,8 @@ class Context:
                 if uuid := card.get("identifiers", {}).get("ygojsonId"):
                     self.card_of_uuid[uuid] = card["id"]
                 for p in card["prints"]:
+                    if ygjson.is_treatment(p):  # a deck holds the plain card, not its stamp or misprint
+                        continue
                     self.prints[p["set"]].append(p["id"])
                     self.card_prints[(card["id"], p["set"])].append(p["id"])
         for ids in self.prints.values():

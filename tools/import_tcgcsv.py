@@ -34,8 +34,8 @@ share a print with another card, another rarity, or an edition another product a
 A product whose name carries a version tag (variant_of) has a price of its own: Zaborg the Thunder Monarch is 129.99
 in Blue and 4.49 in Green under one number and rarity, and Cyberse Code Magician is 0.29 plain and 8.80 in Extended Art.
 It lands on its own print, a copy of the base print with `variant` set, and the base print keeps only the unmarked
-product, if there is one. A treatment (a stamp, an art) does this only beside another product of its number and rarity;
-alone under its number it is the print.
+product, if there is one. A treatment (a stamp, an art) does this only beside another product of its number and rarity
+that would stay on the base print; alone under its number it is the print. A colour with a treatment is one version.
 """
 from __future__ import annotations
 
@@ -67,35 +67,39 @@ RULES = ("exact_name", "normalised_name", "worldwide_english", "mapping", "abbre
 MINTED = "minted"
 _SKILL_CARD = " (Skill Card)"
 
-# A foil colour, an art letter or a numbered art is always a version of its own print.
-_VARIANT_TAG = re.compile(r"^(Blue|Green|Purple|Red|Silver|Bronze|[A-G]|Version \d+)$")
-# A treatment is a version only beside another product of the same number and rarity. Alone under its number it is the
-# print: Ghost Reaper (Alternate Art) is RA03-EN014, and no plain card has that number. "HERO Art" is not here, because
+_REISSUE_TAG = "25th Anniversary Edition"
+# A foil colour, an art letter or a numbered art is always a version of its own print (ygjson.is_colour_or_art). A
+# treatment is a version only beside another product of the same number and rarity that would stay on the base print.
+# Alone under its number it is the print: Ghost Reaper (Alternate Art) is RA03-EN014, and no plain card has that number.
+# One of each joins into one version: (Alternate Art) (Silver) is alternate-art-silver. "HERO Art" is not here, because
 # it only describes art B of Polymerization. Rarity tags, set names and card numbers are not versions at all.
 _TREATMENT_TAG = re.compile(
     r"^(White|Black|Arkana|(?!HERO Art$).*\bArt(work)?"
-    r"|.*\bStamp|.*\bMisprint|Emblazoned.*|EUR|ESR|Oversized"
-    r"|Sample Promo|World Championship Qualifier|25th Anniversary Edition|2020 Date Reprint)$")
+    r"|.*\bStamp|.*\bMisprint|Emblazoned.*|Oversized"
+    r"|Sample Promo|World Championship Qualifier|2020 Date Reprint|" + _REISSUE_TAG + r")$")
 # Duelist League promos add the league to the colour, and the print's number already says it: "(Blue - DL18)".
 _LEAGUE_SUFFIX = re.compile(r" - DL\d+$")
 _SPELLED_OUT = {"EUR": "Emblazoned Ultra Rare", "ESR": "Emblazoned Secret Rare"}
-_REISSUE_TAG = "25th Anniversary Edition"
 _TOKEN_PREFIX = "Token: "
 
 
 def _version_tags(prod: tcgcsv.Product) -> list[str]:
     """The version tags in a product's name, in reading order and with their shorthand spelled out."""
     tags = (_LEAGUE_SUFFIX.sub("", t) for t in prod.base_name_and_tags()[1])
-    return [_SPELLED_OUT.get(t, t) for t in tags if _VARIANT_TAG.match(t) or _TREATMENT_TAG.match(t)]
+    spelled = (_SPELLED_OUT.get(t, t) for t in tags)
+    return [t for t in spelled if ygjson.is_colour_or_art(ygjson.slugify(t)) or _TREATMENT_TAG.match(t)]
 
 
-def _names_a_variant(prod: tcgcsv.Product) -> bool:
-    return any(_VARIANT_TAG.match(t) for t in _version_tags(prod))
+def _names_colour_or_art(prod: tcgcsv.Product) -> bool:
+    return any(ygjson.is_colour_or_art(ygjson.slugify(t)) for t in _version_tags(prod))
 
 
 def unplaceable_tags(prod: tcgcsv.Product) -> bool:
-    """True when the tags name versions no one print can hold."""
-    return len(_version_tags(prod)) > 1
+    """True when the tags name versions no one print can hold: two colours or arts, or two treatments. One of each is one
+    version, such as (Alternate Art) (Silver)."""
+    tags = _version_tags(prod)
+    colours = sum(ygjson.is_colour_or_art(ygjson.slugify(t)) for t in tags)
+    return colours > 1 or len(tags) - colours > 1
 
 
 def has_rarity_tag(prod: tcgcsv.Product) -> bool:
@@ -106,9 +110,9 @@ def has_rarity_tag(prod: tcgcsv.Product) -> bool:
 
 
 def variant_of(prod: tcgcsv.Product) -> str | None:
-    """The variant slug in a product's name tags, or None when it has none or more than one."""
+    """The variant slug in a product's name tags, or None when it has none or no one print can hold them."""
     found = _version_tags(prod)
-    return ygjson.slugify(found[0]) if len(found) == 1 else None
+    return ygjson.slugify(" ".join(found)) if found and not unplaceable_tags(prod) else None
 
 
 def split_child(name: str) -> tuple[str, str] | None:
@@ -339,10 +343,10 @@ class Importer:
         self.aliases: dict[int, collections.Counter] = collections.defaultdict(collections.Counter)
         self.landed_in: dict[str, set[int]] = collections.defaultdict(set)  # set id -> product ids
         self.owner: dict[int, dict] = {}  # product id -> the print that holds it
-        self.landed: set[int] = set()  # the products placed by this run
-        # Only the products a print can hold, because a refused one shares nothing with the rest.
-        self.number_rarity = collections.Counter((p.number, rarities.canonical(p.rarity)) for ps in products.values()
-                                                 for p in ps if p.is_single and not unplaceable_tags(p))
+        # Only the products that would stay on the base print: a refused product, or one naming a colour or art, shares
+        # nothing with a treatment there.
+        self.number_rarity = collections.Counter((prod.number, rarities.canonical(prod.rarity)) for prod in self.by_id.values()
+                                                 if prod.is_single and not unplaceable_tags(prod) and not _names_colour_or_art(prod))
         for body in files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
@@ -468,6 +472,10 @@ class Importer:
         self.unmatched.append({"productId": prod.product_id, "name": prod.name, "groupId": prod.group_id,
                                "number": prod.number, "rarity": prod.rarity, "reason": reason})
 
+    def _conflict(self, prod: tcgcsv.Product, p: dict, held: list[int], reason: str) -> None:
+        self.conflicts.append({"productId": prod.product_id, "name": prod.name, "groupId": prod.group_id,
+                               "print": p["id"], "heldBy": held, "reason": reason})
+
     def _land(self, card: dict, p: dict, prod: tcgcsv.Product, match: str) -> bool:
         """Put the product on the print, or on the print's variant when the product names one. False (and a review
         entry) when the print holds another card or rarity. A variant print is created only after those checks, so a
@@ -492,12 +500,10 @@ class Importer:
                 fields = {"id": sibling_id, **sibling, "rarity": mine[1], "source": SOURCE}
                 return self._land(card, self.catalog.attach(card, fields), prod, MINTED)
             if theirs != mine:
-                self.conflicts.append({"productId": prod.product_id, "name": prod.name, "groupId": prod.group_id,
-                                       "print": p["id"], "heldBy": held,
-                                       "reason": "the print holds a product of another name or rarity"})
+                self._conflict(prod, p, held, "the print holds a product of another name or rarity")
                 return False
         variant = variant_of(prod)
-        if variant and not p.get("variant") and (_names_a_variant(prod) or self.number_rarity[(prod.number, mine[1])] > 1):
+        if variant and not p.get("variant") and (_names_colour_or_art(prod) or self.number_rarity[(prod.number, mine[1])] > 1):
             p = self._variant_print(card, p, variant)
         previous = self.owner.get(prod.product_id)
         if previous is not None and previous is not p:
@@ -514,7 +520,6 @@ class Importer:
         elif kept["match"] != MINTED and not (kept["match"] == "number+rarity-from-tcgplayer" and match == "number+rarity"):
             kept["match"] = match  # a re-keyed or minted print matches exactly on the next run, but keeps its label
         self.owner[prod.product_id] = p
-        self.landed.add(prod.product_id)
         self.landed_in[p["set"]].add(prod.product_id)
         self.sold_as[card["id"]].add(prod.base_name_and_tags()[0])
         self.stats[p["tcgplayer"]["match"]] += 1
@@ -528,41 +533,36 @@ class Importer:
             del p["identifiers"], p["tcgplayer"]
         elif p["tcgplayer"]["name"] == prod.name and remaining[0] in self.by_id:
             p["tcgplayer"]["name"] = self.by_id[remaining[0]].name
+        self.owner.pop(prod.product_id, None)
 
     def release_refused(self) -> None:
         """Take off its print a product an earlier run left there and this run refused."""
+        landed = set().union(*self.landed_in.values())
         for product_id, p in list(self.owner.items()):
-            if product_id in self.by_id and product_id not in self.landed:
+            if product_id in self.by_id and product_id not in landed:
                 self._release(p, self.by_id[product_id])
-                del self.owner[product_id]
 
     def settle_shared_editions(self) -> None:
         """Leave each print one product per edition, because a print has one price per edition. The product pricing the
         most editions goes first, then the oldest; a product refused here goes to review `conflicts`."""
-        for body in self.catalog.files.values():
-            for card in body["cards"]:
-                for p in card["prints"]:
-                    ids = [i for i in _product_ids(p) if i in self.by_id]
-                    if len(ids) > 1:
-                        self._settle_print(p, ids)
+        for p in self.catalog.by_id.values():
+            self._settle_print(p)
 
-    def _settle_print(self, p: dict, ids: list[int]) -> None:
+    def _settle_print(self, p: dict) -> None:
         kept: list[int] = []
         priced: set[str] = set()
-        for product_id in sorted(ids, key=lambda i: (-len(self.subtypes.get(i, ())), i)):
+        ids = [i for i in _product_ids(p) if i in self.by_id]
+        for product_id in sorted(ids, key=lambda i: (-len(self.subtypes.get(i, set())), i)):
             editions = self.subtypes.get(product_id, set())
-            if editions & priced:
-                prod = self.by_id[product_id]
-                self.conflicts.append({"productId": product_id, "name": prod.name, "groupId": prod.group_id,
-                                       "print": p["id"], "heldBy": list(kept),
-                                       "reason": "the print holds a product priced in the same edition"})
-                self.stats[p["tcgplayer"]["match"]] -= 1
-                self._release(p, prod)
-                del self.owner[product_id]
-                self.landed_in[p["set"]].discard(product_id)
-            else:
+            if not editions & priced:
                 kept.append(product_id)
                 priced |= editions
+                continue
+            prod = self.by_id[product_id]
+            self._conflict(prod, p, list(kept), "the print holds a product priced in the same edition")
+            self.stats[p["tcgplayer"]["match"]] -= 1
+            self._release(p, prod)
+            self.landed_in[p["set"]].discard(product_id)
 
     def _variant_print(self, card: dict, base: dict, variant: str) -> dict:
         """The base print's copy for this variant, created on first sight."""
