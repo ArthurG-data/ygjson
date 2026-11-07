@@ -14345,8 +14345,7 @@
      "id": "legendary-collection:46986420:LC01-EN005:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       79083,
-       491811
+       79083
       ]
      },
      "number": "LC01-EN005",
@@ -14354,9 +14353,27 @@
      "region": "EN",
      "set": "legendary-collection",
      "tcgplayer": {
-      "match": "number-other-set",
+      "match": "number+rarity",
       "name": "Dark Magician"
      }
+    },
+    {
+     "id": "legendary-collection:46986420:LC01-EN005:ultra_rare:25th-anniversary-edition",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       491811
+      ]
+     },
+     "number": "LC01-EN005",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Dark Magician (25th Anniversary Edition)"
+     },
+     "variant": "25th-anniversary-edition"
     },
     {
      "editions": [
@@ -14543,13 +14560,63 @@
      }
     },
     {
-     "id": "quarter-century-stampede:46986420:RA04-EN106:platinum_secret_rare",
+     "id": "quarter-century-stampede:46986420:RA04-EN106:platinum_secret_rare:6th-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       627267,
-       627268,
-       627269,
-       627270,
+       627268
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (6th Art) (Platinum Secret Rare)"
+     },
+     "variant": "6th-art"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:platinum_secret_rare:7th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627269
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (7th Art) (Platinum Secret Rare)"
+     },
+     "variant": "7th-art"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:platinum_secret_rare:8th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627270
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (8th Art) (Platinum Secret Rare)"
+     },
+     "variant": "8th-art"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:platinum_secret_rare:9th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
        627271
       ]
      },
@@ -14560,17 +14627,86 @@
      "source": "tcgplayer",
      "tcgplayer": {
       "match": "minted",
-      "name": "Dark Magician (Arkana) (Platinum Secret Rare)"
-     }
+      "name": "Dark Magician (9th Art) (Platinum Secret Rare)"
+     },
+     "variant": "9th-art"
     },
     {
-     "id": "quarter-century-stampede:46986420:RA04-EN106:qc_secret_rare",
+     "id": "quarter-century-stampede:46986420:RA04-EN106:platinum_secret_rare:arkana",
      "identifiers": {
       "tcgplayerProductIds": [
-       627272,
-       627273,
-       627274,
-       627275,
+       627267
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (Arkana) (Platinum Secret Rare)"
+     },
+     "variant": "arkana"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:qc_secret_rare:6th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627273
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (6th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "6th-art"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:qc_secret_rare:7th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627274
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (7th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "7th-art"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:qc_secret_rare:8th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627275
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Dark Magician (8th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "8th-art"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:qc_secret_rare:9th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
        627276
       ]
      },
@@ -14581,8 +14717,27 @@
      "source": "tcgplayer",
      "tcgplayer": {
       "match": "minted",
+      "name": "Dark Magician (9th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "9th-art"
+    },
+    {
+     "id": "quarter-century-stampede:46986420:RA04-EN106:qc_secret_rare:arkana",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627272
+      ]
+     },
+     "number": "RA04-EN106",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
       "name": "Dark Magician (Arkana) (Quarter Century Secret Rare)"
-     }
+     },
+     "variant": "arkana"
     },
     {
      "editions": [
@@ -15162,8 +15317,7 @@
      "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENA03:common:a",
      "identifiers": {
       "tcgplayerProductIds": [
-       108205,
-       615918
+       108205
       ]
      },
      "number": "YGLD-ENA03",
@@ -15192,8 +15346,7 @@
      "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENB02:ultra_rare:b",
      "identifiers": {
       "tcgplayerProductIds": [
-       108245,
-       615958
+       108245
       ]
      },
      "number": "YGLD-ENB02",
@@ -15222,8 +15375,7 @@
      "id": "yugi-s-legendary-decks-2020-reprint:46986420:YGLD-ENC09:ultra_rare:c",
      "identifiers": {
       "tcgplayerProductIds": [
-       108293,
-       616006
+       108293
       ]
      },
      "number": "YGLD-ENC09",

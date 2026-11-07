@@ -10864,10 +10864,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:15693423:WI26-EN036:ultra_rare",
+     "number": "WI26-EN036",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:15693423:WI26-EN036:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708866,
-       710147,
        710187
       ]
      },
@@ -10875,10 +10880,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evenly Matched (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:15693423:WI26-EN036:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708866
+      ]
+     },
+     "number": "WI26-EN036",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Evenly Matched (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:15693423:WI26-EN036:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710147
+      ]
+     },
+     "number": "WI26-EN036",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evenly Matched (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2017-10-19"

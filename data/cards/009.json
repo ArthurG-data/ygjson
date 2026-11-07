@@ -1986,8 +1986,7 @@
      "id": "limited-pack-world-championship-2026:9091064:26LP-EN009:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713329,
-       714083
+       713329
       ]
      },
      "number": "26LP-EN009",
@@ -2003,11 +2002,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:9091064:26LP-EN009:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714083
+      ]
+     },
+     "number": "26LP-EN009",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Vanquish Soul Jiaolong (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:9091064:26LP-EN009:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713328,
-       714103
+       713328
       ]
      },
      "number": "26LP-EN009",
@@ -2018,6 +2037,27 @@
       "match": "number+rarity",
       "name": "Vanquish Soul Jiaolong"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:9091064:26LP-EN009:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714103
+      ]
+     },
+     "number": "26LP-EN009",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Vanquish Soul Jiaolong (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2023-10-19",

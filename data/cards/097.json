@@ -5738,8 +5738,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:97268402:SDWD-EN018:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616575,
-       618795
+       616575
       ]
      },
      "number": "SDWD-EN018",
@@ -5747,9 +5746,30 @@
      "region": "EN",
      "set": "structure-deck-blue-eyes-white-destiny",
      "tcgplayer": {
-      "match": "number",
+      "match": "number+rarity",
       "name": "Effect Veiler"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:97268402:SDWD-EN018:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618795
+      ]
+     },
+     "number": "SDWD-EN018",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Effect Veiler (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "structure-deck-powercode-link:97268402:SDPL-EN017:common",
@@ -9310,10 +9330,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:97556336:WI26-EN012:ultra_rare",
+     "number": "WI26-EN012",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:97556336:WI26-EN012:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708842,
-       710123,
        710163
       ]
      },
@@ -9321,10 +9346,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Medius the Pure (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:97556336:WI26-EN012:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708842
+      ]
+     },
+     "number": "WI26-EN012",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Medius the Pure (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:97556336:WI26-EN012:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710123
+      ]
+     },
+     "number": "WI26-EN012",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Medius the Pure (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2025-06-27",

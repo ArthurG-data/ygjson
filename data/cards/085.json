@@ -4941,8 +4941,7 @@
      "id": "limited-pack-world-championship-2026:85315450:26LP-EN014:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713320,
-       714079
+       713320
       ]
      },
      "number": "26LP-EN014",
@@ -4958,11 +4957,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:85315450:26LP-EN014:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714079
+      ]
+     },
+     "number": "26LP-EN014",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Radiant Typhoon Fonix, the Great Flame (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:85315450:26LP-EN014:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713319,
-       714099
+       713319
       ]
      },
      "number": "26LP-EN014",
@@ -4973,6 +4992,27 @@
       "match": "number+rarity",
       "name": "Radiant Typhoon Fonix, the Great Flame"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:85315450:26LP-EN014:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714099
+      ]
+     },
+     "number": "26LP-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Radiant Typhoon Fonix, the Great Flame (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2025-09-25",

@@ -8998,7 +8998,7 @@
      }
     },
     {
-     "id": "legendary-collection-25th-anniversary-edition:89631139:LC01-EN004:ultra_rare",
+     "id": "legendary-collection-25th-anniversary-edition:89631139:LC01-EN004:ultra_rare:25th-anniversary-edition",
      "identifiers": {
       "tcgplayerProductIds": [
        491809
@@ -9012,7 +9012,8 @@
      "tcgplayer": {
       "match": "minted",
       "name": "Blue-Eyes White Dragon (25th Anniversary Edition)"
-     }
+     },
+     "variant": "25th-anniversary-edition"
     },
     {
      "editions": [
@@ -9572,9 +9573,33 @@
     },
     {
      "id": "quarter-century-stampede:89631139:RA04-EN108:platinum_secret_rare",
+     "number": "RA04-EN108",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede"
+    },
+    {
+     "id": "quarter-century-stampede:89631139:RA04-EN108:platinum_secret_rare:7th-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       627281,
+       627281
+      ]
+     },
+     "number": "RA04-EN108",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes White Dragon (7th Art) (Platinum Secret Rare)"
+     },
+     "variant": "7th-art"
+    },
+    {
+     "id": "quarter-century-stampede:89631139:RA04-EN108:platinum_secret_rare:8th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
        627282
       ]
      },
@@ -9582,16 +9607,42 @@
      "rarity": "platinum_secret_rare",
      "region": "EN",
      "set": "quarter-century-stampede",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Blue-Eyes White Dragon (7th Art) (Platinum Secret Rare)"
-     }
+      "name": "Blue-Eyes White Dragon (8th Art) (Platinum Secret Rare)"
+     },
+     "variant": "8th-art"
     },
     {
      "id": "quarter-century-stampede:89631139:RA04-EN108:qc_secret_rare",
+     "number": "RA04-EN108",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede"
+    },
+    {
+     "id": "quarter-century-stampede:89631139:RA04-EN108:qc_secret_rare:7th-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       627283,
+       627283
+      ]
+     },
+     "number": "RA04-EN108",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes White Dragon (7th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "7th-art"
+    },
+    {
+     "id": "quarter-century-stampede:89631139:RA04-EN108:qc_secret_rare:8th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
        627284
       ]
      },
@@ -9599,10 +9650,12 @@
      "rarity": "qc_secret_rare",
      "region": "EN",
      "set": "quarter-century-stampede",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Blue-Eyes White Dragon (7th Art) (Quarter Century Secret Rare)"
-     }
+      "name": "Blue-Eyes White Dragon (8th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "8th-art"
     },
     {
      "editions": [
@@ -9901,8 +9954,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:89631139:SDWD-EN001:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616558,
-       618779
+       616558
       ]
      },
      "number": "SDWD-EN001",
@@ -9915,11 +9967,31 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:89631139:SDWD-EN001:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618779
+      ]
+     },
+     "number": "SDWD-EN001",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes White Dragon (SDWD-EN001) (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
+    },
+    {
      "id": "structure-deck-blue-eyes-white-destiny:89631139:SDWD-EN002:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616559,
-       618780
+       616559
       ]
      },
      "number": "SDWD-EN002",
@@ -9932,11 +10004,31 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:89631139:SDWD-EN002:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618780
+      ]
+     },
+     "number": "SDWD-EN002",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes White Dragon (SDWD-EN002) (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
+    },
+    {
      "id": "structure-deck-blue-eyes-white-destiny:89631139:SDWD-EN003:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616560,
-       618781
+       616560
       ]
      },
      "number": "SDWD-EN003",
@@ -9947,6 +10039,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes White Dragon (SDWD-EN003)"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:89631139:SDWD-EN003:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618781
+      ]
+     },
+     "number": "SDWD-EN003",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes White Dragon (SDWD-EN003) (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "structure-deck-seto-kaiba:89631139:SDKS-EN009:common",
@@ -10027,8 +10140,7 @@
      "id": "yu-gi-oh-championship-series-2025-prize-cards:89631139:25YC-ENP01:rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       637082,
-       679562
+       637082
       ]
      },
      "number": "25YC-ENP01",
@@ -10039,6 +10151,24 @@
       "match": "number+rarity",
       "name": "Blue-Eyes White Dragon"
      }
+    },
+    {
+     "id": "yu-gi-oh-championship-series-2025-prize-cards:89631139:25YC-ENP01:rare:world-championship-qualifier",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       679562
+      ]
+     },
+     "number": "25YC-ENP01",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "yu-gi-oh-championship-series-2025-prize-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes White Dragon (World Championship Qualifier)"
+     },
+     "variant": "world-championship-qualifier"
     },
     {
      "id": "yu-gi-oh-dark-duel-stories-promotional-cards:89631139:DDS-001:prismatic_secret",
@@ -12716,10 +12846,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:89851827:WI26-EN016:ultra_rare",
+     "number": "WI26-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:89851827:WI26-EN016:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708846,
-       710127,
        710167
       ]
      },
@@ -12727,10 +12862,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Secreterion Dragon (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:89851827:WI26-EN016:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708846
+      ]
+     },
+     "number": "WI26-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Secreterion Dragon (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:89851827:WI26-EN016:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710127
+      ]
+     },
+     "number": "WI26-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Secreterion Dragon (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2025-07-03",

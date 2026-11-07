@@ -497,8 +497,7 @@
      "id": "maximum-gold:62015409:MAGO-EN010:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227425,
-       227426
+       227425
       ]
      },
      "number": "MAGO-EN010",
@@ -509,6 +508,24 @@
       "match": "number+rarity",
       "name": "Ghost Reaper & Winter Cherries"
      }
+    },
+    {
+     "id": "maximum-gold:62015409:MAGO-EN010:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227426
+      ]
+     },
+     "number": "MAGO-EN010",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "ots-tournament-pack-20:62015409:OP20-EN001:ultimate_rare",
@@ -565,8 +582,7 @@
      "id": "quarter-century-bonanza:62015409:RA03-EN014:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       592260,
-       594897
+       592260
       ]
      },
      "number": "RA03-EN014",
@@ -578,6 +594,24 @@
       "match": "minted",
       "name": "Ghost Reaper & Winter Cherries (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-bonanza:62015409:RA03-EN014:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       594897
+      ]
+     },
+     "number": "RA03-EN014",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Ghost Reaper & Winter Cherries (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-bonanza:62015409:RA03-EN014:secret_rare",
@@ -1478,8 +1512,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:62089826:SDWD-EN028:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616585,
-       618803
+       616585
       ]
      },
      "number": "SDWD-EN028",
@@ -1490,6 +1523,27 @@
       "match": "number+rarity",
       "name": "True Light"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:62089826:SDWD-EN028:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618803
+      ]
+     },
+     "number": "SDWD-EN028",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "True Light (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2021-09-30"

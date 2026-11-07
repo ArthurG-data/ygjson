@@ -2167,8 +2167,7 @@
      "id": "limited-pack-world-championship-2026:39138610:26LP-EN019:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713293,
-       714068
+       713293
       ]
      },
      "number": "26LP-EN019",
@@ -2184,11 +2183,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:39138610:26LP-EN019:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714068
+      ]
+     },
+     "number": "26LP-EN019",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Allied Code Talker @Ignister (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:39138610:26LP-EN019:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713292,
-       714088
+       713292
       ]
      },
      "number": "26LP-EN019",
@@ -2199,6 +2218,27 @@
       "match": "number+rarity",
       "name": "Allied Code Talker @Ignister"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:39138610:26LP-EN019:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714088
+      ]
+     },
+     "number": "26LP-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Allied Code Talker @Ignister (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2025-05-01",
@@ -13316,10 +13356,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:39973386:WI26-EN031:ultra_rare",
+     "number": "WI26-EN031",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:39973386:WI26-EN031:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708861,
-       710142,
        710182
       ]
      },
@@ -13327,10 +13372,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Duality (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:39973386:WI26-EN031:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708861
+      ]
+     },
+     "number": "WI26-EN031",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Duality (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:39973386:WI26-EN031:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710142
+      ]
+     },
+     "number": "WI26-EN031",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Duality (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2023-06-22"

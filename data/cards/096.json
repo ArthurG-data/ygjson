@@ -4544,8 +4544,7 @@
      "id": "legendary-5d-s-decks:96363153:L5DD-ENY20:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       661274,
-       661275
+       661274
       ]
      },
      "number": "L5DD-ENY20",
@@ -4556,6 +4555,24 @@
       "match": "number+rarity",
       "name": "Tuning"
      }
+    },
+    {
+     "id": "legendary-5d-s-decks:96363153:L5DD-ENY20:common:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       661275
+      ]
+     },
+     "number": "L5DD-ENY20",
+     "rarity": "common",
+     "region": "EN",
+     "set": "legendary-5d-s-decks",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Tuning (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "legendary-5d-s-decks:96363153:L5DD-ENY20:unknown",
@@ -8882,8 +8899,7 @@
      "id": "limited-pack-world-championship-2026:96676583:26LP-EN018:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713316,
-       714078
+       713316
       ]
      },
      "number": "26LP-EN018",
@@ -8899,11 +8915,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:96676583:26LP-EN018:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714078
+      ]
+     },
+     "number": "26LP-EN018",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maliss P Chessy Cat (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:96676583:26LP-EN018:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713315,
-       714098
+       713315
       ]
      },
      "number": "26LP-EN018",
@@ -8914,6 +8950,27 @@
       "match": "number+rarity",
       "name": "Maliss P Chessy Cat"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:96676583:26LP-EN018:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714098
+      ]
+     },
+     "number": "26LP-EN018",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maliss P Chessy Cat (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2024-12-05",

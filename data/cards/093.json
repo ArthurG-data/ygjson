@@ -6037,8 +6037,7 @@
      "id": "limited-pack-world-championship-2026:93360904:26LP-EN007:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713334,
-       714085
+       713334
       ]
      },
      "number": "26LP-EN007",
@@ -6054,11 +6053,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:93360904:26LP-EN007:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714085
+      ]
+     },
+     "number": "26LP-EN007",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummyusmentAcroquey (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:93360904:26LP-EN007:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713333,
-       714105
+       713333
       ]
      },
      "number": "26LP-EN007",
@@ -6069,6 +6088,27 @@
       "match": "number+rarity",
       "name": "YummyusmentAcroquey"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:93360904:26LP-EN007:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714105
+      ]
+     },
+     "number": "26LP-EN007",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummyusmentAcroquey (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2025-07-31"
@@ -14314,11 +14354,69 @@
     },
     {
      "id": "duelist-league-18-participation-cards:93920745:DL18-EN002:rare",
+     "number": "DL18-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:93920745:DL18-EN002:rare:blue",
      "identifiers": {
       "tcgplayerProductIds": [
-       94895,
-       94916,
-       94963,
+       94895
+      ]
+     },
+     "number": "DL18-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Penguin Soldier (Blue - DL18)"
+     },
+     "variant": "blue"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:93920745:DL18-EN002:rare:green",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94916
+      ]
+     },
+     "number": "DL18-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Penguin Soldier (Green - DL18)"
+     },
+     "variant": "green"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:93920745:DL18-EN002:rare:purple",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       94963
+      ]
+     },
+     "number": "DL18-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Penguin Soldier (Purple - DL18)"
+     },
+     "variant": "purple"
+    },
+    {
+     "id": "duelist-league-18-participation-cards:93920745:DL18-EN002:rare:red",
+     "identifiers": {
+      "tcgplayerProductIds": [
        94964
       ]
      },
@@ -14326,10 +14424,12 @@
      "rarity": "rare",
      "region": "EN",
      "set": "duelist-league-18-participation-cards",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number-other-set",
-      "name": "Penguin Soldier (Blue - DL18)"
-     }
+      "name": "Penguin Soldier (Red - DL18)"
+     },
+     "variant": "red"
     },
     {
      "id": "duelist-league-2010-participation-cards:93920745:DL09-EN002:rare",

@@ -213,19 +213,26 @@ and creates these prints again.
 **Variants.** A product whose name carries a foil colour (`Blue`, `Green`, `Purple`, `Red`, `Silver`, `Bronze`), an art
 letter (`A` to `G`) or `Version <n>` has a price of its own: Zaborg the Thunder Monarch lists at 129.99 in Blue and 4.49 in
 Green under one number and rarity. It lands on its own print, a copy of the base print with `variant` set (`blue`, `b`,
-`version-2`) and that variant at the end of the print id. A base print whose products are all colours keeps no product
-and stays, because YGOPRODeck lists it and its id does not change. A product whose tags name two versions goes to review.
+`version-2`) and that variant at the end of the print id. A base print whose products are all versions keeps no product
+and stays if YGOPRODeck lists it, and its id does not change. A product whose tags name two versions goes to review.
 
-Stamps and alternate arts are not variants yet. A stamped product with no colour still lands on the plain print, so that
-print can hold two prices: 247 prints hold more than one product. Its TCGplayer price is not reliable until these become
-variants too.
+A treatment does the same when another product shares its number and rarity: a stamp (`judge-stamp`), an art
+(`alternate-art`, `extended-art`, `7th-art`), `emblazoned`, a misprint or a reissue (`25th-anniversary-edition`). Cyberse
+Code Magician is 0.29 plain and 8.80 in Extended Art under `MAMO-EN017`. Alone under its number a treatment is the print:
+Ghost Reaper & Winter Cherries (Alternate Art) is `RA03-EN014`, and no plain card has that number.
+
+A print has one price per edition, so it holds several products only when they price different editions: 10 prints hold an
+original and its 2020 reprint, which is sold as another edition. When two products of one card, rarity and version price
+the same edition, the print keeps the one pricing the most editions, then the oldest, and the other goes to review
+`conflicts`.
 
 **Aliases.** A card's `aliases` are other English names shops sell it under: YGOPRODeck's `beta_name` (`Red-Eyes B.
 Dragon`) and TCGplayer's product name at any of its prints (`Stellarnova Binding`). A name another card has is never an
 alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`.
 
-1,760 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
-and the reason, and `conflicts` lists a product that would share a print with another card or rarity.
+2,352 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
+and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
+another product already prices.
 `tools/coverage.py` accounts for every product in category 2.
 
 **No effect text.** ygjson records facts. It copies no card effect text, product description or card art, and its image

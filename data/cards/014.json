@@ -9629,8 +9629,7 @@
      "id": "maximum-gold:14558127:MAGO-EN011:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227427,
-       227428
+       227427
       ]
      },
      "number": "MAGO-EN011",
@@ -9641,6 +9640,24 @@
       "match": "number+rarity",
       "name": "Ash Blossom & Joyous Spring"
      }
+    },
+    {
+     "id": "maximum-gold:14558127:MAGO-EN011:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227428
+      ]
+     },
+     "number": "MAGO-EN011",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ash Blossom & Joyous Spring (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-stampede:14558127:RA04-EN025:collectors_rare",
@@ -9828,8 +9845,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:14558127:SDWD-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616574,
-       618794
+       616574
       ]
      },
      "number": "SDWD-EN017",
@@ -9840,6 +9856,27 @@
       "match": "number+rarity",
       "name": "Ash Blossom & Joyous Spring"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:14558127:SDWD-EN017:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618794
+      ]
+     },
+     "number": "SDWD-EN017",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ash Blossom & Joyous Spring (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "structure-deck-legend-of-the-crystal-beasts:14558127:SDCB-EN014:common",
@@ -13645,7 +13682,6 @@
      "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:collectors_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       550855,
        552425
       ]
      },
@@ -13655,14 +13691,31 @@
      "set": "25th-anniversary-rarity-collection-ii",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art) (PCR)"
+      "name": "Rescue Cat (PCR)"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:collectors_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       550855
+      ]
+     },
+     "number": "RA02-EN001",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection-ii",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art) (PCR)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:platinum_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       550852,
        552422
       ]
      },
@@ -13672,14 +13725,31 @@
      "set": "25th-anniversary-rarity-collection-ii",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art) (Platinum Secret Rare)"
+      "name": "Rescue Cat (Platinum Secret Rare)"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:platinum_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       550852
+      ]
+     },
+     "number": "RA02-EN001",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection-ii",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art) (Platinum Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       550853,
        552423
       ]
      },
@@ -13689,14 +13759,31 @@
      "set": "25th-anniversary-rarity-collection-ii",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art) (Quarter Century Secret Rare)"
+      "name": "Rescue Cat (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       550853
+      ]
+     },
+     "number": "RA02-EN001",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection-ii",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       550851,
        552421
       ]
      },
@@ -13706,14 +13793,31 @@
      "set": "25th-anniversary-rarity-collection-ii",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art) (Secret Rare)"
+      "name": "Rescue Cat (Secret Rare)"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       550851
+      ]
+     },
+     "number": "RA02-EN001",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection-ii",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art) (Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       550849,
        552419
       ]
      },
@@ -13723,14 +13827,31 @@
      "set": "25th-anniversary-rarity-collection-ii",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art)"
+      "name": "Rescue Cat"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:super_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       550849
+      ]
+     },
+     "number": "RA02-EN001",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection-ii",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       550854,
        552424
       ]
      },
@@ -13740,14 +13861,31 @@
      "set": "25th-anniversary-rarity-collection-ii",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art) (PUR)"
+      "name": "Rescue Cat (PUR)"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:ultimate_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       550854
+      ]
+     },
+     "number": "RA02-EN001",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection-ii",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art) (PUR)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       550850,
        552420
       ]
      },
@@ -13757,8 +13895,26 @@
      "set": "25th-anniversary-rarity-collection-ii",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art) (UR)"
+      "name": "Rescue Cat (UR)"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection-ii:14878871:RA02-EN001:ultra_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       550850
+      ]
+     },
+     "number": "RA02-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection-ii",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art) (UR)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "champion-pack-game-five:14878871:CP05-EN015:common",
@@ -13831,7 +13987,6 @@
      "id": "maximum-gold-el-dorado:14878871:MGED-EN006:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       253911,
        256078
       ]
      },
@@ -13841,8 +13996,29 @@
      "set": "maximum-gold-el-dorado",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Rescue Cat (Alternate Art)"
+      "name": "Rescue Cat"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:14878871:MGED-EN006:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       253911
+      ]
+     },
+     "number": "MGED-EN006",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue Cat (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "turbo-pack-booster-one:14878871:TU01-EN008:rare",
@@ -15270,8 +15446,7 @@
      "id": "magnificent-monsters:14965712:MAMO-EN002:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714703,
-       714704
+       714703
       ]
      },
      "number": "MAMO-EN002",
@@ -15282,6 +15457,27 @@
       "match": "number+rarity",
       "name": "Kuriboh - Multiply!"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:14965712:MAMO-EN002:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714704
+      ]
+     },
+     "number": "MAMO-EN002",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kuriboh - Multiply! (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:14965712:MAMO-EN002:unknown",

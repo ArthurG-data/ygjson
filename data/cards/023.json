@@ -501,10 +501,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:23020408:WI26-EN028:ultra_rare",
+     "number": "WI26-EN028",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:23020408:WI26-EN028:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708858,
-       710139,
        710179
       ]
      },
@@ -512,10 +517,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Soul Servant (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:23020408:WI26-EN028:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708858
+      ]
+     },
+     "number": "WI26-EN028",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Soul Servant (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:23020408:WI26-EN028:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710139
+      ]
+     },
+     "number": "WI26-EN028",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Soul Servant (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2020-01-16"
@@ -16773,8 +16816,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:23995348:SDWD-EN034:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616591,
-       618807
+       616591
       ]
      },
      "number": "SDWD-EN034",
@@ -16786,6 +16828,27 @@
       "match": "minted",
       "name": "Blue-Eyes Ultimate Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:23995348:SDWD-EN034:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618807
+      ]
+     },
+     "number": "SDWD-EN034",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Blue-Eyes Ultimate Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "ultimate-edition:23995348:JMP-EN005:ultra_rare",

@@ -9577,8 +9577,7 @@
      "id": "maximum-gold-el-dorado:73580471:MGED-EN026:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       253933,
-       256126
+       253933
       ]
      },
      "number": "MGED-EN026",
@@ -9589,6 +9588,27 @@
       "match": "number+rarity",
       "name": "Black Rose Dragon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:73580471:MGED-EN026:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       256126
+      ]
+     },
+     "number": "MGED-EN026",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Black Rose Dragon (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "premium-gold-infinite-gold:73580471:PGL3-EN059:gold_rare",
@@ -11084,10 +11104,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:73628505:WI26-EN021:ultra_rare",
+     "number": "WI26-EN021",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:73628505:WI26-EN021:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708851,
-       710132,
        710172
       ]
      },
@@ -11095,10 +11120,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Terraforming (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:73628505:WI26-EN021:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708851
+      ]
+     },
+     "number": "WI26-EN021",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Terraforming (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:73628505:WI26-EN021:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710132
+      ]
+     },
+     "number": "WI26-EN021",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Terraforming (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     },
     {
      "id": "zombie-world-structure-deck:73628505:SDZW-EN025:common",
@@ -11781,8 +11844,7 @@
      "id": "maximum-gold:73642296:MAGO-EN012:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227429,
-       227430
+       227429
       ]
      },
      "number": "MAGO-EN012",
@@ -11793,6 +11855,24 @@
       "match": "number+rarity",
       "name": "Ghost Belle & Haunted Mansion"
      }
+    },
+    {
+     "id": "maximum-gold:73642296:MAGO-EN012:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227430
+      ]
+     },
+     "number": "MAGO-EN012",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Belle & Haunted Mansion (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "editions": [
@@ -11869,10 +11949,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:73642296:WI26-EN003:ultra_rare",
+     "number": "WI26-EN003",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:73642296:WI26-EN003:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708833,
-       710114,
        710154
       ]
      },
@@ -11880,10 +11965,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Belle & Haunted Mansion (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:73642296:WI26-EN003:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708833
+      ]
+     },
+     "number": "WI26-EN003",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Ghost Belle & Haunted Mansion (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:73642296:WI26-EN003:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710114
+      ]
+     },
+     "number": "WI26-EN003",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Belle & Haunted Mansion (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2018-05-03",

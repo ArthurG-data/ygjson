@@ -6713,8 +6713,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:11443677:SDWD-EN037:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616594,
-       618810
+       616594
       ]
      },
      "number": "SDWD-EN037",
@@ -6725,6 +6724,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Tyrant Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:11443677:SDWD-EN037:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618810
+      ]
+     },
+     "number": "SDWD-EN037",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Tyrant Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2022-02-10",

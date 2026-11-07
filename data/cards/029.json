@@ -4809,7 +4809,6 @@
      "id": "rarity-collection-5:29302858:RA05-EN134:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       687299,
        689639
       ]
      },
@@ -4819,8 +4818,29 @@
      "set": "rarity-collection-5",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Vanquish Soul Razen (Starlight Rare) (Stamp)"
+      "name": "Vanquish Soul Razen (Starlight Rare)"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "rarity-collection-5:29302858:RA05-EN134:starlight_rare:stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687299
+      ]
+     },
+     "number": "RA05-EN134",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "rarity-collection-5",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Vanquish Soul Razen (Starlight Rare) (Stamp)"
+     },
+     "variant": "stamp"
     },
     {
      "editions": [
@@ -4867,7 +4887,6 @@
      "id": "rarity-collection-5:29302858:RA05-EN134:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       687300,
        689635
       ]
      },
@@ -4877,8 +4896,29 @@
      "set": "rarity-collection-5",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Vanquish Soul Razen (Stamp)"
+      "name": "Vanquish Soul Razen (Ultra Rare)"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "rarity-collection-5:29302858:RA05-EN134:ultra_rare:stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687300
+      ]
+     },
+     "number": "RA05-EN134",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "rarity-collection-5",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Vanquish Soul Razen (Stamp)"
+     },
+     "variant": "stamp"
     },
     {
      "id": "wild-survivors:29302858:WISU-EN016:collectors_rare",

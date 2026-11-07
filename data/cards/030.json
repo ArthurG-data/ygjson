@@ -9071,8 +9071,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:30576089:SDWD-EN006:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616563,
-       618783
+       616563
       ]
      },
      "number": "SDWD-EN006",
@@ -9083,6 +9082,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Jet Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:30576089:SDWD-EN006:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618783
+      ]
+     },
+     "number": "SDWD-EN006",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Jet Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2022-02-10",
@@ -9196,9 +9216,7 @@
      "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713331,
-       713332,
-       714084
+       713331
       ]
      },
      "number": "26LP-EN005",
@@ -9214,11 +9232,52 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:secret_rare:emblazoned-alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       713332
+      ]
+     },
+     "number": "26LP-EN005",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummySnatchy (Emblazoned Alternate Art)"
+     },
+     "variant": "emblazoned-alternate-art"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714084
+      ]
+     },
+     "number": "26LP-EN005",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummySnatchy (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713330,
-       714104
+       713330
       ]
      },
      "number": "26LP-EN005",
@@ -9229,6 +9288,27 @@
       "match": "number+rarity",
       "name": "YummySnatchy"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714104
+      ]
+     },
+     "number": "26LP-EN005",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummySnatchy (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2025-07-31",
@@ -12356,10 +12436,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:30748475:WI26-EN039:ultra_rare",
+     "number": "WI26-EN039",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:30748475:WI26-EN039:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708869,
-       710150,
        710190
       ]
      },
@@ -12367,10 +12452,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destructive Daruma Karma Cannon (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:30748475:WI26-EN039:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708869
+      ]
+     },
+     "number": "WI26-EN039",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Destructive Daruma Karma Cannon (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:30748475:WI26-EN039:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710150
+      ]
+     },
+     "number": "WI26-EN039",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Destructive Daruma Karma Cannon (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2022-10-20"

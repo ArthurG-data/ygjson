@@ -13945,8 +13945,7 @@
      "id": "limited-pack-world-championship-2026:53813120:26LP-EN015:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713322,
-       714080
+       713322
       ]
      },
      "number": "26LP-EN015",
@@ -13962,11 +13961,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:53813120:26LP-EN015:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714080
+      ]
+     },
+     "number": "26LP-EN015",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Radiant Typhoon Mandate (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:53813120:26LP-EN015:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713321,
-       714100
+       713321
       ]
      },
      "number": "26LP-EN015",
@@ -13977,6 +13996,27 @@
       "match": "number+rarity",
       "name": "Radiant Typhoon Mandate"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:53813120:26LP-EN015:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714100
+      ]
+     },
+     "number": "26LP-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Radiant Typhoon Mandate (Emblazoned)"
+     },
+     "variant": "emblazoned"
     },
     {
      "editions": [

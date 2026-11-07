@@ -726,8 +726,7 @@
      "id": "quarter-century-stampede:26077387:RA04-EN026:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       626821,
-       626822
+       626821
       ]
      },
      "number": "RA04-EN026",
@@ -738,6 +737,24 @@
       "match": "number+rarity",
       "name": "Sky Striker Ace - Raye (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-stampede:26077387:RA04-EN026:qc_secret_rare:new-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       626822
+      ]
+     },
+     "number": "RA04-EN026",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sky Striker Ace - Raye (New Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "new-art"
     },
     {
      "editions": [
@@ -1506,7 +1523,6 @@
      "id": "quarter-century-bonanza:26096328:RA03-EN041:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       592455,
        592456
       ]
      },
@@ -1516,8 +1532,26 @@
      "set": "quarter-century-bonanza",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Superdreadnought Rail Cannon Juggernaut Liebe (Alternate Art) (Quarter Century Secret Rare)"
+      "name": "Superdreadnought Rail Cannon Juggernaut Liebe (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-bonanza:26096328:RA03-EN041:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592455
+      ]
+     },
+     "number": "RA03-EN041",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Superdreadnought Rail Cannon Juggernaut Liebe (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-bonanza:26096328:RA03-EN041:secret_rare",

@@ -2849,10 +2849,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:82159583:WI26-EN013:ultra_rare",
+     "number": "WI26-EN013",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:82159583:WI26-EN013:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708843,
-       710124,
        710164
       ]
      },
@@ -2860,10 +2865,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Clown Crew Biancaviso (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:82159583:WI26-EN013:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708843
+      ]
+     },
+     "number": "WI26-EN013",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Clown Crew Biancaviso (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:82159583:WI26-EN013:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710124
+      ]
+     },
+     "number": "WI26-EN013",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Clown Crew Biancaviso (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-05-07",

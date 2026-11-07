@@ -3223,8 +3223,7 @@
      "id": "limited-pack-world-championship-2026:80181649:26LP-EN011:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713291,
-       714067
+       713291
       ]
      },
      "number": "26LP-EN011",
@@ -3240,11 +3239,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:80181649:26LP-EN011:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714067
+      ]
+     },
+     "number": "26LP-EN011",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "\"A Case for K9\" (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:80181649:26LP-EN011:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713290,
-       714087
+       713290
       ]
      },
      "number": "26LP-EN011",
@@ -3255,6 +3274,27 @@
       "match": "number+rarity",
       "name": "\"A Case for K9\""
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:80181649:26LP-EN011:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714087
+      ]
+     },
+     "number": "26LP-EN011",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "\"A Case for K9\" (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2025-07-31"

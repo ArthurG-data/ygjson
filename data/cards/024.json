@@ -5820,8 +5820,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:24224830:SDWD-EN026:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616583,
-       618802
+       616583
       ]
      },
      "number": "SDWD-EN026",
@@ -5834,11 +5833,37 @@
      }
     },
     {
-     "id": "winner-s-pack-2026-2027:24224830:WI26-EN026:ultra_rare",
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:24224830:SDWD-EN026:common:unlimited-misprint",
      "identifiers": {
       "tcgplayerProductIds": [
-       708856,
-       710137,
+       618802
+      ]
+     },
+     "number": "SDWD-EN026",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Called by the Grave (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:24224830:WI26-EN026:ultra_rare",
+     "number": "WI26-EN026",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:24224830:WI26-EN026:ultra_rare:judge-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
        710177
       ]
      },
@@ -5846,10 +5871,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Called by the Grave (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:24224830:WI26-EN026:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708856
+      ]
+     },
+     "number": "WI26-EN026",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Called by the Grave (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:24224830:WI26-EN026:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710137
+      ]
+     },
+     "number": "WI26-EN026",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Called by the Grave (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2018-03-22"
@@ -6883,10 +6946,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:24299458:WI26-EN030:ultra_rare",
+     "number": "WI26-EN030",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:24299458:WI26-EN030:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708860,
-       710141,
        710181
       ]
      },
@@ -6894,10 +6962,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Forbidden Droplet (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:24299458:WI26-EN030:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708860
+      ]
+     },
+     "number": "WI26-EN030",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Forbidden Droplet (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:24299458:WI26-EN030:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710141
+      ]
+     },
+     "number": "WI26-EN030",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Forbidden Droplet (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2020-08-06"
@@ -7976,8 +8082,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:24361622:SDWD-EN040:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616597,
-       618813
+       616597
       ]
      },
      "number": "SDWD-EN040",
@@ -7988,6 +8093,27 @@
       "match": "number+rarity",
       "name": "Hieratic Seal of the Heavenly Spheres"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:24361622:SDWD-EN040:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618813
+      ]
+     },
+     "number": "SDWD-EN040",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Hieratic Seal of the Heavenly Spheres (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2019-04-03",
@@ -8223,8 +8349,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:24382602:SDWD-EN023:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616580,
-       618799
+       616580
       ]
      },
      "number": "SDWD-EN023",
@@ -8235,6 +8360,27 @@
       "match": "number+rarity",
       "name": "Mausoleum of White"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:24382602:SDWD-EN023:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618799
+      ]
+     },
+     "number": "SDWD-EN023",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mausoleum of White (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2016-05-05"

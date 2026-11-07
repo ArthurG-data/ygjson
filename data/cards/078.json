@@ -1727,10 +1727,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:78114463:WI26-EN040:ultra_rare",
+     "number": "WI26-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:78114463:WI26-EN040:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708870,
-       710151,
        710191
       ]
      },
@@ -1738,10 +1743,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Solemn Accusation (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:78114463:WI26-EN040:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708870
+      ]
+     },
+     "number": "WI26-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Solemn Accusation (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:78114463:WI26-EN040:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710151
+      ]
+     },
+     "number": "WI26-EN040",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Solemn Accusation (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-05-07"
@@ -3804,7 +3847,6 @@
      "id": "quarter-century-bonanza:78231355:RA03-EN068:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       592649,
        592650
       ]
      },
@@ -3814,8 +3856,26 @@
      "set": "quarter-century-bonanza",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Dragonmaid Hospitality (Alternate Art) (Quarter Century Secret Rare)"
+      "name": "Dragonmaid Hospitality (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-bonanza:78231355:RA03-EN068:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592649
+      ]
+     },
+     "number": "RA03-EN068",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dragonmaid Hospitality (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-bonanza:78231355:RA03-EN068:secret_rare",
@@ -9814,10 +9874,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:78661338:WI26-EN004:ultra_rare",
+     "number": "WI26-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:78661338:WI26-EN004:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708834,
-       710115,
        710155
       ]
      },
@@ -9825,10 +9890,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fantastical Dragon Phantazmay (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:78661338:WI26-EN004:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708834
+      ]
+     },
+     "number": "WI26-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Fantastical Dragon Phantazmay (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:78661338:WI26-EN004:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710115
+      ]
+     },
+     "number": "WI26-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fantastical Dragon Phantazmay (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2019-01-31",

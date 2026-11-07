@@ -9789,8 +9789,7 @@
      "id": "magnificent-monsters:74665150:MAMO-EN016:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714731,
-       714732
+       714731
       ]
      },
      "number": "MAMO-EN016",
@@ -9801,6 +9800,27 @@
       "match": "number+rarity",
       "name": "Decode Talker Integration"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:74665150:MAMO-EN016:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714732
+      ]
+     },
+     "number": "MAMO-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Decode Talker Integration (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:74665150:MAMO-EN016:unknown",
@@ -10265,7 +10285,7 @@
      }
     },
     {
-     "id": "legendary-collection-25th-anniversary-edition:74677427:LC01-EN006:ultra_rare",
+     "id": "legendary-collection-25th-anniversary-edition:74677427:LC01-EN006:ultra_rare:25th-anniversary-edition",
      "identifiers": {
       "tcgplayerProductIds": [
        491813
@@ -10279,7 +10299,8 @@
      "tcgplayer": {
       "match": "minted",
       "name": "Red-Eyes Black Dragon (25th Anniversary Edition)"
-     }
+     },
+     "variant": "25th-anniversary-edition"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:74677427:LCJW-EN003:ultra_rare",
@@ -10563,12 +10584,10 @@
      }
     },
     {
-     "id": "quarter-century-stampede:74677427:RA04-EN109:platinum_secret_rare",
+     "id": "quarter-century-stampede:74677427:RA04-EN109:platinum_secret_rare:4th-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       627285,
-       627286,
-       627287
+       627285
       ]
      },
      "number": "RA04-EN109",
@@ -10579,15 +10598,50 @@
      "tcgplayer": {
       "match": "minted",
       "name": "Red-Eyes Black Dragon (4th Art) (Platinum Secret Rare)"
-     }
+     },
+     "variant": "4th-art"
     },
     {
-     "id": "quarter-century-stampede:74677427:RA04-EN109:qc_secret_rare",
+     "id": "quarter-century-stampede:74677427:RA04-EN109:platinum_secret_rare:7th-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       627288,
-       627289,
-       627290
+       627286
+      ]
+     },
+     "number": "RA04-EN109",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Red-Eyes Black Dragon (7th Art) (Platinum Secret Rare)"
+     },
+     "variant": "7th-art"
+    },
+    {
+     "id": "quarter-century-stampede:74677427:RA04-EN109:platinum_secret_rare:8th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627287
+      ]
+     },
+     "number": "RA04-EN109",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Red-Eyes Black Dragon (8th Art) (Platinum Secret Rare)"
+     },
+     "variant": "8th-art"
+    },
+    {
+     "id": "quarter-century-stampede:74677427:RA04-EN109:qc_secret_rare:4th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627288
       ]
      },
      "number": "RA04-EN109",
@@ -10598,7 +10652,44 @@
      "tcgplayer": {
       "match": "minted",
       "name": "Red-Eyes Black Dragon (4th Art) (Quarter Century Secret Rare)"
-     }
+     },
+     "variant": "4th-art"
+    },
+    {
+     "id": "quarter-century-stampede:74677427:RA04-EN109:qc_secret_rare:7th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627289
+      ]
+     },
+     "number": "RA04-EN109",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Red-Eyes Black Dragon (7th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "7th-art"
+    },
+    {
+     "id": "quarter-century-stampede:74677427:RA04-EN109:qc_secret_rare:8th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627290
+      ]
+     },
+     "number": "RA04-EN109",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Red-Eyes Black Dragon (8th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "8th-art"
     },
     {
      "editions": [
