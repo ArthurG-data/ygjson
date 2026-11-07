@@ -149,10 +149,11 @@ def test_page_by_title_refresh_replaces_a_cached_page(api, tmp_path):
 
 # --- limitation lists -------------------------------------------------------------------------------------------
 
-def list_page(start="October 19, 2026", following="", forbidden="Abyss Dweller", limited="Monster Reborn", semi=""):
+def list_page(start="October 19, 2026", following="", forbidden="Abyss Dweller", limited="Monster Reborn", semi="",
+              medium="TCG", fmt="Advanced Format"):
     return (f"These are the lists.<ref>{{{{cite web | title = x}}}}</ref>\n\n{{{{Limitation list\n"
-            f"| start_date        = {start}\n| end_date          = \n| medium            = TCG\n"
-            f"| format            = Advanced Format\n| prev              = Earlier Lists (TCG)\n"
+            f"| start_date        = {start}\n| end_date          = \n| medium            = {medium}\n"
+            f"| format            = {fmt}\n| prev              = Earlier Lists (TCG)\n"
             f"| next              = {following}\n| forbidden         = \n{forbidden}\n"
             f"| limited           = \n{limited}\n| semi_limited      = \n{semi}\n}}}}\n\n== References ==\n")
 
@@ -163,7 +164,8 @@ def test_limitation_list_reads_the_date_the_next_page_and_each_status():
         forbidden="Abyss Dweller\nAerial Eater // prev::Unlimited\nMaliss P Dormouse // force-smw",
         limited="Droll &amp; Lock Bird // prev::Semi-Limited\nToon Bookmark // unreleased::TCG",
         semi="Ice Ryzeal"))
-    assert parsed == {"date": "2026-10-19", "next": "November 2026 Lists (TCG)", "statuses": {
+    assert parsed == {"date": "2026-10-19", "next": "November 2026 Lists (TCG)", "medium": "TCG",
+                      "format": "Advanced Format", "statuses": {
         "Abyss Dweller": "banned", "Aerial Eater": "banned", "Maliss P Dormouse": "banned",
         "Droll & Lock Bird": "limited", "Toon Bookmark": "limited", "Ice Ryzeal": "semi_limited"}}
 
@@ -211,18 +213,18 @@ def test_limitation_lists_follow_next_in_order(wiki, tmp_path):
     pages, _ = wiki
     pages["A"] = list_page(start="May 18, 2026", following="B")
     pages["B"] = list_page(start="September 21, 2026")
-    assert [l["date"] for l in y.limitation_lists("A", tmp_path)] == ["2026-05-18", "2026-09-21"]
+    assert [l["date"] for l in y.limitation_lists("A", "TCG", tmp_path)] == ["2026-05-18", "2026-09-21"]
 
 
 def test_limitation_lists_ask_again_for_the_last_page_only(wiki, tmp_path):
     pages, calls = wiki
     pages["A"] = list_page(start="May 18, 2026", following="B")
     pages["B"] = list_page(start="September 21, 2026")
-    y.limitation_lists("A", tmp_path)
+    y.limitation_lists("A", "TCG", tmp_path)
     calls.clear()
     pages["B"] = list_page(start="September 21, 2026", following="C")
     pages["C"] = list_page(start="October 19, 2026")
-    got = y.limitation_lists("A", tmp_path)
+    got = y.limitation_lists("A", "TCG", tmp_path)
     assert [l["date"] for l in got] == ["2026-05-18", "2026-09-21", "2026-10-19"]
     assert "A" not in calls
 
@@ -230,15 +232,75 @@ def test_limitation_lists_ask_again_for_the_last_page_only(wiki, tmp_path):
 def test_limitation_lists_stop_at_a_next_page_that_does_not_exist_yet(wiki, tmp_path):
     pages, _ = wiki
     pages["A"] = list_page(start="May 18, 2026", following="Not Written")
-    assert [l["date"] for l in y.limitation_lists("A", tmp_path)] == ["2026-05-18"]
+    assert [l["date"] for l in y.limitation_lists("A", "TCG", tmp_path)] == ["2026-05-18"]
 
 
 def test_limitation_lists_stop_at_a_loop(wiki, tmp_path):
     pages, _ = wiki
     pages["A"] = list_page(start="May 18, 2026", following="A")
-    assert len(y.limitation_lists("A", tmp_path)) == 1
+    assert len(y.limitation_lists("A", "TCG", tmp_path)) == 1
 
 
 def test_limitation_lists_fail_when_the_first_page_has_no_list(wiki, tmp_path):
     with pytest.raises(ValueError):
-        y.limitation_lists("Moved Away", tmp_path)
+        y.limitation_lists("Moved Away", "TCG", tmp_path)
+
+
+def test_limitation_lists_stop_at_a_page_of_another_medium(wiki, tmp_path):
+    pages, _ = wiki
+    pages["A"] = list_page(start="May 18, 2026", following="B")
+    pages["B"] = list_page(start="September 21, 2026", medium="OCG")
+    assert [l["date"] for l in y.limitation_lists("A", "TCG", tmp_path)] == ["2026-05-18"]
+
+
+def test_limitation_lists_stop_at_a_page_of_another_format(wiki, tmp_path):
+    pages, _ = wiki
+    pages["A"] = list_page(start="May 18, 2026", following="B")
+    pages["B"] = list_page(start="September 21, 2026", fmt="Traditional Format")
+    assert [l["date"] for l in y.limitation_lists("A", "TCG", tmp_path)] == ["2026-05-18"]
+
+
+def test_limitation_lists_stop_at_a_date_that_does_not_move_forward(wiki, tmp_path):
+    pages, _ = wiki
+    pages["A"] = list_page(start="May 18, 2026", following="B")
+    pages["B"] = list_page(start="February 2, 2026")
+    assert [l["date"] for l in y.limitation_lists("A", "TCG", tmp_path)] == ["2026-05-18"]
+
+
+def test_limitation_lists_stop_at_a_page_that_drops_most_of_the_last_list(wiki, tmp_path):
+    pages, _ = wiki
+    cards = [f"Card {i}" for i in range(10)]
+    pages["A"] = list_page(start="May 18, 2026", following="B", forbidden="\n".join(cards[:5]), limited="\n".join(cards[5:]))
+    pages["B"] = list_page(start="September 21, 2026", forbidden=cards[0], limited=cards[1])
+    assert [l["date"] for l in y.limitation_lists("A", "TCG", tmp_path)] == ["2026-05-18"]
+
+
+def test_limitation_lists_stop_at_a_page_missing_a_whole_section_of_the_last_list(wiki, tmp_path):
+    # Limited is about a third of a real list. The most any 2026 list dropped is 4.4%.
+    pages, _ = wiki
+    cards = [f"Card {i}" for i in range(10)]
+    pages["A"] = list_page(start="May 18, 2026", following="B", forbidden="\n".join(cards[:7]), limited="\n".join(cards[7:]))
+    pages["B"] = list_page(start="September 21, 2026", forbidden="\n".join(cards[:6]), limited=cards[6])
+    assert [l["date"] for l in y.limitation_lists("A", "TCG", tmp_path)] == ["2026-05-18"]
+
+
+def test_limitation_lists_accept_a_page_that_drops_a_few_of_the_last_list(wiki, tmp_path):
+    pages, _ = wiki
+    cards = [f"Card {i}" for i in range(10)]
+    pages["A"] = list_page(start="May 18, 2026", following="B", forbidden="\n".join(cards[:5]), limited="\n".join(cards[5:]))
+    pages["B"] = list_page(start="September 21, 2026", forbidden="\n".join(cards[:5]), limited="\n".join(cards[5:8]))
+    assert len(y.limitation_lists("A", "TCG", tmp_path)) == 2
+
+
+def test_limitation_lists_fail_when_the_first_page_is_another_medium(wiki, tmp_path):
+    pages, _ = wiki
+    pages["A"] = list_page(medium="OCG")
+    with pytest.raises(ValueError):
+        y.limitation_lists("A", "TCG", tmp_path)
+
+
+def test_limitation_lists_accept_a_page_that_names_no_format(wiki, tmp_path):
+    # Every OCG list page leaves the field out.
+    pages, _ = wiki
+    pages["A"] = list_page(start="October 1, 2026", medium="OCG").replace("| format            = Advanced Format\n", "")
+    assert [l["date"] for l in y.limitation_lists("A", "OCG", tmp_path)] == ["2026-10-01"]

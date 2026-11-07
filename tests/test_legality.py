@@ -135,8 +135,8 @@ def test_check_exits_1_on_a_difference_and_0_without(monkeypatch, capsys):
 
 # --- dated lists ------------------------------------------------------------------------------------------------
 
-def dated_list(date, statuses, fmt="tcg"):
-    return {"format": fmt, "date": date, "statuses": statuses}
+def dated_list(date, statuses, fmt="tcg", complete=True):
+    return {"format": fmt, "date": date, "statuses": statuses, "complete": complete}
 
 
 def undated(card=CARD, fmt="tcg", status="limited", when="2026-10-28"):
@@ -245,8 +245,27 @@ def test_a_status_on_a_name_with_angle_brackets_still_counts():
     assert legality.lead_status(prodeck, None, {}, {CARD})[(CARD, "tcg")] == "limited"
 
 
-def test_an_undated_row_goes_when_its_source_no_longer_states_the_card():
+def test_an_undated_legal_row_goes_when_its_source_no_longer_states_the_card():
     dated = event(status="limited", effective="2026-05-18")
     events, _ = legality.merge([dated, undated(status="legal")], [], {}, "2026-11-07")
     assert events == [dated]
     assert legality.current(events, "2026-11-07")[(CARD, "tcg")] == "limited"
+
+
+def test_a_list_with_an_unmatched_name_cannot_move_a_card_to_legal_by_leaving_it_out():
+    # The card it leaves out may be the name that failed to match.
+    before = [event(CARD, status="banned", effective="2025-10-27")]
+    got = legality.list_events([dated_list("2026-02-02", {OTHER: "limited"}, complete=False)], before, "2026-11-07")
+    assert [(e["card"], e["status"]) for e in got] == [(OTHER, "limited")]
+
+
+def test_a_list_with_an_unmatched_name_still_moves_the_cards_it_names():
+    before = [event(CARD, status="banned", effective="2025-10-27")]
+    got = legality.list_events([dated_list("2026-02-02", {CARD: "limited"}, complete=False)], before, "2026-11-07")
+    assert [(e["card"], e["status"]) for e in got] == [(CARD, "limited")]
+
+
+def test_an_undated_restriction_stays_when_its_source_goes_silent():
+    row = undated(status="banned")
+    events, _ = legality.merge([row], [], {}, "2026-11-07")
+    assert events == [row]

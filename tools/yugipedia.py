@@ -252,11 +252,14 @@ def named_in(raw: str) -> list[str]:
 
 _OPEN_LIST = re.compile(r"\{\{\s*Limitation list\b", re.IGNORECASE)
 _LIST_SECTIONS = {"forbidden": "banned", "limited": "limited", "semi_limited": "semi_limited"}
+_LIST_FORMAT = "Advanced Format"
+MAX_DROPPED_SHARE = 0.25
 
 
 def limitation_list(text: str) -> dict | None:
-    """The page's {{Limitation list}} as {date, next, statuses}: `date` is `start_date` in ISO form, `next` the title of
-    the following list or None, `statuses` {card name: banned, limited or semi_limited}. A line's `// note` is dropped.
+    """The page's {{Limitation list}} as {date, next, medium, format, statuses}: `date` is `start_date` in ISO form,
+    `next` the title of the following list or None, `statuses` {card name: banned, limited or semi_limited}. A line's
+    `// note` is dropped.
 
     None when the page has no such template, when `start_date` is not a full date, or when the forbidden or limited
     section is empty: a card a list leaves out is legal, so a partial list would move cards that did not change."""
@@ -278,22 +281,34 @@ def limitation_list(text: str) -> dict | None:
             name = html.unescape(line.split("//")[0]).strip()
             if name:
                 statuses[name] = status
-    return {"date": date, "next": clean(fields.get("next", "")) or None, "statuses": statuses}
+    return {"date": date, "next": clean(fields.get("next", "")) or None, "medium": clean(fields.get("medium", "")),
+            "format": clean(fields.get("format", "")), "statuses": statuses}
 
 
-def limitation_lists(first: str, cache: Path = DEFAULT_CACHE) -> list[dict]:
-    """Each list from the page titled `first` onward, oldest first, following `next`. A page with no `next` is asked for
-    again, since it gains one when a new list comes out. The walk ends at a next page that is missing or that holds no
-    readable list. ValueError when `first` itself holds none."""
+def _follows(item: dict, medium: str, previous: dict | None) -> bool:
+    """Whether a page can be the list after `previous`: the same medium, the Advanced Format or none named (OCG pages name
+    none), a later date, and no more than MAX_DROPPED_SHARE of the previous list's cards gone. A list leaves out every legal card, so a page cut short
+    would move the rest to legal."""
+    if item["medium"] != medium or item["format"] not in ("", _LIST_FORMAT):
+        return False
+    if previous is None:
+        return True
+    dropped = previous["statuses"].keys() - item["statuses"].keys()
+    return item["date"] > previous["date"] and len(dropped) <= len(previous["statuses"]) * MAX_DROPPED_SHARE
+
+
+def limitation_lists(first: str, medium: str, cache: Path = DEFAULT_CACHE) -> list[dict]:
+    """Each `medium` list from the page titled `first` onward, oldest first, following `next`. A page with no `next` is
+    asked for again, since it gains one when a new list comes out. The walk ends at a next page that is missing, that
+    holds no readable list or that cannot follow the last one (see _follows), so a bad page holds back its list and those
+    after it. ValueError when `first` itself holds no list of this medium."""
     lists: list[dict] = []
-    seen: set[str] = set()
     title: str | None = first
-    while title and title not in seen:
-        seen.add(title)
+    while title:
         parsed = _cached_list(title, cache, refresh=False)
         if parsed is None or parsed["next"] is None:
             parsed = _cached_list(title, cache, refresh=True)
-        if parsed is None:
+        if parsed is None or not _follows(parsed, medium, lists[-1] if lists else None):
             break
         lists.append(parsed)
         title = parsed["next"]

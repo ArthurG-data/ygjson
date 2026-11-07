@@ -298,8 +298,11 @@ An event has `effective`, the date a source states, or `inForceBy`, the date the
 - **Dated lists.** YGOJSON's dates end with the October 2025 lists. From those lists onward, `tools/legality.py` reads
   Yugipedia's list pages, such as `October 2026 Lists (TCG)`, and follows each page's `next` link. Each change a list
   makes is an event with the page's `start_date` and source `yugipedia` (185 events). A list names every limited card,
-  so a card it leaves out is legal. The tool reads Yugipedia and not Konami's card database, because that database's
-  terms of use forbid automated collection.
+  so a card it leaves out is legal, unless a name on that list matches no single card here. Such a list moves only the
+  cards it names, and the tool prints the name. The walk stops at a page of another medium or format, at a date that
+  does not move forward, or at a page that drops over a quarter of the last list, and the tool prints the last date it read.
+  The tool reads Yugipedia and not Konami's card database, because that database's terms of use forbid automated
+  collection.
 - **Current status.** YGOPRODeck's `banlist_info` leads for `tcg`, `ocg` and `goat`, and a card with no entry for a
   format is legal. YGOPRODeck gives no status to any name with `<` or `>`, including cards Konami's list limits, so its
   silence on such a name says nothing. YGOJSON leads for `speed_duel`. The lead source's current status becomes an event
@@ -307,9 +310,10 @@ An event has `effective`, the date a source states, or `inForceBy`, the date the
   the source is `ygoprodeck` or `ygojson` (73 events). YGOPRODeck has no history and YGOJSON has no GOAT list, so every
   GOAT event is of this kind. In `tcg` and `ocg` such an event means a list reached YGOPRODeck before Yugipedia.
 - **Exact dates replace undated ones.** `tools/legality.py` loads `bans.json` first and never rewrites or removes an
-  event with `effective`. It removes an `inForceBy` event once the dated events give the same status on its date, or
-  once the lead source no longer states the card. An `inForceBy` event the dated events contradict otherwise stays, so
-  a difference between the sources stays visible.
+  event with `effective`. It removes an `inForceBy` event once the dated events give the same status on its date. A
+  `legal` one also goes once the lead source no longer states the card. A restriction never goes because a source went
+  silent, and an `inForceBy` event the dated events contradict otherwise stays, so a difference between the sources
+  stays visible.
 
 The file holds 3,105 events: 1,572 in `ocg`, 1,395 in `tcg`, 73 in `goat` and 65 in `speed_duel`; 503 `banned`, 1,095
 `limited`, 738 `semi_limited` and 769 `legal`.

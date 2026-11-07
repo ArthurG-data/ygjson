@@ -15,8 +15,11 @@ ours through identifiers.ygojsonId, reads Yugipedia's list pages from LIST_PAGES
            unlimited legal. Speed Duel's limit1 and limit2 are limited and semi_limited, and limit3 is legal.
            unreleased is not a status and makes no event.
   lists    every change a tcg or ocg list makes, as an event with the list's `effective` date and source "yugipedia".
-           A list names every limited card, so a card it leaves out is legal. A card that already has an event on that
-           date keeps it, and a list that starts after today waits.
+           A list names every limited card, so a card it leaves out is legal, unless a name on the list matches no
+           single card of ours: the card left out may be that name, so that list moves only the cards it names. A card
+           that already has an event on that date keeps it, and a list that starts after today waits. The walk stops at
+           a page of another medium or format, at a date that does not move forward, or at a page that drops over a
+           quarter of the last list, and the tool prints the last date it read.
   current  the status of the lead source: YGOPRODeck's banlist_info for tcg, ocg and goat (a card with no entry for a
            format is legal, except a name with < >: YGOPRODeck gives none of them a status, including cards Konami's
            list limits, so its silence says nothing), YGOJSON's current for speed_duel. It becomes an event only when it differs from the card's
@@ -24,9 +27,9 @@ ours through identifiers.ygojsonId, reads Yugipedia's list pages from LIST_PAGES
            change may have started earlier: neither source says when. The source is "ygoprodeck" or "ygojson".
 
 Events with `effective` already in legality/bans.json are never rewritten or removed. An `inForceBy` event is removed
-once the dated events give the same status on its date, because they say when the change happened, or once the lead
-source no longer states the card. One the dated events contradict otherwise stays and keeps its date, so a difference
-between the sources stays visible. A history entry whose card, format and
+once the dated events give the same status on its date, because they say when the change happened. A `legal` one also
+goes once the lead source no longer states the card, since nothing then says the card is free of a restriction. Any
+other stays and keeps its date, so a difference between the sources stays visible. A history entry whose card, format and
 date already have an event is not added again. Events are sorted by card id, format and date.
 
 --check replays the committed events to today and compares them with the lead source's current status: it prints
@@ -58,7 +61,7 @@ YGOPRODECK_FORMATS = {"ban_tcg": "tcg", "ban_ocg": "ocg", "ban_goat": "goat"}
 LEAD = {"tcg": "ygoprodeck", "ocg": "ygoprodeck", "goat": "ygoprodeck", "speed_duel": "ygojson"}
 FAR_FUTURE = "9999-12-31"
 # YGOJSON's exact dates end with these lists. The walk starts on them, so it also corrects a status YGOJSON got wrong.
-LIST_PAGES = {"tcg": "October 2025 Lists (TCG)", "ocg": "October 2025 Lists (OCG)"}
+LIST_PAGES = {"tcg": ("October 2025 Lists (TCG)", "TCG"), "ocg": ("October 2025 Lists (OCG)", "OCG")}
 
 Key = tuple[str, str]  # (card id, format id)
 
@@ -156,14 +159,16 @@ def list_statuses(named: dict[str, str], ids: dict[str, str | None]) -> tuple[di
 
 def list_events(lists: list[dict], dated: list[dict], today: str) -> list[dict]:
     """One event per card each list moves, oldest list first, comparing with `dated` and the events before it. A list
-    is {format, date, statuses: {card id: status}}, and a card it leaves out is legal."""
+    is {format, date, statuses: {card id: status}, complete}. A card it leaves out is legal only when `complete`, which
+    says every name on the list matched a card."""
     out: list[dict] = []
     for item in sorted(lists, key=lambda l: (l["format"], l["date"])):
         if item["date"] > today:
             continue
         fmt = item["format"]
         before = {card: s for (card, f), s in current(dated + out, item["date"]).items() if f == fmt}
-        for card in sorted(before.keys() | item["statuses"].keys(), key=int):
+        cards = before.keys() | item["statuses"].keys() if item["complete"] else item["statuses"].keys()
+        for card in sorted(cards, key=int):
             status = item["statuses"].get(card, "legal")
             if before.get(card, "legal") != status:
                 out.append({"card": card, "format": fmt, "status": status, "effective": item["date"], "source": "yugipedia"})
@@ -174,7 +179,7 @@ def merge(existing: list[dict], history: list[dict], lead: dict[Key, str], today
           lists: list[dict] = ()) -> tuple[list[dict], list[dict]]:
     """(all events sorted, the events added). Existing dated events are kept as they are. A history or list event is
     added unless the card, format and date already have one. An existing inForceBy event is dropped when the dated
-    events give the same status on its date or the lead no longer states the card. A lead status that differs from the last event is added with inForceBy
+    events give the same status on its date, or when it says legal and the lead no longer states the card. A lead status that differs from the last event is added with inForceBy
     today."""
     seen = {(e["card"], e["format"], e["effective"]) for e in existing if "effective" in e}
     new = [e for e in history if (e["card"], e["format"], e["effective"]) not in seen]
@@ -183,7 +188,8 @@ def merge(existing: list[dict], history: list[dict], lead: dict[Key, str], today
     listed = [e for e in list_events(list(lists), dated, today) if (e["card"], e["format"], e["effective"]) not in seen]
     new += listed
     dated += listed
-    unexplained = [e for e in existing if "inForceBy" in e and (e["card"], e["format"]) in lead
+    unexplained = [e for e in existing if "inForceBy" in e
+                   and (e["status"] != "legal" or (e["card"], e["format"]) in lead)
                    and current(dated, e["inForceBy"]).get((e["card"], e["format"]), "legal") != e["status"]]
     existing = [e for e in existing if "effective" in e] + unexplained
     events = sort_events(existing + new)
@@ -211,10 +217,12 @@ def _read_lists(files: dict[str, dict]) -> tuple[list[dict], list[str]]:
     """(the lists from LIST_PAGES onward, with card ids, and the list names that match no single card)."""
     ids = ids_by_name(files)
     lists, unmatched = [], set()
-    for fmt, title in LIST_PAGES.items():
-        for item in yugipedia.limitation_lists(title):
+    for fmt, (title, medium) in LIST_PAGES.items():
+        read = yugipedia.limitation_lists(title, medium)
+        print(f"{fmt} lists read through {read[-1]['date']}")
+        for item in read:
             statuses, missing = list_statuses(item["statuses"], ids)
-            lists.append({"format": fmt, "date": item["date"], "statuses": statuses})
+            lists.append({"format": fmt, "date": item["date"], "statuses": statuses, "complete": not missing})
             unmatched.update(missing)
     return lists, sorted(unmatched)
 
