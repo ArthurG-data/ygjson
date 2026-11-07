@@ -8,10 +8,12 @@ Requests are one second apart and carry the project's User-Agent, as Yugipedia a
 
 `infobox(wikitext)` parses the first `{{Infobox set ...}}` template into {key: value} with the markup stripped, and
 `parse_date` turns a release date into an ISO date. A date given to the month only is put on the 1st of the month.
+`limitation_lists(title)` follows a Forbidden & Limited list page's `next` links and parses each `{{Limitation list}}`.
 """
 from __future__ import annotations
 
 import datetime
+import html
 import json
 import re
 import time
@@ -79,10 +81,11 @@ def page_by_id(pageid: int, cache: Path = DEFAULT_CACHE, refresh: bool = False) 
     return pages_by_id([pageid], cache, refresh)[int(pageid)]
 
 
-def page_by_title(title: str, cache: Path = DEFAULT_CACHE) -> dict | None:
-    """The page with this exact title (a redirect is followed), or None; a missing title is cached and not asked twice."""
+def page_by_title(title: str, cache: Path = DEFAULT_CACHE, refresh: bool = False) -> dict | None:
+    """The page with this exact title (a redirect is followed), or None; a missing title is cached and not asked twice
+    unless refresh=True."""
     path = cache / f"title_{ygjson.slugify(title)}.json"
-    if not path.exists():
+    if refresh or not path.exists():
         pages = _query({"titles": title})["query"]["pages"]
         page = next((p for p in pages if not p.get("missing") and "pageid" in p), None)
         _write(path, page or {"missing": True, "title": title})
@@ -126,9 +129,9 @@ def clean(value: str) -> str:
     return " ".join(lines)
 
 
-def _template_body(text: str) -> str | None:
-    """The text between `{{Infobox set` and its matching `}}`, nested templates and links balanced."""
-    m = _OPEN.search(text)
+def _template_body(text: str, opener: re.Pattern = _OPEN) -> str | None:
+    """The text between the template `opener` matches and its matching `}}`, nested templates and links balanced."""
+    m = opener.search(text)
     if not m:
         return None
     depth, i = 1, m.end()
@@ -243,3 +246,62 @@ def named_in(raw: str) -> list[str]:
     for m in re.finditer(r"\[\[([^\[\]]*)\]\]", raw):
         names += [part.strip() for part in m.group(1).split("|")]
     return list(dict.fromkeys(clean(n) for n in names if n.strip()))
+
+
+# --- limitation lists ------------------------------------------------------------------------------------------
+
+_OPEN_LIST = re.compile(r"\{\{\s*Limitation list\b", re.IGNORECASE)
+_LIST_SECTIONS = {"forbidden": "banned", "limited": "limited", "semi_limited": "semi_limited"}
+
+
+def limitation_list(text: str) -> dict | None:
+    """The page's {{Limitation list}} as {date, next, statuses}: `date` is `start_date` in ISO form, `next` the title of
+    the following list or None, `statuses` {card name: banned, limited or semi_limited}. A line's `// note` is dropped.
+
+    None when the page has no such template, when `start_date` is not a full date, or when the forbidden or limited
+    section is empty: a card a list leaves out is legal, so a partial list would move cards that did not change."""
+    body = _template_body(_COMMENT.sub("", text), _OPEN_LIST)
+    if body is None:
+        return None
+    fields: dict[str, str] = {}
+    for field in _split_fields(body):
+        key, eq, value = field.partition("=")
+        if eq:
+            fields[key.strip().lower()] = value.strip()
+    start = clean(fields.get("start_date", ""))
+    date = parse_date(start) if _DATE_FULL.match(start) or _DATE_DMY.match(start) else None
+    if date is None or not fields.get("forbidden") or not fields.get("limited"):
+        return None
+    statuses: dict[str, str] = {}
+    for section, status in _LIST_SECTIONS.items():
+        for line in fields.get(section, "").splitlines():
+            name = html.unescape(line.split("//")[0]).strip()
+            if name:
+                statuses[name] = status
+    return {"date": date, "next": clean(fields.get("next", "")) or None, "statuses": statuses}
+
+
+def limitation_lists(first: str, cache: Path = DEFAULT_CACHE) -> list[dict]:
+    """Each list from the page titled `first` onward, oldest first, following `next`. A page with no `next` is asked for
+    again, since it gains one when a new list comes out. The walk ends at a next page that is missing or that holds no
+    readable list. ValueError when `first` itself holds none."""
+    lists: list[dict] = []
+    seen: set[str] = set()
+    title: str | None = first
+    while title and title not in seen:
+        seen.add(title)
+        parsed = _cached_list(title, cache, refresh=False)
+        if parsed is None or parsed["next"] is None:
+            parsed = _cached_list(title, cache, refresh=True)
+        if parsed is None:
+            break
+        lists.append(parsed)
+        title = parsed["next"]
+    if not lists:
+        raise ValueError(f"{first}: no limitation list")
+    return lists
+
+
+def _cached_list(title: str, cache: Path, refresh: bool) -> dict | None:
+    page = page_by_title(title, cache, refresh=refresh)
+    return limitation_list(wikitext(page)) if page else None

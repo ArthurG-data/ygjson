@@ -295,20 +295,31 @@ An event has `effective`, the date a source states, or `inForceBy`, the date the
   with source `ygojson` (2,847 events). YGOJSON's `forbidden`, `limited`, `semilimited` and `unlimited` are `banned`,
   `limited`, `semi_limited` and `legal`. Speed Duel also uses `limit1`, `limit2` and `limit3`, which are `limited`,
   `semi_limited` and `legal`. `unreleased` is not a status and makes no event.
+- **Dated lists.** YGOJSON's dates end with the October 2025 lists. From those lists onward, `tools/legality.py` reads
+  Yugipedia's list pages, such as `October 2026 Lists (TCG)`, and follows each page's `next` link. Each change a list
+  makes is an event with the page's `start_date` and source `yugipedia` (185 events). A list names every limited card,
+  so a card it leaves out is legal. The tool reads Yugipedia and not Konami's card database, because that database's
+  terms of use forbid automated collection.
 - **Current status.** YGOPRODeck's `banlist_info` leads for `tcg`, `ocg` and `goat`, and a card with no entry for a
-  format is legal. YGOJSON leads for `speed_duel`. The lead source's current status becomes an event only when it
-  differs from the card's last event, or from legal when there is none. That event has `inForceBy`, and the source
-  is `ygoprodeck` or `ygojson` (232 events). YGOPRODeck has no history and YGOJSON has no GOAT list, so every GOAT
-  event is of this kind.
-- **Dates stick.** `tools/legality.py` loads `bans.json` first and never rewrites or removes an event in it. A date it
-  wrote once stays across releases.
+  format is legal. YGOPRODeck gives no status to any name with `<` or `>`, including cards Konami's list limits, so its
+  silence on such a name says nothing. YGOJSON leads for `speed_duel`. The lead source's current status becomes an event
+  only when it differs from the card's last event, or from legal when there is none. That event has `inForceBy`, and
+  the source is `ygoprodeck` or `ygojson` (73 events). YGOPRODeck has no history and YGOJSON has no GOAT list, so every
+  GOAT event is of this kind. In `tcg` and `ocg` such an event means a list reached YGOPRODeck before Yugipedia.
+- **Exact dates replace undated ones.** `tools/legality.py` loads `bans.json` first and never rewrites or removes an
+  event with `effective`. It removes an `inForceBy` event once the dated events give the same status on its date, or
+  once the lead source no longer states the card. An `inForceBy` event the dated events contradict otherwise stays, so
+  a difference between the sources stays visible.
 
-The file holds 3,079 events: 1,553 in `ocg`, 1,388 in `tcg`, 73 in `goat` and 65 in `speed_duel`; 501 `banned`, 1,081
-`limited`, 725 `semi_limited` and 772 `legal`.
+The file holds 3,105 events: 1,572 in `ocg`, 1,395 in `tcg`, 73 in `goat` and 65 in `speed_duel`; 503 `banned`, 1,095
+`limited`, 738 `semi_limited` and 769 `legal`.
+
+The history before October 2025 can miss a list. Konami's TCG lists of April 14, 2021 and March 10, 2023 have no events
+here, so an event in the weeks after one of those dates reads as the list before it.
 
 `uv run python tools/legality.py --check` replays the events to today and compares each card and format with the lead
 source's current status. It prints each difference and exits 1 if there is any. A difference means a ban list changed
-since the last run: run `tools/legality.py` and commit `bans.json`. The check needs YGOPRODeck's card list and
+since the last run: run `tools/legality.py` and commit `bans.json`. The check does not read Yugipedia. It needs YGOPRODeck's card list and
 downloads it into `.cache/ygoprodeck` when it is missing, so CI checks the committed events against the list as it is
 today. `speed_duel` needs `.cache/ygojson` and is skipped without it.
 

@@ -131,3 +131,122 @@ def test_check_exits_1_on_a_difference_and_0_without(monkeypatch, capsys):
     assert code == 0 and "0 differences" in out and "speed_duel not checked" in out
     code, out = run_check(monkeypatch, capsys, events, [{"id": int(CARD), "banlist_info": {"ban_tcg": "Limited"}}])
     assert code == 1 and f"card {CARD} tcg: events say banned, ygoprodeck says limited" in out
+
+
+# --- dated lists ------------------------------------------------------------------------------------------------
+
+def dated_list(date, statuses, fmt="tcg"):
+    return {"format": fmt, "date": date, "statuses": statuses}
+
+
+def undated(card=CARD, fmt="tcg", status="limited", when="2026-10-28"):
+    return {"card": card, "format": fmt, "status": status, "inForceBy": when, "source": "ygoprodeck"}
+
+
+def test_a_list_makes_an_event_on_its_date_only_for_a_card_it_moves():
+    before = [event(CARD, status="banned", effective="2025-10-27"), event(OTHER, status="limited", effective="2025-10-27")]
+    got = legality.list_events([dated_list("2026-02-02", {CARD: "banned", OTHER: "semi_limited"})], before, "2026-11-07")
+    assert got == [{"card": OTHER, "format": "tcg", "status": "semi_limited", "effective": "2026-02-02", "source": "yugipedia"}]
+
+
+def test_a_card_that_leaves_a_list_becomes_legal_on_that_date():
+    before = [event(CARD, status="banned", effective="2025-10-27")]
+    got = legality.list_events([dated_list("2026-02-02", {OTHER: "limited"})], before, "2026-11-07")
+    assert {(e["card"], e["status"], e["effective"]) for e in got} == {(CARD, "legal", "2026-02-02"), (OTHER, "limited", "2026-02-02")}
+
+
+def test_lists_apply_in_date_order_whatever_order_they_arrive_in():
+    lists = [dated_list("2026-05-18", {CARD: "limited"}), dated_list("2026-02-02", {CARD: "banned"})]
+    assert [(e["status"], e["effective"]) for e in legality.list_events(lists, [], "2026-11-07")] == [
+        ("banned", "2026-02-02"), ("limited", "2026-05-18")]
+
+
+def test_a_list_reads_only_its_own_format():
+    before = [event(CARD, fmt="ocg", status="banned", effective="2025-10-01")]
+    got = legality.list_events([dated_list("2026-02-02", {OTHER: "limited"})], before, "2026-11-07")
+    assert [e["card"] for e in got] == [OTHER]
+
+
+def test_a_list_that_starts_after_today_makes_no_event_yet():
+    assert legality.list_events([dated_list("2026-12-01", {CARD: "banned"})], [], "2026-11-07") == []
+    assert len(legality.list_events([dated_list("2026-11-07", {CARD: "banned"})], [], "2026-11-07")) == 1
+
+
+def test_an_undated_row_a_list_explains_is_replaced_by_the_dated_event():
+    lists = [dated_list("2026-09-21", {CARD: "limited"})]
+    events, new = legality.merge([undated(status="limited")], [], {(CARD, "tcg"): "limited"}, "2026-11-07", lists)
+    assert events == [{"card": CARD, "format": "tcg", "status": "limited", "effective": "2026-09-21", "source": "yugipedia"}]
+    assert new == events
+
+
+def test_an_undated_row_the_lists_contradict_stays():
+    row = undated(status="banned")
+    lists = [dated_list("2026-09-21", {CARD: "limited"})]
+    events, _ = legality.merge([row], [], {(CARD, "tcg"): "banned"}, "2026-11-07", lists)
+    assert row in events
+    assert legality.current(events, "2026-11-07")[(CARD, "tcg")] == "banned"
+
+
+def test_a_goat_row_stays_when_lists_cover_other_formats():
+    row = undated(fmt="goat", status="limited")
+    lists = [dated_list("2026-09-21", {OTHER: "limited"})]
+    events, _ = legality.merge([row], [], {(CARD, "goat"): "limited"}, "2026-11-07", lists)
+    assert row in events
+
+
+def test_dated_events_stay_when_a_list_disagrees_on_the_same_date():
+    # AutoMana keys a row on card, format and date, so a second event on the date would fail its load.
+    kept = event(status="semi_limited", effective="2026-09-21")
+    events, new = legality.merge([kept], [], {}, "2026-11-07", [dated_list("2026-09-21", {CARD: "limited"})])
+    assert events == [kept] and new == []
+
+
+def test_a_list_that_arrives_after_the_fallback_row_replaces_it():
+    lead = {(CARD, "tcg"): "banned"}
+    first, _ = legality.merge([], [], lead, "2026-10-20")
+    assert [e.get("inForceBy") for e in first] == ["2026-10-20"]
+    second, _ = legality.merge(first, [], lead, "2026-11-07", [dated_list("2026-10-19", {CARD: "banned"})])
+    assert second == [{"card": CARD, "format": "tcg", "status": "banned", "effective": "2026-10-19", "source": "yugipedia"}]
+
+
+def test_a_second_run_with_lists_changes_nothing():
+    lists = [dated_list("2026-02-02", {CARD: "banned"}), dated_list("2026-09-21", {OTHER: "limited"})]
+    lead = {(CARD, "tcg"): "legal", (OTHER, "tcg"): "limited"}
+    first, _ = legality.merge([], [], lead, "2026-11-07", lists)
+    second, new = legality.merge(first, [], lead, "2026-11-30", lists)
+    assert second == first and new == []
+
+
+def test_list_names_match_past_punctuation_and_case():
+    files = {"a": {"cards": [{"id": "1", "name": "Maliss <P> Dormouse"}, {"id": "2", "name": "Morphing Jar #2"},
+                             {"id": "3", "name": "Droll & Lock Bird"}]}}
+    statuses, unmatched = legality.list_statuses(
+        {"Maliss P Dormouse": "banned", "morphing jar 2": "limited", "Droll & Lock Bird": "limited", "Not Ours": "banned"},
+        legality.ids_by_name(files))
+    assert statuses == {"1": "banned", "2": "limited", "3": "limited"}
+    assert unmatched == ["Not Ours"]
+
+
+def test_a_name_two_cards_share_matches_neither():
+    files = {"a": {"cards": [{"id": "1", "name": "Same-Name"}, {"id": "2", "name": "Same Name"}]}}
+    statuses, unmatched = legality.list_statuses({"Same Name": "banned"}, legality.ids_by_name(files))
+    assert statuses == {} and unmatched == ["Same Name"]
+
+
+def test_ygoprodeck_says_nothing_about_a_name_it_gives_no_status_for():
+    # YGOPRODeck has no banlist_info on any name with < >, including cards Konami's list limits.
+    prodeck = [{"id": int(CARD), "name": "Maliss <P> Dormouse"}, {"id": int(OTHER), "name": "Monster Reborn"}]
+    assert legality.lead_status(prodeck, None, {}, {CARD, OTHER}) == {
+        (OTHER, "tcg"): "legal", (OTHER, "ocg"): "legal", (OTHER, "goat"): "legal"}
+
+
+def test_a_status_on_a_name_with_angle_brackets_still_counts():
+    prodeck = [{"id": int(CARD), "name": "Maliss <P> Dormouse", "banlist_info": {"ban_tcg": "Limited"}}]
+    assert legality.lead_status(prodeck, None, {}, {CARD})[(CARD, "tcg")] == "limited"
+
+
+def test_an_undated_row_goes_when_its_source_no_longer_states_the_card():
+    dated = event(status="limited", effective="2026-05-18")
+    events, _ = legality.merge([dated, undated(status="legal")], [], {}, "2026-11-07")
+    assert events == [dated]
+    assert legality.current(events, "2026-11-07")[(CARD, "tcg")] == "limited"

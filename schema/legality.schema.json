@@ -20,7 +20,7 @@
           "status": {"enum": ["banned", "limited", "semi_limited", "legal"], "description": "Copies allowed: banned 0, limited 1, semi_limited 2, legal 3."},
           "effective": {"type": "string", "format": "date", "description": "The date the change took effect, when a source states it."},
           "inForceBy": {"type": "string", "format": "date", "description": "The date the tool first saw the status, for a status no source dates. The change may have started earlier."},
-          "source": {"type": "string", "minLength": 1, "description": "Where the event comes from: a URL or a source name (ygojson, ygoprodeck)."}
+          "source": {"type": "string", "minLength": 1, "description": "Where the event comes from: a URL or a source name (ygojson, yugipedia, ygoprodeck)."}
         }
       }
     }
