@@ -7471,10 +7471,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:98476659:WI26-EN034:ultra_rare",
+     "number": "WI26-EN034",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:98476659:WI26-EN034:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708864,
-       710145,
        710185
       ]
      },
@@ -7482,10 +7487,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pot of Sloth (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:98476659:WI26-EN034:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708864
+      ]
+     },
+     "number": "WI26-EN034",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Pot of Sloth (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:98476659:WI26-EN034:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710145
+      ]
+     },
+     "number": "WI26-EN034",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pot of Sloth (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-07-02"
@@ -8133,19 +8176,46 @@
     },
     {
      "id": "magician-s-force:98502113:MFC-105:ultra_rare",
+     "number": "MFC-105",
+     "rarity": "ultra_rare",
+     "set": "magician-s-force"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magician-s-force:98502113:MFC-105:ultra_rare:1st-edition-artwork",
      "identifiers": {
       "tcgplayerProductIds": [
-       21879,
+       21879
+      ]
+     },
+     "number": "MFC-105",
+     "rarity": "ultra_rare",
+     "set": "magician-s-force",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Paladin (1st Edition Artwork)"
+     },
+     "variant": "1st-edition-artwork"
+    },
+    {
+     "id": "magician-s-force:98502113:MFC-105:ultra_rare:reprint-artwork",
+     "identifiers": {
+      "tcgplayerProductIds": [
        155991
       ]
      },
      "number": "MFC-105",
      "rarity": "ultra_rare",
      "set": "magician-s-force",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Dark Paladin (1st Edition Artwork)"
-     }
+      "name": "Dark Paladin (Reprint Artwork)"
+     },
+     "variant": "reprint-artwork"
     },
     {
      "id": "millennium-pack:98502113:MIL1-EN041:common",
@@ -12602,10 +12672,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:98829635:WI26-EN033:ultra_rare",
+     "number": "WI26-EN033",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:98829635:WI26-EN033:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708863,
-       710144,
        710184
       ]
      },
@@ -12613,10 +12688,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Forbidden Crown (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:98829635:WI26-EN033:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708863
+      ]
+     },
+     "number": "WI26-EN033",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Forbidden Crown (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:98829635:WI26-EN033:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710144
+      ]
+     },
+     "number": "WI26-EN033",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Forbidden Crown (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-02-05"

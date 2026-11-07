@@ -3494,8 +3494,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:27204311:SDWD-EN016:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616573,
-       618793
+       616573
       ]
      },
      "number": "SDWD-EN016",
@@ -3506,6 +3505,27 @@
       "match": "number+rarity",
       "name": "Nibiru, the Primal Being"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:27204311:SDWD-EN016:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618793
+      ]
+     },
+     "number": "SDWD-EN016",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Nibiru, the Primal Being (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "the-chronicles-deck-the-fallen-the-virtuous-all-foil-edition:27204311:CH01-EN017:ultra_rare",
@@ -6492,9 +6512,7 @@
      "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713307,
-       713308,
-       714074
+       713307
       ]
      },
      "number": "26LP-EN010",
@@ -6510,11 +6528,52 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:secret_rare:emblazoned-alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       713308
+      ]
+     },
+     "number": "26LP-EN010",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "K9-17 \"Ripper\" (Emblazoned Alternate Art)"
+     },
+     "variant": "emblazoned-alternate-art"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714074
+      ]
+     },
+     "number": "26LP-EN010",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "K9-17 \"Ripper\" (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713306,
-       714094
+       713306
       ]
      },
      "number": "26LP-EN010",
@@ -6525,6 +6584,27 @@
       "match": "number+rarity",
       "name": "K9-17 \"Ripper\""
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714094
+      ]
+     },
+     "number": "26LP-EN010",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "K9-17 \"Ripper\" (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "rank": 5,

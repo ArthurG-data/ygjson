@@ -9860,10 +9860,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:65681983:WI26-EN027:ultra_rare",
+     "number": "WI26-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:65681983:WI26-EN027:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708857,
-       710138,
        710178
       ]
      },
@@ -9871,10 +9876,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crossout Designator (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:65681983:WI26-EN027:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708857
+      ]
+     },
+     "number": "WI26-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Crossout Designator (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:65681983:WI26-EN027:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710138
+      ]
+     },
+     "number": "WI26-EN027",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crossout Designator (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2021-09-30"
@@ -10852,8 +10895,7 @@
      "id": "maximum-gold-el-dorado:65741786:MGED-EN035:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       253942,
-       253946
+       253942
       ]
      },
      "number": "MGED-EN035",
@@ -10864,6 +10906,27 @@
       "match": "number+rarity",
       "name": "I:P Masquerena"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:65741786:MGED-EN035:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       253946
+      ]
+     },
+     "number": "MGED-EN035",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "I:P Masquerena (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "editions": [

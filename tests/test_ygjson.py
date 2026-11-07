@@ -131,6 +131,12 @@ def test_duplicate_ids_are_errors():
     assert any(f"print {PRINT_A} is listed twice" in e for e in errors(**docs))
 
 
+@pytest.mark.parametrize("variant, treatment", [(None, False), ("blue", False), ("b", False), ("version-2", False),
+                                                ("judge-stamp", True), ("extended-art", True), ("unlimited-misprint", True)])
+def test_is_treatment(variant, treatment):
+    assert ygjson.is_treatment({"variant": variant} if variant else {}) is treatment
+
+
 def test_print_id_must_follow_the_rule():
     def rename(c):
         c["046"]["cards"][0]["prints"][0]["id"] = f"{SET}:46986414:LOB-EN006:ultra_rare"

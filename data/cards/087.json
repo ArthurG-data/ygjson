@@ -1802,10 +1802,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:87126721:WI26-EN011:ultra_rare",
+     "number": "WI26-EN011",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:87126721:WI26-EN011:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708841,
-       710122,
        710162
       ]
      },
@@ -1813,10 +1818,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mulcharmy Meowls (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:87126721:WI26-EN011:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708841
+      ]
+     },
+     "number": "WI26-EN011",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mulcharmy Meowls (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:87126721:WI26-EN011:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710122
+      ]
+     },
+     "number": "WI26-EN011",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mulcharmy Meowls (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2025-01-23",
@@ -8834,8 +8877,7 @@
      "id": "magnificent-monsters:87758525:MAMO-EN004:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714707,
-       714708
+       714707
       ]
      },
      "number": "MAMO-EN004",
@@ -8846,6 +8888,27 @@
       "match": "number+rarity",
       "name": "Favorite HERO Shining Flare Wingman"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:87758525:MAMO-EN004:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714708
+      ]
+     },
+     "number": "MAMO-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Favorite HERO Shining Flare Wingman (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:87758525:MAMO-EN004:unknown",

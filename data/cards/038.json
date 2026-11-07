@@ -1084,9 +1084,33 @@
     },
     {
      "id": "quarter-century-stampede:38033121:RA04-EN107:platinum_secret_rare",
+     "number": "RA04-EN107",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede"
+    },
+    {
+     "id": "quarter-century-stampede:38033121:RA04-EN107:platinum_secret_rare:3rd-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       627277,
+       627277
+      ]
+     },
+     "number": "RA04-EN107",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (3rd Art) (Platinum Secret Rare)"
+     },
+     "variant": "3rd-art"
+    },
+    {
+     "id": "quarter-century-stampede:38033121:RA04-EN107:platinum_secret_rare:7th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
        627278
       ]
      },
@@ -1094,16 +1118,42 @@
      "rarity": "platinum_secret_rare",
      "region": "EN",
      "set": "quarter-century-stampede",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Dark Magician Girl (3rd Art) (Platinum Secret Rare)"
-     }
+      "name": "Dark Magician Girl (7th Art) (Platinum Secret Rare)"
+     },
+     "variant": "7th-art"
     },
     {
      "id": "quarter-century-stampede:38033121:RA04-EN107:qc_secret_rare",
+     "number": "RA04-EN107",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede"
+    },
+    {
+     "id": "quarter-century-stampede:38033121:RA04-EN107:qc_secret_rare:3rd-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       627279,
+       627279
+      ]
+     },
+     "number": "RA04-EN107",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician Girl (3rd Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "3rd-art"
+    },
+    {
+     "id": "quarter-century-stampede:38033121:RA04-EN107:qc_secret_rare:7th-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
        627280
       ]
      },
@@ -1111,10 +1161,12 @@
      "rarity": "qc_secret_rare",
      "region": "EN",
      "set": "quarter-century-stampede",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Dark Magician Girl (3rd Art) (Quarter Century Secret Rare)"
-     }
+      "name": "Dark Magician Girl (7th Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "7th-art"
     },
     {
      "editions": [
@@ -2962,8 +3014,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:38120068:SDWD-EN025:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616582,
-       618801
+       616582
       ]
      },
      "number": "SDWD-EN025",
@@ -2971,9 +3022,30 @@
      "region": "EN",
      "set": "structure-deck-blue-eyes-white-destiny",
      "tcgplayer": {
-      "match": "number",
+      "match": "number+rarity",
       "name": "Trade-In"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:38120068:SDWD-EN025:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618801
+      ]
+     },
+     "number": "SDWD-EN025",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Trade-In (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "structure-deck-fire-kings:38120068:SR14-EN031:common",
@@ -6008,8 +6080,7 @@
      "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:collectors_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       524533,
-       524548
+       524533
       ]
      },
      "number": "RA01-EN043",
@@ -6022,11 +6093,28 @@
      }
     },
     {
+     "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:collectors_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       524548
+      ]
+     },
+     "number": "RA01-EN043",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art) (PCR)"
+     },
+     "variant": "alternate-art"
+    },
+    {
      "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:platinum_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       524528,
-       524542
+       524528
       ]
      },
      "number": "RA01-EN043",
@@ -6039,11 +6127,28 @@
      }
     },
     {
+     "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:platinum_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       524542
+      ]
+     },
+     "number": "RA01-EN043",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art) (Platinum Secret Rare)"
+     },
+     "variant": "alternate-art"
+    },
+    {
      "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       524530,
-       524544
+       524530
       ]
      },
      "number": "RA01-EN043",
@@ -6056,11 +6161,28 @@
      }
     },
     {
+     "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       524544
+      ]
+     },
+     "number": "RA01-EN043",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
+    },
+    {
      "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       524526,
-       524541
+       524526
       ]
      },
      "number": "RA01-EN043",
@@ -6073,11 +6195,28 @@
      }
     },
     {
+     "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       524541
+      ]
+     },
+     "number": "RA01-EN043",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art) (Secret Rare)"
+     },
+     "variant": "alternate-art"
+    },
+    {
      "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       524511,
-       524535
+       524511
       ]
      },
      "number": "RA01-EN043",
@@ -6090,11 +6229,28 @@
      }
     },
     {
+     "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:super_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       524535
+      ]
+     },
+     "number": "RA01-EN043",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art)"
+     },
+     "variant": "alternate-art"
+    },
+    {
      "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       524532,
-       524545
+       524532
       ]
      },
      "number": "RA01-EN043",
@@ -6107,11 +6263,28 @@
      }
     },
     {
+     "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:ultimate_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       524545
+      ]
+     },
+     "number": "RA01-EN043",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art) (PUR)"
+     },
+     "variant": "alternate-art"
+    },
+    {
      "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       524514,
-       524539
+       524514
       ]
      },
      "number": "RA01-EN043",
@@ -6122,6 +6295,24 @@
       "match": "number+rarity",
       "name": "Knightmare Unicorn (UR)"
      }
+    },
+    {
+     "id": "25th-anniversary-rarity-collection:38342335:RA01-EN043:ultra_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       524539
+      ]
+     },
+     "number": "RA01-EN043",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "25th-anniversary-rarity-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art) (UR)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "battles-of-legend-monster-mayhem:38342335:BLMM-EN092:ultra_rare",
@@ -6194,8 +6385,7 @@
      "id": "maximum-gold-el-dorado:38342335:MGED-EN034:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       253941,
-       253945
+       253941
       ]
      },
      "number": "MGED-EN034",
@@ -6206,6 +6396,27 @@
       "match": "number+rarity",
       "name": "Knightmare Unicorn"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:38342335:MGED-EN034:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       253945
+      ]
+     },
+     "number": "MGED-EN034",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Knightmare Unicorn (Alternate Art)"
+     },
+     "variant": "alternate-art"
     }
    ],
    "tcgDate": "2018-05-03",
@@ -9299,8 +9510,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:38517737:SDWD-EN005:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616562,
-       618782
+       616562
       ]
      },
      "number": "SDWD-EN005",
@@ -9311,6 +9521,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Alternative White Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:38517737:SDWD-EN005:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618782
+      ]
+     },
+     "number": "SDWD-EN005",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Alternative White Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "world-championship-jpp-cards:38517737:2017-JPP02:secret_rare",
@@ -10543,10 +10774,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:38572779:WI26-EN002:ultra_rare",
+     "number": "WI26-EN002",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:38572779:WI26-EN002:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708832,
-       710113,
        710153
       ]
      },
@@ -10554,10 +10790,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Miscellaneousaurus (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:38572779:WI26-EN002:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708832
+      ]
+     },
+     "number": "WI26-EN002",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Miscellaneousaurus (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:38572779:WI26-EN002:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710113
+      ]
+     },
+     "number": "WI26-EN002",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Miscellaneousaurus (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2017-02-09",

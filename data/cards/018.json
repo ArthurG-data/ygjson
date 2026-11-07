@@ -1790,8 +1790,7 @@
      "id": "early-days-collection-promotional-cards:18144507:EDC1-EN001:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       621151,
-       621152
+       621151
       ]
      },
      "number": "EDC1-EN001",
@@ -1803,6 +1802,24 @@
       "match": "minted",
       "name": "Harpie's Feather Duster"
      }
+    },
+    {
+     "id": "early-days-collection-promotional-cards:18144507:EDC1-EN001:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       621152
+      ]
+     },
+     "number": "EDC1-EN001",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "early-days-collection-promotional-cards",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Harpie's Feather Duster (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "egyptian-god-deck-obelisk-the-tormentor:18144507:EGO1-EN022:super_rare",
@@ -1969,10 +1986,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:18144507:WI26-EN020:ultra_rare",
+     "number": "WI26-EN020",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:18144507:WI26-EN020:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708850,
-       710131,
        710171
       ]
      },
@@ -1980,10 +2002,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie's Feather Duster (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:18144507:WI26-EN020:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708850
+      ]
+     },
+     "number": "WI26-EN020",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Harpie's Feather Duster (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:18144507:WI26-EN020:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710131
+      ]
+     },
+     "number": "WI26-EN020",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie's Feather Duster (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     },
     {
      "editions": [
@@ -9882,10 +9942,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:18738846:WI26-EN015:ultra_rare",
+     "number": "WI26-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:18738846:WI26-EN015:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708845,
-       710126,
        710166
       ]
      },
@@ -9893,10 +9958,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Astrazma Urania (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:18738846:WI26-EN015:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708845
+      ]
+     },
+     "number": "WI26-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Astrazma Urania (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:18738846:WI26-EN015:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710126
+      ]
+     },
+     "number": "WI26-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Astrazma Urania (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-07-02",

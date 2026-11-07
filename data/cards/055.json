@@ -6188,8 +6188,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:55410871:SDWD-EN009:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616566,
-       618786
+       616566
       ]
      },
      "number": "SDWD-EN009",
@@ -6200,6 +6199,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Chaos MAX Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:55410871:SDWD-EN009:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618786
+      ]
+     },
+     "number": "SDWD-EN009",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Chaos MAX Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "editions": [
@@ -13663,8 +13683,7 @@
      "id": "maximum-gold:55878038:MAGO-EN017:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227436,
-       227437
+       227436
       ]
      },
      "number": "MAGO-EN017",
@@ -13675,6 +13694,24 @@
       "match": "number+rarity",
       "name": "Chaos Dragon Levianeer"
      }
+    },
+    {
+     "id": "maximum-gold:55878038:MAGO-EN017:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227437
+      ]
+     },
+     "number": "MAGO-EN017",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chaos Dragon Levianeer (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "ots-tournament-pack-12-por:55878038:OP12-PT001:ultimate_rare",

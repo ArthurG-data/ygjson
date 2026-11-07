@@ -2172,10 +2172,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:33166263:WI26-EN017:ultra_rare",
+     "number": "WI26-EN017",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:33166263:WI26-EN017:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708847,
-       710128,
        710168
       ]
      },
@@ -2183,10 +2188,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Hyperinvoked Aeon (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:33166263:WI26-EN017:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708847
+      ]
+     },
+     "number": "WI26-EN017",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Hyperinvoked Aeon (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:33166263:WI26-EN017:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710128
+      ]
+     },
+     "number": "WI26-EN017",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Hyperinvoked Aeon (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-07-02",
@@ -5888,21 +5931,47 @@
     },
     {
      "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:unknown",
+     "number": "25LP-EN000",
+     "rarity": "unknown",
+     "rawRarity": "New artwork",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2025"
+    },
+    {
+     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:unknown:emblazoned-secret-rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       650889,
        650890
       ]
      },
      "number": "25LP-EN000",
      "rarity": "unknown",
-     "rawRarity": "New artwork",
      "region": "EN",
      "set": "limited-pack-world-championship-2025",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number",
+      "name": "Exodia the Forbidden One (ESR)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:unknown:emblazoned-ultra-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       650889
+      ]
+     },
+     "number": "25LP-EN000",
+     "rarity": "unknown",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2025",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number",
       "name": "Exodia the Forbidden One (EUR)"
-     }
+     },
+     "variant": "emblazoned-ultra-rare"
     },
     {
      "id": "master-collection-volume-1:33396948:MC1-EN001:secret_rare",
@@ -11244,8 +11313,7 @@
      "id": "limited-pack-world-championship-2026:33760966:26LP-EN003:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713298,
-       714070
+       713298
       ]
      },
      "number": "26LP-EN003",
@@ -11261,11 +11329,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:33760966:26LP-EN003:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714070
+      ]
+     },
+     "number": "26LP-EN003",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dracotail Arthalion (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:33760966:26LP-EN003:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713297,
-       714090
+       713297
       ]
      },
      "number": "26LP-EN003",
@@ -11276,6 +11364,27 @@
       "match": "number+rarity",
       "name": "Dracotail Arthalion"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:33760966:26LP-EN003:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714090
+      ]
+     },
+     "number": "26LP-EN003",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dracotail Arthalion (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2025-07-31",

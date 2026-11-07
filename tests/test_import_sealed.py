@@ -20,8 +20,9 @@ def mkcard(card_id, name, prints, **identifiers):
             "isTuner": False, "identifiers": {"ygoprodeckId": int(card_id), **identifiers}, "prints": prints}
 
 
-def mkprint(set_id, card_id, number, rarity="rare"):
-    return {"id": ygjson.print_id(set_id, card_id, number, rarity), "set": set_id, "number": number, "rarity": rarity}
+def mkprint(set_id, card_id, number, rarity="rare", variant=None):
+    p = {"id": ygjson.print_id(set_id, card_id, number, rarity, variant), "set": set_id, "number": number, "rarity": rarity}
+    return {**p, "variant": variant, "source": "tcgplayer"} if variant else p
 
 
 def prod(group_id, name, product_id=None, released=None):
@@ -207,6 +208,21 @@ def test_decks_tins_and_special_editions_list_their_sets_prints_only_in_a_set_th
     # A special edition filed under a tin set does not list the tin's prints.
     se = out["by_name"]["2020 Special Edition Box"]
     assert (se["contents"], se["contentsStatus"]) == ({}, "unknown")
+
+
+def test_a_deck_lists_a_cards_art_letters_but_not_its_treatments():
+    base, art = mkprint("sd", "100", "SD-EN001"), mkprint("sd", "100", "SD-EN001", variant="b")
+    misprint = mkprint("sd", "100", "SD-EN001", variant="unlimited-misprint")
+    products = {1: [prod(1, "Some Structure Deck")]}
+    out = build(products, [mkset("sd", "Some Structure Deck", "structure_deck", groups=[1])],
+                [mkcard("100", "A", [base, art, misprint])])
+    assert out["by_name"]["Some Structure Deck"]["contents"] == {"cards": [{"print": base["id"]}, {"print": art["id"]}]}
+
+
+def test_a_treatment_does_not_make_a_cards_print_in_a_set_ambiguous():
+    base, stamp = mkprint("sd", "100", "SD-EN001"), mkprint("sd", "100", "SD-EN001", variant="judge-stamp")
+    ctx = imp.Context([], [mkset("sd", "Some Structure Deck", "structure_deck")], {"000": {"cards": [mkcard("100", "A", [base, stamp])]}})
+    assert ctx.card_prints[("100", "sd")] == [base["id"]]
 
 
 def test_a_deck_in_a_booster_set_is_unknown():

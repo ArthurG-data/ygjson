@@ -6446,10 +6446,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:44394295:WI26-EN024:ultra_rare",
+     "number": "WI26-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:44394295:WI26-EN024:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708854,
-       710135,
        710175
       ]
      },
@@ -6457,10 +6462,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Shaddoll Fusion (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:44394295:WI26-EN024:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708854
+      ]
+     },
+     "number": "WI26-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Shaddoll Fusion (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:44394295:WI26-EN024:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710135
+      ]
+     },
+     "number": "WI26-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Shaddoll Fusion (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     },
     {
      "id": "yu-gi-oh-championship-series-2025-prize-cards:44394295:25YC-ENP09:rare",

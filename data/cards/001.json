@@ -2745,8 +2745,7 @@
      "id": "magnificent-monsters:1186447:MAMO-EN014:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714727,
-       714728
+       714727
       ]
      },
      "number": "MAMO-EN014",
@@ -2757,6 +2756,27 @@
       "match": "number+rarity",
       "name": "Horoscope Sorcerer, the Stargazer Magician"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:1186447:MAMO-EN014:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714728
+      ]
+     },
+     "number": "MAMO-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Horoscope Sorcerer, the Stargazer Magician (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:1186447:MAMO-EN014:unknown",
@@ -7511,9 +7531,7 @@
      "id": "limited-pack-world-championship-2026:1498449:26LP-EN002:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713299,
-       713301,
-       714071
+       713299
       ]
      },
      "number": "26LP-EN002",
@@ -7529,11 +7547,52 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:1498449:26LP-EN002:secret_rare:emblazoned-alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       713301
+      ]
+     },
+     "number": "26LP-EN002",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dracotail Faimena (Emblazoned Alternate Art)"
+     },
+     "variant": "emblazoned-alternate-art"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:1498449:26LP-EN002:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714071
+      ]
+     },
+     "number": "26LP-EN002",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dracotail Faimena (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:1498449:26LP-EN002:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713300,
-       714091
+       713300
       ]
      },
      "number": "26LP-EN002",
@@ -7544,6 +7603,27 @@
       "match": "number+rarity",
       "name": "Dracotail Faimena"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:1498449:26LP-EN002:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714091
+      ]
+     },
+     "number": "26LP-EN002",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dracotail Faimena (Emblazoned)"
+     },
+     "variant": "emblazoned"
     },
     {
      "editions": [

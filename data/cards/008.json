@@ -3470,8 +3470,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:8240199:SDWD-EN013:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616570,
-       618790
+       616570
       ]
      },
      "number": "SDWD-EN013",
@@ -3479,9 +3478,30 @@
      "region": "EN",
      "set": "structure-deck-blue-eyes-white-destiny",
      "tcgplayer": {
-      "match": "number",
+      "match": "number+rarity",
       "name": "Sage with Eyes of Blue"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:8240199:SDWD-EN013:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618790
+      ]
+     },
+     "number": "SDWD-EN013",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sage with Eyes of Blue (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2016-05-05",

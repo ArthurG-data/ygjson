@@ -5823,8 +5823,7 @@
      "id": "magnificent-monsters:76504386:MAMO-EN010:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714719,
-       714720
+       714719
       ]
      },
      "number": "MAMO-EN010",
@@ -5835,6 +5834,27 @@
       "match": "number+rarity",
       "name": "Number 39: Utopia, Emissary of Light"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:76504386:MAMO-EN010:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714720
+      ]
+     },
+     "number": "MAMO-EN010",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Number 39: Utopia, Emissary of Light (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:76504386:MAMO-EN010:unknown",
@@ -7523,8 +7543,7 @@
      "id": "magnificent-monsters:76636978:MAMO-EN007:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714713,
-       714714
+       714713
       ]
      },
      "number": "MAMO-EN007",
@@ -7535,6 +7554,27 @@
       "match": "number+rarity",
       "name": "Stardust Dragon - Victim Sanctuary"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:76636978:MAMO-EN007:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714714
+      ]
+     },
+     "number": "MAMO-EN007",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Stardust Dragon - Victim Sanctuary (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:76636978:MAMO-EN007:unknown",
@@ -10146,19 +10186,46 @@
     },
     {
      "id": "metal-raiders:76812113:MRD-008:common",
+     "number": "MRD-008",
+     "rarity": "common",
+     "set": "metal-raiders"
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "metal-raiders:76812113:MRD-008:common:new-artwork",
      "identifiers": {
       "tcgplayerProductIds": [
-       22062,
        173924
       ]
      },
      "number": "MRD-008",
      "rarity": "common",
      "set": "metal-raiders",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Harpie Lady (New Artwork)"
+     },
+     "variant": "new-artwork"
+    },
+    {
+     "id": "metal-raiders:76812113:MRD-008:common:original-artwork",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       22062
+      ]
+     },
+     "number": "MRD-008",
+     "rarity": "common",
+     "set": "metal-raiders",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Harpie Lady (Original Artwork)"
-     }
+     },
+     "variant": "original-artwork"
     },
     {
      "id": "metal-raiders:76812113:MRD-E008:common",

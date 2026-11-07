@@ -658,10 +658,39 @@
       "first"
      ],
      "id": "maximum-gold-el-dorado:5043010:MGED-EN141:rare",
+     "number": "MGED-EN141",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:5043010:MGED-EN141:rare:purple-alternate-art",
      "identifiers": {
       "tcgplayerProductIds": [
-       254481,
-       254482,
+       254482
+      ]
+     },
+     "number": "MGED-EN141",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Firewall Dragon (Purple Alternate Art)"
+     },
+     "variant": "purple-alternate-art"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:5043010:MGED-EN141:rare:red-alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
        254483
       ]
      },
@@ -669,10 +698,33 @@
      "rarity": "rare",
      "region": "EN",
      "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Firewall Dragon (Red Alternate Art)"
+     },
+     "variant": "red-alternate-art"
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:5043010:MGED-EN141:rare:teal-original-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       254481
+      ]
+     },
+     "number": "MGED-EN141",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Firewall Dragon (Teal Original Art)"
-     }
+     },
+     "variant": "teal-original-art"
     },
     {
      "id": "ots-tournament-pack-16-por:5043010:OP16-PT002:ultimate_rare",
@@ -7103,10 +7155,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:5380979:WI26-EN038:ultra_rare",
+     "number": "WI26-EN038",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:5380979:WI26-EN038:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708868,
-       710149,
        710189
       ]
      },
@@ -7114,10 +7171,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Welcome Labrynth (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:5380979:WI26-EN038:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708868
+      ]
+     },
+     "number": "WI26-EN038",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Welcome Labrynth (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:5380979:WI26-EN038:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710149
+      ]
+     },
+     "number": "WI26-EN038",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Welcome Labrynth (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2022-08-25"

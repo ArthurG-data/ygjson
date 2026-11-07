@@ -5172,8 +5172,7 @@
      "id": "quarter-century-stampede:20366275:RA04-EN229:platinum_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       627531,
-       627533
+       627531
       ]
      },
      "number": "RA04-EN229",
@@ -5187,11 +5186,28 @@
      }
     },
     {
+     "id": "quarter-century-stampede:20366275:RA04-EN229:platinum_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627533
+      ]
+     },
+     "number": "RA04-EN229",
+     "rarity": "platinum_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "El Shaddoll Construct (Platinum Secret Rare) (Alternate Art)"
+     },
+     "variant": "alternate-art"
+    },
+    {
      "id": "quarter-century-stampede:20366275:RA04-EN229:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       627532,
-       627534
+       627532
       ]
      },
      "number": "RA04-EN229",
@@ -5203,6 +5219,24 @@
       "match": "minted",
       "name": "El Shaddoll Construct (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-stampede:20366275:RA04-EN229:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627534
+      ]
+     },
+     "number": "RA04-EN229",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "El Shaddoll Construct (Quarter Century Secret Rare) (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "structure-deck-shaddoll-showdown:20366275:SDSH-EN046:ultra_rare",
@@ -9901,8 +9935,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:20654247:SDWD-EN010:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616567,
-       618787
+       616567
       ]
      },
      "number": "SDWD-EN010",
@@ -9913,6 +9946,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Chaos Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:20654247:SDWD-EN010:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618787
+      ]
+     },
+     "number": "SDWD-EN010",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Chaos Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2018-09-27",

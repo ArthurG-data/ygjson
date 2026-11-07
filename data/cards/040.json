@@ -448,6 +448,27 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:40044918:BLC1-EN022:ultra_rare:alternate-art-silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538655
+      ]
+     },
+     "number": "BLC1-EN022",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Elemental HERO Stratos (Alternate Art) (Silver)"
+     },
+     "variant": "alternate-art-silver"
+    },
+    {
      "id": "battles-of-legend-hero-s-revenge:40044918:BLHR-EN061:secret_rare",
      "number": "BLHR-EN061",
      "rarity": "secret_rare",
@@ -3740,8 +3761,7 @@
      "id": "magnificent-monsters:40237839:MAMO-EN006:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714711,
-       714712
+       714711
       ]
      },
      "number": "MAMO-EN006",
@@ -3752,6 +3772,27 @@
       "match": "number+rarity",
       "name": "Winged Kuriboh Sabatiel LV10"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:40237839:MAMO-EN006:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714712
+      ]
+     },
+     "number": "MAMO-EN006",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Winged Kuriboh Sabatiel LV10 (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:40237839:MAMO-EN006:unknown",
@@ -9205,10 +9246,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:40605147:WI26-EN035:ultra_rare",
+     "number": "WI26-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:40605147:WI26-EN035:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708865,
-       710146,
        710186
       ]
      },
@@ -9216,10 +9262,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Solemn Strike (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:40605147:WI26-EN035:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708865
+      ]
+     },
+     "number": "WI26-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Solemn Strike (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:40605147:WI26-EN035:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710146
+      ]
+     },
+     "number": "WI26-EN035",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Solemn Strike (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2016-01-14"
@@ -15024,8 +15108,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:40908371:SDWD-EN039:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616596,
-       618812
+       616596
       ]
      },
      "number": "SDWD-EN039",
@@ -15036,6 +15119,27 @@
       "match": "number+rarity",
       "name": "Azure-Eyes Silver Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:40908371:SDWD-EN039:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618812
+      ]
+     },
+     "number": "SDWD-EN039",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Azure-Eyes Silver Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2013-09-12",
@@ -15771,10 +15875,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:40939228:WI26-EN018:ultra_rare",
+     "number": "WI26-EN018",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:40939228:WI26-EN018:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708848,
-       710129,
        710169
       ]
      },
@@ -15782,10 +15891,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Shooting Majestic Star Dragon (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:40939228:WI26-EN018:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708848
+      ]
+     },
+     "number": "WI26-EN018",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Shooting Majestic Star Dragon (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:40939228:WI26-EN018:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710129
+      ]
+     },
+     "number": "WI26-EN018",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Shooting Majestic Star Dragon (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2021-08-12",

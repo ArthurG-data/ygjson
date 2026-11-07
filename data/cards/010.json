@@ -230,8 +230,7 @@
      "id": "legendary-collection:10000000:LC01-EN001:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       79079,
-       491803
+       79079
       ]
      },
      "number": "LC01-EN001",
@@ -243,6 +242,24 @@
       "match": "minted",
       "name": "Obelisk the Tormentor"
      }
+    },
+    {
+     "id": "legendary-collection:10000000:LC01-EN001:ultra_rare:25th-anniversary-edition",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       491803
+      ]
+     },
+     "number": "LC01-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Obelisk the Tormentor (25th Anniversary Edition)"
+     },
+     "variant": "25th-anniversary-edition"
     },
     {
      "editions": [
@@ -720,8 +737,7 @@
      "id": "legendary-collection:10000010:LC01-EN003:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       79081,
-       491807
+       79081
       ]
      },
      "number": "LC01-EN003",
@@ -733,6 +749,24 @@
       "match": "minted",
       "name": "The Winged Dragon of Ra"
      }
+    },
+    {
+     "id": "legendary-collection:10000010:LC01-EN003:ultra_rare:25th-anniversary-edition",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       491807
+      ]
+     },
+     "number": "LC01-EN003",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "The Winged Dragon of Ra (25th Anniversary Edition)"
+     },
+     "variant": "25th-anniversary-edition"
     },
     {
      "editions": [
@@ -1255,8 +1289,7 @@
      "id": "legendary-collection:10000020:LC01-EN002:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       79080,
-       491805
+       79080
       ]
      },
      "number": "LC01-EN002",
@@ -1268,6 +1301,24 @@
       "match": "minted",
       "name": "Slifer the Sky Dragon"
      }
+    },
+    {
+     "id": "legendary-collection:10000020:LC01-EN002:ultra_rare:25th-anniversary-edition",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       491805
+      ]
+     },
+     "number": "LC01-EN002",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "legendary-collection",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Slifer the Sky Dragon (25th Anniversary Edition)"
+     },
+     "variant": "25th-anniversary-edition"
     },
     {
      "editions": [
@@ -3757,8 +3808,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:10045474:SDWD-EN031:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616588,
-       618806
+       616588
       ]
      },
      "number": "SDWD-EN031",
@@ -3769,6 +3819,27 @@
       "match": "number+rarity",
       "name": "Infinite Impermanence"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:10045474:SDWD-EN031:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618806
+      ]
+     },
+     "number": "SDWD-EN031",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infinite Impermanence (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "structure-deck-cyber-strike:10045474:SDCS-EN036:super_rare",
@@ -3804,10 +3875,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:10045474:WI26-EN037:ultra_rare",
+     "number": "WI26-EN037",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:10045474:WI26-EN037:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708867,
-       710148,
        710188
       ]
      },
@@ -3815,10 +3891,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infinite Impermanence (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:10045474:WI26-EN037:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708867
+      ]
+     },
+     "number": "WI26-EN037",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Infinite Impermanence (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:10045474:WI26-EN037:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710148
+      ]
+     },
+     "number": "WI26-EN037",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infinite Impermanence (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2018-05-03"
@@ -8715,8 +8829,7 @@
      "id": "maximum-gold:10443958:MAGO-EN033:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227453,
-       227454
+       227453
       ]
      },
      "number": "MAGO-EN033",
@@ -8727,6 +8840,24 @@
       "match": "number+rarity",
       "name": "Cyber Dragon Infinity"
      }
+    },
+    {
+     "id": "maximum-gold:10443958:MAGO-EN033:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227454
+      ]
+     },
+     "number": "MAGO-EN033",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon Infinity (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-stampede:10443958:RA04-EN068:collectors_rare",
@@ -8766,7 +8897,6 @@
      "id": "quarter-century-stampede:10443958:RA04-EN068:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       627039,
        627040
       ]
      },
@@ -8777,8 +8907,26 @@
      "source": "tcgplayer",
      "tcgplayer": {
       "match": "minted",
-      "name": "Cyber Dragon Infinity (Alternate Art) (Quarter Century Secret Rare)"
+      "name": "Cyber Dragon Infinity (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-stampede:10443958:RA04-EN068:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       627039
+      ]
+     },
+     "number": "RA04-EN068",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-stampede",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Cyber Dragon Infinity (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-stampede:10443958:RA04-EN068:secret_rare",
@@ -13938,8 +14086,7 @@
      "id": "maximum-gold:10802915:MAGO-EN007:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227420,
-       227421
+       227420
       ]
      },
      "number": "MAGO-EN007",
@@ -13950,6 +14097,24 @@
       "match": "number+rarity",
       "name": "Tour Guide From the Underworld"
      }
+    },
+    {
+     "id": "maximum-gold:10802915:MAGO-EN007:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227421
+      ]
+     },
+     "number": "MAGO-EN007",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Tour Guide From the Underworld (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-stampede:10802915:RA04-EN157:platinum_secret_rare",

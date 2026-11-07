@@ -2571,8 +2571,7 @@
      "id": "limited-pack-world-championship-2026:6153210:26LP-EN004:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713310,
-       714075
+       713310
       ]
      },
      "number": "26LP-EN004",
@@ -2588,11 +2587,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:6153210:26LP-EN004:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714075
+      ]
+     },
+     "number": "26LP-EN004",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ketu Dracotail (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:6153210:26LP-EN004:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713309,
-       714095
+       713309
       ]
      },
      "number": "26LP-EN004",
@@ -2603,6 +2622,27 @@
       "match": "number+rarity",
       "name": "Ketu Dracotail"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:6153210:26LP-EN004:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714095
+      ]
+     },
+     "number": "26LP-EN004",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ketu Dracotail (Emblazoned)"
+     },
+     "variant": "emblazoned"
     },
     {
      "id": "ots-tournament-pack-29:6153210:OP29-EN003:ultimate_rare",

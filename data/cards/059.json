@@ -6227,8 +6227,7 @@
      "id": "maximum-gold:59438930:MAGO-EN009:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227423,
-       227424
+       227423
       ]
      },
      "number": "MAGO-EN009",
@@ -6239,6 +6238,24 @@
       "match": "number+rarity",
       "name": "Ghost Ogre & Snow Rabbit"
      }
+    },
+    {
+     "id": "maximum-gold:59438930:MAGO-EN009:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227424
+      ]
+     },
+     "number": "MAGO-EN009",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Ogre & Snow Rabbit (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "ots-tournament-pack-5:59438930:OP05-EN001:ultimate_rare",
@@ -6440,10 +6457,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:59438930:WI26-EN001:ultra_rare",
+     "number": "WI26-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:59438930:WI26-EN001:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708831,
-       710112,
        710152
       ]
      },
@@ -6451,10 +6473,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Ogre & Snow Rabbit (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:59438930:WI26-EN001:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708831
+      ]
+     },
+     "number": "WI26-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Ghost Ogre & Snow Rabbit (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:59438930:WI26-EN001:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710112
+      ]
+     },
+     "number": "WI26-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Ogre & Snow Rabbit (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2015-05-14",
@@ -12786,8 +12846,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:59822133:SDWD-EN038:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616595,
-       618811
+       616595
       ]
      },
      "number": "SDWD-EN038",
@@ -12798,6 +12857,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Spirit Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:59822133:SDWD-EN038:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618811
+      ]
+     },
+     "number": "SDWD-EN038",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Spirit Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2016-05-05",

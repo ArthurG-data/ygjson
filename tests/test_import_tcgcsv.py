@@ -275,7 +275,9 @@ def test_rule_4_a_number_in_exactly_one_other_set_is_an_alias():
     products = {1: [single(1, "Alpha", "CT09-EN001", "Ultra Rare", 7), single(1, "Alpha (Alternate Art)", "CT09-EN001", "Ultra Rare", 8)]}
     out = go(groups, products, {}, [LOB, tins], cards)
     p = prints_of(out, "100")["tins:100:CT09-EN001:ultra_rare"]
-    assert p["tcgplayer"]["match"] == "number-other-set" and p["identifiers"]["tcgplayerProductIds"] == [7, 8]
+    assert p["tcgplayer"]["match"] == "number-other-set" and p["identifiers"]["tcgplayerProductIds"] == [7]
+    art = prints_of(out, "100")["tins:100:CT09-EN001:ultra_rare:alternate-art"]
+    assert art["identifiers"]["tcgplayerProductIds"] == [8]
     assert out["review"]["groupAliases"] == [{"groupId": 1, "name": "2012 Collectors Tin", "setsHit": {"tins": 2}}]
     assert out["review"]["groups"][0]["groupId"] == 1  # the group itself stays unmatched
 
@@ -446,7 +448,7 @@ def test_a_rarity_only_the_field_states_is_a_conflict_and_not_a_new_print():
 def test_tags_naming_two_versions_go_to_review_and_a_refused_colour_leaves_no_print():
     w = world([mkprint("lob", "100", "LOB-EN001", "common")])
     products = {1: [single(1, "Alpha (Blue) (Green)", "LOB-EN001", "Common", 7),
-                    single(1, "Alpha (Silver) (Alternate Art)", "LOB-EN001", "Common", 8),
+                    single(1, "Alpha (Judge Stamp) (Alternate Art)", "LOB-EN001", "Common", 8),
                     single(1, "Alpha", "LOB-EN001", "Common", 6),
                     single(1, "Beta (Red)", "LOB-EN001", "Common", 9)]}
     out = go(products=products, **w)
@@ -496,10 +498,127 @@ def test_a_rerun_moves_a_colour_off_the_base_print_and_changes_nothing_after():
 
 @pytest.mark.parametrize("name, slug", [("Alpha (Blue)", "blue"), ("Alpha (B) (Ultra Rare)", "b"),
                                         ("Alpha (Version 2)", "version-2"), ("Alpha (Silver)", "silver"),
-                                        ("Alpha", None), ("Alpha (Ultra Rare)", None), ("Alpha (Alternate Art)", None),
-                                        ("Alpha (Blue) (Red)", None)])
+                                        ("Alpha", None), ("Alpha (Ultra Rare)", None), ("Alpha (Blue) (Red)", None),
+                                        ("Alpha (Alternate Art)", "alternate-art"),
+                                        ("Alpha (Alternate Art) (Secret Rare)", "alternate-art"),
+                                        ("Alpha (Judge Stamp)", "judge-stamp"), ("Alpha (Stamp)", "stamp"),
+                                        ("Alpha (Extended Art)", "extended-art"), ("Alpha (7th Art)", "7th-art"),
+                                        ("Alpha (Emblazoned Secret Rare)", "emblazoned-secret-rare"),
+                                        ("Alpha (ESR)", "emblazoned-secret-rare"),
+                                        ("Alpha (EUR)", "emblazoned-ultra-rare"),
+                                        ("Alpha (Unlimited Misprint)", "unlimited-misprint"),
+                                        ("Alpha (Unlimited Misprint) (LOB-EN001)", "unlimited-misprint"),
+                                        ("Alpha (Blue - DL18)", "blue"),
+                                        ("Alpha (Alternate Art) (Silver)", "alternate-art-silver"),
+                                        ("Alpha (A) (Alternate Art) (PCR)", "a-alternate-art"),
+                                        ("Alpha (Judge Stamp) (OTS Stamp)", None),
+                                        ("Alpha (25th Anniversary Edition)", "25th-anniversary-edition"),
+                                        ("Alpha (Maze of Muertos)", None), ("Alpha (LOB-EN001)", None),
+                                        ("Stamping Destruction", None), ("Alpha (Duel Terminal)", None)])
 def test_variant_of(name, slug):
     assert imp.variant_of(single(1, name, "LOB-EN001", "Ultra Rare")) == slug
+
+
+def test_a_treatment_alone_under_its_number_is_the_print():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    out = go(products={1: [single(1, "Alpha (Alternate Art)", "LOB-EN001", "Common", 7)]}, **w)
+    prints = prints_of(out, "100")
+    assert set(prints) == {"lob:100:LOB-EN001:common"}
+    assert prints["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [7]
+
+
+def test_a_colour_with_a_treatment_is_one_version_and_does_not_make_the_treatment_shared():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    products = {1: [single(1, "Alpha (Alternate Art)", "LOB-EN001", "Common", 7),
+                    single(1, "Alpha (Alternate Art) (Silver)", "LOB-EN001", "Common", 8)]}
+    out = go(products=products, **w)
+    prints = prints_of(out, "100")
+    assert prints["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [7]
+    assert prints["lob:100:LOB-EN001:common:alternate-art-silver"]["identifiers"]["tcgplayerProductIds"] == [8]
+    assert out["review"]["unmatched"] == []
+
+
+def test_a_rerun_moves_a_joined_version_off_the_print_an_earlier_run_gave_it():
+    base = mkprint("lob", "100", "LOB-EN001", "common", identifiers={"tcgplayerProductIds": [6, 7]},
+                   tcgplayer={"name": "Alpha", "match": "number+rarity"})
+    w = world([base])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6),
+                    single(1, "Alpha (Alternate Art) (Blue)", "LOB-EN001", "Common", 7)]}
+    prints = prints_of(go(products=products, **w), "100")
+    assert prints["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [6]
+    assert prints["lob:100:LOB-EN001:common:alternate-art-blue"]["identifiers"]["tcgplayerProductIds"] == [7]
+
+
+def test_a_reissue_at_another_rarity_gets_its_own_print():
+    w = world([mkprint("lob", "100", "LOB-EN001", "ultra_rare"), mkprint("lob", "100", "LOB-EN002", "qc_secret_rare")])
+    held = single(1, "Alpha (Quarter Century Secret Rare)", "LOB-EN002", "Quarter Century Secret Rare", 6)
+    reissue = single(1, "Alpha (25th Anniversary Edition)", "LOB-EN002", "Ultra Rare", 7)
+    out = go(products={1: [held, reissue]}, **w)
+    assert out["review"]["conflicts"] == []
+    assert prints_of(out, "100")["lob:100:LOB-EN002:ultra_rare"]["identifiers"]["tcgplayerProductIds"] == [7]
+
+
+def test_a_colour_alone_under_its_number_is_still_a_variant():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    out = go(products={1: [single(1, "Alpha (Red)", "LOB-EN001", "Common", 7)]}, **w)
+    assert prints_of(out, "100")["lob:100:LOB-EN001:common:red"]["identifiers"]["tcgplayerProductIds"] == [7]
+
+
+def test_an_art_letter_described_as_hero_art_is_one_version():
+    assert imp.variant_of(single(1, "Polymerization (B) (HERO Art) (PCR)", "RA03-EN051", "Prismatic Collector's Rare")) == "b"
+    assert not imp.unplaceable_tags(single(1, "Polymerization (B) (HERO Art)", "RA03-EN051", "Super Rare"))
+
+
+def test_stamps_and_arts_get_their_own_prints_and_the_base_keeps_the_plain_product():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha (Judge Stamp)", "LOB-EN001", "Common", 7),
+                    single(1, "Alpha (OTS Stamp)", "LOB-EN001", "Common", 8),
+                    single(1, "Alpha (Extended Art)", "LOB-EN001", "Common", 9)]}
+    prints = prints_of(go(products=products, **w), "100")
+    assert prints["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [6]
+    assert prints["lob:100:LOB-EN001:common:judge-stamp"]["identifiers"]["tcgplayerProductIds"] == [7]
+    assert prints["lob:100:LOB-EN001:common:ots-stamp"]["identifiers"]["tcgplayerProductIds"] == [8]
+    assert prints["lob:100:LOB-EN001:common:extended-art"]["tcgplayer"]["name"] == "Alpha (Extended Art)"
+
+
+def test_a_print_keeps_two_products_that_price_different_editions():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha", "LOB-EN001", "Common", 7)]}
+    prices = {1: [price(6, "Limited"), price(7, "Unlimited")]}
+    out = go(products=products, prices=prices, **w)
+    assert prints_of(out, "100")["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [6, 7]
+    assert out["review"]["conflicts"] == []
+
+
+def test_a_print_keeps_one_product_per_edition_and_prefers_the_one_pricing_the_most():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha", "LOB-EN001", "Common", 7)]}
+    prices = {1: [price(6, "Unlimited"), price(7, "Unlimited"), price(7, "1st Edition")]}
+    out = go(products=products, prices=prices, **w)
+    assert prints_of(out, "100")["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [7]
+    conflict = out["review"]["conflicts"][0]
+    assert conflict["productId"] == 6 and conflict["heldBy"] == [7]
+    assert conflict["reason"] == "the print holds a product priced in the same edition"
+
+
+def test_a_product_refused_on_a_rerun_leaves_the_print_an_earlier_run_gave_it():
+    base = mkprint("lob", "100", "LOB-EN001", "common", identifiers={"tcgplayerProductIds": [6, 7]},
+                   tcgplayer={"name": "Alpha", "match": "number+rarity"})
+    w = world([base])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6),
+                    single(1, "Alpha (Judge Stamp) (Alternate Art)", "LOB-EN001", "Common", 7)]}
+    out = go(products=products, **w)
+    assert prints_of(out, "100")["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [6]
+    assert {r["productId"] for r in out["review"]["unmatched"]} == {7}
+
+
+def test_settling_shared_editions_changes_nothing_on_the_next_run():
+    w = world([mkprint("lob", "100", "LOB-EN001", "common")])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha", "LOB-EN001", "Common", 7)]}
+    prices = {1: [price(6, "Unlimited"), price(7, "Unlimited")]}
+    out = go(products=products, prices=prices, **w)
+    again = imp.run(w["groups"], products, prices, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["files"] == out["files"] and again["review"]["conflicts"] == out["review"]["conflicts"]
 
 
 def test_tcgplayers_own_rarity_spellings_are_understood():

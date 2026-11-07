@@ -1504,10 +1504,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:70088809:WI26-EN014:ultra_rare",
+     "number": "WI26-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:70088809:WI26-EN014:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708844,
-       710125,
        710165
       ]
      },
@@ -1515,10 +1520,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fydraulis Harmonia (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:70088809:WI26-EN014:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708844
+      ]
+     },
+     "number": "WI26-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Fydraulis Harmonia (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:70088809:WI26-EN014:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710125
+      ]
+     },
+     "number": "WI26-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fydraulis Harmonia (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-05-07",
@@ -1875,6 +1918,27 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:70095154:BLC1-EN021:ultra_rare:alternate-art-silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538654
+      ]
+     },
+     "number": "BLC1-EN021",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon (Alternate Art) (Silver)"
+     },
+     "variant": "alternate-art-silver"
+    },
+    {
      "id": "battles-of-legend-relentless-revenge:70095154:BLRR-EN048:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1908,9 +1972,15 @@
     },
     {
      "id": "cyber-dragon-revolution-structure-deck:70095154:SDCR-EN003:common",
+     "number": "SDCR-EN003",
+     "rarity": "common",
+     "region": "EN",
+     "set": "cyber-dragon-revolution-structure-deck"
+    },
+    {
+     "id": "cyber-dragon-revolution-structure-deck:70095154:SDCR-EN003:common:black",
      "identifiers": {
       "tcgplayerProductIds": [
-       79484,
        79485
       ]
      },
@@ -1918,10 +1988,30 @@
      "rarity": "common",
      "region": "EN",
      "set": "cyber-dragon-revolution-structure-deck",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon (Black)"
+     },
+     "variant": "black"
+    },
+    {
+     "id": "cyber-dragon-revolution-structure-deck:70095154:SDCR-EN003:common:white",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       79484
+      ]
+     },
+     "number": "SDCR-EN003",
+     "rarity": "common",
+     "region": "EN",
+     "set": "cyber-dragon-revolution-structure-deck",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Cyber Dragon (White)"
-     }
+     },
+     "variant": "white"
     },
     {
      "id": "cybernetic-revolution:70095154:CRV-EN015:super_rare",
@@ -12033,8 +12123,7 @@
      "id": "summoned-skull-sample-promotional-card:70781052:SDY-004:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       22610,
-       228257
+       22610
       ]
      },
      "number": "SDY-004",
@@ -12044,6 +12133,23 @@
       "match": "number-other-set",
       "name": "Summoned Skull"
      }
+    },
+    {
+     "id": "summoned-skull-sample-promotional-card:70781052:SDY-004:common:sample-promo",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       228257
+      ]
+     },
+     "number": "SDY-004",
+     "rarity": "common",
+     "set": "summoned-skull-sample-promotional-card",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number-other-set",
+      "name": "Summoned Skull (Sample Promo)"
+     },
+     "variant": "sample-promo"
     },
     {
      "editions": [

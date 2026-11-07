@@ -13884,8 +13884,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:66961194:SDWD-EN015:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616572,
-       618792
+       616572
       ]
      },
      "number": "SDWD-EN015",
@@ -13893,9 +13892,30 @@
      "region": "EN",
      "set": "structure-deck-blue-eyes-white-destiny",
      "tcgplayer": {
-      "match": "number",
+      "match": "number+rarity",
       "name": "Dictator of D."
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:66961194:SDWD-EN015:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618792
+      ]
+     },
+     "number": "SDWD-EN015",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dictator of D. (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2022-02-10",
@@ -14266,8 +14286,7 @@
      "id": "limited-pack-world-championship-2026:66975205:26LP-EN006:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713336,
-       714086
+       713336
       ]
      },
      "number": "26LP-EN006",
@@ -14283,11 +14302,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:66975205:26LP-EN006:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714086
+      ]
+     },
+     "number": "26LP-EN006",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummyusmentMignon (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:66975205:26LP-EN006:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713335,
-       714106
+       713335
       ]
      },
      "number": "26LP-EN006",
@@ -14298,6 +14337,27 @@
       "match": "number+rarity",
       "name": "YummyusmentMignon"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:66975205:26LP-EN006:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714106
+      ]
+     },
+     "number": "26LP-EN006",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummyusmentMignon (Emblazoned)"
+     },
+     "variant": "emblazoned"
     },
     {
      "editions": [

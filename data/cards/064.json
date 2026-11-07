@@ -2759,8 +2759,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:64202399:SDWD-EN007:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616564,
-       618784
+       616564
       ]
      },
      "number": "SDWD-EN007",
@@ -2771,6 +2770,27 @@
       "match": "number+rarity",
       "name": "Blue-Eyes Abyss Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:64202399:SDWD-EN007:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618784
+      ]
+     },
+     "number": "SDWD-EN007",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blue-Eyes Abyss Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     }
    ],
    "tcgDate": "2021-01-21",

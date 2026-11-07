@@ -7241,8 +7241,7 @@
      "id": "limited-pack-world-championship-2026:16474916:26LP-EN016:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713303,
-       714072
+       713303
       ]
      },
      "number": "26LP-EN016",
@@ -7258,11 +7257,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:16474916:26LP-EN016:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714072
+      ]
+     },
+     "number": "26LP-EN016",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exosister Elis (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:16474916:26LP-EN016:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713302,
-       714092
+       713302
       ]
      },
      "number": "26LP-EN016",
@@ -7273,6 +7292,27 @@
       "match": "number+rarity",
       "name": "Exosister Elis"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:16474916:26LP-EN016:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714092
+      ]
+     },
+     "number": "26LP-EN016",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Exosister Elis (Emblazoned)"
+     },
+     "variant": "emblazoned"
     },
     {
      "id": "the-grand-creators:16474916:GRCR-EN013:super_rare",

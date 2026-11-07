@@ -27,6 +27,7 @@ LEGALITY = ROOT / "legality"
 SCHEMAS = ROOT / "schema"
 
 _REGION = re.compile(r"^[^-]+-([A-Z]+)\d")
+_COLOUR_OR_ART_VARIANT = re.compile(r"^(blue|green|purple|red|silver|bronze|[a-g]|version-\d+)$")
 
 
 @functools.cache
@@ -65,6 +66,16 @@ def print_id(set_id: str, card_id: str, number: str | None, rarity: str, variant
     """A version of a print (the Blue foil, art B) adds its variant, so ids without one never change."""
     base = f"{set_id}:{card_id}:{number or ''}:{rarity}"
     return f"{base}:{variant}" if variant else base
+
+
+def is_colour_or_art(slug: str) -> bool:
+    """True for a foil colour (blue), an art letter (b) or a numbered art (version-2), the slugs always kept apart."""
+    return bool(_COLOUR_OR_ART_VARIANT.match(slug))
+
+
+def is_treatment(p: dict) -> bool:
+    """True for a print that is a stamp, misprint or similar treatment of a card, not a colour or art letter it comes in."""
+    return bool(p.get("variant")) and not is_colour_or_art(p["variant"])
 
 
 def printing_id(print_id: str, language: str, edition: str) -> str:

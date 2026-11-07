@@ -951,10 +951,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:12067160:WI26-EN019:ultra_rare",
+     "number": "WI26-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:12067160:WI26-EN019:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708849,
-       710130,
        710170
       ]
      },
@@ -962,10 +967,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gorgon of Zilofthonia (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:12067160:WI26-EN019:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708849
+      ]
+     },
+     "number": "WI26-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Gorgon of Zilofthonia (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:12067160:WI26-EN019:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710130
+      ]
+     },
+     "number": "WI26-EN019",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gorgon of Zilofthonia (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2026-07-15",
@@ -9690,7 +9733,6 @@
      "id": "rarity-collection-5:12580477:RA05-EN110:starlight_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       687250,
        689629
       ]
      },
@@ -9700,8 +9742,29 @@
      "set": "rarity-collection-5",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Raigeki (Starlight Rare) (Stamp)"
+      "name": "Raigeki (Starlight Rare)"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "rarity-collection-5:12580477:RA05-EN110:starlight_rare:stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687250
+      ]
+     },
+     "number": "RA05-EN110",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "rarity-collection-5",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Raigeki (Starlight Rare) (Stamp)"
+     },
+     "variant": "stamp"
     },
     {
      "editions": [
@@ -9748,7 +9811,6 @@
      "id": "rarity-collection-5:12580477:RA05-EN110:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       687251,
        689625
       ]
      },
@@ -9758,8 +9820,29 @@
      "set": "rarity-collection-5",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "Raigeki (Stamp)"
+      "name": "Raigeki (Ultra Rare)"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "rarity-collection-5:12580477:RA05-EN110:ultra_rare:stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       687251
+      ]
+     },
+     "number": "RA05-EN110",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "rarity-collection-5",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Raigeki (Stamp)"
+     },
+     "variant": "stamp"
     },
     {
      "editions": [
@@ -13467,8 +13550,7 @@
      "id": "magnificent-monsters:12908094:MAMO-EN011:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714721,
-       714722
+       714721
       ]
      },
      "number": "MAMO-EN011",
@@ -13479,6 +13561,27 @@
       "match": "number+rarity",
       "name": "Gagaga Magician - Gagaga Magic"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:12908094:MAMO-EN011:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714722
+      ]
+     },
+     "number": "MAMO-EN011",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gagaga Magician - Gagaga Magic (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:12908094:MAMO-EN011:unknown",

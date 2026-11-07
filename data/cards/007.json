@@ -6212,10 +6212,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:7477101:WI26-EN032:ultra_rare",
+     "number": "WI26-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:7477101:WI26-EN032:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708862,
-       710143,
        710183
       ]
      },
@@ -6223,10 +6228,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Seventh Tachyon (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:7477101:WI26-EN032:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708862
+      ]
+     },
+     "number": "WI26-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Seventh Tachyon (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:7477101:WI26-EN032:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710143
+      ]
+     },
+     "number": "WI26-EN032",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Seventh Tachyon (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2024-05-25"
@@ -6811,8 +6854,7 @@
      "id": "limited-pack-world-championship-2026:7511613:26LP-EN017:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713324,
-       714081
+       713324
       ]
      },
      "number": "26LP-EN017",
@@ -6828,11 +6870,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:7511613:26LP-EN017:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714081
+      ]
+     },
+     "number": "26LP-EN017",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ryzeal Duo Drive (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:7511613:26LP-EN017:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713323,
-       714101
+       713323
       ]
      },
      "number": "26LP-EN017",
@@ -6843,6 +6905,27 @@
       "match": "number+rarity",
       "name": "Ryzeal Duo Drive"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:7511613:26LP-EN017:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714101
+      ]
+     },
+     "number": "26LP-EN017",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ryzeal Duo Drive (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "rank": 4,

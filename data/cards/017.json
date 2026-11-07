@@ -482,8 +482,7 @@
      "id": "gladiator-s-assault:17032740:GLAS-EN036:ghost_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       27485,
-       82276
+       27485
       ]
      },
      "number": "GLAS-EN036",
@@ -494,6 +493,27 @@
       "match": "number+rarity",
       "name": "Elemental Hero Chaos Neos (Ghost Rare)"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "gladiator-s-assault:17032740:GLAS-EN036:ghost_rare:misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       82276
+      ]
+     },
+     "number": "GLAS-EN036",
+     "rarity": "ghost_rare",
+     "region": "EN",
+     "set": "gladiator-s-assault",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elemental Hero Chaos Neos (Ghost Rare) (Misprint)"
+     },
+     "variant": "misprint"
     },
     {
      "id": "gladiator-s-assault:17032740:GLAS-EN036:secret_rare",
@@ -3341,8 +3361,7 @@
      "id": "beyond-the-brave:17242022:BETB-EN036:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       719877,
-       719878
+       719877
       ]
      },
      "number": "BETB-EN036",
@@ -3353,6 +3372,27 @@
       "match": "number+rarity",
       "name": "Red-Eyes Black Dragon Exceed"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "beyond-the-brave:17242022:BETB-EN036:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       719878
+      ]
+     },
+     "number": "BETB-EN036",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "beyond-the-brave",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red-Eyes Black Dragon Exceed (Extended Art)"
+     },
+     "variant": "extended-art"
     }
    ],
    "tcgDate": "2026-10-08",
@@ -9929,8 +9969,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:17655904:SDWD-EN024:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616581,
-       618800
+       616581
       ]
      },
      "number": "SDWD-EN024",
@@ -9941,6 +9980,27 @@
       "match": "number+rarity",
       "name": "Burst Stream of Destruction"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:17655904:SDWD-EN024:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618800
+      ]
+     },
+     "number": "SDWD-EN024",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Burst Stream of Destruction (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "structure-deck-seto-kaiba:17655904:SDKS-EN022:common",

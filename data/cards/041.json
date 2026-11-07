@@ -4005,7 +4005,6 @@
      "id": "quarter-century-bonanza:41232647:RA03-EN037:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       592426,
        592427
       ]
      },
@@ -4015,8 +4014,26 @@
      "set": "quarter-century-bonanza",
      "tcgplayer": {
       "match": "number+rarity",
-      "name": "House Dragonmaid (Alternate Art) (Quarter Century Secret Rare)"
+      "name": "House Dragonmaid (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-bonanza:41232647:RA03-EN037:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       592426
+      ]
+     },
+     "number": "RA03-EN037",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "House Dragonmaid (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-bonanza:41232647:RA03-EN037:secret_rare",
@@ -5006,8 +5023,7 @@
      "id": "magnificent-monsters:41350417:MAMO-EN003:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714705,
-       714706
+       714705
       ]
      },
      "number": "MAMO-EN003",
@@ -5018,6 +5034,27 @@
       "match": "number+rarity",
       "name": "Dark Magical Curtain"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:41350417:MAMO-EN003:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714706
+      ]
+     },
+     "number": "MAMO-EN003",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magical Curtain (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:41350417:MAMO-EN003:unknown",

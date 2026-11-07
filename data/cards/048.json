@@ -1978,10 +1978,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:48130397:WI26-EN022:ultra_rare",
+     "number": "WI26-EN022",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:48130397:WI26-EN022:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708852,
-       710133,
        710173
       ]
      },
@@ -1989,10 +1994,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Super Polymerization (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:48130397:WI26-EN022:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708852
+      ]
+     },
+     "number": "WI26-EN022",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Super Polymerization (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:48130397:WI26-EN022:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710133
+      ]
+     },
+     "number": "WI26-EN022",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Super Polymerization (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2008-01-26"
@@ -2790,8 +2833,7 @@
      "id": "magnificent-monsters:48171151:MAMO-EN015:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714729,
-       714730
+       714729
       ]
      },
      "number": "MAMO-EN015",
@@ -2802,6 +2844,27 @@
       "match": "number+rarity",
       "name": "Astrograph Sorcerer, the Starfrost Magician"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:48171151:MAMO-EN015:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714730
+      ]
+     },
+     "number": "MAMO-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Astrograph Sorcerer, the Starfrost Magician (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:48171151:MAMO-EN015:unknown",
@@ -5472,8 +5535,7 @@
      "id": "magnificent-monsters:48393693:MAMO-EN012:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       714723,
-       714724
+       714723
       ]
      },
      "number": "MAMO-EN012",
@@ -5484,6 +5546,27 @@
       "match": "number+rarity",
       "name": "Gagaga Girl - Cell Phone Subtraction"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-monsters:48393693:MAMO-EN012:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714724
+      ]
+     },
+     "number": "MAMO-EN012",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-monsters",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gagaga Girl - Cell Phone Subtraction (Extended Art)"
+     },
+     "variant": "extended-art"
     },
     {
      "id": "magnificent-monsters:48393693:MAMO-EN012:unknown",
@@ -11993,8 +12076,7 @@
      "id": "structure-deck-blue-eyes-white-destiny:48800175:SDWD-EN022:common",
      "identifiers": {
       "tcgplayerProductIds": [
-       616579,
-       618798
+       616579
       ]
      },
      "number": "SDWD-EN022",
@@ -12002,9 +12084,30 @@
      "region": "EN",
      "set": "structure-deck-blue-eyes-white-destiny",
      "tcgplayer": {
-      "match": "number",
+      "match": "number+rarity",
       "name": "The Melody of Awakening Dragon"
      }
+    },
+    {
+     "editions": [
+      "unlimited"
+     ],
+     "id": "structure-deck-blue-eyes-white-destiny:48800175:SDWD-EN022:common:unlimited-misprint",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       618798
+      ]
+     },
+     "number": "SDWD-EN022",
+     "rarity": "common",
+     "region": "EN",
+     "set": "structure-deck-blue-eyes-white-destiny",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Melody of Awakening Dragon (Unlimited Misprint)"
+     },
+     "variant": "unlimited-misprint"
     },
     {
      "id": "structure-deck-legend-of-the-crystal-beasts:48800175:SDCB-EN029:common",

@@ -7733,6 +7733,23 @@
      }
     },
     {
+     "id": "ots-tournament-pack-22:35537860:OP22-EN021:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       505920
+      ]
+     },
+     "number": "OP22-EN021",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ots-tournament-pack-22",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Synch Blast Wave"
+     }
+    },
+    {
      "id": "starter-deck-yu-gi-oh-5d-s:35537860:5DS1-EN021:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10321,10 +10338,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:35726888:WI26-EN025:ultra_rare",
+     "number": "WI26-EN025",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:35726888:WI26-EN025:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708855,
-       710136,
        710176
       ]
      },
@@ -10332,10 +10354,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Foolish Burial Goods (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:35726888:WI26-EN025:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708855
+      ]
+     },
+     "number": "WI26-EN025",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Foolish Burial Goods (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:35726888:WI26-EN025:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710136
+      ]
+     },
+     "number": "WI26-EN025",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Foolish Burial Goods (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2017-02-09"
@@ -10724,8 +10784,7 @@
      "id": "limited-pack-world-championship-2026:35763582:26LP-EN012:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713314,
-       714077
+       713314
       ]
      },
      "number": "26LP-EN012",
@@ -10741,11 +10800,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:35763582:26LP-EN012:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714077
+      ]
+     },
+     "number": "26LP-EN012",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lunalight Silver Hound (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:35763582:26LP-EN012:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713313,
-       714097
+       713313
       ]
      },
      "number": "26LP-EN012",
@@ -10756,6 +10835,27 @@
       "match": "number+rarity",
       "name": "Lunalight Silver Hound"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:35763582:26LP-EN012:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714097
+      ]
+     },
+     "number": "26LP-EN012",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lunalight Silver Hound (Emblazoned)"
+     },
+     "variant": "emblazoned"
     },
     {
      "editions": [
@@ -12972,8 +13072,7 @@
      "id": "limited-pack-world-championship-2026:35886170:26LP-EN020:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713305,
-       714073
+       713305
       ]
      },
      "number": "26LP-EN020",
@@ -12989,11 +13088,31 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:35886170:26LP-EN020:secret_rare:emblazoned-secret-rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714073
+      ]
+     },
+     "number": "26LP-EN020",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gogogo Goblindbergh (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned-secret-rare"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:35886170:26LP-EN020:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       713304,
-       714093
+       713304
       ]
      },
      "number": "26LP-EN020",
@@ -13004,6 +13123,27 @@
       "match": "number+rarity",
       "name": "Gogogo Goblindbergh"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "limited-pack-world-championship-2026:35886170:26LP-EN020:ultra_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714093
+      ]
+     },
+     "number": "26LP-EN020",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gogogo Goblindbergh (Emblazoned)"
+     },
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2025-07-03",

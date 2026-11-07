@@ -2639,10 +2639,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:42141493:WI26-EN010:ultra_rare",
+     "number": "WI26-EN010",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:42141493:WI26-EN010:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708840,
-       710121,
        710161
       ]
      },
@@ -2650,10 +2655,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mulcharmy Fuwalos (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:42141493:WI26-EN010:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708840
+      ]
+     },
+     "number": "WI26-EN010",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mulcharmy Fuwalos (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:42141493:WI26-EN010:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710121
+      ]
+     },
+     "number": "WI26-EN010",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mulcharmy Fuwalos (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2024-07-27",

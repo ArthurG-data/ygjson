@@ -809,8 +809,7 @@
      "id": "maximum-gold-el-dorado:52038441:MGED-EN023:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       253930,
-       256127
+       253930
       ]
      },
      "number": "MGED-EN023",
@@ -821,6 +820,27 @@
       "match": "number+rarity",
       "name": "Ghost Mourner & Moonlit Chill"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "maximum-gold-el-dorado:52038441:MGED-EN023:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       256127
+      ]
+     },
+     "number": "MGED-EN023",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold-el-dorado",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Mourner & Moonlit Chill (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-stampede:52038441:RA04-EN033:qc_secret_rare",
@@ -3842,8 +3862,7 @@
      "id": "beyond-the-brave:52245126:BETB-EN081:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       719926,
-       719927
+       719926
       ]
      },
      "number": "BETB-EN081",
@@ -3854,6 +3873,27 @@
       "match": "number+rarity",
       "name": "Audhumla, Progenitor of the Frozen Expanse"
      }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "beyond-the-brave:52245126:BETB-EN081:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       719927
+      ]
+     },
+     "number": "BETB-EN081",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "beyond-the-brave",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Audhumla, Progenitor of the Frozen Expanse (Extended Art)"
+     },
+     "variant": "extended-art"
     }
    ],
    "tcgDate": "2026-10-08",

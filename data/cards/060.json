@@ -9191,8 +9191,7 @@
      "id": "maximum-gold:60643553:MAGO-EN013:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       227431,
-       227432
+       227431
       ]
      },
      "number": "MAGO-EN013",
@@ -9203,6 +9202,24 @@
       "match": "number+rarity",
       "name": "Ghost Sister & Spooky Dogwood"
      }
+    },
+    {
+     "id": "maximum-gold:60643553:MAGO-EN013:premium_gold_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       227432
+      ]
+     },
+     "number": "MAGO-EN013",
+     "rarity": "premium_gold_rare",
+     "region": "EN",
+     "set": "maximum-gold",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Sister & Spooky Dogwood (Alternate Art)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-bonanza:60643553:RA03-EN020:collectors_rare",
@@ -9240,8 +9257,7 @@
      "id": "quarter-century-bonanza:60643553:RA03-EN020:qc_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
-       592309,
-       594074
+       592309
       ]
      },
      "number": "RA03-EN020",
@@ -9252,6 +9268,24 @@
       "match": "number+rarity",
       "name": "Ghost Sister & Spooky Dogwood (Quarter Century Secret Rare)"
      }
+    },
+    {
+     "id": "quarter-century-bonanza:60643553:RA03-EN020:qc_secret_rare:alternate-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       594074
+      ]
+     },
+     "number": "RA03-EN020",
+     "rarity": "qc_secret_rare",
+     "region": "EN",
+     "set": "quarter-century-bonanza",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ghost Sister & Spooky Dogwood (Alternate Art) (Quarter Century Secret Rare)"
+     },
+     "variant": "alternate-art"
     },
     {
      "id": "quarter-century-bonanza:60643553:RA03-EN020:secret_rare",
@@ -11225,10 +11259,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:60764609:WI26-EN008:ultra_rare",
+     "number": "WI26-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:60764609:WI26-EN008:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708838,
-       710119,
        710159
       ]
      },
@@ -11236,10 +11275,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fiendsmith Engraver (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:60764609:WI26-EN008:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708838
+      ]
+     },
+     "number": "WI26-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Fiendsmith Engraver (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:60764609:WI26-EN008:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710119
+      ]
+     },
+     "number": "WI26-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fiendsmith Engraver (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2024-07-18",

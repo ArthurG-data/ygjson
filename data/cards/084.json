@@ -220,6 +220,27 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
+     "id": "battles-of-legend-chapter-1:84013237:BLC1-EN039:ultra_rare:alternate-art-silver",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       538672
+      ]
+     },
+     "number": "BLC1-EN039",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "battles-of-legend-chapter-1",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Number 39: Utopia (Alternate Art) (Silver)"
+     },
+     "variant": "alternate-art-silver"
+    },
+    {
      "id": "brothers-of-legend:84013237:BROL-EN059:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2507,10 +2528,15 @@
     },
     {
      "id": "winner-s-pack-2026-2027:84192580:WI26-EN009:ultra_rare",
+     "number": "WI26-EN009",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:84192580:WI26-EN009:ultra_rare:judge-stamp",
      "identifiers": {
       "tcgplayerProductIds": [
-       708839,
-       710120,
        710160
       ]
      },
@@ -2518,10 +2544,48 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mulcharmy Purulia (Judge Stamp)"
+     },
+     "variant": "judge-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:84192580:WI26-EN009:ultra_rare:ots-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       708839
+      ]
+     },
+     "number": "WI26-EN009",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Mulcharmy Purulia (OTS Stamp)"
-     }
+     },
+     "variant": "ots-stamp"
+    },
+    {
+     "id": "winner-s-pack-2026-2027:84192580:WI26-EN009:ultra_rare:regional-qualifier-stamp",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       710120
+      ]
+     },
+     "number": "WI26-EN009",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "winner-s-pack-2026-2027",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mulcharmy Purulia (Regional Qualifier Stamp)"
+     },
+     "variant": "regional-qualifier-stamp"
     }
    ],
    "tcgDate": "2024-07-18",
