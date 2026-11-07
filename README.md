@@ -8,8 +8,8 @@ database ids. TCGCSV, a mirror of TCGplayer's catalogue, gives the product ids, 
 in, and the sealed products. Nothing is matched by name order, and a product that no rule can settle goes to a review
 file instead of into a guess.
 
-Release 0.1.0 holds 1,046 sets, 14,645 cards, 46,082 prints, 60,688 printings, 910 archetypes, 1,144 sealed products
-and 3,079 legality events. 44,322 prints have a TCGplayer product.
+Release 0.2.0 holds 1,066 sets, 14,731 cards, 48,494 prints, 63,155 printings, 910 archetypes, 1,160 sealed products
+and 3,105 legality events. 46,142 prints have a TCGplayer product.
 
 ## Using the data
 
@@ -24,7 +24,7 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/AllProducts.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Legality.json
 ```
 
-Every file is `{"meta": {"version": "0.1.0", "date": "2026-10-28", "sources": {...}}, "data": {...}}`. All six come
+Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}}, "data": {...}}`. All six come
 from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` names the
 snapshot each source was last imported from: YGOPRODeck's `database_version`, YGOJSON's `increment` and the latest
 `modifiedOn` among TCGCSV's groups. A build made without the caches leaves `sources` out.
@@ -145,7 +145,7 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 `de`, `it`, `pt`, `es`, `ja`, `ko`, `zh-CN`, `zh-TW`) where YGOJSON has them. YGOJSON's romanisations (`ja_romaji`,
 `ko_rr`) are not names and are left out. The other fields are:
 
-- `kind`: monster, spell, trap, token or skill. 9,416 cards are monsters.
+- `kind`: monster, spell, trap, token or skill. 9,468 cards are monsters.
 - `frame`: YGOPRODeck's `frameType`.
 - `attribute` (lower case), `monsterType` (YGOPRODeck's `race`: the monster type, or the spell or trap subtype),
   `level`, `rank`, `linkRating`, `linkArrows`, `scale`, `atk` and `def`. `rank` is the level of a Xyz monster,
@@ -154,13 +154,13 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 - `archetypes`: archetype slugs.
 - `tcgDate` and `ocgDate`: the card's first release in each, per YGOPRODeck.
 - `images`: links to YGOPRODeck's full image, small image and cropped art, one entry per artwork.
-- `identifiers`: `ygoprodeckId`, and `konamiId` (14,415 cards), `ygojsonId` (13,984) and `yugipediaIds` where known.
+- `identifiers`: `ygoprodeckId`, and `konamiId` (14,495 cards), `ygojsonId` (13,984) and `yugipediaIds` where known.
 - `prints`: every print of the card.
 
 A print has `id`, `set`, `number` (`LOB-001`), `region`, `rarity`, `editions` where they differ from the set's,
 `identifiers.tcgplayerProductIds` and `tcgplayer`. `region` is the letters between the set prefix and the digits of the
 number: `LOB-EN001` has `EN`, `LOB-001` has none, and `LAVD-ENS05` has `EN` because the letter after the region is a
-slot. The commonest regions are `EN` (42,785 prints), `E` (732) and `PT` (456).
+slot. The commonest regions are `EN` (45,146 prints), `E` (732) and `PT` (456).
 
 **Rarity.** A print's `rarity` is a code from `tools/rarities.py`, which maps YGOPRODeck's and TCGplayer's free text
 onto 41 codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
@@ -253,7 +253,7 @@ ids of the archetype in numeric order, at build time. 131 archetypes have no mem
 ## Sealed products
 
 A sealed product is a TCGCSV product with neither a card number nor a rarity, in a group matched to a set. It lives
-in `data/sealed/<set id>.json`. 1,144 are listed.
+in `data/sealed/<set id>.json`. 1,160 are listed.
 
 `category` is one of booster_pack (383), booster_box (284), display (112), structure_deck (79), special_edition (63),
 tin (43), collectors_set (42), starter_deck (37), deck (22), mega_tin (15), case (15), bundle (6), promo_pack (5) or
@@ -353,7 +353,7 @@ uv run python tools/import_sealed.py       # sealed products
 uv run python tools/coverage.py [--strict] # where every TCGplayer product went
 uv run python tools/legality.py            # ban list events
 uv run python tools/validate.py [--online]
-uv run python tools/build.py --version 0.1.0   # dist/AllSets, AllCards, AllPrintings, AllArchetypes, AllProducts, Legality
+uv run python tools/build.py --version 0.2.0   # dist/AllSets, AllCards, AllPrintings, AllArchetypes, AllProducts, Legality
 ```
 
 The order matters: each importer keeps what the earlier ones wrote and adds its own fields, so a rerun in order
