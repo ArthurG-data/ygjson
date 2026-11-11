@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import collections
 import html
+import json
 import re
 from pathlib import Path
 from urllib.parse import quote
@@ -21,6 +22,9 @@ import ygjson
 import ygoprodeck
 
 REVIEW = ygjson.ROOT / "review" / "rarities.json"
+# YGOPRODeck sets that are another set under a second name: {alias set id: {"set": owner id, "why": evidence}}.
+# The alias is not written, and its prints are filed under the owner.
+SET_ALIASES = ygjson.ROOT / "mappings" / "ygoprodeck_set_aliases.json"
 SOURCE = "ygoprodeck"
 
 # Set type by name, first match wins, case-insensitive. Tins sit before the rest so Mega-Tins and Collectible Tins
@@ -90,10 +94,12 @@ def _number_prefixes(card_list: list[dict]) -> dict[str, str]:
     return {name: max(sorted(c), key=c.__getitem__) for name, c in counts.items()}
 
 
-def build_sets(card_list: list[dict], set_list: list[dict], eras: list[dict], existing: list[dict]
-               ) -> tuple[list[dict], dict[str, str]]:
+def build_sets(card_list: list[dict], set_list: list[dict], eras: list[dict], existing: list[dict],
+               aliases: dict[str, dict] | None = None) -> tuple[list[dict], dict[str, str]]:
     """Returns the sets sorted by id and {set name: set id}. Existing sets that are not YGOPRODeck's (source
-    tcgplayer) are kept as they are."""
+    tcgplayer) are kept as they are. A set in ``aliases`` is not written and its name maps to the owner's id, so its
+    prints land in the owner; an alias whose owner is not written fails."""
+    aliases = aliases or {}
     listed = {s["set_name"]: s for s in set_list}
     raw_names = set(listed) | {r["set_name"] for c in card_list for r in c.get("card_sets", [])}
     # YGOPRODeck escapes one name ("Legendary 5D&apos;s Decks"); the dataset carries the decoded text.
@@ -104,6 +110,8 @@ def build_sets(card_list: list[dict], set_list: list[dict], eras: list[dict], ex
     old = {s["id"]: s for s in existing}
     out = []
     for raw_name, set_id in sorted(ids.items(), key=lambda kv: kv[1]):
+        if set_id in aliases:
+            continue
         info = listed.get(raw_name, {})
         name = decoded[raw_name]
         code = info.get("set_code") or prefixes.get(raw_name) or "UNKNOWN"
@@ -126,7 +134,11 @@ def build_sets(card_list: list[dict], set_list: list[dict], eras: list[dict], ex
             s["era"] = era
         out.append(s)
     out += [s for s in existing if s.get("source") != SOURCE and s["id"] not in ids.values()]
-    return sorted(out, key=lambda s: s["id"]), ids
+    written = {s["id"] for s in out}
+    for alias, entry in aliases.items():
+        if entry["set"] not in written:
+            raise ValueError(f"set alias {alias}: owner {entry['set']} is not a set")
+    return sorted(out, key=lambda s: s["id"]), {raw: aliases.get(sid, {}).get("set", sid) for raw, sid in ids.items()}
 
 
 def _present(value) -> bool:
@@ -298,7 +310,8 @@ def main() -> None:
 
     existing_sets = ygjson.load_sets() if ygjson.SETS.exists() else []
     existing_archetypes = ygjson.load_archetypes() if ygjson.ARCHETYPES.exists() else {}
-    sets, set_ids = build_sets(card_list, set_list, ygjson.load_eras(), existing_sets)
+    aliases = json.loads(SET_ALIASES.read_text()) if SET_ALIASES.exists() else {}
+    sets, set_ids = build_sets(card_list, set_list, ygjson.load_eras(), existing_sets, aliases)
     archetypes, archetype_slugs = build_archetypes(card_list, archetype_names, existing_archetypes)
     tcgplayer_sets = {s["id"] for s in sets if s["source"] != SOURCE}
     foreign_slugs = {a["slug"] for a in archetypes["archetypes"] if a.get("source") != SOURCE}

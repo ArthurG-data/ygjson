@@ -139,6 +139,23 @@ def test_sets_code_dates_art_and_slug_collisions():
     assert imp.collisions(ids) == {"tag-force-5-promotional-cards": ["Tag Force 5 Promotional Cards", "Tag Force 5 promotional cards"]}
 
 
+def test_a_set_alias_is_not_written_and_its_prints_land_in_the_owner():
+    cards = [raw_card(card_sets=[
+        {"set_name": LOB, "set_code": "LOB-EN005", "set_rarity": "New artwork"},
+        {"set_name": "LOB Second Name", "set_code": "LOB-EN005", "set_rarity": "Ultra Rare"}])]
+    aliases = {"lob-second-name": {"set": LOB_ID, "why": "test"}}
+    sets, ids = imp.build_sets(cards, [], ERAS, [], aliases)
+    assert [s["id"] for s in sets] == [LOB_ID]
+    assert ids == {LOB: LOB_ID, "LOB Second Name": LOB_ID}
+    prints, _, _ = imp.build_prints(cards[0], ids)
+    assert [p["id"] for p in prints] == [f"{LOB_ID}:46986414:LOB-EN005:ultra_rare", f"{LOB_ID}:46986414:LOB-EN005:unknown"]
+
+
+def test_a_set_alias_whose_owner_is_missing_fails():
+    with pytest.raises(ValueError, match="owner nowhere is not a set"):
+        imp.build_sets([raw_card()], [], ERAS, [], {"x": {"set": "nowhere", "why": "test"}})
+
+
 def test_rerun_keeps_what_later_tools_added_to_a_set():
     listed = [{"set_name": LOB, "set_code": "LOB", "tcg_date": "2002-03-08"}]
     first, _ = imp.build_sets([raw_card()], listed, ERAS, [])

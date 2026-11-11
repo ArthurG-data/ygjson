@@ -51,7 +51,9 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 - `data/sealed/<set>.json` holds the sealed products of a set.
 - `legality/` holds `formats.json` and `bans.json`.
 - `mappings/` holds hand-kept inputs to the tools. `set_types.json` maps the type and series on a Yugipedia set
-  infobox to a set type. `tcgplayer_groups.json` ties a TCGplayer group to a set where the automatic match fails. Each
+  infobox to a set type. `tcgplayer_groups.json` ties a TCGplayer group to a set where the automatic match fails.
+  `ygoprodeck_set_aliases.json` names a YGOPRODeck set that is another set under a second name: the alias is not
+  written and its prints go to the owner (`WCS 2025 Limited Pack` is `Limited Pack World Championship 2025`). Each
   entry cites its evidence.
 - `review/` lists what the tools could not decide, file by file (see [Review files](#review-files)).
 - `schema/` holds a JSON Schema (draft 2020-12) for sets, eras, cards, archetypes, sealed products and legality events.
@@ -166,7 +168,9 @@ slot. The commonest regions are `EN` (45,146 prints), `E` (732) and `PT` (456).
 onto 41 codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
 `dt_normal_parallel` and so on). Text the table does not know becomes `unknown`, and the print keeps the source's
 string as `rawRarity`. 30 prints are `unknown`; `review/rarities.json` counts each raw string. The table is the one
-place that decides a rarity, its finish and its tier.
+place that decides a rarity, its finish and its tier. TCGplayer's `Emblazoned Ultra Rare` and `Emblazoned Secret Rare`
+are `ultra_rare` and `secret_rare`: Emblazoned is a treatment, and the product's `(EUR)` or `(ESR)` makes it a version
+(see [Variants](#cards-and-prints)).
 
 **Finish.** A printing is `nonfoil` for four rarities, `common`, `short_print`, `super_short_print` and `rare`.
 Every other code is `foil`. An `unknown` rarity gives `null`: 58 printings have no finish. TCGplayer prices a single

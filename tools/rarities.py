@@ -64,6 +64,11 @@ ALIASES: dict[str, str] = {
     "Parallel Rare": "normal_parallel_rare",
     "Ultra Pharaoh's Rare": "pharaohs_rare",
     "Ultra Pharaoh\u2019s Rare": "pharaohs_rare",
+    # Emblazoned is a foil treatment of an Ultra or Secret Rare, not a rarity of its own. TCGplayer says it in the
+    # Rarity field for Limited Pack World Championship 2025 and in the name for 2026; the name's "(EUR)" or "(ESR)"
+    # makes the product a version beside the plain one (import_tcgcsv._SPELLED_OUT), as 2026's "(Emblazoned)" does.
+    "Emblazoned Ultra Rare": "ultra_rare",
+    "Emblazoned Secret Rare": "secret_rare",
 }
 
 UNKNOWN = "unknown"
