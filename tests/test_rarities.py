@@ -23,13 +23,15 @@ def test_misspellings_and_abbreviations_map_to_their_code():
     ("Parallel Rare", "normal_parallel_rare"),
     ("Ultra Pharaoh's Rare", "pharaohs_rare"),
     ("Ultra Pharaoh\u2019s Rare", "pharaohs_rare"),
+    # Emblazoned is a treatment: the rarity under it is the print's.
+    ("Emblazoned Ultra Rare", "ultra_rare"),
+    ("Emblazoned Secret Rare", "secret_rare"),
 ])
 def test_tcgplayer_only_spellings_map_to_their_code(raw, code):
     assert rarities.canonical(raw) == code
 
 
-@pytest.mark.parametrize("raw", ["Promo", "Secret Pharaoh's Rare", "Secret Pharaoh\u2019s Rare", "Emblazoned Ultra Rare",
-                                 "Emblazoned Secret Rare"])
+@pytest.mark.parametrize("raw", ["Promo", "Secret Pharaoh's Rare", "Secret Pharaoh\u2019s Rare"])
 def test_tcgplayer_rarities_with_no_print_stay_unknown(raw):
     assert rarities.canonical(raw) == "unknown"
 

@@ -5930,48 +5930,44 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:unknown",
-     "number": "25LP-EN000",
-     "rarity": "unknown",
-     "rawRarity": "New artwork",
-     "region": "EN",
-     "set": "limited-pack-world-championship-2025"
-    },
-    {
-     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:unknown:emblazoned-secret-rare",
+     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
        650890
       ]
      },
      "number": "25LP-EN000",
-     "rarity": "unknown",
+     "rarity": "secret_rare",
      "region": "EN",
      "set": "limited-pack-world-championship-2025",
-     "source": "tcgplayer",
      "tcgplayer": {
-      "match": "number",
+      "match": "number+rarity",
       "name": "Exodia the Forbidden One (ESR)"
-     },
-     "variant": "emblazoned-secret-rare"
+     }
     },
     {
-     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:unknown:emblazoned-ultra-rare",
+     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
        650889
       ]
      },
      "number": "25LP-EN000",
-     "rarity": "unknown",
+     "rarity": "ultra_rare",
      "region": "EN",
      "set": "limited-pack-world-championship-2025",
-     "source": "tcgplayer",
      "tcgplayer": {
-      "match": "number",
+      "match": "number+rarity-from-tcgplayer",
       "name": "Exodia the Forbidden One (EUR)"
-     },
-     "variant": "emblazoned-ultra-rare"
+     }
+    },
+    {
+     "id": "limited-pack-world-championship-2025:33396948:25LP-EN000:unknown",
+     "number": "25LP-EN000",
+     "rarity": "unknown",
+     "rawRarity": "New artwork",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2025"
     },
     {
      "id": "master-collection-volume-1:33396948:MC1-EN001:secret_rare",
@@ -6091,20 +6087,6 @@
      "rarity": "common",
      "region": "EN",
      "set": "the-lost-art-promotion-series"
-    },
-    {
-     "id": "wcs-2025-limited-pack:33396948:25LP-EN000:secret_rare",
-     "number": "25LP-EN000",
-     "rarity": "secret_rare",
-     "region": "EN",
-     "set": "wcs-2025-limited-pack"
-    },
-    {
-     "id": "wcs-2025-limited-pack:33396948:25LP-EN000:ultra_rare",
-     "number": "25LP-EN000",
-     "rarity": "ultra_rare",
-     "region": "EN",
-     "set": "wcs-2025-limited-pack"
     },
     {
      "id": "yu-gi-oh-dark-duel-stories-promotional-cards:33396948:DDS-003:prismatic_secret",
