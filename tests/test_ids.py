@@ -1,6 +1,8 @@
 import json
 import uuid
 
+import pytest
+
 import ids
 
 PRINT = {"id": "7d674373-b170-5fd8-ab33-29bacad29ffa", "key": "lob:89631139:LOB-001:ultra_rare", "formerKeys": [],
@@ -67,3 +69,62 @@ def test_held_names_and_reserved_cover_live_and_retired_entries():
     assert ids.held_names(ledger, "sets") == {"Old": "b", "New": "a", "Gone": "a"}  # a name under two slugs: smallest
     assert ids.reserved(ledger, "sets") == {"a", "b"}
     assert ids.held_names(ledger, "archetypes") == {} and ids.reserved(ledger, "archetypes") == set()
+
+
+def _hand_ledger():
+    base = {"formerKeys": [], "products": []}
+    return {"prints": {
+        "live1": {"id": "live1", "key": "k1", "status": "live", "successors": [], **base},
+        "gone1": {"id": "gone1", "key": "k2", "status": "retired", "successors": [], **base},
+        "gone2": {"id": "gone2", "key": "k3", "status": "retired", "successors": [], **base}}}
+
+
+def _write_hand(tmp_path, doc):
+    path = tmp_path / "ids.json"
+    path.write_text(json.dumps(doc))
+    return path
+
+
+def test_hand_entry_without_why_is_refused(tmp_path):
+    path = _write_hand(tmp_path, {"_comment": "c", "prints": {"k9": {"id": "gone1", "why": " "}}, "successors": {}})
+    with pytest.raises(ValueError, match="k9"):
+        ids.load_hand(path)
+    path = _write_hand(tmp_path, {"prints": {}, "successors": {"gone1": {"successors": ["live1"]}}})
+    with pytest.raises(ValueError, match="gone1"):
+        ids.load_hand(path)
+
+
+def test_missing_hand_file_is_empty(tmp_path):
+    assert ids.load_hand(tmp_path / "nope.json") == ({}, {})
+
+
+def test_hand_may_not_give_a_live_id_to_a_second_print(tmp_path):
+    path = _write_hand(tmp_path, {"prints": {"a": {"id": "live1", "why": "w"}, "b": {"id": "ghost", "why": "w"},
+                                            "c": {"id": "gone1", "why": "w"}},
+                                  "successors": {"live1": {"successors": ["gone1"], "why": "w"},
+                                                 "gone2": {"successors": ["ghost"], "why": "w"},
+                                                 "gone1": {"successors": ["live1"], "why": "w"}}})
+    hand = ids.load_hand(path)
+    assert hand == ({"a": "live1", "b": "ghost", "c": "gone1"},
+                    {"live1": ["gone1"], "gone2": ["ghost"], "gone1": ["live1"]})
+    errors = ids.hand_errors(_hand_ledger(), hand)
+    assert len(errors) == 4
+    assert any("a" in e and "live1" in e for e in errors)
+    assert any("ghost" in e for e in errors)
+    assert not any("'c'" in e for e in errors)
+
+
+def test_hand_successors_override_the_computed_ones():
+    entries = _hand_ledger()["prints"]
+    out = ids.apply_successors(entries, {"gone1": ["live1"], "live1": ["gone1"]})
+    assert out["gone1"]["successors"] == ["live1"]
+    assert out["live1"]["successors"] == []
+    assert entries["gone1"]["successors"] == []
+
+
+def test_review_body_is_sorted():
+    body = ids.review_body([{"id": "b"}, {"id": "a"}], [{"id": "z"}, {"id": "y"}],
+                           [{"from": "q", "to": "r"}, {"from": "p", "to": "s"}])
+    assert [r["id"] for r in body["prints"]] == ["a", "b"]
+    assert [r["id"] for r in body["cards"]] == ["y", "z"]
+    assert [r["from"] for r in body["renames"]] == ["p", "q"]

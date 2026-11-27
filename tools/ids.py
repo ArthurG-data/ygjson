@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import json
 import uuid
-from collections.abc import Container
+from collections.abc import Container, Mapping
 from pathlib import Path
 
 import ygjson
@@ -62,3 +62,55 @@ def schema_errors(ledger: dict[str, dict[str, dict]]) -> list[str]:
     """Schema violations of the ledger, as readable strings."""
     doc = {kind: sorted(entries.values(), key=lambda e: e["id"]) for kind, entries in ledger.items()}
     return ygjson._schema_errors("ids.schema.json", "ids", doc)
+
+
+HAND = ygjson.ROOT / "mappings" / "ids.json"
+
+
+def load_hand(path: Path = HAND) -> tuple[dict[str, str], dict[str, list[str]]]:
+    """The hand decisions of mappings/ids.json: ({newcomer key: retired print id}, {retired id: successor ids}).
+    An entry without a non-empty "why" is refused; a missing file is empty."""
+    if not path.exists():
+        return {}, {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    for section in ("prints", "successors"):
+        for name, entry in doc.get(section, {}).items():
+            if not str(entry.get("why", "")).strip():
+                raise ValueError(f"{path.name}: {section} entry {name!r} has no why")
+    return ({key: e["id"] for key, e in doc.get("prints", {}).items()},
+            {pid: list(e["successors"]) for pid, e in doc.get("successors", {}).items()})
+
+
+def hand_errors(ledger: dict[str, dict[str, dict]], hand: tuple[dict[str, str], dict[str, list[str]]]) -> list[str]:
+    """Hand decisions the ledger contradicts: a print given a live id or one the ledger lacks; successors set on
+    an id that is not a retired print, or naming ids that are not prints."""
+    keys, successors = hand
+    prints = ledger.get("prints", {})
+    errors = []
+    for key, pid in sorted(keys.items()):
+        if pid not in prints:
+            errors.append(f"hand print {key!r}: id {pid} is not in the ledger")
+        elif prints[pid]["status"] == "live":
+            errors.append(f"hand print {key!r}: id {pid} is live")
+    for pid, targets in sorted(successors.items()):
+        if pid not in prints or prints[pid]["status"] != "retired":
+            errors.append(f"hand successors {pid!r}: not a retired print")
+        for target in targets:
+            if target not in prints:
+                errors.append(f"hand successors {pid!r}: successor {target} is not in the ledger")
+    return errors
+
+
+def apply_successors(entries: dict[str, dict], overrides: Mapping[str, list[str]]) -> dict[str, dict]:
+    """A copy of the print entries with the hand-given successors set on the retired ones."""
+    out = {pid: dict(entry) for pid, entry in entries.items()}
+    for pid, targets in overrides.items():
+        if pid in out and out[pid]["status"] == "retired":
+            out[pid]["successors"] = list(targets)
+    return out
+
+
+def review_body(prints: list[dict], cards: list[dict], renames: list[dict]) -> dict:
+    """The body of review/ids.json: what reconcile retired or renamed, for a person to look at."""
+    return {"prints": sorted(prints, key=lambda r: r["id"]), "cards": sorted(cards, key=lambda r: r["id"]),
+            "renames": sorted(renames, key=lambda r: r["from"])}
