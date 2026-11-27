@@ -183,7 +183,8 @@ places, in this order. YGOPRODeck states none, so the first import guesses `limi
 Edition" and `unlimited` for the rest. YGOJSON states the editions of a set it matches (`1st`, `unlimited`,
 `limited`), which replace the guess. TCGCSV then adds every edition its prices show for the set's singles, where
 TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`. A print lists its own `editions` only when its products are
-priced in fewer editions than its set: 8,089 prints do.
+priced in other editions than its set: 8,089 prints do. That is mostly fewer, but a product of another group that lands
+in a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions.
 
 **Key art.** `releases[0].keyArt` links to YGOPRODeck's set image (910 sets), else to the pack art YGOJSON gives from
 Yugipedia (126 sets). The `source` is the page the image is on. The images are links and are never copied. No source

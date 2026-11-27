@@ -182,6 +182,28 @@ def test_a_reprint_sets_editions_are_its_groups_prices_else_its_parents_after_th
     assert again["sets"] == out["sets"] and again["files"] == out["files"]
 
 
+def test_a_reprint_sets_editions_leave_out_another_groups_product_and_that_print_keeps_its_own():
+    # Product 12 of the original group lands on a print only the reprint set has, by number-other-set, priced in 1st
+    # Edition: the reprint set stays at its own group's Unlimited, and only that print says 1st Edition.
+    groups, products, prices, sets, cards = reprint_editions_world(["Unlimited"])
+    cards[0]["prints"].append(mkprint("ret", "100", "RP01-EN002", "rare"))
+    cards[0]["prints"].append(mkprint("ret-2020-reprint", "100", "RP01-EN099", "rare"))
+    sets.append(mkset("ret-2020-reprint", "Retro Pack (2020 Date Reprint)", "RP01", source="tcgplayer", parent="ret",
+                      tcgplayerGroupIds=[2]))
+    products[1].append(single(1, "Alpha", "RP01-EN099", "Rare", 12))
+    products[2].append(single(2, "Alpha", "RP01-EN002", "Rare", 22))  # priced in nothing
+    prices[1] += [price(12, "1st Edition"), price(12, "Unlimited")]
+    out = go(groups, products, prices, sets, cards)
+    assert out["sets_by_id"]["ret-2020-reprint"]["editions"] == ["unlimited"]
+    prints = prints_of(out, "100")
+    assert prints["ret-2020-reprint:100:RP01-EN099:rare"]["tcgplayer"]["match"] == "number-other-set"
+    assert prints["ret-2020-reprint:100:RP01-EN099:rare"]["editions"] == ["first", "unlimited"]
+    assert "editions" not in prints["ret-2020-reprint:100:RP01-EN001:rare"]
+    assert "editions" not in prints["ret-2020-reprint:100:RP01-EN002:rare"]  # no priced product: the set's Unlimited
+    again = imp.run(groups, products, prices, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["sets"] == out["sets"] and again["files"] == out["files"]
+
+
 def anniversary_world(with_set):
     parent = mkset("doc", "Dark of Chaos", "DOC", editions=("unlimited",), era="dm", tcgplayerGroupIds=[1])
     sets = [parent]

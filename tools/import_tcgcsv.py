@@ -14,7 +14,7 @@ rewrites the first two in place, adding only:
           parent's as this run leaves them). A set this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a
           free one that the ledger does not hold. A reprint set left with no group goes, with its prints.
   prints  identifiers.tcgplayerProductIds, tcgplayer {name, match}, editions (when a print's own products are priced
-          in fewer editions than its set), and the prints of a reprint set (copies of the parent's prints that the
+          in other editions than its set), and the prints of a reprint set (copies of the parent's prints that the
           group's singles name). A print whose YGOPRODeck rarity was unknown takes TCGplayer's.
 
 A group is matched to a set by five rules, each over the groups and sets still free: exact name; normalised name;
@@ -834,11 +834,12 @@ class Importer:
 
     def merge_editions(self) -> int:
         """Union each set's editions with the subtypes priced on the products that landed in it, then give a print
-        its own editions when its products are priced in fewer, and take them away when they are not. Nothing else
-        writes a print's editions (ygoprodeck only carries an earlier run's over), so this is the one owner. A reprint
-        set starts from the editions its own group's singles are priced in, else its parent's once merged, and never
-        from its own earlier editions, so a run alone gives what the pipeline gives. Returns the number of sets whose
-        editions changed."""
+        its own editions when its products are priced in other editions than its set, and take them away when they are
+        not. Nothing else writes a print's editions (ygoprodeck only carries an earlier run's over), so this is the one
+        owner. A reprint set's editions are the ones its own group's singles are priced in, else its parent's once
+        merged: never its own earlier editions, so a run alone gives what the pipeline gives, and never another group's
+        product that landed in it by number-other-set, whose print says its own editions instead. A print with no
+        product has its set's editions. Returns the number of sets whose editions changed."""
         changed = 0
         for set_id, ids in self.landed_in.items():
             if set_id in self.reprint_of:
@@ -850,16 +851,14 @@ class Importer:
                 s["editions"] = merged
                 changed += 1
         for set_id, (gid, parent_id, before) in sorted(self.reprint_of.items()):
-            seen = set().union(*(self.subtypes.get(i, set()) for i in self.landed_in.get(set_id, ())))
-            fresh = self._priced_editions(gid) or self.sets[parent_id]["editions"]
-            self.sets[set_id]["editions"] = _edition_list(set(fresh) | seen)
+            self.sets[set_id]["editions"] = self._priced_editions(gid) or list(self.sets[parent_id]["editions"])
             changed += self.sets[set_id]["editions"] != before
         for body in self.catalog.files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
                     own = set().union(*(self.subtypes.get(i, set()) for i in _product_ids(p)))
                     set_editions = set(self.sets[p["set"]]["editions"])
-                    if own and own < set_editions:
+                    if own and own != set_editions:
                         p["editions"] = _edition_list(own)
                     else:
                         p.pop("editions", None)  # an earlier run's editions, which no product backs any more
