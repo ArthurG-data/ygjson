@@ -658,6 +658,19 @@ def test_a_print_priced_in_fewer_editions_than_its_set_gets_its_own():
     assert "editions" not in prints["lob:100:LOB-EN003:rare"]  # no product, inherits
 
 
+def test_a_print_loses_editions_it_no_longer_has_a_reason_for():
+    own = ["unlimited"]
+    cards = [mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare", editions=own),
+                                     mkprint("lob", "100", "LOB-EN002", "rare", editions=own),
+                                     mkprint("lob", "100", "LOB-EN003", "rare", editions=own)])]
+    products = {1: [single(1, "Alpha 1", "LOB-EN001", "Rare", 7), single(1, "Alpha 2", "LOB-EN002", "Rare", 8)]}
+    prices = {1: [price(7, "1st Edition"), price(7, "Unlimited"), price(8, "Unlimited")]}
+    prints = prints_of(go([mkgroup(1, "Legend of Blue Eyes", "LOB")], products, prices, [LOB], cards), "100")
+    assert "editions" not in prints["lob:100:LOB-EN001:rare"]  # priced in every edition of the set
+    assert prints["lob:100:LOB-EN002:rare"]["editions"] == ["unlimited"]
+    assert "editions" not in prints["lob:100:LOB-EN003:rare"]  # no product left
+
+
 def test_a_sealed_product_prices_do_not_touch_editions():
     cards = [mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])]
     products = {1: [sealed(1, "Box", 5), single(1, "Alpha", "LOB-EN001", "Rare", 7)]}

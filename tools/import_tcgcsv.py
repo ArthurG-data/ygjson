@@ -724,7 +724,8 @@ class Importer:
 
     def merge_editions(self) -> int:
         """Union each set's editions with the subtypes priced on the products that landed in it, then give a print
-        its own editions when its products are priced in fewer. Returns the number of sets whose editions changed."""
+        its own editions when its products are priced in fewer, and take them away when they are not. Nothing else
+        writes a print's editions (ygoprodeck only carries an earlier run's over), so this is the one owner. Returns the number of sets whose editions changed."""
         changed = 0
         for set_id, ids in self.landed_in.items():
             s = self.sets[set_id]
@@ -740,6 +741,8 @@ class Importer:
                     set_editions = set(self.sets[p["set"]]["editions"])
                     if own and own < set_editions:
                         p["editions"] = _edition_list(own)
+                    else:
+                        p.pop("editions", None)  # an earlier run's editions, which no product backs any more
         return changed
 
 
