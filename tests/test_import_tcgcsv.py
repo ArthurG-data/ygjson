@@ -254,17 +254,59 @@ def test_a_group_this_run_matches_elsewhere_leaves_the_set_an_earlier_run_gave_i
     assert again["sets"] == out["sets"]
 
 
-def test_a_group_whose_products_are_missing_keeps_its_set_and_one_tcgcsv_no_longer_lists_leaves_when_all_are_there():
-    # Group 2 is listed, but its products are not in the input; group 3 is no longer listed.
+def test_a_group_whose_products_are_missing_or_that_the_listing_lacks_keeps_its_set():
+    # Group 2 is listed, but its products are not in the input; group 3, which a set holds, is not listed.
     sets = [mkset("old", "Old Pack", "OLD", tcgplayerGroupIds=[2]), mkset("new", "New Pack", "NEW"),
-            mkset("gone", "Gone Pack", "GON", tcgplayerGroupIds=[3]), mkset("one", "One Pack", "ONE")]
+            mkset("held", "Held Pack", "HLD", tcgplayerGroupIds=[3]), mkset("one", "One Pack", "ONE")]
     groups = [mkgroup(1, "One Pack", "ONE"), mkgroup(2, "New Pack", "NEW")]
     partial = go(groups, {1: []}, {}, sets)
-    assert {s["id"]: s.get("tcgplayerGroupIds") for s in partial["sets"]} == {"old": [2], "new": None, "gone": [3],
+    assert {s["id"]: s.get("tcgplayerGroupIds") for s in partial["sets"]} == {"old": [2], "new": None, "held": [3],
                                                                            "one": [1]}
-    complete = go(groups, {1: [], 2: []}, {}, sets)
-    assert {s["id"]: s.get("tcgplayerGroupIds") for s in complete["sets"]} == {"old": None, "new": [2], "gone": None,
-                                                                            "one": [1]}
+    with_products = go(groups, {1: [], 2: []}, {}, sets)
+    assert {s["id"]: s.get("tcgplayerGroupIds") for s in with_products["sets"]} == {"old": None, "new": [2],
+                                                                                 "held": [3], "one": [1]}
+
+
+def partial_listing_world():
+    """Retro Pack (group 1), its 2020 reprint (group 2), a TCGplayer-minted set (group 3), and a set group 4 is pinned
+    to by the mapping, each holding a product."""
+    sets = [mkset("ret", "Retro Pack", "RP01", editions=("first", "unlimited")), mkset("pin", "Pinned Pack", "PIN")]
+    cards = [mkcard("100", "Alpha", [mkprint("ret", "100", "RP01-EN001", "rare"), mkprint("pin", "100", "PIN-EN001", "rare")])]
+    groups = [mkgroup(1, "Retro Pack", "RP01"), mkgroup(2, "Retro Pack (2020 Date Reprint)", "RP01"),
+              mkgroup(3, "Speed Duel: Finals", "SBC2"), mkgroup(4, "Nothing Alike", "XYZ")]
+    products = {1: [single(1, "Alpha", "RP01-EN001", "Rare", 11)], 2: [single(2, "Alpha", "RP01-EN001", "Rare", 21)],
+                3: [single(3, "Alpha", "SBC2-EN001", "Rare", 31)], 4: [single(4, "Alpha", "PIN-EN001", "Rare", 41)]}
+    prices = {1: [price(11, "1st Edition"), price(11, "Unlimited")], 2: [price(21, "Unlimited")],
+              3: [price(31, "Unlimited")], 4: [price(41, "Unlimited")]}
+    return groups, products, prices, sets, cards, {"4": {"set": "pin", "why": "x"}}
+
+
+def test_a_listing_that_lacks_groups_the_data_holds_changes_nothing():
+    groups, products, prices, sets, cards, mapping = partial_listing_world()
+    full = go(groups, products, prices, sets, cards, mapping)
+    assert {s["id"]: s.get("tcgplayerGroupIds") for s in full["sets"]} == {
+        "pin": [4], "ret": [1], "ret-2020-reprint": [2], "speed-duel-finals": [3]}
+    assert len(full["cards"]["100"]["prints"]) == 4
+    # Groups 2, 3 and 4 drop out of the listing, as from a short or failed listing: their products stay where they were,
+    # and so do their sets, the reprint set's copied print and the minted print.
+    short = [g for g in groups if g["groupId"] == 1]
+    again = imp.run(short, {1: products[1]}, {1: prices[1]}, copy.deepcopy(full["sets"]), copy.deepcopy(full["files"]),
+                    mapping)
+    assert again["sets"] == full["sets"] and again["files"] == full["files"]
+
+
+@pytest.mark.parametrize("groups, products", [([], {}), ([mkgroup(1, "Retro Pack", "RP01")], {1: []})])
+def test_main_refuses_an_empty_listing_and_writes_nothing(monkeypatch, groups, products):
+    written = []
+    monkeypatch.setattr("sys.argv", ["import_tcgcsv.py"])
+    monkeypatch.setattr(imp.tcgcsv, "groups", lambda cache, refresh=False: groups)
+    monkeypatch.setattr(imp.tcgcsv, "products", lambda gid, cache, refresh=False: products[gid])
+    monkeypatch.setattr(imp.tcgcsv, "prices", lambda gid, cache, refresh=False: [])
+    monkeypatch.setattr(imp.ygjson, "save_json", lambda path, body: written.append(path))
+    with pytest.raises(SystemExit) as exit_:
+        imp.main()
+    assert exit_.value.code not in (None, 0) and "TCGCSV" in str(exit_.value.code)
+    assert written == []
 
 
 def test_a_set_tcgplayer_minted_for_a_group_that_now_matches_a_set_leaves():
@@ -284,19 +326,21 @@ def test_a_set_tcgplayer_minted_for_a_group_that_now_matches_a_set_leaves():
     assert prints["sdf:100:SBC2-EN001:rare"]["identifiers"]["tcgplayerProductIds"] == [7]
 
 
-def test_a_reprint_set_whose_group_tcgcsv_no_longer_lists_leaves_with_its_prints():
+def test_a_reprint_set_whose_group_now_matches_a_set_by_name_leaves_with_its_prints():
     parent = mkset("ret", "Retro Pack", "RP01", tcgplayerGroupIds=[1])
     reprint = mkset("ret-2020-reprint", "Retro Pack (2020 Date Reprint)", "RP01", source="tcgplayer", parent="ret",
                     tcgplayerGroupIds=[2])
+    named = mkset("ret-dr", "Retro Pack (2020 Date Reprint)", "RP01")
     card = mkcard("100", "Alpha", [mkprint("ret", "100", "RP01-EN001", "rare"),
                                    mkprint("ret-2020-reprint", "100", "RP01-EN001", "rare")])
-    groups = [mkgroup(1, "Retro Pack", "RP01")]
-    out = go(groups, {1: []}, {}, [parent, reprint], [card])
-    assert [s["id"] for s in out["sets"]] == ["ret"]
+    groups = [mkgroup(1, "Retro Pack", "RP01"), mkgroup(2, "Retro Pack (2020 Date Reprint)", "RP01")]
+    out = go(groups, {1: [], 2: []}, {}, [parent, reprint, named], [card])
+    assert [s["id"] for s in out["sets"]] == ["ret", "ret-dr"] and out["sets_by_id"]["ret-dr"]["tcgplayerGroupIds"] == [2]
     assert [p["id"] for p in out["cards"]["100"]["prints"]] == ["ret:100:RP01-EN001:rare"]
-    # While a listed group's products are missing, nothing says the group is gone.
-    kept = go([*groups, mkgroup(3, "Other")], {1: []}, {}, [parent, reprint], [card])
-    assert [s["id"] for s in kept["sets"]] == ["ret", "ret-2020-reprint"] and len(kept["cards"]["100"]["prints"]) == 2
+    # While the group's products are missing, or the listing lacks it, nothing says it moved or went.
+    for listed, products in ((groups, {1: []}), (groups[:1], {1: []})):
+        kept = go(listed, products, {}, [parent, reprint], [card])
+        assert [s["id"] for s in kept["sets"]] == ["ret", "ret-2020-reprint"] and len(kept["cards"]["100"]["prints"]) == 2
 
 
 # --- singles ----------------------------------------------------------------------------------------------------

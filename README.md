@@ -418,7 +418,9 @@ changes nothing unless a source changed. The downloads are cached under `.cache/
 is fetched on the first run. Yugipedia pages and TCGCSV files are fetched when they are not cached, at one request per
 second and one every half second. YGOJSON has no downloader: put the files of its `v1/aggregate` branch (`cards.json`,
 `sets.json`, `series.json`, `sealedProducts.json`, `meta.json`) in `.cache/ygojson`. To take a newer TCGCSV or
-Yugipedia snapshot, move that cache aside and rebuild.
+Yugipedia snapshot, move that cache aside and rebuild. `import_tcgcsv.py` refuses a TCGCSV listing with no groups or
+no products, and while a group the data holds is missing from the listing or has no products file, it leaves that
+group's products, prints and set as they are.
 
 `validate.py` checks every file against its schema, then every id and reference: print ids follow the rule, a print's
 set exists, no parent loops, no TCGplayer product or group sits on two prints or sets, archetype slugs exist, and a

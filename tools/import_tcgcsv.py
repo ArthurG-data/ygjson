@@ -7,11 +7,11 @@ import_yugipedia), .cache/tcgcsv, and mappings/tcgplayer_groups.json ({groupId: 
 rewrites the first two in place, adding only:
 
   sets    tcgplayerGroupIds (each group on the one set this run matched or minted for it, and taken off any other an
-          earlier run gave it, unless the input lacks its products), editions (union with the price subtypes of the
-          set's singles: 1st Edition is first, Unlimited unlimited, Limited limited), and one new set for each
-          "(2020 Date Reprint)" or "(2020 Reprint)" group (id "<parent id>-2020-reprint", source tcgplayer, the parent's
-          code, type and era, and the editions its own group's singles are priced in, else the parent's as this run
-          leaves them). A set this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a
+          earlier run gave it, unless the input lacks its products or the listing lacks it), editions (union with the
+          price subtypes of the set's singles: 1st Edition is first, Unlimited unlimited, Limited limited), and one
+          new set for each "(2020 Date Reprint)" or "(2020 Reprint)" group (id "<parent id>-2020-reprint", source
+          tcgplayer, the parent's code, type and era, and the editions its own group's singles are priced in, else the
+          parent's as this run leaves them). A set this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a
           free one that the ledger does not hold. A reprint set left with no group goes, with its prints.
   prints  identifiers.tcgplayerProductIds, tcgplayer {name, match}, editions (when a print's own products are priced
           in fewer editions than its set), and the prints of a reprint set (copies of the parent's prints that the
@@ -35,8 +35,9 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
      wrote), and its rarity is known. The print is minted (source tcgplayer), in the group's set, or in a set minted
      for a group that matched none                                     -> minted
 Whatever remains goes to review `unmatched` with the reason. Each run decides every product afresh, whatever an earlier
-run left on the prints, and a product TCGCSV no longer lists leaves its print (unless a listed group's products are
-missing from the input). A product lands on one print only. A print holds several products only when they are the same
+run left on the prints, and a product TCGCSV no longer lists leaves its print, unless the input is not complete: a
+listed group's products are missing, or the listing lacks a group a set holds or the mapping pins. Then that group's
+products, prints and set stay as they are. An empty listing, or one with no products at all, is refused. A product lands on one print only. A print holds several products only when they are the same
 card at the same rarity and price different editions; a product that would share a print with another card, another
 rarity, or an edition another product already prices goes to review `conflicts`.
 
@@ -328,24 +329,25 @@ def _product_ids(p: dict) -> list[int]:
     return p.get("identifiers", {}).get("tcgplayerProductIds", [])
 
 
-def _complete(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> bool:
-    """Whether the input holds the products of every listed group."""
-    return all(g["groupId"] in products for g in groups)
+def _complete(groups: list[dict], products: dict[int, list[tcgcsv.Product]], sets: list[dict], mapping: dict) -> bool:
+    """Whether the input holds the products of every listed group, and the listing holds every group a set holds or the
+    mapping pins. A group the listing lacks is undecided, like a listed group whose products are missing, and not gone:
+    a short listing is far likelier a failed download than TCGplayer deleting a group."""
+    listed = {g["groupId"] for g in groups}
+    known = {gid for s in sets for gid in s.get("tcgplayerGroupIds", [])} | {int(k) for k in mapping if k.isdigit()}
+    return all(gid in products for gid in listed) and known <= listed
 
 
-def _undecided(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> Callable[[int], bool]:
+def _undecided(products: dict[int, list[tcgcsv.Product]], complete: bool) -> Callable[[int], bool]:
     """Whether this run cannot decide a product an earlier run put on a print. One it lists it decides; one it does not
-    is gone from TCGCSV, unless a listed group's products are missing from the input, which leaves no telling whose it
-    was."""
+    is gone from TCGCSV, unless the input is not complete (see _complete), which leaves no telling whose it was."""
     listed = {prod.product_id for ps in products.values() for prod in ps}
-    complete = _complete(groups, products)
     return lambda product_id: product_id not in listed and not complete
 
 
-def _undecided_group(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> Callable[[int], bool]:
+def _undecided_group(products: dict[int, list[tcgcsv.Product]], complete: bool) -> Callable[[int], bool]:
     """Whether this run cannot decide the set of a group an earlier run put on a set, by the rule of _undecided: its
-    products are missing from the input, and so are a listed group's (its own, or one whose products would say)."""
-    complete = _complete(groups, products)
+    products are missing from the input (or the listing lacks it), and the input is not complete."""
     return lambda group_id: group_id not in products and not complete
 
 
@@ -389,8 +391,8 @@ def _drop_empty_minted_sets(sets: list[dict], files: dict[str, dict]) -> list[di
 
 
 def _drop_reprint_sets_without_a_group(sets: list[dict], files: dict[str, dict]) -> list[dict]:
-    """A reprint set exists for its group. One left with none (TCGCSV no longer lists it, or a set now has its name)
-    goes with the prints copied into it, unless one of them holds a product."""
+    """A reprint set exists for its group. One left with none (a set now has its name, or TCGCSV no longer lists it
+    while the input is complete) goes with the prints copied into it, unless one of them holds a product."""
     priced = {p["set"] for body in files.values() for card in body["cards"] for p in card["prints"] if _product_ids(p)}
     gone = {s["id"] for s in sets
             if s["source"] == SOURCE and "parent" in s and not s.get("tcgplayerGroupIds") and s["id"] not in priced}
@@ -428,8 +430,9 @@ class Importer:
         self.rekeyed_before: set[str] = set()  # prints an earlier run re-keyed to TCGplayer's rarity
         # reprint set id -> (its group, its parent, the editions it came in with)
         self.reprint_of: dict[str, tuple[int, str, list[str] | None]] = {}
-        self.undecided = _undecided(groups, products)
-        self.undecided_group = _undecided_group(groups, products)
+        complete = _complete(groups, products, sets, mapping)
+        self.undecided = _undecided(products, complete)
+        self.undecided_group = _undecided_group(products, complete)
         # Only the products that would stay on the base print: a refused product, or one naming a colour or art, shares
         # nothing with a treatment there.
         # {(number, rarity): [(product id, group id)]}; whether one is a neighbour depends on the set, see `_shares_number`.
@@ -868,7 +871,7 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
     """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}. ``held`` and ``reserved`` are
     the set ledger's {name: slug} and slugs, for the sets this tool mints."""
     _drop_own_aliases(files, products)
-    _remove_minted(sets, files, _undecided(groups, products))
+    _remove_minted(sets, files, _undecided(products, _complete(groups, products, sets, mapping)))
     imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved)
     unmatched_groups = imp.match_groups()
     imp.match_singles()
@@ -902,12 +905,22 @@ def load_mapping(path: Path = MAPPING) -> dict:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
 
+def check_input(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> None:
+    """Refuse a listing with no groups, or whose groups hold no products: that is TCGCSV failing, and writing it would
+    take every product off the data."""
+    if not groups:
+        raise SystemExit("TCGCSV lists no groups: nothing written")
+    if not any(products.values()):
+        raise SystemExit(f"TCGCSV lists {len(groups)} groups but no products in any of them: nothing written")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--refresh", action="store_true", help="download TCGCSV again (about 1,300 requests)")
     refresh = parser.parse_args().refresh
     groups = tcgcsv.groups(CACHE, refresh)
     products = {g["groupId"]: tcgcsv.products(g["groupId"], CACHE, refresh) for g in groups}
+    check_input(groups, products)
     prices = {g["groupId"]: tcgcsv.prices(g["groupId"], CACHE, refresh) for g in groups}
     ledger = ids.load_ledger()
     out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping(), ygjson.load_eras(),
