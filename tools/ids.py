@@ -10,9 +10,11 @@ The default reconciles data/cards, sets/, data/archetypes.json and data/sealed w
 of mappings/ids.json, writes ids/ and review/ids.json (the retired ids that do not lead to exactly one live id, and
 this run's renames, for a person to settle), and exits 3 when a set or archetype was renamed: then only ids/sets.json
 and ids/archetypes.json are written, holding the new name under the old slug, and the pipeline must run again so the
-data carries it before the prints, printings, cards and sealed products are reconciled. --check-against REV compares the ledger on disk with the one at git REV and
-exits 1 when an entry was removed, an id or a print's birth key changed, a formerKeys/formerIds/names list lost what
-it had, a print's or printing's old key is no longer findable, or a retired entry's successors shrank to none.
+data carries it before the prints, printings, cards and sealed products are reconciled.
+
+--check-against REV compares the ledger on disk with the one at git REV and exits 1 when an entry was removed, an id
+or a print's birth key changed, a formerKeys/formerIds/names list lost what it had, a print's or printing's old key
+is no longer findable, or a retired entry's successors shrank to none.
 """
 from __future__ import annotations
 

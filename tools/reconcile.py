@@ -155,8 +155,8 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
 
     A card in `cards` is live: its `name` and `konamiId` (kept from the entry when the card has none) are refreshed.
     A live entry whose card is gone is retired; its successor is the one current card with its name, else the one
-    with its konamiId. With none or several it has no successor. An entry
-    already retired is left as it is. `entries` is not modified.
+    with its konamiId. With none or several it has no successor. An entry already retired is left as it is.
+    `entries` is not modified.
     """
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
     current = {c["id"]: c for c in cards}
