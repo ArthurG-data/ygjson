@@ -447,6 +447,7 @@ CI runs only the offline checks (pytest, `validate.py`, and the id ledger check 
 pull request, every push to `main` and every `v*` tag. The two live checks run weekly and on demand in
 `live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
 that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release.
+Each action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.
 
 ## Licence
 
