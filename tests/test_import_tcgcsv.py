@@ -844,6 +844,20 @@ def test_the_reprint_set_and_aliases_in_a_run():
     assert out["stats"]["groupsUnmatched"] == 1 and out["review"]["groups"][0]["groupId"] == 2
 
 
+def test_a_rerun_changes_nothing_after_an_alias_mint_and_a_product_that_moved():
+    groups, products, sets, card = alias_world()
+    # An earlier run left product 10 (Beta) on the print product 9 belongs to; 10 now ties to Beta's own print.
+    card["prints"][0] |= {"identifiers": {"tcgplayerProductIds": [10]}, "tcgplayer": {"name": "Beta", "match": "number"}}
+    beta = mkcard("200", "Beta", [mkprint("lob", "200", "LOB-EN002", "common")])
+    products[1].append(single(1, "Beta", "LOB-EN002", "Common", 10))
+    out = go(groups, products, {}, sets, [card, beta])
+    assert prints_of(out, "100")["ots22:100:OP22-EN021:common"]["identifiers"]["tcgplayerProductIds"] == [5]
+    assert prints_of(out, "100")["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [9]
+    assert prints_of(out, "200")["lob:200:LOB-EN002:common"]["identifiers"]["tcgplayerProductIds"] == [10]
+    again = imp.run(groups, products, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["sets"] == out["sets"] and again["files"] == out["files"] and again["review"] == out["review"]
+
+
 def test_load_mapping_is_empty_without_a_file(tmp_path):
     assert imp.load_mapping(tmp_path / "nope.json") == {}
 
