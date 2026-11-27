@@ -25,7 +25,7 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/Legality.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 ```
 
-Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}}, "data": {...}}`. All seven come
+Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}, "idsVersion": 1}, "data": {...}}`. All seven come
 from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` names the
 snapshot each source was last imported from: YGOPRODeck's `database_version`, YGOJSON's `increment` and the latest
 `modifiedOn` among TCGCSV's groups. A build made without the caches leaves `sources` out.
@@ -33,8 +33,8 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 | File | Keyed by | Holds |
 |---|---|---|
 | `AllSets.json` | set id (`legend-of-blue-eyes-white-dragon`) | name, code, type, series, parent, era, editions, TCGplayer group ids, identifiers, and the release with its date and key art |
-| `AllCards.json` | card id (`89631139`) | the facts every print of the card shares, its name in each language, and the ids of its prints |
-| `AllPrintings.json` | printing id (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`) | set, number, region, rarity and its tier, edition, finish, TCGplayer product ids |
+| `AllCards.json` | card id (`89631139`) | the facts every print of the card shares, its name in each language, and the permanent ids of its prints |
+| `AllPrintings.json` | printing id, `<print uuid>:<language>:<edition>` (`0b0a5e2c-6f6b-5d3e-9c1a-2f4f0c7d8a11:en:first`) | its readable `key` (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`), `print` (the print's UUID), `printKey`, set, number, region, rarity and its tier, edition, finish, TCGplayer product ids |
 | `AllArchetypes.json` | archetype slug (`blue-eyes`) | name, names by language, whether Konami calls it an archetype, and the ids of its member cards |
 | `AllProducts.json` | sealed product id (`legend-of-blue-eyes-white-dragon-booster-box`) | category, set, TCGplayer product id, release date, contents and the sources that state them |
 | `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
