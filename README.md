@@ -55,6 +55,8 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 - `legality/` holds `formats.json` and `bans.json`.
 - `mappings/` holds hand-kept inputs to the tools. `set_types.json` maps the type and series on a Yugipedia set
   infobox to a set type. `tcgplayer_groups.json` ties a TCGplayer group to a set where the automatic match fails.
+  `tcgplayer_products.json` names the card of a TCGplayer single whose number no print has and whose name is no
+  card's (`Synch Realm` is `Synchronized Realm`), so its print is minted.
   `ygoprodeck_set_aliases.json` names a YGOPRODeck set that is another set under a second name: the alias is not
   written and its prints go to the owner (`WCS 2025 Limited Pack` is `Limited Pack World Championship 2025`). Each
   entry cites its evidence. `ids.json` holds the hand decisions on the id ledger (see [Ids](#ids)).

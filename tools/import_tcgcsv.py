@@ -3,7 +3,7 @@
     uv run python tools/import_tcgcsv.py [--refresh]
 
 Reads sets/sets.json and data/cards/*.json (written by import_ygoprodeck and refined by import_ygojson and
-import_yugipedia), .cache/tcgcsv, and mappings/tcgplayer_groups.json ({groupId: {"set": id, "why": evidence}}), and
+import_yugipedia), .cache/tcgcsv, mappings/tcgplayer_groups.json ({groupId: {"set": id, "why": evidence}}) and mappings/tcgplayer_products.json, and
 rewrites the first two in place, adding only:
 
   sets    tcgplayerGroupIds (each group on the one set this run matched or minted for it, and taken off any other an
@@ -31,10 +31,11 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
      (number+rarity when that print has the product's rarity, because a product re-keyed it earlier in the run)
   3. no set, or the number is not in the group's set: the number is in exactly one other set (the set is named
      differently on TCGplayer), tried with the same rules there        -> number-other-set
-  4. no print anywhere has the number: the product's name is exactly one card (its name, or an alias: one the card came
-     with, or a name a product tied to it by number earlier in this run sells it under, never one an earlier run
-     wrote), and its rarity is known. The print is minted (source tcgplayer), in the group's set, or in a set minted
-     for a group that matched none                                     -> minted
+  4. no print anywhere has the number: the product's name is exactly one card (its name, or an alias: its betaName,
+     or a name a product tied to it by number earlier in this run sells it under, never one an earlier run wrote), or
+     mappings/tcgplayer_products.json ({productId: {"card": id, "why": evidence}}) names the card, and its rarity is
+     known. The print is minted (source tcgplayer), in the group's set, or in a set minted for a group that matched
+     none                                                              -> minted
 Whatever remains goes to review `unmatched` with the reason. Each run decides every product afresh, whatever an earlier
 run left on the prints, and a product TCGCSV no longer lists leaves its print, unless the input is not complete: a
 listed group's products are missing, or the listing lacks a group a set holds or the mapping pins. Then that group's
@@ -67,6 +68,7 @@ from import_ygoprodeck import era_of, set_type
 CACHE = ygjson.ROOT / ".cache" / "tcgcsv"
 REVIEW = ygjson.ROOT / "review" / "tcgplayer-2.json"
 MAPPING = ygjson.ROOT / "mappings" / "tcgplayer_groups.json"
+PRODUCT_MAPPING = ygjson.ROOT / "mappings" / "tcgplayer_products.json"
 SOURCE = "tcgplayer"
 
 # A group named "<base> (<suffix>)" is a later printing of the set called <base>.
@@ -270,9 +272,11 @@ class Catalog:
         self.by_name: dict[str, list[dict]] = collections.defaultdict(list)
         self.by_alias: dict[str, list[dict]] = collections.defaultdict(list)
         self.by_id: dict[str, dict] = {}
+        self.cards: dict[str, dict] = {}
         self.touched: set[str] = set()
         for body in files.values():
             for card in body["cards"]:
+                self.cards[card["id"]] = card
                 self.by_name[normalise(card["name"].removesuffix(_SKILL_CARD))].append(card)
                 for p in card["prints"]:
                     self.add(card, p)
@@ -404,7 +408,7 @@ def _edition_list(editions) -> list[str]:
 
 class Importer:
     def __init__(self, sets, files, groups, products, prices, mapping, eras=None, held: Mapping[str, str] = {},
-                 reserved: Container[str] = frozenset()):
+                 reserved: Container[str] = frozenset(), product_mapping: Mapping[str, dict] = {}):
         self.sets = {s["id"]: s for s in sets}
         self.held = held  # the set ledger's {name: slug}: a minted set takes the slug held for its name
         self.reserved = reserved  # every slug in the set ledger: a minted set never takes one
@@ -441,6 +445,7 @@ class Importer:
                 for p in card["prints"]:
                     self._forget_products(p)
         self.mapping = mapping
+        self.product_mapping = product_mapping
         self.set_of_group: dict[int, str] = {}
         self.rekeyed = 0
         self.minted = 0
@@ -734,7 +739,13 @@ class Importer:
             return "no print has this number, and its rarity is unknown"
         if prod.number == "N/A":
             return "no print has this number, and TCGplayer's number is N/A"
-        card = self.catalog.card_named(prod.base_name_and_tags()[0])
+        pinned = self.product_mapping.get(str(prod.product_id))
+        if pinned is not None:
+            card = self.catalog.cards.get(pinned["card"])
+            if card is None:
+                return f"the product mapping names card {pinned['card']}, which the data lacks"
+        else:
+            card = self.catalog.card_named(prod.base_name_and_tags()[0])
         if card is None:
             return "no print has this number, and its name is not one card"
         set_id = self._group_set(prod)
@@ -872,12 +883,12 @@ class Importer:
 
 
 def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping[str, str] = {},
-        reserved: Container[str] = frozenset()) -> dict:
+        reserved: Container[str] = frozenset(), product_mapping: Mapping[str, dict] = {}) -> dict:
     """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}. ``held`` and ``reserved`` are
     the set ledger's {name: slug} and slugs, for the sets this tool mints."""
     _start_aliases(files)
     _remove_minted(sets, files, _undecided(products, _complete(groups, products, sets, mapping)))
-    imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved)
+    imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved, product_mapping)
     unmatched_groups = imp.match_groups()
     imp.match_singles()
     imp.settle_shared_editions()
@@ -929,7 +940,7 @@ def main() -> None:
     prices = {g["groupId"]: tcgcsv.prices(g["groupId"], CACHE, refresh) for g in groups}
     ledger = ids.load_ledger()
     out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping(), ygjson.load_eras(),
-              ids.held_names(ledger, "sets"), ids.reserved(ledger, "sets"))
+              ids.held_names(ledger, "sets"), ids.reserved(ledger, "sets"), load_mapping(PRODUCT_MAPPING))
     ygjson.save_json(ygjson.SETS, out["sets"])
     for bucket, body in out["files"].items():
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)

@@ -46,9 +46,10 @@ def sealed(group_id, name, product_id=None):
                           image_url="", url="https://tcg/x", extended={"Description": "x"})
 
 
-def go(groups=(), products=None, prices=None, sets=(), cards=(), mapping=None):
+def go(groups=(), products=None, prices=None, sets=(), cards=(), mapping=None, product_mapping=None):
     files = {"000": {"cards": copy.deepcopy(list(cards))}}
-    out = imp.run(list(groups), products or {}, prices or {}, copy.deepcopy(list(sets)), files, mapping or {})
+    out = imp.run(list(groups), products or {}, prices or {}, copy.deepcopy(list(sets)), files, mapping or {},
+                  product_mapping=product_mapping or {})
     out["cards"] = {c["id"]: c for c in out["files"]["000"]["cards"]}
     out["sets_by_id"] = {s["id"]: s for s in out["sets"]}
     return out
@@ -643,6 +644,27 @@ def test_a_beta_name_alias_mints_the_same_print_on_every_run():
     out = go([group], products, {}, [LOB], [card])
     again = imp.run([group], products, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
     assert again["files"] == out["files"] and "lob:100:LOB-999:rare" in {p["id"] for p in again["files"]["000"]["cards"][0]["prints"]}
+
+
+def test_the_product_mapping_names_the_card_a_product_sells_under_a_name_none_of_ours_has():
+    # "Synch Realm" (505921) is Synchronized Realm under a name no card has and a number no print has.
+    groups, _, sets, card = alias_world()
+    realm = mkcard("200", "Synchronized Realm", [mkprint("lob", "200", "LOB-EN022", "common")])
+    products = {2: [single(2, "Synch Realm", "OP22-EN022", "Common", 6)]}
+    pins = {"6": {"card": "200", "why": "test"}}
+    out = go(groups, products, {}, sets, [card, realm], product_mapping=pins)
+    assert prints_of(out, "200")["ots22:200:OP22-EN022:common"]["identifiers"] == {"tcgplayerProductIds": [6]}
+    assert out["cards"]["200"]["aliases"] == ["Synch Realm"] and out["review"]["unmatched"] == []
+    again = imp.run(groups, products, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {}, product_mapping=pins)
+    assert again["files"] == out["files"]
+
+
+def test_a_product_mapping_to_a_card_the_data_lacks_goes_to_review():
+    groups, _, sets, card = alias_world()
+    out = go(groups, {2: [single(2, "Synch Realm", "OP22-EN022", "Common", 6)]}, {}, sets, [card],
+             product_mapping={"6": {"card": "999", "why": "test"}})
+    assert [(r["productId"], r["reason"]) for r in out["review"]["unmatched"]] == [
+        (6, "the product mapping names card 999, which the data lacks")]
 
 
 def test_a_skill_card_product_reads_as_its_card_and_a_promo_group_with_no_prices_is_limited():
