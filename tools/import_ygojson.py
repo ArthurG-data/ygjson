@@ -176,6 +176,12 @@ def languages(names: dict) -> dict[str, str]:
     return {lang: name for lang, name in names.items() if _LANGUAGE.match(lang) and name}
 
 
+def canonical_password(password) -> str:
+    """A password without leading zeros, as our card ids write it: YGOJSON's "06850209" is our "6850209"."""
+    text = str(password).strip()
+    return str(int(text)) if text.isdigit() else text
+
+
 def match_cards(ours: list[dict], theirs: list[dict]) -> dict[str, dict]:
     """{our card id: YGOJSON card}: by YGOJSON's YGOPRODeck id, else by a password no other match has claimed."""
     by_ygoprodeck = collections.defaultdict(list)
@@ -185,7 +191,7 @@ def match_cards(ours: list[dict], theirs: list[dict]) -> dict[str, dict]:
         if ext is not None:
             by_ygoprodeck[str(ext)].append(g)
         for password in g.get("passwords") or []:
-            by_password[str(password)].append(g)
+            by_password[canonical_password(password)].append(g)
     found: dict[str, dict] = {}
     claimed: set[str] = set()
     for card in ours:

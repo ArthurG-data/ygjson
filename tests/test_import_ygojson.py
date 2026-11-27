@@ -151,6 +151,12 @@ def test_cards_match_by_ygoprodeck_id_then_by_password():
         "46986414": "g1", "46986415": "g2", "1": "g3"}
 
 
+def test_a_zero_padded_password_matches_the_card_id_without_the_zeros():
+    ours = [our_card("6850209")]
+    theirs = [their_card("g1", passwords=["06850209"])]
+    assert {k: v["id"] for k, v in imp.match_cards(ours, theirs).items()} == {"6850209": "g1"}
+
+
 def test_a_password_does_not_steal_a_card_another_id_matched():
     ours = [our_card("100"), our_card("101")]
     theirs = [their_card("g1", ygoprodeck=100, passwords=["100", "101"])]
