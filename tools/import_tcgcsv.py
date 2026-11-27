@@ -32,9 +32,10 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
      wrote), and its rarity is known. The print is minted (source tcgplayer), in the group's set, or in a set minted
      for a group that matched none                                     -> minted
 Whatever remains goes to review `unmatched` with the reason. Each run decides every product afresh, whatever an earlier
-run left on the prints. A product lands on one print only. A print holds
-several products only when they are the same card at the same rarity and price different editions; a product that would
-share a print with another card, another rarity, or an edition another product already prices goes to review `conflicts`.
+run left on the prints, and a product TCGCSV no longer lists leaves its print (unless a listed group's products are
+missing from the input). A product lands on one print only. A print holds several products only when they are the same
+card at the same rarity and price different editions; a product that would share a print with another card, another
+rarity, or an edition another product already prices goes to review `conflicts`.
 
 A product whose name carries a version tag (variant_of) has a price of its own: Zaborg the Thunder Monarch is 129.99
 in Blue and 4.49 in Green under one number and rarity, and Cyberse Code Magician is 0.29 plain and 8.80 in Extended Art.
@@ -48,7 +49,7 @@ import argparse
 import collections
 import json
 import re
-from collections.abc import Container, Mapping
+from collections.abc import Callable, Container, Mapping
 from pathlib import Path
 
 import ids
@@ -319,12 +320,23 @@ def _product_ids(p: dict) -> list[int]:
     return p.get("identifiers", {}).get("tcgplayerProductIds", [])
 
 
-def _remove_minted(sets: list[dict], files: dict[str, dict]) -> None:
+def _undecided(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> Callable[[int], bool]:
+    """Whether this run cannot decide a product an earlier run put on a print. One it lists it decides; one it does not
+    is gone from TCGCSV, unless a listed group's products are missing from the input, which leaves no telling whose it
+    was."""
+    listed = {prod.product_id for ps in products.values() for prod in ps}
+    complete = all(g["groupId"] in products for g in groups)
+    return lambda product_id: product_id not in listed and not complete
+
+
+def _remove_minted(sets: list[dict], files: dict[str, dict], undecided: Callable[[int], bool]) -> None:
     """Drop what an earlier run minted, so each run decides again and a rule fixed today leaves nothing behind. A product
-    on a removed print goes back through the rules. Reprint sets (they have a parent) are not minted this way."""
+    on a removed print goes back through the rules; a print holding a product this run cannot decide stays. Reprint
+    sets (they have a parent) are not minted this way."""
     for body in files.values():
         for card in body["cards"]:
-            card["prints"] = [p for p in card["prints"] if p.get("source") != SOURCE]
+            card["prints"] = [p for p in card["prints"]
+                              if p.get("source") != SOURCE or any(undecided(i) for i in _product_ids(p))]
 
 
 def _drop_own_aliases(files: dict[str, dict], products: dict[int, list[tcgcsv.Product]]) -> None:
@@ -382,6 +394,7 @@ class Importer:
         self.aliases: dict[int, collections.Counter] = collections.defaultdict(collections.Counter)
         self.landed_in: dict[str, set[int]] = collections.defaultdict(set)  # set id -> product ids
         self.rekeyed_before: set[str] = set()  # prints an earlier run re-keyed to TCGplayer's rarity
+        self.undecided = _undecided(groups, products)
         # Only the products that would stay on the base print: a refused product, or one naming a colour or art, shares
         # nothing with a treatment there.
         # {(number, rarity): [(product id, group id)]}; whether one is a neighbour depends on the set, see `_shares_number`.
@@ -403,12 +416,13 @@ class Importer:
         self.eras = eras or []
 
     def _forget_products(self, p: dict) -> None:
-        """Take off the print the products of this run's input an earlier run left there, so every product is decided
-        again and a product that now belongs elsewhere never keeps the right one off. A print an earlier run re-keyed
-        keeps its label, because it now matches exactly."""
+        """Take off the print the products an earlier run left there, so every product is decided again, a product that
+        now belongs elsewhere never keeps the right one off, and one TCGCSV no longer lists leaves. Only a product of a
+        group whose products are missing from the input stays (see _undecided). A print an earlier run re-keyed keeps
+        its label, because it now matches exactly."""
         if p.get("tcgplayer", {}).get("match") == "number+rarity-from-tcgplayer":
             self.rekeyed_before.add(p["id"])
-        kept = [i for i in _product_ids(p) if i not in self.by_id]
+        kept = [i for i in _product_ids(p) if self.undecided(i)]
         if kept:
             p["identifiers"]["tcgplayerProductIds"] = kept
         else:
@@ -790,7 +804,7 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
     """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}. ``held`` and ``reserved`` are
     the set ledger's {name: slug} and slugs, for the sets this tool mints."""
     _drop_own_aliases(files, products)
-    _remove_minted(sets, files)
+    _remove_minted(sets, files, _undecided(groups, products))
     imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved)
     unmatched_groups = imp.match_groups()
     imp.match_singles()

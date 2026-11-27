@@ -713,6 +713,29 @@ def test_a_product_an_earlier_run_left_on_a_print_does_not_keep_the_right_one_of
     assert out["files"] == go(products=products, **clean)["files"]
 
 
+def test_a_product_tcgcsv_no_longer_lists_leaves_its_print():
+    held = {"identifiers": {"tcgplayerProductIds": [7, 99]}, "tcgplayer": {"name": "Alpha", "match": "number+rarity"}}
+    gone = {"identifiers": {"tcgplayerProductIds": [98]}, "tcgplayer": {"name": "Alpha", "match": "number+rarity"}}
+    w = world([mkprint("lob", "100", "LOB-EN001", "rare", **held), mkprint("lob", "100", "LOB-EN002", "rare", **gone)])
+    prints = prints_of(go(products={1: [single(1, "Alpha", "LOB-EN001", "Rare", 7)]}, **w), "100")
+    assert prints["lob:100:LOB-EN001:rare"]["identifiers"]["tcgplayerProductIds"] == [7]
+    assert "identifiers" not in prints["lob:100:LOB-EN002:rare"] and "tcgplayer" not in prints["lob:100:LOB-EN002:rare"]
+
+
+def test_a_group_missing_from_the_input_keeps_its_products_on_their_prints():
+    # Group 2 is listed but its products are not in the input, so nothing says products 55 and 56 are gone.
+    held = {"identifiers": {"tcgplayerProductIds": [55]}, "tcgplayer": {"name": "Alpha", "match": "number-other-set"}}
+    minted = mkprint("sdf", "100", "SBC2-EN001", "rare", source="tcgplayer", identifiers={"tcgplayerProductIds": [56]},
+                     tcgplayer={"name": "Alpha", "match": "minted"})
+    sdf = mkset("sdf", "Speed Duel: Finals", "SBC2", source="tcgplayer", tcgplayerGroupIds=[2])
+    w = world([mkprint("lob", "100", "LOB-EN002", "rare", **held), minted], extra_sets=[sdf])
+    w["groups"].append(mkgroup(2, "Speed Duel: Finals", "SBC2"))
+    out = go(products={1: [single(1, "Alpha", "LOB-EN001", "Rare", 7)]}, **w)
+    prints = prints_of(out, "100")
+    assert prints["lob:100:LOB-EN002:rare"]["identifiers"]["tcgplayerProductIds"] == [55]
+    assert prints["sdf:100:SBC2-EN001:rare"]["identifiers"]["tcgplayerProductIds"] == [56] and "sdf" in out["sets_by_id"]
+
+
 def test_settling_shared_editions_changes_nothing_on_the_next_run():
     w = world([mkprint("lob", "100", "LOB-EN001", "common")])
     products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha", "LOB-EN001", "Common", 7)]}
