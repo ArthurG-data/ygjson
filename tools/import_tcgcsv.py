@@ -65,6 +65,7 @@ from pathlib import Path
 import fetch
 import ids
 import rarities
+import sources
 import tcgcsv
 import ygjson
 from import_ygojson import normalise
@@ -1007,6 +1008,7 @@ def main() -> None:
     for bucket, body in out["files"].items():
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
     ygjson.save_json(REVIEW, out["review"])
+    sources.record("tcgcsv", sources.tcgcsv(groups))
     s = out["stats"]
     print(f"{len(groups)} groups: " + ", ".join(f"{n} by {rule}" for rule, n in s["groupRules"].items())
           + f", {s['groupsUnmatched']} unmatched")

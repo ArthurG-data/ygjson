@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ArthurG-data/ygjson/schema/sources.schema.json",
+  "title": "ygjson sources",
+  "description": "sources.json: the snapshot of each source the committed data was imported from. Each importer records its own; build.py copies it into every release file's meta.sources.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ygoprodeck", "ygojson", "tcgcsv", "yugipedia"],
+  "properties": {
+    "ygoprodeck": {
+      "type": "object", "additionalProperties": false, "required": ["databaseVersion", "lastUpdate"],
+      "description": "YGOPRODeck's checkDBVer.php as import_ygoprodeck read it.",
+      "properties": {
+        "databaseVersion": {"type": "string", "pattern": "^[0-9]+(\\.[0-9]+)*$"},
+        "lastUpdate": {"type": "string", "minLength": 1}
+      }
+    },
+    "ygojson": {
+      "type": "object", "additionalProperties": false, "required": ["commit", "increment"],
+      "description": "The commit of YGOJSON's v1/aggregate branch import_ygojson read, and the increment its meta.json gives. import_ygojson downloads this commit when the cache holds another.",
+      "properties": {
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "increment": {"type": "integer", "minimum": 0}
+      }
+    },
+    "tcgcsv": {
+      "type": "object", "additionalProperties": false, "required": ["modifiedOn"],
+      "description": "The latest modifiedOn among the TCGCSV groups import_tcgcsv read.",
+      "properties": {"modifiedOn": {"type": "string", "format": "date"}}
+    },
+    "yugipedia": {
+      "type": "object", "additionalProperties": false, "required": ["pages", "fetchedThrough"],
+      "description": "The Yugipedia pages cached, and the UTC day the newest of them was fetched.",
+      "properties": {
+        "pages": {"type": "integer", "minimum": 0},
+        "fetchedThrough": {"type": "string", "format": "date"}
+      }
+    }
+  }
+}

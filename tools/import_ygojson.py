@@ -1,10 +1,12 @@
 """Add YGOJSON's identifiers, editions, names and series to the YGOPRODeck-led files, and write review/ygojson.json.
 
-    uv run python tools/import_ygojson.py
+    uv run python tools/import_ygojson.py [--update | --commit SHA]
 
 Reads sets/sets.json, data/cards/*.json and data/archetypes.json (written by import_ygoprodeck) and the YGOJSON
-aggregate under .cache/ygojson (sets.json, cards.json, series.json), and rewrites the three files in place, adding
-only:
+aggregate under .cache/ygojson (sets.json, cards.json, series.json), and rewrites the three files in place. The
+aggregate is the commit of YGOJSON's v1/aggregate branch that sources.json pins, downloaded when the cache holds
+another (see ygojson_aggregate.py); --update takes the branch's current commit instead, --commit a given one, and
+sources.json records the commit read. It adds only:
 
   sets        identifiers.ygojsonId / yugipediaId / konamiDatabaseIds, editions (when YGOJSON states some),
               releases[0].releaseDate and releases[0].keyArt (only where the set has none). A YGOPRODeck set is
@@ -22,13 +24,16 @@ Everything it does not mention stays as it was, so it is idempotent and can be r
 """
 from __future__ import annotations
 
+import argparse
 import collections
 import html
 import json
 import re
 from urllib.parse import quote
 
+import sources
 import ygjson
+import ygojson_aggregate
 
 CACHE = ygjson.ROOT / ".cache" / "ygojson"
 REVIEW = ygjson.ROOT / "review" / "ygojson.json"
@@ -337,7 +342,25 @@ def _read(name: str) -> list[dict]:
     return json.loads((CACHE / name).read_text(encoding="utf-8"))
 
 
+def pinned_cache(commit: str | None = None, update: bool = False) -> str:
+    """The YGOJSON commit to import, with its files in CACHE: `commit` when given, else with `update` the branch's
+    current commit, else the one sources.json pins. It is downloaded when the cache holds another."""
+    want = commit or (ygojson_aggregate.head() if update else sources.load().get("ygojson", {}).get("commit"))
+    if want is None:
+        raise SystemExit("sources.json pins no YGOJSON commit: run with --update to take the branch's current one")
+    if ygojson_aggregate.cached_commit(CACHE) != want:
+        print(f"downloading YGOJSON {ygojson_aggregate.BRANCH} at {want}")
+        ygojson_aggregate.download(want, CACHE)
+    return want
+
+
 def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    pick = ap.add_mutually_exclusive_group()
+    pick.add_argument("--update", action="store_true", help="import the branch's current commit")
+    pick.add_argument("--commit", help="import this commit (a full sha)")
+    args = ap.parse_args()
+    commit = pinned_cache(args.commit, args.update)
     sets = ygjson.load_sets()
     files = ygjson.load_cards()
     archetypes = ygjson.load_archetypes()
@@ -364,6 +387,7 @@ def main() -> None:
     ygjson.save_json(ygjson.ARCHETYPES, archetypes)
     review = review_body(sets, found, theirs, cards, card_found, skipped)
     ygjson.save_json(REVIEW, review)
+    sources.record("ygojson", sources.ygojson(commit, json.loads((CACHE / "meta.json").read_text(encoding="utf-8"))))
 
     ours = sum(1 for s in sets if s["source"] == "ygoprodeck")
     by_rule = collections.Counter(rule for _, rule in found.values())

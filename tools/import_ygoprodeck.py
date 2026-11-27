@@ -20,6 +20,7 @@ from urllib.parse import quote
 import fetch
 import ids
 import rarities
+import sources
 import ygjson
 import ygoprodeck
 
@@ -315,7 +316,7 @@ def main() -> None:
         card_list = ygoprodeck.cards(cache)
         set_list = ygoprodeck.sets(cache)
         archetype_names = ygoprodeck.archetypes(cache)
-        ygoprodeck.db_version(cache)  # build.py names this snapshot in meta.sources
+        dbver = ygoprodeck.db_version(cache)
 
     existing_sets = ygjson.load_sets() if ygjson.SETS.exists() else []
     existing_archetypes = ygjson.load_archetypes() if ygjson.ARCHETYPES.exists() else {}
@@ -336,6 +337,7 @@ def main() -> None:
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
     ygjson.save_json(ygjson.ARCHETYPES, archetypes)
     ygjson.save_json(REVIEW, review_body(counts["unknown"], counts["duplicates"]))
+    sources.record("ygoprodeck", sources.ygoprodeck(dbver))
 
     set_collisions, archetype_collisions = collisions(set_ids), collisions(archetype_slugs)
     print(f"{len(sets)} sets, {sum(len(b['cards']) for b in files.values())} cards, "
