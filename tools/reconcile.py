@@ -91,8 +91,8 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
 
     successors = _successor_index(current, carried)
     for i, f in sorted(orphans.items()):
-        found = successors[0].get((f.set, f.card, f.number)) or (f.number and successors[1].get((f.card, f.number))) \
-            or successors[2].get((f.set, f.card, f.rarity, f.variant)) or []
+        found = next((successors[n].get(at) for n, at in enumerate(_successor_places(f))
+                      if at is not None and successors[n].get(at)), [])
         out[i].update(status="retired", successors=sorted(set(found)))
     for e in out.values():
         if e["status"] == "retired":
@@ -388,11 +388,21 @@ def _hand(hand: Mapping[str, str], newcomers: dict[str, PrintFacts], revivable: 
             review.append({"id": hand[key], "key": key, "reason": "bad-hand-decision", "successors": []})
 
 
+def _successor_places(f: PrintFacts) -> tuple[tuple | None, ...]:
+    """Where a retired print looks for its successors, in order, the first non-empty place winning: (set, card,
+    number, rarity), (set, card, number), (card, number, rarity, variant) and (card, number) when the number is not
+    empty, then (set, card, rarity, variant) for a corrected number. None marks a place the print does not have."""
+    numbered = f.number != ""
+    return ((f.set, f.card, f.number, f.rarity), (f.set, f.card, f.number),
+            (f.card, f.number, f.rarity, f.variant) if numbered else None, (f.card, f.number) if numbered else None,
+            (f.set, f.card, f.rarity, f.variant))
+
+
 def _successor_index(current: list[PrintFacts], carried: Mapping[str, str]) -> tuple[dict[tuple, list[str]], ...]:
-    """Ids of the current prints by (set, card, number), by (card, number) and by (set, card, rarity, variant)."""
-    index: tuple[dict[tuple, list[str]], ...] = (defaultdict(list), defaultdict(list), defaultdict(list))
+    """Ids of the current prints at each place of `_successor_places`, in its order."""
+    index: tuple[dict[tuple, list[str]], ...] = tuple(defaultdict(list) for _ in range(5))
     for f in current:
-        places = ((f.set, f.card, f.number), (f.card, f.number), (f.set, f.card, f.rarity, f.variant))
-        for by_place, at in zip(index, places):
-            by_place[at].append(carried[f.key])
+        for by_place, at in zip(index, _successor_places(f)):
+            if at is not None:
+                by_place[at].append(carried[f.key])
     return index

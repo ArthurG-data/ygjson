@@ -217,6 +217,25 @@ def test_retired_successors_fall_back_to_card_and_number_then_corrected_number()
     assert got["id-q"]["successors"] == [by_key["u:2:R:rare"]]
 
 
+def test_retired_successors_prefer_the_same_rarity_at_the_place():
+    stamp = "qcs:74677427:RA04-EN109"
+    variants = [f"{stamp}:{r}:{v}" for r in ("qc_secret_rare", "platinum_secret_rare") for v in ("4th-art", "7th-art")]
+    got, by_key, _ = reconcile.reconcile_prints(ledger(live(f"{stamp}:qc_secret_rare", "id-q"),
+                                                       live(f"{stamp}:platinum_secret_rare", "id-p")), cur(*variants))
+    assert got["id-q"]["successors"] == sorted(by_key[k] for k in variants if ":qc_secret_rare:" in k)
+    assert got["id-p"]["successors"] == sorted(by_key[k] for k in variants if ":platinum_secret_rare:" in k)
+
+
+def test_retired_print_in_a_merged_set_goes_to_the_same_rarity_in_the_target():
+    old, new = "wcs-2025-limited-pack:33396948:25LP-EN000", "limited-pack-world-championship-2025:33396948:25LP-EN000"
+    before = ledger(live(f"{old}:secret_rare", "id-os"), live(f"{old}:ultra_rare", "id-ou"),
+                    live(f"{new}:secret_rare", "id-ns"), live(f"{new}:ultra_rare", "id-nu"))
+    got, by_key, _ = reconcile.reconcile_prints(before, cur(f"{new}:secret_rare", f"{new}:ultra_rare", f"{new}:unknown"))
+    assert got["id-os"]["status"] == got["id-ou"]["status"] == "retired"
+    assert got["id-os"]["successors"] == ["id-ns"] and got["id-ou"]["successors"] == ["id-nu"]
+    assert by_key[f"{new}:unknown"] not in ("id-os", "id-ou")
+
+
 def test_reconcile_does_not_mutate_its_input():
     before = ledger(live("s:1:X-EN001:unknown", "id-a"), live("s:2:Y:rare", "id-b"))
     snapshot = {k: {**v, "formerKeys": list(v["formerKeys"])} for k, v in before.items()}
