@@ -273,6 +273,11 @@ def validate(sets: list[dict], eras: list[dict], files: dict[str, dict], archety
     return errors
 
 
+def print_editions(p: dict, set_editions: list[str]) -> list[str]:
+    """The editions a print is sold in: its own `editions` when it has them, else its set's."""
+    return p.get("editions", set_editions)
+
+
 def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
             sealed: dict[str, dict] | None = None) -> dict[str, dict]:
     """The release shape: {"sets": {id: set}, "cards": {id: card with prints as print ids}, "printings": {id: printing},
@@ -294,7 +299,7 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
             for p in card["prints"]:
                 rarity_tier = tier(p["rarity"])
                 finish = is_foil(p["rarity"])
-                for edition in p.get("editions", by_set[p["set"]]["editions"]):
+                for edition in print_editions(p, by_set[p["set"]]["editions"]):
                     pid = printing_id(p["id"], "en", edition)
                     out["printings"][pid] = {
                         "id": pid, "print": p["id"], "card": cid, "set": p["set"],

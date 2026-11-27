@@ -296,3 +296,73 @@ def test_retired_entry_stays_quiet_and_comes_back_live():
     new, succ, review = reconcile.reconcile_cards(entries, [_card("4", "B")])
     assert new["1"] == entries["1"] and succ == {} and review == []
     assert new["4"]["status"] == "live" and new["4"]["successors"] == []
+
+
+def test_print_editions_is_the_prints_own_else_the_sets():
+    assert ygjson.print_editions({"editions": ["1st"]}, ["first", "unlimited"]) == ["1st"]
+    assert ygjson.print_editions({}, ["first", "unlimited"]) == ["first", "unlimited"]
+
+
+def test_printings_of_uses_the_edition_rule_and_sorts():
+    sets = [{"id": "s", "editions": ["unlimited", "first"]}]
+    files = {"a.json": {"cards": [{"id": "5", "prints": [
+        {"id": "s:5:B-1:rare", "set": "s"}, {"id": "s:5:A-1:rare", "set": "s", "editions": ["limited"]}]}]}}
+    assert reconcile.printings_of(sets, files) == [
+        ("s:5:A-1:rare", "en", "limited"), ("s:5:B-1:rare", "en", "first"), ("s:5:B-1:rare", "en", "unlimited")]
+
+
+def pg(key, id_, former=()):
+    return {"id": id_, "key": key, "formerIds": list(former), "status": "live", "successors": []}
+
+
+def pgr(key, id_, former=(), successors=()):
+    return {**pg(key, id_, former), "status": "retired", "successors": list(successors)}
+
+
+KEY = "s:5:A-1:rare"
+
+
+def test_printing_id_is_print_uuid_language_edition():
+    got = reconcile.reconcile_printings({}, [(KEY, "en", "first")], {KEY: "u1"}, {"u1": live(KEY, "u1")})
+    assert got == {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first")}
+
+
+def test_dropped_edition_retires_with_the_remaining_printings_as_successors():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first"),
+               "u1:en:unlimited": pg(f"{KEY}:en:unlimited", "u1:en:unlimited")}
+    got = reconcile.reconcile_printings(entries, [(KEY, "en", "unlimited")], {KEY: "u1"}, {"u1": live(KEY, "u1")})
+    assert got["u1:en:first"] == pgr(f"{KEY}:en:first", "u1:en:first", successors=["u1:en:unlimited"])
+    assert got["u1:en:unlimited"]["status"] == "live"
+    assert entries["u1:en:first"]["status"] == "live"
+
+
+def test_restored_edition_revives_the_printing():
+    entries = {"u1:en:first": pgr(f"{KEY}:en:first", "u1:en:first", successors=["u1:en:unlimited"])}
+    got = reconcile.reconcile_printings(entries, [(KEY, "en", "first")], {KEY: "u1"}, {"u1": live(KEY, "u1")})
+    assert got["u1:en:first"] == pg(f"{KEY}:en:first", "u1:en:first")
+
+
+def test_printing_of_a_retired_print_points_at_the_successor_print():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first"),
+               "u1:en:unlimited": pg(f"{KEY}:en:unlimited", "u1:en:unlimited")}
+    new = "s:5:A-2:rare"
+    got = reconcile.reconcile_printings(entries, [(new, "en", "first")], {new: "u2"},
+                                        {"u1": retired(KEY, "u1", successors=["u2"]), "u2": live(new, "u2")})
+    assert got["u1:en:first"]["successors"] == ["u2:en:first"]
+    assert got["u1:en:unlimited"]["status"] == "retired" and got["u1:en:unlimited"]["successors"] == []
+    assert got["u2:en:first"]["status"] == "live"
+
+
+def test_printing_key_change_records_the_former_readable_id():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first")}
+    new = "s:5:A-2:rare"
+    got = reconcile.reconcile_printings(entries, [(new, "en", "first")], {new: "u1"}, {"u1": live(new, "u1")})
+    assert got["u1:en:first"]["key"] == f"{new}:en:first"
+    assert got["u1:en:first"]["formerIds"] == [f"{KEY}:en:first"]
+    again = reconcile.reconcile_printings(got, [(new, "en", "first")], {new: "u1"}, {"u1": live(new, "u1")})
+    assert again == got
+
+
+def test_retired_printing_not_emitted_stays_unchanged():
+    entries = {"u1:en:first": pgr(f"{KEY}:en:first", "u1:en:first", successors=["x"])}
+    assert reconcile.reconcile_printings(entries, [], {}, {"u1": live(KEY, "u1")}) == entries

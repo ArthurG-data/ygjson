@@ -9,6 +9,7 @@ from collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass
 
 import ids
+import ygjson
 
 
 @dataclass(frozen=True)
@@ -95,6 +96,54 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
         review.append({"id": i, "key": out[i]["key"], "reason": "retired", "successors": sorted(set(found))})
 
     return dict(sorted(out.items())), dict(sorted(carried.items())), sorted(review, key=lambda r: (r["id"], r["key"]))
+
+
+def printings_of(sets: list[dict], files: dict[str, dict]) -> list[tuple[str, str, str]]:
+    """(print key, language, edition) of every printing `ygjson.flatten` emits, sorted."""
+    editions = {s["id"]: s["editions"] for s in sets}
+    return sorted((p["id"], "en", edition) for body in files.values() for card in body.get("cards", [])
+                  for p in card.get("prints", []) for edition in ygjson.print_editions(p, editions[p["set"]]))
+
+
+def reconcile_printings(entries: dict[str, dict], printings: list[tuple[str, str, str]], print_ids: Mapping[str, str],
+                        print_entries: Mapping[str, dict]) -> dict[str, dict]:
+    """Update the printing ledger, keyed by printing id (`<print id>:<language>:<edition>`).
+
+    A printing in `printings` is live: it keeps its entry's id, its `key` is refreshed and a changed key goes to
+    `formerIds`. A live entry not in `printings` is retired. Its successors are, when its print is retired, the same
+    language and edition on each successor print if that printing is live; when its print is live (the edition was
+    dropped), the print's other live printings. An entry already retired and not emitted is left as it is.
+    `entries` is not modified.
+    """
+    out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
+    live_ids: dict[str, str] = {}
+    for key, language, edition in printings:
+        pid = f"{print_ids[key]}:{language}:{edition}"
+        readable = ygjson.printing_id(key, language, edition)
+        live_ids[pid] = readable
+        entry = out.setdefault(pid, {"id": pid, "key": readable, "formerIds": [], "status": "live", "successors": []})
+        if entry["key"] != readable:
+            if entry["key"] not in entry["formerIds"]:
+                entry["formerIds"].append(entry["key"])
+            entry["key"] = readable
+        entry["status"], entry["successors"] = "live", []
+    by_print: dict[str, list[str]] = defaultdict(list)
+    for pid in live_ids:
+        by_print[pid.split(":", 2)[0]].append(pid)
+    for pid, entry in out.items():
+        if pid in live_ids or entry["status"] == "retired":
+            continue
+        print_id, language, edition = pid.split(":", 2)
+        owner = print_entries.get(print_id)
+        entry["status"] = "retired"
+        if owner is None:
+            entry["successors"] = []
+        elif owner["status"] == "retired":
+            entry["successors"] = sorted(f"{s}:{language}:{edition}" for s in owner["successors"]
+                                         if f"{s}:{language}:{edition}" in live_ids)
+        else:
+            entry["successors"] = sorted(by_print.get(print_id, []))
+    return dict(sorted(out.items()))
 
 
 def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[str, dict], dict[str, str], list[dict]]:
