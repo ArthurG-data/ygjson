@@ -8,6 +8,7 @@ from __future__ import annotations
 import collections
 import functools
 import hashlib
+import itertools
 import json
 import re
 from collections.abc import Container, Iterable, Mapping
@@ -32,7 +33,8 @@ _COLOUR_OR_ART_VARIANT = re.compile(r"^(blue|green|purple|red|silver|bronze|[a-g
 
 @functools.cache
 def _schema(name: str) -> Draft202012Validator:
-    return Draft202012Validator(json.loads((SCHEMAS / name).read_text(encoding="utf-8")), format_checker=FormatChecker())
+    return Draft202012Validator(json.loads((SCHEMAS / name).read_text(encoding="utf-8")),
+                                format_checker=FormatChecker())
 
 
 def slugify(name: str) -> str:
@@ -86,7 +88,8 @@ def is_colour_or_art(slug: str) -> bool:
 
 
 def is_treatment(p: dict) -> bool:
-    """True for a print that is a stamp, misprint or similar treatment of a card, not a colour or art letter it comes in."""
+    """True for a print that is a stamp, misprint or similar treatment of a card, not a colour or art letter it comes
+    in."""
     return bool(p.get("variant")) and not is_colour_or_art(p["variant"])
 
 
@@ -146,9 +149,10 @@ def _schema_errors(name: str, label: str, doc) -> list[str]:
 
 
 def _check_eras(eras: list[dict]) -> list[str]:
-    errors = [f"eras.json: era {c} is listed {n} times" for c, n in collections.Counter(e["code"] for e in eras).items() if n > 1]
+    errors = [f"eras.json: era {c} is listed {n} times"
+              for c, n in collections.Counter(e["code"] for e in eras).items() if n > 1]
     ordered = sorted(eras, key=lambda e: e["from"])
-    for e, nxt in zip(ordered, ordered[1:]):
+    for e, nxt in itertools.pairwise(ordered):
         if "to" not in e:
             errors.append(f"eras.json: era {e['code']} is open-ended but {nxt['code']} starts after it")
         elif e["to"] >= nxt["from"]:
@@ -259,7 +263,8 @@ def validate(sets: list[dict], eras: list[dict], files: dict[str, dict], archety
 
     archetypes is the file body, legality is load_legality's {"formats", "events"}."""
     sealed = sealed or {}
-    errors = _schema_errors("sets.schema.json", "sets.json", sets) + _schema_errors("eras.schema.json", "eras.json", eras)
+    errors = (_schema_errors("sets.schema.json", "sets.json", sets)
+              + _schema_errors("eras.schema.json", "eras.json", eras))
     errors += _schema_errors("archetypes.schema.json", "archetypes.json", archetypes)
     for stem, body in files.items():
         errors += _schema_errors("cards.schema.json", f"cards/{stem}.json", body)

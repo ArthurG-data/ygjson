@@ -1,6 +1,6 @@
-import tcgcsv
-
 import coverage
+
+import tcgcsv
 
 
 def prod(product_id, group_id, name, **extended):
@@ -55,6 +55,7 @@ def test_strict_exits_1_when_something_is_unaccounted_for(monkeypatch, tmp_path,
     monkeypatch.setattr(coverage.import_tcgcsv, "REVIEW", tmp_path / "none.json")
     monkeypatch.setattr(coverage.import_sealed, "REVIEW", tmp_path / "none2.json")
     import sys
+
     import pytest
     monkeypatch.setattr(sys, "argv", ["coverage.py"])
     coverage.main()

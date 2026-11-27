@@ -26,7 +26,6 @@ import collections
 import html
 import json
 import re
-from pathlib import Path
 from urllib.parse import quote
 
 import ygjson

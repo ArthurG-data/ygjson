@@ -15,7 +15,6 @@ import html
 import json
 import re
 from collections.abc import Container, Mapping
-from pathlib import Path
 from urllib.parse import quote
 
 import ids
@@ -269,7 +268,8 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
         card["prints"], dup, unk = build_prints(raw, set_ids)
         duplicates += dup
         unknown.update(unk)
-        files[ygjson.card_bucket(card["id"])].append(merge_card(card, old.get(card["id"]), tcgplayer_sets, foreign_slugs))
+        files[ygjson.card_bucket(card["id"])].append(merge_card(card, old.get(card["id"]), tcgplayer_sets,
+                                                                foreign_slugs))
     # A card YGOPRODeck no longer lists is gone (it was a placeholder id, replaced by a passcode), unless a print
     # of it came from TCGplayer: that print is not ours to drop.
     seen = {c["id"] for cards in files.values() for c in cards}
@@ -327,7 +327,8 @@ def main() -> None:
                                                    ids.reserved(ledger, "archetypes"))
     tcgplayer_sets = {s["id"] for s in sets if s["source"] != SOURCE}
     foreign_slugs = {a["slug"] for a in archetypes["archetypes"] if a.get("source") != SOURCE}
-    files, counts = build_cards(card_list, set_ids, archetype_slugs, load_existing_cards(), tcgplayer_sets, foreign_slugs)
+    files, counts = build_cards(card_list, set_ids, archetype_slugs, load_existing_cards(), tcgplayer_sets,
+                                foreign_slugs)
 
     ygjson.save_json(ygjson.SETS, sets)
     for bucket, body in files.items():

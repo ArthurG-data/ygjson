@@ -6,7 +6,11 @@ requires-python = ">=3.11"
 dependencies = ["jsonschema[format]>=4.21"]
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=8",
+    "ruff>=0.17.6",
+]
 
 [tool.pytest.ini_options]
 pythonpath = ["tools"]
@@ -14,3 +18,27 @@ testpaths = ["tests"]
 
 [tool.uv]
 package = false
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, import order, bugbear, pyupgrade.
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test fixtures spell out whole records on one line.
+"tests/*" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["build", "coverage_report", "ids", "import_sealed", "import_tcgcsv", "import_ygojson",
+                     "import_ygoprodeck", "import_yugipedia", "legality", "rarities", "reconcile", "seed_ids", "tcgcsv",
+                     "validate", "ygjson", "ygoprodeck", "yugipedia"]
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "tools"
+files = ["tools"]
+explicit_package_bases = true
+warn_unused_ignores = true

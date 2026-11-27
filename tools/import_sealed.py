@@ -31,7 +31,6 @@ import collections
 import json
 import re
 from collections.abc import Container, Mapping
-from pathlib import Path
 
 import ids
 import tcgcsv
@@ -46,7 +45,8 @@ REVIEW = ygjson.ROOT / "review" / "sealed.json"
 # accessories come first so "Deck Box" is not a deck. Words are anchored where a substring misleads: "tin" is in
 # "Haunting", "ots" in "lots", "case" in "briefcase".
 CATEGORY_RULES: tuple[tuple[str, str], ...] = (
-    ("accessory", r"\bsleeves?\b|playmat|\bbinder\b|deck box|card case|field center|token$|\bdice\b|\bcoins?\b|\bcounters?\b"),
+    ("accessory",
+     r"\bsleeves?\b|playmat|\bbinder\b|deck box|card case|field center|token$|\bdice\b|\bcoins?\b|\bcounters?\b"),
     ("case", r"\bcase\b"),
     ("display", r"display|\[set of"),
     ("booster_box", r"booster box|mini booster box|tuck box"),
@@ -56,7 +56,8 @@ CATEGORY_RULES: tuple[tuple[str, str], ...] = (
     ("deck", r"deck"),
     ("mega_tin", r"mega.?tin"),
     ("tin", r"\btins?\b"),
-    ("special_edition", r"special edition|deluxe edition|advanced edition|secret edition|gold edition|super edition|\bse\b"),
+    ("special_edition",
+     r"special edition|deluxe edition|advanced edition|secret edition|gold edition|super edition|\bse\b"),
     ("collectors_set", r"collector|collection|legendary|box set|mega pack|set$"),
     ("promo_pack", r"promo|participation|tournament pack|\bots\b"),
     ("bundle", r"bundle|value box|advent|\bkit\b"),
@@ -157,9 +158,10 @@ class Context:
                         continue
                     self.prints[p["set"]].append(p["id"])
                     self.card_prints[(card["id"], p["set"])].append(p["id"])
-        for ids in self.prints.values():
-            ids.sort()
-        self.set_of_uuid = {s["identifiers"]["ygojsonId"]: s["id"] for s in sets if s.get("identifiers", {}).get("ygojsonId")}
+        for print_ids in self.prints.values():
+            print_ids.sort()
+        self.set_of_uuid = {s["identifiers"]["ygojsonId"]: s["id"] for s in sets
+                            if s.get("identifiers", {}).get("ygojsonId")}
 
     def one(self, rec: dict, wanted: tuple[str, ...]) -> dict | None:
         """The one record of the group, in the first of the wanted categories that has any, with rec's edition tag."""

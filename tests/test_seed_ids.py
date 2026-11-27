@@ -3,11 +3,10 @@ import json
 import subprocess
 
 import pytest
+from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
 
 import ids
 import seed_ids
-import ygjson
-from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
 
 FIXED = f"{SET}:46986414:LOB-EN005:secret_rare"  # PRINT_A after its rarity is corrected
 

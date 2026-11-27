@@ -22,15 +22,16 @@ ours through identifiers.ygojsonId, reads Yugipedia's list pages from LIST_PAGES
            quarter of the last list, and the tool prints the last date it read.
   current  the status of the lead source: YGOPRODeck's banlist_info for tcg, ocg and goat (a card with no entry for a
            format is legal, except a name with < >: YGOPRODeck gives none of them a status, including cards Konami's
-           list limits, so its silence says nothing), YGOJSON's current for speed_duel. It becomes an event only when it differs from the card's
-           last event (or from legal when there is none), with `inForceBy` set to the day the tool first saw it. The
-           change may have started earlier: neither source says when. The source is "ygoprodeck" or "ygojson".
+           list limits, so its silence says nothing), YGOJSON's current for speed_duel. It becomes an event only when it
+           differs from the card's last event (or from legal when there is none), with `inForceBy` set to the day the
+           tool first saw it. The change may have started earlier: neither source says when. The source is "ygoprodeck"
+           or "ygojson".
 
 Events with `effective` already in legality/bans.json are never rewritten or removed. An `inForceBy` event is removed
 once the dated events give the same status on its date, because they say when the change happened. A `legal` one also
 goes once the lead source no longer states the card, since nothing then says the card is free of a restriction. Any
-other stays and keeps its date, so a difference between the sources stays visible. A history entry whose card, format and
-date already have an event is not added again. Events are sorted by card id, format and date.
+other stays and keeps its date, so a difference between the sources stays visible. A history entry whose card, format
+and date already have an event is not added again. Events are sorted by card id, format and date.
 
 --check replays the committed events to today and compares them with the lead source's current status: it prints
 each difference and exits 1 if there is any. It needs YGOPRODeck's list (downloaded into .cache/ygoprodeck when it
@@ -109,7 +110,8 @@ def history_events(ygojson_cards: list[dict], ids: dict[str, str]) -> list[dict]
 
 
 def ygoprodeck_status(card: str, fmt: str, value: str | None) -> str:
-    """Our status for a banlist_info value: legal when there is none, an error naming the card when it is one we don't know."""
+    """Our status for a banlist_info value: legal when there is none, an error naming the card when it is one we don't
+    know."""
     if value is None:
         return "legal"
     if value not in YGOPRODECK_STATUS:
@@ -120,7 +122,8 @@ def ygoprodeck_status(card: str, fmt: str, value: str | None) -> str:
 def lead_status(prodeck_cards: list[dict] | None, ygojson_cards: list[dict] | None, ids: dict[str, str],
                 card_ids: set[str]) -> dict[Key, str]:
     """The lead source's current status. tcg, ocg and goat: every card of ours YGOPRODeck lists, legal when its
-    banlist_info has no entry, and no status for a name with < > that has no banlist_info. speed_duel: every card YGOJSON matches and gives a status."""
+    banlist_info has no entry, and no status for a name with < > that has no banlist_info. speed_duel: every card
+    YGOJSON matches and gives a status."""
     out: dict[Key, str] = {}
     for c in prodeck_cards or []:
         card = str(c["id"])
@@ -171,7 +174,7 @@ def list_events(lists: list[dict], dated: list[dict], today: str) -> list[dict]:
     is {format, date, statuses: {card id: status}, complete}. A card it leaves out is legal only when `complete`, which
     says every name on the list matched a card."""
     out: list[dict] = []
-    for item in sorted(lists, key=lambda l: (l["format"], l["date"])):
+    for item in sorted(lists, key=lambda entry: (entry["format"], entry["date"])):
         if item["date"] > today:
             continue
         fmt = item["format"]
@@ -180,7 +183,8 @@ def list_events(lists: list[dict], dated: list[dict], today: str) -> list[dict]:
         for card in sorted(cards, key=int):
             status = item["statuses"].get(card, "legal")
             if before.get(card, "legal") != status:
-                out.append({"card": card, "format": fmt, "status": status, "effective": item["date"], "source": "yugipedia"})
+                out.append({"card": card, "format": fmt, "status": status, "effective": item["date"],
+                            "source": "yugipedia"})
     return out
 
 
@@ -188,8 +192,8 @@ def merge(existing: list[dict], history: list[dict], lead: dict[Key, str], today
           lists: list[dict] = ()) -> tuple[list[dict], list[dict]]:
     """(all events sorted, the events added). Existing dated events are kept as they are. A history or list event is
     added unless the card, format and date already have one. An existing inForceBy event is dropped when the dated
-    events give the same status on its date, or when it says legal and the lead no longer states the card. A lead status that differs from the last event is added with inForceBy
-    today."""
+    events give the same status on its date, or when it says legal and the lead no longer states the card. A lead status
+    that differs from the last event is added with inForceBy today."""
     seen = {(e["card"], e["format"], e["effective"]) for e in existing if "effective" in e}
     new = [e for e in history if (e["card"], e["format"], e["effective"]) not in seen]
     dated = [e for e in existing if "effective" in e] + new
@@ -238,15 +242,19 @@ def _read_lists(files: dict[str, dict]) -> tuple[list[dict], list[str]]:
 
 def _counts(events: list[dict]) -> None:
     print(f"{len(events)} events")
-    print("by format: " + ", ".join(f"{k} {v}" for k, v in sorted(collections.Counter(e["format"] for e in events).items())))
-    print("by status: " + ", ".join(f"{k} {v}" for k, v in sorted(collections.Counter(e["status"] for e in events).items())))
+    print("by format: " + ", ".join(f"{k} {v}"
+                                    for k, v in sorted(collections.Counter(e["format"] for e in events).items())))
+    print("by status: " + ", ".join(f"{k} {v}"
+                                    for k, v in sorted(collections.Counter(e["status"] for e in events).items())))
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--check", action="store_true", help="compare the committed events with the lead sources; exit 1 on a difference")
+    ap.add_argument("--check", action="store_true",
+                    help="compare the committed events with the lead sources; exit 1 on a difference")
     ap.add_argument("--refresh", action="store_true", help="download YGOPRODeck's card list again")
-    ap.add_argument("--as-of", default=datetime.date.today().isoformat(), help="the date to replay to, and to stamp new events with")
+    ap.add_argument("--as-of", default=datetime.date.today().isoformat(),
+                    help="the date to replay to, and to stamp new events with")
     args = ap.parse_args()
 
     files = ygjson.load_cards()
@@ -282,7 +290,8 @@ def main() -> None:
     if unmatched:
         print(f"{len(unmatched)} list names match no single card: " + ", ".join(unmatched))
     if new:
-        print("new by source: " + ", ".join(f"{k} {v}" for k, v in sorted(collections.Counter(e["source"] for e in new).items())))
+        print("new by source: " + ", ".join(f"{k} {v}"
+                                            for k, v in sorted(collections.Counter(e["source"] for e in new).items())))
 
 
 if __name__ == "__main__":

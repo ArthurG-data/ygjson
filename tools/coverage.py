@@ -74,7 +74,8 @@ def main() -> None:
     products = {g["groupId"]: tcgcsv.products(g["groupId"], import_tcgcsv.CACHE) for g in groups}
     files = ygjson.load_cards()
     tally, missing = classify(groups, products, ygjson.load_sets(), files, ygjson.load_sealed(),
-                              _read(import_tcgcsv.REVIEW), _read(import_sealed.REVIEW), datetime.date.today().isoformat())
+                              _read(import_tcgcsv.REVIEW), _read(import_sealed.REVIEW),
+                              datetime.date.today().isoformat())
     for (kind, place), n in sorted(tally.items()):
         print(f"{kind:7} {place:36} {n:6}")
     print(f"\n{sum(tally.values())} products, {len(missing)} unaccounted for")

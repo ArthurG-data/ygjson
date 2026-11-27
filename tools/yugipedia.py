@@ -36,8 +36,8 @@ DEFAULT_CACHE = Path(__file__).resolve().parents[1] / ".cache" / "yugipedia"
 _last_request = 0.0
 
 # The redirects that an older slug-only cache file holds the target of, for titles today's data asks for. Such a file
-# names only the slug of the title asked for, so a redirect's target is read for its title only when listed here exactly;
-# any other is fetched again. A cache made since titles were hashed never needs this.
+# names only the slug of the title asked for, so a redirect's target is read for its title only when listed here
+# exactly; any other is fetched again. A cache made since titles were hashed never needs this.
 LEGACY_REDIRECTS = {
     "Magic Ruler": "Spell Ruler",
     "Yu-Gi-Oh! 5D's Stardust Accelerator promotional cards":
@@ -312,9 +312,9 @@ def limitation_list(text: str) -> dict | None:
 
 
 def _follows(item: dict, medium: str, previous: dict | None) -> bool:
-    """Whether a page can be the list after `previous`: the same medium, the Advanced Format or none named (OCG pages name
-    none), a later date, and no more than MAX_DROPPED_SHARE of the previous list's cards gone. A list leaves out every legal card, so a page cut short
-    would move the rest to legal."""
+    """Whether a page can be the list after `previous`: the same medium, the Advanced Format or none named (OCG pages
+    name none), a later date, and no more than MAX_DROPPED_SHARE of the previous list's cards gone. A list leaves out
+    every legal card, so a page cut short would move the rest to legal."""
     if item["medium"] != medium or item["format"] not in ("", _LIST_FORMAT):
         return False
     if previous is None:
@@ -326,8 +326,8 @@ def _follows(item: dict, medium: str, previous: dict | None) -> bool:
 def limitation_lists(first: str, medium: str, cache: Path = DEFAULT_CACHE) -> list[dict]:
     """Each `medium` list from the page titled `first` onward, oldest first, following `next`. A page with no `next` is
     asked for again, since it gains one when a new list comes out. The walk ends at a next page that is missing, that
-    holds no readable list or that cannot follow the last one (see _follows), so a bad page holds back its list and those
-    after it. ValueError when `first` itself holds no list of this medium."""
+    holds no readable list or that cannot follow the last one (see _follows), so a bad page holds back its list and
+    those after it. ValueError when `first` itself holds no list of this medium."""
     lists: list[dict] = []
     title: str | None = first
     while title:

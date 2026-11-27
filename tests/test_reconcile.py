@@ -436,8 +436,8 @@ def _slug(sid, *names, status="live", successors=(), **evidence):
     return {"id": sid, "names": list(names), "status": status, "successors": list(successors), **evidence}
 
 
-def _sets(entries, current, merges={}):
-    return reconcile.reconcile_slugs(entries, current, "name", reconcile.set_identity, merges,
+def _sets(entries, current, merges=None):
+    return reconcile.reconcile_slugs(entries, current, "name", reconcile.set_identity, merges or {},
                                      evidence=reconcile.set_evidence)
 
 
