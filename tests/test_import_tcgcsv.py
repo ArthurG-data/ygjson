@@ -601,6 +601,54 @@ def test_a_name_an_earlier_run_derived_never_mints_a_print_and_leaves_when_no_pr
     assert [r["productId"] for r in out["review"]["unmatched"]] == [7]
 
 
+def test_a_name_a_group_missing_from_the_input_sells_the_card_under_stays_and_still_mints():
+    # Group 1's products are missing this run, so product 9 stays on its print, and its name stays an alias: product 5
+    # of group 2, which is complete, mints its print from that name as before.
+    groups, products, sets, card = alias_world()
+    full = go(groups, products, {}, sets, [card])
+    again = imp.run(groups, {2: products[2]}, {}, copy.deepcopy(full["sets"]), copy.deepcopy(full["files"]), {})
+    assert again["files"] == full["files"]
+
+
+def test_a_product_never_joins_a_print_holding_a_product_this_run_cannot_decide():
+    # Product 8 (group 2, whose set lacks the number) is refused at LOB-EN001, which holds product 7 at another rarity.
+    # With group 1's products missing, product 7 stays, unseen: product 8 must still not join it.
+    w = world([mkprint("lob", "100", "LOB-EN001", "rare")], extra_sets=[mkset("oth", "Other Pack", "OTH")])
+    w["groups"].append(mkgroup(2, "Other Pack", "OTH"))
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Rare", 7)], 2: [single(2, "Alpha", "LOB-EN001", "Ultra Rare", 8)]}
+    full = go(products=products, **w)
+    assert [r["productId"] for r in full["review"]["conflicts"]] == [8]
+    again = imp.run(w["groups"], {2: products[2]}, {}, copy.deepcopy(full["sets"]), copy.deepcopy(full["files"]), {})
+    assert again["files"] == full["files"] and [r["productId"] for r in again["review"]["conflicts"]] == [8]
+
+
+def test_a_product_still_joins_a_print_whose_unseen_product_is_the_same_card_and_rarity():
+    # LOB-EN001 holds product 7 (group 1, 1st Edition) and product 8 (group 2, Unlimited), as the God cards of the
+    # Yugi's Legendary Decks 2020 reprint do. Group 1's products go missing: product 8 still lands beside product 7.
+    w = world([mkprint("lob", "100", "LOB-EN001", "rare")], extra_sets=[mkset("oth", "Other Pack", "OTH")])
+    w["groups"].append(mkgroup(2, "Other Pack", "OTH"))
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Rare", 7)], 2: [single(2, "Alpha", "LOB-EN001", "Rare", 8)]}
+    prices = {1: [price(7, "1st Edition")], 2: [price(8, "Unlimited")]}
+    full = go(products=products, prices=prices, **w)
+    assert prints_of(full, "100")["lob:100:LOB-EN001:rare"]["identifiers"] == {"tcgplayerProductIds": [7, 8]}
+    again = imp.run(w["groups"], {2: products[2]}, {2: prices[2]}, copy.deepcopy(full["sets"]),
+                    copy.deepcopy(full["files"]), {})
+    assert again["files"] == full["files"]
+
+
+def test_a_set_minted_for_a_group_keeps_its_editions_while_the_groups_prices_are_missing():
+    card = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-001", "common")])
+    groups = [mkgroup(9, "Yu-Gi-Oh! Promotional Cards", "PROMO")]
+    products = {9: [single(9, "Alpha", "PRM1-EN001", "Common", 7)]}
+    full = go(groups, products, {9: [price(7, "Unlimited")]}, [LOB], [card])
+    minted = next(s for s in full["sets"] if s["source"] == "tcgplayer")
+    assert minted["editions"] == ["unlimited"]
+    for missing_products in (False, True):
+        again = imp.run(groups, {} if missing_products else products, {}, copy.deepcopy(full["sets"]),
+                        copy.deepcopy(full["files"]), {})
+        assert again["sets"] == full["sets"] and again["files"] == full["files"]
+
+
 def test_a_beta_name_spelled_as_tcgplayer_spells_it_stays_when_its_product_moves():
     # An earlier run tied product 7, "Red-Eyes B. Dragon", by number. YGOPRODeck's beta name is the same string, so
     # only betaName tells it from an alias that run wrote. TCGplayer has since moved the product to a number no print
@@ -1083,6 +1131,12 @@ def test_a_print_with_no_product_in_a_set_mixing_limited_takes_what_most_priced_
 def test_a_print_with_no_product_keeps_its_sets_editions_otherwise(subtypes, set_editions):
     out = go(*limited_world(subtypes, set_editions))
     assert "editions" not in prints_of(out, "100")["lob:100:LOB-EN099:rare"]
+
+
+def test_a_print_whose_products_have_no_price_has_no_say_in_the_editions():
+    # LOB-EN002 and LOB-EN003 hold products with no price rows: only LOB-EN001, Limited, is priced.
+    groups, products, prices, sets, cards = limited_world([("Limited",), (), ()])
+    assert prints_of(go(groups, products, prices, sets, cards), "100")["lob:100:LOB-EN099:rare"]["editions"] == ["limited"]
 
 
 def test_a_print_with_no_product_keeps_its_editions_while_its_sets_products_are_undecided():

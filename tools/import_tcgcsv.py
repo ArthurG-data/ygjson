@@ -441,16 +441,22 @@ class Importer:
         for prod in self.by_id.values():
             if prod.is_single and not unplaceable_tags(prod) and not _names_colour_or_art(prod):
                 self.number_rarity[(prod.number, rarities.canonical(prod.rarity))].append((prod.product_id, prod.group_id))
+        self.sold_as: dict[str, set[str]] = collections.defaultdict(set)  # card id -> TCGplayer's base names for it
         for body in files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
                     self._forget_products(p)
+                    if "tcgplayer" in p:
+                        # It holds a product this run cannot decide, which stays as it was, and so does the name
+                        # TCGplayer sells the card under: an alias, and a name a product of a complete group mints from.
+                        name = tcgcsv.base_name_and_tags(p["tcgplayer"]["name"])[0]
+                        self.sold_as[card["id"]].add(name)
+                        self.catalog.add_alias(card, name)
         self.mapping = mapping
         self.product_mapping = product_mapping
         self.set_of_group: dict[int, str] = {}
         self.rekeyed = 0
         self.minted = 0
-        self.sold_as: dict[str, set[str]] = collections.defaultdict(set)  # card id -> TCGplayer's base names for it
         self.minted_prints = 0
         self.minted_variants = 0
         self.eras = eras or []
@@ -479,7 +485,8 @@ class Importer:
                 for gid in s.get("tcgplayerGroupIds", []):
                     if gid in self.groups and gid not in found["reprints"]:
                         self.set_of_group.setdefault(gid, s["id"])
-                        s["editions"] = self._group_editions(gid, s["type"])
+                        if not self._editions_unknown(gid):  # else its editions stay as they were
+                            s["editions"] = self._group_editions(gid, s["type"])
         taken = set(self.sets)
         for gid, candidates in found["reprints"].items():
             parent_id = self.best_parent(gid, candidates)
@@ -606,6 +613,13 @@ class Importer:
                   if (q["set"], q.get("number"), q["rarity"]) == (p["set"], p.get("number"), p["rarity"])]
         held = sorted(i for q in family for i in _product_ids(q) if i != prod.product_id and i in self.by_id)
         mine = (normalise(prod.base_name_and_tags()[0]), rarities.canonical(prod.rarity))
+        # A product of a group whose products are missing stays as it was, unseen: the name and rarity its print
+        # records stand for it, so a product of another name or rarity is refused as it was when both were in the input.
+        unseen = sorted(i for q in family for i in _product_ids(q) if i != prod.product_id and i not in self.by_id
+                        if (normalise(tcgcsv.base_name_and_tags(q["tcgplayer"]["name"])[0]), q["rarity"]) != mine)
+        if unseen:
+            self._conflict(prod, p, unseen, "the print holds a product of another name or rarity")
+            return False
         for i in held:
             other = self.by_id[i]
             theirs = (normalise(other.base_name_and_tags()[0]), rarities.canonical(other.rarity))
@@ -897,9 +911,9 @@ class Importer:
         special prints (the God cards of Yugi's Legendary Decks) or every print (a Duel Terminal set the placeholder
         also calls Unlimited): there it has the editions most of the set's priced prints have, unless that is a tie.
         While a product of the set is undecided, they keep the editions they had."""
-        priced = [p for p in prints if _product_ids(p)]
-        if any(self._print_editions_unknown(p) for p in priced):
+        if any(self._print_editions_unknown(p) for p in prints):
             return
+        priced = [p for p in prints if any(self.subtypes.get(i) for i in _product_ids(p))]
         common = None
         if "limited" in set_editions and len(set_editions) > 1:
             counts = collections.Counter(tuple(p.get("editions", set_editions)) for p in priced).most_common(2)

@@ -44,11 +44,16 @@ class Product:
 
     def base_name_and_tags(self) -> tuple[str, list[str]]:
         """The name without its trailing parenthesised or bracketed tags, and the tags in reading order."""
-        name, tags = self.name, []
-        while (m := _SUFFIX.search(name)) and m.start() > 0:
-            tags.insert(0, m.group(1).strip())
-            name = name[:m.start()]
-        return name.strip(), tags
+        return base_name_and_tags(self.name)
+
+
+def base_name_and_tags(name: str) -> tuple[str, list[str]]:
+    """A product name without its trailing parenthesised or bracketed tags, and the tags in reading order."""
+    tags: list[str] = []
+    while (m := _SUFFIX.search(name)) and m.start() > 0:
+        tags.insert(0, m.group(1).strip())
+        name = name[:m.start()]
+    return name.strip(), tags
 
 
 def _get(url: str, cache: Path, refresh: bool) -> dict:
