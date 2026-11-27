@@ -240,6 +240,12 @@ def test_ygoprodeck_says_nothing_about_a_name_it_gives_no_status_for():
         (OTHER, "tcg"): "legal", (OTHER, "ocg"): "legal", (OTHER, "goat"): "legal"}
 
 
+def test_an_unknown_banlist_status_is_an_error_not_legal():
+    prodeck = [{"id": int(CARD), "banlist_info": {"ban_tcg": "Unlimited-ish"}}]
+    with pytest.raises(ValueError, match=rf"{CARD}.*tcg.*Unlimited-ish"):
+        legality.lead_status(prodeck, None, {}, {CARD})
+
+
 def test_a_status_on_a_name_with_angle_brackets_still_counts():
     prodeck = [{"id": int(CARD), "name": "Maliss <P> Dormouse", "banlist_info": {"ban_tcg": "Limited"}}]
     assert legality.lead_status(prodeck, None, {}, {CARD})[(CARD, "tcg")] == "limited"
