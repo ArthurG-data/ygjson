@@ -94,21 +94,41 @@ and `Ids.json` ships it.
   `AllPrintings.json` is keyed by it. Each printing also holds `key` (its readable id), `print` (the print's UUID)
   and `printKey` (the print's readable key). `AllCards.json` lists a card's prints, and a sealed product's `cards`
   name prints, by UUID.
-- An entry in `Ids.json` is `{"id", "key", "status", ...}`. `key` is the readable key the id has now. To find the id
-  of a key, look it up in `data.prints` by `key`.
-- An old key or id still resolves. A print's `formerKeys` lists the keys it had before, and a printing's `formerIds`
-  the readable ids it had. Look an old print key up in `data.prints[*].formerKeys`, an old printing id in
-  `data.printings[*].formerIds`.
+- An entry in `Ids.json` is `{"id", "key", "status", ...}`. `key` is the readable key the id has now. A print's
+  `formerKeys` lists the keys it had before, and a printing's `formerIds` the readable ids it had.
 - `status` is `live` for an id the data still has, and `retired` for one it no longer has. A retired id is never
   reused or removed. Its `successors` lists the ids that replaced it, and is empty when nothing did.
+- To resolve a stored id or key, in `data.prints` (or `data.printings`):
+  1. take the entry whose `id` is it, else the entry whose `key` is it, else the entries whose `formerKeys`
+     (`formerIds` for a printing) hold it;
+  2. of several, prefer the `live` one;
+  3. if it is `retired`, follow its `successors`, through retired successors too, to the live ids. One live id is
+     what it became. Several, or none, means the data cannot tell which print it was: ask the holder.
 - Cards, sets, archetypes and sealed products keep their ids and have entries too, so `Ids.json` lists every id the
   data has ever used.
 - `meta.idsVersion` is the version of this layout. It is `1`.
 
+#### Migrating from 0.2.0
+
+- `AllPrintings.json` is keyed by `<print uuid>:en:<edition>` instead of the readable printing id.
+- A printing's `print` is the print's UUID. `printKey` holds the readable print key (what `print` held in 0.2.0) and
+  `key` the readable printing id (what keyed it). Both are today's and may differ from the ones 0.2.0 published.
+- Look each stored 0.2.0 id up in `Ids.json` as above (it is a `key` or a `formerKeys`/`formerIds` entry) and store
+  the `id` it resolves to.
+
+#### The ledger
+
 `uv run python tools/ids.py` reconciles the data with the ledger after the imports. `mappings/ids.json` holds the
 decisions a person makes where it cannot: which retired print a new key continues (`prints`) and which prints
-replace a retired id (`successors`). Each cites its evidence. `review/ids.json` lists what it retired or renamed.
+replace a retired id (`successors`). Each cites its evidence. `review/ids.json` lists the retired prints and cards
+whose successors lead to no live id (`dead-end`) or to several (`several`), and this run's set and archetype renames.
 
+To settle a review row:
+
+1. Restore the ledger from the base branch, so the run that decides it starts from what was published:
+   `git checkout origin/main -- ids/`.
+2. Add the entry to `mappings/ids.json` (under `prints` or `successors`) with its `why`.
+3. Run `uv run python tools/ids.py` again.
 
 ## Sets
 
@@ -365,7 +385,7 @@ today. `speed_duel` needs `.cache/ygojson` and is skipped without it.
 | `review/yugipedia.json` | sets with no page or infobox, infobox types the mapping lacks, pages shared by several sets, ambiguous parents |
 | `review/tcgplayer-2.json` | TCGplayer products no rule could tie to a print (`unmatched`), products that would share a print (`conflicts`), groups with no set (`groups`), and groups matched through an alias (`groupAliases`) |
 | `review/sealed.json` | sealed products in a group with no set (`noSet`), products with category `other`, and YGOJSON products no TCGplayer product matched (`ygojsonUnmatched`) |
-| `review/ids.json` | prints the ledger retired, cards it retired, and sets and archetypes it renamed, for a person to settle in `mappings/ids.json` |
+| `review/ids.json` | retired prints and cards whose successors lead to no live id or to several, and the sets and archetypes the last run renamed, for a person to settle in `mappings/ids.json` |
 
 `uv run python tools/coverage.py` reports where every TCGplayer product in category 2 ended up: on a print, on a
 sealed product, skipped as an accessory, in a group published after today, or in review. `--strict` exits 1 if any
