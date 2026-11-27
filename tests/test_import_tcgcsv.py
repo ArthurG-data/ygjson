@@ -1051,6 +1051,49 @@ def test_a_print_loses_editions_it_no_longer_has_a_reason_for():
     assert "editions" not in prints["lob:100:LOB-EN003:rare"]  # no product left
 
 
+def limited_world(subtypes, set_editions=("first", "unlimited", "limited")):
+    """Set 'lob' mixes Limited with other editions. Card 100's prints LOB-EN001.. hold one product each, priced in the
+    given subtypes; LOB-EN099 holds none."""
+    lob = mkset("lob", "Legend of Blue Eyes", "LOB", editions=set_editions)
+    prints = [mkprint("lob", "100", f"LOB-EN{i:03}", "rare") for i in range(1, len(subtypes) + 1)]
+    cards = [mkcard("100", "Alpha", [*prints, mkprint("lob", "100", "LOB-EN099", "rare")])]
+    products = {1: [single(1, f"Alpha {i}", f"LOB-EN{i:03}", "Rare", 100 + i) for i in range(1, len(subtypes) + 1)]}
+    prices = {1: [price(100 + i, sub) for i, subs in enumerate(subtypes, 1) for sub in subs]}
+    return [mkgroup(1, "Legend of Blue Eyes", "LOB")], products, prices, [lob], cards
+
+
+@pytest.mark.parametrize("subtypes, editions", [
+    # Most priced prints are 1st Edition and Unlimited; Limited is the few special ones (Yugi's Legendary Decks).
+    ([("1st Edition", "Unlimited")] * 3 + [("Limited",)], ["first", "unlimited"]),
+    # Every priced print is Limited (a Duel Terminal set the placeholder calls Unlimited too).
+    ([("Limited",)] * 2, ["limited"]),
+])
+def test_a_print_with_no_product_in_a_set_mixing_limited_takes_what_most_priced_prints_have(subtypes, editions):
+    out = go(*limited_world(subtypes))
+    assert prints_of(out, "100")["lob:100:LOB-EN099:rare"]["editions"] == editions
+    again = imp.run(*limited_world(subtypes)[:3], copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["files"] == out["files"]
+
+
+@pytest.mark.parametrize("subtypes, set_editions", [
+    ([("1st Edition",), ("Limited",)], ("first", "limited")),  # a tie: nothing says which
+    ([("1st Edition", "Limited")] * 2, ("first", "limited")),  # most priced prints have the set's editions
+    ([("1st Edition",)] * 2, ("first", "unlimited")),           # the set does not mix Limited with others
+])
+def test_a_print_with_no_product_keeps_its_sets_editions_otherwise(subtypes, set_editions):
+    out = go(*limited_world(subtypes, set_editions))
+    assert "editions" not in prints_of(out, "100")["lob:100:LOB-EN099:rare"]
+
+
+def test_a_print_with_no_product_keeps_its_editions_while_its_sets_products_are_undecided():
+    groups, products, prices, sets, cards = limited_world([("1st Edition", "Unlimited")] * 3 + [("Limited",)])
+    out = go(groups, products, prices, sets, cards)
+    del prices[1]  # the group's prices are missing from the input
+    again = imp.run(groups, products, prices, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert prints_of({"cards": {c["id"]: c for c in again["files"]["000"]["cards"]}}, "100")[
+        "lob:100:LOB-EN099:rare"]["editions"] == ["first", "unlimited"]
+
+
 def test_a_sealed_product_prices_do_not_touch_editions():
     cards = [mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])]
     products = {1: [sealed(1, "Box", 5), single(1, "Alpha", "LOB-EN001", "Rare", 7)]}

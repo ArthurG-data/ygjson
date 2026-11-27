@@ -14,7 +14,8 @@ mappings/tcgplayer_products.json (see rule 4 below), and rewrites the first two 
           parent's as this run leaves them). A set this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a
           free one that the ledger does not hold. A reprint set left with no group goes, with its prints.
   prints  identifiers.tcgplayerProductIds, tcgplayer {name, match}, editions (when a print's own products are priced
-          in other editions than its set), and the prints of a reprint set (copies of the parent's prints that the
+          in other editions than its set, or, for a print with no product in a set mixing Limited with others, the
+          editions most of the set's priced prints have), and the prints of a reprint set (copies of the parent's prints that the
           group's singles name). A print whose YGOPRODeck rarity was unknown takes TCGplayer's.
 
 A group is matched to a set by five rules, each over the groups and sets still free: exact name; normalised name;
@@ -849,7 +850,8 @@ class Importer:
         owner. A reprint set's editions are the ones its own group's singles are priced in, else its parent's once
         merged: never its own earlier editions, so a run alone gives what the pipeline gives, and never another group's
         product that landed in it by number-other-set, whose print says its own editions instead. A print with no
-        product has its set's editions. A print holding a product, or a reprint set of a group, whose products or prices
+        product has its set's editions, or in a set mixing Limited with others the ones most of its priced prints have
+        (see _productless_editions). A print holding a product, or a reprint set of a group, whose products or prices
         are missing from the input keeps the editions it had. Returns the number of sets whose editions changed."""
         changed = 0
         for set_id, ids in self.landed_in.items():
@@ -867,19 +869,49 @@ class Importer:
                 continue
             self.sets[set_id]["editions"] = self._priced_editions(gid) or list(self.sets[parent_id]["editions"])
             changed += self.sets[set_id]["editions"] != before
+        by_set: dict[str, list[dict]] = collections.defaultdict(list)
         for body in self.catalog.files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
-                    if any(self._editions_unknown(self.by_id[i].group_id) if i in self.by_id else self.undecided(i)
-                           for i in _product_ids(p)):
-                        continue  # its products' prices are not all in the input: its editions stay as they were
+                    by_set[p["set"]].append(p)
+                    if not _product_ids(p) or self._print_editions_unknown(p):
+                        continue  # no product (below), or its products' prices are not all in the input: it stays
                     own = set().union(*(self.subtypes.get(i, set()) for i in _product_ids(p)))
                     set_editions = set(self.sets[p["set"]]["editions"])
                     if own and own != set_editions:
                         p["editions"] = _edition_list(own)
                     else:
                         p.pop("editions", None)  # an earlier run's editions, which no product backs any more
+        for set_id, prints in sorted(by_set.items()):
+            self._productless_editions(self.sets[set_id]["editions"], prints)
         return changed
+
+    def _print_editions_unknown(self, p: dict) -> bool:
+        """Whether the input lacks the products or prices of a product the print holds."""
+        return any(self._editions_unknown(self.by_id[i].group_id) if i in self.by_id else self.undecided(i)
+                   for i in _product_ids(p))
+
+    def _productless_editions(self, set_editions: list[str], prints: list[dict]) -> None:
+        """Give the prints of one set that hold no product their editions. No source states a print's editions, so such
+        a print has its set's, except in a set that mixes Limited with other editions, where Limited is usually a few
+        special prints (the God cards of Yugi's Legendary Decks) or every print (a Duel Terminal set the placeholder
+        also calls Unlimited): there it has the editions most of the set's priced prints have, unless that is a tie.
+        While a product of the set is undecided, they keep the editions they had."""
+        priced = [p for p in prints if _product_ids(p)]
+        if any(self._print_editions_unknown(p) for p in priced):
+            return
+        common = None
+        if "limited" in set_editions and len(set_editions) > 1:
+            counts = collections.Counter(tuple(p.get("editions", set_editions)) for p in priced).most_common(2)
+            if counts and (len(counts) == 1 or counts[0][1] > counts[1][1]):
+                common = list(counts[0][0])
+        for p in prints:
+            if _product_ids(p):
+                continue
+            if common and common != set_editions:
+                p["editions"] = common
+            else:
+                p.pop("editions", None)
 
 
 def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping[str, str] = {},

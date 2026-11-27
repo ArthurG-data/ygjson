@@ -184,9 +184,14 @@ All sets but `summoned-skull-sample-promotional-card` have one.
 places, in this order. YGOPRODeck states none, so the first import guesses `limited` for a name that holds "Limited
 Edition" and `unlimited` for the rest. YGOJSON states the editions of a set it matches (`1st`, `unlimited`,
 `limited`), which replace the guess. TCGCSV then adds every edition its prices show for the set's singles, where
-TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`. A print lists its own `editions` only when its products are
-priced in other editions than its set: 10,255 prints do. That is mostly fewer, but a product of another group that lands
-in a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions.
+TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`.
+
+A print lists its own `editions` only when they differ from its set's: 10,364 prints do. A print holding products
+has the editions they are priced in. That is mostly fewer than its set's, but a product of another group that lands in
+a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions, except
+in a set that mixes `limited` with other editions. There Limited is usually a few special prints (the God cards of
+Yugi's Legendary Decks) or all of them (a Duel Terminal set), so the print has the editions most of the set's priced
+prints have, unless two lists tie. 109 prints get their editions this way.
 
 **Key art.** `releases[0].keyArt` links to YGOPRODeck's set image (910 sets), else to the pack art YGOJSON gives from
 Yugipedia (126 sets). The `source` is the page the image is on. The images are links and are never copied. No source
@@ -260,7 +265,7 @@ products only when they are the same card at the same rarity, like the Red and B
 | `number+rarity-from-tcgplayer` | 193 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
 | `number` | 436 | the group's set has exactly one print of this number |
 | `number-other-set` | 3,261 | the group's set lacks the number, and exactly one other set has it |
-| `minted` | 674 | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
+| `minted` | 675 | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
 
 **Prints from TCGplayer.** YGOPRODeck lags TCGplayer and omits whole sets. When no print anywhere has a product's number
 and its name is exactly one card, `import_tcgcsv.py` creates the print with `source: "tcgplayer"`, in the group's set, or
