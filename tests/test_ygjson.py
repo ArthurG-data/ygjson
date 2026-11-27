@@ -79,6 +79,21 @@ def test_dedupe_punctuation_variants_and_a_literal_suffix():
     assert out["roid 2"] == "roid-2-2"  # -2 is taken by "roid", so a real "roid-2" slug cannot be repeated
 
 
+def test_dedupe_keeps_held_slugs_when_an_earlier_name_arrives():
+    assert ygjson.dedupe_slugs(["Roid", "ROID"], held={"Roid": "roid"}) == {"Roid": "roid", "ROID": "roid-2"}
+
+
+def test_dedupe_never_reuses_a_reserved_slug():
+    assert ygjson.dedupe_slugs(["Foo"], reserved={"foo"}) == {"Foo": "foo-2"}
+
+
+def test_dedupe_never_hands_a_held_slug_to_another_name():
+    # "Bar" is held at "foo"; "Foo" is new and must not take it even though "Bar" is absent this run.
+    assert ygjson.dedupe_slugs(["Foo"], held={"Bar": "foo"}) == {"Foo": "foo-2"}
+    # Two current names held at one slug: the first in sorted order keeps it, the other gets a free one.
+    assert ygjson.dedupe_slugs(["New", "Old"], held={"New": "x", "Old": "x"}) == {"New": "x", "Old": "old"}
+
+
 def test_dedupe_is_independent_of_input_order():
     names = ["a b", "A-B", "a.b"]
     assert ygjson.dedupe_slugs(names) == ygjson.dedupe_slugs(reversed(names))

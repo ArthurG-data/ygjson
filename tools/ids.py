@@ -43,6 +43,21 @@ def save_ledger(ledger: dict[str, dict[str, dict]], path: Path = IDS) -> None:
         ygjson.save_json(path / f"{kind}.json", {kind: [e for _, e in sorted(ledger.get(kind, {}).items())]})
 
 
+def held_names(ledger: dict[str, dict[str, dict]], kind: str) -> dict[str, str]:
+    """{name: slug} over every name of every entry of a slug kind, live or retired; a name under two slugs goes to
+    the smallest."""
+    held: dict[str, str] = {}
+    for slug, entry in sorted(ledger.get(kind, {}).items()):
+        for name in entry["names"]:
+            held.setdefault(name, slug)
+    return held
+
+
+def reserved(ledger: dict[str, dict[str, dict]], kind: str) -> set[str]:
+    """Every id the ledger holds for a kind, live or retired: none may be given to another record."""
+    return set(ledger.get(kind, {}))
+
+
 def schema_errors(ledger: dict[str, dict[str, dict]]) -> list[str]:
     """Schema violations of the ledger, as readable strings."""
     doc = {kind: sorted(entries.values(), key=lambda e: e["id"]) for kind, entries in ledger.items()}

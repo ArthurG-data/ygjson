@@ -231,3 +231,18 @@ def test_output_validates():
     arch, slugs = imp.build_archetypes([raw_card(archetype="Blue-Eyes")], [], {})
     files, _ = imp.build_cards([raw_card(archetype="Blue-Eyes")], ids, slugs, {})
     assert ygjson.validate(sets, ERAS, files, arch) == []
+
+
+def test_build_sets_gives_a_ledger_name_its_slug_after_a_rename():
+    listed = [{"set_name": "New Name", "set_code": "NN", "tcg_date": "2002-03-08"}]
+    cards = [raw_card(card_sets=[{"set_name": "New Name", "set_code": "NN-EN001", "set_rarity": "Common"}])]
+    sets, ids = imp.build_sets(cards, listed, ERAS, [], held={"Old Name": "x", "New Name": "x"}, reserved={"x"})
+    assert [s["id"] for s in sets] == ["x"] and ids == {"New Name": "x"}
+
+
+def test_build_sets_and_archetypes_never_take_a_reserved_slug():
+    listed = [{"set_name": LOB, "set_code": "LOB"}]
+    sets, ids = imp.build_sets([raw_card()], listed, ERAS, [], reserved={LOB_ID})
+    assert [s["id"] for s in sets] == [f"{LOB_ID}-2"]
+    arch, slugs = imp.build_archetypes([raw_card(archetype="Roid")], ["ROID"], {}, held={"Roid": "roid"}, reserved={"roid"})
+    assert slugs == {"Roid": "roid", "ROID": "roid-2"}

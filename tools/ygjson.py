@@ -10,7 +10,7 @@ import functools
 import hashlib
 import json
 import re
-from collections.abc import Iterable
+from collections.abc import Container, Iterable, Mapping
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
@@ -42,19 +42,31 @@ def slugify(name: str) -> str:
     return slug or "x-" + hashlib.sha1(name.encode("utf-8")).hexdigest()[:12]
 
 
-def dedupe_slugs(names: Iterable[str]) -> dict[str, str]:
-    """{name: slug}. Names that slug alike are taken in sorted order: the first keeps the slug, the rest get -2, -3."""
+def dedupe_slugs(names: Iterable[str], held: Mapping[str, str] | None = None,
+                 reserved: Container[str] = frozenset()) -> dict[str, str]:
+    """{name: slug}. A name in `held` (the ledger's {name: slug}) keeps its slug. The other names, in sorted order,
+    take their slug, else the next free -2, -3, never a slug held for another name or in `reserved`. Two current names
+    held at one slug cannot both have it: the first in sorted order does, the other is treated as unheld."""
+    held = held or {}
+    ordered = sorted(set(names))
     out: dict[str, str] = {}
-    taken: set[str] = set()
-    for name in sorted(set(names)):
+    kept: set[str] = set()
+    for name in ordered:
+        if name in held and held[name] not in kept:
+            out[name] = held[name]
+            kept.add(held[name])
+    taken = kept | set(held.values())
+    for name in ordered:
+        if name in out:
+            continue
         slug = base = slugify(name)
         n = 1
-        while slug in taken:
+        while slug in taken or slug in reserved:
             n += 1
             slug = f"{base}-{n}"
         taken.add(slug)
         out[name] = slug
-    return out
+    return dict(sorted(out.items()))
 
 
 def card_bucket(card_id: str) -> str:

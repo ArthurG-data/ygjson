@@ -1,3 +1,4 @@
+import copy
 import random
 import uuid
 
@@ -374,3 +375,105 @@ def test_printing_of_a_retired_print_falls_back_to_the_successors_live_printings
     got = reconcile.reconcile_printings(entries, [(new, "en", "unlimited")], {new: "u2"},
                                         {"u1": retired(KEY, "u1", successors=["u2"]), "u2": live(new, "u2")})
     assert got["u1:en:first"]["successors"] == ["u2:en:unlimited"]
+
+
+def _set(sid, name, code="AAA", date="2020-01-01", **identifiers):
+    return {"id": sid, "name": name, "code": code, "releases": [{"language": "en", "name": name, "releaseDate": date}],
+            "identifiers": identifiers}
+
+
+def _slug(sid, *names, status="live", successors=(), **evidence):
+    return {"id": sid, "names": list(names), "status": status, "successors": list(successors), **evidence}
+
+
+def _sets(entries, current, merges={}):
+    return reconcile.reconcile_slugs(entries, current, "name", reconcile.set_identity, merges,
+                                     evidence=reconcile.set_evidence)
+
+
+def test_set_identity_and_evidence_come_from_identifiers_code_and_first_release():
+    s = _set("x", "X", ygojsonId="u", yugipediaId=5, konamiDatabaseIds=[2, 1])
+    assert reconcile.set_identity(s) == {"ygojson:u", "yugipedia:5", "konami:1", "konami:2"}
+    assert reconcile.set_evidence(s) == {"code": "AAA", "releaseDate": "2020-01-01"}
+    assert reconcile.set_identity({"id": "y"}) == set() and reconcile.set_evidence({"id": "y", "code": "B"}) == {"code": "B"}
+    assert reconcile.archetype_identity({"slug": "a", "identifiers": {"ygojsonId": "v"}}) == {"ygojson:v"}
+    assert reconcile.archetype_identity({"slug": "a"}) == set()
+
+
+def test_new_and_live_sets_record_names_and_evidence():
+    entries = {"old": _slug("old", "Old", code="AAA", releaseDate="2020-01-01", identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set("old", "Old Two", yugipediaId=6), _set("new", "New", "NEW", "2021-02-02")])
+    assert renames == []
+    assert got["old"] == _slug("old", "Old", "Old Two", code="AAA", releaseDate="2020-01-01", identity=["yugipedia:6"])
+    assert got["new"] == _slug("new", "New", code="NEW", releaseDate="2021-02-02")
+    assert _sets(got, [_set("old", "Old Two", yugipediaId=6), _set("new", "New", "NEW", "2021-02-02")]) == (got, [])
+
+
+def test_rename_is_found_by_a_shared_yugipedia_id():
+    entries = {"old-name": _slug("old-name", "Old Name", code="AAA", releaseDate="2020-01-01", identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set("new-name", "New Name", "BBB", yugipediaId=5)])
+    assert renames == [{"from": "old-name", "to": "new-name", "name": "New Name"}]
+    assert set(got) == {"old-name"}
+    assert got["old-name"]["status"] == "live" and got["old-name"]["names"] == ["Old Name", "New Name"]
+    assert got["old-name"]["code"] == "BBB"
+
+
+def test_a_shared_id_with_two_candidates_is_no_rename():
+    entries = {"a": _slug("a", "A", identity=["yugipedia:5"]), "b": _slug("b", "B", identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set("c", "C", "ZZZ", yugipediaId=5)])
+    assert renames == [] and got["a"]["status"] == got["b"]["status"] == "retired" and got["c"]["status"] == "live"
+
+
+def test_alias_merge_retires_with_the_target():
+    alias, target = "wcs-2025-limited-pack", "limited-pack-world-championship-2025"
+    entries = {alias: _slug(alias, "WCS 2025 Limited Pack", code="25LP", releaseDate="2025-08-01", identity=["yugipedia:5"]),
+               target: _slug(target, "Limited Pack World Championship 2025", code="25LP", releaseDate="2025-08-01",
+                             identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set(target, "Limited Pack World Championship 2025", "25LP", "2025-08-01", yugipediaId=5)],
+                         {alias: target})
+    assert renames == []
+    assert got[alias]["status"] == "retired" and got[alias]["successors"] == [target]
+    assert got[target]["status"] == "live"
+
+
+def test_vanished_set_retires_to_the_one_new_set_with_its_code_and_date():
+    entries = {"gone": _slug("gone", "Gone", code="AAA", releaseDate="2020-01-01")}
+    got, _ = _sets(entries, [_set("fresh", "Fresh", "AAA", "2020-01-01"), _set("other", "Other", "AAA", "2020-01-02")])
+    assert got["gone"]["status"] == "retired" and got["gone"]["successors"] == ["fresh"]
+    two, _ = _sets(entries, [_set("f1", "F1", "AAA", "2020-01-01"), _set("f2", "F2", "AAA", "2020-01-01")])
+    assert two["gone"]["successors"] == []
+
+
+def test_retired_slug_comes_back_live_and_an_unchanged_retired_one_stays():
+    entries = {"a": _slug("a", "A", status="retired", successors=["b"]), "z": _slug("z", "Z", status="retired")}
+    got, _ = _sets(entries, [_set("a", "A")])
+    assert got["a"]["status"] == "live" and got["a"]["successors"] == [] and got["z"] == entries["z"]
+
+
+def test_archetype_rename_is_found_by_its_ygojson_id_else_retires_with_no_successor():
+    entries = {"roid": _slug("roid", "Roid", identity=["ygojson:r"]), "d-d": _slug("d-d", "D/D")}
+    current = [{"slug": "roids", "name": "Roids", "identifiers": {"ygojsonId": "r"}}, {"slug": "ddd", "name": "DDD"}]
+    got, renames = reconcile.reconcile_slugs(entries, current, "name", reconcile.archetype_identity, id_field="slug")
+    assert renames == [{"from": "roid", "to": "roids", "name": "Roids"}]
+    assert got["roid"]["names"] == ["Roid", "Roids"] and got["d-d"]["status"] == "retired" and got["d-d"]["successors"] == []
+    assert got["ddd"] == _slug("ddd", "DDD")
+
+
+def test_reconcile_slugs_does_not_mutate_its_input():
+    entries = {"old-name": _slug("old-name", "Old Name", identity=["yugipedia:5"])}
+    before = copy.deepcopy(entries)
+    _sets(entries, [_set("new-name", "New Name", yugipediaId=5)])
+    assert entries == before
+
+
+def test_sealed_ledger_follows_the_product_and_retires_what_left():
+    entries = {"box": {"id": "box", "tcgplayerProductId": 1, "status": "live", "successors": []},
+               "old": {"id": "old", "tcgplayerProductId": 2, "status": "retired", "successors": []}}
+    products = [{"id": "box", "identifiers": {"tcgplayerProductIds": [1]}},
+                {"id": "pack", "identifiers": {"tcgplayerProductIds": [3]}}]
+    got = reconcile.reconcile_sealed(entries, products)
+    assert got == {"box": entries["box"], "old": entries["old"],
+                   "pack": {"id": "pack", "tcgplayerProductId": 3, "status": "live", "successors": []}}
+    later = reconcile.reconcile_sealed(got, products[1:])
+    assert later["box"]["status"] == "retired" and later["box"]["successors"] == []
+    assert list(later) == sorted(later)

@@ -188,6 +188,102 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
     return dict(sorted(out.items())), dict(sorted(successor.items())), sorted(review, key=lambda r: r["id"])
 
 
+def set_identity(s: dict) -> set[str]:
+    """The ids a set carries that survive a rename: its YGOJSON id, Yugipedia page id and Konami database ids."""
+    ident = s.get("identifiers") or {}
+    found = {f"konami:{i}" for i in ident.get("konamiDatabaseIds", [])}
+    if "ygojsonId" in ident:
+        found.add(f"ygojson:{ident['ygojsonId']}")
+    if "yugipediaId" in ident:
+        found.add(f"yugipedia:{ident['yugipediaId']}")
+    return found
+
+
+def set_evidence(s: dict) -> dict:
+    """What a set's ledger entry keeps to name a successor once the set is gone: its code and first release date."""
+    found = {"code": s["code"]} if "code" in s else {}
+    releases = s.get("releases") or []
+    if releases and releases[0].get("releaseDate"):
+        found["releaseDate"] = releases[0]["releaseDate"]
+    return found
+
+
+def archetype_identity(a: dict) -> set[str]:
+    """The id an archetype carries that survives a rename: its YGOJSON id."""
+    ident = a.get("identifiers") or {}
+    return {f"ygojson:{ident['ygojsonId']}"} if "ygojsonId" in ident else set()
+
+
+def reconcile_slugs(entries: dict[str, dict], current: list[dict], name_field: str, identity: Callable[[dict], set[str]],
+                    merges: Mapping[str, str] = {}, *, id_field: str = "id",
+                    evidence: Callable[[dict], dict] = lambda r: {}) -> tuple[dict[str, dict], list[dict]]:
+    """Update a slug ledger (sets, archetypes): (new entries, rename rows sorted by "from").
+
+    A record in `current` (its slug at `id_field`) is live: its name joins `names`, its identity (sorted) and
+    `evidence` fields are refreshed, keeping a stored value the record lacks. A slug new to the ledger gets an entry,
+    unless it is a rename: it shares an identity with exactly one live slug gone in this call, and that slug shares
+    one with no other new slug. Then the old entry stays live and gains the new name, the new slug gets no entry, and
+    a row {"from", "to", "name"} asks for the import to run again. A live slug gone otherwise is retired: a key of
+    `merges` with the merge target as successor, else with the one remaining new slug whose `code` and `releaseDate`
+    equal the entry's, if exactly one. An entry already retired and not current is left as it is. `entries` is not
+    modified.
+    """
+    out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
+    records = {r[id_field]: r for r in current}
+    new = [i for i in sorted(records) if i not in out]
+    gone = [i for i, e in out.items() if e["status"] == "live" and i not in records and i not in merges]
+    found = {i: set(identity(records[i])) for i in new}
+    stored = {i: set(out[i].get("identity", [])) for i in gone}
+    hits_of_gone = {g: [n for n in new if stored[g] & found[n]] for g in gone}
+    hits_of_new = {n: [g for g in gone if stored[g] & found[n]] for n in new}
+    renamed = {g: hits[0] for g, hits in hits_of_gone.items() if len(hits) == 1 and hits_of_new[hits[0]] == [g]}
+    renamed_to = set(renamed.values())
+
+    def refresh(entry: dict, record: dict) -> None:
+        if record[name_field] not in entry["names"]:
+            entry["names"].append(record[name_field])
+        entry["status"], entry["successors"] = "live", []
+        ident = sorted(identity(record))
+        if ident:
+            entry["identity"] = ident
+        entry.update({k: v for k, v in evidence(record).items() if v is not None})
+
+    for i, record in sorted(records.items()):
+        if i in renamed_to:
+            continue
+        refresh(out.setdefault(i, {"id": i, "names": [], "status": "live", "successors": []}), record)
+    for g, n in renamed.items():
+        refresh(out[g], records[n])
+    remaining = [n for n in new if n not in renamed_to]
+    for g in [i for i, e in out.items() if e["status"] == "live" and i not in records and i not in renamed]:
+        e = out[g]
+        if g in merges:
+            successors = [merges[g]]
+        elif "code" in e and "releaseDate" in e:
+            same = [n for n in remaining if {k: evidence(records[n]).get(k) for k in ("code", "releaseDate")}
+                    == {"code": e["code"], "releaseDate": e["releaseDate"]}]
+            successors = same if len(same) == 1 else []
+        else:
+            successors = []
+        e["status"], e["successors"] = "retired", successors
+    renames = [{"from": g, "to": n, "name": records[n][name_field]} for g, n in renamed.items()]
+    return dict(sorted(out.items())), sorted(renames, key=lambda r: r["from"])
+
+
+def reconcile_sealed(entries: dict[str, dict], products: list[dict]) -> dict[str, dict]:
+    """Update the sealed ledger, keyed by slug: a product in `products` is live with its first TCGplayer product id; a
+    live entry whose product is gone is retired with no successor. `entries` is not modified."""
+    out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
+    current = {p["id"]: p for p in products}
+    for i, p in sorted(current.items()):
+        out[i] = {"id": i, "tcgplayerProductId": p["identifiers"]["tcgplayerProductIds"][0], "status": "live",
+                  "successors": []}
+    for i, e in out.items():
+        if i not in current and e["status"] == "live":
+            e["status"], e["successors"] = "retired", []
+    return dict(sorted(out.items()))
+
+
 def _carry_live(out: dict[str, dict], facts: Mapping[str, PrintFacts],
                 card_successor: Mapping[str, str]) -> tuple[dict[str, str], dict[str, PrintFacts]]:
     """({current key: id} for live entries still at a current key, {id: facts} of the live entries left: the orphans).

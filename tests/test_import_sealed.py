@@ -301,3 +301,13 @@ def test_both_editions_of_a_box_take_the_one_ygojson_product():
     products = {1: [prod(1, "Legend Booster Box [1st Edition]", 1), prod(1, "Legend Booster Box [Unlimited Edition]", 2)]}
     out = build(products, [mkset("lob", "Legend", groups=[1])], ygo=[ygo("p1", "Legend (Box)", [])])
     assert {p["identifiers"].get("ygojsonId") for p in out["by_name"].values()} == {"p1"}
+
+
+def test_sealed_slug_follows_the_tcgplayer_product_through_a_rename():
+    rs = [{"productId": 42, "name": "New Name Booster Box", "tag": None},
+          {"productId": 7, "name": "Old Slug", "tag": None}]
+    imp.assign_ids(rs, held={42: "old-slug"}, reserved={"old-slug", "retired-box"})
+    assert {r["productId"]: r["id"] for r in rs} == {42: "old-slug", 7: "old-slug-2"}
+    rs = [{"productId": 9, "name": "Retired Box", "tag": None}]
+    imp.assign_ids(rs, reserved={"retired-box"})
+    assert rs[0]["id"] == "retired-box-2"

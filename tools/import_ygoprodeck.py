@@ -14,9 +14,11 @@ import collections
 import html
 import json
 import re
+from collections.abc import Container, Mapping
 from pathlib import Path
 from urllib.parse import quote
 
+import ids
 import rarities
 import ygjson
 import ygoprodeck
@@ -95,16 +97,18 @@ def _number_prefixes(card_list: list[dict]) -> dict[str, str]:
 
 
 def build_sets(card_list: list[dict], set_list: list[dict], eras: list[dict], existing: list[dict],
-               aliases: dict[str, dict] | None = None) -> tuple[list[dict], dict[str, str]]:
+               aliases: dict[str, dict] | None = None, held: Mapping[str, str] = {},
+               reserved: Container[str] = frozenset()) -> tuple[list[dict], dict[str, str]]:
     """Returns the sets sorted by id and {set name: set id}. Existing sets that are not YGOPRODeck's (source
     tcgplayer) are kept as they are. A set in ``aliases`` is not written and its name maps to the owner's id, so its
-    prints land in the owner; an alias whose owner is not written fails."""
+    prints land in the owner; an alias whose owner is not written fails. ``held`` and ``reserved`` are the set
+    ledger's {name: slug} and slugs (see ygjson.dedupe_slugs)."""
     aliases = aliases or {}
     listed = {s["set_name"]: s for s in set_list}
     raw_names = set(listed) | {r["set_name"] for c in card_list for r in c.get("card_sets", [])}
     # YGOPRODeck escapes one name ("Legendary 5D&apos;s Decks"); the dataset carries the decoded text.
     decoded = {raw: html.unescape(raw) for raw in raw_names}
-    slugs = ygjson.dedupe_slugs(decoded.values())
+    slugs = ygjson.dedupe_slugs(decoded.values(), held, reserved)
     ids = {raw: slugs[decoded[raw]] for raw in raw_names}
     prefixes = _number_prefixes(card_list)
     old = {s["id"]: s for s in existing}
@@ -275,9 +279,11 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
     return bodies, {"duplicates": duplicates, "unknown": unknown}
 
 
-def build_archetypes(card_list: list[dict], listed: list[str], existing: dict) -> tuple[dict, dict[str, str]]:
+def build_archetypes(card_list: list[dict], listed: list[str], existing: dict, held: Mapping[str, str] = {},
+                     reserved: Container[str] = frozenset()) -> tuple[dict, dict[str, str]]:
+    """The archetypes sorted by slug and {name: slug}; ``held`` and ``reserved`` come from the archetype ledger."""
     names = set(listed) | {c["archetype"] for c in card_list if c.get("archetype")}
-    slugs = ygjson.dedupe_slugs(names)
+    slugs = ygjson.dedupe_slugs(names, held, reserved)
     old = {a["slug"]: a for a in existing.get("archetypes", [])}
     out = []
     for name, slug in slugs.items():
@@ -312,8 +318,12 @@ def main() -> None:
     existing_sets = ygjson.load_sets() if ygjson.SETS.exists() else []
     existing_archetypes = ygjson.load_archetypes() if ygjson.ARCHETYPES.exists() else {}
     aliases = json.loads(SET_ALIASES.read_text()) if SET_ALIASES.exists() else {}
-    sets, set_ids = build_sets(card_list, set_list, ygjson.load_eras(), existing_sets, aliases)
-    archetypes, archetype_slugs = build_archetypes(card_list, archetype_names, existing_archetypes)
+    ledger = ids.load_ledger()
+    sets, set_ids = build_sets(card_list, set_list, ygjson.load_eras(), existing_sets, aliases,
+                               ids.held_names(ledger, "sets"), ids.reserved(ledger, "sets"))
+    archetypes, archetype_slugs = build_archetypes(card_list, archetype_names, existing_archetypes,
+                                                   ids.held_names(ledger, "archetypes"),
+                                                   ids.reserved(ledger, "archetypes"))
     tcgplayer_sets = {s["id"] for s in sets if s["source"] != SOURCE}
     foreign_slugs = {a["slug"] for a in archetypes["archetypes"] if a.get("source") != SOURCE}
     files, counts = build_cards(card_list, set_ids, archetype_slugs, load_existing_cards(), tcgplayer_sets, foreign_slugs)

@@ -59,3 +59,11 @@ def test_schema_rejects_a_bad_printing_id():
     ledger = _ledger()
     ledger["printings"]["x"]["id"] = "not-a-uuid:en:first"
     assert ids.schema_errors(ledger)
+
+
+def test_held_names_and_reserved_cover_live_and_retired_entries():
+    ledger = {"sets": {"b": {"id": "b", "names": ["Old", "New"], "status": "live", "successors": []},
+                       "a": {"id": "a", "names": ["Gone", "New"], "status": "retired", "successors": []}}}
+    assert ids.held_names(ledger, "sets") == {"Old": "b", "New": "a", "Gone": "a"}  # a name under two slugs: smallest
+    assert ids.reserved(ledger, "sets") == {"a", "b"}
+    assert ids.held_names(ledger, "archetypes") == {} and ids.reserved(ledger, "archetypes") == set()

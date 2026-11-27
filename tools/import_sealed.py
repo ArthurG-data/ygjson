@@ -7,7 +7,8 @@ import_tcgcsv matched to a set (sets.json lists the group in tcgplayerGroupIds).
 to review `noSet`. Its category comes from its name (ordered rules, first match wins, see CATEGORY_RULES); an
 `accessory` (a binder, a card box for a field center) is skipped, so it is in no file and no review list. The id is
 the slug of the product name without its edition tag ([1st Edition], [Unlimited], - 1st Edition), so the 1st
-Edition and Unlimited products of one box share a slug: the first edition keeps it and the rest get -2, -3.
+Edition and Unlimited products of one box share a slug: the first edition keeps it and the rest get -2, -3. A product
+the sealed ledger (ids/sealed.json) already holds keeps its slug, and no other product takes a slug the ledger holds.
 
 Contents are written only where a rule or a source states them:
 - booster_box: 24 of the group's one booster pack with the same edition tag (complete); a mini box or tuck box
@@ -29,8 +30,10 @@ from __future__ import annotations
 import collections
 import json
 import re
+from collections.abc import Container, Mapping
 from pathlib import Path
 
+import ids
 import tcgcsv
 import ygjson
 from import_ygojson import normalise
@@ -107,20 +110,25 @@ def _is_mini(name: str) -> bool:
     return bool(re.search(r"\bmini\b|tuck box", name.lower()))
 
 
-def assign_ids(records: list[dict]) -> None:
-    """Give each record its slug id: names that slug alike (once the edition tag is gone) are ordered 1st Edition,
-    untagged, Unlimited, Limited, then by product id; the first keeps the slug and the rest get -2, -3."""
+def assign_ids(records: list[dict], held: Mapping[int, str] = {}, reserved: Container[str] = frozenset()) -> None:
+    """Give each record its slug id. A record whose TCGplayer product id is in ``held`` (the sealed ledger's
+    {product id: slug}) keeps that slug, so a renamed product keeps its id. For the rest, names that slug alike (once
+    the edition tag is gone) are ordered 1st Edition, untagged, Unlimited, Limited, then by product id; the first
+    takes the slug and the rest get -2, -3, never a held or ``reserved`` slug."""
     by_slug: dict[str, list[dict]] = collections.defaultdict(list)
+    taken: set[str] = set(held.values())
     for r in records:
-        by_slug[ygjson.slugify(strip_edition(r["name"]))].append(r)
-    taken: set[str] = set()
+        if r["productId"] in held:
+            r["id"] = held[r["productId"]]
+        else:
+            by_slug[ygjson.slugify(strip_edition(r["name"]))].append(r)
     for slug, group in sorted(by_slug.items()):
         group.sort(key=lambda r: (_EDITION_RANK[r["tag"]], r["productId"]))
         n = 0
         for r in group:
             n += 1
             cand = slug if n == 1 else f"{slug}-{n}"
-            while cand in taken:
+            while cand in taken or cand in reserved:
                 n += 1
                 cand = f"{slug}-{n}"
             taken.add(cand)
@@ -271,8 +279,9 @@ def _apply_packs(rec: dict, packs: list[dict], ctx: Context) -> None:
 
 
 def build(groups: list[dict], products: dict[int, list[tcgcsv.Product]], sets: list[dict], files: dict[str, dict],
-          ygo_products: list[dict]) -> dict:
-    """{"files": {set id: file body}, "review": {...}, "stats": {...}} from in-memory data."""
+          ygo_products: list[dict], held: Mapping[int, str] = {}, reserved: Container[str] = frozenset()) -> dict:
+    """{"files": {set id: file body}, "review": {...}, "stats": {...}} from in-memory data. ``held`` and ``reserved``
+    come from the sealed ledger (see assign_ids)."""
     set_of_group = {gid: s["id"] for s in sets for gid in s.get("tcgplayerGroupIds", [])}
     group_names = {g["groupId"]: g["name"] for g in groups}
     records, no_set, accessories = [], [], 0
@@ -290,7 +299,7 @@ def build(groups: list[dict], products: dict[int, list[tcgcsv.Product]], sets: l
                 records.append({"productId": prod.product_id, "groupId": gid, "set": set_of_group[gid], "category": cat,
                                 "name": prod.name, "tag": edition_tag(prod.name), "url": prod.url,
                                 "releasedOn": prod.released_on})
-    assign_ids(records)
+    assign_ids(records, held, reserved)
     ctx = Context(records, sets, files)
     for r in records:
         r["contents"], r["status"] = rule_contents(r, ctx)
@@ -327,7 +336,11 @@ def main() -> None:
     groups = tcgcsv.groups(CACHE)
     products = {g["groupId"]: tcgcsv.products(g["groupId"], CACHE) for g in groups}
     ygo = json.loads(YGOJSON.read_text(encoding="utf-8")) if YGOJSON.exists() else []
-    out = build(groups, products, ygjson.load_sets(), ygjson.load_cards(), ygo)
+    ledger = ids.load_ledger()
+    held: dict[int, str] = {}
+    for slug, entry in sorted(ledger["sealed"].items()):
+        held.setdefault(entry["tcgplayerProductId"], slug)
+    out = build(groups, products, ygjson.load_sets(), ygjson.load_cards(), ygo, held, ids.reserved(ledger, "sealed"))
     ygjson.SEALED.mkdir(parents=True, exist_ok=True)
     for stale in ygjson.SEALED.glob("*.json"):
         stale.unlink()
