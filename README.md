@@ -43,8 +43,9 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 ## Layout
 
 - `sets/sets.json` lists every set, sorted by id. A set has a `type`, and may have a `series`, a `parent` and an
-  `era`. It lists the `editions` it was printed in, the TCGplayer groups that sell it (`tcgplayerGroupIds`), and
-  `identifiers` for YGOJSON, Yugipedia and Konami's card database. `source` is `ygoprodeck` for a set YGOPRODeck lists
+  `era`. It lists the `editions` it was printed in, the TCGplayer groups that sell it (`tcgplayerGroupIds`: each group
+  is on the one set its latest TCGCSV import matched it to), and `identifiers` for YGOJSON, Yugipedia and Konami's
+  card database. `source` is `ygoprodeck` for a set YGOPRODeck lists
   and `tcgplayer` for a set minted for a TCGplayer group YGOPRODeck lacks, such as `Speed Duel: Battle City Finals`.
 - `sets/eras.json` holds the seven eras and their date windows.
 - `data/cards/<bucket>.json` holds the cards, bucketed by the millions of the card id (`89631139` lives in

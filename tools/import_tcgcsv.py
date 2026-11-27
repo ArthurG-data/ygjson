@@ -6,12 +6,13 @@ Reads sets/sets.json and data/cards/*.json (written by import_ygoprodeck and ref
 import_yugipedia), .cache/tcgcsv, and mappings/tcgplayer_groups.json ({groupId: {"set": id, "why": evidence}}), and
 rewrites the first two in place, adding only:
 
-  sets    tcgplayerGroupIds (union), editions (union with the price subtypes of the set's singles: 1st Edition is first,
-          Unlimited unlimited, Limited limited), and one new set for each "(2020 Date Reprint)" or "(2020 Reprint)"
-          group (id "<parent id>-2020-reprint", source tcgplayer, the parent's code, type and era, and the editions its
-          own group's singles are priced in, else the parent's as this run leaves them). A set
-          this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a free one that the
-          ledger does not hold.
+  sets    tcgplayerGroupIds (each group on the one set this run matched or minted for it, and taken off any other an
+          earlier run gave it, unless the input lacks its products), editions (union with the price subtypes of the
+          set's singles: 1st Edition is first, Unlimited unlimited, Limited limited), and one new set for each
+          "(2020 Date Reprint)" or "(2020 Reprint)" group (id "<parent id>-2020-reprint", source tcgplayer, the parent's
+          code, type and era, and the editions its own group's singles are priced in, else the parent's as this run
+          leaves them). A set this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a
+          free one that the ledger does not hold. A reprint set left with no group goes, with its prints.
   prints  identifiers.tcgplayerProductIds, tcgplayer {name, match}, editions (when a print's own products are priced
           in fewer editions than its set), and the prints of a reprint set (copies of the parent's prints that the
           group's singles name). A print whose YGOPRODeck rarity was unknown takes TCGplayer's.
@@ -327,13 +328,25 @@ def _product_ids(p: dict) -> list[int]:
     return p.get("identifiers", {}).get("tcgplayerProductIds", [])
 
 
+def _complete(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> bool:
+    """Whether the input holds the products of every listed group."""
+    return all(g["groupId"] in products for g in groups)
+
+
 def _undecided(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> Callable[[int], bool]:
     """Whether this run cannot decide a product an earlier run put on a print. One it lists it decides; one it does not
     is gone from TCGCSV, unless a listed group's products are missing from the input, which leaves no telling whose it
     was."""
     listed = {prod.product_id for ps in products.values() for prod in ps}
-    complete = all(g["groupId"] in products for g in groups)
+    complete = _complete(groups, products)
     return lambda product_id: product_id not in listed and not complete
+
+
+def _undecided_group(groups: list[dict], products: dict[int, list[tcgcsv.Product]]) -> Callable[[int], bool]:
+    """Whether this run cannot decide the set of a group an earlier run put on a set, by the rule of _undecided: its
+    products are missing from the input, and so are a listed group's (its own, or one whose products would say)."""
+    complete = _complete(groups, products)
+    return lambda group_id: group_id not in products and not complete
 
 
 def _remove_minted(sets: list[dict], files: dict[str, dict], undecided: Callable[[int], bool]) -> None:
@@ -375,6 +388,18 @@ def _drop_empty_minted_sets(sets: list[dict], files: dict[str, dict]) -> list[di
     return [s for s in sets if s["source"] != SOURCE or "parent" in s or s["id"] in used]
 
 
+def _drop_reprint_sets_without_a_group(sets: list[dict], files: dict[str, dict]) -> list[dict]:
+    """A reprint set exists for its group. One left with none (TCGCSV no longer lists it, or a set now has its name)
+    goes with the prints copied into it, unless one of them holds a product."""
+    priced = {p["set"] for body in files.values() for card in body["cards"] for p in card["prints"] if _product_ids(p)}
+    gone = {s["id"] for s in sets
+            if s["source"] == SOURCE and "parent" in s and not s.get("tcgplayerGroupIds") and s["id"] not in priced}
+    for body in files.values():
+        for card in body["cards"]:
+            card["prints"] = [p for p in card["prints"] if p["set"] not in gone]
+    return [s for s in sets if s["id"] not in gone]
+
+
 def _edition_list(editions) -> list[str]:
     return [e for e in EDITION_ORDER if e in editions]
 
@@ -404,6 +429,7 @@ class Importer:
         # reprint set id -> (its group, its parent, the editions it came in with)
         self.reprint_of: dict[str, tuple[int, str, list[str] | None]] = {}
         self.undecided = _undecided(groups, products)
+        self.undecided_group = _undecided_group(groups, products)
         # Only the products that would stay on the base print: a refused product, or one naming a colour or art, shares
         # nothing with a treatment there.
         # {(number, rarity): [(product id, group id)]}; whether one is a neighbour depends on the set, see `_shares_number`.
@@ -467,10 +493,22 @@ class Importer:
             self.mint_prints(gid, parent_id, minted["id"])
         for gid, candidates in found["children"].items():
             self.mint_prints(gid, self.best_parent(gid, candidates), self.set_of_group[gid])
-        for gid, set_id in self.set_of_group.items():
-            s = self.sets[set_id]
-            s["tcgplayerGroupIds"] = sorted(set(s.get("tcgplayerGroupIds", [])) | {gid})
+        self._place_groups()
         return found["unmatched"]
+
+    def _place_groups(self) -> None:
+        """Put each group on the one set this run matched it to, and take it off every other set an earlier run gave it.
+        A group this run cannot decide (see _undecided_group) stays where it is."""
+        held = {gid for s in self.sets.values() for gid in s.get("tcgplayerGroupIds", [])}
+        for s in self.sets.values():
+            kept = [gid for gid in s.get("tcgplayerGroupIds", []) if self.undecided_group(gid)]
+            s.pop("tcgplayerGroupIds", None)
+            if kept:
+                s["tcgplayerGroupIds"] = kept
+        for gid, set_id in self.set_of_group.items():
+            if not (self.undecided_group(gid) and gid in held):
+                s = self.sets[set_id]
+                s["tcgplayerGroupIds"] = sorted(set(s.get("tcgplayerGroupIds", [])) | {gid})
 
     def best_parent(self, gid: int, candidates: list[str]) -> str:
         """The candidate set that holds the most of the group's numbers; the first on a tie."""
@@ -854,7 +892,8 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
              "rekeyed": imp.rekeyed, "minted": imp.minted, "mintedPrints": imp.minted_prints,
              "mintedVariants": imp.minted_variants, "cardsWithAliases": cards_with_aliases,
              **{k: len(v) for k, v in review.items()}}
-    kept_sets = _drop_empty_minted_sets(list(imp.sets.values()), imp.catalog.files)
+    kept_sets = _drop_empty_minted_sets(_drop_reprint_sets_without_a_group(list(imp.sets.values()), imp.catalog.files),
+                                        imp.catalog.files)
     return {"sets": sorted(kept_sets, key=lambda s: s["id"]), "files": imp.catalog.files, "review": review,
             "stats": stats}
 

@@ -241,6 +241,64 @@ def test_a_childs_editions_come_from_its_own_group_and_not_the_parents():
     assert out["sets_by_id"]["doc-25"]["tcgplayerGroupIds"] == [2] and out["sets_by_id"]["doc"]["tcgplayerGroupIds"] == [1]
 
 
+def test_a_group_this_run_matches_elsewhere_leaves_the_set_an_earlier_run_gave_it():
+    # An earlier run put group 5 on "old"; today a set has the group's exact name, and group 6 is pinned by the mapping.
+    sets = [mkset("old", "Old Pack", "OLD", tcgplayerGroupIds=[5, 6]), mkset("sdf", "Speed Duel: Finals", "SBC2"),
+            mkset("pin", "Pinned Pack", "PIN")]
+    groups = [mkgroup(5, "Speed Duel: Finals", "SBC2"), mkgroup(6, "Nothing Alike", "XYZ")]
+    mapping = {"6": {"set": "pin", "why": "x"}}
+    out = go(groups, {5: [], 6: []}, {}, sets, [], mapping)
+    assert {s["id"]: s.get("tcgplayerGroupIds") for s in out["sets"]} == {"old": None, "sdf": [5], "pin": [6]}
+    assert ygjson.validate(out["sets"], ERAS, out["files"], {"archetypes": []}) == []
+    again = imp.run(groups, {5: [], 6: []}, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), mapping)
+    assert again["sets"] == out["sets"]
+
+
+def test_a_group_whose_products_are_missing_keeps_its_set_and_one_tcgcsv_no_longer_lists_leaves_when_all_are_there():
+    # Group 2 is listed, but its products are not in the input; group 3 is no longer listed.
+    sets = [mkset("old", "Old Pack", "OLD", tcgplayerGroupIds=[2]), mkset("new", "New Pack", "NEW"),
+            mkset("gone", "Gone Pack", "GON", tcgplayerGroupIds=[3]), mkset("one", "One Pack", "ONE")]
+    groups = [mkgroup(1, "One Pack", "ONE"), mkgroup(2, "New Pack", "NEW")]
+    partial = go(groups, {1: []}, {}, sets)
+    assert {s["id"]: s.get("tcgplayerGroupIds") for s in partial["sets"]} == {"old": [2], "new": None, "gone": [3],
+                                                                           "one": [1]}
+    complete = go(groups, {1: [], 2: []}, {}, sets)
+    assert {s["id"]: s.get("tcgplayerGroupIds") for s in complete["sets"]} == {"old": None, "new": [2], "gone": None,
+                                                                            "one": [1]}
+
+
+def test_a_set_tcgplayer_minted_for_a_group_that_now_matches_a_set_leaves():
+    card = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])
+    group = mkgroup(9, "Speed Duel: Finals", "SBC2")
+    products = {9: [single(9, "Alpha", "SBC2-EN001", "Rare", 7)]}
+    out = go([group], products, {}, [LOB], [card])
+    assert out["sets_by_id"]["speed-duel-finals"]["tcgplayerGroupIds"] == [9]
+    # YGOPRODeck now lists the set and the print, under a slug of its own.
+    sets = [*copy.deepcopy(out["sets"]), mkset("sdf", "Speed Duel: Finals", "SBC2")]
+    files = copy.deepcopy(out["files"])
+    files["000"]["cards"][0]["prints"].append(mkprint("sdf", "100", "SBC2-EN001", "rare"))
+    again = imp.run([group], products, {}, sets, files, {})
+    assert {s["id"]: s.get("tcgplayerGroupIds") for s in again["sets"]} == {"lob": None, "sdf": [9]}
+    prints = {p["id"]: p for p in again["files"]["000"]["cards"][0]["prints"]}
+    assert set(prints) == {"lob:100:LOB-EN001:rare", "sdf:100:SBC2-EN001:rare"}
+    assert prints["sdf:100:SBC2-EN001:rare"]["identifiers"]["tcgplayerProductIds"] == [7]
+
+
+def test_a_reprint_set_whose_group_tcgcsv_no_longer_lists_leaves_with_its_prints():
+    parent = mkset("ret", "Retro Pack", "RP01", tcgplayerGroupIds=[1])
+    reprint = mkset("ret-2020-reprint", "Retro Pack (2020 Date Reprint)", "RP01", source="tcgplayer", parent="ret",
+                    tcgplayerGroupIds=[2])
+    card = mkcard("100", "Alpha", [mkprint("ret", "100", "RP01-EN001", "rare"),
+                                   mkprint("ret-2020-reprint", "100", "RP01-EN001", "rare")])
+    groups = [mkgroup(1, "Retro Pack", "RP01")]
+    out = go(groups, {1: []}, {}, [parent, reprint], [card])
+    assert [s["id"] for s in out["sets"]] == ["ret"]
+    assert [p["id"] for p in out["cards"]["100"]["prints"]] == ["ret:100:RP01-EN001:rare"]
+    # While a listed group's products are missing, nothing says the group is gone.
+    kept = go([*groups, mkgroup(3, "Other")], {1: []}, {}, [parent, reprint], [card])
+    assert [s["id"] for s in kept["sets"]] == ["ret", "ret-2020-reprint"] and len(kept["cards"]["100"]["prints"]) == 2
+
+
 # --- singles ----------------------------------------------------------------------------------------------------
 
 LOB = mkset("lob", "Legend of Blue Eyes", "LOB", **{"tcgplayerGroupIds": []})
