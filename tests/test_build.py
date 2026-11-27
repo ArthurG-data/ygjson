@@ -1,4 +1,6 @@
+import copy
 import json
+import re
 
 import pytest
 
@@ -24,8 +26,8 @@ def data(monkeypatch):
 
 def test_without_a_cache_meta_has_no_sources(data, tmp_path):
     docs = build.build("0.0.0-dev", "2026-10-28", tmp_path)
-    assert set(docs) == {"AllSets", "AllCards", "AllPrintings", "AllArchetypes", "AllProducts", "Legality"}
-    assert all(d["meta"] == {"version": "0.0.0-dev", "date": "2026-10-28"} for d in docs.values())
+    assert set(docs) == {"AllSets", "AllCards", "AllPrintings", "AllArchetypes", "AllProducts", "Legality", "Ids"}
+    assert all(d["meta"] == {"version": "0.0.0-dev", "date": "2026-10-28", "idsVersion": 1} for d in docs.values())
 
 
 def test_every_file_shares_one_meta_and_the_documented_keys(data, tmp_path):
@@ -65,3 +67,40 @@ def test_data_the_ledger_does_not_match_is_refused(data, monkeypatch, tmp_path):
     with pytest.raises(SystemExit) as e:
         build.build("0.1.0", "2026-10-28", tmp_path)
     assert "refusing to build" in str(e.value) and "card '46986414': no live ledger entry" in str(e.value)
+
+
+PRINTING_ID = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}:en:(first|unlimited|limited)$")
+
+
+def test_release_printings_are_keyed_by_uuid(data, tmp_path):
+    docs = build.build("0.1.0", "2026-10-28", tmp_path)
+    printings = docs["AllPrintings"]["data"]
+    assert len(printings) == 3 and all(PRINTING_ID.match(k) and k == r["id"] for k, r in printings.items())
+    by_uuid = {e["id"]: e["key"] for e in data["prints"].values()}
+    for r in printings.values():
+        assert r["printKey"] == by_uuid[r["print"]]
+        assert r["key"] == f"{r['printKey']}:en:{r['edition']}"  # the old readable id
+        assert r["id"] == f"{r['print']}:en:{r['edition']}"
+    assert set(docs["AllCards"]["data"]["46986414"]["prints"]) == set(by_uuid)
+
+
+def test_ids_json_ships_the_whole_ledger(data, tmp_path):
+    docs = build.build("0.1.0", "2026-10-28", tmp_path)
+    assert docs["Ids"]["data"] == data
+    assert set(docs["Ids"]["data"]) == set(ids.KINDS)
+
+
+def test_meta_carries_ids_version(data, tmp_path):
+    docs = build.build("0.1.0", "2026-10-28", tmp_path)
+    assert all(d["meta"]["idsVersion"] == 1 for d in docs.values())
+
+
+def test_sealed_contents_point_at_print_uuids(data, monkeypatch, tmp_path):
+    key = next(iter(data["prints"].values()))["key"]
+    sealed = copy.deepcopy(SEALED)
+    sealed[next(iter(sealed))]["products"][0]["contents"]["cards"] = [{"print": key, "count": 1}]
+    monkeypatch.setattr(ygjson, "load_sealed", lambda: sealed)
+    ledger = ids.run({k: {} for k in ids.KINDS}, SETS, CARDS, ARCHETYPES, sealed, ({}, {}), {})[0]
+    monkeypatch.setattr(ids, "load_ledger", lambda: ledger)
+    item = build.build("0.1.0", "2026-10-28", tmp_path)["AllProducts"]["data"]["lob-booster-pack"]["contents"]["cards"][0]
+    assert item["print"] == next(e["id"] for e in ledger["prints"].values() if e["key"] == key)

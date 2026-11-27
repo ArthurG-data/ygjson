@@ -294,3 +294,38 @@ def test_flatten_archetype_members_and_products():
     assert out["archetypes"]["dark-magician"]["members"] == ["4007", "46986414"]
     assert out["products"]["lob-booster-pack"]["set"] == SET
     assert ygjson.flatten(SETS, CARDS, ARCHETYPES)["products"] == {}
+
+
+def _ledger_for(sealed=SEALED, cards=CARDS):
+    import ids
+    return ids.run({k: {} for k in ids.KINDS}, SETS, cards, ARCHETYPES, sealed, ({}, {}), {})[0]
+
+
+def test_flatten_with_a_ledger_uses_print_uuids():
+    before = copy.deepcopy(CARDS)
+    ledger = _ledger_for()
+    uuids = {e["key"]: e["id"] for e in ledger["prints"].values()}
+    out = ygjson.flatten(SETS, CARDS, ARCHETYPES, SEALED, ledger=ledger)
+    assert CARDS == before
+    assert out["cards"]["46986414"]["prints"] == [uuids[PRINT_A], uuids[PRINT_B]]
+    pid = f"{uuids[PRINT_A]}:en:first"
+    assert sorted(out["printings"]) == sorted([
+        pid, f"{uuids[PRINT_A]}:en:unlimited", f"{uuids[PRINT_B]}:en:unlimited"])
+    rec = out["printings"][pid]
+    assert rec["id"] == pid and rec["print"] == uuids[PRINT_A]
+    assert rec["key"] == f"{PRINT_A}:en:first" and rec["printKey"] == PRINT_A
+    old = ygjson.flatten(SETS, CARDS, ARCHETYPES, SEALED)["printings"][f"{PRINT_A}:en:first"]
+    assert {k: v for k, v in rec.items() if k not in ("id", "key", "print", "printKey")} == \
+        {k: v for k, v in old.items() if k not in ("id", "print")}
+
+
+def test_flatten_sealed_contents_point_at_print_uuids():
+    sealed = copy.deepcopy(SEALED)
+    sealed[SET]["products"][0]["contents"]["cards"] = [{"print": PRINT_A, "count": 1}]
+    before = copy.deepcopy(sealed)
+    ledger = _ledger_for(sealed)
+    out = ygjson.flatten(SETS, CARDS, ARCHETYPES, sealed, ledger=ledger)
+    assert sealed == before
+    got = out["products"]["lob-booster-pack"]["contents"]["cards"]
+    assert got == [{"print": ledger["prints"][got[0]["print"]]["id"], "count": 1}]
+    assert ledger["prints"][got[0]["print"]]["key"] == PRINT_A

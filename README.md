@@ -13,7 +13,7 @@ and 3,105 legality events. 46,142 prints have a TCGplayer product.
 
 ## Using the data
 
-Each tagged release attaches six files to a GitHub release:
+Each tagged release attaches seven files to a GitHub release:
 
 ```
 https://github.com/ArthurG-data/ygjson/releases/latest/download/AllSets.json
@@ -22,9 +22,10 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/AllPrintings.jso
 https://github.com/ArthurG-data/ygjson/releases/latest/download/AllArchetypes.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/AllProducts.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Legality.json
+https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 ```
 
-Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}}, "data": {...}}`. All six come
+Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}}, "data": {...}}`. All seven come
 from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` names the
 snapshot each source was last imported from: YGOPRODeck's `database_version`, YGOJSON's `increment` and the latest
 `modifiedOn` among TCGCSV's groups. A build made without the caches leaves `sources` out.
@@ -36,6 +37,7 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 | `AllPrintings.json` | printing id (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`) | set, number, region, rarity and its tier, edition, finish, TCGplayer product ids |
 | `AllArchetypes.json` | archetype slug (`blue-eyes`) | name, names by language, whether Konami calls it an archetype, and the ids of its member cards |
 | `AllProducts.json` | sealed product id (`legend-of-blue-eyes-white-dragon-booster-box`) | category, set, TCGplayer product id, release date, contents and the sources that state them |
+| `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
 | `Legality.json` | `formats`, `events` | the four formats and every change of a card's status in them |
 
 ## Layout
@@ -54,7 +56,7 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
   infobox to a set type. `tcgplayer_groups.json` ties a TCGplayer group to a set where the automatic match fails.
   `ygoprodeck_set_aliases.json` names a YGOPRODeck set that is another set under a second name: the alias is not
   written and its prints go to the owner (`WCS 2025 Limited Pack` is `Limited Pack World Championship 2025`). Each
-  entry cites its evidence.
+  entry cites its evidence. `ids.json` holds the hand decisions on the id ledger (see [Ids](#ids)).
 - `review/` lists what the tools could not decide, file by file (see [Review files](#review-files)).
 - `schema/` holds a JSON Schema (draft 2020-12) for sets, eras, cards, archetypes, sealed products and legality events.
   None allows a property it does not name.
@@ -70,11 +72,10 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 - **Card id.** YGOPRODeck's card id, as a string. `passcode` is the same number when it is below 100,000,000, which is
   the 8-digit number printed on the card. YGOPRODeck gives cards that have no passcode an id above that line, and
   those cards have no `passcode`.
-- **Print id.** `<set id>:<card id>:<set number or empty>:<rarity code>[:<variant>]`. The same card in the same set at another
-  rarity is another print. `legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare` is the Ultra Rare Blue-Eyes
-  White Dragon in Legend of Blue Eyes White Dragon.
-- **Printing id.** `<print id>:<language>:<edition>`, where the edition is `first`, `unlimited` or `limited`. The
-  printing above in first edition is `legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`.
+- **Print key.** `<set id>:<card id>:<set number or empty>:<rarity code>[:<variant>]`. The same card in the same set at
+  another rarity is another print. `legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare` is the Ultra Rare
+  Blue-Eyes White Dragon in Legend of Blue Eyes White Dragon. The data files use the key as the print's `id`.
+- **Printing key.** `<print key>:<language>:<edition>`, where the edition is `first`, `unlimited` or `limited`.
   Printings are built from prints, never stored in the data files.
 - **Archetype slug.** The slug of the name, deduplicated the same way as sets. Five pairs differ only in case or
   punctuation: `D.D.` (`d-d`) and `D/D` (`d-d-2`), `Roid` and `roid` (`roid-2`), `Sphinx` and `sphinx`
@@ -83,7 +84,31 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 - **Sealed product id.** The slug of the TCGplayer product name without its edition tag, with `-2`, `-3` on a
   collision. The 1st Edition and Unlimited products of one box share a slug, so the first edition keeps it.
 
-A rebuild from the same sources gives the same ids.
+#### Permanent ids
+
+A key is readable and may change: a rename of a set, a new rarity code or a corrected number moves it. The release
+files name a print and a printing by a permanent id that never changes. `ids/` holds the ledger, one file per kind,
+and `Ids.json` ships it.
+
+- A print's `id` is a UUID. A printing's `id` is `<print id>:<language>:<edition>`, so it carries the print's UUID.
+  `AllPrintings.json` is keyed by it. Each printing also holds `key` (its readable id), `print` (the print's UUID)
+  and `printKey` (the print's readable key). `AllCards.json` lists a card's prints, and a sealed product's `cards`
+  name prints, by UUID.
+- An entry in `Ids.json` is `{"id", "key", "status", ...}`. `key` is the readable key the id has now. To find the id
+  of a key, look it up in `data.prints` by `key`.
+- An old key or id still resolves. A print's `formerKeys` lists the keys it had before, and a printing's `formerIds`
+  the readable ids it had. Look an old print key up in `data.prints[*].formerKeys`, an old printing id in
+  `data.printings[*].formerIds`.
+- `status` is `live` for an id the data still has, and `retired` for one it no longer has. A retired id is never
+  reused or removed. Its `successors` lists the ids that replaced it, and is empty when nothing did.
+- Cards, sets, archetypes and sealed products keep their ids and have entries too, so `Ids.json` lists every id the
+  data has ever used.
+- `meta.idsVersion` is the version of this layout. It is `1`.
+
+`uv run python tools/ids.py` reconciles the data with the ledger after the imports. `mappings/ids.json` holds the
+decisions a person makes where it cannot: which retired print a new key continues (`prints`) and which prints
+replace a retired id (`successors`). Each cites its evidence. `review/ids.json` lists what it retired or renamed.
+
 
 ## Sets
 
@@ -340,6 +365,7 @@ today. `speed_duel` needs `.cache/ygojson` and is skipped without it.
 | `review/yugipedia.json` | sets with no page or infobox, infobox types the mapping lacks, pages shared by several sets, ambiguous parents |
 | `review/tcgplayer-2.json` | TCGplayer products no rule could tie to a print (`unmatched`), products that would share a print (`conflicts`), groups with no set (`groups`), and groups matched through an alias (`groupAliases`) |
 | `review/sealed.json` | sealed products in a group with no set (`noSet`), products with category `other`, and YGOJSON products no TCGplayer product matched (`ygojsonUnmatched`) |
+| `review/ids.json` | prints the ledger retired, cards it retired, and sets and archetypes it renamed, for a person to settle in `mappings/ids.json` |
 
 `uv run python tools/coverage.py` reports where every TCGplayer product in category 2 ended up: on a print, on a
 sealed product, skipped as an accessory, in a group published after today, or in review. `--strict` exits 1 if any
@@ -354,10 +380,11 @@ uv run python tools/import_ygojson.py      # editions, ids, names and series
 uv run python tools/import_yugipedia.py    # set types, series, parents and database ids
 uv run python tools/import_tcgcsv.py       # TCGplayer groups and products
 uv run python tools/import_sealed.py       # sealed products
+uv run python tools/ids.py                 # reconcile the id ledger; exits 3 after a rename, then run the imports again
 uv run python tools/coverage.py [--strict] # where every TCGplayer product went
 uv run python tools/legality.py            # ban list events
 uv run python tools/validate.py [--online]
-uv run python tools/build.py --version 0.2.0   # dist/AllSets, AllCards, AllPrintings, AllArchetypes, AllProducts, Legality
+uv run python tools/build.py --version 0.2.0   # dist/AllSets, AllCards, AllPrintings, AllArchetypes, AllProducts, Legality, Ids
 ```
 
 The order matters: each importer keeps what the earlier ones wrote and adds its own fields, so a rerun in order
