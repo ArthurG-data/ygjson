@@ -654,9 +654,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:5043010:MGED-EN141:rare",
      "number": "MGED-EN141",
      "rarity": "rare",
@@ -1621,7 +1618,11 @@
    "id": "5121528",
    "identifiers": {
     "konamiId": 22082,
-    "ygoprodeckId": 5121528
+    "ygojsonId": "6b0027d2-79ce-44e7-8283-13cf670114c0",
+    "ygoprodeckId": 5121528,
+    "yugipediaIds": [
+     1153170
+    ]
    },
    "images": [
     {
@@ -1637,7 +1638,8 @@
    "monsterType": "Machine",
    "name": "B.E.S. Derringer Core",
    "names": {
-    "en": "B.E.S. Derringer Core"
+    "en": "B.E.S. Derringer Core",
+    "ja": "巨大戦艦 デリンジャー・コア"
    },
    "ocgDate": "2025-10-25",
    "passcode": 5121528,
@@ -6892,9 +6894,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:5373478:LEDD-ENB02:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8241,9 +8240,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:5464695:IOC-EN061:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9305,9 +9301,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:5556499:LEDD-ENB11:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10958,7 +10951,7 @@
      },
      "number": "PTDN-ENSE2",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "phantom-darkness-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -11295,9 +11288,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:5650082:LEDD-ENB22:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14512,7 +14502,11 @@
    "id": "5914858",
    "identifiers": {
     "konamiId": 22142,
-    "ygoprodeckId": 5914858
+    "ygojsonId": "c8322156-8361-4053-bfd0-f6383f81d13d",
+    "ygoprodeckId": 5914858,
+    "yugipediaIds": [
+     1152146
+    ]
    },
    "images": [
     {
@@ -14528,7 +14522,8 @@
    "monsterType": "Fiend",
    "name": "Junora the Power Patron of Tuning",
    "names": {
-    "en": "Junora the Power Patron of Tuning"
+    "en": "Junora the Power Patron of Tuning",
+    "ja": "調獄神ジュノーラ"
    },
    "ocgDate": "2025-10-25",
    "passcode": 5914858,
@@ -15732,7 +15727,7 @@
      },
      "number": "TSHD-ENSP1",
      "rarity": "ultra_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "the-shining-darkness-sneak-peek-participation-card",
      "tcgplayer": {
       "match": "number-other-set",
