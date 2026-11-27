@@ -360,8 +360,11 @@ class Importer:
         self.owner: dict[int, dict] = {}  # product id -> the print that holds it
         # Only the products that would stay on the base print: a refused product, or one naming a colour or art, shares
         # nothing with a treatment there.
-        self.number_rarity = collections.Counter((prod.number, rarities.canonical(prod.rarity)) for prod in self.by_id.values()
-                                                 if prod.is_single and not unplaceable_tags(prod) and not _names_colour_or_art(prod))
+        # {(number, rarity): [(product id, group id)]}; whether one is a neighbour depends on the set, see `_shares_number`.
+        self.number_rarity: dict[tuple[str, str], list[tuple[int, int]]] = collections.defaultdict(list)
+        for prod in self.by_id.values():
+            if prod.is_single and not unplaceable_tags(prod) and not _names_colour_or_art(prod):
+                self.number_rarity[(prod.number, rarities.canonical(prod.rarity))].append((prod.product_id, prod.group_id))
         for body in files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
@@ -518,7 +521,7 @@ class Importer:
                 self._conflict(prod, p, held, "the print holds a product of another name or rarity")
                 return False
         variant = variant_of(prod)
-        if variant and not p.get("variant") and (_names_colour_or_art(prod) or self.number_rarity[(prod.number, mine[1])] > 1):
+        if variant and not p.get("variant") and (_names_colour_or_art(prod) or self._shares_number(prod, mine[1], p["set"])):
             p = self._variant_print(card, p, variant)
         previous = self.owner.get(prod.product_id)
         if previous is not None and previous is not p:
@@ -614,6 +617,13 @@ class Importer:
             self.group_rules[MINTED] += 1
         self.set_of_group[gid] = old["id"]
         return old["id"]
+
+    def _shares_number(self, prod: tcgcsv.Product, rarity: str, set_id: str) -> bool:
+        """Whether another plain product of `set_id`, the set the product is landing in, has its number and rarity,
+        which makes it a treatment. A product counts for the set its group matched, and any product of its own group
+        counts whatever that is. Another group with no set yet counts for none: nothing says where it lands."""
+        return any(pid != prod.product_id and (gid == prod.group_id or self.set_of_group.get(gid) == set_id)
+                   for pid, gid in self.number_rarity[(prod.number, rarity)])
 
     def _group_editions(self, gid: int, kind: str) -> list[str]:
         """The editions TCGplayer prices a group's singles in. With no prices they are a guess: a promo is limited."""

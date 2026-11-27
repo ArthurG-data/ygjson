@@ -559,6 +559,28 @@ def test_a_reissue_at_another_rarity_gets_its_own_print():
     assert prints_of(out, "100")["lob:100:LOB-EN002:ultra_rare"]["identifiers"]["tcgplayerProductIds"] == [7]
 
 
+def test_a_plain_product_in_another_set_does_not_make_a_treatment_shared():
+    prints = [mkprint("lob", "100", "LOB-EN001", "ultra_rare"), mkprint("lob-25", "100", "LOB-EN001", "ultra_rare")]
+    w = world(prints, extra_sets=[mkset("lob-25", "Legend of Blue Eyes 25th", "LOB25")])
+    w["groups"].append(mkgroup(2, "Legend of Blue Eyes 25th", "LOB25"))
+    products = {1: [single(1, "Alpha (25th Anniversary Edition)", "LOB-EN001", "Ultra Rare", 7)],
+                2: [single(2, "Alpha", "LOB-EN001", "Ultra Rare", 8)]}
+    out = go(products=products, **w)
+    found = prints_of(out, "100")
+    assert found["lob:100:LOB-EN001:ultra_rare"]["identifiers"]["tcgplayerProductIds"] == [7]
+    assert found["lob-25:100:LOB-EN001:ultra_rare"]["identifiers"]["tcgplayerProductIds"] == [8]
+
+
+def test_a_treatment_landing_in_a_set_from_another_group_is_a_variant_of_that_sets_plain_print():
+    w = world([mkprint("lob", "100", "LOB-EN001", "ultra_rare")], extra_sets=[mkset("lob-25", "Legend of Blue Eyes 25th", "LOB25")])
+    w["groups"].append(mkgroup(2, "Legend of Blue Eyes 25th", "LOB25"))
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Ultra Rare", 7)],
+                2: [single(2, "Alpha (25th Anniversary Edition)", "LOB-EN001", "Ultra Rare", 8)]}
+    prints = prints_of(go(products=products, **w), "100")
+    assert prints["lob:100:LOB-EN001:ultra_rare"]["identifiers"]["tcgplayerProductIds"] == [7]
+    assert prints["lob:100:LOB-EN001:ultra_rare:25th-anniversary-edition"]["identifiers"]["tcgplayerProductIds"] == [8]
+
+
 def test_a_colour_alone_under_its_number_is_still_a_variant():
     w = world([mkprint("lob", "100", "LOB-EN001", "common")])
     out = go(products={1: [single(1, "Alpha (Red)", "LOB-EN001", "Common", 7)]}, **w)
