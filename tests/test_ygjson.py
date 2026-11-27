@@ -100,7 +100,9 @@ def test_dedupe_is_independent_of_input_order():
 
 
 @pytest.mark.parametrize("number, region", [("LOB-EN001", "EN"), ("LOB-001", None), ("LAVD-ENS05", "EN"),
-                                             ("TKN3-EN005", "EN"), ("SDK-E001", "E"), ("RA01-PT012", "PT"),
+                                             ("TKN3-EN005", "EN"),
+                                             ("TDIL-ENSE3", "EN"), ("CYHO-ENSP1", "EN"), ("RGBT-ENPP5", "EN"),
+                                             ("SS01-ENAS1", "EN"), ("IOC-SE1", "SE"), ("SDK-E001", "E"), ("RA01-PT012", "PT"),
                                              ("", None), (None, None), ("nohyphen", None)])
 def test_region_of(number, region):
     assert ygjson.region_of(number) == region
