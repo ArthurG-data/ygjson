@@ -4,8 +4,11 @@ Used by the build; see tools/ids.py for the ledger itself.
 """
 from __future__ import annotations
 
-from collections.abc import Iterable, Mapping
+from collections import defaultdict
+from collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass
+
+import ids
 
 
 @dataclass(frozen=True)
@@ -43,3 +46,156 @@ def rekey_card(key: str, card_successor: Mapping[str, str]) -> str:
         return key
     parts[1] = card_successor[parts[1]]
     return ":".join(parts)
+
+
+def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_successor: Mapping[str, str] = {},
+                     hand: Mapping[str, str] = {}) -> tuple[dict[str, dict], dict[str, str], list[dict]]:
+    """Decide the ledger id each current print carries: (new print entries, {current key: id}, review rows).
+
+    A newcomer (a print no live entry has) takes, by the first rule that settles it: 1 the id of a retired entry that
+    had its key, 2 the id of the one orphan (a live entry whose print is gone) that held its TCGplayer product, 3 the
+    one orphan at its (set, card, number), 4 the one orphan at its (card, number, rarity, variant) in another set, 5
+    the retired id `hand` gives it, 6 a new id. Each rule is a pass over what is still unmatched. Orphans left are
+    retired with successors and listed for review. `entries` is not modified.
+    """
+    out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
+    facts = {p.key: p for p in current}
+    carried, orphans = _carry_live(out, facts, card_successor)
+    newcomers = {k: facts[k] for k in sorted(facts) if k not in carried}
+    review: list[dict] = []
+
+    revivable = {i for i, e in out.items() if e["status"] == "retired"}
+    _revive(out, newcomers, revivable, carried, review)
+    _settle(_by_product(newcomers, orphans), newcomers, orphans, carried)
+    _settle(_by_place(newcomers, orphans, lambda f: (f.set, f.card, f.number)), newcomers, orphans, carried)
+    _settle([(k, i) for k, i in _by_place(newcomers, orphans, lambda f: (f.card, f.number, f.rarity, f.variant))
+             if newcomers[k].set != orphans[i].set], newcomers, orphans, carried)
+    _hand(hand, newcomers, revivable, carried, review)
+    taken = set(out)
+    for key in newcomers:
+        carried[key] = ids.mint(key, taken)
+        taken.add(carried[key])
+        out[carried[key]] = {"id": carried[key], "key": key, "formerKeys": [], "status": "live", "successors": [],
+                             "products": []}
+
+    for key, i in carried.items():
+        e = out[i]
+        if e["key"] != key:
+            if e["key"] not in e["formerKeys"]:
+                e["formerKeys"].append(e["key"])
+            e["key"] = key
+        e.update(status="live", successors=[], products=sorted(facts[key].products))
+
+    successors = _successor_index(current, carried)
+    for i, f in sorted(orphans.items()):
+        found = successors[0].get((f.set, f.card, f.number)) or successors[1].get((f.card, f.number)) \
+            or successors[2].get((f.set, f.card, f.rarity, f.variant)) or []
+        out[i].update(status="retired", successors=sorted(set(found)))
+        review.append({"id": i, "key": out[i]["key"], "reason": "retired", "successors": sorted(set(found))})
+
+    return dict(sorted(out.items())), dict(sorted(carried.items())), sorted(review, key=lambda r: (r["id"], r["key"]))
+
+
+def _carry_live(out: dict[str, dict], facts: Mapping[str, PrintFacts],
+                card_successor: Mapping[str, str]) -> tuple[dict[str, str], dict[str, PrintFacts]]:
+    """({current key: id} for live entries still at a current key, {id: facts} of the live entries left: the orphans).
+
+    An entry at the key itself claims the print before one that reaches it through `rekey_card`.
+    """
+    live = [(i, e["key"], rekey_card(e["key"], card_successor)) for i, e in out.items() if e["status"] == "live"]
+    carried: dict[str, str] = {}
+    for i, key, _ in live:
+        if key in facts:
+            carried[key] = i
+    claimed = set(carried.values())
+    orphans: dict[str, PrintFacts] = {}
+    for i, _, rekeyed in live:
+        if i in claimed:
+            continue
+        if rekeyed in facts and rekeyed not in carried:
+            carried[rekeyed] = i
+        else:
+            orphans[i] = parse_key(rekeyed, out[i]["products"])
+    return carried, orphans
+
+
+def _revive(out: dict[str, dict], newcomers: dict[str, PrintFacts], revivable: set[str], carried: dict[str, str],
+            review: list[dict]) -> None:
+    """Rule 1: a newcomer whose key a retired entry had takes that id back; the smallest when several had it."""
+    had: dict[str, list[str]] = defaultdict(list)
+    for i in sorted(revivable):
+        for key in dict.fromkeys([out[i]["key"], *out[i]["formerKeys"]]):
+            had[key].append(i)
+    for key in list(newcomers):
+        candidates = [i for i in had.get(key, []) if i in revivable]
+        if not candidates:
+            continue
+        if len(candidates) > 1:
+            review.append({"id": candidates[0], "key": key, "reason": "ambiguous-revival", "successors": []})
+        carried[key] = candidates[0]
+        revivable.discard(candidates[0])
+        del newcomers[key]
+
+
+def _by_product(newcomers: Mapping[str, PrintFacts], orphans: Mapping[str, PrintFacts]) -> list[tuple[str, str]]:
+    """Rule 2: (newcomer key, orphan id) where only that orphan held one of the products only that newcomer holds."""
+    holders: dict[int, list[str]] = defaultdict(list)
+    for key, f in newcomers.items():
+        for product in f.products:
+            holders[product].append(key)
+    held_by: dict[int, list[str]] = defaultdict(list)
+    for i, f in orphans.items():
+        for product in f.products:
+            held_by[product].append(i)
+    pairs = []
+    for key, f in newcomers.items():
+        held = {i for product in f.products if holders[product] == [key] for i in held_by.get(product, [])}
+        if len(held) == 1:
+            pairs.append((key, held.pop()))
+    return pairs
+
+
+def _by_place(newcomers: Mapping[str, PrintFacts], orphans: Mapping[str, PrintFacts],
+              place: Callable[[PrintFacts], tuple]) -> list[tuple[str, str]]:
+    """Rules 3 and 4: (newcomer key, orphan id) where they are the only newcomer and the only orphan at a place."""
+    new_at: dict[tuple, list[str]] = defaultdict(list)
+    old_at: dict[tuple, list[str]] = defaultdict(list)
+    for key, f in newcomers.items():
+        new_at[place(f)].append(key)
+    for i, f in orphans.items():
+        old_at[place(f)].append(i)
+    return [(keys[0], old_at[at][0]) for at, keys in new_at.items() if len(keys) == 1 and len(old_at.get(at, [])) == 1]
+
+
+def _settle(pairs: list[tuple[str, str]], newcomers: dict[str, PrintFacts], orphans: dict[str, PrintFacts],
+            carried: dict[str, str]) -> None:
+    """Give each newcomer its orphan's id, unless another newcomer of the same pass points at that orphan too."""
+    claims: dict[str, list[str]] = defaultdict(list)
+    for key, i in pairs:
+        claims[i].append(key)
+    for i, keys in sorted(claims.items()):
+        if len(keys) == 1:
+            carried[keys[0]] = i
+            del newcomers[keys[0]], orphans[i]
+
+
+def _hand(hand: Mapping[str, str], newcomers: dict[str, PrintFacts], revivable: set[str], carried: dict[str, str],
+          review: list[dict]) -> None:
+    """Rule 5: the retired id a person gave the newcomer's key; one that is not a retired id is ignored and reviewed."""
+    for key in [k for k in newcomers if k in hand]:
+        if hand[key] in revivable:
+            carried[key] = hand[key]
+            revivable.discard(hand[key])
+            del newcomers[key]
+        else:
+            review.append({"id": hand[key], "key": key, "reason": "bad-hand-decision", "successors": []})
+
+
+def _successor_index(current: list[PrintFacts], carried: Mapping[str, str]) -> tuple[dict[tuple, list[str]], ...]:
+    """Ids of the current prints by (set, card, number), by (card, number) and by (set, card, rarity, variant)."""
+    index: tuple[dict[tuple, list[str]], ...] = (defaultdict(list), defaultdict(list), defaultdict(list))
+    for f in current:
+        places = ((f.set, f.card, f.number), (f.card, f.number), (f.set, f.card, f.rarity, f.variant))
+        for by_place, at in zip(index, places):
+            by_place[at].append(carried[f.key])
+    return index
