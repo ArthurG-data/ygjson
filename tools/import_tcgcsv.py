@@ -28,8 +28,9 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
   3. no set, or the number is not in the group's set: the number is in exactly one other set (the set is named
      differently on TCGplayer), tried with the same rules there        -> number-other-set
   4. no print anywhere has the number: the product's name is exactly one card (its name, or an alias: one the card came
-     with, or a name a product tied to it by number earlier in this run sells it under), and its rarity is known. The
-     print is minted (source tcgplayer), in the group's set, or in a set minted for a group that matched none -> minted
+     with, or a name a product tied to it by number earlier in this run sells it under, never one an earlier run
+     wrote), and its rarity is known. The print is minted (source tcgplayer), in the group's set, or in a set minted
+     for a group that matched none                                     -> minted
 Whatever remains goes to review `unmatched` with the reason. A product lands on one print only. A print holds
 several products only when they are the same card at the same rarity and price different editions; a product that would
 share a print with another card, another rarity, or an edition another product already prices goes to review `conflicts`.
@@ -323,6 +324,22 @@ def _remove_minted(sets: list[dict], files: dict[str, dict]) -> None:
     for body in files.values():
         for card in body["cards"]:
             card["prints"] = [p for p in card["prints"] if p.get("source") != SOURCE]
+
+
+def _drop_own_aliases(files: dict[str, dict], products: dict[int, list[tcgcsv.Product]]) -> None:
+    """Take off each card the aliases an earlier run of this tool wrote, so no alias is read back from its own output:
+    the names of this run's products that sat on the card's prints, tied by number. merge_aliases writes them again for
+    the products that still tie. A minted print's product does not count, because it was minted from a name the card
+    already had (YGOPRODeck's beta name stays for it)."""
+    by_id = {prod.product_id: prod for ps in products.values() for prod in ps}
+    for body in files.values():
+        for card in body["cards"]:
+            sold = {normalise(by_id[i].base_name_and_tags()[0]) for p in card["prints"]
+                    if p.get("tcgplayer", {}).get("match") != MINTED for i in _product_ids(p) if i in by_id}
+            kept = [a for a in card.get("aliases", []) if normalise(a) not in sold]
+            card.pop("aliases", None)
+            if kept:
+                card["aliases"] = kept
 
 
 def _drop_empty_minted_prints(files: dict[str, dict]) -> None:
@@ -769,6 +786,7 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
         reserved: Container[str] = frozenset()) -> dict:
     """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}. ``held`` and ``reserved`` are
     the set ledger's {name: slug} and slugs, for the sets this tool mints."""
+    _drop_own_aliases(files, products)
     _remove_minted(sets, files)
     imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved)
     unmatched_groups = imp.match_groups()

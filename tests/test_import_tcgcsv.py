@@ -375,6 +375,43 @@ def test_a_name_tcgplayer_sells_a_card_under_in_this_run_mints_a_print():
     assert again["sets"] == out["sets"] and again["files"] == out["files"]
 
 
+def test_a_name_an_earlier_run_derived_never_mints_a_print_and_leaves_when_no_product_sells_the_card_under_it():
+    # An earlier run tied product 7 by number and wrote its name as an alias; TCGplayer has since moved it to a number
+    # no print has. Read back, the alias would mint a print for it from the importer's own output.
+    held = mkprint("lob", "100", "LOB-EN001", "rare", identifiers={"tcgplayerProductIds": [7]},
+                   tcgplayer={"name": "Old Alpha", "match": "number+rarity"})
+    w = world([held])
+    w["cards"][0]["aliases"] = ["Old Alpha"]
+    products = {1: [single(1, "Old Alpha", "LOB-EN999", "Rare", 7)]}
+    out = go(products=products, **w)
+    clean = world([mkprint("lob", "100", "LOB-EN001", "rare")])
+    assert out["files"] == go(products=products, **clean)["files"]
+    assert set(prints_of(out, "100")) == {"lob:100:LOB-EN001:rare"} and "aliases" not in out["cards"]["100"]
+    assert [r["productId"] for r in out["review"]["unmatched"]] == [7]
+
+
+def test_a_card_aliased_by_an_earlier_run_ends_as_it_does_from_none():
+    groups, products, sets, card = alias_world()
+    clean = go(groups, products, {}, sets, [card])
+    # As main left it: the alias written, both products on their prints.
+    _, _, _, before = alias_world(aliases=["Synch Blast Wave"], prints=[
+        mkprint("ots22", "100", "OP22-EN021", "common", source="tcgplayer", identifiers={"tcgplayerProductIds": [5]},
+                tcgplayer={"name": "Synch Blast Wave", "match": "minted"})])
+    before["prints"][0] |= {"identifiers": {"tcgplayerProductIds": [9]},
+                            "tcgplayer": {"name": "Synch Blast Wave", "match": "number+rarity"}}
+    assert go(groups, products, {}, sets, [before])["files"] == clean["files"]
+
+
+def test_a_beta_name_alias_mints_the_same_print_on_every_run():
+    card = mkcard("100", "Red-Eyes Black Dragon", [mkprint("lob", "100", "LOB-070", "ultra_rare")])
+    card["aliases"] = ["Red-Eyes B. Dragon"]
+    group = mkgroup(1, "Legend of Blue Eyes", "LOB")
+    products = {1: [single(1, "Red-Eyes B. Dragon", "LOB-999", "Rare", 7)]}
+    out = go([group], products, {}, [LOB], [card])
+    again = imp.run([group], products, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["files"] == out["files"] and "lob:100:LOB-999:rare" in {p["id"] for p in again["files"]["000"]["cards"][0]["prints"]}
+
+
 def test_a_skill_card_product_reads_as_its_card_and_a_promo_group_with_no_prices_is_limited():
     card = mkcard("100", "Sky God Revelation (Skill Card)", [mkprint("lob", "100", "LOB-001", "common")])
     group = mkgroup(9, "Yu-Gi-Oh! Promotional Cards", "PROMO")

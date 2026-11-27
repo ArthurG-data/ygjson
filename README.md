@@ -281,7 +281,8 @@ the same edition, the print keeps the one pricing the most editions, then the ol
 
 **Aliases.** A card's `aliases` are other English names shops sell it under: YGOPRODeck's `beta_name` (`Red-Eyes B.
 Dragon`) and TCGplayer's product name at any of its prints (`Stellarnova Binding`). A name another card has is never an
-alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`.
+alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`. Each run of `import_tcgcsv` derives TCGplayer's names
+afresh from the products it ties by number, so a name it wrote before never mints a print by itself.
 
 2,352 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
