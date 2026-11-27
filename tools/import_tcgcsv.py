@@ -62,6 +62,7 @@ import re
 from collections.abc import Callable, Container, Mapping, Sequence
 from pathlib import Path
 
+import fetch
 import ids
 import rarities
 import tcgcsv
@@ -994,10 +995,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--refresh", action="store_true", help="download TCGCSV again (about 1,300 requests)")
     refresh = parser.parse_args().refresh
-    groups = tcgcsv.groups(CACHE, refresh)
-    products = {g["groupId"]: tcgcsv.products(g["groupId"], CACHE, refresh) for g in groups}
-    check_input(groups, products)
-    prices = {g["groupId"]: tcgcsv.prices(g["groupId"], CACHE, refresh) for g in groups}
+    with fetch.cache_dir(CACHE, refresh) as cache:  # a refresh replaces the cache only once every file has come
+        groups = tcgcsv.groups(cache)
+        products = {g["groupId"]: tcgcsv.products(g["groupId"], cache) for g in groups}
+        check_input(groups, products)
+        prices = {g["groupId"]: tcgcsv.prices(g["groupId"], cache) for g in groups}
     ledger = ids.load_ledger()
     out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping(), ygjson.load_eras(),
               ids.held_names(ledger, "sets"), ids.reserved(ledger, "sets"), load_mapping(PRODUCT_MAPPING))

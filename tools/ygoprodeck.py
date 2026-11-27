@@ -1,17 +1,17 @@
 """YGOPRODeck's v7 API as plain JSON, cached under .cache/ygoprodeck (never committed).
 
-Four endpoints, each fetched once and read from disk afterwards; pass refresh=True (--refresh on the importers) to
-download them again. cardinfo.php?misc=yes is 25 MB: one request returns every card with its prints and images.
+Four endpoints, each fetched once and read from disk afterwards; pass refresh=True to download one again, or fetch
+into fetch.cache_dir(cache, refresh=True) (--refresh on import_ygoprodeck) to replace the four together.
+cardinfo.php?misc=yes is 25 MB: one request returns every card with its prints and images.
 """
 from __future__ import annotations
 
-import json
-import time
-import urllib.request
 from pathlib import Path
 
+import fetch
+
 API = "https://db.ygoprodeck.com/api/v7"
-USER_AGENT = "ygjson/0.1 (+https://github.com/ArthurG-data/ygjson)"
+USER_AGENT = fetch.USER_AGENT
 FETCH_DELAY_S = 0.1
 DEFAULT_CACHE = Path(__file__).resolve().parents[1] / ".cache" / "ygoprodeck"
 
@@ -25,15 +25,10 @@ _ENDPOINTS = {
 
 def _get(filename: str, cache: Path, refresh: bool):
     path = cache / filename
-    if path.exists() and not refresh:
-        return json.loads(path.read_text(encoding="utf-8"))
-    cache.mkdir(parents=True, exist_ok=True)
-    time.sleep(FETCH_DELAY_S)
-    req = urllib.request.Request(_ENDPOINTS[filename], headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        raw = resp.read().decode("utf-8")
-    data = json.loads(raw)  # parse before writing, so a truncated download never lands in the cache
-    path.write_text(raw, encoding="utf-8")
+    if not refresh and (data := fetch.read_json(path)) is not None:
+        return data
+    raw, data = fetch.get_json(_ENDPOINTS[filename], timeout=120, delay=FETCH_DELAY_S)
+    fetch.write_atomic(path, raw)
     return data
 
 

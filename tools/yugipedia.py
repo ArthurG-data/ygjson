@@ -6,7 +6,8 @@ and stored one JSON object per page: `page_<pageid>.json` for a page asked for b
 (the hash keeps titles that differ only in case or punctuation apart; an older `title_<slug>.json` is still read when it
 holds this exact title, or the page a redirect in LEGACY_REDIRECTS leads to). A page that does not exist is cached as a
 marker (`{"missing": true, ...}`), so it is asked for once. A cached file is never fetched again unless refresh=True.
-Requests are one second apart and carry the project's User-Agent, as Yugipedia asks.
+Requests go through fetch.get_json, one second apart, with the project's User-Agent and maxlag=MAXLAG_S, as Yugipedia
+asks; a maxlag reply is asked again after its Retry-After, and any other API error raises fetch.FetchError.
 
 `infobox(wikitext)` parses the first `{{Infobox set ...}}` template into {key: value} with the markup stripped, and
 `parse_date` turns a release date into an ISO date. A date given to the month only is put on the 1st of the month.
@@ -19,21 +20,20 @@ import hashlib
 import html
 import json
 import re
-import time
 import urllib.parse
-import urllib.request
-from collections.abc import Iterable
+from collections.abc import Iterable, Mapping
 from pathlib import Path
+from typing import Any
 
+import fetch
 import ygjson
 
 API = "https://yugipedia.com/api.php"
-USER_AGENT = "ygjson/0.1 (+https://github.com/ArthurG-data/ygjson)"
+USER_AGENT = fetch.USER_AGENT
 FETCH_DELAY_S = 1.0
+MAXLAG_S = 5
 BATCH = 50
 DEFAULT_CACHE = Path(__file__).resolve().parents[1] / ".cache" / "yugipedia"
-
-_last_request = 0.0
 
 # The redirects that an older slug-only cache file holds the target of, for titles today's data asks for. Such a file
 # names only the slug of the title asked for, so a redirect's target is read for its title only when listed here
@@ -45,40 +45,45 @@ LEGACY_REDIRECTS = {
 }
 
 
+def _check(data: Any, headers: Mapping[str, str]) -> None:
+    """Ask again on maxlag; refuse any other API error, or a reply without its query."""
+    error = data.get("error") if isinstance(data, dict) else None
+    if error:
+        code, info = error.get("code"), error.get("info")
+        if code == "maxlag":
+            raise fetch.Retry(f"maxlag: {info}", fetch.retry_after(headers.get("Retry-After")) or float(MAXLAG_S))
+        raise fetch.Refuse(f"MediaWiki error {code}: {info}")
+    if not isinstance(data, dict) or "pages" not in data.get("query", {}):
+        raise fetch.Refuse("the reply holds no query.pages")
+
+
 def _query(params: dict[str, str]) -> dict:
     """One API request, at least FETCH_DELAY_S after the previous one."""
-    global _last_request
-    wait = _last_request + FETCH_DELAY_S - time.monotonic()
-    if wait > 0:
-        time.sleep(wait)
     base = {"action": "query", "prop": "revisions", "rvprop": "content", "rvslots": "main", "format": "json",
-            "formatversion": "2", "redirects": "1"}
+            "formatversion": "2", "redirects": "1", "maxlag": str(MAXLAG_S)}
     url = API + "?" + urllib.parse.urlencode({**base, **params})
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    finally:
-        _last_request = time.monotonic()
+    return fetch.get_json(url, delay=FETCH_DELAY_S, check=_check)[1]
+
+
+def _cached(path: Path) -> bool:
+    """Whether `path` holds a page or a missing marker; a file that is not valid JSON is fetched again."""
+    return isinstance(fetch.read_json(path), dict)
 
 
 def _read(path: Path) -> dict | None:
     """The cached object, or None when it is absent or is a missing-page marker."""
-    if not path.exists():
-        return None
-    page = json.loads(path.read_text(encoding="utf-8"))
-    return None if page.get("missing") else page
+    page = fetch.read_json(path)
+    return None if not isinstance(page, dict) or page.get("missing") else page
 
 
 def _write(path: Path, page: dict) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(page, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+    fetch.write_atomic(path, json.dumps(page, ensure_ascii=False, sort_keys=True) + "\n")
 
 
 def pages_by_id(pageids: Iterable[int], cache: Path = DEFAULT_CACHE, refresh: bool = False) -> dict[int, dict | None]:
     """{pageid: page object or None (the page does not exist)}, fetching the ids not yet cached 50 per request."""
     ids = list(dict.fromkeys(int(i) for i in pageids))
-    todo = [i for i in ids if refresh or not (cache / f"page_{i}.json").exists()]
+    todo = [i for i in ids if refresh or not _cached(cache / f"page_{i}.json")]
     for start in range(0, len(todo), BATCH):
         chunk = todo[start:start + BATCH]
         found = {p["pageid"]: p for p in _query({"pageids": "|".join(map(str, chunk))})["query"]["pages"]
@@ -101,7 +106,7 @@ def title_path(title: str, cache: Path) -> Path:
     path = cache / f"title_{slug}-{hashlib.sha1(title.encode('utf-8')).hexdigest()[:10]}.json"
     legacy = cache / f"title_{slug}.json"
     if not path.exists() and legacy.exists():
-        cached = json.loads(legacy.read_text(encoding="utf-8")).get("title")
+        cached = (fetch.read_json(legacy) or {}).get("title")
         if cached is not None and cached in (title, LEGACY_REDIRECTS.get(title)):
             return legacy
     return path
@@ -111,7 +116,7 @@ def page_by_title(title: str, cache: Path = DEFAULT_CACHE, refresh: bool = False
     """The page with this exact title (a redirect is followed), or None; a missing title is cached and not asked twice
     unless refresh=True."""
     path = title_path(title, cache)
-    if refresh or not path.exists():
+    if refresh or not _cached(path):
         pages = _query({"titles": title})["query"]["pages"]
         page = next((p for p in pages if not p.get("missing") and "pageid" in p), None)
         _write(path, page or {"missing": True, "title": title})
