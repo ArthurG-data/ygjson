@@ -98,7 +98,7 @@ def map_type(ib: dict[str, str], name: str, mapping: dict) -> str | None:
 
 def database_ids(ib: dict[str, str]) -> list[int]:
     """Every *database_id value as an int, blanks and non-numbers skipped; a "a; b" list gives both."""
-    found = set()
+    found: set[int] = set()
     for key, value in ib.items():
         if _DATABASE_ID.search(key):
             found.update(int(part) for part in (p.strip() for p in value.split(";")) if part.isdigit())
@@ -243,7 +243,7 @@ def inherit_eras(sets: list[dict]) -> int:
 def resolve_pages(sets: list[dict], cache: Path = yugipedia.DEFAULT_CACHE) -> tuple[dict, collections.Counter]:
     """{set id: (page, found_by_title)} for the sets whose page exists, and how many were found each way."""
     pages: dict[str, tuple[dict, bool]] = {}
-    how = collections.Counter()
+    how = collections.Counter[str]()
     ours = [s for s in sets if s["source"] == SOURCE]
     by_id = yugipedia.pages_by_id([s["identifiers"]["yugipediaId"] for s in ours
                                    if "yugipediaId" in s.get("identifiers", {})], cache)
@@ -265,8 +265,11 @@ def resolve_pages(sets: list[dict], cache: Path = yugipedia.DEFAULT_CACHE) -> tu
 
 def build(sets: list[dict], pages: dict, eras: list[dict], mapping: dict) -> tuple[dict, collections.Counter, dict]:
     """Apply the pages to the sets in place. Returns the review body, the counters and the parent evidence counts."""
-    stats = collections.Counter()
-    no_page, no_infobox, unmapped, shared = [], [], [], []
+    stats = collections.Counter[str]()
+    no_page: list[dict] = []
+    no_infobox: list[dict] = []
+    unmapped: list[dict] = []
+    shared: list[dict] = []
     raw_boxes = {}
     # A page belongs to one set: the one that already holds its id, else the first set (by id) that found it by
     # title. A title that redirects to a page another set owns (Magic Ruler -> Spell Ruler) still gives its infobox
@@ -296,7 +299,7 @@ def build(sets: list[dict], pages: dict, eras: list[dict], mapping: dict) -> tup
         apply_infobox(s, ib, page, write_id, mapping, eras, stats, unmapped)
     found_parents, ambiguous = find_parents(sets, raw_boxes)
     by_id = {s["id"]: s for s in sets}
-    evidence = collections.Counter()
+    evidence = collections.Counter[str]()
     for child, (parent, kinds) in found_parents.items():
         by_id[child]["parent"] = parent
         evidence[kinds] += 1

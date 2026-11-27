@@ -46,6 +46,7 @@ import datetime
 import re
 import sys
 import unicodedata
+from collections.abc import Sequence
 
 import ygjson
 import ygoprodeck
@@ -135,10 +136,10 @@ def lead_status(prodeck_cards: list[dict] | None, ygojson_cards: list[dict] | No
         for key, fmt in YGOPRODECK_FORMATS.items():
             out[(card, fmt)] = ygoprodeck_status(card, fmt, info.get(key))
     for c in ygojson_cards or []:
-        card = ids.get(c["id"])
-        status = STATUS.get(((c.get("legality") or {}).get("speed") or {}).get("current"))
-        if card is not None and status is not None:
-            out[(card, "speed_duel")] = status
+        ours = ids.get(c["id"])
+        status = STATUS.get(((c.get("legality") or {}).get("speed") or {}).get("current") or "")
+        if ours is not None and status is not None:
+            out[(ours, "speed_duel")] = status
     return out
 
 
@@ -189,7 +190,7 @@ def list_events(lists: list[dict], dated: list[dict], today: str) -> list[dict]:
 
 
 def merge(existing: list[dict], history: list[dict], lead: dict[Key, str], today: str,
-          lists: list[dict] = ()) -> tuple[list[dict], list[dict]]:
+          lists: Sequence[dict] = ()) -> tuple[list[dict], list[dict]]:
     """(all events sorted, the events added). Existing dated events are kept as they are. A history or list event is
     added unless the card, format and date already have one. An existing inForceBy event is dropped when the dated
     events give the same status on its date, or when it says legal and the lead no longer states the card. A lead status

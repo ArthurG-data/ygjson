@@ -59,7 +59,7 @@ import argparse
 import collections
 import json
 import re
-from collections.abc import Callable, Container, Mapping
+from collections.abc import Callable, Container, Mapping, Sequence
 from pathlib import Path
 
 import ids
@@ -168,7 +168,7 @@ def match_groups(groups: list[dict], sets: list[dict], mapping: dict) -> dict:
     matches: dict[int, tuple[str, str]] = {}
     claimed: set[str] = set()
     names = {s["name"] for s in ours}
-    child_of = {g["groupId"]: split_child(g["name"]) for g in ordered if split_child(g["name"])}
+    child_of = {g["groupId"]: child for g in ordered if (child := split_child(g["name"]))}
     reprint_ids = {gid for gid in child_of if next(g["name"] for g in ordered if g["groupId"] == gid) not in names}
 
     def free_groups():
@@ -217,7 +217,7 @@ def match_groups(groups: list[dict], sets: list[dict], mapping: dict) -> dict:
         if g["groupId"] not in child_of or (g["groupId"] not in reprint_ids and g["groupId"] not in matches):
             continue
         base = child_of[g["groupId"]][0]
-        own = matches.get(g["groupId"], (None,))[0]
+        own = matches[g["groupId"]][0] if g["groupId"] in matches else None
         candidates = [by_group_name.get(base), by_name.get(base), *by_code.get(_code(g["abbreviation"] or ""), [])]
         candidates = list(dict.fromkeys(c for c in candidates if c and c != own))
         if candidates:
@@ -230,13 +230,16 @@ def match_groups(groups: list[dict], sets: list[dict], mapping: dict) -> dict:
 
 
 def mint_reprint_set(group: dict, parent: dict, taken: set[str], old: dict | None, held: Mapping[str, str] = {},
-                     reserved: Container[str] = frozenset(), eras: list[dict] = ()) -> dict:
+                     reserved: Container[str] = frozenset(), eras: Sequence[dict] = ()) -> dict:
     """The set for a reprint or anniversary group, carrying the parent's code, type and editions (until
     Importer.merge_editions settles its own), and the era of its own release date (the parent's when it has no date or
     no era holds it). An existing
     one (an earlier run) keeps its id and identifiers; a new one takes the slug the set ledger holds for its name
     (``held``), else a free one that is not ``reserved``."""
-    base, suffix = split_child(group["name"])
+    child = split_child(group["name"])
+    if child is None:
+        raise ValueError(f"{group['name']!r} is not a reprint or anniversary group")
+    base, suffix = child
     name = group["name"] if suffix.startswith("25th") else f"{base} (2020 Date Reprint)"
     set_id = old["id"] if old else _ledger_id(name, f"{parent['id']}-{SUFFIX_SLUGS[suffix]}", taken, held, reserved)
     release: dict = {"language": "en", "name": name}
@@ -271,7 +274,7 @@ class Catalog:
 
     def __init__(self, files: dict[str, dict]):
         self.files = files
-        self.by_set_number: dict[tuple[str, str], list[tuple[dict, dict]]] = collections.defaultdict(list)
+        self.by_set_number: dict[tuple[str | None, str | None], list[tuple[dict, dict]]] = collections.defaultdict(list)
         self.by_number: dict[str, set[str]] = collections.defaultdict(set)
         self.by_name: dict[str, list[dict]] = collections.defaultdict(list)
         self.by_alias: dict[str, list[dict]] = collections.defaultdict(list)
@@ -303,7 +306,7 @@ class Catalog:
             self.by_set_number[(p["set"], p["number"])].append((card, p))
             self.by_number[p["number"]].add(p["set"])
 
-    def find(self, set_id: str, number: str) -> list[tuple[dict, dict]]:
+    def find(self, set_id: str | None, number: str | None) -> list[tuple[dict, dict]]:
         return self.by_set_number.get((set_id, number), [])
 
     def card_named(self, base_name: str) -> dict | None:
@@ -426,8 +429,8 @@ class Importer:
                 if row["subTypeName"] in SUBTYPES:
                     self.subtypes[row["productId"]].add(SUBTYPES[row["subTypeName"]])
         self.catalog = Catalog(files)
-        self.stats = collections.Counter()
-        self.group_rules = collections.Counter()
+        self.stats = collections.Counter[str]()
+        self.group_rules = collections.Counter[str]()
         self.unmatched: list[dict] = []
         self.conflicts: list[dict] = []
         self.aliases: dict[int, collections.Counter] = collections.defaultdict(collections.Counter)
@@ -441,7 +444,8 @@ class Importer:
         # nothing with a treatment there.
         # {(number, rarity): [(product id, group id)]}; whether one is a neighbour depends on the set, see
         # `_shares_number`.
-        self.number_rarity: dict[tuple[str, str], list[tuple[int, int]]] = collections.defaultdict(list)
+        # A single with a rarity and no number is keyed under None.
+        self.number_rarity: dict[tuple[str | None, str], list[tuple[int, int]]] = collections.defaultdict(list)
         for prod in self.by_id.values():
             if prod.is_single and not unplaceable_tags(prod) and not _names_colour_or_art(prod):
                 self.number_rarity[(prod.number, rarities.canonical(prod.rarity))].append(
@@ -724,7 +728,7 @@ class Importer:
             kind = set_type(group["name"])
             old = {"id": _ledger_id(group["name"], ygjson.slugify(group["name"]), set(self.sets), self.held,
                                     self.reserved),
-                   "code": _code(group.get("abbreviation") or "") or prod.number.split("-")[0],
+                   "code": _code(group.get("abbreviation") or "") or (prod.number or "").split("-")[0],
                    "name": group["name"], "type": kind, "editions": self._group_editions(gid, kind),
                    "source": SOURCE, "tcgplayerGroupIds": [gid], "releases": [release]}
             era = era_of(released, self.eras)
@@ -806,7 +810,7 @@ class Importer:
                 self._review(prod, "TCGplayer gives it no card number")
                 continue
             res = self._exact(set_id, prod, rarity) if set_id and rarity != rarities.UNKNOWN else None
-            if res is None:
+            if res is None or not set_id:
                 pending.append(prod)
             elif res[0] == "ambiguous":
                 self._review(prod, f"ambiguous: {res[1]} prints of {prod.number} at {rarity}")
@@ -817,7 +821,7 @@ class Importer:
             set_id = self.set_of_group.get(prod.group_id)
             rarity = rarities.canonical(prod.rarity)
             res = self._fallback(set_id, prod, rarity) if set_id else None
-            if res is None:
+            if res is None or not set_id:
                 pending3.append(prod)
             elif res[0] == "ambiguous":
                 self._review(prod, f"ambiguous: {res[1]} prints of {prod.number} in the set, none at {rarity}")
@@ -828,7 +832,7 @@ class Importer:
 
     def _other_set(self, prod: tcgcsv.Product) -> None:
         own = self.set_of_group.get(prod.group_id)
-        others = sorted(self.catalog.by_number.get(prod.number, set()) - {own})
+        others = sorted(self.catalog.by_number.get(prod.number or "", set()) - {own})
         # A reprint set holds copies of its parent's prints, so it does not make the number ambiguous.
         others = [s for s in others if self.sets[s]["source"] != SOURCE] or others
         if not others:

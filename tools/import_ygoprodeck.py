@@ -14,7 +14,7 @@ import collections
 import html
 import json
 import re
-from collections.abc import Container, Mapping
+from collections.abc import Container, Mapping, Sequence, Set
 from urllib.parse import quote
 
 import ids
@@ -64,7 +64,7 @@ def set_editions(name: str) -> list[str]:
     return ["limited"] if "limited edition" in name.lower() else ["unlimited"]
 
 
-def era_of(release_date: str | None, eras: list[dict]) -> str | None:
+def era_of(release_date: str | None, eras: Sequence[dict]) -> str | None:
     """The era whose window holds the date. Dates are ISO strings, so they compare as text."""
     if not release_date:
         return None
@@ -229,7 +229,7 @@ def build_prints(raw: dict, set_ids: dict[str, str]) -> tuple[list[dict], int, l
     return [prints[k] for k in sorted(prints)], duplicates, unknown
 
 
-def merge_card(card: dict, prev: dict | None, tcgplayer_sets: set[str], foreign_slugs: set[str] = frozenset()) -> dict:
+def merge_card(card: dict, prev: dict | None, tcgplayer_sets: Set[str], foreign_slugs: Set[str] = frozenset()) -> dict:
     """Fold what other tools added to the card on disk into the freshly built one. foreign_slugs are the
     archetypes another tool owns (source ygojson): their memberships on the card are kept, YGOPRODeck's own
     archetype is taken fresh."""
@@ -255,12 +255,12 @@ def merge_card(card: dict, prev: dict | None, tcgplayer_sets: set[str], foreign_
 
 
 def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs: dict[str, str],
-                existing: dict[str, dict], tcgplayer_sets: set[str] = frozenset(),
-                foreign_slugs: set[str] = frozenset()) -> tuple[dict[str, dict], dict]:
+                existing: dict[str, dict], tcgplayer_sets: Set[str] = frozenset(),
+                foreign_slugs: Set[str] = frozenset()) -> tuple[dict[str, dict], dict]:
     """Returns {bucket: file body} and the counts: duplicates and the unknown rarity strings."""
     old = {c["id"]: c for body in existing.values() for c in body["cards"]}
     files: dict[str, list[dict]] = collections.defaultdict(list)
-    duplicates, unknown = 0, collections.Counter()
+    duplicates, unknown = 0, collections.Counter[str]()
     for raw in sorted(card_list, key=lambda r: r["id"]):
         card = card_entry(raw)
         if "archetypes" in card:

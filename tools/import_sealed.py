@@ -248,7 +248,8 @@ def _apply_packs(rec: dict, packs: list[dict], ctx: Context) -> None:
     for pack in packs:
         set_id = ctx.set_of_uuid.get(pack["set"])
         if "card" in pack:
-            prints = ctx.card_prints.get((ctx.card_of_uuid.get(pack["card"]), set_id), []) if set_id else []
+            card_id = ctx.card_of_uuid.get(pack["card"])
+            prints = ctx.card_prints.get((card_id, set_id), []) if set_id and card_id else []
             if len(prints) == 1:
                 cards.append({"print": prints[0], "count": 1})
             else:

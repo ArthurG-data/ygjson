@@ -1,6 +1,6 @@
 """Report where every TCGplayer Yu-Gi-Oh! product (TCGCSV category 2) ended up in the data.
 
-    uv run python tools/coverage.py [--strict]
+    uv run python tools/coverage_report.py [--strict]
 
 A product is in exactly one place, tested in this order:
   print:<match>  on a print (identifiers.tcgplayerProductIds), <match> being how import_tcgcsv tied it;

@@ -91,8 +91,8 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
 
     successors = _successor_index(current, carried)
     for i, f in sorted(orphans.items()):
-        found = next((successors[n].get(at) for n, at in enumerate(_successor_places(f))
-                      if at is not None and successors[n].get(at)), [])
+        found = next((hit for n, at in enumerate(_successor_places(f))
+                      if at is not None and (hit := successors[n].get(at))), [])
         out[i].update(status="retired", successors=sorted(set(found)))
     for e in out.values():
         if e["status"] == "retired":
@@ -182,7 +182,7 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
         if cid in current or entry["status"] == "retired":
             continue
         named = by_name.get(entry["name"], [])
-        konami = by_konami.get(entry.get("konamiId"), []) if entry.get("konamiId") is not None else []
+        konami = by_konami.get(entry["konamiId"], []) if entry.get("konamiId") is not None else []
         found = named if len(named) == 1 else konami if len(konami) == 1 else named if len(named) > 1 else konami
         entry["status"] = "retired"
         if len(found) == 1:

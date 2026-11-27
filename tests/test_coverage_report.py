@@ -1,5 +1,4 @@
-import coverage
-
+import coverage_report
 import tcgcsv
 
 
@@ -28,7 +27,7 @@ def test_every_product_is_counted_once_in_the_first_place_that_holds_it():
     sealed = {"lob": {"products": [{"identifiers": {"tcgplayerProductIds": [5]}}]}}
     review = {"unmatched": [{"productId": 4}, {"productId": 11}], "conflicts": [{"productId": 7}]}
     sealed_review = {"noSet": [{"productId": 10}]}
-    tally, missing = coverage.classify(groups, products, sets, files, sealed, review, sealed_review, "2026-10-28")
+    tally, missing = coverage_report.classify(groups, products, sets, files, sealed, review, sealed_review, "2026-10-28")
     assert dict(tally) == {("single", "print:number+rarity"): 2, ("single", "print:number"): 1,
                            ("single", "print:number-other-set"): 1, ("single", "review"): 3, ("sealed", "sealed"): 1,
                            ("sealed", "accessory"): 1, ("sealed", "pending"): 1, ("sealed", "review"): 1}
@@ -40,27 +39,27 @@ def test_pending_needs_a_group_with_no_set_published_after_today():
               {"groupId": 3, "publishedOn": "2026-10-28T20:00:06.4640695Z"}]
     products = {1: [single(1, 1)], 2: [single(2, 2)], 3: [single(3, 3)]}
     sets = [{"id": "future", "tcgplayerGroupIds": [1]}]
-    tally, missing = coverage.classify(groups, products, sets, {}, {}, {}, {}, "2026-10-28")
+    tally, missing = coverage_report.classify(groups, products, sets, {}, {}, {}, {}, "2026-10-28")
     # Group 1 has a set, so it is not pending; group 2 is pending; group 3 was published today, so it is not.
     assert dict(tally) == {("single", "pending"): 1, ("single", "UNACCOUNTED"): 2}
     assert [m[0] for m in missing] == [1, 3]
 
 
 def test_strict_exits_1_when_something_is_unaccounted_for(monkeypatch, tmp_path, capsys):
-    monkeypatch.setattr(coverage.tcgcsv, "groups", lambda cache: [{"groupId": 1, "publishedOn": "2020-01-01T00:00:00"}])
-    monkeypatch.setattr(coverage.tcgcsv, "products", lambda gid, cache: [single(1, 1)])
-    monkeypatch.setattr(coverage.ygjson, "load_sets", lambda: [])
-    monkeypatch.setattr(coverage.ygjson, "load_cards", lambda: {})
-    monkeypatch.setattr(coverage.ygjson, "load_sealed", lambda: {})
-    monkeypatch.setattr(coverage.import_tcgcsv, "REVIEW", tmp_path / "none.json")
-    monkeypatch.setattr(coverage.import_sealed, "REVIEW", tmp_path / "none2.json")
+    monkeypatch.setattr(coverage_report.tcgcsv, "groups", lambda cache: [{"groupId": 1, "publishedOn": "2020-01-01T00:00:00"}])
+    monkeypatch.setattr(coverage_report.tcgcsv, "products", lambda gid, cache: [single(1, 1)])
+    monkeypatch.setattr(coverage_report.ygjson, "load_sets", lambda: [])
+    monkeypatch.setattr(coverage_report.ygjson, "load_cards", lambda: {})
+    monkeypatch.setattr(coverage_report.ygjson, "load_sealed", lambda: {})
+    monkeypatch.setattr(coverage_report.import_tcgcsv, "REVIEW", tmp_path / "none.json")
+    monkeypatch.setattr(coverage_report.import_sealed, "REVIEW", tmp_path / "none2.json")
     import sys
 
     import pytest
-    monkeypatch.setattr(sys, "argv", ["coverage.py"])
-    coverage.main()
+    monkeypatch.setattr(sys, "argv", ["coverage_report.py"])
+    coverage_report.main()
     assert "1 unaccounted for" in capsys.readouterr().out
-    monkeypatch.setattr(sys, "argv", ["coverage.py", "--strict"])
+    monkeypatch.setattr(sys, "argv", ["coverage_report.py", "--strict"])
     with pytest.raises(SystemExit) as e:
-        coverage.main()
+        coverage_report.main()
     assert e.value.code == 1

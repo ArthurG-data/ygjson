@@ -24,7 +24,7 @@ import subprocess
 import sys
 import uuid
 from collections import defaultdict
-from collections.abc import Container, Mapping
+from collections.abc import Collection, Container, Mapping
 from pathlib import Path
 
 import reconcile
@@ -208,7 +208,7 @@ def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, d
     return new, review_body(new, successors, renames), renames
 
 
-def _both_ways(kind: str, entries: Mapping[str, dict], current: Container[str], field: str = "id") -> list[str]:
+def _both_ways(kind: str, entries: Mapping[str, dict], current: Collection[str], field: str = "id") -> list[str]:
     """Each current value is the `field` of exactly one live entry; each live entry's is current; a retired one's is
     not, unless its successors include the live entry that holds it now."""
     live: dict[str, list[str]] = defaultdict(list)
