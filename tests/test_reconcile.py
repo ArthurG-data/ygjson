@@ -250,3 +250,49 @@ def test_unnumbered_print_in_another_set_does_not_keep_the_id():
     assert by_key == {new: minted}
     assert got == ledger(retired(old, "id-a"), live(new, minted))
     assert review == [{"id": "id-a", "key": old, "reason": "retired", "successors": []}]
+
+
+def _card(cid, name, konami=None):
+    return {"id": cid, "name": name, "identifiers": {"konamiId": konami} if konami else {}}
+
+
+def test_placeholder_card_retires_to_its_passcode():
+    entries = {"101403001": {"id": "101403001", "name": "Helpoemer, Chanter of the Sun God", "status": "live", "successors": []}}
+    new, succ, review = reconcile.reconcile_cards(entries, [_card("82951145", "Helpoemer, Chanter of the Sun God")])
+    assert new["101403001"]["status"] == "retired" and new["101403001"]["successors"] == ["82951145"]
+    assert succ == {"101403001": "82951145"} and review == []
+    assert new["82951145"] == {"id": "82951145", "name": "Helpoemer, Chanter of the Sun God", "status": "live",
+                               "successors": []}
+    assert entries["101403001"]["status"] == "live"
+
+
+def test_retired_card_with_two_namesakes_has_no_successor_and_goes_to_review():
+    entries = {"1": {"id": "1", "name": "Twin", "status": "live", "successors": []}}
+    new, succ, review = reconcile.reconcile_cards(entries, [_card("3", "Twin"), _card("2", "Twin")])
+    assert new["1"]["status"] == "retired" and new["1"]["successors"] == [] and succ == {}
+    assert review == [{"id": "1", "name": "Twin", "reason": "retired", "successors": ["2", "3"]}]
+
+
+def test_retired_card_falls_back_to_konami_id_then_to_review_with_none():
+    entries = {"1": {"id": "1", "name": "Old", "konamiId": 9, "status": "live", "successors": []},
+               "5": {"id": "5", "name": "Lost", "status": "live", "successors": []}}
+    new, succ, review = reconcile.reconcile_cards(entries, [_card("2", "New", 9)])
+    assert new["1"]["successors"] == ["2"] and succ == {"1": "2"}
+    assert review == [{"id": "5", "name": "Lost", "reason": "retired", "successors": []}]
+
+
+def test_card_entry_records_name_and_konami_id():
+    entries = {"2": {"id": "2", "name": "Old name", "konamiId": 7, "status": "live", "successors": []}}
+    new, _, _ = reconcile.reconcile_cards(entries, [_card("2", "New name", 8), _card("3", "X")])
+    assert new["2"] == {"id": "2", "name": "New name", "konamiId": 8, "status": "live", "successors": []}
+    assert "konamiId" not in new["3"]
+    kept, _, _ = reconcile.reconcile_cards(entries, [_card("2", "New name")])
+    assert kept["2"]["konamiId"] == 7
+
+
+def test_retired_entry_stays_quiet_and_comes_back_live():
+    entries = {"1": {"id": "1", "name": "A", "status": "retired", "successors": ["2"]},
+               "4": {"id": "4", "name": "B", "status": "retired", "successors": []}}
+    new, succ, review = reconcile.reconcile_cards(entries, [_card("4", "B")])
+    assert new["1"] == entries["1"] and succ == {} and review == []
+    assert new["4"]["status"] == "live" and new["4"]["successors"] == []

@@ -187,6 +187,21 @@ def test_rerun_keeps_what_later_tools_added_to_a_card_and_its_prints():
     assert c["prints"][0]["tcgplayer"] == {"name": "x", "match": "number"} and c["prints"][0]["editions"] == ["first"]
 
 
+def _old_card(cid, prints=()):
+    return {"3": {"cards": [{"id": cid, "name": "Gone", "prints": list(prints)}]}}
+
+
+def test_a_card_ygoprodeck_dropped_leaves_the_data():
+    files, _ = imp.build_cards([raw_card()], {LOB: LOB_ID}, {}, _old_card("101403001"))
+    assert [c["id"] for b in files.values() for c in b["cards"]] == ["46986414"]
+
+
+def test_a_dropped_card_holding_a_tcgplayer_print_stays():
+    prints = [{"id": "s:101403001:X-EN001:rare", "set": "s", "source": "tcgplayer"}]
+    files, _ = imp.build_cards([raw_card()], {LOB: LOB_ID}, {}, _old_card("101403001", prints))
+    assert "101403001" in [c["id"] for b in files.values() for c in b["cards"]]
+
+
 def test_cards_are_bucketed_and_sorted_by_numeric_id():
     cards = [raw_card(id=100), raw_card(id=46986414), raw_card(id=9), raw_card(id=1_000_000)]
     files, _ = imp.build_cards(cards, {LOB: LOB_ID}, {}, {})

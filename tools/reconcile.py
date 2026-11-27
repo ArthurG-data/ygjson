@@ -97,6 +97,48 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
     return dict(sorted(out.items())), dict(sorted(carried.items())), sorted(review, key=lambda r: (r["id"], r["key"]))
 
 
+def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[str, dict], dict[str, str], list[dict]]:
+    """Update the card ledger: (new card entries, {retired card id: its one successor}, review rows).
+
+    A card in `cards` is live: its `name` and `konamiId` (kept from the entry when the card has none) are refreshed.
+    A live entry whose card is gone is retired; its successor is the one current card with its name, else the one
+    with its konamiId. With none or several it has no successor and a review row lists the candidates. An entry
+    already retired is left as it is. `entries` is not modified.
+    """
+    out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
+    current = {c["id"]: c for c in cards}
+    for cid in sorted(current):
+        card = current[cid]
+        entry = {"id": cid, "name": card["name"], "status": "live", "successors": []}
+        konami = (card.get("identifiers") or {}).get("konamiId", out.get(cid, {}).get("konamiId"))
+        if konami is not None:
+            entry["konamiId"] = konami
+        out[cid] = entry
+    by_name: dict[str, list[str]] = defaultdict(list)
+    by_konami: dict[int, list[str]] = defaultdict(list)
+    for cid, card in sorted(current.items()):
+        by_name[card["name"]].append(cid)
+        if (card.get("identifiers") or {}).get("konamiId") is not None:
+            by_konami[card["identifiers"]["konamiId"]].append(cid)
+
+    successor: dict[str, str] = {}
+    review: list[dict] = []
+    for cid, entry in out.items():
+        if cid in current or entry["status"] == "retired":
+            continue
+        named = by_name.get(entry["name"], [])
+        konami = by_konami.get(entry.get("konamiId"), []) if entry.get("konamiId") is not None else []
+        found = named if len(named) == 1 else konami if len(konami) == 1 else named if len(named) > 1 else konami
+        entry["status"] = "retired"
+        if len(found) == 1:
+            entry["successors"] = [found[0]]
+            successor[cid] = found[0]
+        else:
+            entry["successors"] = []
+            review.append({"id": cid, "name": entry["name"], "reason": "retired", "successors": list(found)})
+    return dict(sorted(out.items())), dict(sorted(successor.items())), sorted(review, key=lambda r: r["id"])
+
+
 def _carry_live(out: dict[str, dict], facts: Mapping[str, PrintFacts],
                 card_successor: Mapping[str, str]) -> tuple[dict[str, str], dict[str, PrintFacts]]:
     """({current key: id} for live entries still at a current key, {id: facts} of the live entries left: the orphans).

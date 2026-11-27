@@ -265,10 +265,11 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
         duplicates += dup
         unknown.update(unk)
         files[ygjson.card_bucket(card["id"])].append(merge_card(card, old.get(card["id"]), tcgplayer_sets, foreign_slugs))
-    # A card another tool added and YGOPRODeck lacks stays where it is.
+    # A card YGOPRODeck no longer lists is gone (it was a placeholder id, replaced by a passcode), unless a print
+    # of it came from TCGplayer: that print is not ours to drop.
     seen = {c["id"] for cards in files.values() for c in cards}
     for cid, prev in old.items():
-        if cid not in seen:
+        if cid not in seen and any(p.get("source") == "tcgplayer" for p in prev.get("prints", [])):
             files[ygjson.card_bucket(cid)].append(prev)
     bodies = {bucket: {"cards": sorted(cards, key=lambda c: int(c["id"]))} for bucket, cards in sorted(files.items())}
     return bodies, {"duplicates": duplicates, "unknown": unknown}
