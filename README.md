@@ -55,6 +55,8 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 - `legality/` holds `formats.json` and `bans.json`.
 - `mappings/` holds hand-kept inputs to the tools. `set_types.json` maps the type and series on a Yugipedia set
   infobox to a set type. `tcgplayer_groups.json` ties a TCGplayer group to a set where the automatic match fails.
+  `tcgplayer_products.json` names the card of a TCGplayer single whose number no print has and whose name is no
+  card's (`Synch Realm` is `Synchronized Realm`), so its print is minted.
   `ygoprodeck_set_aliases.json` names a YGOPRODeck set that is another set under a second name: the alias is not
   written and its prints go to the owner (`WCS 2025 Limited Pack` is `Limited Pack World Championship 2025`). Each
   entry cites its evidence. `ids.json` holds the hand decisions on the id ledger (see [Ids](#ids)).
@@ -182,9 +184,14 @@ All sets but `summoned-skull-sample-promotional-card` have one.
 places, in this order. YGOPRODeck states none, so the first import guesses `limited` for a name that holds "Limited
 Edition" and `unlimited` for the rest. YGOJSON states the editions of a set it matches (`1st`, `unlimited`,
 `limited`), which replace the guess. TCGCSV then adds every edition its prices show for the set's singles, where
-TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`. A print lists its own `editions` only when its products are
-priced in other editions than its set: 10,255 prints do. That is mostly fewer, but a product of another group that lands
-in a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions.
+TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`.
+
+A print lists its own `editions` only when they differ from its set's: 10,364 prints do. A print holding products
+has the editions they are priced in. That is mostly fewer than its set's, but a product of another group that lands in
+a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions, except
+in a set that mixes `limited` with other editions. There Limited is usually a few special prints (the God cards of
+Yugi's Legendary Decks) or all of them (a Duel Terminal set), so the print has the editions most of the set's priced
+prints have, unless two lists tie. 109 prints get their editions this way.
 
 **Key art.** `releases[0].keyArt` links to YGOPRODeck's set image (910 sets), else to the pack art YGOJSON gives from
 Yugipedia (126 sets). The `source` is the page the image is on. The images are links and are never copied. No source
@@ -258,7 +265,7 @@ products only when they are the same card at the same rarity, like the Red and B
 | `number+rarity-from-tcgplayer` | 193 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
 | `number` | 436 | the group's set has exactly one print of this number |
 | `number-other-set` | 3,261 | the group's set lacks the number, and exactly one other set has it |
-| `minted` | 674 | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
+| `minted` | 675 | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
 
 **Prints from TCGplayer.** YGOPRODeck lags TCGplayer and omits whole sets. When no print anywhere has a product's number
 and its name is exactly one card, `import_tcgcsv.py` creates the print with `source: "tcgplayer"`, in the group's set, or
@@ -287,9 +294,11 @@ the same edition, the print keeps the one pricing the most editions, then the ol
 `conflicts`.
 
 **Aliases.** A card's `aliases` are other English names shops sell it under: YGOPRODeck's `beta_name` (`Red-Eyes B.
-Dragon`) and TCGplayer's product name at any of its prints (`Stellarnova Binding`). A name another card has is never an
-alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`. Each run of `import_tcgcsv` derives TCGplayer's names
-afresh from the products it ties by number, so a name it wrote before never mints a print by itself.
+Dragon`), which the card also carries as `betaName`, and TCGplayer's product name at any of its prints (`Stellarnova
+Binding`). A name another card has is never an alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`. Each
+run of `import_tcgcsv` starts a card's aliases from its `betaName` and adds TCGplayer's names from the products it ties
+in that run, so a name it wrote before never mints a print by itself, and a beta name TCGplayer spells the same way
+stays when the product moves.
 
 2,352 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
@@ -447,6 +456,7 @@ CI runs only the offline checks (pytest, `validate.py`, and the id ledger check 
 pull request, every push to `main` and every `v*` tag. The two live checks run weekly and on demand in
 `live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
 that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release.
+Each action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.
 
 ## Licence
 

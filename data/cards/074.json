@@ -4,6 +4,7 @@
    "aliases": [
     "Bewildering Wind"
    ],
+   "betaName": "Bewildering Wind",
    "frame": "trap",
    "hasEffect": true,
    "id": "74003290",
@@ -403,6 +404,7 @@
    "archetypes": [
     "artmage"
    ],
+   "betaName": "Artmegia Banish - Change",
    "frame": "spell",
    "hasEffect": true,
    "id": "74011784",
@@ -491,6 +493,7 @@
    ],
    "atk": 0,
    "attribute": "dark",
+   "betaName": "Labrynth Stovee",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -740,6 +743,7 @@
    "archetypes": [
     "invoked"
    ],
+   "betaName": "Eidolon Summoning Magic",
    "frame": "spell",
    "hasEffect": true,
    "id": "74063034",
@@ -1206,6 +1210,7 @@
    ],
    "atk": 800,
    "attribute": "dark",
+   "betaName": "Tearalaments Meirrow",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -2416,6 +2421,7 @@
    ],
    "atk": 2000,
    "attribute": "earth",
+   "betaName": "Astral World Tree Illumistil",
    "frame": "link",
    "hasEffect": true,
    "id": "74139959",
@@ -3030,6 +3036,7 @@
    ],
    "atk": 1000,
    "attribute": "dark",
+   "betaName": "Restoration Pointguard",
    "frame": "link",
    "hasEffect": true,
    "id": "74163487",
@@ -3297,6 +3304,7 @@
    "aliases": [
     "Card of Spirit"
    ],
+   "betaName": "Card of Spirit",
    "frame": "spell",
    "hasEffect": true,
    "id": "74191528",
@@ -3538,6 +3546,7 @@
    "aliases": [
     "All or Nothing"
    ],
+   "betaName": "All or Nothing",
    "frame": "trap",
    "hasEffect": true,
    "id": "74202664",
@@ -3834,6 +3843,7 @@
    ],
    "atk": 100,
    "attribute": "dark",
+   "betaName": "Texchangure",
    "def": 100,
    "frame": "effect",
    "hasEffect": true,
@@ -4001,6 +4011,7 @@
    "archetypes": [
     "the-weather"
    ],
+   "betaName": "The Weather Rainbowy Canvas",
    "frame": "trap",
    "hasEffect": true,
    "id": "74218258",
@@ -4325,6 +4336,7 @@
    ],
    "atk": 600,
    "attribute": "earth",
+   "betaName": "Dienos Stacking",
    "def": 600,
    "frame": "effect",
    "hasEffect": true,
@@ -5636,6 +5648,7 @@
    "archetypes": [
     "gmx"
    ],
+   "betaName": "GMX Lab 5",
    "frame": "spell",
    "hasEffect": true,
    "id": "74378580",
@@ -6163,6 +6176,7 @@
    ],
    "atk": 2500,
    "attribute": "light",
+   "betaName": "The Three Brave Swordsouls",
    "def": 2500,
    "frame": "synchro",
    "hasEffect": true,
@@ -7515,6 +7529,7 @@
    "archetypes": [
     "hole"
    ],
+   "betaName": "Traptrix Holetaea",
    "frame": "trap",
    "hasEffect": true,
    "id": "74577599",
@@ -7577,6 +7592,7 @@
    ],
    "atk": 1000,
    "attribute": "dark",
+   "betaName": "Time Thief Time Recorder",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -8508,6 +8524,7 @@
    ],
    "atk": 2500,
    "attribute": "fire",
+   "betaName": "Laevateinn, Generaider Boss of Shadows",
    "def": 2500,
    "frame": "xyz",
    "hasEffect": true,
@@ -8716,6 +8733,7 @@
    ],
    "atk": 0,
    "attribute": "earth",
+   "betaName": "T.G. Tank Larva",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -8785,6 +8803,7 @@
    ],
    "atk": 2400,
    "attribute": "earth",
+   "betaName": "Artmage Non Finito",
    "def": 1500,
    "frame": "fusion",
    "hasEffect": true,
@@ -9894,6 +9913,7 @@
    ],
    "atk": 2400,
    "attribute": "dark",
+   "betaName": "Red-Eyes B. Dragon",
    "def": 2000,
    "frame": "normal",
    "hasEffect": false,
@@ -10173,6 +10193,9 @@
      "set": "ghosts-from-the-past-the-2nd-haunting"
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "hidden-arsenal-chapter-1:74677427:HAC1-EN003:common",
      "number": "HAC1-EN003",
      "rarity": "common",
@@ -10360,6 +10383,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:74677427:LDS1-EN001:ultra_rare",
      "number": "LDS1-EN001",
      "rarity": "ultra_rare",
@@ -10986,6 +11012,7 @@
    ],
    "atk": 1000,
    "attribute": "light",
+   "betaName": "Rilliona, the Magistus Glass Witch",
    "def": 2800,
    "frame": "xyz",
    "hasEffect": true,
@@ -11580,6 +11607,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-4:74711057:DT04-EN087:dt_rare_parallel",
      "number": "DT04-EN087",
      "rarity": "dt_rare_parallel",
@@ -11889,6 +11919,7 @@
    ],
    "atk": 2500,
    "attribute": "earth",
+   "betaName": "Qebehsenuef, Aegis of Horus",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -12118,6 +12149,7 @@
    "archetypes": [
     "artmage"
    ],
+   "betaName": "Artmegia the Academy City of Divine Arts",
    "frame": "spell",
    "hasEffect": true,
    "id": "74733322",
@@ -12297,6 +12329,7 @@
    ],
    "atk": 1000,
    "attribute": "earth",
+   "betaName": "Great General of the Six Samurai",
    "frame": "link",
    "hasEffect": true,
    "id": "74752631",
@@ -12473,6 +12506,7 @@
    "archetypes": [
     "shiranui"
    ],
+   "betaName": "Shiraui Style Skill",
    "frame": "trap",
    "hasEffect": true,
    "id": "74798297",
@@ -13770,6 +13804,7 @@
     "magician",
     "pendulumgraph"
    ],
+   "betaName": "Pendulumgraph of Ages",
    "frame": "spell",
    "hasEffect": true,
    "id": "74850403",
@@ -14342,6 +14377,7 @@
    ],
    "atk": 0,
    "attribute": "dark",
+   "betaName": "Mimickuril",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -14412,6 +14448,7 @@
    ],
    "atk": 3800,
    "attribute": "light",
+   "betaName": "El Rey Conquista Eldlich",
    "def": 3500,
    "frame": "fusion",
    "hasEffect": true,
@@ -14503,6 +14540,7 @@
    ],
    "atk": 0,
    "attribute": "wind",
+   "betaName": "Adamatia Crysta - Raptite",
    "def": 2200,
    "frame": "effect",
    "hasEffect": true,
@@ -14689,6 +14727,7 @@
    "archetypes": [
     "snake-eye"
    ],
+   "betaName": "The Glaring Ruler Snake-Eyes",
    "frame": "trap",
    "hasEffect": true,
    "id": "74906081",
@@ -14771,6 +14810,7 @@
    "archetypes": [
     "tearlaments"
    ],
+   "betaName": "Tearalaments Salic",
    "frame": "trap",
    "hasEffect": true,
    "id": "74920585",
@@ -15042,6 +15082,7 @@
    ],
    "atk": 0,
    "attribute": "dark",
+   "betaName": "Dinorphia Stealthbegia",
    "def": 2500,
    "frame": "fusion",
    "hasEffect": true,
@@ -15134,6 +15175,7 @@
    ],
    "atk": 2000,
    "attribute": "earth",
+   "betaName": "Subterror Behemoth Apparition",
    "frame": "link",
    "hasEffect": true,
    "id": "74937659",
@@ -15486,6 +15528,7 @@
    ],
    "atk": 1900,
    "attribute": "light",
+   "betaName": "Alien Shocktrooper Mighty/Frame",
    "frame": "link",
    "hasEffect": true,
    "id": "74974229",
@@ -15737,6 +15780,7 @@
    "aliases": [
     "Grain Corn Token"
    ],
+   "betaName": "Grain Corn Token",
    "frame": "token",
    "hasEffect": true,
    "id": "74983882",
@@ -15768,6 +15812,7 @@
    ],
    "atk": 2800,
    "attribute": "earth",
+   "betaName": "Skulldeat, the Chained Dracoserpent",
    "frame": "link",
    "hasEffect": true,
    "id": "74997493",

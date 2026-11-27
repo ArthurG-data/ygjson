@@ -224,6 +224,7 @@
    ],
    "atk": 200,
    "attribute": "fire",
+   "betaName": "Roe Suship",
    "def": 300,
    "frame": "effect",
    "hasEffect": true,
@@ -303,6 +304,9 @@
    ]
   },
   {
+   "aliases": [
+    "Synch Realm"
+   ],
    "archetypes": [
     "synchron"
    ],
@@ -343,6 +347,23 @@
    "passcode": 61032879,
    "prints": [
     {
+     "id": "ots-tournament-pack-22:61032879:OP22-EN022:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       505921
+      ]
+     },
+     "number": "OP22-EN022",
+     "rarity": "common",
+     "region": "EN",
+     "set": "ots-tournament-pack-22",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Synch Realm"
+     }
+    },
+    {
      "id": "starter-deck-yu-gi-oh-5d-s:61032879:5DS1-EN022:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -370,6 +391,7 @@
    ],
    "atk": 1000,
    "attribute": "light",
+   "betaName": "Sky Thunder Xenovader△ Yomi",
    "def": 2500,
    "frame": "effect",
    "hasEffect": true,
@@ -770,6 +792,7 @@
    "archetypes": [
     "polymerization"
    ],
+   "betaName": "Fusion Reinforcement",
    "frame": "spell",
    "hasEffect": true,
    "id": "61070601",
@@ -991,6 +1014,7 @@
    ],
    "atk": 1700,
    "attribute": "dark",
+   "betaName": "Hellfire Dragon, Ghost Wyvern",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -1062,6 +1086,7 @@
    ],
    "atk": 1200,
    "attribute": "fire",
+   "betaName": "Palma Ryzeal",
    "def": 2400,
    "frame": "effect",
    "hasEffect": true,
@@ -1460,6 +1485,7 @@
    ],
    "atk": 1500,
    "attribute": "wind",
+   "betaName": "Sky Striker Mecha - Adhilsaber",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -1600,6 +1626,7 @@
    "archetypes": [
     "magistus"
    ],
+   "betaName": "Tris Magistus",
    "frame": "spell",
    "hasEffect": true,
    "id": "61159609",
@@ -1665,6 +1692,7 @@
    ],
    "atk": 2700,
    "attribute": "dark",
+   "betaName": "Amunesia, Queen of the Abhyss",
    "def": 2100,
    "frame": "effect",
    "hasEffect": true,
@@ -3127,6 +3155,7 @@
    ],
    "atk": 2500,
    "attribute": "dark",
+   "betaName": "Exceeds Skull Archfiend",
    "def": 1200,
    "frame": "xyz",
    "hasEffect": true,
@@ -3456,6 +3485,7 @@
    "aliases": [
     "Repeated Land Transaction"
    ],
+   "betaName": "Repeated Land Transaction",
    "frame": "spell",
    "hasEffect": true,
    "id": "61264008",
@@ -3623,6 +3653,7 @@
    ],
    "atk": 2500,
    "attribute": "fire",
+   "betaName": "Magistus Dragon Vahram",
    "def": 2900,
    "frame": "synchro",
    "hasEffect": true,
@@ -3695,6 +3726,7 @@
    ],
    "atk": 1800,
    "attribute": "light",
+   "betaName": "Trickster Candina",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -3925,6 +3957,7 @@
    ],
    "atk": 2400,
    "attribute": "water",
+   "betaName": "Burgesstoma Anomalocaris",
    "def": 0,
    "frame": "xyz",
    "hasEffect": true,
@@ -4543,6 +4576,7 @@
    "archetypes": [
     "void"
    ],
+   "betaName": "Void Liberation",
    "frame": "spell",
    "hasEffect": true,
    "id": "61345801",
@@ -4774,6 +4808,7 @@
    ],
    "atk": 2000,
    "attribute": "water",
+   "betaName": "CXyz - Naphil Asylum Chaos Knight",
    "def": 3000,
    "frame": "xyz",
    "hasEffect": true,
@@ -5003,6 +5038,7 @@
    "archetypes": [
     "phantasm-spiral"
    ],
+   "betaName": "Deep Whirlpool of the Mythic Radiance Dragon",
    "frame": "trap",
    "hasEffect": true,
    "id": "61397885",
@@ -5416,6 +5452,7 @@
    "archetypes": [
     "paleozoic"
    ],
+   "betaName": "Burgesstoma Hallucigenia",
    "frame": "trap",
    "hasEffect": true,
    "id": "61420130",
@@ -5838,6 +5875,7 @@
    ],
    "atk": 800,
    "attribute": "dark",
+   "betaName": "Necrolancer the Timelord",
    "def": 900,
    "frame": "normal",
    "hasEffect": false,
@@ -5963,6 +6001,7 @@
    ],
    "atk": 0,
    "attribute": "water",
+   "betaName": "Loud Cloud, the Serpentine Storm",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -6877,6 +6916,7 @@
    ],
    "atk": 2000,
    "attribute": "dark",
+   "betaName": "Cursed Dragon - Curse of Dragon",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -7146,6 +7186,7 @@
    "archetypes": [
     "true-draco"
    ],
+   "betaName": "Apocalypse of the True Dracos",
    "frame": "trap",
    "hasEffect": true,
    "id": "61529473",
@@ -7372,6 +7413,7 @@
    "archetypes": [
     "elementsaber"
    ],
+   "betaName": "Temple of the Elemental Lords",
    "frame": "spell",
    "hasEffect": true,
    "id": "61557074",
@@ -8167,6 +8209,7 @@
    ],
    "atk": 2400,
    "attribute": "earth",
+   "betaName": "Datascape Dragon - Longlong",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -8781,6 +8824,7 @@
    ],
    "atk": 1000,
    "attribute": "dark",
+   "betaName": "Predaplant Darling Cobra",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -10508,6 +10552,7 @@
    "archetypes": [
     "morganite"
    ],
+   "betaName": "Guilt Gripping Morganite",
    "frame": "spell",
    "hasEffect": true,
    "id": "61822419",
@@ -11243,6 +11288,7 @@
    "archetypes": [
     "yosenju"
    ],
+   "betaName": "Yosenju's Divine Mountain Winds",
    "frame": "spell",
    "hasEffect": true,
    "id": "61884774",
@@ -11914,6 +11960,7 @@
    "archetypes": [
     "emblema"
    ],
+   "betaName": "Emblema Atonement",
    "frame": "spell",
    "hasEffect": true,
    "id": "61950680",
@@ -12362,6 +12409,7 @@
    "aliases": [
     "Secret Passphrase"
    ],
+   "betaName": "Secret Passphrase",
    "frame": "spell",
    "hasEffect": true,
    "id": "61976639",
@@ -12475,6 +12523,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Risette of the White Woods",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,

@@ -163,6 +163,7 @@ def card_entry(raw: dict) -> dict:
     if misc.get("konami_id") is not None:
         card["identifiers"]["konamiId"] = misc["konami_id"]
     if misc.get("beta_name") and misc["beta_name"] != raw["name"]:
+        card["betaName"] = misc["beta_name"]
         card["aliases"] = [misc["beta_name"]]
     if raw.get("attribute"):
         card["attribute"] = raw["attribute"].lower()
