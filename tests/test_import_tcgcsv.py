@@ -488,13 +488,15 @@ def test_colour_products_get_their_own_prints_and_anything_else_is_a_conflict():
 
 
 def test_a_print_holding_another_rarity_at_its_own_rarity_goes_to_conflicts_and_does_not_recurse():
-    base = mkprint("lob", "100", "LOB-EN001", "ultra_rare", identifiers={"tcgplayerProductIds": [6]},
-                   tcgplayer={"name": "Alpha (Secret Rare)", "match": "number"})
-    w = world([base])
-    products = {1: [single(1, "Alpha (Secret Rare)", "LOB-EN001", "Secret Rare", 6),
-                    single(1, "Alpha (Ultra Rare)", "LOB-EN001", "Ultra Rare", 7)]}
+    # Both products come from a group whose set lacks the number, so they are tried in lob in product order: 6 takes
+    # the ultra rare print by number alone, and 7 then finds it holding a secret rare.
+    w = world([mkprint("lob", "100", "LOB-EN001", "ultra_rare")], extra_sets=[mkset("x", "X Pack", "XXX")])
+    w["groups"].append(mkgroup(2, "X Pack", "XXX"))
+    products = {2: [single(2, "Alpha (Secret Rare)", "LOB-EN001", "Secret Rare", 6),
+                    single(2, "Alpha (Ultra Rare)", "LOB-EN001", "Ultra Rare", 7)]}
     out = go(products=products, **w)
     assert {c["productId"] for c in out["review"]["conflicts"]} == {7}
+    assert prints_of(out, "100")["lob:100:LOB-EN001:ultra_rare"]["identifiers"]["tcgplayerProductIds"] == [6]
 
 
 def test_a_rarity_only_the_field_states_is_a_conflict_and_not_a_new_print():
@@ -692,6 +694,23 @@ def test_a_product_refused_on_a_rerun_leaves_the_print_an_earlier_run_gave_it():
     out = go(products=products, **w)
     assert prints_of(out, "100")["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [6]
     assert {r["productId"] for r in out["review"]["unmatched"]} == {7}
+
+
+def test_a_product_an_earlier_run_left_on_a_print_does_not_keep_the_right_one_off_it():
+    # An earlier rule put product 8 (Beta) on Alpha's print; now 8 ties to Beta's own print, after 7 has been tried.
+    wrong = mkprint("lob", "100", "LOB-EN001", "rare", identifiers={"tcgplayerProductIds": [8]},
+                    tcgplayer={"name": "Beta", "match": "number"})
+    w = world([wrong])
+    w["cards"].append(mkcard("200", "Beta", [mkprint("lob", "200", "LOB-EN002", "rare")]))
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Rare", 7), single(1, "Beta", "LOB-EN002", "Rare", 8)]}
+    out = go(products=products, **w)
+    assert prints_of(out, "100")["lob:100:LOB-EN001:rare"]["identifiers"]["tcgplayerProductIds"] == [7]
+    assert prints_of(out, "100")["lob:100:LOB-EN001:rare"]["tcgplayer"] == {"name": "Alpha", "match": "number+rarity"}
+    assert prints_of(out, "200")["lob:200:LOB-EN002:rare"]["identifiers"]["tcgplayerProductIds"] == [8]
+    assert out["review"]["conflicts"] == []
+    clean = world([mkprint("lob", "100", "LOB-EN001", "rare")])
+    clean["cards"].append(mkcard("200", "Beta", [mkprint("lob", "200", "LOB-EN002", "rare")]))
+    assert out["files"] == go(products=products, **clean)["files"]
 
 
 def test_settling_shared_editions_changes_nothing_on_the_next_run():

@@ -31,7 +31,8 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
      with, or a name a product tied to it by number earlier in this run sells it under, never one an earlier run
      wrote), and its rarity is known. The print is minted (source tcgplayer), in the group's set, or in a set minted
      for a group that matched none                                     -> minted
-Whatever remains goes to review `unmatched` with the reason. A product lands on one print only. A print holds
+Whatever remains goes to review `unmatched` with the reason. Each run decides every product afresh, whatever an earlier
+run left on the prints. A product lands on one print only. A print holds
 several products only when they are the same card at the same rarity and price different editions; a product that would
 share a print with another card, another rarity, or an edition another product already prices goes to review `conflicts`.
 
@@ -380,7 +381,7 @@ class Importer:
         self.conflicts: list[dict] = []
         self.aliases: dict[int, collections.Counter] = collections.defaultdict(collections.Counter)
         self.landed_in: dict[str, set[int]] = collections.defaultdict(set)  # set id -> product ids
-        self.owner: dict[int, dict] = {}  # product id -> the print that holds it
+        self.rekeyed_before: set[str] = set()  # prints an earlier run re-keyed to TCGplayer's rarity
         # Only the products that would stay on the base print: a refused product, or one naming a colour or art, shares
         # nothing with a treatment there.
         # {(number, rarity): [(product id, group id)]}; whether one is a neighbour depends on the set, see `_shares_number`.
@@ -391,8 +392,7 @@ class Importer:
         for body in files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
-                    for pid in _product_ids(p):
-                        self.owner[pid] = p
+                    self._forget_products(p)
         self.mapping = mapping
         self.set_of_group: dict[int, str] = {}
         self.rekeyed = 0
@@ -401,6 +401,19 @@ class Importer:
         self.minted_prints = 0
         self.minted_variants = 0
         self.eras = eras or []
+
+    def _forget_products(self, p: dict) -> None:
+        """Take off the print the products of this run's input an earlier run left there, so every product is decided
+        again and a product that now belongs elsewhere never keeps the right one off. A print an earlier run re-keyed
+        keeps its label, because it now matches exactly."""
+        if p.get("tcgplayer", {}).get("match") == "number+rarity-from-tcgplayer":
+            self.rekeyed_before.add(p["id"])
+        kept = [i for i in _product_ids(p) if i not in self.by_id]
+        if kept:
+            p["identifiers"]["tcgplayerProductIds"] = kept
+        else:
+            p.pop("identifiers", None)
+            p.pop("tcgplayer", None)
 
     # --- groups -----------------------------------------------------------------------------------------------
 
@@ -546,21 +559,19 @@ class Importer:
         variant = variant_of(prod)
         if variant and not p.get("variant") and (_names_colour_or_art(prod) or self._shares_number(prod, mine[1], p["set"])):
             p = self._variant_print(card, p, variant)
-        previous = self.owner.get(prod.product_id)
-        if previous is not None and previous is not p:
-            self._release(previous, prod)
         ids = p.setdefault("identifiers", {}).setdefault("tcgplayerProductIds", [])
         if prod.product_id not in ids:
             ids.append(prod.product_id)
             ids.sort()
         if p.get("source") == SOURCE and not p.get("variant"):
             match = MINTED
+        if p["id"] in self.rekeyed_before and match == "number+rarity":
+            match = "number+rarity-from-tcgplayer"
         kept = p.get("tcgplayer")
         if kept is None:
             p["tcgplayer"] = {"name": prod.name, "match": match}
         elif kept["match"] != MINTED and not (kept["match"] == "number+rarity-from-tcgplayer" and match == "number+rarity"):
             kept["match"] = match  # a re-keyed or minted print matches exactly on the next run, but keeps its label
-        self.owner[prod.product_id] = p
         self.landed_in[p["set"]].add(prod.product_id)
         # A name TCGplayer sells the card under by number names it for a later product of this run, so a print minted
         # from it never waits for merge_aliases to write it and a later run to read it.
@@ -577,14 +588,6 @@ class Importer:
             del p["identifiers"], p["tcgplayer"]
         elif p["tcgplayer"]["name"] == prod.name and remaining[0] in self.by_id:
             p["tcgplayer"]["name"] = self.by_id[remaining[0]].name
-        self.owner.pop(prod.product_id, None)
-
-    def release_refused(self) -> None:
-        """Take off its print a product an earlier run left there and this run refused."""
-        landed = set().union(*self.landed_in.values())
-        for product_id, p in list(self.owner.items()):
-            if product_id in self.by_id and product_id not in landed:
-                self._release(p, self.by_id[product_id])
 
     def settle_shared_editions(self) -> None:
         """Leave each print one product per edition, because a print has one price per edition. The product pricing the
@@ -791,7 +794,6 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
     imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved)
     unmatched_groups = imp.match_groups()
     imp.match_singles()
-    imp.release_refused()
     imp.settle_shared_editions()
     _drop_empty_minted_prints(imp.catalog.files)
     editions_changed = imp.merge_editions()
