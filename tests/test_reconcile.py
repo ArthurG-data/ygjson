@@ -349,7 +349,7 @@ def test_printing_of_a_retired_print_points_at_the_successor_print():
     got = reconcile.reconcile_printings(entries, [(new, "en", "first")], {new: "u2"},
                                         {"u1": retired(KEY, "u1", successors=["u2"]), "u2": live(new, "u2")})
     assert got["u1:en:first"]["successors"] == ["u2:en:first"]
-    assert got["u1:en:unlimited"]["status"] == "retired" and got["u1:en:unlimited"]["successors"] == []
+    assert got["u1:en:unlimited"]["status"] == "retired" and got["u1:en:unlimited"]["successors"] == ["u2:en:first"]
     assert got["u2:en:first"]["status"] == "live"
 
 
