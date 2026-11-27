@@ -50,30 +50,30 @@ def rekey_card(key: str, card_successor: Mapping[str, str]) -> str:
 
 
 def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_successor: Mapping[str, str] = {},
-                     hand: Mapping[str, str] = {}) -> tuple[dict[str, dict], dict[str, str], list[dict]]:
-    """Decide the ledger id each current print carries: (new print entries, {current key: id}, review rows).
+                     hand: Mapping[str, str] = {}) -> tuple[dict[str, dict], dict[str, str]]:
+    """Decide the ledger id each current print carries: (new print entries, {current key: id}).
 
     A newcomer (a print no live entry has) takes, by the first rule that settles it: 1 the id of a retired entry that
-    had its key, 2 the id of the one orphan (a live entry whose print is gone) that held a TCGplayer product no other
-    current print holds, when that orphan is of the newcomer's card, 3 the one orphan at its (set, card, number), 4 the
-    one orphan at its (card, number, rarity, variant) in another set, when the number is not empty, 5 the retired id
-    `hand` gives it, 6 a new id. Each rule is a pass over what is still unmatched. Orphans left are retired with successors and listed for review. A retired
-    entry that had a current key (as its key or a former key) gains that key's id as a successor, so a reader holding
-    it reaches the print now at its key. `entries` is not modified.
+    had its key (the smallest when several had it), 2 the id of the one orphan (a live entry whose print is gone) that
+    held a TCGplayer product no other current print holds, when that orphan is of the newcomer's card, 3 the one
+    orphan at its (set, card, number), 4 the one orphan at its (card, number, rarity, variant) in another set, when the
+    number is not empty, 5 the retired id `hand` gives it (one that is not a retired id is ignored), 6 a new id. Each
+    rule is a pass over what is still unmatched. Orphans left are retired with the successors `_successor_places`
+    finds. A retired entry that had a current key (as its key or a former key) gains that key's id as a successor, so
+    a reader holding it reaches the print now at its key. `entries` is not modified.
     """
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
     facts = {p.key: p for p in current}
     carried, orphans = _carry_live(out, facts, card_successor)
     newcomers = {k: facts[k] for k in sorted(facts) if k not in carried}
-    review: list[dict] = []
 
     revivable = {i for i, e in out.items() if e["status"] == "retired"}
-    _revive(out, newcomers, revivable, carried, review)
+    _revive(out, newcomers, revivable, carried)
     _settle(_by_product(facts, newcomers, orphans), newcomers, orphans, carried)
     _settle(_by_place(newcomers, orphans, lambda f: (f.set, f.card, f.number)), newcomers, orphans, carried)
     _settle([(k, i) for k, i in _by_place(newcomers, orphans, lambda f: (f.card, f.number, f.rarity, f.variant))
              if newcomers[k].number and newcomers[k].set != orphans[i].set], newcomers, orphans, carried)
-    _hand(hand, newcomers, revivable, carried, review)
+    _hand(hand, newcomers, revivable, carried)
     taken = set(out)
     for key in newcomers:
         carried[key] = ids.mint(key, taken)
@@ -99,10 +99,7 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
             back = {carried[k] for k in [e["key"], *e["formerKeys"]] if k in carried}
             if not back <= set(e["successors"]):
                 e["successors"] = sorted(set(e["successors"]) | back)
-    for i in sorted(orphans):
-        review.append({"id": i, "key": out[i]["key"], "reason": "retired", "successors": out[i]["successors"]})
-
-    return dict(sorted(out.items())), dict(sorted(carried.items())), sorted(review, key=lambda r: (r["id"], r["key"]))
+    return dict(sorted(out.items())), dict(sorted(carried.items()))
 
 
 def printings_of(sets: list[dict], files: dict[str, dict]) -> list[tuple[str, str, str]]:
@@ -153,12 +150,12 @@ def reconcile_printings(entries: dict[str, dict], printings: list[tuple[str, str
     return dict(sorted(out.items()))
 
 
-def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[str, dict], dict[str, str], list[dict]]:
-    """Update the card ledger: (new card entries, {retired card id: its one successor}, review rows).
+def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[str, dict], dict[str, str]]:
+    """Update the card ledger: (new card entries, {retired card id: its one successor}).
 
     A card in `cards` is live: its `name` and `konamiId` (kept from the entry when the card has none) are refreshed.
     A live entry whose card is gone is retired; its successor is the one current card with its name, else the one
-    with its konamiId. With none or several it has no successor and a review row lists the candidates. An entry
+    with its konamiId. With none or several it has no successor. An entry
     already retired is left as it is. `entries` is not modified.
     """
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
@@ -178,7 +175,6 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
             by_konami[card["identifiers"]["konamiId"]].append(cid)
 
     successor: dict[str, str] = {}
-    review: list[dict] = []
     for cid, entry in out.items():
         if cid in current or entry["status"] == "retired":
             continue
@@ -191,8 +187,7 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
             successor[cid] = found[0]
         else:
             entry["successors"] = []
-            review.append({"id": cid, "name": entry["name"], "reason": "retired", "successors": list(found)})
-    return dict(sorted(out.items())), dict(sorted(successor.items())), sorted(review, key=lambda r: r["id"])
+    return dict(sorted(out.items())), dict(sorted(successor.items()))
 
 
 def set_identity(s: dict) -> set[str]:
@@ -314,8 +309,8 @@ def _carry_live(out: dict[str, dict], facts: Mapping[str, PrintFacts],
     return carried, orphans
 
 
-def _revive(out: dict[str, dict], newcomers: dict[str, PrintFacts], revivable: set[str], carried: dict[str, str],
-            review: list[dict]) -> None:
+def _revive(out: dict[str, dict], newcomers: dict[str, PrintFacts], revivable: set[str],
+            carried: dict[str, str]) -> None:
     """Rule 1: a newcomer whose key a retired entry had takes that id back; the smallest when several had it."""
     had: dict[str, list[str]] = defaultdict(list)
     for i in sorted(revivable):
@@ -325,8 +320,6 @@ def _revive(out: dict[str, dict], newcomers: dict[str, PrintFacts], revivable: s
         candidates = [i for i in had.get(key, []) if i in revivable]
         if not candidates:
             continue
-        if len(candidates) > 1:
-            review.append({"id": candidates[0], "key": key, "reason": "ambiguous-revival", "successors": []})
         carried[key] = candidates[0]
         revivable.discard(candidates[0])
         del newcomers[key]
@@ -377,16 +370,15 @@ def _settle(pairs: list[tuple[str, str]], newcomers: dict[str, PrintFacts], orph
             del newcomers[keys[0]], orphans[i]
 
 
-def _hand(hand: Mapping[str, str], newcomers: dict[str, PrintFacts], revivable: set[str], carried: dict[str, str],
-          review: list[dict]) -> None:
-    """Rule 5: the retired id a person gave the newcomer's key; one that is not a retired id is ignored and reviewed."""
+def _hand(hand: Mapping[str, str], newcomers: dict[str, PrintFacts], revivable: set[str],
+          carried: dict[str, str]) -> None:
+    """Rule 5: the retired id a person gave the newcomer's key; one that is not a retired id is ignored (check reports
+    it)."""
     for key in [k for k in newcomers if k in hand]:
         if hand[key] in revivable:
             carried[key] = hand[key]
             revivable.discard(hand[key])
             del newcomers[key]
-        else:
-            review.append({"id": hand[key], "key": key, "reason": "bad-hand-decision", "successors": []})
 
 
 def _successor_places(f: PrintFacts) -> tuple[tuple | None, ...]:

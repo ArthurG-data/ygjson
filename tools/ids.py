@@ -142,9 +142,36 @@ def apply_successors(entries: dict[str, dict], overrides: Mapping[str, list[str]
     return out
 
 
-def review_body(prints: list[dict], cards: list[dict], renames: list[dict]) -> dict:
-    """The body of review/ids.json: what reconcile retired or renamed, for a person to look at."""
-    return {"prints": sorted(prints, key=lambda r: r["id"]), "cards": sorted(cards, key=lambda r: r["id"]),
+def reached(entries: Mapping[str, dict], start: str) -> list[str]:
+    """The live ids a retired entry's successors lead to, followed through retired successors to the end, sorted."""
+    seen, live, todo = {start}, set(), list(entries[start]["successors"])
+    while todo:
+        i = todo.pop()
+        if i in seen or i not in entries:
+            continue
+        seen.add(i)
+        if entries[i]["status"] == "live":
+            live.add(i)
+        else:
+            todo.extend(entries[i]["successors"])
+    return sorted(live)
+
+
+def review_body(ledger: Mapping[str, Mapping[str, dict]], settled: Container[str], renames: list[dict]) -> dict:
+    """The body of review/ids.json, from the ledger alone: each retired print and card whose successors do not lead to
+    exactly one live id ("dead-end" when none, "several"), with the live ids they reach, unless `settled` (the print
+    ids mappings/ids.json gives successors) holds it; and the `renames` rows sorted by "from"."""
+    def rows(kind: str, label: str, skip: Container[str]) -> list[dict]:
+        found = []
+        for i, e in sorted(ledger.get(kind, {}).items()):
+            if e["status"] != "retired" or i in skip:
+                continue
+            live = reached(ledger[kind], i)
+            if len(live) != 1:
+                found.append({"id": i, label: e[label], "reason": "several" if live else "dead-end",
+                              "successors": live})
+        return found
+    return {"prints": rows("prints", "key", settled), "cards": rows("cards", "name", ()),
             "renames": sorted(renames, key=lambda r: r["from"])}
 
 
@@ -155,13 +182,13 @@ SET_ALIASES = ygjson.ROOT / "mappings" / "ygoprodeck_set_aliases.json"
 def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, dict], archetypes: dict,
         sealed: dict[str, dict], hand: tuple[dict[str, str], dict[str, list[str]]],
         merges: Mapping[str, str]) -> tuple[dict[str, dict[str, dict]], dict, list[dict]]:
-    """Reconcile every kind with the data: (new ledger, review body, rename rows). Cards go first so prints can follow
-    a retired card to its successor; printings follow the prints. `merges` is {alias set slug: target slug}. `ledger`
-    is not modified."""
+    """Reconcile every kind with the data: (new ledger, its review body, rename rows). Cards go first so prints can
+    follow a retired card to its successor; printings follow the prints. `merges` is {alias set slug: target slug}.
+    `ledger` is not modified."""
     keys, successors = hand
     cards = [c for body in files.values() for c in body.get("cards", [])]
-    card_entries, card_successor, card_rows = reconcile.reconcile_cards(ledger.get("cards", {}), cards)
-    print_entries, print_ids, print_rows = reconcile.reconcile_prints(
+    card_entries, card_successor = reconcile.reconcile_cards(ledger.get("cards", {}), cards)
+    print_entries, print_ids = reconcile.reconcile_prints(
         ledger.get("prints", {}), reconcile.current_prints(files), card_successor, keys)
     print_entries = apply_successors(print_entries, successors)
     printing_entries = reconcile.reconcile_printings(ledger.get("printings", {}), reconcile.printings_of(sets, files),
@@ -175,7 +202,7 @@ def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, d
     renames = set_renames + archetype_renames
     new = {"prints": print_entries, "printings": printing_entries, "cards": card_entries, "sets": set_entries,
            "archetypes": archetype_entries, "sealed": sealed_entries}
-    return new, review_body(print_rows, card_rows, renames), renames
+    return new, review_body(new, successors, renames), renames
 
 
 def _both_ways(kind: str, entries: Mapping[str, dict], current: Container[str], field: str = "id") -> list[str]:

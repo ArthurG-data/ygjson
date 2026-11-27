@@ -122,12 +122,41 @@ def test_hand_successors_override_the_computed_ones():
     assert entries["gone1"]["successors"] == []
 
 
-def test_review_body_is_sorted():
-    body = ids.review_body([{"id": "b"}, {"id": "a"}], [{"id": "z"}, {"id": "y"}],
-                           [{"from": "q", "to": "r"}, {"from": "p", "to": "s"}])
-    assert [r["id"] for r in body["prints"]] == ["a", "b"]
-    assert [r["id"] for r in body["cards"]] == ["y", "z"]
+def _p(id_, status="live", successors=()):
+    return {"id": id_, "key": f"k-{id_}", "formerKeys": [], "status": status, "successors": list(successors),
+            "products": []}
+
+
+def _c(id_, status="live", successors=()):
+    return {"id": id_, "name": f"n-{id_}", "status": status, "successors": list(successors)}
+
+
+def test_review_lists_the_retired_ids_that_do_not_reach_exactly_one_live_id():
+    prints = {e["id"]: e for e in [
+        _p("live1"), _p("live2"),
+        _p("one", "retired", ["live1"]),                  # one live successor: settled by itself
+        _p("chain", "retired", ["one"]),                  # through a retired id to one live id: settled
+        _p("dead", "retired"),                            # nothing: dead end
+        _p("deadchain", "retired", ["dead"]),             # through a dead end: dead end
+        _p("split", "retired", ["live2", "live1"]),       # two live ids: several
+        _p("wide", "retired", ["split", "one"]),          # reaches live1 and live2: several
+        _p("loop", "retired", ["loop2"]), _p("loop2", "retired", ["loop"]),  # a cycle reaches nothing
+        _p("handed", "retired", ["live1", "live2"]),      # settled by mappings/ids.json
+    ]}
+    cards = {e["id"]: e for e in [_c("9"), _c("1", "retired", ["9"]), _c("2", "retired")]}
+    body = ids.review_body({"prints": prints, "cards": cards}, {"handed"},
+                           [{"from": "q", "to": "r", "name": "Q"}, {"from": "p", "to": "s", "name": "P"}])
+    assert body["prints"] == [
+        {"id": "dead", "key": "k-dead", "reason": "dead-end", "successors": []},
+        {"id": "deadchain", "key": "k-deadchain", "reason": "dead-end", "successors": []},
+        {"id": "loop", "key": "k-loop", "reason": "dead-end", "successors": []},
+        {"id": "loop2", "key": "k-loop2", "reason": "dead-end", "successors": []},
+        {"id": "split", "key": "k-split", "reason": "several", "successors": ["live1", "live2"]},
+        {"id": "wide", "key": "k-wide", "reason": "several", "successors": ["live1", "live2"]},
+    ]
+    assert body["cards"] == [{"id": "2", "name": "n-2", "reason": "dead-end", "successors": []}]
     assert [r["from"] for r in body["renames"]] == ["p", "q"]
+    assert set(body) == {"prints", "cards", "renames"}
 
 
 def test_an_applied_hand_decision_keeps_check_green():
@@ -177,6 +206,25 @@ def test_run_twice_leaves_the_ledger_byte_identical(tmp_path):
     ids.save_ledger(second, tmp_path / "b")
     for kind in ids.KINDS:
         assert (tmp_path / "a" / f"{kind}.json").read_bytes() == (tmp_path / "b" / f"{kind}.json").read_bytes()
+
+
+def test_review_comes_from_the_ledger_and_is_the_same_on_a_rerun():
+    import copy
+    from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
+    files = lambda card: {"046": {"cards": [card]}}
+    split = copy.deepcopy(CARD)  # PRINT_A's ultra_rare becomes a secret_rare and a starlight_rare
+    split["prints"][0].update(id=f"{SET}:46986414:LOB-EN005:secret_rare", rarity="secret_rare", identifiers={})
+    split["prints"].append({**split["prints"][0], "id": f"{SET}:46986414:LOB-EN005:starlight_rare",
+                            "rarity": "starlight_rare"})
+    ledger, _, _ = ids.run({k: {} for k in ids.KINDS}, SETS, files(CARD), ARCHETYPES, SEALED, ({}, {}), {})
+    ledger, review, _ = ids.run(ledger, SETS, files(split), ARCHETYPES, SEALED, ({}, {}), {})
+    old = ids.mint(PRINT_A, set())
+    assert [(r["id"], r["reason"], len(r["successors"])) for r in review["prints"]] == [(old, "several", 3)]
+    again, rerun, _ = ids.run(ledger, SETS, files(split), ARCHETYPES, SEALED, ({}, {}), {})
+    assert again == ledger and rerun == review
+    _, settled, _ = ids.run(ledger, SETS, files(split), ARCHETYPES, SEALED,
+                            ({}, {old: ledger["prints"][old]["successors"][:1]}), {})
+    assert settled["prints"] == []
 
 
 def test_check_reports_a_print_with_no_ledger_entry():

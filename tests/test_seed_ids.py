@@ -71,7 +71,20 @@ def test_seed_carries_the_id_across_a_rarity_fix(repo):
     printing = ledger["printings"][f"{born}:en:first"]
     assert printing["key"] == f"{FIXED}:en:first" and printing["formerIds"] == [f"{PRINT_A}:en:first"]
     assert set(ledger["sealed"]) == {"lob-booster-pack"} and set(ledger["sets"]) == {SET}
-    assert review == {"prints": [], "cards": [], "renames": [], "unresolved": []}
+    assert review == {"prints": [], "cards": [], "renames": []}
+
+
+def test_seed_review_is_the_final_ledgers(repo):
+    card = copy.deepcopy(CARD)
+    card["prints"] = [{**CARD["prints"][1], "id": f"{SET}:46986414:LOB-EN105:common", "number": "LOB-EN105"}]
+    _write(repo, "data/cards/046.json", {"cards": [card]})
+    _commit(repo, "renumber the common, drop the secret")
+
+    ledger, review = seed_ids.seed(seed_ids.commits("HEAD", root=repo), {}, root=repo)
+
+    assert review == ids.review_body(ledger, set(), [])
+    born = ids.mint(PRINT_A, set())
+    assert review["prints"] == [{"id": born, "key": FIXED, "reason": "dead-end", "successors": []}]
 
 
 def test_seed_records_release_printing_ids_as_former_ids(repo, tmp_path):

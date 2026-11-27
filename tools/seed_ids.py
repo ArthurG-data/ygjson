@@ -7,9 +7,10 @@ oldest first, with no hand decisions, so every key ever on main gets an entry: a
 one, or a retired id with successors. A file a commit lacks loads empty. A set or archetype rename is not an error
 here: it is listed under "renames" in review/ids.json with its commit. Then each DIR/AllPrintings.json (a release's
 {"data": {printing id: record}}) adds every printing id it published that the ledger does not hold to the formerIds
-of the printing its record's print and language and edition now have. The ids no printing can take are listed under
-"unresolved" in review/ids.json, and the run exits 1 after writing ids/ and the review. Refuses (exit 2, nothing
-written) when ids/ already holds entries: after the seed, reconcile only runs forward.
+of the printing its record's print and language and edition now have. review/ids.json is the final ledger's review
+(see tools/ids.py) with those renames; the ids no printing can take are listed under "unresolved", and the run exits
+1 after writing ids/ and the review. Refuses (exit 2, nothing written) when ids/ already holds entries: after the
+seed, reconcile only runs forward.
 """
 from __future__ import annotations
 
@@ -85,20 +86,21 @@ def add_release(ledger: dict[str, dict[str, dict]], data: dict[str, dict]) -> li
 def seed(commits: list[str], releases: dict[str, Path], *,
          root: Path = ygjson.ROOT) -> tuple[dict[str, dict[str, dict]], dict]:
     """(ledger, review): reconcile replayed over `commits` from an empty ledger, then the printing ids of each release
-    ({name: directory holding its AllPrintings.json}, in the order given) recorded. The review is the last run's, with
-    every commit's renames (each carrying its "commit") and the "unresolved" published printing ids."""
+    ({name: directory holding its AllPrintings.json}, in the order given) recorded. The review is the final ledger's
+    (ids.review_body), with every commit's renames (each carrying its "commit") and, when there are any, the
+    "unresolved" published printing ids."""
     ledger: dict[str, dict[str, dict]] = {kind: {} for kind in ids.KINDS}
-    review = ids.review_body([], [], [])
     renames: list[dict] = []
     for commit in commits:
         sets, files, archetypes, sealed, merges = snapshot(commit, root=root)
-        ledger, review, found = ids.run(ledger, sets, files, archetypes, sealed, ({}, {}), merges)
+        ledger, _, found = ids.run(ledger, sets, files, archetypes, sealed, ({}, {}), merges)
         renames += [{**r, "commit": commit} for r in found]
     unresolved: set[str] = set()
     for directory in releases.values():
         data = json.loads((Path(directory) / "AllPrintings.json").read_text(encoding="utf-8"))["data"]
         unresolved.update(add_release(ledger, data))
-    return ledger, {**review, "renames": renames, "unresolved": sorted(unresolved)}
+    review = ids.review_body(ledger, (), renames)
+    return ledger, {**review, "unresolved": sorted(unresolved)} if unresolved else review
 
 
 def _release(arg: str) -> tuple[str, Path]:
@@ -127,10 +129,10 @@ def main(argv: list[str] | None = None, *, root: Path = ygjson.ROOT) -> None:
     counts = [f"{kind} {sum(e['status'] == 'live' for e in ledger[kind].values())} live "
               f"{sum(e['status'] == 'retired' for e in ledger[kind].values())} retired" for kind in ids.KINDS]
     print(f"ids/ seeded from {len(history)} commits and {len(args.release)} releases: " + ", ".join(counts)
-          + f"; {len(review['renames'])} renames, {len(review['unresolved'])} unresolved")
-    for published in review["unresolved"]:
+          + f"; {len(review['renames'])} renames, {len(review.get('unresolved', []))} unresolved")
+    for published in review.get("unresolved", []):
         print(f"unresolved: {published}")
-    if review["unresolved"]:
+    if review.get("unresolved"):
         sys.exit(1)
 
 
