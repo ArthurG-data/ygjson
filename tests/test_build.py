@@ -3,6 +3,7 @@ import json
 import pytest
 
 import build
+import ids
 import ygjson
 from test_ygjson import ARCHETYPES, CARDS, ERAS, LEGALITY, SEALED, SETS
 
@@ -15,6 +16,10 @@ def data(monkeypatch):
     monkeypatch.setattr(ygjson, "load_archetypes", lambda: ARCHETYPES)
     monkeypatch.setattr(ygjson, "load_sealed", lambda: SEALED)
     monkeypatch.setattr(ygjson, "load_legality", lambda: LEGALITY)
+    ledger = ids.run({k: {} for k in ids.KINDS}, SETS, CARDS, ARCHETYPES, SEALED, ({}, {}), {})[0]
+    monkeypatch.setattr(ids, "load_ledger", lambda: ledger)
+    monkeypatch.setattr(ids, "load_hand", lambda: ({}, {}))
+    return ledger
 
 
 def test_without_a_cache_meta_has_no_sources(data, tmp_path):
@@ -52,3 +57,11 @@ def test_invalid_data_is_refused(data, monkeypatch, tmp_path):
     with pytest.raises(SystemExit) as e:
         build.build("0.1.0", "2026-10-28", tmp_path)
     assert "refusing to build" in str(e.value) and "no-such-archetype" in str(e.value)
+
+
+def test_data_the_ledger_does_not_match_is_refused(data, monkeypatch, tmp_path):
+    ledger = {**data, "cards": {"other": {**data["cards"]["46986414"], "id": "other"}}}
+    monkeypatch.setattr(ids, "load_ledger", lambda: ledger)
+    with pytest.raises(SystemExit) as e:
+        build.build("0.1.0", "2026-10-28", tmp_path)
+    assert "refusing to build" in str(e.value) and "card '46986414': no live ledger entry" in str(e.value)

@@ -134,3 +134,152 @@ def test_hand_may_not_give_one_retired_id_to_two_keys():
     errors = ids.hand_errors(_hand_ledger(), ({"a": "gone1", "b": "gone1"}, {}))
     assert len(errors) == 1
     assert "'a'" in errors[0] and "'b'" in errors[0] and "gone1" in errors[0]
+
+
+def _fixture_run(ledger=None, sets=None):
+    from test_ygjson import ARCHETYPES, CARDS, SEALED, SETS
+    ledger = ledger if ledger is not None else {k: {} for k in ids.KINDS}
+    return ids.run(ledger, sets or SETS, CARDS, ARCHETYPES, SEALED, ({}, {}), {})
+
+
+def _fixture_check(ledger):
+    from test_ygjson import ARCHETYPES, CARDS, SEALED, SETS
+    return ids.check(ledger, SETS, CARDS, ARCHETYPES, SEALED)
+
+
+def test_run_twice_leaves_the_ledger_byte_identical(tmp_path):
+    first, review, renames = _fixture_run()
+    assert renames == [] and review == {"prints": [], "cards": [], "renames": []}
+    assert {k: len(v) for k, v in first.items()} == {"prints": 2, "printings": 3, "cards": 1, "sets": 1,
+                                                     "archetypes": 1, "sealed": 1}
+    ids.save_ledger(first, tmp_path / "a")
+    second, _, _ = _fixture_run(ids.load_ledger(tmp_path / "a"))
+    ids.save_ledger(second, tmp_path / "b")
+    for kind in ids.KINDS:
+        assert (tmp_path / "a" / f"{kind}.json").read_bytes() == (tmp_path / "b" / f"{kind}.json").read_bytes()
+
+
+def test_check_reports_a_print_with_no_ledger_entry():
+    from test_ygjson import PRINT_A
+    ledger, _, _ = _fixture_run()
+    assert _fixture_check(ledger) == []
+    pid = next(i for i, e in ledger["prints"].items() if e["key"] == PRINT_A)
+    del ledger["prints"][pid]
+    errors = _fixture_check(ledger)
+    assert any(PRINT_A in e and "no live ledger entry" in e for e in errors)
+
+
+def test_check_reports_retired_entries_in_the_data_and_missing_successors():
+    ledger, _, _ = _fixture_run()
+    ledger["sets"]["legend-of-blue-eyes-white-dragon"]["status"] = "retired"
+    ledger["cards"]["46986414"]["successors"] = ["nowhere"]
+    ledger["sealed"]["gone-box"] = {"id": "other-box", "tcgplayerProductId": 9, "status": "live", "successors": []}
+    errors = _fixture_check(ledger)
+    assert any("legend-of-blue-eyes-white-dragon" in e and "retired" in e for e in errors)
+    assert any("46986414" in e and "nowhere" in e for e in errors)
+    assert any("gone-box" in e and "other-box" in e for e in errors)  # dict key and id disagree
+    assert any("other-box" in e and "not in the data" in e for e in errors)
+
+
+def test_check_includes_hand_errors():
+    ledger, _, _ = _fixture_run()
+    errors = ids.check(ledger, *_fixture_data(), hand=({"x:y:z:w": "ghost"}, {}))
+    assert any("ghost" in e for e in errors)
+
+
+def _fixture_data():
+    from test_ygjson import ARCHETYPES, CARDS, SEALED, SETS
+    return SETS, CARDS, ARCHETYPES, SEALED
+
+
+def test_diff_errors_reports_a_removed_entry():
+    before, _, _ = _fixture_run()
+    after = {k: dict(v) for k, v in before.items()}
+    assert ids.diff_errors(before, after) == []
+    removed = next(iter(after["printings"]))
+    del after["printings"][removed]
+    errors = ids.diff_errors(before, after)
+    assert len(errors) == 1 and "printings" in errors[0] and removed in errors[0] and "removed" in errors[0]
+
+
+def test_diff_errors_reports_a_shortened_former_keys():
+    before = {"prints": {"a": {**PRINT, "id": "a", "key": "k3", "formerKeys": ["k1", "k2"]}},
+              "sets": {"s": {"id": "s", "names": ["One", "Two"], "status": "live", "successors": []}}}
+    grown = {"prints": {"a": {**before["prints"]["a"], "key": "k4", "formerKeys": ["k1", "k2", "k3"]}},
+             "sets": {"s": {**before["sets"]["s"], "names": ["One", "Two", "Three"]}}}
+    assert ids.diff_errors(before, grown) == []
+    after = {"prints": {"a": {**before["prints"]["a"], "formerKeys": ["k2"]}},
+             "sets": {"s": {**before["sets"]["s"], "names": ["Two", "One"]}}}
+    errors = ids.diff_errors(before, after)
+    assert any("prints a" in e and "formerKeys" in e for e in errors)
+    assert any("sets s" in e and "names" in e for e in errors)
+
+
+def test_diff_errors_reports_a_changed_id_and_birth_key():
+    before = {"prints": {"a": {**PRINT, "id": "a", "key": "k1", "formerKeys": []}}}
+    assert any("id" in e for e in ids.diff_errors(before, {"prints": {"a": {**PRINT, "id": "b"}}}))
+    reborn = {"prints": {"a": {**before["prints"]["a"], "key": "k2", "formerKeys": []}}}
+    assert any("born" in e for e in ids.diff_errors(before, reborn))
+
+
+def _cli(monkeypatch, tmp_path, ledger, sets):
+    from test_ygjson import ARCHETYPES, CARDS, SEALED
+    import ygjson
+    monkeypatch.setattr(ids, "IDS", tmp_path / "ids")
+    monkeypatch.setattr(ids, "REVIEW", tmp_path / "review" / "ids.json")
+    monkeypatch.setattr(ids, "HAND", tmp_path / "mappings" / "ids.json")
+    monkeypatch.setattr(ids, "SET_ALIASES", tmp_path / "mappings" / "aliases.json")
+    monkeypatch.setattr(ygjson, "load_sets", lambda: sets)
+    monkeypatch.setattr(ygjson, "load_cards", lambda: CARDS)
+    monkeypatch.setattr(ygjson, "load_archetypes", lambda: ARCHETYPES)
+    monkeypatch.setattr(ygjson, "load_sealed", lambda: SEALED)
+    ids.save_ledger(ledger, tmp_path / "ids")
+
+
+def test_cli_writes_the_ledger_and_the_review(monkeypatch, tmp_path, capsys):
+    from test_ygjson import SETS
+    _cli(monkeypatch, tmp_path, {k: {} for k in ids.KINDS}, SETS)
+    ids.main([])
+    assert ids.load_ledger(tmp_path / "ids") == _fixture_run()[0]
+    assert json.loads((tmp_path / "review" / "ids.json").read_text()) == {"prints": [], "cards": [], "renames": []}
+    assert "prints 2 live 0 retired" in capsys.readouterr().out
+
+
+def test_rename_exits_3(monkeypatch, tmp_path, capsys):
+    from test_ygjson import SETS
+    sets = [{**SETS[0], "identifiers": {"ygojsonId": "lob-uuid"}}]
+    ledger = {k: {} for k in ids.KINDS}
+    ledger["sets"] = {"lob-old": {"id": "lob-old", "names": ["LOB"], "identity": ["ygojson:lob-uuid"],
+                                  "status": "live", "successors": []}}
+    _cli(monkeypatch, tmp_path, ledger, sets)
+    with pytest.raises(SystemExit) as e:
+        ids.main([])
+    assert e.value.code == 3
+    out = capsys.readouterr().out
+    assert "lob-old" in out and "legend-of-blue-eyes-white-dragon" in out and "rerun the pipeline" in out
+    saved = ids.load_ledger(tmp_path / "ids")
+    assert saved["sets"]["lob-old"]["names"] == ["LOB", "Legend of Blue Eyes White Dragon"]
+    assert "legend-of-blue-eyes-white-dragon" not in saved["sets"]
+    review = json.loads((tmp_path / "review" / "ids.json").read_text())
+    assert review["renames"] == [{"from": "lob-old", "to": "legend-of-blue-eyes-white-dragon",
+                                  "name": "Legend of Blue Eyes White Dragon"}]
+
+
+def _git(cwd, *args):
+    import subprocess
+    subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@t", *args], cwd=cwd, check=True,
+                   capture_output=True)
+
+
+def test_ledger_at_reads_a_revision_and_refuses_an_unknown_one(tmp_path):
+    _git(tmp_path, "init", "-q")
+    ledger = {k: {} for k in ids.KINDS}
+    ledger["prints"] = {PRINT["id"]: PRINT}
+    ids.save_ledger(ledger, tmp_path / "ids")
+    (tmp_path / "ids" / "sealed.json").unlink()
+    _git(tmp_path, "add", "ids")
+    _git(tmp_path, "commit", "-q", "-m", "ledger")
+    (tmp_path / "ids" / "prints.json").write_text('{"prints": []}')
+    assert ids.ledger_at("HEAD", tmp_path) == ledger
+    with pytest.raises(SystemExit, match="no-such-rev"):
+        ids.ledger_at("no-such-rev", tmp_path)

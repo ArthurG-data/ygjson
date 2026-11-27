@@ -1,5 +1,5 @@
 """Write dist/AllSets.json, AllCards.json, AllPrintings.json, AllArchetypes.json, AllProducts.json and Legality.json.
-Refuses to build invalid data.
+Refuses to build invalid data, or data the id ledger under ids/ does not match.
 
     uv run python tools/build.py --version 0.2.0
 
@@ -16,6 +16,7 @@ import json
 import sys
 from pathlib import Path
 
+import ids
 import ygjson
 
 DIST = ygjson.ROOT / "dist"
@@ -39,10 +40,13 @@ def sources(cache: Path = CACHE) -> dict:
 
 
 def build(version: str, today: str, cache: Path = CACHE) -> dict[str, dict]:
-    """{file name: document} for the six release files. Exits with the problems when the data is invalid."""
+    """{file name: document} for the six release files. Exits with the problems when the data is invalid or the
+    ledger does not match it."""
     sets, eras, files = ygjson.load_sets(), ygjson.load_eras(), ygjson.load_cards()
     archetypes, sealed, legality = ygjson.load_archetypes(), ygjson.load_sealed(), ygjson.load_legality()
     errors = ygjson.validate(sets, eras, files, archetypes, sealed, legality)
+    if not errors:
+        errors = ids.check(ids.load_ledger(), sets, files, archetypes, sealed, ids.load_hand())
     if errors:
         sys.exit("refusing to build:\n" + "\n".join(errors))
     flat = ygjson.flatten(sets, files, archetypes, sealed)

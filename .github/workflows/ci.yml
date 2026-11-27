@@ -14,9 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@v5
       - run: uv sync --group dev
       - run: uv run pytest -q
+      - run: uv run python tools/ids.py --check-against origin/${{ github.base_ref || 'main' }}
       - run: uv run python tools/validate.py --online
       - run: uv run python tools/legality.py --check
 
