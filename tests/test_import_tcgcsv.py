@@ -390,6 +390,15 @@ def test_a_name_an_earlier_run_derived_never_mints_a_print_and_leaves_when_no_pr
     assert [r["productId"] for r in out["review"]["unmatched"]] == [7]
 
 
+def test_a_beta_name_tcgplayer_spells_in_another_case_stays_beside_tcgplayers():
+    held = mkprint("lob", "100", "LOB-EN001", "rare", identifiers={"tcgplayerProductIds": [7]},
+                   tcgplayer={"name": "Frog The Jam", "match": "number+rarity"})
+    w = world([held], card_name="Frog Jam")
+    w["cards"][0]["aliases"] = ["Frog the Jam"]  # YGOPRODeck's beta name
+    out = go(products={1: [single(1, "Frog The Jam", "LOB-EN001", "Rare", 7)]}, **w)
+    assert out["cards"]["100"]["aliases"] == ["Frog The Jam", "Frog the Jam"]
+
+
 def test_a_card_aliased_by_an_earlier_run_ends_as_it_does_from_none():
     groups, products, sets, card = alias_world()
     clean = go(groups, products, {}, sets, [card])
