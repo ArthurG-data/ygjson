@@ -1,0 +1,316 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ArthurG-data/ygjson/schema/ids.schema.json",
+  "title": "ygjson id ledger",
+  "description": "ids/<kind>.json: {\"<kind>\": [entries]}; the append-only record of every id ever published. Shown here as one document with a key per kind.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "prints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/print"
+      }
+    },
+    "printings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/printing"
+      }
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    },
+    "sets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/set"
+      }
+    },
+    "archetypes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/archetype"
+      }
+    },
+    "sealed": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sealed"
+      }
+    }
+  },
+  "$defs": {
+    "print": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "key",
+        "formerKeys",
+        "products",
+        "status",
+        "successors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "status": {
+          "enum": [
+            "live",
+            "retired"
+          ]
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Ids that replace this one."
+        },
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "formerKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Keys the print had before, oldest first."
+        },
+        "products": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "TCGplayer product ids it held when last live."
+        }
+      },
+      "description": "A print id ever issued."
+    },
+    "printing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "key",
+        "formerIds",
+        "status",
+        "successors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}:[a-z]{2}(-[A-Za-z]+)?:(first|unlimited|limited)$"
+        },
+        "status": {
+          "enum": [
+            "live",
+            "retired"
+          ]
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Ids that replace this one."
+        },
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "formerIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "description": "A printing id ever issued."
+    },
+    "card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "status",
+        "successors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "live",
+            "retired"
+          ]
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Ids that replace this one."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "konamiId": {
+          "type": "integer"
+        }
+      },
+      "description": "A card id ever seen."
+    },
+    "set": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "names",
+        "status",
+        "successors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "live",
+            "retired"
+          ]
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Ids that replace this one."
+        },
+        "names": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Every source name it has carried."
+        },
+        "code": {
+          "type": "string"
+        },
+        "releaseDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "identity": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "description": "A set slug."
+    },
+    "archetype": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "names",
+        "status",
+        "successors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "live",
+            "retired"
+          ]
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Ids that replace this one."
+        },
+        "names": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Every source name it has carried."
+        },
+        "identity": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "description": "An archetype slug."
+    },
+    "sealed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "tcgplayerProductId",
+        "status",
+        "successors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "live",
+            "retired"
+          ]
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Ids that replace this one."
+        },
+        "tcgplayerProductId": {
+          "type": "integer"
+        }
+      },
+      "description": "A sealed product id."
+    }
+  }
+}

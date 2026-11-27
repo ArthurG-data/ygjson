@@ -187,6 +187,21 @@ def test_rerun_keeps_what_later_tools_added_to_a_card_and_its_prints():
     assert c["prints"][0]["tcgplayer"] == {"name": "x", "match": "number"} and c["prints"][0]["editions"] == ["first"]
 
 
+def _old_card(cid, prints=()):
+    return {"3": {"cards": [{"id": cid, "name": "Gone", "prints": list(prints)}]}}
+
+
+def test_a_card_ygoprodeck_dropped_leaves_the_data():
+    files, _ = imp.build_cards([raw_card()], {LOB: LOB_ID}, {}, _old_card("101403001"))
+    assert [c["id"] for b in files.values() for c in b["cards"]] == ["46986414"]
+
+
+def test_a_dropped_card_holding_a_tcgplayer_print_stays():
+    prints = [{"id": "s:101403001:X-EN001:rare", "set": "s", "source": "tcgplayer"}]
+    files, _ = imp.build_cards([raw_card()], {LOB: LOB_ID}, {}, _old_card("101403001", prints))
+    assert "101403001" in [c["id"] for b in files.values() for c in b["cards"]]
+
+
 def test_cards_are_bucketed_and_sorted_by_numeric_id():
     cards = [raw_card(id=100), raw_card(id=46986414), raw_card(id=9), raw_card(id=1_000_000)]
     files, _ = imp.build_cards(cards, {LOB: LOB_ID}, {}, {})
@@ -216,3 +231,18 @@ def test_output_validates():
     arch, slugs = imp.build_archetypes([raw_card(archetype="Blue-Eyes")], [], {})
     files, _ = imp.build_cards([raw_card(archetype="Blue-Eyes")], ids, slugs, {})
     assert ygjson.validate(sets, ERAS, files, arch) == []
+
+
+def test_build_sets_gives_a_ledger_name_its_slug_after_a_rename():
+    listed = [{"set_name": "New Name", "set_code": "NN", "tcg_date": "2002-03-08"}]
+    cards = [raw_card(card_sets=[{"set_name": "New Name", "set_code": "NN-EN001", "set_rarity": "Common"}])]
+    sets, ids = imp.build_sets(cards, listed, ERAS, [], held={"Old Name": "x", "New Name": "x"}, reserved={"x"})
+    assert [s["id"] for s in sets] == ["x"] and ids == {"New Name": "x"}
+
+
+def test_build_sets_and_archetypes_never_take_a_reserved_slug():
+    listed = [{"set_name": LOB, "set_code": "LOB"}]
+    sets, ids = imp.build_sets([raw_card()], listed, ERAS, [], reserved={LOB_ID})
+    assert [s["id"] for s in sets] == [f"{LOB_ID}-2"]
+    arch, slugs = imp.build_archetypes([raw_card(archetype="Roid")], ["ROID"], {}, held={"Roid": "roid"}, reserved={"roid"})
+    assert slugs == {"Roid": "roid", "ROID": "roid-2"}

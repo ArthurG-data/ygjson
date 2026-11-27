@@ -10,7 +10,7 @@ import functools
 import hashlib
 import json
 import re
-from collections.abc import Iterable
+from collections.abc import Container, Iterable, Mapping
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
@@ -42,19 +42,31 @@ def slugify(name: str) -> str:
     return slug or "x-" + hashlib.sha1(name.encode("utf-8")).hexdigest()[:12]
 
 
-def dedupe_slugs(names: Iterable[str]) -> dict[str, str]:
-    """{name: slug}. Names that slug alike are taken in sorted order: the first keeps the slug, the rest get -2, -3."""
+def dedupe_slugs(names: Iterable[str], held: Mapping[str, str] | None = None,
+                 reserved: Container[str] = frozenset()) -> dict[str, str]:
+    """{name: slug}. A name in `held` (the ledger's {name: slug}) keeps its slug. The other names, in sorted order,
+    take their slug, else the next free -2, -3, never a slug held for another name or in `reserved`. Two current names
+    held at one slug cannot both have it: the first in sorted order does, the other is treated as unheld."""
+    held = held or {}
+    ordered = sorted(set(names))
     out: dict[str, str] = {}
-    taken: set[str] = set()
-    for name in sorted(set(names)):
+    kept: set[str] = set()
+    for name in ordered:
+        if name in held and held[name] not in kept:
+            out[name] = held[name]
+            kept.add(held[name])
+    taken = kept | set(held.values())
+    for name in ordered:
+        if name in out:
+            continue
         slug = base = slugify(name)
         n = 1
-        while slug in taken:
+        while slug in taken or slug in reserved:
             n += 1
             slug = f"{base}-{n}"
         taken.add(slug)
         out[name] = slug
-    return out
+    return dict(sorted(out.items()))
 
 
 def card_bucket(card_id: str) -> str:
@@ -273,31 +285,50 @@ def validate(sets: list[dict], eras: list[dict], files: dict[str, dict], archety
     return errors
 
 
+def print_editions(p: dict, set_editions: list[str]) -> list[str]:
+    """The editions a print is sold in: its own `editions` when it has them, else its set's."""
+    return p.get("editions", set_editions)
+
+
 def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
-            sealed: dict[str, dict] | None = None) -> dict[str, dict]:
+            sealed: dict[str, dict] | None = None, ledger: dict[str, dict[str, dict]] | None = None) -> dict[str, dict]:
     """The release shape: {"sets": {id: set}, "cards": {id: card with prints as print ids}, "printings": {id: printing},
     "archetypes": {slug: archetype + members}, "products": {id: sealed product}}.
+
+    With a ledger, prints and printings carry their permanent ids: a card lists print UUIDs, a printing is keyed
+    `<print uuid>:<language>:<edition>` and keeps the readable id as `key` and the print's key as `printKey`, and a
+    sealed product's cards point at print UUIDs. Without one the readable ids are used throughout.
 
     A printing is a print in one edition: the print's editions when it has them, else its set's. TCGplayer sells
     every edition of a print under one product, so each printing carries the print's product ids. archetype members
     are card ids in numeric order."""
     by_set = {s["id"]: s for s in sets}
-    out: dict[str, dict] = {"sets": by_set, "cards": {}, "printings": {}, "archetypes": {}, "products": {
-        p["id"]: p for body in (sealed or {}).values() for p in body["products"]}}
+    uuids = {e["key"]: e["id"] for e in ledger["prints"].values() if e["status"] == "live"} if ledger else None
+    products = {p["id"]: p for body in (sealed or {}).values() for p in body["products"]}
+    if uuids is not None:
+        for pid, p in products.items():
+            if p["contents"].get("cards"):
+                products[pid] = {**p, "contents": {**p["contents"], "cards": [
+                    {**item, "print": uuids[item["print"]]} for item in p["contents"]["cards"]]}}
+    out: dict[str, dict] = {"sets": by_set, "cards": {}, "printings": {}, "archetypes": {}, "products": products}
     members: dict[str, list[str]] = collections.defaultdict(list)
     for body in files.values():
         for card in body["cards"]:
             cid = card["id"]
-            out["cards"][cid] = {**card, "prints": [p["id"] for p in card["prints"]]}
+            out["cards"][cid] = {**card, "prints": [p["id"] if uuids is None else uuids[p["id"]]
+                                                   for p in card["prints"]]}
             for slug in card.get("archetypes", []):
                 members[slug].append(cid)
             for p in card["prints"]:
                 rarity_tier = tier(p["rarity"])
                 finish = is_foil(p["rarity"])
-                for edition in p.get("editions", by_set[p["set"]]["editions"]):
-                    pid = printing_id(p["id"], "en", edition)
+                for edition in print_editions(p, by_set[p["set"]]["editions"]):
+                    key = printing_id(p["id"], "en", edition)
+                    pid = key if uuids is None else printing_id(uuids[p["id"]], "en", edition)
                     out["printings"][pid] = {
-                        "id": pid, "print": p["id"], "card": cid, "set": p["set"],
+                        "id": pid, **({} if uuids is None else {"key": key}),
+                        "print": p["id"] if uuids is None else uuids[p["id"]],
+                        **({} if uuids is None else {"printKey": p["id"]}), "card": cid, "set": p["set"],
                         **{k: p[k] for k in ("number", "region", "variant", "source") if k in p},
                         "rarity": p["rarity"],
                         **({"rarityTier": rarity_tier} if rarity_tier is not None else {}),

@@ -8,7 +8,9 @@ rewrites the first two in place, adding only:
 
   sets    tcgplayerGroupIds (union), editions (union with the price subtypes of the set's singles: 1st Edition is first,
           Unlimited unlimited, Limited limited), and one new set for each "(2020 Date Reprint)" or "(2020 Reprint)"
-          group (id "<parent id>-2020-reprint", source tcgplayer, the parent's code, type, era and editions).
+          group (id "<parent id>-2020-reprint", source tcgplayer, the parent's code, type, era and editions). A set
+          this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a free one that the
+          ledger does not hold.
   prints  identifiers.tcgplayerProductIds, tcgplayer {name, match}, editions (when a print's own products are priced
           in fewer editions than its set), and the prints of a reprint set (copies of the parent's prints that the
           group's singles name). A print whose YGOPRODeck rarity was unknown takes TCGplayer's.
@@ -43,8 +45,10 @@ import argparse
 import collections
 import json
 import re
+from collections.abc import Container, Mapping
 from pathlib import Path
 
+import ids
 import rarities
 import tcgcsv
 import ygjson
@@ -207,12 +211,14 @@ def match_groups(groups: list[dict], sets: list[dict], mapping: dict) -> dict:
             "unmatched": [g for g in ordered if g["groupId"] not in done]}
 
 
-def mint_reprint_set(group: dict, parent: dict, taken: set[str], old: dict | None) -> dict:
+def mint_reprint_set(group: dict, parent: dict, taken: set[str], old: dict | None, held: Mapping[str, str] = {},
+                     reserved: Container[str] = frozenset()) -> dict:
     """The set for a reprint or anniversary group, carrying the parent's code, type, era and editions. An existing
-    one (an earlier run) keeps its identifiers."""
+    one (an earlier run) keeps its id and identifiers; a new one takes the slug the set ledger holds for its name
+    (``held``), else a free one that is not ``reserved``."""
     base, suffix = split_child(group["name"])
-    set_id = old["id"] if old else _free_id(f"{parent['id']}-{SUFFIX_SLUGS[suffix]}", taken)
     name = group["name"] if suffix.startswith("25th") else f"{base} (2020 Date Reprint)"
+    set_id = old["id"] if old else _ledger_id(name, f"{parent['id']}-{SUFFIX_SLUGS[suffix]}", taken, held, reserved)
     release: dict = {"language": "en", "name": name}
     if group.get("publishedOn"):
         release["releaseDate"] = group["publishedOn"][:10]
@@ -226,12 +232,18 @@ def mint_reprint_set(group: dict, parent: dict, taken: set[str], old: dict | Non
     return s
 
 
-def _free_id(base: str, taken: set[str]) -> str:
+def _free_id(base: str, taken: set[str], reserved: Container[str] = frozenset()) -> str:
     set_id, n = base, 1
-    while set_id in taken:
+    while set_id in taken or set_id in reserved:
         n += 1
         set_id = f"{base}-{n}"
     return set_id
+
+
+def _ledger_id(name: str, base: str, taken: set[str], held: Mapping[str, str], reserved: Container[str]) -> str:
+    """The slug the set ledger holds for the name, unless a current set has it; else a free one from ``base``."""
+    slug = held.get(name)
+    return slug if slug is not None and slug not in taken else _free_id(base, taken, reserved)
 
 
 class Catalog:
@@ -325,8 +337,11 @@ def _edition_list(editions) -> list[str]:
 
 
 class Importer:
-    def __init__(self, sets, files, groups, products, prices, mapping, eras=None):
+    def __init__(self, sets, files, groups, products, prices, mapping, eras=None, held: Mapping[str, str] = {},
+                 reserved: Container[str] = frozenset()):
         self.sets = {s["id"]: s for s in sets}
+        self.held = held  # the set ledger's {name: slug}: a minted set takes the slug held for its name
+        self.reserved = reserved  # every slug in the set ledger: a minted set never takes one
         self.groups = {g["groupId"]: g for g in groups}
         self.products = products  # {groupId: [Product]}
         self.by_id = {p.product_id: p for ps in products.values() for p in ps}
@@ -381,7 +396,7 @@ class Importer:
             parent = self.sets[parent_id]
             old = next((s for s in self.sets.values() if gid in s.get("tcgplayerGroupIds", []) and s["source"] == SOURCE),
                        None)
-            minted = mint_reprint_set(self.groups[gid], parent, taken, old)
+            minted = mint_reprint_set(self.groups[gid], parent, taken, old, self.held, self.reserved)
             taken.add(minted["id"])
             self.sets[minted["id"]] = minted
             self.set_of_group[gid] = minted["id"]
@@ -587,7 +602,8 @@ class Importer:
             if released:
                 release["releaseDate"] = released
             kind = set_type(group["name"])
-            old = {"id": _free_id(ygjson.slugify(group["name"]), set(self.sets)),
+            old = {"id": _ledger_id(group["name"], ygjson.slugify(group["name"]), set(self.sets), self.held,
+                                    self.reserved),
                    "code": _code(group.get("abbreviation") or "") or prod.number.split("-")[0],
                    "name": group["name"], "type": kind, "editions": self._group_editions(gid, kind),
                    "source": SOURCE, "tcgplayerGroupIds": [gid], "releases": [release]}
@@ -727,10 +743,12 @@ class Importer:
         return changed
 
 
-def run(groups, products, prices, sets, files, mapping, eras=None) -> dict:
-    """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}."""
+def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping[str, str] = {},
+        reserved: Container[str] = frozenset()) -> dict:
+    """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}. ``held`` and ``reserved`` are
+    the set ledger's {name: slug} and slugs, for the sets this tool mints."""
     _remove_minted(sets, files)
-    imp = Importer(sets, files, groups, products, prices, mapping, eras)
+    imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved)
     unmatched_groups = imp.match_groups()
     imp.match_singles()
     imp.release_refused()
@@ -770,7 +788,9 @@ def main() -> None:
     groups = tcgcsv.groups(CACHE, refresh)
     products = {g["groupId"]: tcgcsv.products(g["groupId"], CACHE, refresh) for g in groups}
     prices = {g["groupId"]: tcgcsv.prices(g["groupId"], CACHE, refresh) for g in groups}
-    out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping(), ygjson.load_eras())
+    ledger = ids.load_ledger()
+    out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping(), ygjson.load_eras(),
+              ids.held_names(ledger, "sets"), ids.reserved(ledger, "sets"))
     ygjson.save_json(ygjson.SETS, out["sets"])
     for bucket, body in out["files"].items():
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)

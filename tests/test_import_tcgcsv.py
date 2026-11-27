@@ -2,6 +2,7 @@ import copy
 
 import pytest
 
+import ids
 import import_tcgcsv as imp
 import rarities
 import tcgcsv
@@ -709,3 +710,41 @@ def test_the_reprint_set_and_aliases_in_a_run():
 
 def test_load_mapping_is_empty_without_a_file(tmp_path):
     assert imp.load_mapping(tmp_path / "nope.json") == {}
+
+
+def test_minted_tcgplayer_set_avoids_a_retired_slug():
+    card = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])
+    group = mkgroup(9, "Speed Duel: Finals", "SBC2")
+    products = {9: [single(9, "Alpha", "SBC2-EN001", "Rare", 7)]}
+    files = {"000": {"cards": [copy.deepcopy(card)]}}
+    ledger = {"sets": {"speed-duel-finals": {"id": "speed-duel-finals", "names": ["Something Else"], "status": "retired",
+                                             "successors": []}}}
+    out = imp.run([group], products, {}, [copy.deepcopy(LOB)], files, {}, held=ids.held_names(ledger, "sets"),
+                  reserved=ids.reserved(ledger, "sets"))
+    assert {s["id"] for s in out["sets"]} == {"lob", "speed-duel-finals-2"}
+
+
+def test_minted_tcgplayer_set_takes_the_slug_the_ledger_holds_for_its_name():
+    card = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])
+    group = mkgroup(9, "Speed Duel: Finals", "SBC2")
+    products = {9: [single(9, "Alpha", "SBC2-EN001", "Rare", 7)]}
+    files = {"000": {"cards": [copy.deepcopy(card)]}}
+    out = imp.run([group], products, {}, [copy.deepcopy(LOB)], files, {}, held={"Speed Duel: Finals": "sdf"},
+                  reserved={"sdf"})
+    assert {s["id"] for s in out["sets"]} == {"lob", "sdf"}
+
+
+def test_a_reprint_set_takes_its_held_slug_else_avoids_the_reserved_ones():
+    parent = mkset("ret", "Retro Pack", "RP01", **{"tcgplayerGroupIds": [1]})
+    cards = [mkcard("100", "Alpha", [mkprint("ret", "100", "RP01-EN001", "ultra_rare")])]
+    groups = [mkgroup(1, "Retro Pack", "RP01"), mkgroup(2, "Retro Pack (2020 Date Reprint)", "RP01")]
+    products = {1: [], 2: [single(2, "Alpha", "RP01-EN001", "Ultra Rare")]}
+
+    def minted(**ledger_maps):
+        out = imp.run(groups, products, {}, [copy.deepcopy(parent)], {"000": {"cards": copy.deepcopy(cards)}}, {},
+                      **ledger_maps)
+        return {s["id"] for s in out["sets"]} - {"ret"}
+
+    assert minted() == {"ret-2020-reprint"}
+    assert minted(reserved={"ret-2020-reprint"}) == {"ret-2020-reprint-2"}
+    assert minted(held={"Retro Pack (2020 Date Reprint)": "rp-reprint"}, reserved={"rp-reprint"}) == {"rp-reprint"}

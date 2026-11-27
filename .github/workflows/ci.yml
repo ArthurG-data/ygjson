@@ -14,9 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@v5
       - run: uv sync --group dev
       - run: uv run pytest -q
+      - run: uv run python tools/ids.py --check-against origin/${{ github.base_ref || 'main' }}
       - run: uv run python tools/validate.py --online
       - run: uv run python tools/legality.py --check
 
@@ -31,6 +34,6 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - run: uv sync --group dev
       - run: uv run python tools/build.py --version "${GITHUB_REF_NAME#v}"
-      - run: gh release create "$GITHUB_REF_NAME" dist/AllSets.json dist/AllCards.json dist/AllPrintings.json dist/AllArchetypes.json dist/AllProducts.json dist/Legality.json --generate-notes
+      - run: gh release create "$GITHUB_REF_NAME" dist/AllSets.json dist/AllCards.json dist/AllPrintings.json dist/AllArchetypes.json dist/AllProducts.json dist/Legality.json dist/Ids.json --generate-notes
         env:
           GH_TOKEN: ${{ github.token }}

@@ -1,0 +1,529 @@
+import copy
+import random
+import uuid
+
+import pytest
+
+import ids
+import reconcile
+import ygjson
+
+
+def test_parse_key_with_empty_number():
+    f = reconcile.parse_key("mattel-action-figure-promotional-cards-series-3:98585345::normal_parallel_rare")
+    assert (f.set, f.card, f.number, f.rarity, f.variant) == ("mattel-action-figure-promotional-cards-series-3", "98585345", "", "normal_parallel_rare", None)
+
+
+def test_parse_key_round_trips_a_joined_variant():
+    key = "quarter-century-bonanza:24094653:RA03-EN051:collectors_rare:a-alternate-art"
+    f = reconcile.parse_key(key)
+    assert f.variant == "a-alternate-art"
+    assert ygjson.print_id(f.set, f.card, f.number, f.rarity, f.variant) == key
+
+
+def test_parse_key_keeps_products_and_rejects_short_keys():
+    assert reconcile.parse_key("s:1:N:r", [3, 3, 2]).products == frozenset({2, 3})
+    with pytest.raises(ValueError):
+        reconcile.parse_key("s:1:N")
+
+
+def test_rekey_card_swaps_a_placeholder_for_its_passcode():
+    assert reconcile.rekey_card("s:101403001:X-EN001:rare", {"101403001": "82951145"}) == "s:82951145:X-EN001:rare"
+    assert reconcile.rekey_card("s:5:X-EN001:rare", {}) == "s:5:X-EN001:rare"
+
+
+def test_current_prints_reads_products_and_sorts():
+    files = {"a.json": {"cards": [{"id": "5", "prints": [
+        {"id": "s:5:B-1:rare", "set": "s", "number": "B-1", "rarity": "rare", "identifiers": {"tcgplayerProductIds": [9, 8]}},
+        {"id": "s:5:A-1:rare:blue", "set": "s", "number": "A-1", "rarity": "rare", "variant": "blue"}]}]}}
+    got = reconcile.current_prints(files)
+    assert [p.key for p in got] == ["s:5:A-1:rare:blue", "s:5:B-1:rare"]
+    assert got[0].products == frozenset() and got[1].products == frozenset({8, 9})
+
+
+# --- reconcile_prints ---------------------------------------------------------------------------------------------
+
+
+def live(key, id_, products=(), former=()):
+    return {"id": id_, "key": key, "formerKeys": list(former), "status": "live", "successors": [], "products": sorted(products)}
+
+
+def retired(key, id_, products=(), former=(), successors=()):
+    return {**live(key, id_, products, former), "status": "retired", "successors": list(successors)}
+
+
+def ledger(*entries):
+    return {e["id"]: e for e in entries}
+
+
+def _review(prints):
+    """The review/ids.json rows of these print entries (see ids.review_body)."""
+    return ids.review_body({"prints": prints}, (), [])["prints"]
+
+
+def _card_review(cards):
+    return ids.review_body({"cards": cards}, (), [])["cards"]
+
+
+def cur(*keys, products=None):
+    products = products or {}
+    return [reconcile.parse_key(k, products.get(k, ())) for k in keys]
+
+
+def test_first_run_mints_every_print():
+    got, by_key = reconcile.reconcile_prints({}, cur("s:1:S-EN001:rare", "s:2:S-EN002:common", products={"s:1:S-EN001:rare": [7, 5]}))
+    a, b = ids.mint("s:1:S-EN001:rare", set()), ids.mint("s:2:S-EN002:common", set())
+    assert by_key == {"s:1:S-EN001:rare": a, "s:2:S-EN002:common": b}
+    assert got == ledger(live("s:1:S-EN001:rare", a, [5, 7]), live("s:2:S-EN002:common", b))
+    assert _review(got) == []
+
+
+def test_unchanged_print_keeps_its_id_and_entry():
+    before = ledger(live("s:1:S-EN001:rare", "id-a", [5]))
+    got, by_key = reconcile.reconcile_prints(before, cur("s:1:S-EN001:rare", products={"s:1:S-EN001:rare": [5]}))
+    assert got == before and got["id-a"] is not before["id-a"]
+    assert by_key == {"s:1:S-EN001:rare": "id-a"}
+    assert _review(got) == []
+
+
+def test_rarity_correction_keeps_the_id():
+    old, new = "l5dd:5:L5DD-ENA12:unknown", "l5dd:5:L5DD-ENA12:common"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a")), cur(new))
+    assert by_key == {new: "id-a"}
+    assert got == ledger(live(new, "id-a", former=[old]))
+    assert _review(got) == []
+
+
+def test_variant_split_follows_the_product():
+    old = "qcb:9:RA04-EN109:platinum_secret_rare"
+    fourth, seventh = old + ":4th-art", old + ":7th-art"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a", [100])),
+                                                     cur(fourth, seventh, products={fourth: [100], seventh: [101]}))
+    minted = ids.mint(seventh, {"id-a"})
+    assert by_key == {fourth: "id-a", seventh: minted}
+    assert got == ledger(live(fourth, "id-a", [100], former=[old]), live(seventh, minted, [101]))
+    assert _review(got) == []
+
+
+def test_split_without_evidence_retires_with_both_successors():
+    old, secret, starlight = "ch02:3:CH02-EN003:unknown", "ch02:3:CH02-EN003:secret_rare", "ch02:3:CH02-EN003:starlight_rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a")), cur(secret, starlight))
+    s, t = ids.mint(secret, {"id-a"}), ids.mint(starlight, {"id-a"})
+    assert by_key == {secret: s, starlight: t}
+    assert got["id-a"] == retired(old, "id-a", successors=sorted([s, t]))
+    assert got[s] == live(secret, s) and got[t] == live(starlight, t)
+    assert _review(got) == [{"id": "id-a", "key": old, "reason": "several", "successors": sorted([s, t])}]
+
+
+def test_letter_becoming_the_base_print_keeps_the_id():
+    base = "qcb:24094653:RA03-EN051:collectors_rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(base + ":a", "id-a"), live(base + ":b", "id-b")), cur(base, base + ":b"))
+    assert by_key == {base: "id-a", base + ":b": "id-b"}
+    assert got == ledger(live(base, "id-a", former=[base + ":a"]), live(base + ":b", "id-b"))
+    assert _review(got) == []
+
+
+def test_same_card_in_another_set_keeps_the_id():
+    old = "wcs-2025-limited-pack:33396948:25LP-EN000:secret_rare"
+    new = "limited-pack-world-championship-2025:33396948:25LP-EN000:secret_rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a")), cur(new))
+    assert by_key == {new: "id-a"}
+    assert got == ledger(live(new, "id-a", former=[old]))
+    assert _review(got) == []
+
+
+def test_number_change_retires_with_the_new_print_as_successor():
+    old, new = "s:1:X-EN001:rare", "s:1:X-EN002:rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a")), cur(new))
+    minted = ids.mint(new, {"id-a"})
+    assert by_key == {new: minted}
+    assert got == ledger(retired(old, "id-a", successors=[minted]), live(new, minted))
+    assert _review(got) == []  # one successor: a reader follows it without asking anyone
+
+
+def test_flip_back_revives_the_retired_id():
+    k1, k2 = "s:1:X-EN001:rare", "s:1:X-EN001:super_rare"
+    before = ledger(retired(k1, "id-old", [3], successors=["id-x"]), retired("s:2:Y-EN001:rare", "id-y", former=[k2]),
+                    live("s:9:Z-EN001:rare", "id-x"))
+    got, by_key = reconcile.reconcile_prints(before, cur(k1, k2, "s:9:Z-EN001:rare", products={k1: [4]}))
+    assert by_key == {k1: "id-old", k2: "id-y", "s:9:Z-EN001:rare": "id-x"}
+    assert got["id-old"] == live(k1, "id-old", [4])
+    assert got["id-y"] == live(k2, "id-y", former=[k2, "s:2:Y-EN001:rare"])
+    assert _review(got) == []
+
+
+def test_former_key_of_a_live_print_does_not_revive():
+    k1, k2 = "s:1:X-EN001:unknown", "s:1:X-EN001:rare"
+    live_id = ids.mint(k1, set())
+    got, by_key = reconcile.reconcile_prints(ledger(live(k2, live_id, former=[k1])), cur(k1, k2))
+    second = str(uuid.uuid5(ids.YGJSON_NAMESPACE, k1 + "#2"))
+    assert by_key == {k1: second, k2: live_id}
+    assert got == ledger(live(k2, live_id, former=[k1]), live(k1, second))
+    assert _review(got) == []
+
+
+def test_hand_decision_revives_a_retired_id():
+    old, new = "s:1:X-EN001:rare", "t:1:Y-EN009:ultra_rare"
+    got, by_key = reconcile.reconcile_prints(ledger(retired(old, "id-a", successors=["id-z"])), cur(new), hand={new: "id-a"})
+    assert by_key == {new: "id-a"}
+    assert got == ledger(live(new, "id-a", former=[old]))
+    assert _review(got) == []
+
+
+def test_hand_decision_naming_a_live_or_unknown_id_is_ignored():
+    a, b = "s:1:X-EN001:rare", "t:1:Y-EN009:ultra_rare"
+    before = ledger(live("s:1:X-EN001:rare", "id-live"))
+    got, by_key = reconcile.reconcile_prints(before, cur(a, b), hand={b: "id-live", "t:2:Q:rare": "id-nope"})
+    minted = ids.mint(b, {"id-live"})
+    assert by_key == {a: "id-live", b: minted}
+    assert got == ledger(live(a, "id-live"), live(b, minted))
+    assert _review(got) == []
+    assert len(ids.hand_errors({"prints": got}, ({b: "id-live", "t:2:Q:rare": "id-nope"}, {}))) == 2  # check says so
+
+
+def test_placeholder_card_prints_follow_the_passcode():
+    old, new = "s:101403001:X:rare", "s:82951145:X:rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a", [8])), cur(new, products={new: [8]}),
+                                                     card_successor={"101403001": "82951145"})
+    assert by_key == {new: "id-a"}
+    assert got == ledger(live(new, "id-a", [8], former=[old]))
+    assert _review(got) == []
+
+
+def test_two_retired_entries_with_the_key_revive_the_smallest_id():
+    k = "s:1:X-EN001:rare"
+    before = ledger(retired("s:1:X-EN001:common", "id-b", former=[k]), retired(k, "id-c"), retired("s:1:X-EN001:super_rare", "id-a", former=[k]))
+    got, by_key = reconcile.reconcile_prints(before, cur(k))
+    assert by_key == {k: "id-a"}
+    assert got["id-a"] == live(k, "id-a", former=[k, "s:1:X-EN001:super_rare"])
+    assert got["id-b"] == {**before["id-b"], "successors": ["id-a"]}
+    assert got["id-c"] == {**before["id-c"], "successors": ["id-a"]}
+    assert _review(got) == []  # the other entries that had the key lead to the revived id
+
+
+def test_ambiguous_revival_leaves_the_other_retired_entry_pointing_at_the_revived_id():
+    k = "s:1:X-EN001:rare"
+    before = ledger(retired(k, "id-a", successors=["id-z"]), retired(k, "id-b"), live("s:9:Z:rare", "id-z"))
+    got, by_key = reconcile.reconcile_prints(before, cur(k, "s:9:Z:rare"))
+    assert by_key == {k: "id-a", "s:9:Z:rare": "id-z"}
+    assert got["id-a"] == live(k, "id-a")
+    assert got["id-b"] == retired(k, "id-b", successors=["id-a"])
+    again, _ = reconcile.reconcile_prints(got, cur(k, "s:9:Z:rare"))
+    assert again == got
+
+
+def test_product_split_across_two_newcomers_retires():
+    old, a, b = "s:1:X:rare", "s:1:X:rare:4th-art", "s:1:X:rare:7th-art"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a", [100, 101])), cur(a, b, products={a: [100], b: [101]}))
+    assert "id-a" not in by_key.values()
+    assert got["id-a"]["status"] == "retired" and got["id-a"]["successors"] == sorted(by_key.values())
+    assert [r["reason"] for r in _review(got)] == ["several"]
+
+
+def test_retired_successors_fall_back_to_card_and_number_then_corrected_number():
+    gone, moved = "s:1:X-EN001:rare", "t:1:X-EN001:super_rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(gone, "id-a"), live("u:2:Q:rare", "id-q")), cur(moved, "u:2:R:rare"))
+    assert got["id-a"]["successors"] == [by_key[moved]]
+    assert got["id-q"]["successors"] == [by_key["u:2:R:rare"]]
+
+
+def test_retired_successors_prefer_the_same_rarity_at_the_place():
+    stamp = "qcs:74677427:RA04-EN109"
+    variants = [f"{stamp}:{r}:{v}" for r in ("qc_secret_rare", "platinum_secret_rare") for v in ("4th-art", "7th-art")]
+    got, by_key = reconcile.reconcile_prints(ledger(live(f"{stamp}:qc_secret_rare", "id-q"),
+                                                       live(f"{stamp}:platinum_secret_rare", "id-p")), cur(*variants))
+    assert got["id-q"]["successors"] == sorted(by_key[k] for k in variants if ":qc_secret_rare:" in k)
+    assert got["id-p"]["successors"] == sorted(by_key[k] for k in variants if ":platinum_secret_rare:" in k)
+
+
+def test_retired_print_in_a_merged_set_goes_to_the_same_rarity_in_the_target():
+    old, new = "wcs-2025-limited-pack:33396948:25LP-EN000", "limited-pack-world-championship-2025:33396948:25LP-EN000"
+    before = ledger(live(f"{old}:secret_rare", "id-os"), live(f"{old}:ultra_rare", "id-ou"),
+                    live(f"{new}:secret_rare", "id-ns"), live(f"{new}:ultra_rare", "id-nu"))
+    got, by_key = reconcile.reconcile_prints(before, cur(f"{new}:secret_rare", f"{new}:ultra_rare", f"{new}:unknown"))
+    assert got["id-os"]["status"] == got["id-ou"]["status"] == "retired"
+    assert got["id-os"]["successors"] == ["id-ns"] and got["id-ou"]["successors"] == ["id-nu"]
+    assert by_key[f"{new}:unknown"] not in ("id-os", "id-ou")
+
+
+def test_reconcile_does_not_mutate_its_input():
+    before = ledger(live("s:1:X-EN001:unknown", "id-a"), live("s:2:Y:rare", "id-b"))
+    snapshot = {k: {**v, "formerKeys": list(v["formerKeys"])} for k, v in before.items()}
+    reconcile.reconcile_prints(before, cur("s:1:X-EN001:rare", "s:3:Z:rare"))
+    assert before == snapshot
+
+
+def test_reconcile_is_deterministic():
+    keys = ["s:1:X-EN001:unknown", "s:1:X-EN001:rare", "s:1:X-EN001:super_rare", "s:2:Y:rare", "t:3:Z:rare", "s:4:W:rare:4th-art"]
+    entries = [live("s:1:X-EN001:unknown", "id-a"), live("s:2:Y:old", "id-b"), live("s:4:W:rare", "id-c", [9]),
+               retired("t:3:Z:rare", "id-d"), live("s:5:V:rare", "id-e")]
+    products = {"s:4:W:rare:4th-art": [9]}
+    want = reconcile.reconcile_prints(ledger(*entries), cur(*keys, products=products))
+    rng = random.Random(4)
+    for _ in range(5):
+        rng.shuffle(keys)
+        rng.shuffle(entries)
+        got = reconcile.reconcile_prints(ledger(*entries), cur(*keys, products=products))
+        assert got == want
+        assert list(got[0]) == list(want[0]) and list(got[1]) == list(want[1])
+
+
+def test_rule2_refuses_a_product_another_current_print_holds():
+    gone, back, new = "s:1:A:rare", "t:2:B:rare", "u:3:C:rare"
+    before = ledger(live(gone, "id-a", [100]), retired(back, "id-b", [7]))
+    got, by_key = reconcile.reconcile_prints(before, cur(back, new, products={back: [100], new: [100]}))
+    minted = ids.mint(new, {"id-a", "id-b"})
+    assert by_key == {back: "id-b", new: minted}
+    assert got["id-a"] == retired(gone, "id-a", [100])
+    assert _review(got) == [{"id": "id-a", "key": gone, "reason": "dead-end", "successors": []}]
+
+    kept = "t:2:B:rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(gone, "id-a", [100]), live(kept, "id-k", [100])),
+                                                     cur(kept, new, products={kept: [100], new: [100]}))
+    assert by_key == {kept: "id-k", new: ids.mint(new, {"id-a", "id-k"})}
+    assert got["id-a"]["status"] == "retired"
+    assert [r["id"] for r in _review(got)] == ["id-a"]
+
+
+def test_rule2_does_not_carry_an_id_to_another_card():
+    old, new = "s:111:S-001:common", "s:222:S-001:common"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a", [42])), cur(new, products={new: [42]}))
+    minted = ids.mint(new, {"id-a"})
+    assert by_key == {new: minted}
+    assert got["id-a"] == retired(old, "id-a", [42])
+    assert got[minted] == live(new, minted, [42])
+
+
+def test_unnumbered_print_in_another_set_does_not_keep_the_id():
+    old, new = "promo-a:5::ultra_rare", "promo-b:5::ultra_rare"
+    got, by_key = reconcile.reconcile_prints(ledger(live(old, "id-a")), cur(new))
+    minted = ids.mint(new, {"id-a"})
+    assert by_key == {new: minted}
+    assert got == ledger(retired(old, "id-a"), live(new, minted))
+    assert _review(got) == [{"id": "id-a", "key": old, "reason": "dead-end", "successors": []}]
+
+
+def _card(cid, name, konami=None):
+    return {"id": cid, "name": name, "identifiers": {"konamiId": konami} if konami else {}}
+
+
+def test_placeholder_card_retires_to_its_passcode():
+    entries = {"101403001": {"id": "101403001", "name": "Helpoemer, Chanter of the Sun God", "status": "live", "successors": []}}
+    new, succ = reconcile.reconcile_cards(entries, [_card("82951145", "Helpoemer, Chanter of the Sun God")])
+    assert new["101403001"]["status"] == "retired" and new["101403001"]["successors"] == ["82951145"]
+    assert succ == {"101403001": "82951145"} and _card_review(new) == []
+    assert new["82951145"] == {"id": "82951145", "name": "Helpoemer, Chanter of the Sun God", "status": "live",
+                               "successors": []}
+    assert entries["101403001"]["status"] == "live"
+
+
+def test_retired_card_with_two_namesakes_has_no_successor_and_goes_to_review():
+    entries = {"1": {"id": "1", "name": "Twin", "status": "live", "successors": []}}
+    new, succ = reconcile.reconcile_cards(entries, [_card("3", "Twin"), _card("2", "Twin")])
+    assert new["1"]["status"] == "retired" and new["1"]["successors"] == [] and succ == {}
+    assert _card_review(new) == [{"id": "1", "name": "Twin", "reason": "dead-end", "successors": []}]
+
+
+def test_retired_card_falls_back_to_konami_id_then_to_review_with_none():
+    entries = {"1": {"id": "1", "name": "Old", "konamiId": 9, "status": "live", "successors": []},
+               "5": {"id": "5", "name": "Lost", "status": "live", "successors": []}}
+    new, succ = reconcile.reconcile_cards(entries, [_card("2", "New", 9)])
+    assert new["1"]["successors"] == ["2"] and succ == {"1": "2"}
+    assert _card_review(new) == [{"id": "5", "name": "Lost", "reason": "dead-end", "successors": []}]
+
+
+def test_card_entry_records_name_and_konami_id():
+    entries = {"2": {"id": "2", "name": "Old name", "konamiId": 7, "status": "live", "successors": []}}
+    new, _ = reconcile.reconcile_cards(entries, [_card("2", "New name", 8), _card("3", "X")])
+    assert new["2"] == {"id": "2", "name": "New name", "konamiId": 8, "status": "live", "successors": []}
+    assert "konamiId" not in new["3"]
+    kept, _ = reconcile.reconcile_cards(entries, [_card("2", "New name")])
+    assert kept["2"]["konamiId"] == 7
+
+
+def test_retired_entry_stays_quiet_and_comes_back_live():
+    entries = {"1": {"id": "1", "name": "A", "status": "retired", "successors": ["2"]},
+               "4": {"id": "4", "name": "B", "status": "retired", "successors": []}}
+    new, succ = reconcile.reconcile_cards(entries, [_card("4", "B")])
+    assert new["1"] == entries["1"] and succ == {}
+    assert new["4"]["status"] == "live" and new["4"]["successors"] == []
+
+
+def test_print_editions_is_the_prints_own_else_the_sets():
+    assert ygjson.print_editions({"editions": ["1st"]}, ["first", "unlimited"]) == ["1st"]
+    assert ygjson.print_editions({}, ["first", "unlimited"]) == ["first", "unlimited"]
+
+
+def test_printings_of_uses_the_edition_rule_and_sorts():
+    sets = [{"id": "s", "editions": ["unlimited", "first"]}]
+    files = {"a.json": {"cards": [{"id": "5", "prints": [
+        {"id": "s:5:B-1:rare", "set": "s"}, {"id": "s:5:A-1:rare", "set": "s", "editions": ["limited"]}]}]}}
+    assert reconcile.printings_of(sets, files) == [
+        ("s:5:A-1:rare", "en", "limited"), ("s:5:B-1:rare", "en", "first"), ("s:5:B-1:rare", "en", "unlimited")]
+
+
+def pg(key, id_, former=()):
+    return {"id": id_, "key": key, "formerIds": list(former), "status": "live", "successors": []}
+
+
+def pgr(key, id_, former=(), successors=()):
+    return {**pg(key, id_, former), "status": "retired", "successors": list(successors)}
+
+
+KEY = "s:5:A-1:rare"
+
+
+def test_printing_id_is_print_uuid_language_edition():
+    got = reconcile.reconcile_printings({}, [(KEY, "en", "first")], {KEY: "u1"}, {"u1": live(KEY, "u1")})
+    assert got == {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first")}
+
+
+def test_dropped_edition_retires_with_the_remaining_printings_as_successors():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first"),
+               "u1:en:unlimited": pg(f"{KEY}:en:unlimited", "u1:en:unlimited")}
+    got = reconcile.reconcile_printings(entries, [(KEY, "en", "unlimited")], {KEY: "u1"}, {"u1": live(KEY, "u1")})
+    assert got["u1:en:first"] == pgr(f"{KEY}:en:first", "u1:en:first", successors=["u1:en:unlimited"])
+    assert got["u1:en:unlimited"]["status"] == "live"
+    assert entries["u1:en:first"]["status"] == "live"
+
+
+def test_restored_edition_revives_the_printing():
+    entries = {"u1:en:first": pgr(f"{KEY}:en:first", "u1:en:first", successors=["u1:en:unlimited"])}
+    got = reconcile.reconcile_printings(entries, [(KEY, "en", "first")], {KEY: "u1"}, {"u1": live(KEY, "u1")})
+    assert got["u1:en:first"] == pg(f"{KEY}:en:first", "u1:en:first")
+
+
+def test_printing_of_a_retired_print_points_at_the_successor_print():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first"),
+               "u1:en:unlimited": pg(f"{KEY}:en:unlimited", "u1:en:unlimited")}
+    new = "s:5:A-2:rare"
+    got = reconcile.reconcile_printings(entries, [(new, "en", "first")], {new: "u2"},
+                                        {"u1": retired(KEY, "u1", successors=["u2"]), "u2": live(new, "u2")})
+    assert got["u1:en:first"]["successors"] == ["u2:en:first"]
+    assert got["u1:en:unlimited"]["status"] == "retired" and got["u1:en:unlimited"]["successors"] == ["u2:en:first"]
+    assert got["u2:en:first"]["status"] == "live"
+
+
+def test_printing_key_change_records_the_former_readable_id():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first")}
+    new = "s:5:A-2:rare"
+    got = reconcile.reconcile_printings(entries, [(new, "en", "first")], {new: "u1"}, {"u1": live(new, "u1")})
+    assert got["u1:en:first"]["key"] == f"{new}:en:first"
+    assert got["u1:en:first"]["formerIds"] == [f"{KEY}:en:first"]
+    again = reconcile.reconcile_printings(got, [(new, "en", "first")], {new: "u1"}, {"u1": live(new, "u1")})
+    assert again == got
+
+
+def test_retired_printing_not_emitted_stays_unchanged():
+    entries = {"u1:en:first": pgr(f"{KEY}:en:first", "u1:en:first", successors=["x"])}
+    assert reconcile.reconcile_printings(entries, [], {}, {"u1": live(KEY, "u1")}) == entries
+
+
+def test_printing_of_a_retired_print_falls_back_to_the_successors_live_printings():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first")}
+    new = "s:5:A-2:rare"
+    got = reconcile.reconcile_printings(entries, [(new, "en", "unlimited")], {new: "u2"},
+                                        {"u1": retired(KEY, "u1", successors=["u2"]), "u2": live(new, "u2")})
+    assert got["u1:en:first"]["successors"] == ["u2:en:unlimited"]
+
+
+def _set(sid, name, code="AAA", date="2020-01-01", **identifiers):
+    return {"id": sid, "name": name, "code": code, "releases": [{"language": "en", "name": name, "releaseDate": date}],
+            "identifiers": identifiers}
+
+
+def _slug(sid, *names, status="live", successors=(), **evidence):
+    return {"id": sid, "names": list(names), "status": status, "successors": list(successors), **evidence}
+
+
+def _sets(entries, current, merges={}):
+    return reconcile.reconcile_slugs(entries, current, "name", reconcile.set_identity, merges,
+                                     evidence=reconcile.set_evidence)
+
+
+def test_set_identity_and_evidence_come_from_identifiers_code_and_first_release():
+    s = _set("x", "X", ygojsonId="u", yugipediaId=5, konamiDatabaseIds=[2, 1])
+    assert reconcile.set_identity(s) == {"ygojson:u", "yugipedia:5", "konami:1", "konami:2"}
+    assert reconcile.set_evidence(s) == {"code": "AAA", "releaseDate": "2020-01-01"}
+    assert reconcile.set_identity({"id": "y"}) == set() and reconcile.set_evidence({"id": "y", "code": "B"}) == {"code": "B"}
+    assert reconcile.archetype_identity({"slug": "a", "identifiers": {"ygojsonId": "v"}}) == {"ygojson:v"}
+    assert reconcile.archetype_identity({"slug": "a"}) == set()
+
+
+def test_new_and_live_sets_record_names_and_evidence():
+    entries = {"old": _slug("old", "Old", code="AAA", releaseDate="2020-01-01", identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set("old", "Old Two", yugipediaId=6), _set("new", "New", "NEW", "2021-02-02")])
+    assert renames == []
+    assert got["old"] == _slug("old", "Old", "Old Two", code="AAA", releaseDate="2020-01-01", identity=["yugipedia:6"])
+    assert got["new"] == _slug("new", "New", code="NEW", releaseDate="2021-02-02")
+    assert _sets(got, [_set("old", "Old Two", yugipediaId=6), _set("new", "New", "NEW", "2021-02-02")]) == (got, [])
+
+
+def test_rename_is_found_by_a_shared_yugipedia_id():
+    entries = {"old-name": _slug("old-name", "Old Name", code="AAA", releaseDate="2020-01-01", identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set("new-name", "New Name", "BBB", yugipediaId=5)])
+    assert renames == [{"from": "old-name", "to": "new-name", "name": "New Name"}]
+    assert set(got) == {"old-name"}
+    assert got["old-name"]["status"] == "live" and got["old-name"]["names"] == ["Old Name", "New Name"]
+    assert got["old-name"]["code"] == "BBB"
+
+
+def test_a_shared_id_with_two_candidates_is_no_rename():
+    entries = {"a": _slug("a", "A", identity=["yugipedia:5"]), "b": _slug("b", "B", identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set("c", "C", "ZZZ", yugipediaId=5)])
+    assert renames == [] and got["a"]["status"] == got["b"]["status"] == "retired" and got["c"]["status"] == "live"
+
+
+def test_alias_merge_retires_with_the_target():
+    alias, target = "wcs-2025-limited-pack", "limited-pack-world-championship-2025"
+    entries = {alias: _slug(alias, "WCS 2025 Limited Pack", code="25LP", releaseDate="2025-08-01", identity=["yugipedia:5"]),
+               target: _slug(target, "Limited Pack World Championship 2025", code="25LP", releaseDate="2025-08-01",
+                             identity=["yugipedia:5"])}
+    got, renames = _sets(entries, [_set(target, "Limited Pack World Championship 2025", "25LP", "2025-08-01", yugipediaId=5)],
+                         {alias: target})
+    assert renames == []
+    assert got[alias]["status"] == "retired" and got[alias]["successors"] == [target]
+    assert got[target]["status"] == "live"
+
+
+def test_vanished_set_retires_to_the_one_new_set_with_its_code_and_date():
+    entries = {"gone": _slug("gone", "Gone", code="AAA", releaseDate="2020-01-01")}
+    got, _ = _sets(entries, [_set("fresh", "Fresh", "AAA", "2020-01-01"), _set("other", "Other", "AAA", "2020-01-02")])
+    assert got["gone"]["status"] == "retired" and got["gone"]["successors"] == ["fresh"]
+    two, _ = _sets(entries, [_set("f1", "F1", "AAA", "2020-01-01"), _set("f2", "F2", "AAA", "2020-01-01")])
+    assert two["gone"]["successors"] == []
+
+
+def test_retired_slug_comes_back_live_and_an_unchanged_retired_one_stays():
+    entries = {"a": _slug("a", "A", status="retired", successors=["b"]), "z": _slug("z", "Z", status="retired")}
+    got, _ = _sets(entries, [_set("a", "A")])
+    assert got["a"]["status"] == "live" and got["a"]["successors"] == [] and got["z"] == entries["z"]
+
+
+def test_archetype_rename_is_found_by_its_ygojson_id_else_retires_with_no_successor():
+    entries = {"roid": _slug("roid", "Roid", identity=["ygojson:r"]), "d-d": _slug("d-d", "D/D")}
+    current = [{"slug": "roids", "name": "Roids", "identifiers": {"ygojsonId": "r"}}, {"slug": "ddd", "name": "DDD"}]
+    got, renames = reconcile.reconcile_slugs(entries, current, "name", reconcile.archetype_identity, id_field="slug")
+    assert renames == [{"from": "roid", "to": "roids", "name": "Roids"}]
+    assert got["roid"]["names"] == ["Roid", "Roids"] and got["d-d"]["status"] == "retired" and got["d-d"]["successors"] == []
+    assert got["ddd"] == _slug("ddd", "DDD")
+
+
+def test_reconcile_slugs_does_not_mutate_its_input():
+    entries = {"old-name": _slug("old-name", "Old Name", identity=["yugipedia:5"])}
+    before = copy.deepcopy(entries)
+    _sets(entries, [_set("new-name", "New Name", yugipediaId=5)])
+    assert entries == before
+
+
+def test_sealed_ledger_follows_the_product_and_retires_what_left():
+    entries = {"box": {"id": "box", "tcgplayerProductId": 1, "status": "live", "successors": []},
+               "old": {"id": "old", "tcgplayerProductId": 2, "status": "retired", "successors": []}}
+    products = [{"id": "box", "identifiers": {"tcgplayerProductIds": [1]}},
+                {"id": "pack", "identifiers": {"tcgplayerProductIds": [3]}}]
+    got = reconcile.reconcile_sealed(entries, products)
+    assert got == {"box": entries["box"], "old": entries["old"],
+                   "pack": {"id": "pack", "tcgplayerProductId": 3, "status": "live", "successors": []}}
+    later = reconcile.reconcile_sealed(got, products[1:])
+    assert later["box"]["status"] == "retired" and later["box"]["successors"] == []
+    assert list(later) == sorted(later)

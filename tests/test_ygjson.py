@@ -79,6 +79,21 @@ def test_dedupe_punctuation_variants_and_a_literal_suffix():
     assert out["roid 2"] == "roid-2-2"  # -2 is taken by "roid", so a real "roid-2" slug cannot be repeated
 
 
+def test_dedupe_keeps_held_slugs_when_an_earlier_name_arrives():
+    assert ygjson.dedupe_slugs(["Roid", "ROID"], held={"Roid": "roid"}) == {"Roid": "roid", "ROID": "roid-2"}
+
+
+def test_dedupe_never_reuses_a_reserved_slug():
+    assert ygjson.dedupe_slugs(["Foo"], reserved={"foo"}) == {"Foo": "foo-2"}
+
+
+def test_dedupe_never_hands_a_held_slug_to_another_name():
+    # "Bar" is held at "foo"; "Foo" is new and must not take it even though "Bar" is absent this run.
+    assert ygjson.dedupe_slugs(["Foo"], held={"Bar": "foo"}) == {"Foo": "foo-2"}
+    # Two current names held at one slug: the first in sorted order keeps it, the other gets a free one.
+    assert ygjson.dedupe_slugs(["New", "Old"], held={"New": "x", "Old": "x"}) == {"New": "x", "Old": "old"}
+
+
 def test_dedupe_is_independent_of_input_order():
     names = ["a b", "A-B", "a.b"]
     assert ygjson.dedupe_slugs(names) == ygjson.dedupe_slugs(reversed(names))
@@ -279,3 +294,38 @@ def test_flatten_archetype_members_and_products():
     assert out["archetypes"]["dark-magician"]["members"] == ["4007", "46986414"]
     assert out["products"]["lob-booster-pack"]["set"] == SET
     assert ygjson.flatten(SETS, CARDS, ARCHETYPES)["products"] == {}
+
+
+def _ledger_for(sealed=SEALED, cards=CARDS):
+    import ids
+    return ids.run({k: {} for k in ids.KINDS}, SETS, cards, ARCHETYPES, sealed, ({}, {}), {})[0]
+
+
+def test_flatten_with_a_ledger_uses_print_uuids():
+    before = copy.deepcopy(CARDS)
+    ledger = _ledger_for()
+    uuids = {e["key"]: e["id"] for e in ledger["prints"].values()}
+    out = ygjson.flatten(SETS, CARDS, ARCHETYPES, SEALED, ledger=ledger)
+    assert CARDS == before
+    assert out["cards"]["46986414"]["prints"] == [uuids[PRINT_A], uuids[PRINT_B]]
+    pid = f"{uuids[PRINT_A]}:en:first"
+    assert sorted(out["printings"]) == sorted([
+        pid, f"{uuids[PRINT_A]}:en:unlimited", f"{uuids[PRINT_B]}:en:unlimited"])
+    rec = out["printings"][pid]
+    assert rec["id"] == pid and rec["print"] == uuids[PRINT_A]
+    assert rec["key"] == f"{PRINT_A}:en:first" and rec["printKey"] == PRINT_A
+    old = ygjson.flatten(SETS, CARDS, ARCHETYPES, SEALED)["printings"][f"{PRINT_A}:en:first"]
+    assert {k: v for k, v in rec.items() if k not in ("id", "key", "print", "printKey")} == \
+        {k: v for k, v in old.items() if k not in ("id", "print")}
+
+
+def test_flatten_sealed_contents_point_at_print_uuids():
+    sealed = copy.deepcopy(SEALED)
+    sealed[SET]["products"][0]["contents"]["cards"] = [{"print": PRINT_A, "count": 1}]
+    before = copy.deepcopy(sealed)
+    ledger = _ledger_for(sealed)
+    out = ygjson.flatten(SETS, CARDS, ARCHETYPES, sealed, ledger=ledger)
+    assert sealed == before
+    got = out["products"]["lob-booster-pack"]["contents"]["cards"]
+    assert got == [{"print": ledger["prints"][got[0]["print"]]["id"], "count": 1}]
+    assert ledger["prints"][got[0]["print"]]["key"] == PRINT_A

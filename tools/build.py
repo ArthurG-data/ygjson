@@ -1,9 +1,10 @@
-"""Write dist/AllSets.json, AllCards.json, AllPrintings.json, AllArchetypes.json, AllProducts.json and Legality.json.
-Refuses to build invalid data.
+"""Write dist/AllSets.json, AllCards.json, AllPrintings.json, AllArchetypes.json, AllProducts.json, Legality.json and Ids.json.
+Refuses to build invalid data, or data the id ledger under ids/ does not match.
 
     uv run python tools/build.py --version 0.2.0
 
-Every file is {"meta": {"version", "date", "sources"}, "data": ...}. `sources` says which snapshot of each source the
+Every file is {"meta": {"version", "date", "sources", "idsVersion"}, "data": ...}. Ids.json holds the id ledger as
+loaded; the other files name prints by their permanent ids. `sources` says which snapshot of each source the
 data was last imported from, read from the caches under .cache when they are there: YGOPRODeck's database_version,
 YGOJSON's increment, and the latest modifiedOn among TCGCSV's groups. A source whose cache file is missing is left
 out, so the build needs nothing from .cache and runs in CI from the committed data alone.
@@ -16,10 +17,12 @@ import json
 import sys
 from pathlib import Path
 
+import ids
 import ygjson
 
 DIST = ygjson.ROOT / "dist"
 CACHE = ygjson.ROOT / ".cache"
+IDS_VERSION = 1
 
 
 def _read(path: Path):
@@ -39,18 +42,22 @@ def sources(cache: Path = CACHE) -> dict:
 
 
 def build(version: str, today: str, cache: Path = CACHE) -> dict[str, dict]:
-    """{file name: document} for the six release files. Exits with the problems when the data is invalid."""
+    """{file name: document} for the seven release files. Exits with the problems when the data is invalid or the
+    ledger does not match it."""
     sets, eras, files = ygjson.load_sets(), ygjson.load_eras(), ygjson.load_cards()
     archetypes, sealed, legality = ygjson.load_archetypes(), ygjson.load_sealed(), ygjson.load_legality()
     errors = ygjson.validate(sets, eras, files, archetypes, sealed, legality)
+    ledger = ids.load_ledger()
+    if not errors:
+        errors = ids.check(ledger, sets, files, archetypes, sealed, ids.load_hand())
     if errors:
         sys.exit("refusing to build:\n" + "\n".join(errors))
-    flat = ygjson.flatten(sets, files, archetypes, sealed)
-    meta = {"version": version, "date": today, "sources": sources(cache)}
+    flat = ygjson.flatten(sets, files, archetypes, sealed, ledger)
+    meta = {"version": version, "date": today, "sources": sources(cache), "idsVersion": IDS_VERSION}
     if not meta["sources"]:
         del meta["sources"]
     data = {"AllSets": flat["sets"], "AllCards": flat["cards"], "AllPrintings": flat["printings"],
-            "AllArchetypes": flat["archetypes"], "AllProducts": flat["products"], "Legality": legality}
+            "AllArchetypes": flat["archetypes"], "AllProducts": flat["products"], "Legality": legality, "Ids": ledger}
     return {name: {"meta": meta, "data": body} for name, body in data.items()}
 
 
