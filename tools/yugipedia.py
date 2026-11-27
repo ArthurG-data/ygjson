@@ -2,7 +2,9 @@
 
 Pages are fetched through the MediaWiki API (`action=query&prop=revisions&rvprop=content&rvslots=main`, formatversion 2)
 and stored one JSON object per page: `page_<pageid>.json` for a page asked for by id (up to 50 ids per request),
-`title_<slug of the title>.json` for one asked for by title. A page that does not exist is cached as a marker
+`title_<slug of the title>-<first 10 hex digits of the sha1 of the exact title>.json` for one asked for by title
+(the hash keeps titles that differ only in case or punctuation apart; an older `title_<slug>.json` is still read when it
+was cached for this title). A page that does not exist is cached as a marker
 (`{"missing": true, ...}`), so it is asked for once. A cached file is never fetched again unless refresh=True.
 Requests are one second apart and carry the project's User-Agent, as Yugipedia asks.
 
@@ -13,6 +15,7 @@ Requests are one second apart and carry the project's User-Agent, as Yugipedia a
 from __future__ import annotations
 
 import datetime
+import hashlib
 import html
 import json
 import re
@@ -81,10 +84,23 @@ def page_by_id(pageid: int, cache: Path = DEFAULT_CACHE, refresh: bool = False) 
     return pages_by_id([pageid], cache, refresh)[int(pageid)]
 
 
+def title_path(title: str, cache: Path) -> Path:
+    """The cache file of a title: the hashed name, unless only an older slug-only file exists and it was cached for
+    this title (its page, or its missing marker, carries a title that is not another title with the same slug)."""
+    slug = ygjson.slugify(title)
+    path = cache / f"title_{slug}-{hashlib.sha1(title.encode('utf-8')).hexdigest()[:10]}.json"
+    legacy = cache / f"title_{slug}.json"
+    if not path.exists() and legacy.exists():
+        cached = json.loads(legacy.read_text(encoding="utf-8")).get("title")
+        if cached == title or (cached is not None and ygjson.slugify(cached) != slug):
+            return legacy
+    return path
+
+
 def page_by_title(title: str, cache: Path = DEFAULT_CACHE, refresh: bool = False) -> dict | None:
     """The page with this exact title (a redirect is followed), or None; a missing title is cached and not asked twice
     unless refresh=True."""
-    path = cache / f"title_{ygjson.slugify(title)}.json"
+    path = title_path(title, cache)
     if refresh or not path.exists():
         pages = _query({"titles": title})["query"]["pages"]
         page = next((p for p in pages if not p.get("missing") and "pageid" in p), None)
