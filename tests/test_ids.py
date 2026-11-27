@@ -410,6 +410,26 @@ def test_ledger_at_reads_a_revision_and_refuses_an_unknown_one(tmp_path):
         ids.ledger_at("no-such-rev", tmp_path)
 
 
+def test_ledger_at_exits_on_a_git_failure_other_than_a_missing_file(tmp_path, monkeypatch):
+    import subprocess
+    _git(tmp_path, "init", "-q")
+    ledger = {k: {} for k in ids.KINDS}
+    ledger["prints"] = {PRINT["id"]: PRINT}
+    ids.save_ledger(ledger, tmp_path / "ids")
+    _git(tmp_path, "add", "ids")
+    _git(tmp_path, "commit", "-q", "-m", "ledger")
+    real = subprocess.run
+
+    def broken(args, **kw):
+        if args[:2] == ["git", "show"]:
+            return subprocess.CompletedProcess(args, 128, b"", b"fatal: unable to read 1234abcd")
+        return real(args, **kw)
+
+    monkeypatch.setattr(ids.subprocess, "run", broken)
+    with pytest.raises(SystemExit, match="unable to read"):
+        ids.ledger_at("HEAD", tmp_path)
+
+
 def test_a_duplicate_id_in_a_ledger_file_is_refused(tmp_path):
     (tmp_path / "prints.json").write_text(json.dumps({"prints": [PRINT, {**PRINT, "key": "other"}]}))
     with pytest.raises(ValueError, match=f"prints.*{PRINT['id']}"):

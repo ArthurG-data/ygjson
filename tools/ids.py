@@ -299,15 +299,25 @@ def _birth(entry: dict) -> str | None:
 
 
 def ledger_at(rev: str, root: Path = ygjson.ROOT) -> dict[str, dict[str, dict]]:
-    """The ledger committed at git `rev`; a kind whose file is not there loads empty. Exits on a rev git lacks."""
+    """The ledger committed at git `rev`; a kind whose file is not in `rev`'s tree loads empty. Exits on a rev git
+    lacks and on any other git failure, so a ledger git could not read is never taken for an empty one."""
     known = subprocess.run(["git", "rev-parse", "--verify", "--quiet", f"{rev}^{{commit}}"], cwd=root,
                            capture_output=True)
     if known.returncode != 0:
         sys.exit(f"{rev}: no such git revision")
+    listed = subprocess.run(["git", "ls-tree", "--name-only", rev, "ids/"], cwd=root, capture_output=True)
+    if listed.returncode != 0:
+        sys.exit(f"{rev}: git ls-tree failed: {listed.stderr.decode('utf-8', 'replace').strip()}")
+    present = set(listed.stdout.decode("utf-8").split())
     ledger: dict[str, dict[str, dict]] = {}
     for kind in KINDS:
-        shown = subprocess.run(["git", "show", f"{rev}:ids/{kind}.json"], cwd=root, capture_output=True)
-        entries = json.loads(shown.stdout.decode("utf-8"))[kind] if shown.returncode == 0 else []
+        path = f"ids/{kind}.json"
+        entries: list[dict] = []
+        if path in present:
+            shown = subprocess.run(["git", "show", f"{rev}:{path}"], cwd=root, capture_output=True)
+            if shown.returncode != 0:
+                sys.exit(f"{rev}:{path}: {shown.stderr.decode('utf-8', 'replace').strip()}")
+            entries = json.loads(shown.stdout.decode("utf-8"))[kind]
         ledger[kind] = _by_id(kind, entries)
     return ledger
 
