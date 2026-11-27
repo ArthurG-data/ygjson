@@ -111,7 +111,7 @@ def reconcile_printings(entries: dict[str, dict], printings: list[tuple[str, str
 
     A printing in `printings` is live: it keeps its entry's id, its `key` is refreshed and a changed key goes to
     `formerIds`. A live entry not in `printings` is retired. Its successors are, when its print is retired, the same
-    language and edition on each successor print if that printing is live; when its print is live (the edition was
+    language and edition on each successor print if that printing is live, else all of that print's live printings; when its print is live (the edition was
     dropped), the print's other live printings. An entry already retired and not emitted is left as it is.
     `entries` is not modified.
     """
@@ -139,8 +139,8 @@ def reconcile_printings(entries: dict[str, dict], printings: list[tuple[str, str
         if owner is None:
             entry["successors"] = []
         elif owner["status"] == "retired":
-            entry["successors"] = sorted(f"{s}:{language}:{edition}" for s in owner["successors"]
-                                         if f"{s}:{language}:{edition}" in live_ids)
+            same = lambda s: [f"{s}:{language}:{edition}"] if f"{s}:{language}:{edition}" in live_ids else by_print.get(s, [])
+            entry["successors"] = sorted({i for s in owner["successors"] for i in same(s)})
         else:
             entry["successors"] = sorted(by_print.get(print_id, []))
     return dict(sorted(out.items()))

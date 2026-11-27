@@ -366,3 +366,11 @@ def test_printing_key_change_records_the_former_readable_id():
 def test_retired_printing_not_emitted_stays_unchanged():
     entries = {"u1:en:first": pgr(f"{KEY}:en:first", "u1:en:first", successors=["x"])}
     assert reconcile.reconcile_printings(entries, [], {}, {"u1": live(KEY, "u1")}) == entries
+
+
+def test_printing_of_a_retired_print_falls_back_to_the_successors_live_printings():
+    entries = {"u1:en:first": pg(f"{KEY}:en:first", "u1:en:first")}
+    new = "s:5:A-2:rare"
+    got = reconcile.reconcile_printings(entries, [(new, "en", "unlimited")], {new: "u2"},
+                                        {"u1": retired(KEY, "u1", successors=["u2"]), "u2": live(new, "u2")})
+    assert got["u1:en:first"]["successors"] == ["u2:en:unlimited"]
