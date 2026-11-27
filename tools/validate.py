@@ -50,11 +50,13 @@ def main() -> None:
         errors = online_errors(files, sealed)
     for e in errors:
         print(e)
+    if errors:  # flatten assumes data that passed the checks: a print naming a missing set would end in a traceback
+        print(f"{len(errors)} problems")
+        sys.exit(1)
     flat = ygjson.flatten(sets, files, archetypes, sealed)
-    print(f"{len(errors)} problems in {len(flat['sets'])} sets, {len(flat['cards'])} cards, "
+    print(f"0 problems in {len(flat['sets'])} sets, {len(flat['cards'])} cards, "
           f"{len(flat['printings'])} printings, {len(flat['archetypes'])} archetypes, "
           f"{len(flat['products'])} sealed products, {len(legality['events'])} legality events")
-    sys.exit(1 if errors else 0)
 
 
 if __name__ == "__main__":
