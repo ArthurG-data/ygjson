@@ -267,6 +267,21 @@ def test_rule_3_an_unknown_rarity_print_takes_tcgplayers_rarity():
     assert out["stats"]["rekeyed"] == 1
 
 
+def test_the_products_after_a_re_key_match_by_number_and_rarity_on_every_run():
+    # The plain product re-keys the print in pass 2. The misprint and a second plain product, later in that pass, then
+    # find it at their own rarity: that is a number+rarity match, as it is on a rerun, where pass 1 finds it.
+    w = world([mkprint("lob", "100", "LOB-EN001", "unknown", rawRarity="New")])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 7), single(1, "Alpha", "LOB-EN001", "Common", 8),
+                    single(1, "Alpha (Unlimited Misprint)", "LOB-EN001", "Common", 9)]}
+    prices = {1: [price(7, "1st Edition"), price(8, "Unlimited"), price(9, "Unlimited")]}
+    out = go(products=products, prices=prices, **w)
+    prints = prints_of(out, "100")
+    assert prints["lob:100:LOB-EN001:common"]["tcgplayer"]["match"] == "number+rarity-from-tcgplayer"
+    assert prints["lob:100:LOB-EN001:common:unlimited-misprint"]["tcgplayer"]["match"] == "number+rarity"
+    again = imp.run(w["groups"], products, prices, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["files"] == out["files"] and again["stats"]["matches"] == out["stats"]["matches"]
+
+
 def test_an_exact_match_is_made_before_a_fuzzy_one_can_take_the_print():
     w = world([mkprint("lob", "100", "LOB-EN001", "unknown", rawRarity="2"),
                mkprint("lob", "100", "LOB-EN001", "secret_rare")])

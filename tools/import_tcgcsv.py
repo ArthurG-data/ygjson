@@ -25,6 +25,7 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
   2. the group's set has the number, and either exactly one print of that number has an unknown rarity (it takes
      TCGplayer's rarity and a new id)                                  -> number+rarity-from-tcgplayer
      or exactly one print has that number at all                       -> number
+     (number+rarity when that print has the product's rarity, because a product re-keyed it earlier in the run)
   3. no set, or the number is not in the group's set: the number is in exactly one other set (the set is named
      differently on TCGplayer), tried with the same rules there        -> number-other-set
   4. no print anywhere has the number: the product's name is exactly one card (its name, or an alias: one the card came
@@ -706,7 +707,10 @@ class Importer:
                 self._review(prod, "re-keying the unknown-rarity print would duplicate an existing print")
                 return False
             label = label or "number+rarity-from-tcgplayer"
-        return self._land(card, p, prod, label or ("number" if kind == "number" else "number+rarity"))
+        # The one print of the number has the product's rarity only because a product re-keyed it earlier in this run:
+        # that is a number+rarity match, as on a rerun, where pass 1 finds it.
+        same_rarity = rarity != rarities.UNKNOWN and p["rarity"] == rarity
+        return self._land(card, p, prod, label or ("number" if kind == "number" and not same_rarity else "number+rarity"))
 
     def match_singles(self) -> None:
         singles = sorted((p for ps in self.products.values() for p in ps if p.is_single), key=lambda p: p.product_id)
