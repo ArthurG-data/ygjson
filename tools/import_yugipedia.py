@@ -14,7 +14,7 @@ import_ygojson), else by title (the set's name, then the name without a leading 
   identifiers yugipediaId (only for a set found by title), konamiDatabaseIds united with every *database_id value.
   code        the prefix before the hyphen of `prefix` / `en_prefix`, only for a set whose code is UNKNOWN.
   releases[0] releaseDate when the set has none: the first date that parses of na_release_date, en_release_date,
-              release_date, else the earliest of the other *_release_date values (a month-only date is the 1st).
+              release_date, else the earliest of the other TCG regions' dates, never jp, kr, ae, sc or tc (a month-only date is the 1st).
               keyArt when the set has none and the infobox has an image: Special:FilePath of the file, the page as
               source.
   parent      a sneak_peek, special_edition or promo set (a promo only when its name says premiere or promotional
@@ -44,6 +44,8 @@ SOURCE = "ygoprodeck"
 _DATABASE_ID = re.compile(r"(?:^|_)database_id$")
 _RELEASE_DATE = re.compile(r"release_date$")
 _PREFERRED_DATES = ("na_release_date", "en_release_date", "release_date")
+# The regions of the TCG's other languages. A jp, kr, ae, sc or tc date is an OCG release, not one of an English set.
+_TCG_REGIONS = {"eu", "oc", "au", "fr", "de", "it", "sp", "sp-lat", "pt", "fc"}
 CHILD_TYPES = ("sneak_peek", "special_edition", "promo")
 _PROMO_CHILD = re.compile(r"premiere|promotional cards?", re.IGNORECASE)
 _SNEAK_PEEK = re.compile(r"sneak peek", re.IGNORECASE)
@@ -102,12 +104,18 @@ def database_ids(ib: dict[str, str]) -> list[int]:
     return sorted(found)
 
 
+def _tcg_region(key: str) -> bool:
+    """Whether a *_release_date key names only regions the TCG sells in (fr/de/it/sp_release_date does)."""
+    return set(key.removesuffix("_release_date").split("/")) <= _TCG_REGIONS
+
+
 def release_date(ib: dict[str, str]) -> str | None:
-    """na, else en, else the undecorated release_date, else the earliest of the other *_release_date values."""
+    """na, else en, else the undecorated release_date, else the earliest of the other TCG regions' release dates."""
     for key in _PREFERRED_DATES:
         if date := yugipedia.parse_date(ib.get(key)):
             return date
-    others = [yugipedia.parse_date(v) for k, v in ib.items() if _RELEASE_DATE.search(k) and k not in _PREFERRED_DATES]
+    others = [yugipedia.parse_date(v) for k, v in ib.items()
+              if _RELEASE_DATE.search(k) and k not in _PREFERRED_DATES and _tcg_region(k)]
     return min((d for d in others if d), default=None)
 
 
