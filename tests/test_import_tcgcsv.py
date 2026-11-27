@@ -433,9 +433,24 @@ def test_rule_3_an_unknown_rarity_print_takes_tcgplayers_rarity():
     out = go(products={1: [single(1, "Alpha", "LOB-EN001", "Secret Rare", 7)]}, **w)
     (key, p), = prints_of(out, "100").items()
     assert key == "lob:100:LOB-EN001:secret_rare" == p["id"]
-    assert p["rarity"] == "secret_rare" and "rawRarity" not in p and p["region"] == "EN"
+    # YGOPRODeck's string stays: it is what tells a later run alone that the rarity is TCGplayer's.
+    assert p["rarity"] == "secret_rare" and p["rawRarity"] == "New" and p["region"] == "EN"
     assert p["tcgplayer"]["match"] == "number+rarity-from-tcgplayer" and p["identifiers"]["tcgplayerProductIds"] == [7]
     assert out["stats"]["rekeyed"] == 1
+
+
+def test_a_print_whose_rarity_ygoprodeck_now_gives_matches_by_number_and_rarity_as_a_fresh_build_does():
+    w = world([mkprint("lob", "100", "LOB-EN001", "unknown", rawRarity="New")])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Secret Rare", 7)]}
+    out = go(products=products, **w)
+    # YGOPRODeck now lists the print at secret_rare, so it has no rawRarity, and import_ygoprodeck carries the earlier
+    # run's tcgplayer block over to it by id.
+    files = copy.deepcopy(out["files"])
+    files["000"]["cards"][0]["prints"][0].pop("rawRarity", None)
+    again = imp.run(w["groups"], products, {}, copy.deepcopy(out["sets"]), files, {})
+    fresh = go(products=products, **world([mkprint("lob", "100", "LOB-EN001", "secret_rare")]))
+    assert again["files"] == fresh["files"]
+    assert again["files"]["000"]["cards"][0]["prints"][0]["tcgplayer"]["match"] == "number+rarity"
 
 
 def test_the_products_after_a_re_key_match_by_number_and_rarity_on_every_run():

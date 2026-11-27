@@ -217,7 +217,8 @@ slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The common
 **Rarity.** A print's `rarity` is a code from `tools/rarities.py`, which maps YGOPRODeck's and TCGplayer's free text
 onto 41 codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
 `dt_normal_parallel` and so on). Text the table does not know becomes `unknown`, and the print keeps the source's
-string as `rawRarity`. 30 prints are `unknown`; `review/rarities.json` counts each raw string. The table is the one
+string as `rawRarity`, also once TCGplayer's rarity replaces `unknown` (`number+rarity-from-tcgplayer` below). 30 prints
+are `unknown`; `review/rarities.json` counts each raw string. The table is the one
 place that decides a rarity, its finish and its tier. TCGplayer's `Emblazoned Ultra Rare` and `Emblazoned Secret Rare`
 are `ultra_rare` and `secret_rare`: Emblazoned is a treatment, and the product's `(EUR)` or `(ESR)` makes it a version
 (see [Variants](#cards-and-prints)).

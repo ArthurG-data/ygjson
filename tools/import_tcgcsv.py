@@ -25,7 +25,8 @@ and nothing else does). Groups that match no set go to review `groups`.
 A single is tied to a print in three passes, so a fuzzy match never takes a print an exact one wants:
   1. (Number, canonical Rarity) in the group's set                     -> number+rarity
   2. the group's set has the number, and either exactly one print of that number has an unknown rarity (it takes
-     TCGplayer's rarity and a new id)                                  -> number+rarity-from-tcgplayer
+     TCGplayer's rarity and a new id, and keeps YGOPRODeck's rarity string as rawRarity, so a later exact match of
+     it says the same)                                                 -> number+rarity-from-tcgplayer
      or exactly one print has that number at all                       -> number
      (number+rarity when that print has the product's rarity, because a product re-keyed it earlier in the run)
   3. no set, or the number is not in the group's set: the number is in exactly one other set (the set is named
@@ -428,7 +429,6 @@ class Importer:
         self.conflicts: list[dict] = []
         self.aliases: dict[int, collections.Counter] = collections.defaultdict(collections.Counter)
         self.landed_in: dict[str, set[int]] = collections.defaultdict(set)  # set id -> product ids
-        self.rekeyed_before: set[str] = set()  # prints an earlier run re-keyed to TCGplayer's rarity
         # reprint set id -> (its group, its parent, the editions it came in with)
         self.reprint_of: dict[str, tuple[int, str, list[str] | None]] = {}
         complete = _complete(groups, products, sets, mapping)
@@ -457,10 +457,7 @@ class Importer:
     def _forget_products(self, p: dict) -> None:
         """Take off the print the products an earlier run left there, so every product is decided again, a product that
         now belongs elsewhere never keeps the right one off, and one TCGCSV no longer lists leaves. Only a product of a
-        group whose products are missing from the input stays (see _undecided). A print an earlier run re-keyed keeps
-        its label, because it now matches exactly."""
-        if p.get("tcgplayer", {}).get("match") == "number+rarity-from-tcgplayer":
-            self.rekeyed_before.add(p["id"])
+        group whose products are missing from the input stays (see _undecided)."""
         kept = [i for i in _product_ids(p) if self.undecided(i)]
         if kept:
             p["identifiers"]["tcgplayerProductIds"] = kept
@@ -583,8 +580,8 @@ class Importer:
         new_id = ygjson.print_id(set_id, card["id"], p.get("number"), rarity)
         if any(q["id"] == new_id for q in card["prints"]):
             return False
+        # YGOPRODeck's rarity string stays, so a run alone over this output still reads the rarity as TCGplayer's.
         p["id"], p["rarity"] = new_id, rarity
-        p.pop("rawRarity", None)
         self.rekeyed += 1
         return True
 
@@ -631,13 +628,14 @@ class Importer:
             ids.sort()
         if p.get("source") == SOURCE and not p.get("variant"):
             match = MINTED
-        if p["id"] in self.rekeyed_before and match == "number+rarity":
+        if match == "number+rarity" and p.get("rawRarity"):
+            # The print's rarity is TCGplayer's: YGOPRODeck's own string mapped to unknown (see _rekey).
             match = "number+rarity-from-tcgplayer"
         kept = p.get("tcgplayer")
         if kept is None:
             p["tcgplayer"] = {"name": prod.name, "match": match}
-        elif kept["match"] != MINTED and not (kept["match"] == "number+rarity-from-tcgplayer" and match == "number+rarity"):
-            kept["match"] = match  # a re-keyed or minted print matches exactly on the next run, but keeps its label
+        elif kept["match"] != MINTED:
+            kept["match"] = match  # a minted print matches exactly on the next run, but keeps its label
         self.landed_in[p["set"]].add(prod.product_id)
         # A name TCGplayer sells the card under by number names it for a later product of this run, so a print minted
         # from it never waits for merge_aliases to write it and a later run to read it.
