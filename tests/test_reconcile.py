@@ -224,3 +224,29 @@ def test_reconcile_is_deterministic():
         got = reconcile.reconcile_prints(ledger(*entries), cur(*keys, products=products))
         assert got == want
         assert list(got[0]) == list(want[0]) and list(got[1]) == list(want[1])
+
+
+def test_rule2_refuses_a_product_another_current_print_holds():
+    gone, back, new = "s:1:A:rare", "t:2:B:rare", "u:3:C:rare"
+    before = ledger(live(gone, "id-a", [100]), retired(back, "id-b", [7]))
+    got, by_key, review = reconcile.reconcile_prints(before, cur(back, new, products={back: [100], new: [100]}))
+    minted = ids.mint(new, {"id-a", "id-b"})
+    assert by_key == {back: "id-b", new: minted}
+    assert got["id-a"] == retired(gone, "id-a", [100])
+    assert review == [{"id": "id-a", "key": gone, "reason": "retired", "successors": []}]
+
+    kept = "t:2:B:rare"
+    got, by_key, review = reconcile.reconcile_prints(ledger(live(gone, "id-a", [100]), live(kept, "id-k", [100])),
+                                                     cur(kept, new, products={kept: [100], new: [100]}))
+    assert by_key == {kept: "id-k", new: ids.mint(new, {"id-a", "id-k"})}
+    assert got["id-a"]["status"] == "retired"
+    assert [r["id"] for r in review] == ["id-a"]
+
+
+def test_unnumbered_print_in_another_set_does_not_keep_the_id():
+    old, new = "promo-a:5::ultra_rare", "promo-b:5::ultra_rare"
+    got, by_key, review = reconcile.reconcile_prints(ledger(live(old, "id-a")), cur(new))
+    minted = ids.mint(new, {"id-a"})
+    assert by_key == {new: minted}
+    assert got == ledger(retired(old, "id-a"), live(new, minted))
+    assert review == [{"id": "id-a", "key": old, "reason": "retired", "successors": []}]

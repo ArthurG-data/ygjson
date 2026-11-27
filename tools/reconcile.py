@@ -53,10 +53,11 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
     """Decide the ledger id each current print carries: (new print entries, {current key: id}, review rows).
 
     A newcomer (a print no live entry has) takes, by the first rule that settles it: 1 the id of a retired entry that
-    had its key, 2 the id of the one orphan (a live entry whose print is gone) that held its TCGplayer product, 3 the
-    one orphan at its (set, card, number), 4 the one orphan at its (card, number, rarity, variant) in another set, 5
-    the retired id `hand` gives it, 6 a new id. Each rule is a pass over what is still unmatched. Orphans left are
-    retired with successors and listed for review. `entries` is not modified.
+    had its key, 2 the id of the one orphan (a live entry whose print is gone) that held a TCGplayer product no other
+    current print holds, 3 the one orphan at its (set, card, number), 4 the one orphan at its (card, number, rarity,
+    variant) in another set, when the number is not empty, 5 the retired id `hand` gives it, 6 a new id. Each rule is
+    a pass over what is still unmatched. Orphans left are retired with successors and listed for review. `entries` is
+    not modified.
     """
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
     facts = {p.key: p for p in current}
@@ -66,10 +67,10 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
 
     revivable = {i for i, e in out.items() if e["status"] == "retired"}
     _revive(out, newcomers, revivable, carried, review)
-    _settle(_by_product(newcomers, orphans), newcomers, orphans, carried)
+    _settle(_by_product(facts, newcomers, orphans), newcomers, orphans, carried)
     _settle(_by_place(newcomers, orphans, lambda f: (f.set, f.card, f.number)), newcomers, orphans, carried)
     _settle([(k, i) for k, i in _by_place(newcomers, orphans, lambda f: (f.card, f.number, f.rarity, f.variant))
-             if newcomers[k].set != orphans[i].set], newcomers, orphans, carried)
+             if newcomers[k].number and newcomers[k].set != orphans[i].set], newcomers, orphans, carried)
     _hand(hand, newcomers, revivable, carried, review)
     taken = set(out)
     for key in newcomers:
@@ -88,7 +89,7 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
 
     successors = _successor_index(current, carried)
     for i, f in sorted(orphans.items()):
-        found = successors[0].get((f.set, f.card, f.number)) or successors[1].get((f.card, f.number)) \
+        found = successors[0].get((f.set, f.card, f.number)) or (f.number and successors[1].get((f.card, f.number))) \
             or successors[2].get((f.set, f.card, f.rarity, f.variant)) or []
         out[i].update(status="retired", successors=sorted(set(found)))
         review.append({"id": i, "key": out[i]["key"], "reason": "retired", "successors": sorted(set(found))})
@@ -137,10 +138,12 @@ def _revive(out: dict[str, dict], newcomers: dict[str, PrintFacts], revivable: s
         del newcomers[key]
 
 
-def _by_product(newcomers: Mapping[str, PrintFacts], orphans: Mapping[str, PrintFacts]) -> list[tuple[str, str]]:
-    """Rule 2: (newcomer key, orphan id) where only that orphan held one of the products only that newcomer holds."""
+def _by_product(facts: Mapping[str, PrintFacts], newcomers: Mapping[str, PrintFacts],
+                orphans: Mapping[str, PrintFacts]) -> list[tuple[str, str]]:
+    """Rule 2: (newcomer key, orphan id) where only that orphan held one of the products that, of every current print,
+    only that newcomer holds."""
     holders: dict[int, list[str]] = defaultdict(list)
-    for key, f in newcomers.items():
+    for key, f in facts.items():
         for product in f.products:
             holders[product].append(key)
     held_by: dict[int, list[str]] = defaultdict(list)
