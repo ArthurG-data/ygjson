@@ -412,20 +412,32 @@ product is unaccounted for.
 
 ```sh
 uv sync --group dev
-uv run python tools/import_ygoprodeck.py   # sets, cards, prints and archetypes; --refresh downloads YGOPRODeck again
-uv run python tools/import_ygojson.py      # editions, ids, names and series
-uv run python tools/import_yugipedia.py    # set types, series, parents and database ids
-uv run python tools/import_tcgcsv.py       # TCGplayer groups and products
-uv run python tools/import_sealed.py       # sealed products
-uv run python tools/ids.py                 # reconcile the id ledger; exits 3 after a rename, then run the imports again
+uv run python tools/pipeline.py [--from STAGE] [--refresh SOURCE] [--offline]   # the six import stages, in order
 uv run python tools/coverage_report.py [--strict] # where every TCGplayer product went
 uv run python tools/legality.py            # ban list events
 uv run python tools/validate.py [--online]
 uv run python tools/build.py --version 0.2.0   # dist/AllSets, AllCards, AllPrintings, AllArchetypes, AllProducts, Legality, Ids
 ```
 
+`pipeline.py` runs the import stages in order, each printing its summary:
+
+| Stage | Adds |
+|---|---|
+| `import_ygoprodeck` | sets, cards, prints and archetypes |
+| `import_ygojson` | editions, ids, names and series |
+| `import_yugipedia` | set types, series, parents and database ids |
+| `import_tcgcsv` | TCGplayer groups and products |
+| `import_sealed` | sealed products |
+| `ids` | the id ledger (on a rename it exits 3, and the pipeline runs the stages once more) |
+
 The order matters: each importer keeps what the earlier ones wrote and adds its own fields, so a rerun in order
-changes nothing unless a source changed. The downloads are cached under `.cache/`, which is never committed. YGOPRODeck
+changes nothing unless a source changed, and a stage run on its own, or out of order, can leave the data wrong without
+saying so. The pipeline stops at the first stage that fails. `--from STAGE` starts at a later stage, and is refused
+unless the stage before it completed in the last run, the data is still as that run left it (the pipeline keeps a hash
+in `.cache/pipeline.json`), and every earlier source's cache holds the snapshot `sources.json` names. `--refresh
+ygoprodeck`, `--refresh tcgcsv` and `--refresh ygojson` (the branch's current commit) download a source again before
+its stage; `--offline` downloads nothing, so a stage whose cache is incomplete fails. The importers can still be run
+one by one (`tools/import_*.py`, `tools/ids.py`), in this order. The downloads are cached under `.cache/`, which is never committed. YGOPRODeck
 is fetched on the first run. Yugipedia pages and TCGCSV files are fetched when they are not cached, at one request per
 second and one every half second. `import_ygojson.py` downloads YGOJSON's `v1/aggregate` branch at the commit
 `sources.json` pins, when the cache holds another, and checks every file against the commit's git blob hash;
@@ -481,7 +493,9 @@ uv run python tools/legality.py --check    # compares with YGOPRODeck's live lis
 ```
 
 CI runs only the offline checks (ruff, mypy, pytest, `validate.py`, and the id ledger check against the previous state)
-on every pull request, every push to `main` and every `v*` tag. The two live checks run weekly and on demand in
+on every pull request, every push to `main` and every `v*` tag. pytest includes `tests/test_pipeline.py`, which runs
+`pipeline.py --offline` end to end on a small snapshot of the four sources (one set and three of its cards, in
+`tests/fixtures/pipeline`, cut from a full cache by `tests/fixtures/make_pipeline_fixture.py`) and validates the result. The two live checks run weekly and on demand in
 `live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
 that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release. Each
 action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.

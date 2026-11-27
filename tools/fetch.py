@@ -4,7 +4,8 @@
 request to the same host. It retries, up to ATTEMPTS in all, on 408/425/429/5xx, on network errors and timeouts, and
 on a body that is cut short or is not JSON, waiting BACKOFF_S, then twice that, and so on (never more than MAX_WAIT_S),
 or what the reply's Retry-After asks. A `check` can read the parsed body and ask for a retry (MediaWiki's maxlag) or
-refuse it. A download that still fails raises FetchError, naming the URL and the last reason.
+refuse it. A download that still fails raises FetchError, naming the URL and the last reason. With YGJSON_OFFLINE set
+in the environment every download raises FetchError at once (pipeline.py --offline).
 
 `get_bytes` is the same without the JSON. `write_atomic` writes a cache file through a temporary file and os.replace,
 so an interrupted run never leaves a truncated file behind, and leaves a file that already holds the same bytes alone
@@ -34,6 +35,7 @@ ATTEMPTS = 5
 BACKOFF_S = 2.0
 MAX_WAIT_S = 120.0
 RETRY_STATUS = frozenset({408, 425, 429, 500, 502, 503, 504})
+OFFLINE = "YGJSON_OFFLINE"  # set (to anything) to let nothing be downloaded
 
 _last_request: dict[str, float] = {}
 
@@ -78,6 +80,8 @@ def get_bytes(url: str, *, timeout: float = 60.0, delay: float = 0.0,
               check: Callable[[bytes, Mapping[str, str]], None] | None = None,
               attempts: int = ATTEMPTS) -> bytes:
     """The body. `check(body, headers)` may raise Retry or Refuse."""
+    if os.environ.get(OFFLINE):
+        raise FetchError(f"{url}: not downloaded, {OFFLINE} is set")
     host = urllib.parse.urlsplit(url).netloc
     reason = ""
     for attempt in range(1, attempts + 1):
