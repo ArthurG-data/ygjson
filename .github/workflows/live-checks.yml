@@ -1,0 +1,25 @@
+name: live-checks
+
+# Checks that compare the committed data with live sources (TCGplayer/TCGCSV and
+# YGOPRODeck). A failure here means the data needs refreshing; it is a signal,
+# not a gate on pull requests or releases.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --locked --group dev
+      - run: uv run python tools/validate.py --online
+      - run: uv run python tools/legality.py --check
