@@ -55,9 +55,9 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
 
     A newcomer (a print no live entry has) takes, by the first rule that settles it: 1 the id of a retired entry that
     had its key, 2 the id of the one orphan (a live entry whose print is gone) that held a TCGplayer product no other
-    current print holds, 3 the one orphan at its (set, card, number), 4 the one orphan at its (card, number, rarity,
-    variant) in another set, when the number is not empty, 5 the retired id `hand` gives it, 6 a new id. Each rule is
-    a pass over what is still unmatched. Orphans left are retired with successors and listed for review. A retired
+    current print holds, when that orphan is of the newcomer's card, 3 the one orphan at its (set, card, number), 4 the
+    one orphan at its (card, number, rarity, variant) in another set, when the number is not empty, 5 the retired id
+    `hand` gives it, 6 a new id. Each rule is a pass over what is still unmatched. Orphans left are retired with successors and listed for review. A retired
     entry that had a current key (as its key or a former key) gains that key's id as a successor, so a reader holding
     it reaches the print now at its key. `entries` is not modified.
     """
@@ -335,7 +335,8 @@ def _revive(out: dict[str, dict], newcomers: dict[str, PrintFacts], revivable: s
 def _by_product(facts: Mapping[str, PrintFacts], newcomers: Mapping[str, PrintFacts],
                 orphans: Mapping[str, PrintFacts]) -> list[tuple[str, str]]:
     """Rule 2: (newcomer key, orphan id) where only that orphan held one of the products that, of every current print,
-    only that newcomer holds."""
+    only that newcomer holds, and the orphan is of the newcomer's card (its facts already rekeyed through a retired
+    card's successor). A product shared across cards carries nothing."""
     holders: dict[int, list[str]] = defaultdict(list)
     for key, f in facts.items():
         for product in f.products:
@@ -347,7 +348,7 @@ def _by_product(facts: Mapping[str, PrintFacts], newcomers: Mapping[str, PrintFa
     pairs = []
     for key, f in newcomers.items():
         held = {i for product in f.products if holders[product] == [key] for i in held_by.get(product, [])}
-        if len(held) == 1:
+        if len(held) == 1 and orphans[next(iter(held))].card == f.card:
             pairs.append((key, held.pop()))
     return pairs
 

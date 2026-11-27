@@ -275,6 +275,15 @@ def test_rule2_refuses_a_product_another_current_print_holds():
     assert [r["id"] for r in review] == ["id-a"]
 
 
+def test_rule2_does_not_carry_an_id_to_another_card():
+    old, new = "s:111:S-001:common", "s:222:S-001:common"
+    got, by_key, _ = reconcile.reconcile_prints(ledger(live(old, "id-a", [42])), cur(new, products={new: [42]}))
+    minted = ids.mint(new, {"id-a"})
+    assert by_key == {new: minted}
+    assert got["id-a"] == retired(old, "id-a", [42])
+    assert got[minted] == live(new, minted, [42])
+
+
 def test_unnumbered_print_in_another_set_does_not_keep_the_id():
     old, new = "promo-a:5::ultra_rare", "promo-b:5::ultra_rare"
     got, by_key, review = reconcile.reconcile_prints(ledger(live(old, "id-a")), cur(new))
