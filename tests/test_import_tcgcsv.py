@@ -557,7 +557,7 @@ def test_tcgplayers_other_name_for_a_card_becomes_an_alias_unless_another_card_h
 
 def test_a_beta_name_alias_mints_a_print_when_no_card_has_that_name():
     card = mkcard("100", "Red-Eyes Black Dragon", [mkprint("lob", "100", "LOB-070", "ultra_rare")])
-    card["aliases"] = ["Red-Eyes B. Dragon"]
+    card |= {"betaName": "Red-Eyes B. Dragon", "aliases": ["Red-Eyes B. Dragon"]}
     group = mkgroup(1, "Legend of Blue Eyes", "LOB")
     out = go([group], {1: [single(1, "Red-Eyes B. Dragon", "LOB-999", "Rare", 7)]}, {}, [LOB], [card])
     assert "lob:100:LOB-999:rare" in prints_of(out, "100") and out["cards"]["100"]["aliases"] == ["Red-Eyes B. Dragon"]
@@ -600,11 +600,25 @@ def test_a_name_an_earlier_run_derived_never_mints_a_print_and_leaves_when_no_pr
     assert [r["productId"] for r in out["review"]["unmatched"]] == [7]
 
 
+def test_a_beta_name_spelled_as_tcgplayer_spells_it_stays_when_its_product_moves():
+    # An earlier run tied product 7, "Red-Eyes B. Dragon", by number. YGOPRODeck's beta name is the same string, so
+    # only betaName tells it from an alias that run wrote. TCGplayer has since moved the product to a number no print
+    # has: the beta name stays, and still mints the product's print.
+    held = mkprint("lob", "100", "LOB-070", "ultra_rare", identifiers={"tcgplayerProductIds": [7]},
+                   tcgplayer={"name": "Red-Eyes B. Dragon", "match": "number+rarity"})
+    card = mkcard("100", "Red-Eyes Black Dragon", [held])
+    card |= {"betaName": "Red-Eyes B. Dragon", "aliases": ["Red-Eyes B. Dragon"]}
+    out = go([mkgroup(1, "Legend of Blue Eyes", "LOB")], {1: [single(1, "Red-Eyes B. Dragon", "LOB-999", "Rare", 7)]},
+             {}, [LOB], [card])
+    assert out["cards"]["100"]["aliases"] == ["Red-Eyes B. Dragon"]
+    assert prints_of(out, "100")["lob:100:LOB-999:rare"]["identifiers"] == {"tcgplayerProductIds": [7]}
+
+
 def test_a_beta_name_tcgplayer_spells_in_another_case_stays_beside_tcgplayers():
     held = mkprint("lob", "100", "LOB-EN001", "rare", identifiers={"tcgplayerProductIds": [7]},
                    tcgplayer={"name": "Frog The Jam", "match": "number+rarity"})
     w = world([held], card_name="Frog Jam")
-    w["cards"][0]["aliases"] = ["Frog the Jam"]  # YGOPRODeck's beta name
+    w["cards"][0] |= {"betaName": "Frog the Jam", "aliases": ["Frog the Jam"]}  # YGOPRODeck's beta name
     out = go(products={1: [single(1, "Frog The Jam", "LOB-EN001", "Rare", 7)]}, **w)
     assert out["cards"]["100"]["aliases"] == ["Frog The Jam", "Frog the Jam"]
 
@@ -623,7 +637,7 @@ def test_a_card_aliased_by_an_earlier_run_ends_as_it_does_from_none():
 
 def test_a_beta_name_alias_mints_the_same_print_on_every_run():
     card = mkcard("100", "Red-Eyes Black Dragon", [mkprint("lob", "100", "LOB-070", "ultra_rare")])
-    card["aliases"] = ["Red-Eyes B. Dragon"]
+    card |= {"betaName": "Red-Eyes B. Dragon", "aliases": ["Red-Eyes B. Dragon"]}
     group = mkgroup(1, "Legend of Blue Eyes", "LOB")
     products = {1: [single(1, "Red-Eyes B. Dragon", "LOB-999", "Rare", 7)]}
     out = go([group], products, {}, [LOB], [card])
@@ -749,10 +763,12 @@ def test_a_minted_print_left_with_no_product_is_dropped():
 
 
 def test_another_cards_name_and_a_passcode_are_never_aliases():
-    alpha = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare")])
-    alpha["aliases"] = ["Beta", "43147039", "Old Alpha"]
+    # A beta name that is another card's name, and TCGplayer names: a bare passcode and a real second name.
+    alpha = mkcard("100", "Alpha", [mkprint("lob", "100", "LOB-EN001", "rare"), mkprint("lob", "100", "LOB-EN003", "rare")])
+    alpha |= {"betaName": "Beta", "aliases": ["Beta"]}
     beta = mkcard("200", "Beta", [mkprint("lob", "200", "LOB-EN002", "rare")])
-    out = go([mkgroup(1, "Legend of Blue Eyes", "LOB")], {}, {}, [LOB], [alpha, beta])
+    products = {1: [single(1, "43147039", "LOB-EN001", "Rare", 7), single(1, "Old Alpha", "LOB-EN003", "Rare", 8)]}
+    out = go([mkgroup(1, "Legend of Blue Eyes", "LOB")], products, {}, [LOB], [alpha, beta])
     assert out["cards"]["100"]["aliases"] == ["Old Alpha"]
 
 

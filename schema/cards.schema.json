@@ -56,6 +56,8 @@
               "yugipediaIds": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}}
             }
           },
+          "betaName": {"type": "string", "minLength": 1,
+                       "description": "YGOPRODeck's beta name: the card's name before its official English one (Red-Eyes B. Dragon). Also in aliases."},
           "aliases": {"type": "array", "uniqueItems": true, "minItems": 1, "items": {"type": "string", "minLength": 1},
                       "description": "Other English names shops sell this card under: YGOPRODeck's beta name (Red-Eyes B. Dragon) and TCGplayer's product name at one of its prints. Never another card's name."},
           "prints": {"type": "array", "items": {"$ref": "#/$defs/print"}}

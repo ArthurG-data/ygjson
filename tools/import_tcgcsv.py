@@ -362,20 +362,15 @@ def _remove_minted(sets: list[dict], files: dict[str, dict], undecided: Callable
                               if p.get("source") != SOURCE or any(undecided(i) for i in _product_ids(p))]
 
 
-def _drop_own_aliases(files: dict[str, dict], products: dict[int, list[tcgcsv.Product]]) -> None:
-    """Take off each card the aliases an earlier run of this tool wrote, so no alias is read back from its own output:
-    the names, as spelled, of this run's products that sat on the card's prints, tied by number (a beta name that
-    differs only in case stays). merge_aliases writes them again for the products that still tie. A minted print's
-    product does not count, because it was minted from a name the card already had (YGOPRODeck's beta name stays)."""
-    by_id = {prod.product_id: prod for ps in products.values() for prod in ps}
+def _start_aliases(files: dict[str, dict]) -> None:
+    """Start each card's aliases from YGOPRODeck's beta name (``betaName``) alone, so no alias an earlier run of this
+    tool wrote is read back from its own output, whatever its spelling. merge_aliases adds TCGplayer's names again for
+    the products that tie to the card in this run."""
     for body in files.values():
         for card in body["cards"]:
-            sold = {by_id[i].base_name_and_tags()[0] for p in card["prints"]
-                    if p.get("tcgplayer", {}).get("match") != MINTED for i in _product_ids(p) if i in by_id}
-            kept = [a for a in card.get("aliases", []) if a not in sold]
             card.pop("aliases", None)
-            if kept:
-                card["aliases"] = kept
+            if card.get("betaName"):
+                card["aliases"] = [card["betaName"]]
 
 
 def _drop_empty_minted_prints(files: dict[str, dict]) -> None:
@@ -880,7 +875,7 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
         reserved: Container[str] = frozenset()) -> dict:
     """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}. ``held`` and ``reserved`` are
     the set ledger's {name: slug} and slugs, for the sets this tool mints."""
-    _drop_own_aliases(files, products)
+    _start_aliases(files)
     _remove_minted(sets, files, _undecided(products, _complete(groups, products, sets, mapping)))
     imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved)
     unmatched_groups = imp.match_groups()

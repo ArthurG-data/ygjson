@@ -246,3 +246,10 @@ def test_build_sets_and_archetypes_never_take_a_reserved_slug():
     assert [s["id"] for s in sets] == [f"{LOB_ID}-2"]
     arch, slugs = imp.build_archetypes([raw_card(archetype="Roid")], ["ROID"], {}, held={"Roid": "roid"}, reserved={"roid"})
     assert slugs == {"Roid": "roid", "ROID": "roid-2"}
+
+
+def test_a_beta_name_is_kept_as_betaName_and_as_an_alias():
+    beta = imp.card_entry(raw_card(misc_info=[{"beta_name": "Dark Magican", "has_effect": 0}]))
+    assert (beta["betaName"], beta["aliases"]) == ("Dark Magican", ["Dark Magican"])
+    same = imp.card_entry(raw_card(misc_info=[{"beta_name": "Dark Magician", "has_effect": 0}]))
+    assert "betaName" not in same and "aliases" not in same
