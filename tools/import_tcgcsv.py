@@ -219,8 +219,9 @@ def match_groups(groups: list[dict], sets: list[dict], mapping: dict) -> dict:
 
 
 def mint_reprint_set(group: dict, parent: dict, taken: set[str], old: dict | None, held: Mapping[str, str] = {},
-                     reserved: Container[str] = frozenset()) -> dict:
-    """The set for a reprint or anniversary group, carrying the parent's code, type, era and editions. An existing
+                     reserved: Container[str] = frozenset(), eras: list[dict] = ()) -> dict:
+    """The set for a reprint or anniversary group, carrying the parent's code, type and editions, and the era of its
+    own release date (the parent's when it has no date or no era holds it). An existing
     one (an earlier run) keeps its id and identifiers; a new one takes the slug the set ledger holds for its name
     (``held``), else a free one that is not ``reserved``."""
     base, suffix = split_child(group["name"])
@@ -232,8 +233,8 @@ def mint_reprint_set(group: dict, parent: dict, taken: set[str], old: dict | Non
     s = {"id": set_id, "code": parent["code"], "name": name, "type": parent["type"],
          "editions": list(parent["editions"]), "parent": parent["id"], "source": SOURCE,
          "tcgplayerGroupIds": [group["groupId"]], "releases": [release]}
-    if "era" in parent:
-        s["era"] = parent["era"]
+    if era := era_of(release.get("releaseDate"), eras) or parent.get("era"):
+        s["era"] = era
     if old and "identifiers" in old:
         s["identifiers"] = old["identifiers"]
     return s
@@ -452,7 +453,7 @@ class Importer:
             parent = self.sets[parent_id]
             old = next((s for s in self.sets.values() if gid in s.get("tcgplayerGroupIds", []) and s["source"] == SOURCE),
                        None)
-            minted = mint_reprint_set(self.groups[gid], parent, taken, old, self.held, self.reserved)
+            minted = mint_reprint_set(self.groups[gid], parent, taken, old, self.held, self.reserved, self.eras)
             taken.add(minted["id"])
             self.sets[minted["id"]] = minted
             self.set_of_group[gid] = minted["id"]

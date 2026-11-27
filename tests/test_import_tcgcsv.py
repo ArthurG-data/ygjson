@@ -132,6 +132,15 @@ def test_a_reprint_group_mints_a_set_and_copies_the_prints_its_singles_name():
     assert out["sets_by_id"]["ret"]["tcgplayerGroupIds"] == [1]
 
 
+def test_a_reprint_set_takes_the_era_of_its_own_release_date_not_its_parents():
+    eras = [{"code": "dm", "from": "2002-03-08", "to": "2005-05-31"}, {"code": "sevens", "from": "2020-08-07"}]
+    parent = mkset("ret", "Retro Pack", "RP01", era="dm", **{"tcgplayerGroupIds": [1]})
+    groups = [mkgroup(1, "Retro Pack", "RP01"), mkgroup(2, "Retro Pack (2020 Date Reprint)", "RP01", "2024-08-23T00:00:00")]
+    files = {"000": {"cards": [mkcard("100", "Alpha", [mkprint("ret", "100", "RP01-EN001", "ultra_rare")])]}}
+    out = imp.run(groups, {1: [], 2: [single(2, "Alpha", "RP01-EN001", "Ultra Rare")]}, {}, [parent], files, {}, eras)
+    assert {s["id"]: s["era"] for s in out["sets"]} == {"ret": "dm", "ret-2020-reprint": "sevens"}
+
+
 def test_a_reprint_hangs_off_the_candidate_that_holds_its_numbers():
     small = mkset("plain", "Collection", "LCK", kind="box_set")
     mega = mkset("mega", "Collection Mega Pack", "LCK")
