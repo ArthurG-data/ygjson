@@ -237,8 +237,8 @@ no tier when its rarity is `unknown`.
 | 5 | every other code: the secret families, ghost, starlight, collector's, grand master, Pharaoh's, Millennium secret and gold |
 
 **Child sets.** TCGplayer sells some reprints under a group of their own. A group named `<set> (2020 Date Reprint)`
-or `(2020 Reprint)` becomes a set `<parent id>-2020-reprint`, with the parent's code, type and era and the
-parent set as its `parent`. Its editions are the ones its own group's singles are priced in, or the parent's when
+or `(2020 Reprint)` becomes a set `<parent id>-2020-reprint`, with the parent's code and type and the
+parent set as its `parent`; its era follows its own release date. Its editions are the ones its own group's singles are priced in, or the parent's when
 TCGplayer prices none. Its prints are copies of the parent's prints that the group's products name. Nine such
 sets exist. The group `Invasion of Chaos (25th Anniversary Edition)` becomes `invasion-of-chaos-25th-anniversary-edition`
 the same way. YGOPRODeck lists the other 25th Anniversary Edition sets itself, so they are ordinary sets.
@@ -252,11 +252,11 @@ products only when they are the same card at the same rarity, like the Red and B
 
 | `match` | Prints | Evidence |
 |---|---|---|
-| `number+rarity` | 40,985 | the group's set has a print with this number and this rarity |
-| `number+rarity-from-tcgplayer` | 187 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
-| `number` | 443 | the group's set has exactly one print of this number |
-| `number-other-set` | 2,707 | the group's set lacks the number, and exactly one other set has it |
-| `minted` | | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
+| `number+rarity` | 41,617 | the group's set has a print with this number and this rarity |
+| `number+rarity-from-tcgplayer` | 194 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
+| `number` | 436 | the group's set has exactly one print of this number |
+| `number-other-set` | 3,261 | the group's set lacks the number, and exactly one other set has it |
+| `minted` | 674 | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
 
 **Prints from TCGplayer.** YGOPRODeck lags TCGplayer and omits whole sets. When no print anywhere has a product's number
 and its name is exactly one card, `import_tcgcsv.py` creates the print with `source: "tcgplayer"`, in the group's set, or
