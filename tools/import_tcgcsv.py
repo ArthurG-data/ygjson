@@ -415,6 +415,7 @@ class Importer:
         self.groups = {g["groupId"]: g for g in groups}
         self.products = products  # {groupId: [Product]}
         self.by_id = {p.product_id: p for ps in products.values() for p in ps}
+        self.priced_groups = set(prices)  # the groups whose prices are in the input
         self.subtypes: dict[int, set[str]] = collections.defaultdict(set)
         for rows in prices.values():
             for row in rows:
@@ -719,6 +720,11 @@ class Importer:
         return any(pid != prod.product_id and (gid == prod.group_id or self.set_of_group.get(gid) == set_id)
                    for pid, gid in self.number_rarity[(prod.number, rarity)])
 
+    def _editions_unknown(self, gid: int) -> bool:
+        """Whether the input leaves the editions of a group's products unknown: its products or its prices are
+        missing."""
+        return self.undecided_group(gid) or gid not in self.priced_groups
+
     def _priced_editions(self, gid: int) -> list[str]:
         """The editions TCGplayer prices a group's singles in, in order; none when it prices none."""
         singles = (p.product_id for p in self.products.get(gid, []) if p.is_single)
@@ -839,11 +845,12 @@ class Importer:
         owner. A reprint set's editions are the ones its own group's singles are priced in, else its parent's once
         merged: never its own earlier editions, so a run alone gives what the pipeline gives, and never another group's
         product that landed in it by number-other-set, whose print says its own editions instead. A print with no
-        product has its set's editions. Returns the number of sets whose editions changed."""
+        product has its set's editions. A print holding a product, or a reprint set of a group, whose products or prices
+        are missing from the input keeps the editions it had. Returns the number of sets whose editions changed."""
         changed = 0
         for set_id, ids in self.landed_in.items():
-            if set_id in self.reprint_of:
-                continue
+            if "parent" in self.sets[set_id] and self.sets[set_id]["source"] == SOURCE:
+                continue  # a reprint set: set below, or left as it was while its group is undecided
             s = self.sets[set_id]
             seen = set().union(*(self.subtypes.get(i, set()) for i in ids))
             merged = _edition_list(set(s["editions"]) | seen)
@@ -851,11 +858,17 @@ class Importer:
                 s["editions"] = merged
                 changed += 1
         for set_id, (gid, parent_id, before) in sorted(self.reprint_of.items()):
+            if self._editions_unknown(gid) and before is not None:
+                self.sets[set_id]["editions"] = before
+                continue
             self.sets[set_id]["editions"] = self._priced_editions(gid) or list(self.sets[parent_id]["editions"])
             changed += self.sets[set_id]["editions"] != before
         for body in self.catalog.files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
+                    if any(self._editions_unknown(self.by_id[i].group_id) if i in self.by_id else self.undecided(i)
+                           for i in _product_ids(p)):
+                        continue  # its products' prices are not all in the input: its editions stay as they were
                     own = set().union(*(self.subtypes.get(i, set()) for i in _product_ids(p)))
                     set_editions = set(self.sets[p["set"]]["editions"])
                     if own and own != set_editions:

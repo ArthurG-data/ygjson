@@ -156,7 +156,7 @@ def test_reprint_ids_do_not_collide_and_an_existing_reprint_set_keeps_its_identi
     old = mkset("ret-2020-reprint", "Retro Pack (2020 Date Reprint)", "RP01", source="tcgplayer", parent="ret",
                 editions=["limited"], tcgplayerGroupIds=[2], identifiers={"yugipediaId": 7})
     groups = [mkgroup(2, "Retro Pack (2020 Date Reprint)", "RP01")]
-    out = go(groups, {}, {}, [parent, old])
+    out = go(groups, {2: []}, {2: []}, [parent, old])
     assert [s["id"] for s in out["sets"]] == ["ret", "ret-2020-reprint"]
     assert out["sets_by_id"]["ret-2020-reprint"]["editions"] == ["first", "unlimited"]
     assert out["sets_by_id"]["ret-2020-reprint"]["identifiers"] == {"yugipediaId": 7}
@@ -314,6 +314,33 @@ def test_a_listing_that_lacks_groups_the_data_holds_changes_nothing():
     short = [g for g in groups if g["groupId"] == 1]
     again = imp.run(short, {1: products[1]}, {1: prices[1]}, copy.deepcopy(full["sets"]), copy.deepcopy(full["files"]),
                     mapping)
+    assert again["sets"] == full["sets"] and again["files"] == full["files"]
+
+
+@pytest.mark.parametrize("missing", ["listing", "products", "prices"])
+def test_editions_stay_as_they_were_while_a_groups_products_or_prices_are_missing(missing):
+    groups, products, prices, sets, cards, mapping = partial_listing_world()
+    # An earlier run made the reprint set, and product 12 of the original group lands on a print only it has.
+    sets.append(mkset("ret-2020-reprint", "Retro Pack (2020 Date Reprint)", "RP01", source="tcgplayer", parent="ret",
+                      tcgplayerGroupIds=[2]))
+    cards[0]["prints"].append(mkprint("ret-2020-reprint", "100", "RP01-EN099", "rare"))
+    products[1].append(single(1, "Alpha", "RP01-EN099", "Rare", 12))
+    prices[1] += [price(12, "1st Edition"), price(12, "Unlimited")]
+    prices[4] = [price(41, "Limited")]
+    full = go(groups, products, prices, sets, cards, mapping)
+    editions = {s["id"]: s["editions"] for s in full["sets"]}
+    assert editions["ret"] == ["first", "unlimited"] and editions["ret-2020-reprint"] == ["unlimited"]
+    assert editions["pin"] == ["unlimited", "limited"]
+    prints = prints_of(full, "100")
+    assert prints["pin:100:PIN-EN001:rare"]["editions"] == ["limited"]
+    assert prints["ret-2020-reprint:100:RP01-EN099:rare"]["editions"] == ["first", "unlimited"]
+    # Groups 2 and 4 are missing from the listing, or listed without their products, or without their prices.
+    if missing == "listing":
+        groups = [g for g in groups if g["groupId"] not in (2, 4)]
+    if missing in ("listing", "products"):
+        products = {gid: ps for gid, ps in products.items() if gid not in (2, 4)}
+    prices = {gid: rows for gid, rows in prices.items() if gid not in (2, 4)}
+    again = imp.run(groups, products, prices, copy.deepcopy(full["sets"]), copy.deepcopy(full["files"]), mapping)
     assert again["sets"] == full["sets"] and again["files"] == full["files"]
 
 
