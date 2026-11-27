@@ -11,8 +11,8 @@ of mappings/ids.json, writes ids/ and review/ids.json (the retired ids that do n
 this run's renames, for a person to settle), and exits 3 when a set or archetype was renamed: then only ids/sets.json
 and ids/archetypes.json are written, holding the new name under the old slug, and the pipeline must run again so the
 data carries it before the prints, printings, cards and sealed products are reconciled. --check-against REV compares the ledger on disk with the one at git REV and
-exits 1 when an entry was removed, an id or a print's birth key changed, or a formerKeys/formerIds/names list lost
-what it had.
+exits 1 when an entry was removed, an id or a print's birth key changed, a formerKeys/formerIds/names list lost what
+it had, a print's or printing's old key is no longer findable, or a retired entry's successors shrank to none.
 """
 from __future__ import annotations
 
@@ -265,8 +265,9 @@ def check(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str,
 
 
 def diff_errors(before: dict[str, dict[str, dict]], after: dict[str, dict[str, dict]]) -> list[str]:
-    """What `after` dropped of `before`: an entry removed, an id or a print's birth key changed, or a formerKeys,
-    formerIds or names list that no longer starts with what it held."""
+    """What `after` dropped of `before`: an entry removed, an id or a print's birth key changed, a formerKeys,
+    formerIds or names list that no longer starts with what it held, a print's or printing's key that is neither its
+    new key nor in its new formerKeys/formerIds, or a retired entry whose successors shrank to none."""
     errors = []
     for kind in KINDS:
         later = after.get(kind, {})
@@ -283,6 +284,12 @@ def diff_errors(before: dict[str, dict[str, dict]], after: dict[str, dict[str, d
                     errors.append(f"{kind} {i}: {field} {held} is not kept at the start of {new.get(field, [])}")
             if kind == "prints" and _birth(new) != _birth(old):
                 errors.append(f"{kind} {i}: born as {_birth(old)!r}, now says {_birth(new)!r}")
+            former = {"prints": "formerKeys", "printings": "formerIds"}.get(kind)
+            if former and old.get("key") != new.get("key") and old.get("key") not in new.get(former, []):
+                errors.append(f"{kind} {i}: key {old.get('key')!r} is neither its key nor in its {former}")
+            if (old.get("status") == new.get("status") == "retired" and old.get("successors")
+                    and not new.get("successors")):
+                errors.append(f"{kind} {i}: retired with successors {old['successors']}, now with none")
     return errors
 
 

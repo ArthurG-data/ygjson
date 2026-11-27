@@ -290,6 +290,27 @@ def test_diff_errors_reports_a_changed_id_and_birth_key():
     assert any("born" in e for e in ids.diff_errors(before, reborn))
 
 
+def test_diff_errors_reports_a_lost_key_and_successors_shrunk_to_none():
+    before = {"prints": {"a": {**PRINT, "id": "a", "key": "k2", "formerKeys": ["k1"]},
+                         "r": {**PRINT, "id": "r", "key": "k9", "status": "retired", "successors": ["a"]},
+                         "q": {**PRINT, "id": "q", "key": "k8", "status": "retired", "successors": ["a"]}},
+              "printings": {"p": {"id": "p", "key": "k2:en:first", "formerIds": [], "status": "live",
+                                  "successors": []}}}
+    kept = {"prints": {"a": {**before["prints"]["a"], "key": "k3", "formerKeys": ["k1", "k2"]},
+                       "r": {**before["prints"]["r"], "successors": ["a", "b"]},
+                       "q": {**before["prints"]["q"], "status": "live", "successors": []}},
+            "printings": {"p": {**before["printings"]["p"], "key": "k3:en:first", "formerIds": ["k2:en:first"]}}}
+    assert ids.diff_errors(before, kept) == []
+    lost = {"prints": {"a": {**before["prints"]["a"], "key": "k3"},
+                       "r": {**before["prints"]["r"], "successors": []}, "q": before["prints"]["q"]},
+            "printings": {"p": {**before["printings"]["p"], "key": "k3:en:first"}}}
+    errors = ids.diff_errors(before, lost)
+    assert len(errors) == 3
+    assert any("prints a" in e and "'k2'" in e for e in errors)
+    assert any("printings p" in e and "'k2:en:first'" in e for e in errors)
+    assert any("prints r" in e and "successors" in e for e in errors)
+
+
 def _cli(monkeypatch, tmp_path, ledger, sets):
     from test_ygjson import ARCHETYPES, CARDS, SEALED
     import ygjson
