@@ -92,6 +92,12 @@ def hand_errors(ledger: dict[str, dict[str, dict]], hand: tuple[dict[str, str], 
             errors.append(f"hand print {key!r}: id {pid} is not in the ledger")
         elif prints[pid]["status"] == "live":
             errors.append(f"hand print {key!r}: id {pid} is live")
+    by_id: dict[str, list[str]] = {}
+    for key, pid in sorted(keys.items()):
+        by_id.setdefault(pid, []).append(key)
+    for pid, named in sorted(by_id.items()):
+        if len(named) > 1:
+            errors.append(f"hand prints {', '.join(repr(k) for k in named)}: all claim id {pid}")
     for pid, targets in sorted(successors.items()):
         if pid not in prints or prints[pid]["status"] != "retired":
             errors.append(f"hand successors {pid!r}: not a retired print")

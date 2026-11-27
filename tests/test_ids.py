@@ -128,3 +128,9 @@ def test_review_body_is_sorted():
     assert [r["id"] for r in body["prints"]] == ["a", "b"]
     assert [r["id"] for r in body["cards"]] == ["y", "z"]
     assert [r["from"] for r in body["renames"]] == ["p", "q"]
+
+
+def test_hand_may_not_give_one_retired_id_to_two_keys():
+    errors = ids.hand_errors(_hand_ledger(), ({"a": "gone1", "b": "gone1"}, {}))
+    assert len(errors) == 1
+    assert "'a'" in errors[0] and "'b'" in errors[0] and "gone1" in errors[0]
