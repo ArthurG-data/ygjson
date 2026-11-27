@@ -7,9 +7,10 @@ id]}. This module mints print ids and loads, saves and checks the ledger; tools/
 record carries.
 
 The default reconciles data/cards, sets/, data/archetypes.json and data/sealed with the ledger and the hand decisions
-of mappings/ids.json, writes ids/ and review/ids.json (what was retired or renamed, for a person to look at), and
-exits 3 when a set or archetype was renamed: the ledger now holds the new name under the old slug, and the pipeline
-must run again so the data carries it. --check-against REV compares the ledger on disk with the one at git REV and
+of mappings/ids.json, writes ids/ and review/ids.json (the retired ids that do not lead to exactly one live id, and
+this run's renames, for a person to settle), and exits 3 when a set or archetype was renamed: then only ids/sets.json
+and ids/archetypes.json are written, holding the new name under the old slug, and the pipeline must run again so the
+data carries it before the prints, printings, cards and sealed products are reconciled. --check-against REV compares the ledger on disk with the one at git REV and
 exits 1 when an entry was removed, an id or a print's birth key changed, or a formerKeys/formerIds/names list lost
 what it had.
 """
@@ -317,8 +318,12 @@ def main(argv: list[str] | None = None) -> None:
 
     aliases = json.loads(SET_ALIASES.read_text(encoding="utf-8")) if SET_ALIASES.exists() else {}
     merges = {alias: entry["set"] for alias, entry in aliases.items()}
-    ledger, review, renames = run(load_ledger(IDS), ygjson.load_sets(), ygjson.load_cards(),
-                                  ygjson.load_archetypes(), ygjson.load_sealed(), load_hand(HAND), merges)
+    before, hand = load_ledger(IDS), load_hand(HAND)
+    ledger, review, renames = run(before, ygjson.load_sets(), ygjson.load_cards(), ygjson.load_archetypes(),
+                                  ygjson.load_sealed(), hand, merges)
+    if renames:  # the data still carries the new slugs: keep every other kind as it was until the rerun
+        ledger = {**before, "sets": ledger["sets"], "archetypes": ledger["archetypes"]}
+        review = review_body(ledger, hand[1], renames)
     save_ledger(ledger, IDS)
     ygjson.save_json(REVIEW, review)
     counts = [f"{kind} {sum(e['status'] == 'live' for e in ledger[kind].values())} live "

@@ -333,6 +333,42 @@ def test_rename_exits_3(monkeypatch, tmp_path, capsys):
                                   "name": "Legend of Blue Eyes White Dragon"}]
 
 
+def test_a_rename_leaves_the_prints_alone_until_the_rerun(monkeypatch, tmp_path, capsys):
+    import ygjson
+    from test_ygjson import ARCHETYPES, CARDS, SEALED, SET, SETS
+    named = lambda slug, name: json.loads(json.dumps(
+        [[{**SETS[0], "name": name, "identifiers": {"ygojsonId": "lob-uuid"}}], CARDS, SEALED]).replace(SET, slug))
+    published = named("lob-old", "LOB")  # the set as published, under its old slug
+    renamed = named(SET, "Legend of Blue Eyes White Dragon")  # YGOPRODeck renamed it: the import made a new slug
+    mapped = named("lob-old", "Legend of Blue Eyes White Dragon")  # the rerun maps the new name to the old slug
+    ledger, _, _ = ids.run({k: {} for k in ids.KINDS}, *published[:2], ARCHETYPES, published[2], ({}, {}), {})
+    _cli(monkeypatch, tmp_path, ledger, published[0])
+    before = {kind: (tmp_path / "ids" / f"{kind}.json").read_bytes() for kind in ids.KINDS}
+
+    for step in (renamed, mapped):
+        monkeypatch.setattr(ygjson, "load_sets", lambda: step[0])
+        monkeypatch.setattr(ygjson, "load_cards", lambda: step[1])
+        monkeypatch.setattr(ygjson, "load_sealed", lambda: step[2])
+        if step is renamed:
+            with pytest.raises(SystemExit) as e:
+                ids.main([])
+            assert e.value.code == 3
+            for kind in ("prints", "printings", "cards", "sealed"):
+                assert (tmp_path / "ids" / f"{kind}.json").read_bytes() == before[kind]
+            assert ids.load_ledger(tmp_path / "ids")["sets"]["lob-old"]["names"] == [
+                "LOB", "Legend of Blue Eyes White Dragon"]
+            assert json.loads((tmp_path / "review" / "ids.json").read_text())["renames"][0]["from"] == "lob-old"
+        else:
+            ids.main([])  # no rename left: exits normally
+
+    saved = ids.load_ledger(tmp_path / "ids")
+    assert all(e["status"] == "live" for e in saved["prints"].values())
+    assert saved["prints"].keys() == ledger["prints"].keys()
+    assert not [k for e in saved["prints"].values() for k in e["formerKeys"] if SET in k]
+    assert not [k for e in saved["printings"].values() for k in e["formerIds"] if SET in k]
+    assert ids.check(saved, *mapped[:2], ARCHETYPES, mapped[2]) == []
+
+
 def _git(cwd, *args):
     import subprocess
     subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@t", *args], cwd=cwd, check=True,
