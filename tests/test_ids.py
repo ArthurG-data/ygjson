@@ -130,6 +130,26 @@ def test_review_body_is_sorted():
     assert [r["from"] for r in body["renames"]] == ["p", "q"]
 
 
+def test_an_applied_hand_decision_keeps_check_green():
+    import copy
+    from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
+    files = lambda card: {"046": {"cards": [card]}}
+    without_a = {**copy.deepcopy(CARD), "prints": copy.deepcopy(CARD["prints"][1:])}
+    moved = copy.deepcopy(CARD)
+    key = f"{SET}:46986414:LOB-EN105:ultra_rare"
+    moved["prints"][0].update(id=key, number="LOB-EN105")
+    ledger = {k: {} for k in ids.KINDS}
+    for card in (CARD, without_a):
+        ledger, _, _ = ids.run(ledger, SETS, files(card), ARCHETYPES, SEALED, ({}, {}), {})
+    old = ids.mint(PRINT_A, set())
+    assert ledger["prints"][old]["status"] == "retired"
+    hand = ({key: old}, {})
+    ledger, _, _ = ids.run(ledger, SETS, files(moved), ARCHETYPES, SEALED, hand, {})
+    assert ledger["prints"][old]["status"] == "live" and ledger["prints"][old]["key"] == key
+    assert ids.check(ledger, SETS, files(moved), ARCHETYPES, SEALED, hand) == []
+    assert any("is live" in e for e in ids.hand_errors(ledger, ({PRINT_A: old}, {})))  # live under another key
+
+
 def test_hand_may_not_give_one_retired_id_to_two_keys():
     errors = ids.hand_errors(_hand_ledger(), ({"a": "gone1", "b": "gone1"}, {}))
     assert len(errors) == 1

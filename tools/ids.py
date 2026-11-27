@@ -107,16 +107,17 @@ def load_hand(path: Path = HAND) -> tuple[dict[str, str], dict[str, list[str]]]:
 
 
 def hand_errors(ledger: dict[str, dict[str, dict]], hand: tuple[dict[str, str], dict[str, list[str]]]) -> list[str]:
-    """Hand decisions the ledger contradicts: a print given a live id or one the ledger lacks; successors set on
-    an id that is not a retired print, or naming ids that are not prints."""
+    """Hand decisions the ledger contradicts: a print given an id the ledger lacks, or one that is live under another
+    key (live under the hand's own key, the decision was applied); successors set on an id that is not a retired
+    print, or naming ids that are not prints."""
     keys, successors = hand
     prints = ledger.get("prints", {})
     errors = []
     for key, pid in sorted(keys.items()):
         if pid not in prints:
             errors.append(f"hand print {key!r}: id {pid} is not in the ledger")
-        elif prints[pid]["status"] == "live":
-            errors.append(f"hand print {key!r}: id {pid} is live")
+        elif prints[pid]["status"] == "live" and prints[pid]["key"] != key:
+            errors.append(f"hand print {key!r}: id {pid} is live under {prints[pid]['key']!r}")
     by_id: dict[str, list[str]] = {}
     for key, pid in sorted(keys.items()):
         by_id.setdefault(pid, []).append(key)
