@@ -3,8 +3,8 @@
     uv run python tools/import_tcgcsv.py [--refresh]
 
 Reads sets/sets.json and data/cards/*.json (written by import_ygoprodeck and refined by import_ygojson and
-import_yugipedia), .cache/tcgcsv, mappings/tcgplayer_groups.json ({groupId: {"set": id, "why": evidence}}) and mappings/tcgplayer_products.json, and
-rewrites the first two in place, adding only:
+import_yugipedia), .cache/tcgcsv, mappings/tcgplayer_groups.json ({groupId: {"set": id, "why": evidence}}) and
+mappings/tcgplayer_products.json (see rule 4 below), and rewrites the first two in place, adding only:
 
   sets    tcgplayerGroupIds (each group on the one set this run matched or minted for it, and taken off any other an
           earlier run gave it, unless the input lacks its products or the listing lacks it), editions (union with the
