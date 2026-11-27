@@ -236,8 +236,9 @@ no tier when its rarity is `unknown`.
 | 5 | every other code: the secret families, ghost, starlight, collector's, grand master, Pharaoh's, Millennium secret and gold |
 
 **Child sets.** TCGplayer sells some reprints under a group of their own. A group named `<set> (2020 Date Reprint)`
-or `(2020 Reprint)` becomes a set `<parent id>-2020-reprint`, with the parent's code, type, era and editions and the
-parent set as its `parent`. Its prints are copies of the parent's prints that the group's products name. Nine such
+or `(2020 Reprint)` becomes a set `<parent id>-2020-reprint`, with the parent's code, type and era and the
+parent set as its `parent`. Its editions are the ones its own group's singles are priced in, or the parent's when
+TCGplayer prices none. Its prints are copies of the parent's prints that the group's products name. Nine such
 sets exist. The group `Invasion of Chaos (25th Anniversary Edition)` becomes `invasion-of-chaos-25th-anniversary-edition`
 the same way. YGOPRODeck lists the other 25th Anniversary Edition sets itself, so they are ordinary sets.
 

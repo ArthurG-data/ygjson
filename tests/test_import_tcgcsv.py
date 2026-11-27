@@ -162,6 +162,26 @@ def test_reprint_ids_do_not_collide_and_an_existing_reprint_set_keeps_its_identi
     assert out["sets_by_id"]["ret-2020-reprint"]["identifiers"] == {"yugipediaId": 7}
 
 
+def reprint_editions_world(reprint_subtypes):
+    """Retro Pack, unlimited until its own group's 1st Edition price comes in, and its 2020 reprint."""
+    parent = mkset("ret", "Retro Pack", "RP01", editions=("unlimited",))
+    cards = [mkcard("100", "Alpha", [mkprint("ret", "100", "RP01-EN001", "rare")])]
+    groups = [mkgroup(1, "Retro Pack", "RP01"), mkgroup(2, "Retro Pack (2020 Date Reprint)", "RP01")]
+    products = {1: [single(1, "Alpha", "RP01-EN001", "Rare", 11)], 2: [single(2, "Alpha", "RP01-EN001", "Rare", 21)]}
+    prices = {1: [price(11, "1st Edition"), price(11, "Unlimited")], 2: [price(21, sub) for sub in reprint_subtypes]}
+    return groups, products, prices, [parent], cards
+
+
+@pytest.mark.parametrize("reprint_subtypes, editions", [(["Unlimited"], ["unlimited"]), ([], ["first", "unlimited"])])
+def test_a_reprint_sets_editions_are_its_groups_prices_else_its_parents_after_the_run(reprint_subtypes, editions):
+    groups, products, prices, sets, cards = reprint_editions_world(reprint_subtypes)
+    out = go(groups, products, prices, sets, cards)
+    assert out["sets_by_id"]["ret"]["editions"] == ["first", "unlimited"]
+    assert out["sets_by_id"]["ret-2020-reprint"]["editions"] == editions
+    again = imp.run(groups, products, prices, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["sets"] == out["sets"] and again["files"] == out["files"]
+
+
 def anniversary_world(with_set):
     parent = mkset("doc", "Dark of Chaos", "DOC", editions=("unlimited",), era="dm", tcgplayerGroupIds=[1])
     sets = [parent]

@@ -8,7 +8,8 @@ rewrites the first two in place, adding only:
 
   sets    tcgplayerGroupIds (union), editions (union with the price subtypes of the set's singles: 1st Edition is first,
           Unlimited unlimited, Limited limited), and one new set for each "(2020 Date Reprint)" or "(2020 Reprint)"
-          group (id "<parent id>-2020-reprint", source tcgplayer, the parent's code, type, era and editions). A set
+          group (id "<parent id>-2020-reprint", source tcgplayer, the parent's code, type and era, and the editions its
+          own group's singles are priced in, else the parent's as this run leaves them). A set
           this tool mints takes the slug the set ledger (ids/sets.json) holds for its name, else a free one that the
           ledger does not hold.
   prints  identifiers.tcgplayerProductIds, tcgplayer {name, match}, editions (when a print's own products are priced
@@ -221,8 +222,9 @@ def match_groups(groups: list[dict], sets: list[dict], mapping: dict) -> dict:
 
 def mint_reprint_set(group: dict, parent: dict, taken: set[str], old: dict | None, held: Mapping[str, str] = {},
                      reserved: Container[str] = frozenset(), eras: list[dict] = ()) -> dict:
-    """The set for a reprint or anniversary group, carrying the parent's code, type and editions, and the era of its
-    own release date (the parent's when it has no date or no era holds it). An existing
+    """The set for a reprint or anniversary group, carrying the parent's code, type and editions (until
+    Importer.merge_editions settles its own), and the era of its own release date (the parent's when it has no date or
+    no era holds it). An existing
     one (an earlier run) keeps its id and identifiers; a new one takes the slug the set ledger holds for its name
     (``held``), else a free one that is not ``reserved``."""
     base, suffix = split_child(group["name"])
@@ -399,6 +401,8 @@ class Importer:
         self.aliases: dict[int, collections.Counter] = collections.defaultdict(collections.Counter)
         self.landed_in: dict[str, set[int]] = collections.defaultdict(set)  # set id -> product ids
         self.rekeyed_before: set[str] = set()  # prints an earlier run re-keyed to TCGplayer's rarity
+        # reprint set id -> (its group, its parent, the editions it came in with)
+        self.reprint_of: dict[str, tuple[int, str, list[str] | None]] = {}
         self.undecided = _undecided(groups, products)
         # Only the products that would stay on the base print: a refused product, or one naming a colour or art, shares
         # nothing with a treatment there.
@@ -456,6 +460,7 @@ class Importer:
                        None)
             minted = mint_reprint_set(self.groups[gid], parent, taken, old, self.held, self.reserved, self.eras)
             taken.add(minted["id"])
+            self.reprint_of[minted["id"]] = (gid, parent_id, old["editions"] if old else None)
             self.sets[minted["id"]] = minted
             self.set_of_group[gid] = minted["id"]
             self.group_rules["reprint"] += 1
@@ -673,11 +678,14 @@ class Importer:
         return any(pid != prod.product_id and (gid == prod.group_id or self.set_of_group.get(gid) == set_id)
                    for pid, gid in self.number_rarity[(prod.number, rarity)])
 
+    def _priced_editions(self, gid: int) -> list[str]:
+        """The editions TCGplayer prices a group's singles in, in order; none when it prices none."""
+        singles = (p.product_id for p in self.products.get(gid, []) if p.is_single)
+        return _edition_list(set().union(*(self.subtypes.get(i, set()) for i in singles)))
+
     def _group_editions(self, gid: int, kind: str) -> list[str]:
         """The editions TCGplayer prices a group's singles in. With no prices they are a guess: a promo is limited."""
-        singles = (p.product_id for p in self.products.get(gid, []) if p.is_single)
-        priced = _edition_list(set().union(*(self.subtypes.get(i, set()) for i in singles)))
-        return priced or (["limited"] if kind == "promo" else ["unlimited"])
+        return self._priced_editions(gid) or (["limited"] if kind == "promo" else ["unlimited"])
 
     def _mint_print(self, prod: tcgcsv.Product) -> str | None:
         """Mint a print for a product whose number no print has. None on success, else why it was not minted."""
@@ -786,15 +794,25 @@ class Importer:
     def merge_editions(self) -> int:
         """Union each set's editions with the subtypes priced on the products that landed in it, then give a print
         its own editions when its products are priced in fewer, and take them away when they are not. Nothing else
-        writes a print's editions (ygoprodeck only carries an earlier run's over), so this is the one owner. Returns the number of sets whose editions changed."""
+        writes a print's editions (ygoprodeck only carries an earlier run's over), so this is the one owner. A reprint
+        set starts from the editions its own group's singles are priced in, else its parent's once merged, and never
+        from its own earlier editions, so a run alone gives what the pipeline gives. Returns the number of sets whose
+        editions changed."""
         changed = 0
         for set_id, ids in self.landed_in.items():
+            if set_id in self.reprint_of:
+                continue
             s = self.sets[set_id]
             seen = set().union(*(self.subtypes.get(i, set()) for i in ids))
             merged = _edition_list(set(s["editions"]) | seen)
             if merged != s["editions"]:
                 s["editions"] = merged
                 changed += 1
+        for set_id, (gid, parent_id, before) in sorted(self.reprint_of.items()):
+            seen = set().union(*(self.subtypes.get(i, set()) for i in self.landed_in.get(set_id, ())))
+            fresh = self._priced_editions(gid) or self.sets[parent_id]["editions"]
+            self.sets[set_id]["editions"] = _edition_list(set(fresh) | seen)
+            changed += self.sets[set_id]["editions"] != before
         for body in self.catalog.files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
