@@ -303,7 +303,7 @@ stays when the product moves.
 2,352 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
 another product already prices.
-`tools/coverage.py` accounts for every product in category 2.
+`tools/coverage_report.py` accounts for every product in category 2.
 
 **No effect text.** ygjson records facts. It copies no card effect text, product description or card art, and its image
 fields are links. A reader that needs the text reads it from TCGCSV or YGOPRODeck at load time. See `NOTICE`.
@@ -404,7 +404,7 @@ today. `speed_duel` needs `.cache/ygojson` and is skipped without it.
 | `review/sealed.json` | sealed products in a group with no set (`noSet`), products with category `other`, and YGOJSON products no TCGplayer product matched (`ygojsonUnmatched`) |
 | `review/ids.json` | retired prints and cards whose successors lead to no live id or to several, and the sets and archetypes the last run renamed, for a person to settle in `mappings/ids.json` |
 
-`uv run python tools/coverage.py` reports where every TCGplayer product in category 2 ended up: on a print, on a
+`uv run python tools/coverage_report.py` reports where every TCGplayer product in category 2 ended up: on a print, on a
 sealed product, skipped as an accessory, in a group published after today, or in review. `--strict` exits 1 if any
 product is unaccounted for.
 
@@ -418,7 +418,7 @@ uv run python tools/import_yugipedia.py    # set types, series, parents and data
 uv run python tools/import_tcgcsv.py       # TCGplayer groups and products
 uv run python tools/import_sealed.py       # sealed products
 uv run python tools/ids.py                 # reconcile the id ledger; exits 3 after a rename, then run the imports again
-uv run python tools/coverage.py [--strict] # where every TCGplayer product went
+uv run python tools/coverage_report.py [--strict] # where every TCGplayer product went
 uv run python tools/legality.py            # ban list events
 uv run python tools/validate.py [--online]
 uv run python tools/build.py --version 0.2.0   # dist/AllSets, AllCards, AllPrintings, AllArchetypes, AllProducts, Legality, Ids
@@ -446,17 +446,19 @@ caches it leaves `meta.sources` out.
 
 ```sh
 uv sync --group dev
+uv run ruff check                          # lint
+uv run mypy                                # types (tools/)
 uv run pytest
 uv run python tools/validate.py            # offline
 uv run python tools/validate.py --online   # also checks product ids against TCGCSV
 uv run python tools/legality.py --check    # compares with YGOPRODeck's live list
 ```
 
-CI runs only the offline checks (pytest, `validate.py`, and the id ledger check against the previous state) on every
-pull request, every push to `main` and every `v*` tag. The two live checks run weekly and on demand in
+CI runs only the offline checks (ruff, mypy, pytest, `validate.py`, and the id ledger check against the previous state)
+on every pull request, every push to `main` and every `v*` tag. The two live checks run weekly and on demand in
 `live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
-that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release.
-Each action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.
+that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release. Each
+action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.
 
 ## Licence
 

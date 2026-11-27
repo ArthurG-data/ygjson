@@ -14,7 +14,8 @@ import_ygojson), else by title (the set's name, then the name without a leading 
   identifiers yugipediaId (only for a set found by title), konamiDatabaseIds united with every *database_id value.
   code        the prefix before the hyphen of `prefix` / `en_prefix`, only for a set whose code is UNKNOWN.
   releases[0] releaseDate when the set has none: the first date that parses of na_release_date, en_release_date,
-              release_date, else the earliest of the other TCG regions' dates, never jp, kr, ae, sc or tc (a month-only date is the 1st).
+              release_date, else the earliest of the other TCG regions' dates, never jp, kr, ae, sc or tc (a month-only
+              date is the 1st).
               keyArt when the set has none and the infobox has an image: Special:FilePath of the file, the page as
               source.
   parent      a sneak_peek, special_edition or promo set (a promo only when its name says premiere or promotional
@@ -97,7 +98,7 @@ def map_type(ib: dict[str, str], name: str, mapping: dict) -> str | None:
 
 def database_ids(ib: dict[str, str]) -> list[int]:
     """Every *database_id value as an int, blanks and non-numbers skipped; a "a; b" list gives both."""
-    found = set()
+    found: set[int] = set()
     for key, value in ib.items():
         if _DATABASE_ID.search(key):
             found.update(int(part) for part in (p.strip() for p in value.split(";")) if part.isdigit())
@@ -164,12 +165,14 @@ def apply_infobox(s: dict, ib: dict[str, str], page: dict, write_id: bool, mappi
     if not release.get("keyArt") and (art := key_art(ib, page["title"])):
         release["keyArt"] = art
         stats["keyArt"] += 1
-    if "era" not in s and release.get("releaseDate") and (era := import_ygoprodeck.era_of(release["releaseDate"], eras)):
+    if ("era" not in s and release.get("releaseDate")
+            and (era := import_ygoprodeck.era_of(release["releaseDate"], eras))):
         s["era"] = era
 
 
 def _child_eligible(s: dict) -> bool:
-    return s["type"] in ("sneak_peek", "special_edition") or (s["type"] == "promo" and bool(_PROMO_CHILD.search(s["name"])))
+    return s["type"] in ("sneak_peek", "special_edition") or (
+        s["type"] == "promo" and bool(_PROMO_CHILD.search(s["name"])))
 
 
 def find_parents(sets: list[dict], raw_boxes: dict[str, dict[str, str]]) -> tuple[dict, dict]:
@@ -188,7 +191,8 @@ def find_parents(sets: list[dict], raw_boxes: dict[str, dict[str, str]]) -> tupl
     listed = {}
     for b in boosters:
         raw = raw_boxes.get(b["id"], {}).get("other_sets", "")
-        listed[b["id"]] = {norm(n) for n in yugipedia.named_in(raw)} | {norm(i) for i in yugipedia.clean(raw).split(";")}
+        listed[b["id"]] = ({norm(n) for n in yugipedia.named_in(raw)}
+                           | {norm(i) for i in yugipedia.clean(raw).split(";")})
     found, ambiguous = {}, {}
     for s in sorted(sets, key=lambda s: s["id"]):
         if "parent" in s or not _child_eligible(s):
@@ -198,9 +202,11 @@ def find_parents(sets: list[dict], raw_boxes: dict[str, dict[str, str]]) -> tupl
             if b["id"] != s["id"] and s["code"] != "UNKNOWN" and b["code"] == s["code"]:
                 evidence[b["id"]].add("code")
         child = norm(s["name"])
-        starts = [b for b in boosters if b["id"] != s["id"] and re.match(re.escape(norm(b["name"])) + r"(?![a-z0-9])", child)]
+        starts = [b for b in boosters
+                  if b["id"] != s["id"] and re.match(re.escape(norm(b["name"])) + r"(?![a-z0-9])", child)]
         # A booster whose name starts another matched booster's name is the shorter, vaguer match: keep the longest.
-        starts = [b for b in starts if not any(o is not b and norm(o["name"]).startswith(norm(b["name"])) for o in starts)]
+        starts = [b for b in starts
+                  if not any(o is not b and norm(o["name"]).startswith(norm(b["name"])) for o in starts)]
         for b in starts:
             evidence[b["id"]].add("name")
         for name in yugipedia.named_in(raw_boxes.get(s["id"], {}).get("other_sets", "")):
@@ -237,7 +243,7 @@ def inherit_eras(sets: list[dict]) -> int:
 def resolve_pages(sets: list[dict], cache: Path = yugipedia.DEFAULT_CACHE) -> tuple[dict, collections.Counter]:
     """{set id: (page, found_by_title)} for the sets whose page exists, and how many were found each way."""
     pages: dict[str, tuple[dict, bool]] = {}
-    how = collections.Counter()
+    how = collections.Counter[str]()
     ours = [s for s in sets if s["source"] == SOURCE]
     by_id = yugipedia.pages_by_id([s["identifiers"]["yugipediaId"] for s in ours
                                    if "yugipediaId" in s.get("identifiers", {})], cache)
@@ -259,8 +265,11 @@ def resolve_pages(sets: list[dict], cache: Path = yugipedia.DEFAULT_CACHE) -> tu
 
 def build(sets: list[dict], pages: dict, eras: list[dict], mapping: dict) -> tuple[dict, collections.Counter, dict]:
     """Apply the pages to the sets in place. Returns the review body, the counters and the parent evidence counts."""
-    stats = collections.Counter()
-    no_page, no_infobox, unmapped, shared = [], [], [], []
+    stats = collections.Counter[str]()
+    no_page: list[dict] = []
+    no_infobox: list[dict] = []
+    unmapped: list[dict] = []
+    shared: list[dict] = []
     raw_boxes = {}
     # A page belongs to one set: the one that already holds its id, else the first set (by id) that found it by
     # title. A title that redirects to a page another set owns (Magic Ruler -> Spell Ruler) still gives its infobox
@@ -290,7 +299,7 @@ def build(sets: list[dict], pages: dict, eras: list[dict], mapping: dict) -> tup
         apply_infobox(s, ib, page, write_id, mapping, eras, stats, unmapped)
     found_parents, ambiguous = find_parents(sets, raw_boxes)
     by_id = {s["id"]: s for s in sets}
-    evidence = collections.Counter()
+    evidence = collections.Counter[str]()
     for child, (parent, kinds) in found_parents.items():
         by_id[child]["parent"] = parent
         evidence[kinds] += 1
@@ -301,7 +310,8 @@ def build(sets: list[dict], pages: dict, eras: list[dict], mapping: dict) -> tup
         "noInfobox": no_infobox,
         "unmappedType": unmapped,
         "sharedPage": shared,
-        "parentCandidates": [{"id": c, "name": by_id[c]["name"], "candidates": ids} for c, ids in sorted(ambiguous.items())],
+        "parentCandidates": [{"id": c, "name": by_id[c]["name"], "candidates": ids}
+                             for c, ids in sorted(ambiguous.items())],
     }
     return review, stats, evidence
 

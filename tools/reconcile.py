@@ -91,8 +91,8 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
 
     successors = _successor_index(current, carried)
     for i, f in sorted(orphans.items()):
-        found = next((successors[n].get(at) for n, at in enumerate(_successor_places(f))
-                      if at is not None and successors[n].get(at)), [])
+        found = next((hit for n, at in enumerate(_successor_places(f))
+                      if at is not None and (hit := successors[n].get(at))), [])
         out[i].update(status="retired", successors=sorted(set(found)))
     for e in out.values():
         if e["status"] == "retired":
@@ -115,8 +115,9 @@ def reconcile_printings(entries: dict[str, dict], printings: list[tuple[str, str
 
     A printing in `printings` is live: it keeps its entry's id, its `key` is refreshed and a changed key goes to
     `formerIds`. A live entry not in `printings` is retired. Its successors are, when its print is retired, the same
-    language and edition on each successor print if that printing is live, else all of that print's live printings; when its print is live (the edition was
-    dropped), the print's other live printings. An entry already retired and not emitted is left as it is.
+    language and edition on each successor print if that printing is live, else all of that print's live printings; when
+    its print is live (the edition was dropped), the print's other live printings. An entry already retired and not
+    emitted is left as it is.
     `entries` is not modified.
     """
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
@@ -143,8 +144,10 @@ def reconcile_printings(entries: dict[str, dict], printings: list[tuple[str, str
         if owner is None:
             entry["successors"] = []
         elif owner["status"] == "retired":
-            same = lambda s: [f"{s}:{language}:{edition}"] if f"{s}:{language}:{edition}" in live_ids else by_print.get(s, [])
-            entry["successors"] = sorted({i for s in owner["successors"] for i in same(s)})
+            # The successor print's printing in the same language and edition, else all of its live printings.
+            tail = f":{language}:{edition}"
+            entry["successors"] = sorted({i for s in owner["successors"]
+                                          for i in ([s + tail] if s + tail in live_ids else by_print.get(s, []))})
         else:
             entry["successors"] = sorted(by_print.get(print_id, []))
     return dict(sorted(out.items()))
@@ -179,7 +182,7 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
         if cid in current or entry["status"] == "retired":
             continue
         named = by_name.get(entry["name"], [])
-        konami = by_konami.get(entry.get("konamiId"), []) if entry.get("konamiId") is not None else []
+        konami = by_konami.get(entry["konamiId"], []) if entry.get("konamiId") is not None else []
         found = named if len(named) == 1 else konami if len(konami) == 1 else named if len(named) > 1 else konami
         entry["status"] = "retired"
         if len(found) == 1:
@@ -219,8 +222,8 @@ def archetype_identity(a: dict) -> set[str]:
     return {f"ygojson:{ident['ygojsonId']}"} if "ygojsonId" in ident else set()
 
 
-def reconcile_slugs(entries: dict[str, dict], current: list[dict], name_field: str, identity: Callable[[dict], set[str]],
-                    merges: Mapping[str, str] = {}, *, id_field: str = "id",
+def reconcile_slugs(entries: dict[str, dict], current: list[dict], name_field: str,
+                    identity: Callable[[dict], set[str]], merges: Mapping[str, str] = {}, *, id_field: str = "id",
                     evidence: Callable[[dict], dict] = lambda r: {}) -> tuple[dict[str, dict], list[dict]]:
     """Update a slug ledger (sets, archetypes): (new entries, rename rows sorted by "from").
 
@@ -398,7 +401,7 @@ def _successor_index(current: list[PrintFacts], carried: Mapping[str, str]) -> t
     """Ids of the current prints at each place of `_successor_places`, in its order."""
     index: tuple[dict[tuple, list[str]], ...] = tuple(defaultdict(list) for _ in range(5))
     for f in current:
-        for by_place, at in zip(index, _successor_places(f)):
+        for by_place, at in zip(index, _successor_places(f), strict=True):
             if at is not None:
                 by_place[at].append(carried[f.key])
     return index

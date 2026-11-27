@@ -1,4 +1,5 @@
-"""Write dist/AllSets.json, AllCards.json, AllPrintings.json, AllArchetypes.json, AllProducts.json, Legality.json and Ids.json.
+"""Write dist/AllSets.json, AllCards.json, AllPrintings.json, AllArchetypes.json, AllProducts.json,
+Legality.json and Ids.json.
 Refuses to build invalid data, or data the id ledger under ids/ does not match.
 
     uv run python tools/build.py --version 0.2.0
@@ -30,7 +31,8 @@ def _read(path: Path):
 
 
 def sources(cache: Path = CACHE) -> dict:
-    """The snapshot of each source the caches hold: {"ygoprodeck": "147.60", "ygojson": 1559, "tcgcsv": "2026-10-27"}."""
+    """The snapshot of each source the caches hold: {"ygoprodeck": "147.60", "ygojson": 1559, "tcgcsv":
+    "2026-10-27"}."""
     out: dict = {}
     if (dbver := _read(cache / "ygoprodeck" / "dbver.json")):
         out["ygoprodeck"] = dbver[0]["database_version"]

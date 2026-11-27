@@ -3,11 +3,11 @@ import json
 import re
 
 import pytest
+from test_ygjson import ARCHETYPES, CARDS, ERAS, LEGALITY, SEALED, SETS
 
 import build
 import ids
 import ygjson
-from test_ygjson import ARCHETYPES, CARDS, ERAS, LEGALITY, SEALED, SETS
 
 
 @pytest.fixture

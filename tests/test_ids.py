@@ -161,8 +161,10 @@ def test_review_lists_the_retired_ids_that_do_not_reach_exactly_one_live_id():
 
 def test_an_applied_hand_decision_keeps_check_green():
     import copy
+
     from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
-    files = lambda card: {"046": {"cards": [card]}}
+    def files(card):
+        return {"046": {"cards": [card]}}
     without_a = {**copy.deepcopy(CARD), "prints": copy.deepcopy(CARD["prints"][1:])}
     moved = copy.deepcopy(CARD)
     key = f"{SET}:46986414:LOB-EN105:ultra_rare"
@@ -210,8 +212,10 @@ def test_run_twice_leaves_the_ledger_byte_identical(tmp_path):
 
 def test_review_comes_from_the_ledger_and_is_the_same_on_a_rerun():
     import copy
+
     from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
-    files = lambda card: {"046": {"cards": [card]}}
+    def files(card):
+        return {"046": {"cards": [card]}}
     split = copy.deepcopy(CARD)  # PRINT_A's ultra_rare becomes a secret_rare and a starlight_rare
     split["prints"][0].update(id=f"{SET}:46986414:LOB-EN005:secret_rare", rarity="secret_rare", identifiers={})
     split["prints"].append({**split["prints"][0], "id": f"{SET}:46986414:LOB-EN005:starlight_rare",
@@ -313,6 +317,7 @@ def test_diff_errors_reports_a_lost_key_and_successors_shrunk_to_none():
 
 def _cli(monkeypatch, tmp_path, ledger, sets):
     from test_ygjson import ARCHETYPES, CARDS, SEALED
+
     import ygjson
     monkeypatch.setattr(ids, "IDS", tmp_path / "ids")
     monkeypatch.setattr(ids, "REVIEW", tmp_path / "review" / "ids.json")
@@ -370,10 +375,12 @@ def test_a_set_taking_over_a_tcgplayer_minted_sets_group_exits_3(monkeypatch, tm
 
 
 def test_a_rename_leaves_the_prints_alone_until_the_rerun(monkeypatch, tmp_path, capsys):
-    import ygjson
     from test_ygjson import ARCHETYPES, CARDS, SEALED, SET, SETS
-    named = lambda slug, name: json.loads(json.dumps(
-        [[{**SETS[0], "name": name, "identifiers": {"ygojsonId": "lob-uuid"}}], CARDS, SEALED]).replace(SET, slug))
+
+    import ygjson
+    def named(slug, name):
+        return json.loads(json.dumps(
+            [[{**SETS[0], "name": name, "identifiers": {"ygojsonId": "lob-uuid"}}], CARDS, SEALED]).replace(SET, slug))
     published = named("lob-old", "LOB")  # the set as published, under its old slug
     renamed = named(SET, "Legend of Blue Eyes White Dragon")  # YGOPRODeck renamed it: the import made a new slug
     mapped = named("lob-old", "Legend of Blue Eyes White Dragon")  # the rerun maps the new name to the old slug
@@ -382,9 +389,9 @@ def test_a_rename_leaves_the_prints_alone_until_the_rerun(monkeypatch, tmp_path,
     before = {kind: (tmp_path / "ids" / f"{kind}.json").read_bytes() for kind in ids.KINDS}
 
     for step in (renamed, mapped):
-        monkeypatch.setattr(ygjson, "load_sets", lambda: step[0])
-        monkeypatch.setattr(ygjson, "load_cards", lambda: step[1])
-        monkeypatch.setattr(ygjson, "load_sealed", lambda: step[2])
+        monkeypatch.setattr(ygjson, "load_sets", lambda step=step: step[0])
+        monkeypatch.setattr(ygjson, "load_cards", lambda step=step: step[1])
+        monkeypatch.setattr(ygjson, "load_sealed", lambda step=step: step[2])
         if step is renamed:
             with pytest.raises(SystemExit) as e:
                 ids.main([])
@@ -460,8 +467,10 @@ def test_a_duplicate_id_in_a_ledger_file_is_refused(tmp_path):
 
 def test_a_retired_print_whose_key_came_back_under_another_id_points_at_it():
     import copy
+
     from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
-    files = lambda *cards: {"046": {"cards": list(cards)}}
+    def files(*cards):
+        return {"046": {"cards": list(cards)}}
     placeholder = {**copy.deepcopy(CARD), "id": "ph1", "identifiers": {}}
     del placeholder["passcode"]
     placeholder["prints"] = [{**CARD["prints"][0], "id": f"{SET}:ph1:LOB-EN005:ultra_rare", "identifiers": {}}]

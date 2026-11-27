@@ -26,7 +26,6 @@ import collections
 import html
 import json
 import re
-from pathlib import Path
 from urllib.parse import quote
 
 import ygjson
@@ -119,9 +118,9 @@ def match_sets(ours: list[dict], theirs: list[dict]) -> dict[str, tuple[dict, st
         named[normalise(g["name"]["en"])].append(g)
     ours_names = collections.Counter(normalise(s["name"]) for s in free_ours())
     for s in free_ours():
-        key = normalise(s["name"])
-        if ours_names[key] == 1 and len(named.get(key, [])) == 1:
-            take(s, named[key][0], "name")
+        name = normalise(s["name"])
+        if ours_names[name] == 1 and len(named.get(name, [])) == 1:
+            take(s, named[name][0], "name")
 
     # 4. the Yugipedia page title equals our name: YGOJSON names two sets alike (the 25th Anniversary reprints) but
     # their pages differ.
@@ -237,9 +236,9 @@ def match_series(archetypes: list[dict], series: list[dict]) -> dict[str, dict]:
     used = {g["id"] for g in found.values()}
     # Series that share a name: the one flagged archetype first, then by id, whatever order the file is in.
     for g in sorted(series, key=lambda g: (not g["archetype"], g["id"])):
-        a = by_name.get(g["name"]["en"])
-        if a and a["slug"] not in found and g["id"] not in used:
-            found[a["slug"]] = g
+        owner = by_name.get(g["name"]["en"])
+        if owner and owner["slug"] not in found and g["id"] not in used:
+            found[owner["slug"]] = g
             used.add(g["id"])
     used = {g["id"] for g in found.values()}
     left_a = collections.defaultdict(list)
