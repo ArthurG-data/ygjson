@@ -5954,7 +5954,7 @@
      "region": "EN",
      "set": "limited-pack-world-championship-2025",
      "tcgplayer": {
-      "match": "number+rarity-from-tcgplayer",
+      "match": "number+rarity",
       "name": "Exodia the Forbidden One (EUR)"
      }
     },
@@ -6120,9 +6120,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:33396948:YGLD-ENA17:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7613,6 +7610,7 @@
      },
      "number": "MZTM-EN039",
      "rarity": "rare",
+     "rawRarity": "New",
      "region": "EN",
      "set": "maze-of-the-master",
      "tcgplayer": {
@@ -10863,6 +10861,7 @@
      },
      "number": "MZTM-EN020",
      "rarity": "rare",
+     "rawRarity": "New",
      "region": "EN",
      "set": "maze-of-the-master",
      "tcgplayer": {
