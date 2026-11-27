@@ -76,6 +76,7 @@
    ],
    "atk": 1600,
    "attribute": "dark",
+   "betaName": "Foie Glasya de Nouvellez",
    "def": 1850,
    "frame": "ritual",
    "hasEffect": true,
@@ -148,6 +149,7 @@
    ],
    "atk": 1600,
    "attribute": "light",
+   "betaName": "Centurion Primera",
    "def": 1600,
    "frame": "effect",
    "hasEffect": true,
@@ -1265,6 +1267,7 @@
    ],
    "atk": 0,
    "attribute": "earth",
+   "betaName": "Carbon, Cornerstone of Creation",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -1601,6 +1604,7 @@
    ],
    "atk": 2000,
    "attribute": "dark",
+   "betaName": "Raidraptor - Etranger Falcon",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -1809,6 +1813,7 @@
   {
    "atk": 1000,
    "attribute": "light",
+   "betaName": "The Star Ham",
    "def": 1200,
    "frame": "synchro",
    "hasEffect": true,
@@ -1900,6 +1905,7 @@
    ],
    "atk": 1100,
    "attribute": "water",
+   "betaName": "Saion, Archer of the Vaylantz",
    "def": 1100,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -2497,6 +2503,7 @@
    ],
    "atk": 1600,
    "attribute": "fire",
+   "betaName": "Evolsaur Rios",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -2706,6 +2713,7 @@
    ],
    "atk": 1200,
    "attribute": "dark",
+   "betaName": "Spell Reactor・RE",
    "def": 900,
    "frame": "effect",
    "hasEffect": true,
@@ -3047,6 +3055,7 @@
    ],
    "atk": 2000,
    "attribute": "light",
+   "betaName": "Swickelavee the Brilliantly Crowned Heavy Cavalry",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -3639,6 +3648,7 @@
    ],
    "atk": 2500,
    "attribute": "fire",
+   "betaName": "Mathmech Processor Magma",
    "def": 0,
    "frame": "synchro",
    "hasEffect": true,
@@ -3948,6 +3958,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:15259703:LDS1-EN068:ultra_rare",
      "number": "LDS1-EN068",
      "rarity": "ultra_rare",
@@ -4445,6 +4458,7 @@
    ],
    "atk": 2600,
    "attribute": "dark",
+   "betaName": "Superbolt Thunder Dragon",
    "def": 2400,
    "frame": "fusion",
    "hasEffect": true,
@@ -4928,6 +4942,7 @@
    "aliases": [
     "The Himorogi where Stars Align"
    ],
+   "betaName": "The Himorogi where Stars Align",
    "frame": "spell",
    "hasEffect": true,
    "id": "15306543",
@@ -5355,6 +5370,7 @@
    ],
    "atk": 500,
    "attribute": "dark",
+   "betaName": "Legendary Shadow of the Six Samurai",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -6065,6 +6081,7 @@
    ],
    "atk": 1800,
    "attribute": "light",
+   "betaName": "Starliege Dragon Seyfert",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -6313,6 +6330,7 @@
    "archetypes": [
     "nouvelles"
    ],
+   "betaName": "Nouvelles Auberge \"À Table\"",
    "frame": "spell",
    "hasEffect": true,
    "id": "15388353",
@@ -7056,6 +7074,7 @@
    "archetypes": [
     "spright"
    ],
+   "betaName": "Splight Starter",
    "frame": "spell",
    "hasEffect": true,
    "id": "15443125",
@@ -7272,6 +7291,7 @@
    "archetypes": [
     "prank-kids"
    ],
+   "betaName": "Operation Prankids",
    "frame": "trap",
    "hasEffect": true,
    "id": "15447747",
@@ -7659,6 +7679,7 @@
    ],
    "atk": 1000,
    "attribute": "water",
+   "betaName": "Adularia of the Moonlit Water",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -8362,6 +8383,7 @@
    "archetypes": [
     "photon"
    ],
+   "betaName": "Photon Hand (Card)",
    "frame": "spell",
    "hasEffect": true,
    "id": "15520842",
@@ -9673,6 +9695,7 @@
   {
    "atk": 800,
    "attribute": "light",
+   "betaName": "Mystical Elf White Lightning",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -9747,6 +9770,7 @@
    ],
    "atk": 1800,
    "attribute": "dark",
+   "betaName": "Reloader Dragon",
    "frame": "link",
    "hasEffect": true,
    "id": "15627227",
@@ -9990,6 +10014,7 @@
   {
    "atk": 1000,
    "attribute": "dark",
+   "betaName": "Skull Knight 2",
    "def": 1200,
    "frame": "effect",
    "hasEffect": true,
@@ -10210,6 +10235,7 @@
    ],
    "atk": 2700,
    "attribute": "water",
+   "betaName": "Trishula, the Ice Prison Dragon",
    "def": 2000,
    "frame": "fusion",
    "hasEffect": true,
@@ -10342,6 +10368,7 @@
    ],
    "atk": 1700,
    "attribute": "dark",
+   "betaName": "Killer Tune Red Seal",
    "def": 2400,
    "frame": "synchro",
    "hasEffect": true,
@@ -10601,6 +10628,7 @@
    "aliases": [
     "Struggling Battle"
    ],
+   "betaName": "Struggling Battle",
    "frame": "trap",
    "hasEffect": true,
    "id": "15693423",
@@ -10926,6 +10954,7 @@
    ],
    "atk": 500,
    "attribute": "earth",
+   "betaName": "Crawler Axon",
    "def": 1800,
    "frame": "effect",
    "hasEffect": true,
@@ -11111,6 +11140,7 @@
    ],
    "atk": 1100,
    "attribute": "earth",
+   "betaName": "Confronting the",
    "def": 2500,
    "frame": "effect",
    "hasEffect": true,
@@ -11196,6 +11226,7 @@
    "archetypes": [
     "super-quant"
    ],
+   "betaName": "Super Quantal Alphan Call",
    "frame": "spell",
    "hasEffect": true,
    "id": "15721392",
@@ -11398,6 +11429,7 @@
    ]
   },
   {
+   "betaName": "Spell Card: \"Soul Exchange\"",
    "frame": "spell",
    "hasEffect": true,
    "id": "15735108",
@@ -11726,6 +11758,7 @@
    "archetypes": [
     "dragonmaid"
    ],
+   "betaName": "Dragonmaids' Sendoff",
    "frame": "spell",
    "hasEffect": true,
    "id": "15754711",
@@ -12131,6 +12164,7 @@
    ],
    "atk": 2200,
    "attribute": "earth",
+   "betaName": "Sky Scourge Sidherz",
    "def": 1600,
    "frame": "effect",
    "hasEffect": true,
@@ -12831,6 +12865,7 @@
    ],
    "atk": 2700,
    "attribute": "wind",
+   "betaName": "Dragonmaid Luft",
    "def": 1700,
    "frame": "effect",
    "hasEffect": true,
@@ -13107,6 +13142,7 @@
     "numerounius"
    ],
    "attribute": "light",
+   "betaName": "Number iC1000: Numeronius Numeronia",
    "frame": "xyz",
    "hasEffect": true,
    "id": "15862758",
@@ -14220,6 +14256,7 @@
    "aliases": [
     "Reloaded Cylinder"
    ],
+   "betaName": "Reloaded Cylinder",
    "frame": "trap",
    "hasEffect": true,
    "id": "15943341",
@@ -14301,6 +14338,7 @@
    ],
    "atk": 1400,
    "attribute": "dark",
+   "betaName": "Omerta - Calupoh",
    "def": 1400,
    "frame": "effect",
    "hasEffect": true,
@@ -14718,6 +14756,7 @@
    "aliases": [
     "Little Opposition"
    ],
+   "betaName": "Little Opposition",
    "frame": "trap",
    "hasEffect": true,
    "id": "15967552",
@@ -15036,6 +15075,7 @@
    ],
    "atk": 3500,
    "attribute": "light",
+   "betaName": "Centurion Legatia",
    "def": 2000,
    "frame": "synchro",
    "hasEffect": true,
@@ -15156,6 +15196,7 @@
    ],
    "atk": 1600,
    "attribute": "light",
+   "betaName": "Greater Magikey - Mafteahl",
    "def": 1600,
    "frame": "effect",
    "hasEffect": true,
@@ -15246,6 +15287,7 @@
    ],
    "atk": 2600,
    "attribute": "wind",
+   "betaName": "Gaia the Magical Dragon Champion",
    "def": 2100,
    "frame": "fusion",
    "hasEffect": true,

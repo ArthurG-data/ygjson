@@ -282,6 +282,7 @@
    ],
    "atk": 3300,
    "attribute": "fire",
+   "betaName": "Asutraja Susanoo",
    "def": 0,
    "frame": "synchro",
    "hasEffect": true,
@@ -719,6 +720,7 @@
    ],
    "atk": 2000,
    "attribute": "wind",
+   "betaName": "Miradora, Skywing of the Whirlwinds",
    "def": 2600,
    "frame": "effect",
    "hasEffect": true,
@@ -909,6 +911,7 @@
    ],
    "atk": 1600,
    "attribute": "water",
+   "betaName": "Abyssrhine the Atlantean Spirit",
    "def": 1600,
    "frame": "effect",
    "hasEffect": true,
@@ -1610,6 +1613,7 @@
    "aliases": [
     "Turmoil of Sea and Flames"
    ],
+   "betaName": "Turmoil of Sea and Flames",
    "frame": "spell",
    "hasEffect": true,
    "id": "17151328",
@@ -2356,6 +2360,7 @@
    "archetypes": [
     "ice-barrier"
    ],
+   "betaName": "The Calm After the Ice Barrier's Storm",
    "frame": "spell",
    "hasEffect": true,
    "id": "17197110",
@@ -2517,6 +2522,7 @@
    ],
    "atk": 900,
    "attribute": "wind",
+   "betaName": "Fullspeed Warrior",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -2760,6 +2766,7 @@
    ],
    "atk": 1500,
    "attribute": "light",
+   "betaName": "Combination Maneuver - Engage Zero",
    "frame": "link",
    "hasEffect": true,
    "id": "17217034",
@@ -3239,6 +3246,7 @@
    ],
    "atk": 1400,
    "attribute": "wind",
+   "betaName": "Daikaminari Gyclops",
    "def": 1700,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -3473,6 +3481,7 @@
    "archetypes": [
     "mikanko"
    ],
+   "betaName": "Doorway of the Celestial Mikanko",
    "frame": "spell",
    "hasEffect": true,
    "id": "17255673",
@@ -4101,6 +4110,7 @@
    "aliases": [
     "The Ruler's Rumbling"
    ],
+   "betaName": "The Ruler's Rumbling",
    "frame": "trap",
    "hasEffect": true,
    "id": "17269895",
@@ -4176,6 +4186,7 @@
    ],
    "atk": 0,
    "attribute": "earth",
+   "betaName": "Manadome Hearless",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -4523,6 +4534,7 @@
    ],
    "atk": 2200,
    "attribute": "earth",
+   "betaName": "Reaper Oracle of Supay",
    "def": 1900,
    "frame": "effect",
    "hasEffect": true,
@@ -4689,6 +4701,7 @@
    ],
    "atk": 1100,
    "attribute": "wind",
+   "betaName": "Speedroid Bamboo Horse",
    "def": 1100,
    "frame": "effect",
    "hasEffect": true,
@@ -5408,6 +5421,7 @@
    ],
    "atk": 2000,
    "attribute": "wind",
+   "betaName": "Prankids Doodle",
    "frame": "link",
    "hasEffect": true,
    "id": "17382973",
@@ -6117,6 +6131,7 @@
    "aliases": [
     "Electro-Magnetic Railgun"
    ],
+   "betaName": "Electro-Magnetic Railgun",
    "frame": "trap",
    "hasEffect": true,
    "id": "17427333",
@@ -6722,6 +6737,7 @@
    "aliases": [
     "Planetary Elegy"
    ],
+   "betaName": "Planetary Elegy",
    "frame": "spell",
    "hasEffect": true,
    "id": "17462320",
@@ -6787,6 +6803,7 @@
    ],
    "atk": 1300,
    "attribute": "dark",
+   "betaName": "Blackwing – Auster the South Wind",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -6875,6 +6892,7 @@
    ],
    "atk": 3500,
    "attribute": "light",
+   "betaName": "A-vida, the Dual World Crafter",
    "def": 3500,
    "frame": "effect",
    "hasEffect": true,
@@ -6946,6 +6964,7 @@
    ],
    "atk": 300,
    "attribute": "dark",
+   "betaName": "Power Patron Shadow Beast Nervedo",
    "def": 200,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -7608,6 +7627,7 @@
    "aliases": [
     "The Explosion of the Normal"
    ],
+   "betaName": "The Explosion of the Normal",
    "frame": "trap",
    "hasEffect": true,
    "id": "17509503",
@@ -8353,6 +8373,7 @@
    ],
    "atk": 2500,
    "attribute": "light",
+   "betaName": "Nemleria's Dream Defender - Oreiller",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -8964,6 +8985,7 @@
    "archetypes": [
     "evil-eye"
    ],
+   "betaName": "Forbidden Awakening of the Evil Eye",
    "frame": "spell",
    "hasEffect": true,
    "id": "17616743",
@@ -9045,6 +9067,7 @@
    "archetypes": [
     "enneacraft"
    ],
+   "betaName": "Enneapolis, the Sinquisition City",
    "frame": "spell",
    "hasEffect": true,
    "id": "17621695",
@@ -9791,6 +9814,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-1:17655904:DTP1-EN013:dt_normal_parallel",
      "number": "DTP1-EN013",
      "rarity": "dt_normal_parallel",
@@ -9798,6 +9824,9 @@
      "set": "duel-terminal-preview-wave-1"
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-2:17655904:DTP1-EN013:dt_rare_parallel",
      "number": "DTP1-EN013",
      "rarity": "dt_rare_parallel",
@@ -10014,6 +10043,7 @@
   {
    "atk": 2400,
    "attribute": "wind",
+   "betaName": "Luster Dragon 2",
    "def": 1400,
    "frame": "normal",
    "hasEffect": false,
@@ -10422,6 +10452,7 @@
    "archetypes": [
     "p-u-n-k"
    ],
+   "betaName": "Gagaku P.U.N.K. Crusher Beat",
    "frame": "spell",
    "hasEffect": true,
    "id": "17691568",
@@ -10757,6 +10788,7 @@
    "aliases": [
     "Invincible Halo"
    ],
+   "betaName": "Invincible Halo",
    "frame": "trap",
    "hasEffect": true,
    "id": "17722185",
@@ -10832,6 +10864,7 @@
    "aliases": [
     "Saga of the Blue-Eyed Dragon"
    ],
+   "betaName": "Saga of the Blue-Eyed Dragon",
    "frame": "spell",
    "hasEffect": true,
    "id": "17725109",
@@ -11069,6 +11102,7 @@
    ],
    "atk": 2600,
    "attribute": "dark",
+   "betaName": "Zerachiel, King of the Evil Eye",
    "frame": "link",
    "hasEffect": true,
    "id": "17739335",
@@ -11310,6 +11344,7 @@
    "archetypes": [
     "branded"
    ],
+   "betaName": "Branded Condemnation",
    "frame": "trap",
    "hasEffect": true,
    "id": "17751597",
@@ -11495,6 +11530,7 @@
    ],
    "atk": 2000,
    "attribute": "earth",
+   "betaName": "Superheavy Samurai Steam Fiend Tetsudo'o",
    "def": 4800,
    "frame": "synchro",
    "hasEffect": true,
@@ -12111,6 +12147,7 @@
    ],
    "atk": 500,
    "attribute": "wind",
+   "betaName": "Flundereeze x Toccan",
    "def": 1300,
    "frame": "effect",
    "hasEffect": true,
@@ -13185,6 +13222,7 @@
    ],
    "atk": 400,
    "attribute": "dark",
+   "betaName": "Memento Goblin",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -14490,6 +14528,7 @@
    ],
    "atk": 2300,
    "attribute": "earth",
+   "betaName": "Parry Knight",
    "def": 2100,
    "frame": "effect",
    "hasEffect": true,

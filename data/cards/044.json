@@ -9,6 +9,7 @@
    ],
    "atk": 2800,
    "attribute": "dark",
+   "betaName": "Black Chaos the Dark Chaos Magician",
    "def": 2600,
    "frame": "ritual",
    "hasEffect": true,
@@ -107,6 +108,7 @@
    ],
    "atk": 3000,
    "attribute": "dark",
+   "betaName": "Hydralander the Orbital Shadowlite Weapon",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -956,6 +958,7 @@
    "aliases": [
     "Dream Pillow Parasomnia"
    ],
+   "betaName": "Dream Pillow Parasomnia",
    "frame": "spell",
    "hasEffect": true,
    "id": "44092304",
@@ -1916,6 +1919,10 @@
      "variant": "c"
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "yugi-s-legendary-decks:44095762:YGLD-ENA37:common",
      "number": "YGLD-ENA37",
      "rarity": "common",
@@ -1945,6 +1952,10 @@
      "variant": "a"
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "yugi-s-legendary-decks:44095762:YGLD-ENB33:ultra_rare",
      "number": "YGLD-ENB33",
      "rarity": "ultra_rare",
@@ -1974,6 +1985,10 @@
      "variant": "b"
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "yugi-s-legendary-decks:44095762:YGLD-ENC36:common",
      "number": "YGLD-ENC36",
      "rarity": "common",
@@ -2169,6 +2184,7 @@
    "archetypes": [
     "evil-eye"
    ],
+   "betaName": "Cursed Eye of Selene",
    "frame": "spell",
    "hasEffect": true,
    "id": "44133040",
@@ -3326,6 +3342,7 @@
    ],
    "atk": 0,
    "attribute": "fire",
+   "betaName": "Mirah and Matchnoko",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -3976,6 +3993,7 @@
    ],
    "atk": 1700,
    "attribute": "light",
+   "betaName": "Goblin Biker Grialle Trio",
    "def": 0,
    "frame": "xyz",
    "hasEffect": true,
@@ -4558,6 +4576,7 @@
    ],
    "atk": 3700,
    "attribute": "earth",
+   "betaName": "Megalith Nortra Phulra",
    "def": 2700,
    "frame": "ritual",
    "hasEffect": true,
@@ -4731,6 +4750,7 @@
    ],
    "atk": 1000,
    "attribute": "water",
+   "betaName": "Vessel Miko of the Ice Barrier",
    "def": 1800,
    "frame": "effect",
    "hasEffect": true,
@@ -6869,6 +6889,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:44405066:LDS1-EN015:ultra_rare",
      "number": "LDS1-EN015",
      "rarity": "ultra_rare",
@@ -7397,6 +7420,7 @@
    ],
    "atk": 700,
    "attribute": "earth",
+   "betaName": "Nemesys Keystone",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -7549,6 +7573,7 @@
    ],
    "atk": 800,
    "attribute": "fire",
+   "betaName": "Fire King Consort Ulkanix",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -8025,6 +8050,7 @@
    ],
    "atk": 2700,
    "attribute": "wind",
+   "betaName": "Dragon Tail Pan",
    "def": 1700,
    "frame": "effect",
    "hasEffect": true,
@@ -8684,6 +8710,7 @@
    ],
    "atk": 2000,
    "attribute": "water",
+   "betaName": "Prankids Weather",
    "def": 0,
    "frame": "fusion",
    "hasEffect": true,
@@ -9432,6 +9459,7 @@
    "aliases": [
     "World of Boundless Consciousness"
    ],
+   "betaName": "World of Boundless Consciousness",
    "frame": "trap",
    "hasEffect": true,
    "id": "44553392",
@@ -10290,6 +10318,7 @@
    "archetypes": [
     "dual-avatar"
    ],
+   "betaName": "Dual Avatar Turning",
    "frame": "trap",
    "hasEffect": true,
    "id": "44644529",
@@ -10352,6 +10381,7 @@
    "archetypes": [
     "mikanko"
    ],
+   "betaName": "The Great Mikanko of Legend",
    "frame": "spell",
    "hasEffect": true,
    "id": "44649322",
@@ -11288,6 +11318,7 @@
    ],
    "atk": 1500,
    "attribute": "wind",
+   "betaName": "Storm Dragon",
    "def": 200,
    "frame": "effect",
    "hasEffect": true,
@@ -11504,6 +11535,7 @@
    ],
    "atk": 1600,
    "attribute": "water",
+   "betaName": "Shadow Six Samurai - Hatsume",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -11816,6 +11848,7 @@
    ],
    "atk": 2400,
    "attribute": "earth",
+   "betaName": "Transient Masquerader of Illusion",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -11875,6 +11908,7 @@
    ],
    "atk": 2500,
    "attribute": "light",
+   "betaName": "Dragluxion",
    "def": 3000,
    "frame": "xyz",
    "hasEffect": true,
@@ -12059,6 +12093,7 @@
    ],
    "atk": 3000,
    "attribute": "wind",
+   "betaName": "Ukiyoe P.U.N.K. Amazing Dragon",
    "def": 2800,
    "frame": "synchro",
    "hasEffect": true,
@@ -12331,6 +12366,7 @@
    "aliases": [
     "Toll Increase"
    ],
+   "betaName": "Toll Increase",
    "frame": "trap",
    "hasEffect": true,
    "id": "44716890",
@@ -12679,6 +12715,7 @@
    ],
    "atk": 0,
    "attribute": "water",
+   "betaName": "Manadome Meek",
    "def": 1800,
    "frame": "effect",
    "hasEffect": true,
@@ -13674,6 +13711,7 @@
    ],
    "atk": 2700,
    "attribute": "earth",
+   "betaName": "Conduction Warrior Linear Magnum ±",
    "def": 1300,
    "frame": "effect",
    "hasEffect": true,
@@ -13739,6 +13777,7 @@
    "archetypes": [
     "nemurelia"
    ],
+   "betaName": "Sweet Dreams, Nemurelia",
    "frame": "spell",
    "hasEffect": true,
    "id": "44843954",
@@ -14417,6 +14456,7 @@
    "archetypes": [
     "polymerization"
    ],
+   "betaName": "Apex Polymerization",
    "frame": "spell",
    "hasEffect": true,
    "id": "44886582",

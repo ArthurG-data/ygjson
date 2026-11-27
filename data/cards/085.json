@@ -280,6 +280,7 @@
    ],
    "atk": 2900,
    "attribute": "dark",
+   "betaName": "Sage de Fleur",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -453,6 +454,7 @@
    ],
    "atk": 1000,
    "attribute": "earth",
+   "betaName": "Calpiponica, Mystical Beast of the Forest",
    "def": 2600,
    "frame": "effect",
    "hasEffect": true,
@@ -540,6 +542,7 @@
    ],
    "atk": 3000,
    "attribute": "dark",
+   "betaName": "Dark Master of Chaos",
    "def": 2500,
    "frame": "fusion",
    "hasEffect": true,
@@ -714,6 +717,7 @@
    ],
    "atk": 0,
    "attribute": "dark",
+   "betaName": "St. Azamina",
    "def": 4000,
    "frame": "fusion",
    "hasEffect": true,
@@ -2170,6 +2174,7 @@
     "zoodiac"
    ],
    "attribute": "earth",
+   "betaName": "Zoodiac Bullhorn",
    "frame": "xyz",
    "hasEffect": true,
    "id": "85115440",
@@ -2258,6 +2263,7 @@
    "archetypes": [
     "onomat"
    ],
+   "betaName": "Onomatopick",
    "frame": "spell",
    "hasEffect": true,
    "id": "85119159",
@@ -2373,6 +2379,7 @@
    ],
    "atk": 2800,
    "attribute": "fire",
+   "betaName": "Number C105",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -2494,6 +2501,7 @@
    ],
    "atk": 0,
    "attribute": "wind",
+   "betaName": "Goblin Paratrooper Squad",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -2888,6 +2896,7 @@
    "aliases": [
     "Spirit Hunter"
    ],
+   "betaName": "Spirit Hunter",
    "frame": "trap",
    "hasEffect": true,
    "id": "85150300",
@@ -4529,6 +4538,7 @@
    ],
    "atk": 1000,
    "attribute": "light",
+   "betaName": "Ray",
    "def": 1000,
    "frame": "normal",
    "hasEffect": false,
@@ -4785,6 +4795,7 @@
   {
    "atk": 2900,
    "attribute": "dark",
+   "betaName": "Cosmo Queen, the Queen of Prayers",
    "def": 2450,
    "frame": "effect",
    "hasEffect": true,
@@ -4875,6 +4886,7 @@
    ],
    "atk": 3000,
    "attribute": "wind",
+   "betaName": "Magnifistorm Great Pyre Phonix",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -5046,6 +5058,7 @@
    "archetypes": [
     "dark-world"
    ],
+   "betaName": "Dark World Reinforcements",
    "frame": "spell",
    "hasEffect": true,
    "id": "85325774",
@@ -5553,6 +5566,7 @@
    ],
    "atk": 1800,
    "attribute": "light",
+   "betaName": "Yuubi the Souten Brawler",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -5861,6 +5875,7 @@
    ],
    "atk": 300,
    "attribute": "water",
+   "betaName": "Fluffyfluff",
    "def": 300,
    "frame": "effect",
    "hasEffect": true,
@@ -5947,6 +5962,7 @@
    "aliases": [
     "New World Full of Stars"
    ],
+   "betaName": "New World Full of Stars",
    "frame": "trap",
    "hasEffect": true,
    "id": "85407683",
@@ -7276,6 +7292,7 @@
    "archetypes": [
     "scrap-iron"
    ],
+   "betaName": "Scrap-Iron Idol",
    "frame": "trap",
    "hasEffect": true,
    "id": "85520170",
@@ -7509,6 +7526,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "world-championship-2010-card-pack:85520851:WCPP-EN017:unknown",
      "number": "WCPP-EN017",
      "rarity": "unknown",
@@ -7532,6 +7552,7 @@
    ],
    "atk": 3000,
    "attribute": "earth",
+   "betaName": "Wisca Blitzclique",
    "def": 2400,
    "frame": "effect",
    "hasEffect": true,
@@ -7871,6 +7892,7 @@
    ],
    "atk": 2300,
    "attribute": "dark",
+   "betaName": "Ebon Void Magician",
    "def": 2800,
    "frame": "xyz",
    "hasEffect": true,
@@ -8191,6 +8213,7 @@
    ],
    "atk": 2700,
    "attribute": "wind",
+   "betaName": "WAKE CUP! Erl",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -8257,6 +8280,7 @@
    "archetypes": [
     "starry-knight"
    ],
+   "betaName": "Holy Night Nativity",
    "frame": "spell",
    "hasEffect": true,
    "id": "85590798",
@@ -8542,6 +8566,7 @@
    "aliases": [
     "On the Edge of the Ring"
    ],
+   "betaName": "On the Edge of the Ring",
    "frame": "spell",
    "hasEffect": true,
    "id": "85636437",
@@ -8604,6 +8629,7 @@
    "archetypes": [
     "gouki"
    ],
+   "betaName": "Gouki Deathmatch",
    "frame": "spell",
    "hasEffect": true,
    "id": "85638822",
@@ -8855,6 +8881,7 @@
    "aliases": [
     "Tip of the Tongue Reduction"
    ],
+   "betaName": "Tip of the Tongue Reduction",
    "frame": "trap",
    "hasEffect": true,
    "id": "85640370",
@@ -9002,6 +9029,7 @@
    ],
    "atk": 1800,
    "attribute": "dark",
+   "betaName": "Red-Eyes Metal Knight Gearfried",
    "def": 1600,
    "frame": "effect",
    "hasEffect": true,
@@ -9649,6 +9677,7 @@
    ],
    "atk": 2000,
    "attribute": "earth",
+   "betaName": "Mathmech Editor d'Alembertian",
    "def": 0,
    "frame": "xyz",
    "hasEffect": true,
@@ -9856,6 +9885,7 @@
    "aliases": [
     "Terrors of the Netherroot"
    ],
+   "betaName": "Terrors of the Netherroot",
    "frame": "trap",
    "hasEffect": true,
    "id": "85698115",
@@ -10714,6 +10744,7 @@
    ],
    "atk": 2200,
    "attribute": "dark",
+   "betaName": "Crescent Dragon - Mikazukinoyaiba",
    "def": 2350,
    "frame": "effect",
    "hasEffect": true,
@@ -10939,6 +10970,7 @@
    "archetypes": [
     "world-legacy"
    ],
+   "betaName": "World Legacy Echo",
    "frame": "trap",
    "hasEffect": true,
    "id": "85763457",
@@ -11002,6 +11034,7 @@
    "archetypes": [
     "crystal"
    ],
+   "betaName": "Crystal Grace",
    "frame": "trap",
    "hasEffect": true,
    "id": "85766789",
@@ -12043,6 +12076,7 @@
    ],
    "atk": 800,
    "attribute": "light",
+   "betaName": "Neospace Connector",
    "def": 1800,
    "frame": "effect",
    "hasEffect": true,
@@ -12517,6 +12551,7 @@
    "aliases": [
     "Draw Game"
    ],
+   "betaName": "Draw Game",
    "frame": "trap",
    "hasEffect": true,
    "id": "85862791",
@@ -12830,6 +12865,7 @@
    ],
    "atk": 2800,
    "attribute": "light",
+   "betaName": "Timaeus the United Magidragon",
    "def": 1800,
    "frame": "fusion",
    "hasEffect": true,
@@ -12919,6 +12955,7 @@
    ],
    "atk": 1800,
    "attribute": "water",
+   "betaName": "Cocytus the Eidolon Beast",
    "def": 2900,
    "frame": "fusion",
    "hasEffect": true,
@@ -13112,6 +13149,7 @@
    ],
    "atk": 100,
    "attribute": "earth",
+   "betaName": "Adamatia Researcher",
    "def": 2100,
    "frame": "effect",
    "hasEffect": true,
@@ -13439,6 +13477,7 @@
    ],
    "atk": 800,
    "attribute": "wind",
+   "betaName": "Yosenju Izunamuchi",
    "def": 1200,
    "frame": "effect",
    "hasEffect": true,
@@ -13509,6 +13548,7 @@
    ],
    "atk": 2200,
    "attribute": "light",
+   "betaName": "Elvennotes Fortona",
    "def": 1800,
    "frame": "effect",
    "hasEffect": true,

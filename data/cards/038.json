@@ -58,6 +58,7 @@
    "archetypes": [
     "change"
    ],
+   "betaName": "DoomZ Changer",
    "frame": "spell",
    "hasEffect": true,
    "id": "38007649",
@@ -1546,6 +1547,10 @@
      "variant": "c"
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "yugi-s-legendary-decks:38033121:YGLD-ENA04:common",
      "number": "YGLD-ENA04",
      "rarity": "common",
@@ -1575,6 +1580,10 @@
      "variant": "a"
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "yugi-s-legendary-decks:38033121:YGLD-ENB03:ultra_rare",
      "number": "YGLD-ENB03",
      "rarity": "ultra_rare",
@@ -1604,6 +1613,10 @@
      "variant": "b"
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "yugi-s-legendary-decks:38033121:YGLD-ENC10:common",
      "number": "YGLD-ENC10",
      "rarity": "common",
@@ -1831,6 +1844,7 @@
    "archetypes": [
     "raidraptor"
    ],
+   "betaName": "Rise-Rank-Up-Magic Raidraptor's Force",
    "frame": "spell",
    "hasEffect": true,
    "id": "38044854",
@@ -2061,6 +2075,7 @@
    "archetypes": [
     "generaider"
    ],
+   "betaName": "Generaid Stage",
    "frame": "spell",
    "hasEffect": true,
    "id": "38053381",
@@ -2522,6 +2537,7 @@
    ],
    "atk": 2000,
    "attribute": "water",
+   "betaName": "Mikumari the Sealing Deity Ashtra",
    "def": 2500,
    "frame": "effect",
    "hasEffect": true,
@@ -3132,6 +3148,7 @@
    "aliases": [
     "Double Trigger"
    ],
+   "betaName": "Double Trigger",
    "frame": "spell",
    "hasEffect": true,
    "id": "38129297",
@@ -3489,6 +3506,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Arcjet Lightcrafter",
    "def": 2100,
    "frame": "effect",
    "hasEffect": true,
@@ -4393,6 +4411,7 @@
    ],
    "atk": 3100,
    "attribute": "dark",
+   "betaName": "Chimera the Illusion Magical Beast",
    "def": 2800,
    "frame": "fusion",
    "hasEffect": true,
@@ -5246,6 +5265,7 @@
   {
    "atk": 1600,
    "attribute": "earth",
+   "betaName": "Crawling Dragon 2",
    "def": 1200,
    "frame": "normal",
    "hasEffect": false,
@@ -5683,6 +5703,7 @@
    ],
    "atk": 3000,
    "attribute": "fire",
+   "betaName": "Akasuna the Golden Deity Asutra",
    "def": 300,
    "frame": "effect",
    "hasEffect": true,
@@ -5970,6 +5991,7 @@
    ],
    "atk": 2200,
    "attribute": "dark",
+   "betaName": "Troymare Unicorn",
    "frame": "link",
    "hasEffect": true,
    "id": "38342335",
@@ -6563,6 +6585,7 @@
    ],
    "atk": 600,
    "attribute": "water",
+   "betaName": "Gishki Grim",
    "def": 700,
    "frame": "effect",
    "hasEffect": true,
@@ -6968,6 +6991,7 @@
    "archetypes": [
     "argostars"
    ],
+   "betaName": "Argostars - Eteo the Dragon Slayer",
    "frame": "trap",
    "hasEffect": true,
    "id": "38379052",
@@ -7033,6 +7057,7 @@
    ],
    "atk": 100,
    "attribute": "earth",
+   "betaName": "Extracaretops",
    "def": 100,
    "frame": "effect",
    "hasEffect": true,
@@ -7101,6 +7126,7 @@
    "archetypes": [
     "atlantis-city-of-the-sea-dragon"
    ],
+   "betaName": "Atlantis, the Dragon City",
    "frame": "spell",
    "hasEffect": true,
    "id": "38391684",
@@ -7155,6 +7181,7 @@
    "archetypes": [
     "armed-dragon"
    ],
+   "betaName": "Ojamatching",
    "frame": "spell",
    "hasEffect": true,
    "id": "38395123",
@@ -7232,6 +7259,7 @@
    ],
    "atk": 1600,
    "attribute": "light",
+   "betaName": "Kaminari Summer Vacation",
    "frame": "link",
    "hasEffect": true,
    "id": "38406364",
@@ -7545,6 +7573,7 @@
    ],
    "atk": 1900,
    "attribute": "dark",
+   "betaName": "Chosai the Ghost Blocker",
    "def": 800,
    "frame": "effect",
    "hasEffect": true,
@@ -7851,6 +7880,7 @@
    "archetypes": [
     "tearlaments"
    ],
+   "betaName": "Tearalaments Metanoise",
    "frame": "trap",
    "hasEffect": true,
    "id": "38436986",
@@ -8948,6 +8978,7 @@
    ],
    "atk": 3000,
    "attribute": "light",
+   "betaName": "Mekk-Knight World Scars",
    "frame": "link",
    "hasEffect": true,
    "id": "38502358",
@@ -9041,6 +9072,7 @@
    ],
    "atk": 300,
    "attribute": "light",
+   "betaName": "Mashimarshmallon",
    "def": 500,
    "frame": "effect",
    "hasEffect": true,
@@ -9129,6 +9161,7 @@
    "archetypes": [
     "sinful-spoils"
    ],
+   "betaName": "Sinful Spoils of Betrayal - Silvia",
    "frame": "trap",
    "hasEffect": true,
    "id": "38511382",
@@ -10498,6 +10531,7 @@
    ],
    "atk": 1800,
    "attribute": "fire",
+   "betaName": "Phantasmal Miscellasaurus",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -11118,6 +11152,7 @@
    "archetypes": [
     "cubic"
    ],
+   "betaName": "Cubic Omen",
    "frame": "trap",
    "hasEffect": true,
    "id": "38606913",
@@ -11177,6 +11212,7 @@
    "aliases": [
     "Do it Early, Do it Together"
    ],
+   "betaName": "Do it Early, Do it Together",
    "frame": "spell",
    "hasEffect": true,
    "id": "38625110",
@@ -11245,6 +11281,7 @@
    ],
    "atk": 1000,
    "attribute": "dark",
+   "betaName": "Dinorphia Diplos",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -11393,6 +11430,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Azamina Elzette of the White Forest",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -12006,6 +12044,7 @@
    ],
    "atk": 2500,
    "attribute": "dark",
+   "betaName": "Volnyiges the Black Lava Dragoon",
    "def": 2100,
    "frame": "xyz",
    "hasEffect": true,
@@ -12813,6 +12852,7 @@
    ],
    "atk": 2300,
    "attribute": "earth",
+   "betaName": "Madolche Mewgnard Meowcaron",
    "frame": "link",
    "hasEffect": true,
    "id": "38745241",
@@ -12906,6 +12946,7 @@
    "archetypes": [
     "adventurer-token"
    ],
+   "betaName": "Dracoback the Dragon Steed",
    "frame": "spell",
    "hasEffect": true,
    "id": "38745520",
@@ -13067,6 +13108,7 @@
    "archetypes": [
     "paleozoic"
    ],
+   "betaName": "Burgesstoma Dinomischus",
    "frame": "trap",
    "hasEffect": true,
    "id": "38761908",
@@ -13207,6 +13249,7 @@
    ],
    "atk": 2750,
    "attribute": "earth",
+   "betaName": "The Caveman that Awoke after a Millennium",
    "def": 2500,
    "frame": "effect",
    "hasEffect": true,
@@ -13314,6 +13357,7 @@
    "archetypes": [
     "phantasm"
    ],
+   "betaName": "Unleashing the Sacred Beasts",
    "frame": "spell",
    "hasEffect": true,
    "id": "38776201",
@@ -13426,6 +13470,7 @@
    ],
    "atk": 500,
    "attribute": "fire",
+   "betaName": "Tune Knight",
    "def": 500,
    "frame": "effect",
    "hasEffect": true,
@@ -13588,6 +13633,7 @@
    "archetypes": [
     "fire-king"
    ],
+   "betaName": "Fire King Combined Strike",
    "frame": "trap",
    "hasEffect": true,
    "id": "38798785",
@@ -13653,6 +13699,7 @@
    ],
    "atk": 3000,
    "attribute": "light",
+   "betaName": "Albion the Incandescent Dragon",
    "def": 2500,
    "frame": "fusion",
    "hasEffect": true,
@@ -14743,6 +14790,7 @@
    ],
    "atk": 2200,
    "attribute": "dark",
+   "betaName": "Infernity Hell Archfiend",
    "def": 1600,
    "frame": "synchro",
    "hasEffect": true,
@@ -14830,6 +14878,7 @@
    ],
    "atk": 1600,
    "attribute": "fire",
+   "betaName": "Fire King Avatar Hanuman",
    "def": 200,
    "frame": "effect",
    "hasEffect": true,
@@ -14983,6 +15032,7 @@
    ],
    "atk": 2800,
    "attribute": "light",
+   "betaName": "Lafarl, Hero of the Skyfang Brigade",
    "def": 2200,
    "frame": "effect",
    "hasEffect": true,
@@ -15127,6 +15177,7 @@
    "archetypes": [
     "endymion"
    ],
+   "betaName": "Spell Power Control",
    "frame": "spell",
    "hasEffect": true,
    "id": "38943357",

@@ -1720,6 +1720,7 @@
   {
    "atk": 2400,
    "attribute": "dark",
+   "betaName": "Magi Magi Magician Gal",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -1784,6 +1785,7 @@
     "The Creator God of Light, Horakhty"
    ],
    "attribute": "divine",
+   "betaName": "The Creator God of Light, Horakhty",
    "frame": "effect",
    "hasEffect": true,
    "id": "10000040",
@@ -2503,6 +2505,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Sennet Prophet - Amenhotep",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -2722,6 +2725,7 @@
    ],
    "atk": 3500,
    "attribute": "dark",
+   "betaName": "Tri-Brigade Arms \"Bucephalus II\"",
    "frame": "link",
    "hasEffect": true,
    "id": "10019086",
@@ -2838,6 +2842,7 @@
    ],
    "atk": 2000,
    "attribute": "fire",
+   "betaName": "Parametalfoes Mercaster",
    "def": 2500,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -3405,6 +3410,7 @@
    "aliases": [
     "Infinite Transience"
    ],
+   "betaName": "Infinite Transience",
    "frame": "trap",
    "hasEffect": true,
    "id": "10045474",
@@ -4013,6 +4019,7 @@
    "archetypes": [
     "branded"
    ],
+   "betaName": "Branded Forfeiture",
    "frame": "spell",
    "hasEffect": true,
    "id": "10065487",
@@ -4185,6 +4192,7 @@
    ],
    "atk": 1700,
    "attribute": "dark",
+   "betaName": "Lyla, Twilightsworn Magus",
    "def": 200,
    "frame": "effect",
    "hasEffect": true,
@@ -4959,6 +4967,7 @@
    "archetypes": [
     "constellar"
    ],
+   "betaName": "Tellarknight Constellar",
    "frame": "spell",
    "hasEffect": true,
    "id": "10125011",
@@ -5200,6 +5209,7 @@
    ],
    "atk": 3000,
    "attribute": "dark",
+   "betaName": "Lucifer, Darklord of the Evening Twilight",
    "def": 3000,
    "frame": "fusion",
    "hasEffect": true,
@@ -5356,6 +5366,7 @@
    ],
    "atk": 0,
    "attribute": "dark",
+   "betaName": "Destroymare Iblee",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -6865,6 +6876,7 @@
    ],
    "atk": 300,
    "attribute": "dark",
+   "betaName": "Power Patron Shadow Spirit Junordo",
    "def": 200,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -7061,6 +7073,7 @@
    ],
    "atk": 0,
    "attribute": "water",
+   "betaName": "Adamatia Crysta - Dragite",
    "def": 2200,
    "frame": "effect",
    "hasEffect": true,
@@ -7150,6 +7163,7 @@
    ],
    "atk": 2600,
    "attribute": "fire",
+   "betaName": "Number C79: Battlin' Boxer Commander Caesar",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -7217,6 +7231,7 @@
    "aliases": [
     "Protective Stone Gardenscaping"
    ],
+   "betaName": "Protective Stone Gardenscaping",
    "frame": "trap",
    "hasEffect": true,
    "id": "10307853",
@@ -7271,6 +7286,7 @@
    "archetypes": [
     "danger"
    ],
+   "betaName": "You are in Danger!",
    "frame": "trap",
    "hasEffect": true,
    "id": "10312660",
@@ -7520,6 +7536,7 @@
    ],
    "atk": 200,
    "attribute": "earth",
+   "betaName": "Superheavy Samurai Spy",
    "def": 700,
    "frame": "effect",
    "hasEffect": true,
@@ -8208,6 +8225,7 @@
    ],
    "atk": 0,
    "attribute": "wind",
+   "betaName": "Number 42",
    "def": 3000,
    "frame": "xyz",
    "hasEffect": true,
@@ -9131,6 +9149,7 @@
    ],
    "atk": 100,
    "attribute": "light",
+   "betaName": "May Malaipard",
    "def": 100,
    "frame": "effect",
    "hasEffect": true,
@@ -9336,6 +9355,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "world-championship-2010-card-pack:10485110:WCPP-EN012:unknown",
      "number": "WCPP-EN012",
      "rarity": "unknown",
@@ -10087,6 +10109,7 @@
    "archetypes": [
     "trap-hole"
    ],
+   "betaName": "Oh my Trap Hole!",
    "frame": "trap",
    "hasEffect": true,
    "id": "10529441",
@@ -10503,6 +10526,7 @@
    ],
    "atk": 1500,
    "attribute": "earth",
+   "betaName": "Ancient Gear Ballistic Shooter",
    "frame": "link",
    "hasEffect": true,
    "id": "10547580",
@@ -10690,6 +10714,7 @@
    ],
    "atk": 1000,
    "attribute": "earth",
+   "betaName": "Gouki Shadow Ogre",
    "frame": "link",
    "hasEffect": true,
    "id": "10552026",
@@ -10848,6 +10873,7 @@
    "archetypes": [
     "springans"
    ],
+   "betaName": "Sprigguns Blast!",
    "frame": "trap",
    "hasEffect": true,
    "id": "10584050",
@@ -11023,6 +11049,7 @@
    ],
    "atk": 2400,
    "attribute": "dark",
+   "betaName": "Blackwing - Boreas the Evil Wind",
    "def": 1600,
    "frame": "synchro",
    "hasEffect": true,
@@ -11132,6 +11159,7 @@
    ],
    "atk": 2800,
    "attribute": "earth",
+   "betaName": "Therions' \"King\" Regulus",
    "def": 1600,
    "frame": "effect",
    "hasEffect": true,
@@ -11277,6 +11305,7 @@
    "archetypes": [
     "yosenju"
    ],
+   "betaName": "Yosenju Weaselblade Wind",
    "frame": "trap",
    "hasEffect": true,
    "id": "10612222",
@@ -11672,6 +11701,7 @@
    ],
    "atk": 3000,
    "attribute": "dark",
+   "betaName": "Number 1: Infection Buzz King",
    "def": 2500,
    "frame": "xyz",
    "hasEffect": true,
@@ -12044,6 +12074,7 @@
    ],
    "atk": 5000,
    "attribute": "dark",
+   "betaName": "Link God Dragon",
    "frame": "link",
    "hasEffect": true,
    "id": "10669138",
@@ -12118,6 +12149,7 @@
    ],
    "atk": 1000,
    "attribute": "light",
+   "betaName": "Virakam the Artificial Spirit",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -12336,6 +12368,7 @@
    ],
    "atk": 1100,
    "attribute": "earth",
+   "betaName": "Crawler Ranvier",
    "def": 900,
    "frame": "effect",
    "hasEffect": true,
@@ -12646,6 +12679,7 @@
    "aliases": [
     "Blazing Soul"
    ],
+   "betaName": "Blazing Soul",
    "frame": "spell",
    "hasEffect": true,
    "id": "10723472",
@@ -12727,6 +12761,7 @@
    ],
    "atk": 1200,
    "attribute": "dark",
+   "betaName": "Performapal Odd-Eyes Minotaur",
    "def": 1600,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -12796,6 +12831,7 @@
    ],
    "atk": 1600,
    "attribute": "wind",
+   "betaName": "Hi-Speedroid Glider 2",
    "def": 2200,
    "frame": "synchro",
    "hasEffect": true,
@@ -13388,6 +13424,7 @@
    ],
    "atk": 2050,
    "attribute": "light",
+   "betaName": "Skull Guardian, the Voiceless Voice Protector",
    "def": 2500,
    "frame": "ritual",
    "hasEffect": true,
@@ -13574,6 +13611,7 @@
    ],
    "atk": 500,
    "attribute": "light",
+   "betaName": "Cú Chulainn the Awakened",
    "def": 1000,
    "frame": "ritual",
    "hasEffect": true,
@@ -13704,6 +13742,7 @@
    ],
    "atk": 2500,
    "attribute": "light",
+   "betaName": "A★Speculation",
    "def": 2500,
    "frame": "fusion",
    "hasEffect": true,
@@ -14213,6 +14252,7 @@
    ],
    "atk": 2550,
    "attribute": "light",
+   "betaName": "Saffira, Dragon Deity of the Voiceless Voice",
    "def": 2450,
    "frame": "ritual",
    "hasEffect": true,
@@ -14321,6 +14361,7 @@
    "archetypes": [
     "witchcrafter"
    ],
+   "betaName": "Witchcraft Collaboration",
    "frame": "spell",
    "hasEffect": true,
    "id": "10805153",
@@ -14629,6 +14670,7 @@
    "aliases": [
     "Shrub Serpent"
    ],
+   "betaName": "Shrub Serpent",
    "frame": "trap",
    "hasEffect": true,
    "id": "10813327",
@@ -15108,6 +15150,7 @@
    ],
    "atk": 2200,
    "attribute": "dark",
+   "betaName": "Yajirovader",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -15494,6 +15537,7 @@
    "archetypes": [
     "time-thief"
    ],
+   "betaName": "Time Thief Start-Up",
    "frame": "spell",
    "hasEffect": true,
    "id": "10877309",
@@ -15578,6 +15622,7 @@
    ],
    "atk": 2800,
    "attribute": "dark",
+   "betaName": "Sennetmes Nekhbet",
    "def": 1500,
    "frame": "ritual",
    "hasEffect": true,
@@ -15778,6 +15823,7 @@
    ],
    "atk": 500,
    "attribute": "earth",
+   "betaName": "Amazoness Pet Baby Tiger",
    "def": 500,
    "frame": "effect",
    "hasEffect": true,
@@ -15817,6 +15863,9 @@
    "passcode": 10928224,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:10928224:LDS1-EN023:ultra_rare",
      "number": "LDS1-EN023",
      "rarity": "ultra_rare",
@@ -15916,6 +15965,7 @@
    "archetypes": [
     "rainbow-bridge"
    ],
+   "betaName": "Bridge of the Heart",
    "frame": "spell",
    "hasEffect": true,
    "id": "10938846",
@@ -15980,6 +16030,7 @@
    ],
    "atk": 2500,
    "attribute": "earth",
+   "betaName": "Anotherverse Stradios",
    "def": 2000,
    "frame": "normal",
    "hasEffect": true,

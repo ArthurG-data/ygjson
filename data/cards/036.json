@@ -101,6 +101,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Null, Dreg of the Abhyss",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -169,6 +170,7 @@
    ],
    "atk": 1500,
    "attribute": "fire",
+   "betaName": "Jack A' Booran",
    "def": 2200,
    "frame": "effect",
    "hasEffect": true,
@@ -503,6 +505,7 @@
    ],
    "atk": 1800,
    "attribute": "light",
+   "betaName": "Cybers Wizard",
    "def": 800,
    "frame": "effect",
    "hasEffect": true,
@@ -1504,6 +1507,7 @@
    ],
    "atk": 2400,
    "attribute": "water",
+   "betaName": "Number 73",
    "def": 1400,
    "frame": "xyz",
    "hasEffect": true,
@@ -1752,6 +1756,7 @@
    ],
    "atk": 1500,
    "attribute": "fire",
+   "betaName": "Magistus Flame Zoroa",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -2520,6 +2525,7 @@
    "aliases": [
     "Life Exstream"
    ],
+   "betaName": "Life Exstream",
    "frame": "spell",
    "hasEffect": true,
    "id": "36148308",
@@ -2721,6 +2727,7 @@
    ],
    "atk": 1000,
    "attribute": "earth",
+   "betaName": "Rockband Groove - Xenoguitarm",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -2806,6 +2813,7 @@
    "archetypes": [
     "world-legacy"
    ],
+   "betaName": "World Legacy End Times",
    "frame": "trap",
    "hasEffect": true,
    "id": "36197902",
@@ -2871,6 +2879,7 @@
    ],
    "atk": 0,
    "attribute": "wind",
+   "betaName": "Philo, Messenger Fur Hire",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -2939,6 +2948,7 @@
    ],
    "atk": 200,
    "attribute": "earth",
+   "betaName": "Bittron",
    "def": 2000,
    "frame": "normal",
    "hasEffect": false,
@@ -3121,6 +3131,7 @@
    "archetypes": [
     "rank-up-magic"
    ],
+   "betaName": "Rank-Up-Magic ZEXAL Force",
    "frame": "spell",
    "hasEffect": true,
    "id": "36224040",
@@ -3830,6 +3841,7 @@
    ],
    "atk": 800,
    "attribute": "dark",
+   "betaName": "Red-Eyes B. Chick",
    "def": 500,
    "frame": "effect",
    "hasEffect": true,
@@ -4015,6 +4027,7 @@
    ],
    "atk": 1000,
    "attribute": "earth",
+   "betaName": "Ars Magna of Infinity and Finity",
    "def": 2400,
    "frame": "effect",
    "hasEffect": true,
@@ -4780,6 +4793,7 @@
    ],
    "atk": 500,
    "attribute": "light",
+   "betaName": "Live☆Twin Kisikil",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -5027,6 +5041,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:36328300:LDS1-EN117:ultra_rare",
      "number": "LDS1-EN117",
      "rarity": "ultra_rare",
@@ -5291,6 +5308,7 @@
    "aliases": [
     "Refined Ritual Art"
    ],
+   "betaName": "Refined Ritual Art",
    "frame": "spell",
    "hasEffect": true,
    "id": "36350300",
@@ -6348,6 +6366,7 @@
    "archetypes": [
     "puppet"
    ],
+   "betaName": "Servist Puppet",
    "frame": "trap",
    "hasEffect": true,
    "id": "36400569",
@@ -6466,6 +6485,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "yu-gi-oh-5d-s-world-championship-2011-over-the-nexus-promotional-cards:36405256:WC11-EN002:super_rare",
      "number": "WC11-EN002",
      "rarity": "super_rare",
@@ -8511,6 +8533,7 @@
    ],
    "atk": 2600,
    "attribute": "wind",
+   "betaName": "Dragunity Knight - Gormfabal",
    "def": 2300,
    "frame": "synchro",
    "hasEffect": true,
@@ -8895,6 +8918,7 @@
    ],
    "atk": 400,
    "attribute": "dark",
+   "betaName": "Despian of Tragedy",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -9596,6 +9620,7 @@
    ],
    "atk": 1100,
    "attribute": "dark",
+   "betaName": "Evil★Twin Lilla",
    "frame": "link",
    "hasEffect": true,
    "id": "36609518",
@@ -10075,6 +10100,7 @@
    ],
    "atk": 300,
    "attribute": "earth",
+   "betaName": "Dandy White Lion",
    "def": 300,
    "frame": "effect",
    "hasEffect": true,
@@ -10264,6 +10290,7 @@
    "archetypes": [
     "branded"
    ],
+   "betaName": "Curtain-Raiser of the Branded",
    "frame": "spell",
    "hasEffect": true,
    "id": "36637374",
@@ -10663,6 +10690,7 @@
    "archetypes": [
     "regenesis"
    ],
+   "betaName": "Regenesis Pentateuch",
    "frame": "spell",
    "hasEffect": true,
    "id": "36672909",
@@ -11046,6 +11074,7 @@
    ],
    "atk": 1500,
    "attribute": "earth",
+   "betaName": "Bitlooper",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -11362,6 +11391,7 @@
    "archetypes": [
     "theorealize"
    ],
+   "betaName": "Pasto-Ral Theorealize",
    "frame": "spell",
    "hasEffect": true,
    "id": "36709484",
@@ -11503,6 +11533,7 @@
    "archetypes": [
     "roid"
    ],
+   "betaName": "Speedrift",
    "frame": "spell",
    "hasEffect": true,
    "id": "36730805",
@@ -12051,6 +12082,7 @@
    ],
    "atk": 900,
    "attribute": "earth",
+   "betaName": "Vernalizer Fairy of Forests and Awakening",
    "def": 1800,
    "frame": "effect",
    "hasEffect": true,
@@ -12307,6 +12339,7 @@
    ],
    "atk": 1400,
    "attribute": "dark",
+   "betaName": "Armiryle the Starguide Dragon",
    "frame": "link",
    "hasEffect": true,
    "id": "36768783",
@@ -12612,6 +12645,7 @@
    ],
    "atk": 3000,
    "attribute": "light",
+   "betaName": "Rainbow Dragon, the Zenith Crystal Beast",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -12871,6 +12905,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Elemental HERO Grandman",
    "def": 0,
    "frame": "fusion",
    "hasEffect": true,
@@ -12942,6 +12977,7 @@
    "aliases": [
     "Sweet Room-Maid"
    ],
+   "betaName": "Sweet Room-Maid",
    "frame": "spell",
    "hasEffect": true,
    "id": "36848764",
@@ -13389,6 +13425,7 @@
    "aliases": [
     "Mansion of the Underworld Dolls"
    ],
+   "betaName": "Mansion of the Underworld Dolls",
    "frame": "spell",
    "hasEffect": true,
    "id": "36890111",
@@ -13471,6 +13508,7 @@
    "archetypes": [
     "timelord"
    ],
+   "betaName": "Endless Emptiness",
    "frame": "trap",
    "hasEffect": true,
    "id": "36894320",
@@ -13780,6 +13818,7 @@
    "aliases": [
     "The Worlds as One"
    ],
+   "betaName": "The Worlds as One",
    "frame": "spell",
    "hasEffect": true,
    "id": "36920182",
@@ -14356,6 +14395,7 @@
    "aliases": [
     "Manhunt"
    ],
+   "betaName": "Manhunt",
    "frame": "trap",
    "hasEffect": true,
    "id": "36975314",
@@ -14473,6 +14513,7 @@
    "archetypes": [
     "gishki"
    ],
+   "betaName": "Gishki Icemirror",
    "frame": "spell",
    "hasEffect": true,
    "id": "36982581",

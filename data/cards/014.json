@@ -440,6 +440,7 @@
    "archetypes": [
     "mathmech"
    ],
+   "betaName": "Mathmech Formula",
    "frame": "spell",
    "hasEffect": true,
    "id": "14025912",
@@ -659,6 +660,7 @@
    "aliases": [
     "Soothing Burial"
    ],
+   "betaName": "Soothing Burial",
    "frame": "trap",
    "hasEffect": true,
    "id": "14055212",
@@ -2081,6 +2083,7 @@
    "archetypes": [
     "vernusylph"
    ],
+   "betaName": "Flower Crown of the Vernalizer Fairy",
    "frame": "spell",
    "hasEffect": true,
    "id": "14108995",
@@ -2150,6 +2153,7 @@
    ],
    "atk": 2500,
    "attribute": "light",
+   "betaName": "Elemental HERO Honesty Neos",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -2522,6 +2526,7 @@
    ],
    "atk": 2300,
    "attribute": "dark",
+   "betaName": "Big Core",
    "def": 1100,
    "frame": "effect",
    "hasEffect": true,
@@ -2900,6 +2905,7 @@
    "archetypes": [
     "recipe"
    ],
+   "betaName": "Recette de Viande - Meat Recipe",
    "frame": "spell",
    "hasEffect": true,
    "id": "14166715",
@@ -2965,6 +2971,7 @@
    ],
    "atk": 800,
    "attribute": "wind",
+   "betaName": "Aromage Laurier",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -3492,6 +3499,7 @@
    "archetypes": [
     "branded"
    ],
+   "betaName": "Branded Central Dogmatika",
    "frame": "spell",
    "hasEffect": true,
    "id": "14220547",
@@ -4129,6 +4137,7 @@
     "Concours de Cuisine",
     "Concours de Cuisine (Confectionery Contest)"
    ],
+   "betaName": "Concours de Cuisine (Confectionery Contest)",
    "frame": "spell",
    "hasEffect": true,
    "id": "14283055",
@@ -4492,6 +4501,7 @@
    ],
    "atk": 2500,
    "attribute": "light",
+   "betaName": "Diabell, Fiendess of the White Woods",
    "def": 2000,
    "frame": "synchro",
    "hasEffect": true,
@@ -5284,6 +5294,9 @@
    "passcode": 14344682,
    "prints": [
     {
+     "editions": [
+      "limited"
+     ],
      "id": "yu-gi-oh-5d-s-world-championship-2010-reverse-of-arcadia-promotional-cards:14344682:WC10-EN001:super_rare",
      "number": "WC10-EN001",
      "rarity": "super_rare",
@@ -5482,6 +5495,7 @@
    "archetypes": [
     "spirit-message"
    ],
+   "betaName": "Dark Occultism",
    "frame": "spell",
    "hasEffect": true,
    "id": "14386013",
@@ -5803,6 +5817,7 @@
    "archetypes": [
     "mathmech"
    ],
+   "betaName": "Processlayer Induction",
    "frame": "trap",
    "hasEffect": true,
    "id": "14393464",
@@ -5865,6 +5880,7 @@
    ],
    "atk": 800,
    "attribute": "fire",
+   "betaName": "Vaylantz Buster - Baron",
    "def": 800,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -6064,6 +6080,7 @@
     "kewl-tune",
     "killer-tune"
    ],
+   "betaName": "Juke Joint \"Killer Tune\"",
    "frame": "spell",
    "hasEffect": true,
    "id": "14442329",
@@ -6628,6 +6645,7 @@
    ],
    "atk": 1500,
    "attribute": "fire",
+   "betaName": "Crystal Protector",
    "def": 1800,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -6806,6 +6824,7 @@
    "archetypes": [
     "ojama"
    ],
+   "betaName": "Ojama Red Token",
    "frame": "token",
    "hasEffect": true,
    "id": "14470846",
@@ -8103,6 +8122,7 @@
    ],
    "atk": 3000,
    "attribute": "earth",
+   "betaName": "Mementomictlan Tecuhtlica - Combined Conqueror",
    "def": 2000,
    "frame": "fusion",
    "hasEffect": true,
@@ -9283,6 +9303,7 @@
    ],
    "atk": 0,
    "attribute": "fire",
+   "betaName": "Ash Blossom",
    "def": 1800,
    "frame": "effect",
    "hasEffect": true,
@@ -10119,6 +10140,7 @@
    ],
    "atk": 2400,
    "attribute": "wind",
+   "betaName": "Wind Witch - Winter Bell",
    "def": 2000,
    "frame": "synchro",
    "hasEffect": true,
@@ -10313,6 +10335,7 @@
    "archetypes": [
     "world-legacy"
    ],
+   "betaName": "World Legacy's Beginning",
    "frame": "spell",
    "hasEffect": true,
    "id": "14604710",
@@ -10736,6 +10759,7 @@
    "archetypes": [
     "dragonmaid"
    ],
+   "betaName": "Dragonmaid Reception",
    "frame": "spell",
    "hasEffect": true,
    "id": "14625090",
@@ -11181,6 +11205,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Interplanetary Invader A",
    "def": 500,
    "frame": "effect",
    "hasEffect": true,
@@ -11911,6 +11936,7 @@
    ],
    "atk": 1800,
    "attribute": "water",
+   "betaName": "Penguin Champion",
    "def": 600,
    "frame": "effect",
    "hasEffect": true,
@@ -12871,6 +12897,7 @@
    ],
    "atk": 500,
    "attribute": "fire",
+   "betaName": "Salamangreat Veilynx",
    "frame": "link",
    "hasEffect": true,
    "id": "14812471",
@@ -13129,6 +13156,7 @@
    ],
    "atk": 0,
    "attribute": "wind",
+   "betaName": "Tribrigade Nabel",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -13237,6 +13265,7 @@
    "archetypes": [
     "swordsoul"
    ],
+   "betaName": "Swordsoul Sudden Shift",
    "frame": "trap",
    "hasEffect": true,
    "id": "14821890",
@@ -13483,6 +13512,7 @@
    "aliases": [
     "Bangpoline"
    ],
+   "betaName": "Bangpoline",
    "frame": "trap",
    "hasEffect": true,
    "id": "14839621",
@@ -14306,6 +14336,7 @@
    "archetypes": [
     "virtual-world"
    ],
+   "betaName": "Datascape Capital - Jiulong",
    "frame": "spell",
    "hasEffect": true,
    "id": "14886190",
@@ -15220,6 +15251,7 @@
    ],
    "atk": 1000,
    "attribute": "earth",
+   "betaName": "Otoshidamashii",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -15307,6 +15339,7 @@
    ],
    "atk": 2000,
    "attribute": "water",
+   "betaName": "Ultimate Knight Alpha Ursatron",
    "def": 700,
    "frame": "effect",
    "hasEffect": true,
@@ -15381,6 +15414,7 @@
    ],
    "atk": 300,
    "attribute": "dark",
+   "betaName": "Multiplying Kuriboh!",
    "def": 200,
    "frame": "effect",
    "hasEffect": true,
@@ -15948,6 +15982,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "world-championship-2010-card-pack:14989021:WCPP-EN016:unknown",
      "number": "WCPP-EN016",
      "rarity": "unknown",

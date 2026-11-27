@@ -92,6 +92,7 @@
    ],
    "atk": 1200,
    "attribute": "dark",
+   "betaName": "Poêlétis de Nouvelles",
    "def": 1850,
    "frame": "ritual",
    "hasEffect": true,
@@ -165,6 +166,7 @@
    ],
    "atk": 0,
    "attribute": "dark",
+   "betaName": "Hakaishin no Magatama",
    "def": 3000,
    "frame": "effect",
    "hasEffect": true,
@@ -253,6 +255,7 @@
    "archetypes": [
     "snake-eye"
    ],
+   "betaName": "The Original Sinful Spoils - Snake-Eye",
    "frame": "spell",
    "hasEffect": true,
    "id": "89023486",
@@ -994,6 +997,7 @@
    "aliases": [
     "Miss Okiku's Dishrithmetic"
    ],
+   "betaName": "Miss Okiku's Dishrithmetic",
    "frame": "trap",
    "hasEffect": true,
    "id": "89086647",
@@ -2013,6 +2017,7 @@
    ],
    "atk": 600,
    "attribute": "dark",
+   "betaName": "Predaplant Sundew Kingii",
    "def": 200,
    "frame": "effect",
    "hasEffect": true,
@@ -4370,6 +4375,7 @@
    "archetypes": [
     "krawler"
    ],
+   "betaName": "World Legacy Puppet",
    "frame": "trap",
    "hasEffect": true,
    "id": "89320376",
@@ -4677,6 +4683,7 @@
    "archetypes": [
     "the-weather"
    ],
+   "betaName": "Sunny Weathery Pattern",
    "frame": "spell",
    "hasEffect": true,
    "id": "89355716",
@@ -5086,6 +5093,7 @@
    ],
    "atk": 1500,
    "attribute": "fire",
+   "betaName": "Killer Tune Reco",
    "def": 800,
    "frame": "effect",
    "hasEffect": true,
@@ -5865,6 +5873,7 @@
    "archetypes": [
     "dragunity"
    ],
+   "betaName": "Dragunity of the Hurricane",
    "frame": "spell",
    "hasEffect": true,
    "id": "89450409",
@@ -6214,6 +6223,7 @@
     "numerounius"
    ],
    "attribute": "light",
+   "betaName": "Number C1000: Numeronius",
    "frame": "xyz",
    "hasEffect": true,
    "id": "89477759",
@@ -6375,6 +6385,7 @@
    ],
    "atk": 2000,
    "attribute": "dark",
+   "betaName": "Summon Reactor・SK",
    "def": 1400,
    "frame": "effect",
    "hasEffect": true,
@@ -6515,6 +6526,7 @@
    ],
    "atk": 3200,
    "attribute": "water",
+   "betaName": "Number 87",
    "def": 2800,
    "frame": "xyz",
    "hasEffect": true,
@@ -6766,6 +6778,7 @@
    ],
    "atk": 800,
    "attribute": "wind",
+   "betaName": "Altergeist Sylkitas",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -7065,6 +7078,7 @@
    ],
    "atk": 100,
    "attribute": "dark",
+   "betaName": "Spirit Cucomeback Horse",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -7609,6 +7623,7 @@
    "archetypes": [
     "trap-hole"
    ],
+   "betaName": "Wipeout Trap Hole",
    "frame": "trap",
    "hasEffect": true,
    "id": "89569453",
@@ -7832,6 +7847,7 @@
    ],
    "atk": 3500,
    "attribute": "light",
+   "betaName": "Blue-Eyes Spirit Ultimate Dragon",
    "def": 4000,
    "frame": "synchro",
    "hasEffect": true,
@@ -8087,6 +8103,7 @@
    ],
    "atk": 1500,
    "attribute": "water",
+   "betaName": "Deadreef the Ephemeral Fish",
    "def": 1600,
    "frame": "effect",
    "hasEffect": true,
@@ -8730,6 +8747,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-1:89631139:DTP1-EN001:dt_normal_parallel",
      "number": "DTP1-EN001",
      "rarity": "dt_normal_parallel",
@@ -8737,6 +8757,9 @@
      "set": "duel-terminal-preview-wave-1"
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-2:89631139:DTP1-EN001:dt_super_parallel",
      "number": "DTP1-EN001",
      "rarity": "dt_super_parallel",
@@ -8922,6 +8945,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "hidden-arsenal-chapter-1:89631139:HAC1-EN001:common",
      "number": "HAC1-EN001",
      "rarity": "common",
@@ -9219,6 +9245,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "legendary-decks-ii-2020-reprint:89631139:LDK2-ENK01:common",
      "number": "LDK2-ENK01",
      "rarity": "common",
@@ -9289,6 +9318,10 @@
      "variant": "version-4"
     },
     {
+     "editions": [
+      "first",
+      "unlimited"
+     ],
      "id": "legendary-decks-ii:89631139:LDK2-ENK01:common",
      "number": "LDK2-ENK01",
      "rarity": "common",
@@ -10352,6 +10385,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Number 63",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -11343,6 +11377,7 @@
    ],
    "atk": 1500,
    "attribute": "earth",
+   "betaName": "Processlayer Division",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -11695,6 +11730,7 @@
    ],
    "atk": 900,
    "attribute": "fire",
+   "betaName": "Evoltile Phoris",
    "def": 300,
    "frame": "effect",
    "hasEffect": true,
@@ -11838,6 +11874,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:89785779:LDS1-EN045:ultra_rare",
      "number": "LDS1-EN045",
      "rarity": "ultra_rare",
@@ -11921,6 +11960,7 @@
    "archetypes": [
     "galaxy-eyes"
    ],
+   "betaName": "Tachyon Galaxy Spiral",
    "frame": "trap",
    "hasEffect": true,
    "id": "89789152",
@@ -12218,6 +12258,7 @@
    ],
    "atk": 1400,
    "attribute": "fire",
+   "betaName": "Infernoble Knight - Turpin",
    "def": 1700,
    "frame": "effect",
    "hasEffect": true,
@@ -12373,6 +12414,7 @@
    "archetypes": [
     "metalmorph"
    ],
+   "betaName": "Enhanced Metalmorph",
    "frame": "trap",
    "hasEffect": true,
    "id": "89812483",
@@ -12558,6 +12600,7 @@
    "archetypes": [
     "ragnaraika"
    ],
+   "betaName": "Raika Dairin Kubikarimai",
    "frame": "trap",
    "hasEffect": true,
    "id": "89824842",
@@ -12749,6 +12792,7 @@
    ],
    "atk": 3000,
    "attribute": "light",
+   "betaName": "Sacramentum Dragoon",
    "def": 1500,
    "frame": "fusion",
    "hasEffect": true,
@@ -13793,6 +13837,7 @@
    ],
    "atk": 3300,
    "attribute": "water",
+   "betaName": "White Aura Biphamet",
    "def": 3000,
    "frame": "synchro",
    "hasEffect": true,
@@ -14070,6 +14115,7 @@
    ],
    "atk": 1200,
    "attribute": "light",
+   "betaName": "Two-man Salesmen",
    "def": 1200,
    "frame": "effect",
    "hasEffect": true,
@@ -14154,6 +14200,7 @@
    "archetypes": [
     "synchro"
    ],
+   "betaName": "Synchro Oneway",
    "frame": "trap",
    "hasEffect": true,
    "id": "89932017",
@@ -14360,6 +14407,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-1:89943723:DTP1-EN005:dt_normal_parallel",
      "number": "DTP1-EN005",
      "rarity": "dt_normal_parallel",
@@ -14367,6 +14417,9 @@
      "set": "duel-terminal-preview-wave-1"
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-2:89943723:DTP1-EN005:dt_rare_parallel",
      "number": "DTP1-EN005",
      "rarity": "dt_rare_parallel",
@@ -15122,6 +15175,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:89997728:LDS1-EN069:ultra_rare",
      "number": "LDS1-EN069",
      "rarity": "ultra_rare",

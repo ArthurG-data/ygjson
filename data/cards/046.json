@@ -287,6 +287,7 @@
    ],
    "atk": 2500,
    "attribute": "dark",
+   "betaName": "Kick-Ass Goblin Bikers",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -1108,6 +1109,7 @@
    ],
    "atk": 1600,
    "attribute": "dark",
+   "betaName": "Reincarnating Shamisen Calico",
    "def": 1200,
    "frame": "synchro",
    "hasEffect": true,
@@ -1198,6 +1200,7 @@
    "archetypes": [
     "zoodiac"
    ],
+   "betaName": "Elemental Triangle of the Zoodiac",
    "frame": "spell",
    "hasEffect": true,
    "id": "46060017",
@@ -1547,6 +1550,7 @@
    ],
    "atk": 1300,
    "attribute": "earth",
+   "betaName": "Crawler Dendrite",
    "def": 600,
    "frame": "effect",
    "hasEffect": true,
@@ -1749,6 +1753,7 @@
    ],
    "atk": 1800,
    "attribute": "light",
+   "betaName": "Cyberse Whitehat",
    "def": 2400,
    "frame": "effect",
    "hasEffect": true,
@@ -2437,6 +2442,7 @@
    ],
    "atk": 2500,
    "attribute": "earth",
+   "betaName": "Chakravartin Sphinx",
    "def": 3000,
    "frame": "effect",
    "hasEffect": true,
@@ -3882,6 +3888,7 @@
    ],
    "atk": 2000,
    "attribute": "dark",
+   "betaName": "Tiamaton the Steel Battalion Dragon",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -4177,6 +4184,7 @@
    ],
    "atk": 300,
    "attribute": "light",
+   "betaName": "Galaktikuriboh",
    "def": 200,
    "frame": "effect",
    "hasEffect": true,
@@ -4540,6 +4548,7 @@
    "archetypes": [
     "zenet"
    ],
+   "betaName": "Beresennet Em Heru",
    "frame": "spell",
    "hasEffect": true,
    "id": "46273941",
@@ -4575,6 +4584,7 @@
    ],
    "atk": 2350,
    "attribute": "water",
+   "betaName": "Stronghold Whale",
    "def": 2150,
    "frame": "effect",
    "hasEffect": true,
@@ -4630,6 +4640,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "legendary-duelists-season-1:46290741:LDS1-EN027:ultra_rare",
      "number": "LDS1-EN027",
      "rarity": "ultra_rare",
@@ -5971,6 +5984,7 @@
    ],
    "atk": 1900,
    "attribute": "dark",
+   "betaName": "Azamina Rhea Silvera",
    "def": 1500,
    "frame": "fusion",
    "hasEffect": true,
@@ -7212,6 +7226,7 @@
    ],
    "atk": 700,
    "attribute": "dark",
+   "betaName": "Poissoniere de Nouvelles",
    "def": 1700,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -7283,6 +7298,7 @@
    "aliases": [
     "Ton-Ton"
    ],
+   "betaName": "Ton-Ton",
    "frame": "spell",
    "hasEffect": true,
    "id": "46497537",
@@ -7348,6 +7364,7 @@
    "archetypes": [
     "metalfoes"
    ],
+   "betaName": "Metamor Formation",
    "frame": "spell",
    "hasEffect": true,
    "id": "46500985",
@@ -7537,6 +7554,7 @@
    ],
    "atk": 1400,
    "attribute": "earth",
+   "betaName": "Retaliating",
    "def": 1400,
    "frame": "effect",
    "hasEffect": true,
@@ -7806,6 +7824,7 @@
    ],
    "atk": 2200,
    "attribute": "dark",
+   "betaName": "Neferabyss, the Ogdoadic Overlord",
    "def": 3100,
    "frame": "effect",
    "hasEffect": true,
@@ -7877,6 +7896,7 @@
    ],
    "atk": 0,
    "attribute": "light",
+   "betaName": "Pity",
    "def": 0,
    "frame": "normal",
    "hasEffect": true,
@@ -8066,6 +8086,7 @@
    "archetypes": [
     "adamancipator"
    ],
+   "betaName": "Adamatia Raputite",
    "frame": "spell",
    "hasEffect": true,
    "id": "46552140",
@@ -8352,6 +8373,7 @@
    ],
    "atk": 1700,
    "attribute": "earth",
+   "betaName": "Vampire Orchis",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -8540,6 +8562,7 @@
    ],
    "atk": 200,
    "attribute": "wind",
+   "betaName": "Lyrilusc - Celeste Wagtail",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -8699,6 +8722,7 @@
    ],
    "atk": 3000,
    "attribute": "dark",
+   "betaName": "D/D/D Amnesty King Des Makina",
    "def": 3000,
    "frame": "xyz_pendulum",
    "hasEffect": true,
@@ -8792,6 +8816,7 @@
    ],
    "atk": 1500,
    "attribute": "water",
+   "betaName": "Nemesys Umbrella",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -8863,6 +8888,7 @@
    ],
    "atk": 1500,
    "attribute": "light",
+   "betaName": "Chaos End Master",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -9058,6 +9084,7 @@
    ],
    "atk": 2400,
    "attribute": "light",
+   "betaName": "Fiendsmith Lacrimosa",
    "def": 2400,
    "frame": "fusion",
    "hasEffect": true,
@@ -9263,6 +9290,7 @@
    ],
    "atk": 3000,
    "attribute": "dark",
+   "betaName": "World Legacy - World Lance",
    "def": 0,
    "frame": "effect",
    "hasEffect": true,
@@ -10478,6 +10506,7 @@
    ],
    "atk": 3000,
    "attribute": "dark",
+   "betaName": "Dark Staring at the Blue Sky",
    "def": 2700,
    "frame": "effect",
    "hasEffect": true,
@@ -10690,6 +10719,7 @@
    ],
    "atk": 2100,
    "attribute": "light",
+   "betaName": "Cyber Dragon Zieger",
    "frame": "link",
    "hasEffect": true,
    "id": "46724542",
@@ -11366,6 +11396,7 @@
    ],
    "atk": 2150,
    "attribute": "wind",
+   "betaName": "Gizmek Mikoto, the Cut-throat Cyclone Canine",
    "def": 2150,
    "frame": "effect",
    "hasEffect": true,
@@ -12062,6 +12093,7 @@
    ],
    "atk": 2400,
    "attribute": "earth",
+   "betaName": "Number 55",
    "def": 1200,
    "frame": "xyz",
    "hasEffect": true,
@@ -12257,6 +12289,7 @@
    ],
    "atk": 0,
    "attribute": "earth",
+   "betaName": "Scareclaw Acroa",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -12825,6 +12858,7 @@
    ],
    "atk": 1400,
    "attribute": "earth",
+   "betaName": "Beat Raptor",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -13014,6 +13048,7 @@
    ],
    "atk": 600,
    "attribute": "light",
+   "betaName": "Herald of Mirages",
    "frame": "link",
    "hasEffect": true,
    "id": "46935289",
@@ -13667,6 +13702,7 @@
    "aliases": [
     "Dwimmered Magicite"
    ],
+   "betaName": "Dwimmered Magicite",
    "frame": "trap",
    "hasEffect": true,
    "id": "46984349",
@@ -14070,6 +14106,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-1:46986420:DTP1-EN002:dt_normal_parallel",
      "number": "DTP1-EN002",
      "rarity": "dt_normal_parallel",
@@ -14077,6 +14116,9 @@
      "set": "duel-terminal-preview-wave-1"
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "duel-terminal-preview-wave-2:46986420:DTP1-EN002:dt_rare_parallel",
      "number": "DTP1-EN002",
      "rarity": "dt_rare_parallel",
@@ -15423,6 +15465,7 @@
    ],
    "atk": 1400,
    "attribute": "wind",
+   "betaName": "Saambell the Reuniter",
    "def": 1300,
    "frame": "effect_pendulum",
    "hasEffect": true,
