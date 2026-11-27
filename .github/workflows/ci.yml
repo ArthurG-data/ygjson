@@ -37,15 +37,16 @@ jobs:
           if [ "$EVENT_NAME" = "pull_request" ]; then
             base="origin/$BASE_REF"
           elif [ "$REF_TYPE" = "tag" ]; then
-            # The previous release tag, if there is one.
-            if ! base="$(git describe --tags --abbrev=0 'HEAD^' 2>/dev/null)"; then
+            # The previous release tag (v*), if there is one: another tag is not a release.
+            if ! base="$(git describe --tags --abbrev=0 --match 'v*' 'HEAD^' 2>/dev/null)"; then
               echo "No earlier release tag: skipping the ledger check."
               exit 0
             fi
-          elif [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ]; then
+          elif [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] \
+              && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
             base="$BEFORE"
           else
-            # First push of a branch: compare with the parent commit.
+            # First push of a branch, or a force-push whose old tip is not in the clone: compare with the parent commit.
             base="HEAD~1"
           fi
           echo "Checking the ledger against $base"
