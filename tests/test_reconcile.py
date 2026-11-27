@@ -509,6 +509,54 @@ def test_archetype_rename_is_found_by_its_ygojson_id_else_retires_with_no_succes
     assert got["ddd"] == _slug("ddd", "DDD")
 
 
+def _tcgplayer_set(sid, name, *groups, code="FOO", date="2020-01-01"):
+    return {**_set(sid, name, code, date), "tcgplayerGroupIds": list(groups)}
+
+
+def test_set_identity_holds_its_tcgplayer_groups():
+    assert reconcile.set_identity(_tcgplayer_set("foo", "Foo", 7, 12)) == {"tcgplayer:7", "tcgplayer:12"}
+    got, _ = _sets({}, [_tcgplayer_set("foo", "Foo", 7)])
+    assert got["foo"]["identity"] == ["tcgplayer:7"]
+
+
+def test_a_new_set_holding_a_vanished_tcgplayer_sets_group_is_a_rename_to_the_held_slug():
+    first, _ = _sets({}, [_tcgplayer_set("foo", "Foo", 7)])  # minted by import_tcgcsv for a group no set claimed
+    got, renames = _sets(first, [_tcgplayer_set("foo-bar", "Foo Bar", 7, code="FOOB", date="2020-01-02")])
+    assert renames == [{"from": "foo", "to": "foo-bar", "name": "Foo Bar"}]
+    assert set(got) == {"foo"} and got["foo"]["status"] == "live" and got["foo"]["names"] == ["Foo", "Foo Bar"]
+
+
+def test_a_new_set_slugging_like_a_held_tcgplayer_set_with_its_group_takes_the_slug_not_a_suffix():
+    first, _ = _sets({}, [_tcgplayer_set("foo", "FOO!", 7)])
+    held, reserved = {n: s for s, e in first.items() for n in e["names"]}, set(first)
+    assert ygjson.dedupe_slugs(["Foo"], held, reserved) == {"Foo": "foo-2"}  # the import cannot know yet
+    got, renames = _sets(first, [_tcgplayer_set("foo-2", "Foo", 7)])
+    assert renames == [{"from": "foo", "to": "foo-2", "name": "Foo"}] and "foo-2" not in got
+    held = {n: s for s, e in got.items() for n in e["names"]}
+    assert ygjson.dedupe_slugs(["Foo"], held, set(got)) == {"Foo": "foo"}  # the rerun's slug
+    assert _sets(got, [_tcgplayer_set("foo", "Foo", 7)]) == (got, [])
+
+
+def test_a_new_set_slugging_alike_without_the_group_keeps_its_suffix():
+    first, _ = _sets({}, [_tcgplayer_set("foo", "FOO!", 7)])
+    got, renames = _sets(first, [_tcgplayer_set("foo-2", "Foo", 8, code="OTHER")])
+    assert renames == [] and got["foo-2"]["status"] == "live"
+    assert got["foo"]["status"] == "retired" and got["foo"]["identity"] == ["tcgplayer:7"]
+
+
+def test_a_vanished_tcgplayer_sets_group_on_two_new_sets_is_no_rename():
+    first, _ = _sets({}, [_tcgplayer_set("foo", "Foo", 7)])
+    got, renames = _sets(first, [_tcgplayer_set("foo-a", "Foo A", 7), _tcgplayer_set("foo-b", "Foo B", 7)])
+    assert renames == [] and got["foo"]["status"] == "retired"
+
+
+def test_two_live_sets_holding_one_group_are_not_merged():
+    got, renames = _sets({}, [_tcgplayer_set("foo", "Foo", 7), _tcgplayer_set("bar", "Bar", 7)])
+    again, renames_again = _sets(got, [_tcgplayer_set("foo", "Foo", 7), _tcgplayer_set("bar", "Bar", 7)])
+    assert renames == renames_again == [] and set(again) == {"foo", "bar"}
+    assert again["foo"]["names"] == ["Foo"] and again["bar"]["names"] == ["Bar"]
+
+
 def test_reconcile_slugs_does_not_mutate_its_input():
     entries = {"old-name": _slug("old-name", "Old Name", identity=["yugipedia:5"])}
     before = copy.deepcopy(entries)

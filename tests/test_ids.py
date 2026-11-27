@@ -354,6 +354,21 @@ def test_rename_exits_3(monkeypatch, tmp_path, capsys):
                                   "name": "Legend of Blue Eyes White Dragon"}]
 
 
+def test_a_set_taking_over_a_tcgplayer_minted_sets_group_exits_3(monkeypatch, tmp_path, capsys):
+    from test_ygjson import SETS
+    sets = [{**SETS[0], "tcgplayerGroupIds": [23]}]
+    ledger = {k: {} for k in ids.KINDS}
+    ledger["sets"] = {"lob": {"id": "lob", "names": ["LOB (TCGplayer)"], "identity": ["tcgplayer:23"],
+                              "status": "live", "successors": []}}
+    _cli(monkeypatch, tmp_path, ledger, sets)
+    with pytest.raises(SystemExit) as e:
+        ids.main([])
+    assert e.value.code == 3
+    saved = ids.load_ledger(tmp_path / "ids")["sets"]
+    assert set(saved) == {"lob"} and saved["lob"]["names"] == ["LOB (TCGplayer)", "Legend of Blue Eyes White Dragon"]
+    assert ids.held_names({"sets": saved}, "sets")["Legend of Blue Eyes White Dragon"] == "lob"
+
+
 def test_a_rename_leaves_the_prints_alone_until_the_rerun(monkeypatch, tmp_path, capsys):
     import ygjson
     from test_ygjson import ARCHETYPES, CARDS, SEALED, SET, SETS

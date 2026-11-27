@@ -226,7 +226,8 @@
           "items": {
             "type": "string",
             "minLength": 1
-          }
+          },
+          "description": "The ids that survive a rename: ygojson:<id>, yugipedia:<page id>, konami:<database id>, tcgplayer:<group id>."
         }
       },
       "description": "A set slug."
