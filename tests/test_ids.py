@@ -283,3 +283,35 @@ def test_ledger_at_reads_a_revision_and_refuses_an_unknown_one(tmp_path):
     assert ids.ledger_at("HEAD", tmp_path) == ledger
     with pytest.raises(SystemExit, match="no-such-rev"):
         ids.ledger_at("no-such-rev", tmp_path)
+
+
+def test_a_duplicate_id_in_a_ledger_file_is_refused(tmp_path):
+    (tmp_path / "prints.json").write_text(json.dumps({"prints": [PRINT, {**PRINT, "key": "other"}]}))
+    with pytest.raises(ValueError, match=f"prints.*{PRINT['id']}"):
+        ids.load_ledger(tmp_path)
+    _git(tmp_path, "init", "-q")
+    (tmp_path / "ids").mkdir()
+    (tmp_path / "prints.json").rename(tmp_path / "ids" / "prints.json")
+    _git(tmp_path, "add", "ids")
+    _git(tmp_path, "commit", "-q", "-m", "dup")
+    with pytest.raises(ValueError, match=f"prints.*{PRINT['id']}"):
+        ids.ledger_at("HEAD", tmp_path)
+
+
+def test_a_retired_print_whose_key_came_back_under_another_id_points_at_it():
+    import copy
+    from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SET, SETS
+    files = lambda *cards: {"046": {"cards": list(cards)}}
+    placeholder = {**copy.deepcopy(CARD), "id": "ph1", "identifiers": {}}
+    del placeholder["passcode"]
+    placeholder["prints"] = [{**CARD["prints"][0], "id": f"{SET}:ph1:LOB-EN005:ultra_rare", "identifiers": {}}]
+    without_a = {**copy.deepcopy(CARD), "prints": copy.deepcopy(CARD["prints"][1:])}
+    ledger = {k: {} for k in ids.KINDS}
+    for step in (files(CARD, placeholder), files(without_a, placeholder), files(CARD)):
+        ledger, _, _ = ids.run(ledger, SETS, step, ARCHETYPES, SEALED, ({}, {}), {})
+    holder = next(i for i, e in ledger["prints"].items() if e["status"] == "live" and e["key"] == PRINT_A)
+    old = next(i for i, e in ledger["prints"].items() if e["status"] == "retired" and e["key"] == PRINT_A)
+    assert holder in ledger["prints"][old]["successors"]
+    assert ids.check(ledger, SETS, files(CARD), ARCHETYPES, SEALED) == []
+    ledger["prints"][old]["successors"] = []
+    assert any(old in e and "retired" in e for e in ids.check(ledger, SETS, files(CARD), ARCHETYPES, SEALED))

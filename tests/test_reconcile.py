@@ -186,8 +186,20 @@ def test_two_retired_entries_with_the_key_revive_the_smallest_id():
     got, by_key, review = reconcile.reconcile_prints(before, cur(k))
     assert by_key == {k: "id-a"}
     assert got["id-a"] == live(k, "id-a", former=[k, "s:1:X-EN001:super_rare"])
-    assert got["id-b"] == before["id-b"] and got["id-c"] == before["id-c"]
+    assert got["id-b"] == {**before["id-b"], "successors": ["id-a"]}
+    assert got["id-c"] == {**before["id-c"], "successors": ["id-a"]}
     assert review == [{"id": "id-a", "key": k, "reason": "ambiguous-revival", "successors": []}]
+
+
+def test_ambiguous_revival_leaves_the_other_retired_entry_pointing_at_the_revived_id():
+    k = "s:1:X-EN001:rare"
+    before = ledger(retired(k, "id-a", successors=["id-z"]), retired(k, "id-b"), live("s:9:Z:rare", "id-z"))
+    got, by_key, _ = reconcile.reconcile_prints(before, cur(k, "s:9:Z:rare"))
+    assert by_key == {k: "id-a", "s:9:Z:rare": "id-z"}
+    assert got["id-a"] == live(k, "id-a")
+    assert got["id-b"] == retired(k, "id-b", successors=["id-a"])
+    again, _, _ = reconcile.reconcile_prints(got, cur(k, "s:9:Z:rare"))
+    assert again == got
 
 
 def test_product_split_across_two_newcomers_retires():

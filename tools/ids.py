@@ -48,8 +48,18 @@ def load_ledger(path: Path = IDS) -> dict[str, dict[str, dict]]:
     for kind in KINDS:
         file = path / f"{kind}.json"
         entries = json.loads(file.read_text(encoding="utf-8"))[kind] if file.exists() else []
-        ledger[kind] = {e["id"]: e for e in entries}
+        ledger[kind] = _by_id(kind, entries)
     return ledger
+
+
+def _by_id(kind: str, entries: list[dict]) -> dict[str, dict]:
+    """{id: entry}; an id held by two entries is refused rather than one silently replacing the other."""
+    out: dict[str, dict] = {}
+    for e in entries:
+        if e["id"] in out:
+            raise ValueError(f"{kind}: id {e['id']} appears twice")
+        out[e["id"]] = e
+    return out
 
 
 def save_ledger(ledger: dict[str, dict[str, dict]], path: Path = IDS) -> None:
@@ -168,15 +178,18 @@ def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, d
 
 
 def _both_ways(kind: str, entries: Mapping[str, dict], current: Container[str], field: str = "id") -> list[str]:
-    """Each current value is the `field` of exactly one live entry; each live entry's is current, no retired one's."""
+    """Each current value is the `field` of exactly one live entry; each live entry's is current; a retired one's is
+    not, unless its successors include the live entry that holds it now."""
     live: dict[str, list[str]] = defaultdict(list)
-    errors = []
     for i, e in sorted(entries.items()):
         if e["status"] == "live":
             live[e[field]].append(i)
+    errors = []
+    for i, e in sorted(entries.items()):
+        if e["status"] == "live":
             if e[field] not in current:
                 errors.append(f"{kind} {i}: live but {e[field]!r} is not in the data")
-        elif e[field] in current:
+        elif e[field] in current and not set(live.get(e[field], [])) & set(e["successors"]):
             errors.append(f"{kind} {i}: retired but {e[field]!r} is in the data")
     for value in sorted(current):
         if not live.get(value):
@@ -259,7 +272,7 @@ def ledger_at(rev: str, root: Path = ygjson.ROOT) -> dict[str, dict[str, dict]]:
     for kind in KINDS:
         shown = subprocess.run(["git", "show", f"{rev}:ids/{kind}.json"], cwd=root, capture_output=True)
         entries = json.loads(shown.stdout.decode("utf-8"))[kind] if shown.returncode == 0 else []
-        ledger[kind] = {e["id"]: e for e in entries}
+        ledger[kind] = _by_id(kind, entries)
     return ledger
 
 

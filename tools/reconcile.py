@@ -57,8 +57,9 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
     had its key, 2 the id of the one orphan (a live entry whose print is gone) that held a TCGplayer product no other
     current print holds, 3 the one orphan at its (set, card, number), 4 the one orphan at its (card, number, rarity,
     variant) in another set, when the number is not empty, 5 the retired id `hand` gives it, 6 a new id. Each rule is
-    a pass over what is still unmatched. Orphans left are retired with successors and listed for review. `entries` is
-    not modified.
+    a pass over what is still unmatched. Orphans left are retired with successors and listed for review. A retired
+    entry that had a current key (as its key or a former key) gains that key's id as a successor, so a reader holding
+    it reaches the print now at its key. `entries` is not modified.
     """
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
     facts = {p.key: p for p in current}
@@ -93,7 +94,13 @@ def reconcile_prints(entries: dict[str, dict], current: list[PrintFacts], card_s
         found = successors[0].get((f.set, f.card, f.number)) or (f.number and successors[1].get((f.card, f.number))) \
             or successors[2].get((f.set, f.card, f.rarity, f.variant)) or []
         out[i].update(status="retired", successors=sorted(set(found)))
-        review.append({"id": i, "key": out[i]["key"], "reason": "retired", "successors": sorted(set(found))})
+    for e in out.values():
+        if e["status"] == "retired":
+            back = {carried[k] for k in [e["key"], *e["formerKeys"]] if k in carried}
+            if not back <= set(e["successors"]):
+                e["successors"] = sorted(set(e["successors"]) | back)
+    for i in sorted(orphans):
+        review.append({"id": i, "key": out[i]["key"], "reason": "retired", "successors": out[i]["successors"]})
 
     return dict(sorted(out.items())), dict(sorted(carried.items())), sorted(review, key=lambda r: (r["id"], r["key"]))
 
