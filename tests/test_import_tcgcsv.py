@@ -353,6 +353,28 @@ def test_a_beta_name_alias_mints_a_print_when_no_card_has_that_name():
     assert "lob:100:LOB-999:rare" in prints_of(out, "100") and out["cards"]["100"]["aliases"] == ["Red-Eyes B. Dragon"]
 
 
+def alias_world(**card_over):
+    """Card 100 is "Synchro Blast Wave". TCGplayer sells its LOB print as "Synch Blast Wave" (product 9), and the same
+    name under a number no print has (product 5, OTS Tournament Pack 22): 505920 and 724521 in the real data."""
+    card = mkcard("100", "Synchro Blast Wave", [mkprint("lob", "100", "LOB-EN001", "common"), *card_over.pop("prints", [])])
+    card.update(card_over)
+    groups = [mkgroup(1, "Legend of Blue Eyes", "LOB"), mkgroup(2, "OTS Tournament Pack 22", "OP22")]
+    sets = [LOB, mkset("ots22", "OTS Tournament Pack 22", "OP22", kind="promo")]
+    products = {1: [single(1, "Synch Blast Wave", "LOB-EN001", "Common", 9)],
+                2: [single(2, "Synch Blast Wave", "OP22-EN021", "Common", 5)]}
+    return groups, products, sets, card
+
+
+def test_a_name_tcgplayer_sells_a_card_under_in_this_run_mints_a_print():
+    groups, products, sets, card = alias_world()
+    out = go(groups, products, {}, sets, [card])
+    prints = prints_of(out, "100")
+    assert prints["ots22:100:OP22-EN021:common"]["identifiers"]["tcgplayerProductIds"] == [5]
+    assert out["cards"]["100"]["aliases"] == ["Synch Blast Wave"] and out["review"]["unmatched"] == []
+    again = imp.run(groups, products, {}, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["sets"] == out["sets"] and again["files"] == out["files"]
+
+
 def test_a_skill_card_product_reads_as_its_card_and_a_promo_group_with_no_prices_is_limited():
     card = mkcard("100", "Sky God Revelation (Skill Card)", [mkprint("lob", "100", "LOB-001", "common")])
     group = mkgroup(9, "Yu-Gi-Oh! Promotional Cards", "PROMO")

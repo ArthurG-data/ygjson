@@ -27,8 +27,9 @@ A single is tied to a print in three passes, so a fuzzy match never takes a prin
      or exactly one print has that number at all                       -> number
   3. no set, or the number is not in the group's set: the number is in exactly one other set (the set is named
      differently on TCGplayer), tried with the same rules there        -> number-other-set
-  4. no print anywhere has the number: the product's name is exactly one card, and its rarity is known. The print is
-     minted (source tcgplayer), in the group's set, or in a set minted for a group that matched none -> minted
+  4. no print anywhere has the number: the product's name is exactly one card (its name, or an alias: one the card came
+     with, or a name a product tied to it by number earlier in this run sells it under), and its rarity is known. The
+     print is minted (source tcgplayer), in the group's set, or in a set minted for a group that matched none -> minted
 Whatever remains goes to review `unmatched` with the reason. A product lands on one print only. A print holds
 several products only when they are the same card at the same rarity and price different editions; a product that would
 share a print with another card, another rarity, or an edition another product already prices goes to review `conflicts`.
@@ -262,12 +263,17 @@ class Catalog:
                 self.by_name[normalise(card["name"].removesuffix(_SKILL_CARD))].append(card)
                 for p in card["prints"]:
                     self.add(card, p)
-        # An alias is a weaker claim than a name, so a product is read as an alias only when no card has that name.
         for body in files.values():
             for card in body["cards"]:
                 for alias in card.get("aliases", []):
-                    if normalise(alias) not in self.by_name:
-                        self.by_alias[normalise(alias)].append(card)
+                    self.add_alias(card, alias)
+
+    def add_alias(self, card: dict, alias: str) -> None:
+        """Read the name as this card's, unless a card has that name (an alias is a weaker claim than a name) or it is
+        a bare passcode, the names merge_aliases leaves out."""
+        key = normalise(alias)
+        if key not in self.by_name and not alias.isdigit() and not any(c is card for c in self.by_alias[key]):
+            self.by_alias[key].append(card)
 
     def add(self, card: dict, p: dict) -> None:
         self.by_id[p["id"]] = p
@@ -539,7 +545,10 @@ class Importer:
             kept["match"] = match  # a re-keyed or minted print matches exactly on the next run, but keeps its label
         self.owner[prod.product_id] = p
         self.landed_in[p["set"]].add(prod.product_id)
+        # A name TCGplayer sells the card under by number names it for a later product of this run, so a print minted
+        # from it never waits for merge_aliases to write it and a later run to read it.
         self.sold_as[card["id"]].add(prod.base_name_and_tags()[0])
+        self.catalog.add_alias(card, prod.base_name_and_tags()[0])
         self.stats[p["tcgplayer"]["match"]] += 1
         return True
 
