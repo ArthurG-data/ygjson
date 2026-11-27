@@ -87,7 +87,10 @@ _TREATMENT_TAG = re.compile(
     r"|Sample Promo|World Championship Qualifier|2020 Date Reprint|" + _REISSUE_TAG + r")$")
 # Duelist League promos add the league to the colour, and the print's number already says it: "(Blue - DL18)".
 _LEAGUE_SUFFIX = re.compile(r" - DL\d+$")
-_SPELLED_OUT = {"EUR": "Emblazoned Ultra Rare", "ESR": "Emblazoned Secret Rare"}
+# Emblazoned is the version; the Ultra or Secret Rare in its name is the rarity (rarities.ALIASES), so the variant
+# never repeats it.
+_SPELLED_OUT = {"EUR": "Emblazoned", "ESR": "Emblazoned", "Emblazoned Ultra Rare": "Emblazoned",
+                "Emblazoned Secret Rare": "Emblazoned"}
 _TOKEN_PREFIX = "Token: "
 
 
