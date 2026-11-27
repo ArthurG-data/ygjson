@@ -157,6 +157,15 @@ def test_an_older_slug_only_cache_file_is_read_for_its_own_title_only(api, tmp_p
     assert (tmp_path / "title_dark-crisis.json").exists()  # the old file stays
 
 
+def test_an_older_slug_only_cache_file_holding_a_redirects_target_is_read_only_for_a_known_redirect(api, tmp_path):
+    (tmp_path / "title_magic-ruler.json").write_text(json.dumps({"pageid": 9, "title": "Spell Ruler", "revisions": []}))
+    assert y.page_by_title("Magic ruler", tmp_path)["pageid"] == 5  # a title alike, but no known redirect: fetched
+    assert [c["titles"] for c in api] == ["Magic ruler"]
+    assert y.page_by_title("Magic Ruler", tmp_path)["pageid"] == 9  # Yugipedia redirects it to Spell Ruler
+    assert [c["titles"] for c in api] == ["Magic ruler"]
+    assert (tmp_path / "title_magic-ruler.json").exists()
+
+
 def test_page_by_title_refresh_replaces_a_cached_page(api, tmp_path):
     y.page_by_title("Dark Crisis", tmp_path)
     y.page_by_title("Dark Crisis", tmp_path, refresh=True)

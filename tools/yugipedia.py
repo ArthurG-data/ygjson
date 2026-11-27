@@ -4,8 +4,8 @@ Pages are fetched through the MediaWiki API (`action=query&prop=revisions&rvprop
 and stored one JSON object per page: `page_<pageid>.json` for a page asked for by id (up to 50 ids per request),
 `title_<slug of the title>-<first 10 hex digits of the sha1 of the exact title>.json` for one asked for by title
 (the hash keeps titles that differ only in case or punctuation apart; an older `title_<slug>.json` is still read when it
-was cached for this title). A page that does not exist is cached as a marker
-(`{"missing": true, ...}`), so it is asked for once. A cached file is never fetched again unless refresh=True.
+holds this exact title, or the page a redirect in LEGACY_REDIRECTS leads to). A page that does not exist is cached as a
+marker (`{"missing": true, ...}`), so it is asked for once. A cached file is never fetched again unless refresh=True.
 Requests are one second apart and carry the project's User-Agent, as Yugipedia asks.
 
 `infobox(wikitext)` parses the first `{{Infobox set ...}}` template into {key: value} with the markup stripped, and
@@ -34,6 +34,15 @@ BATCH = 50
 DEFAULT_CACHE = Path(__file__).resolve().parents[1] / ".cache" / "yugipedia"
 
 _last_request = 0.0
+
+# The redirects that an older slug-only cache file holds the target of, for titles today's data asks for. Such a file
+# names only the slug of the title asked for, so a redirect's target is read for its title only when listed here exactly;
+# any other is fetched again. A cache made since titles were hashed never needs this.
+LEGACY_REDIRECTS = {
+    "Magic Ruler": "Spell Ruler",
+    "Yu-Gi-Oh! 5D's Stardust Accelerator promotional cards":
+        "Yu-Gi-Oh! 5D's World Championship 2009: Stardust Accelerator promotional cards",
+}
 
 
 def _query(params: dict[str, str]) -> dict:
@@ -86,13 +95,14 @@ def page_by_id(pageid: int, cache: Path = DEFAULT_CACHE, refresh: bool = False) 
 
 def title_path(title: str, cache: Path) -> Path:
     """The cache file of a title: the hashed name, unless only an older slug-only file exists and it was cached for
-    this title (its page, or its missing marker, carries a title that is not another title with the same slug)."""
+    this title: its page, or its missing marker, carries this exact title, or the one LEGACY_REDIRECTS says this title
+    redirects to. Any other such file is left alone, and the title is fetched again."""
     slug = ygjson.slugify(title)
     path = cache / f"title_{slug}-{hashlib.sha1(title.encode('utf-8')).hexdigest()[:10]}.json"
     legacy = cache / f"title_{slug}.json"
     if not path.exists() and legacy.exists():
         cached = json.loads(legacy.read_text(encoding="utf-8")).get("title")
-        if cached == title or (cached is not None and ygjson.slugify(cached) != slug):
+        if cached is not None and cached in (title, LEGACY_REDIRECTS.get(title)):
             return legacy
     return path
 
