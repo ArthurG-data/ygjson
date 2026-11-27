@@ -33,7 +33,7 @@ select = ["E", "F", "W", "I", "B", "UP"]
 "tests/*" = ["E501"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["build", "coverage_report", "ids", "import_sealed", "import_tcgcsv", "import_ygojson",
+known-first-party = ["build", "coverage_report", "fetch", "ids", "import_sealed", "import_tcgcsv", "import_ygojson",
                      "import_ygoprodeck", "import_yugipedia", "legality", "rarities", "reconcile", "seed_ids", "tcgcsv",
                      "validate", "ygjson", "ygoprodeck", "yugipedia"]
 

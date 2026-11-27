@@ -17,6 +17,7 @@ import re
 from collections.abc import Container, Mapping, Sequence, Set
 from urllib.parse import quote
 
+import fetch
 import ids
 import rarities
 import ygjson
@@ -310,11 +311,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--refresh", action="store_true", help="download the YGOPRODeck files again")
     refresh = parser.parse_args().refresh
-    cache = ygoprodeck.DEFAULT_CACHE
-    card_list = ygoprodeck.cards(cache, refresh)
-    set_list = ygoprodeck.sets(cache, refresh)
-    archetype_names = ygoprodeck.archetypes(cache, refresh)
-    ygoprodeck.db_version(cache, refresh)  # build.py names this snapshot in meta.sources
+    with fetch.cache_dir(ygoprodeck.DEFAULT_CACHE, refresh) as cache:  # a refresh replaces the four files together
+        card_list = ygoprodeck.cards(cache)
+        set_list = ygoprodeck.sets(cache)
+        archetype_names = ygoprodeck.archetypes(cache)
+        ygoprodeck.db_version(cache)  # build.py names this snapshot in meta.sources
 
     existing_sets = ygjson.load_sets() if ygjson.SETS.exists() else []
     existing_archetypes = ygjson.load_archetypes() if ygjson.ARCHETYPES.exists() else {}

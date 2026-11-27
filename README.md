@@ -428,8 +428,13 @@ The order matters: each importer keeps what the earlier ones wrote and adds its 
 changes nothing unless a source changed. The downloads are cached under `.cache/`, which is never committed. YGOPRODeck
 is fetched on the first run. Yugipedia pages and TCGCSV files are fetched when they are not cached, at one request per
 second and one every half second. YGOJSON has no downloader: put the files of its `v1/aggregate` branch (`cards.json`,
-`sets.json`, `series.json`, `sealedProducts.json`, `meta.json`) in `.cache/ygojson`. To take a newer TCGCSV or
-Yugipedia snapshot, move that cache aside and rebuild. `import_tcgcsv.py` refuses a TCGCSV listing with no groups or
+`sets.json`, `series.json`, `sealedProducts.json`, `meta.json`) in `.cache/ygojson`. `--refresh` on
+`import_ygoprodeck.py` and `import_tcgcsv.py` downloads into a new directory and puts it in place of the cache only once
+every file has come, so a refresh that fails halfway leaves the old cache as it was. To take a newer Yugipedia snapshot,
+move that cache aside and rebuild. Every download (`tools/fetch.py`) retries a 429, a 5xx, a network error or a reply
+cut short, up to five tries with a doubling wait or what `Retry-After` asks, and Yugipedia is asked with `maxlag`; a
+download that still fails stops the run with the URL and the reason. A cache file is written whole or not at all, and
+one that is not valid JSON is fetched again. `import_tcgcsv.py` refuses a TCGCSV listing with no groups or
 no products, and while a group the data holds is missing from the listing or has no products file, it leaves that
 group's products, prints and set as they are.
 

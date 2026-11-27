@@ -3,14 +3,16 @@ from __future__ import annotations
 
 import json
 import re
-import time
-import urllib.request
+from collections.abc import Mapping
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
+
+import fetch
 
 TCGCSV = "https://tcgcsv.com/tcgplayer"
 CATEGORY = 2
-USER_AGENT = "ygjson/0.1 (+https://github.com/ArthurG-data/ygjson)"
+USER_AGENT = fetch.USER_AGENT
 FETCH_DELAY_S = 0.5
 
 # Trailing tags TCGplayer appends to a name to tell variants apart: "(Secret Rare)", "(Starlight Rare)",
@@ -56,18 +58,19 @@ def base_name_and_tags(name: str) -> tuple[str, list[str]]:
     return name.strip(), tags
 
 
-def _get(url: str, cache: Path, refresh: bool) -> dict:
-    cache.mkdir(parents=True, exist_ok=True)
-    path = cache / (url.removeprefix(TCGCSV + "/").replace("/", "_") + ".json")
-    if path.exists() and not refresh:
-        return json.loads(path.read_text(encoding="utf-8"))
-    time.sleep(FETCH_DELAY_S)
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
+def _check(data: Any, headers: Mapping[str, str]) -> None:
+    if not isinstance(data, dict) or "results" not in data:
+        raise fetch.Refuse("the reply holds no results")
     if not data.get("success", True):
-        raise RuntimeError(f"{url}: {data.get('errors')}")
-    path.write_text(json.dumps(data), encoding="utf-8")
+        raise fetch.Refuse(f"TCGCSV says {data.get('errors')}")
+
+
+def _get(url: str, cache: Path, refresh: bool) -> dict:
+    path = cache / (url.removeprefix(TCGCSV + "/").replace("/", "_") + ".json")
+    if not refresh and (data := fetch.read_json(path)) is not None:
+        return data
+    _, data = fetch.get_json(url, delay=FETCH_DELAY_S, check=_check)
+    fetch.write_atomic(path, json.dumps(data))
     return data
 
 
