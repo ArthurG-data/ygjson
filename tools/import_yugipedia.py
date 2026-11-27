@@ -35,6 +35,7 @@ import re
 from pathlib import Path
 
 import import_ygoprodeck
+import sources
 import ygjson
 import yugipedia
 
@@ -323,6 +324,8 @@ def main() -> None:
     review, stats, evidence = build(sets, pages, ygjson.load_eras(), mapping)
     ygjson.save_json(ygjson.SETS, sets)
     ygjson.save_json(REVIEW, review)
+    if (pages_read := sources.yugipedia(yugipedia.DEFAULT_CACHE)) is not None:
+        sources.record("yugipedia", pages_read)
     types = collections.Counter(s["type"] for s in sets)
     print(f"pages: {how['id']} by id, {how['title']} by title, {how['missing']} missing "
           f"({len(review['noInfobox'])} without an infobox)")

@@ -6,11 +6,12 @@ on a body that is cut short or is not JSON, waiting BACKOFF_S, then twice that, 
 or what the reply's Retry-After asks. A `check` can read the parsed body and ask for a retry (MediaWiki's maxlag) or
 refuse it. A download that still fails raises FetchError, naming the URL and the last reason.
 
-`write_atomic` writes a cache file through a temporary file and os.replace, so an interrupted run never leaves a
-truncated file behind; `read_json` treats a file that is not valid JSON as absent, so one left by an older run is
-fetched again. `cache_dir(cache, refresh)` is the directory to fetch into: `cache` itself, or with refresh an empty
-sibling that takes `cache`'s place only when the block ends without an error, so a refresh that fails halfway leaves
-the old cache whole.
+`get_bytes` is the same without the JSON. `write_atomic` writes a cache file through a temporary file and os.replace,
+so an interrupted run never leaves a truncated file behind, and leaves a file that already holds the same bytes alone
+(its modification time is when it was fetched). `read_json` treats a file that is not valid JSON as absent, so one left
+by an older run is fetched again. `cache_dir(cache, refresh)` is the directory to fetch into: `cache` itself, or with
+refresh an empty sibling that takes `cache`'s place only when the block ends without an error, so a refresh that fails
+halfway leaves the old cache whole.
 """
 from __future__ import annotations
 
@@ -73,10 +74,10 @@ def _wait_for_host(host: str, delay: float) -> None:
         time.sleep(wait)
 
 
-def get_json(url: str, *, timeout: float = 60.0, delay: float = 0.0,
-             check: Callable[[Any, Mapping[str, str]], None] | None = None,
-             attempts: int = ATTEMPTS) -> tuple[str, Any]:
-    """(the body as text, the body parsed). `check(data, headers)` may raise Retry or Refuse."""
+def get_bytes(url: str, *, timeout: float = 60.0, delay: float = 0.0,
+              check: Callable[[bytes, Mapping[str, str]], None] | None = None,
+              attempts: int = ATTEMPTS) -> bytes:
+    """The body. `check(body, headers)` may raise Retry or Refuse."""
     host = urllib.parse.urlsplit(url).netloc
     reason = ""
     for attempt in range(1, attempts + 1):
@@ -86,14 +87,13 @@ def get_json(url: str, *, timeout: float = 60.0, delay: float = 0.0,
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
             try:
                 with urllib.request.urlopen(req, timeout=timeout) as resp:
-                    raw = resp.read().decode("utf-8")
+                    body = resp.read()
                     headers = resp.headers
             finally:
                 _last_request[host] = time.monotonic()
-            data = json.loads(raw)
             if check is not None:
-                check(data, headers)
-            return raw, data
+                check(body, headers)
+            return body
         except urllib.error.HTTPError as e:
             if e.code not in RETRY_STATUS:
                 raise FetchError(f"{url}: HTTP {e.code} {e.reason}") from None
@@ -109,6 +109,24 @@ def get_json(url: str, *, timeout: float = 60.0, delay: float = 0.0,
     raise FetchError(f"{url}: gave up after {attempts} attempts: {reason}")
 
 
+def get_json(url: str, *, timeout: float = 60.0, delay: float = 0.0,
+             check: Callable[[Any, Mapping[str, str]], None] | None = None,
+             attempts: int = ATTEMPTS) -> tuple[str, Any]:
+    """(the body as text, the body parsed). A body that is not UTF-8 JSON is asked again, like one cut short;
+    `check(data, headers)` may raise Retry or Refuse."""
+    parsed: list[tuple[str, Any]] = []
+
+    def parse(body: bytes, headers: Mapping[str, str]) -> None:
+        raw = body.decode("utf-8")
+        data = json.loads(raw)
+        if check is not None:
+            check(data, headers)
+        parsed.append((raw, data))
+
+    get_bytes(url, timeout=timeout, delay=delay, check=parse, attempts=attempts)
+    return parsed[-1]
+
+
 def read_json(path: Path) -> Any | None:
     """The cached JSON at `path`, or None when the file is absent or is not valid JSON."""
     try:
@@ -117,13 +135,19 @@ def read_json(path: Path) -> Any | None:
         return None
 
 
-def write_atomic(path: Path, text: str) -> None:
-    """Write `text` to `path` through a temporary file in the same directory, so `path` is never seen half written."""
+def write_atomic(path: Path, content: str | bytes) -> None:
+    """Write `content` to `path` through a temporary file in the same directory, so `path` is never seen half written.
+    A file that already holds exactly this content is left alone, so its modification time still says when it was
+    first fetched."""
+    data = content.encode("utf-8") if isinstance(content, str) else content
+    with contextlib.suppress(OSError):
+        if path.stat().st_size == len(data) and path.read_bytes() == data:
+            return
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_name(f".{path.name}.{os.getpid()}.tmp")
     try:
-        with tmp.open("w", encoding="utf-8") as f:
-            f.write(text)
+        with tmp.open("wb") as f:
+            f.write(data)
             f.flush()
             os.fsync(f.fileno())
         os.replace(tmp, path)

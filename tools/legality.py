@@ -48,6 +48,7 @@ import sys
 import unicodedata
 from collections.abc import Sequence
 
+import sources
 import ygjson
 import ygoprodeck
 import yugipedia
@@ -286,6 +287,8 @@ def main() -> None:
     if errors:
         sys.exit("refusing to write:\n" + "\n".join(errors[:20]))
     ygjson.save_json(BANS, {"events": events})
+    if (pages_read := sources.yugipedia(yugipedia.DEFAULT_CACHE)) is not None:  # the lists are Yugipedia pages too
+        sources.record("yugipedia", pages_read)
     _counts(events)
     print(f"{len(new)} new today, {len(existing) + len(new) - len(events)} undated rows replaced")
     if unmatched:

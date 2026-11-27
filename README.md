@@ -26,9 +26,9 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 ```
 
 Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}, "idsVersion": 1}, "data": {...}}`. All seven come
-from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` names the
-snapshot each source was last imported from: YGOPRODeck's `database_version`, YGOJSON's `increment` and the latest
-`modifiedOn` among TCGCSV's groups. A build made without the caches leaves `sources` out.
+from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
+committed [`sources.json`](sources.json): the snapshot of each source the data was imported from (see
+[Rebuilding a release](#rebuilding-a-release)).
 
 | File | Keyed by | Holds |
 |---|---|---|
@@ -427,8 +427,9 @@ uv run python tools/build.py --version 0.2.0   # dist/AllSets, AllCards, AllPrin
 The order matters: each importer keeps what the earlier ones wrote and adds its own fields, so a rerun in order
 changes nothing unless a source changed. The downloads are cached under `.cache/`, which is never committed. YGOPRODeck
 is fetched on the first run. Yugipedia pages and TCGCSV files are fetched when they are not cached, at one request per
-second and one every half second. YGOJSON has no downloader: put the files of its `v1/aggregate` branch (`cards.json`,
-`sets.json`, `series.json`, `sealedProducts.json`, `meta.json`) in `.cache/ygojson`. `--refresh` on
+second and one every half second. `import_ygojson.py` downloads YGOJSON's `v1/aggregate` branch at the commit
+`sources.json` pins, when the cache holds another, and checks every file against the commit's git blob hash;
+`--update` takes the branch's current commit instead. `--refresh` on
 `import_ygoprodeck.py` and `import_tcgcsv.py` downloads into a new directory and puts it in place of the cache only once
 every file has come, so a refresh that fails halfway leaves the old cache as it was. To take a newer Yugipedia snapshot,
 move that cache aside and rebuild. Every download (`tools/fetch.py`) retries a 429, a 5xx, a network error or a reply
@@ -444,8 +445,28 @@ legality event names a card and a format that exist. `--online` also asks TCGCSV
 a print or a sealed product still exists in category 2. It downloads the catalogue into a temporary directory, about
 660 requests.
 
-`build.py` runs the same checks and refuses to write anything if one fails. It needs nothing from `.cache/`: with no
-caches it leaves `meta.sources` out.
+`validate.py` also checks `sources.json` against its schema and against each cache under `.cache/` that exists, and
+names the importer to rerun when a cache holds another snapshot. `build.py` runs the same checks, except the caches,
+and refuses to write anything if one fails. It needs nothing from `.cache/`, so CI builds the release from the committed
+data and copies `sources.json` into `meta.sources`.
+
+### Rebuilding a release
+
+`sources.json` records, for the data on `main`, the snapshot of each source, written by the importer that read it:
+
+| Source | Recorded | Written by |
+|---|---|---|
+| `ygoprodeck` | `databaseVersion` and `lastUpdate` from `checkDBVer.php` | `import_ygoprodeck.py` |
+| `ygojson` | the `v1/aggregate` `commit` and its `increment` | `import_ygojson.py` |
+| `tcgcsv` | the latest `modifiedOn` among the groups | `import_tcgcsv.py` |
+| `yugipedia` | the `pages` cached and the UTC day the newest was fetched (`fetchedThrough`) | `import_yugipedia.py`, `legality.py` |
+
+Every release file carries the same object in `meta.sources`. A release's data is the commit it was tagged at, so to
+rebuild one, check out its tag and run `uv run python tools/build.py --version <version>`: the build reads only
+committed files. To redo the imports themselves, run the pipeline above on that checkout. YGOJSON comes back exactly:
+`import_ygojson.py` downloads the pinned commit (YGOJSON rewrites the branch on each update, so a commit GitHub has
+since dropped can no longer be fetched). YGOPRODeck, TCGCSV and Yugipedia serve only today's data, so an exact rerun
+needs the `.cache/` the release was imported from; `validate.py` says whether a cache is that one.
 
 ## Development
 

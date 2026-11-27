@@ -1,5 +1,6 @@
 import pytest
 
+import sources
 import validate
 import ygjson
 
@@ -14,6 +15,7 @@ def test_a_print_naming_a_missing_set_is_reported_without_a_traceback(monkeypatc
     monkeypatch.setattr(ygjson, "load_sealed", lambda: {})
     monkeypatch.setattr(ygjson, "load_legality", lambda: {"formats": [], "events": []})
     monkeypatch.setattr(ygjson, "validate", lambda *a: ["print nope:1:X-001:common: set nope does not exist"])
+    monkeypatch.setattr(sources, "problems", lambda *a: [])
     monkeypatch.setattr("sys.argv", ["validate.py"])
     with pytest.raises(SystemExit) as stop:
         validate.main()
