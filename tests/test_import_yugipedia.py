@@ -174,6 +174,14 @@ def test_parent_by_name_prefix_for_each_child_kind():
     assert parents(sets)[0] == {"coR-se": ("coR", "name"), "abyss-sp": ("abyss", "name"), "bv-pr": ("bv", "name")}
 
 
+def test_a_reprint_set_is_not_offered_as_a_parent():
+    sets = [our_set("dcr", "Dark Crisis", "DCR"),
+            {**our_set("dcr-2020-reprint", "Dark Crisis (2020 Date Reprint)", "DCR"), "parent": "dcr"},
+            our_set("dcr-se", "Dark Crisis: Special Edition", "DCR", "special_edition")]
+    found, ambiguous = parents(sets)
+    assert found == {"dcr-se": ("dcr", "code+name")} and ambiguous == {}
+
+
 def test_parent_name_prefix_stops_at_a_word_boundary():
     sets = [our_set("a", "Dark", "D1"), our_set("b", "Dark Crisis", "D2"),
             our_set("c", "Dark Crisisx Special Edition", "D3", "special_edition")]

@@ -177,7 +177,8 @@ def find_parents(sets: list[dict], raw_boxes: dict[str, dict[str, str]]) -> tupl
 
     Evidence is code, name or other_sets, joined with + when several name the same booster. raw_boxes is
     {set id: infobox_raw} for the sets that have a page."""
-    boosters = [s for s in sets if s["type"] == "booster"]
+    # A reprint set (minted from a booster, so it has a parent and the booster's code and type) is not a parent itself.
+    boosters = [s for s in sets if s["type"] == "booster" and "parent" not in s]
     by_name = collections.defaultdict(list)
     for b in boosters:
         by_name[norm(b["name"])].append(b)
