@@ -96,12 +96,13 @@ def printing_id(print_id: str, language: str, edition: str) -> str:
 
 def region_of(number: str | None) -> str | None:
     """The region letters of a set number: LOB-EN001 -> EN, LOB-001 -> None. Speed Duel numbers carry a slot letter
-    after the region (LAVD-ENS05), so a run of three letters is the region followed by that letter."""
+    after the region (LAVD-ENS05), and special editions and promos add two (TDIL-ENSE3, CYHO-ENSP1, RGBT-ENPP5), so a
+    run of three or more letters is the region followed by those letters."""
     m = _REGION.match(number or "")
     if not m:
         return None
     letters = m.group(1)
-    return letters[:2] if len(letters) == 3 else letters
+    return letters[:2] if len(letters) >= 3 else letters
 
 
 def load_sets(path: Path = SETS) -> list[dict]:

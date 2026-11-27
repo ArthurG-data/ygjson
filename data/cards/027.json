@@ -3371,6 +3371,7 @@
      },
      "number": "LAVD-ENS10",
      "rarity": "common",
+     "rawRarity": "2",
      "region": "EN",
      "set": "legendary-arc-v-decks",
      "tcgplayer": {
@@ -3390,6 +3391,7 @@
      },
      "number": "L26D-ENS02",
      "rarity": "common",
+     "rawRarity": "2",
      "region": "EN",
      "set": "legendary-modern-decks-2026",
      "tcgplayer": {
@@ -5414,7 +5416,7 @@
      },
      "number": "TDGS-ENSE2",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "the-duelist-genesis-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -6528,6 +6530,27 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:secret_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714074
+      ]
+     },
+     "number": "26LP-EN010",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "K9-17 \"Ripper\" (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:secret_rare:emblazoned-alternate-art",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6544,27 +6567,6 @@
       "name": "K9-17 \"Ripper\" (Emblazoned Alternate Art)"
      },
      "variant": "emblazoned-alternate-art"
-    },
-    {
-     "editions": [
-      "first"
-     ],
-     "id": "limited-pack-world-championship-2026:27420823:26LP-EN010:secret_rare:emblazoned-secret-rare",
-     "identifiers": {
-      "tcgplayerProductIds": [
-       714074
-      ]
-     },
-     "number": "26LP-EN010",
-     "rarity": "secret_rare",
-     "region": "EN",
-     "set": "limited-pack-world-championship-2026",
-     "source": "tcgplayer",
-     "tcgplayer": {
-      "match": "number+rarity",
-      "name": "K9-17 \"Ripper\" (Emblazoned Secret Rare)"
-     },
-     "variant": "emblazoned-secret-rare"
     },
     {
      "editions": [
@@ -7228,7 +7230,7 @@
      },
      "number": "BLZD-ENSP1",
      "rarity": "secret_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "blazing-dominion",
      "source": "tcgplayer",
      "tcgplayer": {
@@ -10013,7 +10015,7 @@
      },
      "number": "INOV-ENSE4",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "invasion-vengeance-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -10446,9 +10448,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:27769400:LODT-EN090:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11163,6 +11162,7 @@
      },
      "number": "LAVD-ENO19",
      "rarity": "common",
+     "rawRarity": "3",
      "region": "EN",
      "set": "legendary-arc-v-decks",
      "tcgplayer": {
@@ -11209,9 +11209,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:27813661:LEDD-ENC13:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11555,9 +11552,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:27827272:YGLD-ENA34:common",
      "identifiers": {
       "tcgplayerProductIds": [

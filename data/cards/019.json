@@ -740,7 +740,7 @@
      },
      "number": "TAEV-ENSP1",
      "rarity": "super_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "tactical-evolution-sneak-peek-participation-card",
      "tcgplayer": {
       "match": "number-other-set",
@@ -3519,9 +3519,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:19252988:IOC-EN110:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6702,9 +6699,6 @@
    "passcode": 19441018,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:19441018:LODT-EN031:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10238,7 +10232,7 @@
      },
      "number": "REDU-ENSP1",
      "rarity": "ultra_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "return-of-the-duelist-sneak-peek-participation-card",
      "tcgplayer": {
       "match": "number-other-set",
@@ -11263,9 +11257,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:19747827:LEDD-ENA43:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12789,6 +12780,7 @@
      },
      "number": "L26D-ENM08",
      "rarity": "common",
+     "rawRarity": "3",
      "region": "EN",
      "set": "legendary-modern-decks-2026",
      "tcgplayer": {
@@ -12857,6 +12849,27 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:19899073:26LP-EN021:secret_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714069
+      ]
+     },
+     "number": "26LP-EN021",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ame no Murakumo no Mitsurugi (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:19899073:26LP-EN021:secret_rare:emblazoned-alternate-art",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12873,27 +12886,6 @@
       "name": "Ame no Murakumo no Mitsurugi (Emblazoned Alternate Art)"
      },
      "variant": "emblazoned-alternate-art"
-    },
-    {
-     "editions": [
-      "first"
-     ],
-     "id": "limited-pack-world-championship-2026:19899073:26LP-EN021:secret_rare:emblazoned-secret-rare",
-     "identifiers": {
-      "tcgplayerProductIds": [
-       714069
-      ]
-     },
-     "number": "26LP-EN021",
-     "rarity": "secret_rare",
-     "region": "EN",
-     "set": "limited-pack-world-championship-2026",
-     "source": "tcgplayer",
-     "tcgplayer": {
-      "match": "number+rarity",
-      "name": "Ame no Murakumo no Mitsurugi (Emblazoned Secret Rare)"
-     },
-     "variant": "emblazoned-secret-rare"
     },
     {
      "editions": [

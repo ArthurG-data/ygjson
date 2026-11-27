@@ -83,9 +83,15 @@ def test_release_date_prefers_na_then_en_then_plain_then_earliest():
     assert imp.release_date(ib(na_release_date="March 8, 2002", en_release_date="December 1, 2004")) == "2002-03-08"
     assert imp.release_date(ib(na_release_date="", en_release_date="December 1, 2004", eu_release_date="May 1, 2000")) == "2004-12-01"
     assert imp.release_date(ib(release_date="June 2003", jp_release_date="May 1, 2000")) == "2003-06-01"
-    assert imp.release_date(ib(jp_release_date="May 1, 2001", eu_release_date="March 2000", fr__de__it__sp_release_date="")) == "2000-03-01"
+    assert imp.release_date(ib(jp_release_date="May 1, 1999", eu_release_date="March 2000", fr__de__it__sp_release_date="")) == "2000-03-01"
     assert imp.release_date(ib(na_release_date="2023")) is None
     assert imp.release_date({}) is None
+
+
+def test_release_date_never_falls_back_to_an_ocg_region():
+    assert imp.release_date({"jp_release_date": "December 5, 2013", "kr_release_date": "May 1, 2013",
+                             "eu_release_date": "June 26, 2014", "fr/de/it/sp_release_date": "July 1, 2014"}) == "2014-06-26"
+    assert imp.release_date({"jp_release_date": "December 5, 2013"}) is None
 
 
 def test_prefix_code_takes_the_part_before_the_hyphen():
@@ -166,6 +172,14 @@ def test_parent_by_name_prefix_for_each_child_kind():
             our_set("bv", "Blazing Vortex", "BLVO"),
             our_set("bv-pr", "Blazing Vortex Premiere! promotional card", "BLVP", "promo")]
     assert parents(sets)[0] == {"coR-se": ("coR", "name"), "abyss-sp": ("abyss", "name"), "bv-pr": ("bv", "name")}
+
+
+def test_a_reprint_set_is_not_offered_as_a_parent():
+    sets = [our_set("dcr", "Dark Crisis", "DCR"),
+            {**our_set("dcr-2020-reprint", "Dark Crisis (2020 Date Reprint)", "DCR"), "parent": "dcr"},
+            our_set("dcr-se", "Dark Crisis: Special Edition", "DCR", "special_edition")]
+    found, ambiguous = parents(sets)
+    assert found == {"dcr-se": ("dcr", "code+name")} and ambiguous == {}
 
 
 def test_parent_name_prefix_stops_at_a_word_boundary():

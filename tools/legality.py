@@ -108,6 +108,15 @@ def history_events(ygojson_cards: list[dict], ids: dict[str, str]) -> list[dict]
     return out
 
 
+def ygoprodeck_status(card: str, fmt: str, value: str | None) -> str:
+    """Our status for a banlist_info value: legal when there is none, an error naming the card when it is one we don't know."""
+    if value is None:
+        return "legal"
+    if value not in YGOPRODECK_STATUS:
+        raise ValueError(f"YGOPRODeck gives card {card} the unknown {fmt} ban status {value!r}")
+    return YGOPRODECK_STATUS[value]
+
+
 def lead_status(prodeck_cards: list[dict] | None, ygojson_cards: list[dict] | None, ids: dict[str, str],
                 card_ids: set[str]) -> dict[Key, str]:
     """The lead source's current status. tcg, ocg and goat: every card of ours YGOPRODeck lists, legal when its
@@ -121,7 +130,7 @@ def lead_status(prodeck_cards: list[dict] | None, ygojson_cards: list[dict] | No
         if not info and "<" in c.get("name", ""):
             continue
         for key, fmt in YGOPRODECK_FORMATS.items():
-            out[(card, fmt)] = YGOPRODECK_STATUS.get(info.get(key), "legal")
+            out[(card, fmt)] = ygoprodeck_status(card, fmt, info.get(key))
     for c in ygojson_cards or []:
         card = ids.get(c["id"])
         status = STATUS.get(((c.get("legality") or {}).get("speed") or {}).get("current"))

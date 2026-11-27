@@ -461,7 +461,7 @@
      },
      "number": "SOI-ENSE2",
      "rarity": "secret_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "shadow-of-infinity-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -477,7 +477,7 @@
      },
      "number": "SOI-ENSE2",
      "rarity": "ultra_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "shadow-of-infinity-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -557,7 +557,7 @@
      },
      "number": "SBTK-ENSP4",
      "rarity": "common",
-     "region": "ENSP",
+     "region": "EN",
      "set": "speed-duel-trials-of-the-kingdom-sneak-peek-participation-cards",
      "tcgplayer": {
       "match": "number-other-set",
@@ -5544,6 +5544,7 @@
      },
      "number": "MZTM-EN050",
      "rarity": "rare",
+     "rawRarity": "New",
      "region": "EN",
      "set": "maze-of-the-master",
      "tcgplayer": {
@@ -5801,9 +5802,6 @@
    "passcode": 34351849,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:34351849:LODT-EN073:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6038,9 +6036,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:34370473:IOC-EN091:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6242,9 +6237,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:34408491:LCKC-EN071:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9076,9 +9068,6 @@
    "passcode": 34568403,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:34568403:LODT-EN013:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9331,7 +9320,7 @@
      },
      "number": "BLVO-ENSP1",
      "rarity": "ultra_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "blazing-vortex-premiere-promotional-card",
      "tcgplayer": {
       "match": "number-other-set",
@@ -9676,9 +9665,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:34627841:LCKC-EN009:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9804,9 +9790,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "saga-of-blue-eyes-white-dragon-structure-deck-2020-reprint:34627841:SDBE-EN014:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9975,9 +9958,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:34646691:IOC-EN035:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10782,9 +10762,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:34694160:YGLD-ENA39:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11024,9 +11001,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:34710660:YGLD-ENA00:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13700,7 +13674,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:34909328:25LP-EN014:secret_rare:emblazoned-secret-rare",
+     "id": "limited-pack-world-championship-2025:34909328:25LP-EN014:secret_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651300
@@ -13715,7 +13689,7 @@
       "match": "number+rarity",
       "name": "Ryzeal Detonator (ESR)"
      },
-     "variant": "emblazoned-secret-rare"
+     "variant": "emblazoned"
     },
     {
      "id": "limited-pack-world-championship-2025:34909328:25LP-EN014:ultra_rare",
@@ -13734,7 +13708,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:34909328:25LP-EN014:ultra_rare:emblazoned-ultra-rare",
+     "id": "limited-pack-world-championship-2025:34909328:25LP-EN014:ultra_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651320
@@ -13749,7 +13723,7 @@
       "match": "number+rarity",
       "name": "Ryzeal Detonator (EUR)"
      },
-     "variant": "emblazoned-ultra-rare"
+     "variant": "emblazoned"
     }
    ],
    "rank": 4,
@@ -14673,6 +14647,7 @@
      },
      "number": "L5DD-ENC14",
      "rarity": "common",
+     "rawRarity": "3",
      "region": "EN",
      "set": "legendary-5d-s-decks",
      "tcgplayer": {

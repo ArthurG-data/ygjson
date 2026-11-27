@@ -137,8 +137,33 @@ def test_page_by_title_caches_hits_and_misses(api, tmp_path):
     assert y.page_by_title("Nope", tmp_path) is None
     assert y.page_by_title("Dark Crisis", tmp_path)["pageid"] == 5
     assert [c["titles"] for c in api] == ["Dark Crisis", "Nope"]
-    assert (tmp_path / "title_dark-crisis.json").exists()
-    assert json.loads((tmp_path / "title_nope.json").read_text()) == {"missing": True, "title": "Nope"}
+    assert y.title_path("Dark Crisis", tmp_path).exists()
+    assert json.loads(y.title_path("Nope", tmp_path).read_text()) == {"missing": True, "title": "Nope"}
+
+
+def test_titles_that_differ_only_in_case_get_their_own_cache_files(api, tmp_path):
+    y.page_by_title("Dark Crisis", tmp_path)
+    y.page_by_title("Dark crisis", tmp_path)
+    assert [c["titles"] for c in api] == ["Dark Crisis", "Dark crisis"]
+    assert y.title_path("Dark Crisis", tmp_path) != y.title_path("Dark crisis", tmp_path)
+
+
+def test_an_older_slug_only_cache_file_is_read_for_its_own_title_only(api, tmp_path):
+    (tmp_path / "title_dark-crisis.json").write_text(json.dumps({"pageid": 9, "title": "Dark Crisis", "revisions": []}))
+    assert y.page_by_title("Dark Crisis", tmp_path)["pageid"] == 9
+    assert api == []
+    assert y.page_by_title("Dark crisis", tmp_path)["pageid"] == 5  # not the other title's page: fetched
+    assert [c["titles"] for c in api] == ["Dark crisis"]
+    assert (tmp_path / "title_dark-crisis.json").exists()  # the old file stays
+
+
+def test_an_older_slug_only_cache_file_holding_a_redirects_target_is_read_only_for_a_known_redirect(api, tmp_path):
+    (tmp_path / "title_magic-ruler.json").write_text(json.dumps({"pageid": 9, "title": "Spell Ruler", "revisions": []}))
+    assert y.page_by_title("Magic ruler", tmp_path)["pageid"] == 5  # a title alike, but no known redirect: fetched
+    assert [c["titles"] for c in api] == ["Magic ruler"]
+    assert y.page_by_title("Magic Ruler", tmp_path)["pageid"] == 9  # Yugipedia redirects it to Spell Ruler
+    assert [c["titles"] for c in api] == ["Magic ruler"]
+    assert (tmp_path / "title_magic-ruler.json").exists()
 
 
 def test_page_by_title_refresh_replaces_a_cached_page(api, tmp_path):

@@ -168,9 +168,6 @@
    "passcode": 30012506,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:30012506:LCKC-EN019:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1485,9 +1482,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:30113682:LCKC-EN004:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2008,9 +2002,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "realm-of-light-structure-deck-2020-reprint:30126992:SDLI-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3028,9 +3019,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:30208479:YGLD-ENC01:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3981,6 +3969,7 @@
      },
      "number": "CH01-EN019",
      "rarity": "secret_rare",
+     "rawRarity": "New",
      "region": "EN",
      "set": "the-chronicles-deck-the-fallen-the-virtuous-all-foil-edition",
      "tcgplayer": {
@@ -4659,7 +4648,7 @@
      },
      "number": "GLAS-ENSE1",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "gladiator-s-assault-special-edition",
      "tcgplayer": {
       "match": "number+rarity",
@@ -9232,6 +9221,27 @@
      "editions": [
       "first"
      ],
+     "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:secret_rare:emblazoned",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       714084
+      ]
+     },
+     "number": "26LP-EN005",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "limited-pack-world-championship-2026",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "YummySnatchy (Emblazoned Secret Rare)"
+     },
+     "variant": "emblazoned"
+    },
+    {
+     "editions": [
+      "first"
+     ],
      "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:secret_rare:emblazoned-alternate-art",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9248,27 +9258,6 @@
       "name": "YummySnatchy (Emblazoned Alternate Art)"
      },
      "variant": "emblazoned-alternate-art"
-    },
-    {
-     "editions": [
-      "first"
-     ],
-     "id": "limited-pack-world-championship-2026:30581601:26LP-EN005:secret_rare:emblazoned-secret-rare",
-     "identifiers": {
-      "tcgplayerProductIds": [
-       714084
-      ]
-     },
-     "number": "26LP-EN005",
-     "rarity": "secret_rare",
-     "region": "EN",
-     "set": "limited-pack-world-championship-2026",
-     "source": "tcgplayer",
-     "tcgplayer": {
-      "match": "number+rarity",
-      "name": "YummySnatchy (Emblazoned Secret Rare)"
-     },
-     "variant": "emblazoned-secret-rare"
     },
     {
      "editions": [
@@ -9707,9 +9696,6 @@
    "passcode": 30603688,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:30603688:LEDD-ENA03:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11662,7 +11648,7 @@
      },
      "number": "RIRA-ENSE4",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "rising-rampage-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -11795,9 +11781,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:30707994:LODT-EN097:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11814,9 +11797,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:30707994:LODT-EN097:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13385,9 +13365,6 @@
    "passcode": 30811116,
    "prints": [
     {
-     "editions": [
-      "first"
-     ],
      "id": "2014-mega-tin-mega-pack:30811116:MP14-EN010:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14354,9 +14331,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:30914564:IOC-EN069:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15016,7 +14990,7 @@
      },
      "number": "TDIL-ENSE4",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "the-dark-illusion-special-edition",
      "tcgplayer": {
       "match": "number-other-set",

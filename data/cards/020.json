@@ -1853,7 +1853,7 @@
      },
      "number": "MVP1-ENGV1",
      "rarity": "gold_secret_rare",
-     "region": "ENGV",
+     "region": "EN",
      "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-gold-edition",
      "tcgplayer": {
       "match": "number+rarity",
@@ -1872,7 +1872,7 @@
      },
      "number": "MVP1-ENSV1",
      "rarity": "ultra_rare",
-     "region": "ENSV",
+     "region": "EN",
      "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-secret-edition",
      "tcgplayer": {
       "match": "number+rarity",
@@ -1888,7 +1888,7 @@
      },
      "number": "MVP1-ENSE1",
      "rarity": "ultra_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "yu-gi-oh-the-dark-side-of-dimensions-movie-pack-special-edition",
      "tcgplayer": {
       "match": "number+rarity",
@@ -2228,7 +2228,7 @@
      },
      "number": "RATE-ENSE3",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "raging-tempest-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -3546,9 +3546,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "saga-of-blue-eyes-white-dragon-structure-deck-2020-reprint:20277376:SDBE-EN012:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4020,7 +4017,7 @@
      },
      "number": "PRIO-ENSP1",
      "rarity": "ultra_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "primal-origin-sneak-peek-participation-card",
      "tcgplayer": {
       "match": "number-other-set",
@@ -5501,9 +5498,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:20374520:IOC-EN107:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7738,9 +7732,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:20522190:IOC-EN054:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8505,6 +8496,7 @@
      },
      "number": "BLMM-EN017",
      "rarity": "ultra_rare",
+     "rawRarity": "New",
      "region": "EN",
      "set": "battles-of-legend-monster-mayhem",
      "tcgplayer": {
@@ -9799,9 +9791,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:20644748:IOC-EN051:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10056,9 +10045,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:20663556:LODT-EN028:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10188,7 +10174,7 @@
      },
      "number": "DANE-ENSP1",
      "rarity": "ultra_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "dark-neostorm-sneak-peek-participation-card",
      "tcgplayer": {
       "match": "number-other-set",
@@ -11289,7 +11275,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:20726052:25LP-EN017:secret_rare:emblazoned-secret-rare",
+     "id": "limited-pack-world-championship-2025:20726052:25LP-EN017:secret_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651303
@@ -11304,7 +11290,7 @@
       "match": "number+rarity",
       "name": "Maliss C GWC-06 (ESR)"
      },
-     "variant": "emblazoned-secret-rare"
+     "variant": "emblazoned"
     },
     {
      "id": "limited-pack-world-championship-2025:20726052:25LP-EN017:ultra_rare",
@@ -11323,7 +11309,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:20726052:25LP-EN017:ultra_rare:emblazoned-ultra-rare",
+     "id": "limited-pack-world-championship-2025:20726052:25LP-EN017:ultra_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651323
@@ -11338,7 +11324,7 @@
       "match": "number+rarity",
       "name": "Maliss C GWC-06 (EUR)"
      },
-     "variant": "emblazoned-ultra-rare"
+     "variant": "emblazoned"
     }
    ],
    "tcgDate": "2024-12-05"
@@ -11962,7 +11948,7 @@
      },
      "number": "CROS-ENAE1",
      "rarity": "super_rare",
-     "region": "ENAE",
+     "region": "EN",
      "set": "crossed-souls-advance-edition",
      "tcgplayer": {
       "match": "number-other-set",

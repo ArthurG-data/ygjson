@@ -43,8 +43,9 @@ snapshot each source was last imported from: YGOPRODeck's `database_version`, YG
 ## Layout
 
 - `sets/sets.json` lists every set, sorted by id. A set has a `type`, and may have a `series`, a `parent` and an
-  `era`. It lists the `editions` it was printed in, the TCGplayer groups that sell it (`tcgplayerGroupIds`), and
-  `identifiers` for YGOJSON, Yugipedia and Konami's card database. `source` is `ygoprodeck` for a set YGOPRODeck lists
+  `era`. It lists the `editions` it was printed in, the TCGplayer groups that sell it (`tcgplayerGroupIds`: each group
+  is on the one set its latest TCGCSV import matched it to), and `identifiers` for YGOJSON, Yugipedia and Konami's
+  card database. `source` is `ygoprodeck` for a set YGOPRODeck lists
   and `tcgplayer` for a set minted for a TCGplayer group YGOPRODeck lacks, such as `Speed Duel: Battle City Finals`.
 - `sets/eras.json` holds the seven eras and their date windows.
 - `data/cards/<bucket>.json` holds the cards, bucketed by the millions of the card id (`89631139` lives in
@@ -122,6 +123,9 @@ and `Ids.json` ships it.
 decisions a person makes where it cannot: which retired print a new key continues (`prints`) and which prints
 replace a retired id (`successors`). Each cites its evidence. `review/ids.json` lists the retired prints and cards
 whose successors lead to no live id (`dead-end`) or to several (`several`), and this run's set and archetype renames.
+A set's `identity` holds its YGOJSON, Yugipedia and Konami ids and its TCGplayer groups (`tcgplayer:<groupId>`), and
+a new slug sharing one with exactly one vanished slug is that set renamed. So a set `import_tcgcsv.py` minted for an
+unclaimed group hands its slug to the later set that holds the group, instead of standing beside it under a `-2`.
 
 To settle a review row:
 
@@ -179,7 +183,8 @@ places, in this order. YGOPRODeck states none, so the first import guesses `limi
 Edition" and `unlimited` for the rest. YGOJSON states the editions of a set it matches (`1st`, `unlimited`,
 `limited`), which replace the guess. TCGCSV then adds every edition its prices show for the set's singles, where
 TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`. A print lists its own `editions` only when its products are
-priced in fewer editions than its set: 8,089 prints do.
+priced in other editions than its set: 10,255 prints do. That is mostly fewer, but a product of another group that lands
+in a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions.
 
 **Key art.** `releases[0].keyArt` links to YGOPRODeck's set image (910 sets), else to the pack art YGOJSON gives from
 Yugipedia (126 sets). The `source` is the page the image is on. The images are links and are never copied. No source
@@ -207,12 +212,13 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 A print has `id`, `set`, `number` (`LOB-001`), `region`, `rarity`, `editions` where they differ from the set's,
 `identifiers.tcgplayerProductIds` and `tcgplayer`. `region` is the letters between the set prefix and the digits of the
 number: `LOB-EN001` has `EN`, `LOB-001` has none, and `LAVD-ENS05` has `EN` because the letter after the region is a
-slot. The commonest regions are `EN` (45,146 prints), `E` (732) and `PT` (456).
+slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (45,146 prints), `E` (732) and `PT` (456).
 
 **Rarity.** A print's `rarity` is a code from `tools/rarities.py`, which maps YGOPRODeck's and TCGplayer's free text
 onto 41 codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
 `dt_normal_parallel` and so on). Text the table does not know becomes `unknown`, and the print keeps the source's
-string as `rawRarity`. 30 prints are `unknown`; `review/rarities.json` counts each raw string. The table is the one
+string as `rawRarity`, also once TCGplayer's rarity replaces `unknown` (`number+rarity-from-tcgplayer` below). 30 prints
+are `unknown`; `review/rarities.json` counts each raw string. The table is the one
 place that decides a rarity, its finish and its tier. TCGplayer's `Emblazoned Ultra Rare` and `Emblazoned Secret Rare`
 are `ultra_rare` and `secret_rare`: Emblazoned is a treatment, and the product's `(EUR)` or `(ESR)` makes it a version
 (see [Variants](#cards-and-prints)).
@@ -233,8 +239,9 @@ no tier when its rarity is `unknown`.
 | 5 | every other code: the secret families, ghost, starlight, collector's, grand master, Pharaoh's, Millennium secret and gold |
 
 **Child sets.** TCGplayer sells some reprints under a group of their own. A group named `<set> (2020 Date Reprint)`
-or `(2020 Reprint)` becomes a set `<parent id>-2020-reprint`, with the parent's code, type, era and editions and the
-parent set as its `parent`. Its prints are copies of the parent's prints that the group's products name. Nine such
+or `(2020 Reprint)` becomes a set `<parent id>-2020-reprint`, with the parent's code and type and the
+parent set as its `parent`; its era follows its own release date. Its editions are the ones its own group's singles are priced in, or the parent's when
+TCGplayer prices none. Its prints are copies of the parent's prints that the group's products name. Nine such
 sets exist. The group `Invasion of Chaos (25th Anniversary Edition)` becomes `invasion-of-chaos-25th-anniversary-edition`
 the same way. YGOPRODeck lists the other 25th Anniversary Edition sets itself, so they are ordinary sets.
 
@@ -247,11 +254,11 @@ products only when they are the same card at the same rarity, like the Red and B
 
 | `match` | Prints | Evidence |
 |---|---|---|
-| `number+rarity` | 40,985 | the group's set has a print with this number and this rarity |
-| `number+rarity-from-tcgplayer` | 187 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
-| `number` | 443 | the group's set has exactly one print of this number |
-| `number-other-set` | 2,707 | the group's set lacks the number, and exactly one other set has it |
-| `minted` | | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
+| `number+rarity` | 41,618 | the group's set has a print with this number and this rarity |
+| `number+rarity-from-tcgplayer` | 193 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
+| `number` | 436 | the group's set has exactly one print of this number |
+| `number-other-set` | 3,261 | the group's set lacks the number, and exactly one other set has it |
+| `minted` | 674 | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
 
 **Prints from TCGplayer.** YGOPRODeck lags TCGplayer and omits whole sets. When no print anywhere has a product's number
 and its name is exactly one card, `import_tcgcsv.py` creates the print with `source: "tcgplayer"`, in the group's set, or
@@ -281,7 +288,8 @@ the same edition, the print keeps the one pricing the most editions, then the ol
 
 **Aliases.** A card's `aliases` are other English names shops sell it under: YGOPRODeck's `beta_name` (`Red-Eyes B.
 Dragon`) and TCGplayer's product name at any of its prints (`Stellarnova Binding`). A name another card has is never an
-alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`.
+alias, so `Luster Dragon` is not an alias of `Luster Dragon #2`. Each run of `import_tcgcsv` derives TCGplayer's names
+afresh from the products it ties by number, so a name it wrote before never mints a print by itself.
 
 2,352 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
@@ -412,7 +420,9 @@ changes nothing unless a source changed. The downloads are cached under `.cache/
 is fetched on the first run. Yugipedia pages and TCGCSV files are fetched when they are not cached, at one request per
 second and one every half second. YGOJSON has no downloader: put the files of its `v1/aggregate` branch (`cards.json`,
 `sets.json`, `series.json`, `sealedProducts.json`, `meta.json`) in `.cache/ygojson`. To take a newer TCGCSV or
-Yugipedia snapshot, move that cache aside and rebuild.
+Yugipedia snapshot, move that cache aside and rebuild. `import_tcgcsv.py` refuses a TCGCSV listing with no groups or
+no products, and while a group the data holds is missing from the listing or has no products file, it leaves that
+group's products, prints and set as they are.
 
 `validate.py` checks every file against its schema, then every id and reference: print ids follow the rule, a print's
 set exists, no parent loops, no TCGplayer product or group sits on two prints or sets, archetype slugs exist, and a
@@ -428,12 +438,15 @@ caches it leaves `meta.sources` out.
 ```sh
 uv sync --group dev
 uv run pytest
-uv run python tools/validate.py --online
-uv run python tools/legality.py --check
+uv run python tools/validate.py            # offline
+uv run python tools/validate.py --online   # also checks product ids against TCGCSV
+uv run python tools/legality.py --check    # compares with YGOPRODeck's live list
 ```
 
-CI runs those checks on every pull request and on every push to `main`. A `v*` tag also builds the release files with
-the tag's version and attaches them to a GitHub release.
+CI runs only the offline checks (pytest, `validate.py`, and the id ledger check against the previous state) on every
+pull request, every push to `main` and every `v*` tag. The two live checks run weekly and on demand in
+`live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
+that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release.
 
 ## Licence
 

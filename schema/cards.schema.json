@@ -77,7 +77,7 @@
                    "description": "Present on a print YGOPRODeck does not list: minted from a TCGplayer product."},
         "set": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
         "number": {"type": "string", "minLength": 1, "description": "The set number printed on the card (LOB-EN005). Absent on the few prints YGOPRODeck gives none."},
-        "region": {"type": "string", "pattern": "^[A-Z]+$", "description": "The letters between the prefix and the digits of the number (EN, E, PT). Absent when the number has none (LOB-001)."},
+        "region": {"type": "string", "pattern": "^[A-Z]{1,2}$", "description": "The region or language letters after the hyphen of the number (EN, E, PT); the letters a special edition or promo adds after them (TDIL-ENSE3) are not part of it. Absent when the number has none (LOB-001)."},
         "rarity": {"enum": [
           "10000_secret_rare", "collectors_rare", "common", "dt_normal_parallel", "dt_rare_parallel",
           "dt_secret_parallel", "dt_super_parallel", "dt_ultra_parallel", "extra_secret_rare",
@@ -89,7 +89,7 @@
           "starlight_rare", "super_parallel_rare", "super_rare", "super_short_print", "ultimate_rare",
           "ultra_parallel_rare", "ultra_rare", "ultra_secret_rare", "unknown"],
           "description": "A code from tools/rarities.py."},
-        "rawRarity": {"type": "string", "minLength": 1, "description": "The source's rarity string, kept when it mapped to unknown."},
+        "rawRarity": {"type": "string", "minLength": 1, "description": "The source's rarity string, kept when it mapped to unknown, also after TCGplayer's rarity replaced unknown."},
         "editions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["first", "unlimited", "limited"]},
                      "description": "Present only when it differs from the set's editions."},
         "identifiers": {

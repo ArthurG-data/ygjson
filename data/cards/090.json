@@ -3037,7 +3037,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:90241276:25LP-EN002:secret_rare:emblazoned-secret-rare",
+     "id": "limited-pack-world-championship-2025:90241276:25LP-EN002:secret_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651288
@@ -3052,7 +3052,7 @@
       "match": "number+rarity",
       "name": "Snake-Eyes Poplar (ESR)"
      },
-     "variant": "emblazoned-secret-rare"
+     "variant": "emblazoned"
     },
     {
      "id": "limited-pack-world-championship-2025:90241276:25LP-EN002:ultra_rare",
@@ -3071,7 +3071,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:90241276:25LP-EN002:ultra_rare:emblazoned-ultra-rare",
+     "id": "limited-pack-world-championship-2025:90241276:25LP-EN002:ultra_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651308
@@ -3086,7 +3086,7 @@
       "match": "number+rarity",
       "name": "Snake-Eyes Poplar (EUR)"
      },
-     "variant": "emblazoned-ultra-rare"
+     "variant": "emblazoned"
     },
     {
      "editions": [
@@ -4462,9 +4462,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:90337190:IOC-EN082:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6338,9 +6335,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:90440725:LEDD-ENB21:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9536,6 +9530,7 @@
      },
      "number": "L26D-ENS26",
      "rarity": "common",
+     "rawRarity": "2",
      "region": "EN",
      "set": "legendary-modern-decks-2026",
      "tcgplayer": {
@@ -9913,7 +9908,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:90681088:25LP-EN004:secret_rare:emblazoned-secret-rare",
+     "id": "limited-pack-world-championship-2025:90681088:25LP-EN004:secret_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651290
@@ -9928,7 +9923,7 @@
       "match": "number+rarity",
       "name": "Legendary Fire King Ponix (ESR)"
      },
-     "variant": "emblazoned-secret-rare"
+     "variant": "emblazoned"
     },
     {
      "id": "limited-pack-world-championship-2025:90681088:25LP-EN004:ultra_rare",
@@ -9947,7 +9942,7 @@
      }
     },
     {
-     "id": "limited-pack-world-championship-2025:90681088:25LP-EN004:ultra_rare:emblazoned-ultra-rare",
+     "id": "limited-pack-world-championship-2025:90681088:25LP-EN004:ultra_rare:emblazoned",
      "identifiers": {
       "tcgplayerProductIds": [
        651310
@@ -9962,7 +9957,7 @@
       "match": "number+rarity",
       "name": "Legendary Fire King Ponix (EUR)"
      },
-     "variant": "emblazoned-ultra-rare"
+     "variant": "emblazoned"
     },
     {
      "id": "structure-deck-fire-kings:90681088:SR14-EN045:super_rare",
@@ -10098,7 +10093,7 @@
      },
      "number": "PHNI-ENSP1",
      "rarity": "ultra_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "phantom-nightmare",
      "source": "tcgplayer",
      "tcgplayer": {
@@ -12267,9 +12262,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:90873992:LCKC-EN099:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12663,7 +12655,7 @@
      },
      "number": "SBTK-ENSP2",
      "rarity": "common",
-     "region": "ENSP",
+     "region": "EN",
      "set": "speed-duel-trials-of-the-kingdom-sneak-peek-participation-cards",
      "tcgplayer": {
       "match": "number-other-set",
@@ -12687,9 +12679,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENB06:common",
      "number": "YGLD-ENB06",
      "rarity": "common",
@@ -12697,9 +12686,6 @@
      "set": "yugi-s-legendary-decks-2020-reprint"
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENB06:common:b",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12718,9 +12704,6 @@
      "variant": "b"
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENC13:common",
      "number": "YGLD-ENC13",
      "rarity": "common",
@@ -12728,9 +12711,6 @@
      "set": "yugi-s-legendary-decks-2020-reprint"
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:90876561:YGLD-ENC13:common:c",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12749,10 +12729,6 @@
      "variant": "c"
     },
     {
-     "editions": [
-      "first",
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks:90876561:YGLD-ENB06:common",
      "number": "YGLD-ENB06",
      "rarity": "common",
@@ -12782,10 +12758,6 @@
      "variant": "b"
     },
     {
-     "editions": [
-      "first",
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks:90876561:YGLD-ENC13:common",
      "number": "YGLD-ENC13",
      "rarity": "common",
@@ -14157,7 +14129,7 @@
      },
      "number": "REDU-ENSE1",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "return-of-the-duelist-special-edition",
      "tcgplayer": {
       "match": "number+rarity",

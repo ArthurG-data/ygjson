@@ -1,5 +1,8 @@
 name: ci
 
+# Offline checks only: nothing here reads a live source, so a new ban list or a
+# delisted product cannot fail an unrelated pull request or block a release.
+# The live checks run weekly in live-checks.yml.
 on:
   pull_request:
   push:
@@ -12,27 +15,65 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: astral-sh/setup-uv@v5
-      - run: uv sync --group dev
+        with:
+          enable-cache: true
+      - run: uv sync --locked --group dev
       - run: uv run pytest -q
-      - run: uv run python tools/ids.py --check-against origin/${{ github.base_ref || 'main' }}
-      - run: uv run python tools/validate.py --online
-      - run: uv run python tools/legality.py --check
+      - run: uv run python tools/validate.py
+      - name: Check the id ledger against the previous state
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          BEFORE: ${{ github.event.before }}
+          REF_TYPE: ${{ github.ref_type }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            base="origin/$BASE_REF"
+          elif [ "$REF_TYPE" = "tag" ]; then
+            # The previous release tag (v*), if there is one: another tag is not a release.
+            if ! base="$(git describe --tags --abbrev=0 --match 'v*' 'HEAD^' 2>/dev/null)"; then
+              echo "No earlier release tag: skipping the ledger check."
+              exit 0
+            fi
+          elif [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] \
+              && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            base="$BEFORE"
+          else
+            # First push of a branch, or a force-push whose old tip is not in the clone: compare with the parent commit.
+            base="HEAD~1"
+          fi
+          echo "Checking the ledger against $base"
+          uv run python tools/ids.py --check-against "$base"
 
   release:
     needs: validate
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: uv sync --group dev
+        with:
+          enable-cache: true
+      - run: uv sync --locked --group dev
+      - name: Check the tag matches pyproject.toml
+        run: |
+          set -euo pipefail
+          tag_version="${GITHUB_REF_NAME#v}"
+          project_version="$(uv run python -c 'import tomllib; print(tomllib.load(open("pyproject.toml", "rb"))["project"]["version"])')"
+          if [ "$tag_version" != "$project_version" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match pyproject.toml version $project_version. Bump the version or retag."
+            exit 1
+          fi
       - run: uv run python tools/build.py --version "${GITHUB_REF_NAME#v}"
       - run: gh release create "$GITHUB_REF_NAME" dist/AllSets.json dist/AllCards.json dist/AllPrintings.json dist/AllArchetypes.json dist/AllProducts.json dist/Legality.json dist/Ids.json --generate-notes
         env:

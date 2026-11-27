@@ -191,9 +191,12 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
 
 
 def set_identity(s: dict) -> set[str]:
-    """The ids a set carries that survive a rename: its YGOJSON id, Yugipedia page id and Konami database ids."""
+    """The ids a set carries that survive a rename: its YGOJSON id, Yugipedia page id, Konami database ids and
+    TCGplayer group ids. A group is on one set only (validate.py refuses one on two), so a set import_tcgcsv minted
+    for a group and a later set holding that group are the same set."""
     ident = s.get("identifiers") or {}
     found = {f"konami:{i}" for i in ident.get("konamiDatabaseIds", [])}
+    found |= {f"tcgplayer:{g}" for g in s.get("tcgplayerGroupIds", [])}
     if "ygojsonId" in ident:
         found.add(f"ygojson:{ident['ygojsonId']}")
     if "yugipediaId" in ident:

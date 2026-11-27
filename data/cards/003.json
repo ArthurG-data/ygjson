@@ -1782,6 +1782,7 @@
      },
      "number": "KC01-EN001",
      "rarity": "ultra_rare",
+     "rawRarity": "New",
      "region": "EN",
      "set": "25th-anniversary-ultimate-kaiba-set",
      "tcgplayer": {
@@ -2026,9 +2027,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "legendary-duelists-season-1:3113667:LDS1-EN077:ultra_rare",
      "number": "LDS1-EN077",
      "rarity": "ultra_rare",
@@ -5707,9 +5705,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:3370104:LEDD-ENB07:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5939,7 +5934,7 @@
      },
      "number": "ABPF-ENSP1",
      "rarity": "ultra_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "absolute-powerforce-sneak-peek-participation-card",
      "tcgplayer": {
       "match": "number-other-set",
@@ -6180,9 +6175,6 @@
    "passcode": 3405259,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:3405259:LCKC-EN021:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6659,7 +6651,7 @@
      },
      "number": "DREV-ENSE1",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "duelist-revolution-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -7323,9 +7315,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:3493978:IOC-EN071:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7656,9 +7645,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:3510565:IOC-EN068:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9101,7 +9087,7 @@
      },
      "number": "ABYR-ENSE1",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "abyss-rising-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -10170,9 +10156,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:3657444:LEDD-ENB06:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10400,9 +10383,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-dragon-decks-2020-reprint:3659803:LEDD-ENB16:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11780,9 +11760,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:3773196:IOC-EN012:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14547,7 +14524,11 @@
    "id": "3957130",
    "identifiers": {
     "konamiId": 22151,
-    "ygoprodeckId": 3957130
+    "ygojsonId": "eb5973de-baad-428b-b6c7-f4deb2c8350a",
+    "ygoprodeckId": 3957130,
+    "yugipediaIds": [
+     1141209
+    ]
    },
    "images": [
     {
@@ -14568,7 +14549,9 @@
    "monsterType": "Dragon",
    "name": "Trisborrel Dragon",
    "names": {
-    "en": "Trisborrel Dragon"
+    "en": "Trisborrel Dragon",
+    "ja": "トゥリスヴァレル・ドラゴン",
+    "zh-CN": "三叶枪管龙"
    },
    "ocgDate": "2025-10-25",
    "passcode": 3957130,

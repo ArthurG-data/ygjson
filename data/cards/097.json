@@ -2569,9 +2569,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "saga-of-blue-eyes-white-dragon-structure-deck-2020-reprint:97077563:SDBE-EN037:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3939,9 +3936,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:97169186:IOC-EN093:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4974,9 +4968,6 @@
    "passcode": 97234686,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:97234686:LODT-EN075:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5561,6 +5552,7 @@
      },
      "number": "L5DD-ENY16",
      "rarity": "common",
+     "rawRarity": "2",
      "region": "EN",
      "set": "legendary-5d-s-decks",
      "tcgplayer": {
@@ -5663,7 +5655,7 @@
      },
      "number": "ORCS-ENSE1",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "order-of-chaos-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -5743,10 +5735,11 @@
      },
      "number": "SDWD-EN018",
      "rarity": "common",
+     "rawRarity": "2",
      "region": "EN",
      "set": "structure-deck-blue-eyes-white-destiny",
      "tcgplayer": {
-      "match": "number+rarity",
+      "match": "number+rarity-from-tcgplayer",
       "name": "Effect Veiler"
      }
     },
@@ -6392,9 +6385,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "yugi-s-legendary-decks-2020-reprint:97342942:YGLD-ENB24:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7470,9 +7460,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "invasion-of-chaos-25th-anniversary-edition:97439308:IOC-EN038:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7697,9 +7684,6 @@
    "passcode": 97452817,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:97452817:LODT-EN015:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7945,7 +7929,7 @@
      },
      "number": "CORI-ENSP1",
      "rarity": "secret_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "chaos-origins",
      "source": "tcgplayer",
      "tcgplayer": {
@@ -8300,6 +8284,7 @@
      },
      "number": "BLMM-EN031",
      "rarity": "ultra_rare",
+     "rawRarity": "New",
      "region": "EN",
      "set": "battles-of-legend-monster-mayhem",
      "tcgplayer": {
@@ -9282,7 +9267,7 @@
      },
      "number": "DUAD-ENSP1",
      "rarity": "secret_rare",
-     "region": "ENSP",
+     "region": "EN",
      "set": "duelist-s-advance",
      "source": "tcgplayer",
      "tcgplayer": {
@@ -9668,9 +9653,6 @@
    "passcode": 97574404,
    "prints": [
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "light-of-destruction-2020-reprint:97574404:LODT-EN012:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10134,9 +10116,6 @@
      }
     },
     {
-     "editions": [
-      "unlimited"
-     ],
      "id": "legendary-collection-kaiba-mega-pack-2020-reprint:97590747:LCKC-EN002:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13156,7 +13135,7 @@
      },
      "number": "PRIO-ENDE3",
      "rarity": "super_rare",
-     "region": "ENDE",
+     "region": "EN",
      "set": "primal-origin-deluxe-edition",
      "tcgplayer": {
       "match": "number-other-set",
@@ -15111,7 +15090,7 @@
      },
      "number": "MACR-ENSE3",
      "rarity": "super_rare",
-     "region": "ENSE",
+     "region": "EN",
      "set": "maximum-crisis-special-edition",
      "tcgplayer": {
       "match": "number-other-set",
