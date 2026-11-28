@@ -158,9 +158,20 @@ per asset.
    the new fields. This must be released before step 3 publishes, because AutoMana reads `releases/latest`.
 2. **ygjson.** UUIDs on every record, oracles, card text, then the non-English printings, with checks and README.
 3. **Release.** ygjson 0.4.0, published by hand once step 1 is out. The automatic refresh publishes later changes.
-4. **AutoMana, second (the handoff).** It stores ygjson's UUIDs as its external ids instead of hashing ygjson's id
-   strings into its own (`ygjson_build.py` does `uuid5` of `print:<id>` today). It imports the non-English printings
-   and the text, and its API accepts a ygjson UUID (set, card, print, printing, oracle) to fetch data.
+4. **AutoMana, second (the handoff).** ygjson writes a handoff document for AutoMana, its issues to file there:
+   - **Importer.** Store ygjson's UUIDs as AutoMana's external ids instead of hashing ygjson's id strings into its own
+     (`ygjson_build.py` does `uuid5` of `print:<id>` today). Import the non-English printings, the card text and the
+     `oracleId`.
+   - **API.** Accept a ygjson UUID (set, card, print, printing, oracle) as input to fetch AutoMana's data.
+   - **The underlying view.** `yugioh_catalog.card_search` already has one row per printing (a print in one
+     language and edition), and its text falls back to the printing's language. Three things change:
+     - It needs the printing's language as a column to filter on.
+     - Its grid tile (`rep`) is per card with an English name. It has to choose English first, the way
+       `riftbound_catalog.card_search` does, or become per card and language, the way One Piece's does.
+     - `card_catalog.v_printing_lang` marks every Yu-Gi-Oh! printing `is_default_lang = true`. That has to compare
+       the printing's language with the default instead.
+   - **UI.** Display a printing's language, and filter the card grid, the search and a card page's print table by
+     language.
 5. **The Asian plan**, written once 0.4.0 is out.
 
 ## Later: the Asian sets
