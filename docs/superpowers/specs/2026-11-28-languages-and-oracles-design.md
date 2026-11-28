@@ -83,6 +83,15 @@ Picked in the conversation:
 3. **Western now, and a plan for the Asian sets later.** Chosen. The Western languages fit what ygjson already
    models. The Asian sets are a second catalogue, easier to design once printings carry a language.
 
+For the source, YGOJSON stopped on 2025-10-25, so newer sets would get no other language. Three ways were considered:
+
+1. YGOJSON only, with the gap stated and Yugipedia as a later project.
+2. **YGOJSON for what it has, and Yugipedia for the sets and cards YGOJSON lacks.** Chosen. YGOJSON already did the
+   matching for the older sets, and ygjson already reads Yugipedia, so no new source is added and the languages stay
+   current.
+3. Yugipedia for every language. This would be one current source, but it redoes the matching YGOJSON did for about
+   164,000 printings.
+
 On names, the owner chose "same features, not necessarily the same names". ygjson keeps its ids and its
 print/printing split, and adds what is missing. It does not copy pkmjson's keys.
 
@@ -123,6 +132,29 @@ The model stays: a **card** (gameplay card), a **print** (the card in one set, a
 - Printing ids keep their form, `<print uuid>:<language>:<edition>`, and their key `<print key>:<language>:<edition>`.
   French printings come in as new ledger entries, added like any other new id.
 
+### Newer sets and cards, from Yugipedia
+
+YGOJSON stays the source for what it has. Yugipedia fills what it lacks, through `tools/yugipedia.py` (the API, one
+request a second, `maxlag`, the page cache).
+
+- **Printings.** A set of ours with a Yugipedia page gets, for each language YGOJSON gives it no locale in, the page
+  `Set Card Lists:<page title> (TCG-<XX>)`, where `XX` is `FR`, `DE`, `IT`, `SP` or `PT`. Such pages exist for 2026
+  sets (`Set Card Lists:Burst Protocol (TCG-FR)`). The page is one `{{Set list|region=FR|rarities=<default>|...}}`
+  of rows `<number>; <English name>; <rarities>`, a row without rarities taking the default. A row's card is the card
+  of that English name (or alias). Its print is our print of the set with the same card, the same number after the
+  region, and that rarity. The rules for several prints and colour variants above apply, and a row they do not place
+  goes to review. A missing page means the set has no printing in that language.
+- **Text.** A card with no YGOJSON text in a language takes `<lang>_text` from its Yugipedia card page (by
+  `yugipediaIds`, else by its English name), with the pendulum effect where the page gives one. `translated_text` is
+  an unofficial translation and is not shipped. A card printed recently may have its names before its text (a 2026
+  card has `fr_name` but no `fr_text` yet); it gets the text on a later run.
+- **Names.** A card with no YGOJSON name in a language takes `<lang>_name` from the same page.
+- **Freshness.** Lists change in a set's first weeks, as rarities and numbers are confirmed. The set card lists of
+  sets released in the last 90 days, and the card pages of cards first released in the last 90 days, are fetched
+  again on every refresh. Older pages come from the cache.
+- Yugipedia's `SP` is `es`. Its rarity names go through `rarities.py`, and a name it lacks is `unknown` with the raw
+  text kept, as today.
+
 ### Set releases
 
 A set gains a release per language, from YGOJSON's locales: `language`, `name` (YGOJSON's name in that language, else
@@ -135,7 +167,8 @@ stays the first release, so the code that reads `releases[0]` (eras, rename evid
   English comes from YGOPRODeck (`desc`, and `pend_desc`/`monster_desc` on Pendulum monsters), which is current and
   covers every card. The other languages come from YGOJSON. `pendulumEffect` appears only on Pendulum monsters.
 - A text marked `official: false` is not shipped, nor is an empty one.
-- `NOTICE` says that card text is Konami's, reproduced as Konami published it, gathered by YGOPRODeck (English) and YGOJSON (the other languages). The line "No
+- `NOTICE` says that card text is Konami's, reproduced as Konami published it, gathered by YGOPRODeck (English),
+  YGOJSON and Yugipedia (the other languages), and that the per-language set lists come from Yugipedia. The line "No
   effect text ... is copied into the data" goes.
 - The SQLite package gains the text, one row per card and language.
 
@@ -187,8 +220,8 @@ ygjson's plan changes ygjson only. AutoMana's work is handed off as documents, f
 2. **AutoMana, first handoff.** A short document: its importer skips a printing whose language is not English instead
    of failing (`ygjson_build.py:290` raises today). AutoMana reads `releases/latest`, so this must be deployed before
    step 3 merges.
-3. **ygjson, the non-English printings.** The pull request stays open until the owner confirms step 2 is deployed.
-   Once it merges, the weekly refresh releases it.
+3. **ygjson, the non-English printings,** from YGOJSON, then from Yugipedia for what YGOJSON lacks. These pull
+   requests stay open until the owner confirms step 2 is deployed. Once they merge, the weekly refresh releases them.
 4. **AutoMana, second (the handoff).** ygjson writes a handoff document for AutoMana, its issues to file there:
    - **Importer.** Store ygjson's UUIDs as AutoMana's external ids instead of hashing ygjson's id strings into its own
      (`ygjson_build.py` does `uuid5` of `print:<id>` today). Import the non-English printings, the card text and the
