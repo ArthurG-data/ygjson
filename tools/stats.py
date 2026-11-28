@@ -102,6 +102,9 @@ def counts(d: dict, reviews: Mapping[str, dict]) -> dict[str, int]:
     out["prints_several_products"] = sum(1 for p in prints
                                          if len(p.get("identifiers", {}).get("tcgplayerProductIds", [])) > 1)
     out["prints_no_product"] = out["prints"] - out["prints_with_product"]
+    out["prints_with_scan"] = sum(1 for p in prints if p.get("scans"))
+    out["printings_with_scan"] = sum(len(p.get("scans", {}).keys() & set(ygjson.print_editions(
+        p, by_id[p["set"]].get("editions", [])))) for p in prints)
 
     members = collections.Counter(a for c in cards for a in c.get("archetypes", []))
     out["archetypes.ygoprodeck"] = sum(1 for a in archetypes if a["source"] == "ygoprodeck")

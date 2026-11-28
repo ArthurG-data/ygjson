@@ -71,6 +71,24 @@ ALIASES: dict[str, str] = {
     "Emblazoned Secret Rare": "secret_rare",
 }
 
+# YGOJSON's rarity names, in its sets' contents. A colour suffix ("rare-blue") marks a version, which is not here.
+# kcultra, kccommon and kcrare (Kaiba Corporation), the Duel Terminal short print dtpsp and the few parallels of
+# extra secret, ghost and rare have no code of ours and are left out too.
+YGOJSON: dict[str, str] = {
+    "common": "common", "rare": "rare", "super": "super_rare", "ultra": "ultra_rare", "secret": "secret_rare",
+    "25thsecret": "qc_secret_rare", "ultimate": "ultimate_rare", "commonparallel": "normal_parallel_rare",
+    "prismaticsecret": "prismatic_secret", "platinumsecret": "platinum_secret_rare", "collectors": "collectors_rare",
+    "shortprint": "short_print", "starfoil": "starfoil_rare", "gold": "gold_rare", "dtpc": "dt_normal_parallel",
+    "shatterfoil": "shatterfoil_rare", "starlight": "starlight_rare", "mosaic": "mosaic_rare",
+    "goldsecret": "gold_secret_rare", "premiumgold": "premium_gold_rare", "ultraparallel": "ultra_parallel_rare",
+    "extrasecret": "extra_secret_rare", "ghost": "ghost_rare", "dtupr": "dt_ultra_parallel",
+    "millenium": "millennium_rare", "superparallel": "super_parallel_rare", "dtspr": "dt_super_parallel",
+    "platinum": "platinum_rare", "secretparallel": "secret_parallel_rare", "pharaohs": "pharaohs_rare",
+    "dtscpr": "dt_secret_parallel", "dtrpr": "dt_rare_parallel", "goldghost": "ghost_gold_rare",
+    "ultrasecret": "ultra_secret_rare", "milleniumultra": "millennium_ultra", "milleniumgold": "millennium_gold_rare",
+    "10000secret": "10000_secret_rare", "milleniumsecret": "millennium_secret",
+}
+
 UNKNOWN = "unknown"
 CODES: tuple[str, ...] = (*sorted(set(ALIASES.values())), UNKNOWN)
 

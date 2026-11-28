@@ -306,3 +306,49 @@ def test_names_from_ygojson_lose_stray_spaces_but_keep_ideographic_ones():
                                               "fr": {"name": "  "}}))
     assert card["names"] == {"en": "Destiny HERO - Defender", "es": "HÉROE del Destino - Defender",
                              "ja": "Ｄ－ＨＥＲＯ　ディフェンドガイ"}
+
+
+# --- scans ------------------------------------------------------------------------------------------------------
+
+def scan_world(entries, images, prints):
+    """One matched set (LOB, locale en, prefix LOB-EN) holding Dark Magician (card 46986414, YGOJSON card "dm")."""
+    g = their_set("g", "Legend of Blue Eyes White Dragon", "LOB-EN", cardImages=images)
+    g["contents"] = [{"locales": ["en"], "cards": [{"card": "dm", **e} for e in entries]}]
+    card = {**our_card("46986414"), "prints": [{"set": "lob", "number": "LOB-EN005", **p} for p in prints]}
+    return {"lob": (g, "exact_name")}, {"46986414": {"id": "dm"}}, [card]
+
+
+def test_a_scan_lands_on_the_print_of_its_number_and_rarity():
+    found, card_found, cards = scan_world(
+        [{"id": "p1", "suffix": "005", "rarity": "ultra"}, {"id": "p2", "suffix": "005", "rarity": "secret"}],
+        {"1st": {"p1": "https://y/1st.png", "p2": "https://y/s.png"}, "unlimited": {"p1": "https://y/unl.png"}},
+        [{"id": "u", "rarity": "ultra_rare"}, {"id": "s", "rarity": "secret_rare"}])
+    scans, unplaced = imp.match_scans(found, card_found, cards)
+    assert scans == {"u": {"first": "https://y/1st.png", "unlimited": "https://y/unl.png"},
+                     "s": {"first": "https://y/s.png"}}
+    assert unplaced == []
+    assert imp.apply_scans(cards, scans) == 2
+    assert list(cards[0]["prints"][0]["scans"]) == ["first", "unlimited"]  # in edition order
+
+
+def test_one_printing_and_one_print_of_a_number_match_whatever_the_rarity():
+    found, card_found, cards = scan_world([{"id": "p1", "suffix": "005", "rarity": "ultra"}],
+                                          {"1st": {"p1": "https://y/1.png"}}, [{"id": "u", "rarity": "unknown"}])
+    assert imp.match_scans(found, card_found, cards)[0] == {"u": {"first": "https://y/1.png"}}
+
+
+def test_an_unsettled_number_goes_to_review_and_other_regions_and_minted_prints_are_passed_over():
+    found, card_found, cards = scan_world(
+        [{"id": "p1", "suffix": "005", "rarity": "ultra"}, {"id": "p2", "suffix": "005", "rarity": "super"},
+         {"id": "p3", "suffix": "005", "rarity": "rare-blue"}, {"id": "p4", "suffix": "099", "rarity": "rare"}],
+        {"1st": {"p1": "https://y/1.png", "p2": "https://y/2.png", "p3": "https://y/3.png", "p4": "https://y/4.png"}},
+        [{"id": "a", "rarity": "rare"}, {"id": "b", "rarity": "common"},
+         {"id": "v", "rarity": "rare", "variant": "blue", "source": "tcgplayer"}])
+    scans, unplaced = imp.match_scans(found, card_found, cards)
+    assert scans == {}
+    assert [(u["ygojsonId"], u["number"]) for u in unplaced] == [("p1", "LOB-EN005"), ("p2", "LOB-EN005")]
+
+
+def test_apply_scans_takes_away_a_scan_no_longer_found():
+    cards = [{"prints": [{"id": "u", "scans": {"first": "https://y/old.png"}}]}]
+    assert imp.apply_scans(cards, {}) == 0 and "scans" not in cards[0]["prints"][0]

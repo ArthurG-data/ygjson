@@ -299,6 +299,15 @@ def test_a_printing_of_a_print_with_two_products_is_priced_by_the_one_its_editio
     assert first["tcgplayer"] == {"name": "Dark Magician", "match": "number+rarity"}  # the map stays in the data
 
 
+def test_a_printing_links_the_scan_of_its_edition():
+    cards = copy.deepcopy(CARDS)
+    cards["046"]["cards"][0]["prints"][0]["scans"] = {"first": "https://ms.yugipedia.com/a.png"}
+    assert errors(cards=cards) == []
+    printings = ygjson.flatten(SETS, cards, ARCHETYPES)["printings"]
+    assert printings[f"{PRINT_A}:en:first"]["scan"] == "https://ms.yugipedia.com/a.png"
+    assert "scan" not in printings[f"{PRINT_A}:en:unlimited"]
+
+
 def test_edition_products_must_name_the_prints_own_products_and_editions():
     assert errors(cards=_two_products({"first": 11, "unlimited": 10})) == []
     assert errors(cards=_two_products({"first": 12})) == [

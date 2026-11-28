@@ -16,6 +16,8 @@ sources.json records the commit read. It adds only:
               to our name; prefix alone when unique on both sides.
   cards       identifiers.ygojsonId / yugipediaIds, identifiers.konamiId (only when the card has none), and
               names.<lang> for every language but en. A card matches by YGOJSON's YGOPRODeck id, else by a password.
+  prints      scans: {edition: url}, the Yugipedia scan of the print in each edition, from the English locales'
+              cardImages of the print's matched set (see match_scans). Written afresh on every run.
   archetypes  each YGOJSON series is matched to one of our archetypes by name; a match gets names, isArchetype and
               identifiers. Archetypes with no series get isArchetype true. A series flagged archetype that we lack
               is added (source ygojson) and its members' cards gain its slug.
@@ -28,8 +30,10 @@ import argparse
 import collections
 import json
 import re
+from collections.abc import Mapping, Sequence
 
 import decisions
+import rarities
 import sources
 import ygjson
 import ygojson_aggregate
@@ -305,8 +309,76 @@ def add_memberships(cards: list[dict], archetypes: list[dict], matched: dict[str
     return count
 
 
+def match_scans(found: Mapping[str, tuple[dict, str]], card_found: Mapping[str, dict],
+                cards: list[dict]) -> tuple[dict[str, dict[str, str]], list[dict]]:
+    """{print id: {edition: scan url}} from the cardImages of each matched set's English locales (`found`, from
+    match_sets; `card_found` from match_cards), and the printings
+    with a scan that could not be placed. A YGOJSON printing is the locale's prefix plus its suffix (LOB-EN + 005) for
+    one card. Its print is the one YGOPRODeck print of that set, card and number at its rarity, else the only
+    YGOPRODeck print of that number when YGOJSON has only one printing of it there (a rarity the two disagree on, or
+    one still unknown). A number we have no print of is another region's printing (AGOV-AE001) and is passed over; a
+    colour version (rare-blue) is a print import_tcgcsv mints, so it is passed over too, as are the prints it mints."""
+    card_of = {g["id"]: cid for cid, g in card_found.items()}
+    ours: dict[tuple, list[dict]] = collections.defaultdict(list)
+    for c in cards:
+        for p in c["prints"]:
+            if p.get("source") != "tcgplayer" and not p.get("variant"):
+                ours[(p["set"], c["id"], p.get("number"))].append(p)
+    scans: dict[str, dict[str, str]] = collections.defaultdict(dict)
+    unplaced = []
+    for sid, (g, _) in sorted(found.items()):
+        for code, locale in sorted((g.get("locales") or {}).items()):
+            if code not in ENGLISH_LOCALES or not locale.get("prefix"):
+                continue
+            images = locale.get("cardImages") or {}
+            printings: dict[tuple, list[dict]] = collections.defaultdict(list)
+            for content in g.get("contents", []):
+                for e in content.get("cards", []) if code in content.get("locales", []) else ():
+                    if e.get("card") in card_of and e.get("suffix") and "-" not in (e.get("rarity") or ""):
+                        printings[(sid, card_of[e["card"]], locale["prefix"] + e["suffix"])].append(e)
+            for key, entries in sorted(printings.items()):
+                prints = ours.get(key, [])
+                for e in entries if prints else ():
+                    scanned = {_EDITIONS[ed]: urls[e["id"]] for ed, urls in images.items() if e["id"] in urls}
+                    if not scanned:
+                        continue
+                    rarity = rarities.YGOJSON.get(e.get("rarity") or "")
+                    exact = [p for p in prints if p["rarity"] == rarity]
+                    twins = [x for x in entries if rarities.YGOJSON.get(x.get("rarity") or "") == rarity]
+                    if rarity and len(exact) == 1 and len(twins) == 1:
+                        target = exact[0]
+                    elif len(prints) == 1 and len(entries) == 1:
+                        target = prints[0]
+                    else:
+                        unplaced.append({"set": sid, "card": key[1], "number": key[2], "rarity": e.get("rarity"),
+                                         "ygojsonId": e["id"],
+                                         "reason": f"{_n(len(prints), 'print')} of the number, "
+                                                   f"{_n(len(entries), 'YGOJSON printing')}, none settled by rarity"})
+                        continue
+                    for edition, url in scanned.items():
+                        scans[target["id"]].setdefault(edition, url)
+    return dict(scans), unplaced
+
+
+def _n(count: int, noun: str) -> str:
+    return f"{count} {noun}{'' if count == 1 else 's'}"
+
+
+def apply_scans(cards: list[dict], scans: dict[str, dict[str, str]]) -> int:
+    """Give each print the scans match_scans found for it and take away any it no longer has. Returns the number of
+    prints with scans."""
+    n = 0
+    for c in cards:
+        for p in c["prints"]:
+            p.pop("scans", None)
+            if p["id"] in scans:
+                p["scans"] = {e: scans[p["id"]][e] for e in _EDITION_ORDER if e in scans[p["id"]]}
+                n += 1
+    return n
+
+
 def review_body(sets: list[dict], found: dict, theirs: list[dict], cards: list[dict], card_found: dict,
-                skipped: list[dict]) -> dict:
+                skipped: list[dict], unplaced: Sequence[dict] = ()) -> dict:
     claimed = {g["id"] for g, _ in found.values()}
     by_id = {s["id"]: s for s in sets}
     return {
@@ -324,6 +396,7 @@ def review_body(sets: list[dict], found: dict, theirs: list[dict], cards: list[d
         "setsMatchedByFallback": [{"id": sid, "name": by_id[sid]["name"], "ygojsonName": g["name"]["en"],
                                    "code": by_id[sid]["code"], "prefix": english(g).get("prefix"), "rule": rule}
                                   for sid, (g, rule) in sorted(found.items()) if rule != "exact_name"],
+        "scansUnplaced": list(unplaced),
     }
 
 
@@ -366,6 +439,9 @@ def main() -> None:
     for cid, g in card_found.items():
         apply_card(by_card[cid], g)
 
+    scans, unplaced = match_scans(found, card_found, cards)
+    with_scans = apply_scans(cards, scans)
+
     series = _read("series.json")
     matched, added, skipped = sync_archetypes(archetypes["archetypes"], series)
     memberships = add_memberships(cards, archetypes["archetypes"], matched)
@@ -374,7 +450,7 @@ def main() -> None:
     for bucket, body in files.items():
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
     ygjson.save_json(ygjson.ARCHETYPES, archetypes)
-    review = review_body(sets, found, theirs, cards, card_found, skipped)
+    review = review_body(sets, found, theirs, cards, card_found, skipped, unplaced)
     decisions.save_review(REVIEW, review)
     sources.record("ygojson", sources.ygojson(commit, json.loads((CACHE / "meta.json").read_text(encoding="utf-8"))))
 
@@ -384,6 +460,7 @@ def main() -> None:
           f"{len(review['setsUnmatched'])} of ours unmatched, {len(review['ygojsonSetsUnclaimed'])} of "
           f"{len(theirs)} YGOJSON sets with an English release unclaimed")
     print(f"cards: {len(card_found)} of {len(cards)} matched, {len(review['cardsUnmatched'])} unmatched")
+    print(f"prints: {with_scans} with a Yugipedia scan, {len(review['scansUnplaced'])} scans unplaced")
     own = [a for a in archetypes["archetypes"] if a["source"] != SOURCE]
     print(f"archetypes: {sum(1 for a in own if a['slug'] in matched)} of {len(own)} matched, "
           f"{len(added)} added from {len(series)} series, {len(skipped)} skipped, "
