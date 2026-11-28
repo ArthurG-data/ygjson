@@ -87,6 +87,12 @@ def counts(d: dict, reviews: Mapping[str, dict]) -> dict[str, int]:
     out["prints_voted_editions"] = sum(1 for p in prints if "editions" in p and mixes_limited(by_id.get(p["set"], {}))
                                        and not p.get("identifiers", {}).get("tcgplayerProductIds"))
     out["cards_monster"] = sum(1 for c in cards if c["kind"] == "monster")
+    printless = [c for c in cards if not c["prints"]]
+    out["cards_no_print"] = len(printless)
+    out["cards_no_print.token"] = sum(1 for c in printless if c["kind"] == "token")
+    out["cards_no_print.ocg"] = sum(1 for c in printless if c["kind"] != "token" and c.get("ocgDate")
+                                    and not c.get("tcgDate"))
+    out["cards_no_print.other"] = out["cards_no_print"] - out["cards_no_print.token"] - out["cards_no_print.ocg"]
     out["cards_konami"] = sum(1 for c in cards if "konamiId" in c["identifiers"])
     out["cards_ygojson"] = sum(1 for c in cards if "ygojsonId" in c["identifiers"])
     for r, n in collections.Counter(p.get("region") for p in prints).items():

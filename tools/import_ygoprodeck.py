@@ -6,6 +6,9 @@ YGOPRODeck is the lead source: a set is one distinct set name, a card is one YGO
 (set, card, set number, rarity). The files are merged with what is already on disk by id: this tool owns the facts
 YGOPRODeck states, and keeps what the later tools add (identifiers, names in other languages, TCGplayer matches,
 parents, series, refined types and editions), so it can be rerun after any of them.
+
+A YGOPRODeck placeholder is not a card: "???" (149694341) stands in for the cards a player left unrevealed in a
+tournament deck list. It is left out (is_placeholder).
 """
 from __future__ import annotations
 
@@ -15,6 +18,7 @@ import html
 import json
 import re
 from collections.abc import Container, Mapping, Set
+from pathlib import Path
 from urllib.parse import quote
 
 import decisions
@@ -147,6 +151,11 @@ def _present(value) -> bool:
     return value is not None
 
 
+def is_placeholder(raw: dict) -> bool:
+    """Whether a YGOPRODeck card is a placeholder for deck lists, not a card: its page is /card/placeholder-<n>."""
+    return "/card/placeholder-" in raw.get("ygoprodeck_url", "")
+
+
 def card_entry(raw: dict) -> dict:
     """The card without its prints."""
     card_id = str(raw["id"])
@@ -261,6 +270,8 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
     files: dict[str, list[dict]] = collections.defaultdict(list)
     duplicates, unknown = 0, collections.Counter[str]()
     for raw in sorted(card_list, key=lambda r: r["id"]):
+        if is_placeholder(raw):
+            continue
         card = card_entry(raw)
         if "archetypes" in card:
             card["archetypes"] = [archetype_slugs[ygjson.clean_archetype_name(raw["archetype"])]]
@@ -277,6 +288,16 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
             files[ygjson.card_bucket(cid)].append(prev)
     bodies = {bucket: {"cards": sorted(cards, key=lambda c: int(c["id"]))} for bucket, cards in sorted(files.items())}
     return bodies, {"duplicates": duplicates, "unknown": unknown}
+
+
+def write_cards(files: Mapping[str, dict], cards_dir: Path = ygjson.CARDS) -> None:
+    """Write each bucket of `files`, and delete a bucket file left with no card: another tool reads every file there,
+    so a card dropped from YGOPRODeck would otherwise come back from it."""
+    for bucket, body in files.items():
+        ygjson.save_json(cards_dir / f"{bucket}.json", body)
+    for stale in sorted(cards_dir.glob("*.json")):
+        if stale.stem not in files:
+            stale.unlink()
 
 
 def build_archetypes(card_list: list[dict], listed: list[str], existing: dict, held: Mapping[str, str] = {},
@@ -331,8 +352,7 @@ def main() -> None:
                                 foreign_slugs)
 
     ygjson.save_json(ygjson.SETS, sets)
-    for bucket, body in files.items():
-        ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
+    write_cards(files)
     ygjson.save_json(ygjson.ARCHETYPES, archetypes)
     decisions.save_review(REVIEW, review_body(counts["unknown"], counts["duplicates"]))
     sources.record("ygoprodeck", sources.ygoprodeck(dbver))

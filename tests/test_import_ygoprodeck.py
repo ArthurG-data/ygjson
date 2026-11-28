@@ -196,6 +196,21 @@ def test_a_card_ygoprodeck_dropped_leaves_the_data():
     assert [c["id"] for b in files.values() for c in b["cards"]] == ["46986414"]
 
 
+def test_a_deck_list_placeholder_is_not_a_card():
+    placeholder = raw_card(id=149694341, name="???", type="Spell Card", frameType="spell", card_sets=[],
+                           ygoprodeck_url="https://ygoprodeck.com/card/placeholder-15961")
+    files, _ = imp.build_cards([raw_card(), placeholder], {LOB: LOB_ID}, {}, {})
+    assert [c["id"] for b in files.values() for c in b["cards"]] == ["46986414"]
+    assert not imp.is_placeholder(raw_card(ygoprodeck_url="https://ygoprodeck.com/card/dark-magician-4003"))
+
+
+def test_a_bucket_left_with_no_card_is_deleted(tmp_path):
+    (tmp_path / "149.json").write_text('{"cards": [{"id": "149694341"}]}')
+    files, _ = imp.build_cards([raw_card()], {LOB: LOB_ID}, {}, {})
+    imp.write_cards(files, tmp_path)
+    assert sorted(p.name for p in tmp_path.iterdir()) == ["046.json"]
+
+
 def test_a_dropped_card_holding_a_tcgplayer_print_stays():
     prints = [{"id": "s:101403001:X-EN001:rare", "set": "s", "source": "tcgplayer"}]
     files, _ = imp.build_cards([raw_card()], {LOB: LOB_ID}, {}, _old_card("101403001", prints))
