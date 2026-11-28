@@ -140,9 +140,16 @@ successor (below). Decided by the owner.
 
 The id's entry then sets `key` to the new key and appends the old key to `formerKeys`.
 
-Every orphan left after that is `retired`. Its `successors` are the current prints sharing its `(set, card, number)`,
-failing that its `(card, number)`, failing that its `(set, card, rarity, variant)` (a corrected number); the list may
-be empty. A reader can follow a single successor without asking anyone. It is listed in `review/ids.json` so a person can
+Every orphan left after that is `retired`. Its `successors` are the current prints at the first of these places that
+holds any, in order (`reconcile._successor_places`):
+
+1. the same `(set, card, number, rarity)`;
+2. the same `(set, card, number)`;
+3. the same `(card, number, rarity, variant)`, in any set (numbered prints only);
+4. the same `(card, number)`, in any set (numbered prints only);
+5. the same `(set, card, rarity, variant)`, for a corrected number.
+
+The list may be empty. A reader can follow a single successor without asking anyone. It is listed in `review/ids.json` so a person can
 confirm it. A **split** (one orphan, two newcomers, no product evidence) therefore keeps no id: the old id is retired
 with both prints as successors, and each print gets a new id. That is the anti-goal at work: we do not guess which of
 the two the reader held.
@@ -155,8 +162,10 @@ the print's remaining printings. An edition that comes back makes the same print
 
 `mappings/ids.json` is hand-kept, like the other files in `mappings/`, and each entry cites its evidence. An entry may:
 
-- give a newcomer key the id of a retired print (rule 5), which makes that id `live` again; or
-- set the `successors` of a retired id.
+- give a newcomer key the id of a retired print (rule 5), which makes that id `live` again. The decision follows its
+  print: when the print's key changes later, the hand key stays in its `formerKeys` and the decision still holds; or
+- set the `successors` of a retired print or a retired card. A card given one successor takes its prints there, as a
+  successor found by name does.
 
 It may never give a `live` id to a second print; `validate.py` rejects that. This is how a person acts on
 `review/ids.json`.

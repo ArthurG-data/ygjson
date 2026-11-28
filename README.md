@@ -149,8 +149,10 @@ and `Ids.json` ships it.
 #### The ledger
 
 `uv run python tools/ids.py` reconciles the data with the ledger after the imports. `mappings/ids.json` holds the
-decisions a person makes where it cannot: which retired print a new key continues (`prints`) and which prints
-replace a retired id (`successors`). Each cites its evidence. `review/ids.json` lists the retired prints and cards
+decisions a person makes where it cannot: which retired print a new key continues (`prints`), and which prints replace
+a retired print or which card replaces a retired card (`successors`, keyed by the retired id). Each cites its evidence.
+A `prints` decision follows its print: when the print's key changes later, the decision's key stays in its
+`formerKeys` and still holds. A card given one successor takes its prints with it. `review/ids.json` lists the retired prints and cards
 whose successors lead to no live id (`dead-end`) or to several (`several`), and this run's set and archetype renames.
 A set's `identity` holds its YGOJSON, Yugipedia and Konami ids and its TCGplayer groups (`tcgplayer:<groupId>`), and
 a new slug sharing one with exactly one vanished slug is that set renamed. So a set `import_tcgcsv.py` minted for an

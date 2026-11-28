@@ -178,7 +178,54 @@ def test_an_applied_hand_decision_keeps_check_green():
     ledger, _, _ = ids.run(ledger, SETS, files(moved), ARCHETYPES, SEALED, hand, {})
     assert ledger["prints"][old]["status"] == "live" and ledger["prints"][old]["key"] == key
     assert ids.check(ledger, SETS, files(moved), ARCHETYPES, SEALED, hand) == []
-    assert any("is live" in e for e in ids.hand_errors(ledger, ({PRINT_A: old}, {})))  # live under another key
+    never = f"{SET}:46986414:LOB-EN999:ultra_rare"
+    assert any("is live" in e for e in ids.hand_errors(ledger, ({never: old}, {})))  # live under a key it never had
+    # The print moves on to another key later: the decision still holds, as the hand key is in its formerKeys.
+    later = copy.deepcopy(moved)
+    later["prints"][0].update(id=f"{SET}:46986414:LOB-EN106:ultra_rare", number="LOB-EN106")
+    ledger, _, _ = ids.run(ledger, SETS, files(later), ARCHETYPES, SEALED, hand, {})
+    assert ledger["prints"][old]["key"] == later["prints"][0]["id"] and key in ledger["prints"][old]["formerKeys"]
+    assert ids.check(ledger, SETS, files(later), ARCHETYPES, SEALED, hand) == []
+
+
+def _card_ledger():
+    return {"prints": {}, "cards": {"1": {"id": "1", "name": "A", "status": "retired", "successors": []},
+                                    "2": {"id": "2", "name": "B", "status": "live", "successors": []}}}
+
+
+def test_hand_successors_may_settle_a_retired_card():
+    ledger = _card_ledger()
+    assert ids.hand_errors(ledger, ({}, {"1": ["2"]})) == []
+    assert ids.apply_successors(ledger["cards"], {"1": ["2"]})["1"]["successors"] == ["2"]
+    assert ids.review_body(ledger, {"1"}, [])["cards"] == []
+    assert ids.review_body(ledger, set(), [])["cards"][0]["reason"] == "dead-end"
+    errors = ids.hand_errors(ledger, ({}, {"2": ["1"], "1": ["nope"]}))
+    assert errors == ["hand successors '1': successor nope is not a card in the ledger",
+                      "hand successors '2': not a retired print or card"]
+
+
+def test_a_card_settled_by_hand_takes_its_prints_to_its_successor():
+    import copy
+
+    from test_ygjson import ARCHETYPES, CARD, PRINT_A, SEALED, SETS
+
+    def files(card):
+        return {"046": {"cards": [card]}}
+    gone = copy.deepcopy(CARD)
+    ledger = {k: {} for k in ids.KINDS}
+    ledger, _, _ = ids.run(ledger, SETS, files(gone), ARCHETYPES, SEALED, ({}, {}), {})
+    renamed = copy.deepcopy(CARD)
+    renamed.update(id="99999999", name="Dark Magician (renamed)", names={"en": "Dark Magician (renamed)"},
+                   identifiers={"ygoprodeckId": 99999999})
+    for p in renamed["prints"]:
+        p["id"] = p["id"].replace(":46986414:", ":99999999:")
+    old_print = ids.mint(PRINT_A, set())
+    unsettled, review, _ = ids.run(ledger, SETS, files(renamed), ARCHETYPES, SEALED, ({}, {}), {})
+    assert [r["id"] for r in review["cards"]] == ["46986414"]  # no card of its name: a dead end
+    assert unsettled["prints"][old_print]["status"] == "retired"
+    settled, review, _ = ids.run(ledger, SETS, files(renamed), ARCHETYPES, SEALED, ({}, {"46986414": ["99999999"]}), {})
+    assert settled["cards"]["46986414"]["successors"] == ["99999999"] and review["cards"] == []
+    assert settled["prints"][old_print]["status"] == "live"  # the print followed its card
 
 
 def test_hand_may_not_give_one_retired_id_to_two_keys():
