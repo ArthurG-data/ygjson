@@ -9,7 +9,8 @@ the JSON holds:
                    gives the same bytes.
   ygjson.sqlite    one table per kind of record (see SCHEMA): the fields most queries filter on are columns (COLUMNS),
                    and `data` holds the record's other fields as JSON, for SQLite's json_extract. A card's names are
-                   the card_names table, an archetype's members archetype_members, and a printing's tcgplayerPrice
+                   the card_names table, an oracle's cards the oracles table, an archetype's members archetype_members,
+                   and a printing's tcgplayerPrice
                    the tcgplayer_product_id and tcgplayer_subtype columns. Shipped gzipped as ygjson.sqlite.gz.
   SHA256SUMS       the SHA-256 of every file the release attaches, in the format `sha256sum -c SHA256SUMS` checks.
 """
@@ -31,23 +32,28 @@ SUMS = "SHA256SUMS"
 
 SCHEMA = """
 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);  -- the build's meta, each value as JSON
-CREATE TABLE sets (id TEXT PRIMARY KEY, code TEXT, name TEXT NOT NULL, type TEXT, series TEXT, parent TEXT,
+CREATE TABLE sets (id TEXT PRIMARY KEY, uuid TEXT, code TEXT, name TEXT NOT NULL, type TEXT, series TEXT, parent TEXT,
                    era TEXT, release_date TEXT, data TEXT NOT NULL);
-CREATE TABLE cards (id TEXT PRIMARY KEY, passcode INTEGER, name TEXT NOT NULL, kind TEXT, frame TEXT, attribute TEXT,
+CREATE TABLE cards (id TEXT PRIMARY KEY, uuid TEXT, oracle_id TEXT,
+                    passcode INTEGER, name TEXT NOT NULL, kind TEXT, frame TEXT, attribute TEXT,
                     monster_type TEXT, level INTEGER, rank INTEGER, link_rating INTEGER, atk INTEGER, def INTEGER,
                     data TEXT NOT NULL);
+-- An oracle groups a card and its reprints: one row per card it holds.
+CREATE TABLE oracles (id TEXT NOT NULL, card TEXT NOT NULL REFERENCES cards(id), PRIMARY KEY (id, card)) WITHOUT ROWID;
 CREATE TABLE card_names (card TEXT NOT NULL REFERENCES cards(id), language TEXT NOT NULL, name TEXT NOT NULL,
                          PRIMARY KEY (card, language)) WITHOUT ROWID;
-CREATE TABLE printings (id TEXT PRIMARY KEY, key TEXT NOT NULL, print TEXT NOT NULL, print_key TEXT,
+CREATE TABLE printings (id TEXT PRIMARY KEY, uuid TEXT, oracle_id TEXT,
+                        key TEXT NOT NULL, print TEXT NOT NULL, print_key TEXT,
                         card TEXT NOT NULL REFERENCES cards(id), "set" TEXT NOT NULL REFERENCES sets(id),
                         number TEXT, region TEXT, rarity TEXT NOT NULL, rarity_tier INTEGER, variant TEXT,
                         language TEXT NOT NULL, edition TEXT NOT NULL, finish TEXT, scan TEXT,
                         tcgplayer_product_id INTEGER, tcgplayer_subtype TEXT, data TEXT NOT NULL);
-CREATE TABLE archetypes (slug TEXT PRIMARY KEY, name TEXT NOT NULL, is_archetype INTEGER, source TEXT,
+CREATE TABLE archetypes (slug TEXT PRIMARY KEY, uuid TEXT, name TEXT NOT NULL, is_archetype INTEGER, source TEXT,
                          data TEXT NOT NULL);
 CREATE TABLE archetype_members (archetype TEXT NOT NULL REFERENCES archetypes(slug),
                                 card TEXT NOT NULL REFERENCES cards(id), PRIMARY KEY (archetype, card)) WITHOUT ROWID;
-CREATE TABLE products (id TEXT PRIMARY KEY, "set" TEXT REFERENCES sets(id), category TEXT, name TEXT NOT NULL,
+CREATE TABLE products (id TEXT PRIMARY KEY, uuid TEXT, "set" TEXT REFERENCES sets(id), category TEXT,
+                       name TEXT NOT NULL,
                        contents_status TEXT, release_date TEXT, data TEXT NOT NULL);
 CREATE TABLE formats (id TEXT PRIMARY KEY, name TEXT NOT NULL, data TEXT NOT NULL);
 CREATE TABLE legality_events (card TEXT NOT NULL REFERENCES cards(id), format TEXT NOT NULL REFERENCES formats(id),
@@ -78,17 +84,20 @@ def _json(value) -> str:
 # {table: [(column, the record's field)]}: the columns filled from a record's fields of the same meaning, in the
 # table's column order. `data` holds every other field of the record.
 COLUMNS: dict[str, list[tuple[str, str]]] = {
-    "sets": [("id", "id"), ("code", "code"), ("name", "name"), ("type", "type"), ("series", "series"),
+    "sets": [("id", "id"), ("uuid", "uuid"), ("code", "code"), ("name", "name"), ("type", "type"), ("series", "series"),
              ("parent", "parent"), ("era", "era")],
-    "cards": [("id", "id"), ("passcode", "passcode"), ("name", "name"), ("kind", "kind"), ("frame", "frame"),
+    "cards": [("id", "id"), ("uuid", "uuid"), ("oracle_id", "oracleId"),
+              ("passcode", "passcode"), ("name", "name"), ("kind", "kind"), ("frame", "frame"),
               ("attribute", "attribute"), ("monster_type", "monsterType"), ("level", "level"), ("rank", "rank"),
               ("link_rating", "linkRating"), ("atk", "atk"), ("def", "def")],
-    "printings": [("id", "id"), ("key", "key"), ("print", "print"), ("print_key", "printKey"), ("card", "card"),
+    "printings": [("id", "id"), ("uuid", "uuid"), ("oracle_id", "oracleId"),
+                  ("key", "key"), ("print", "print"), ("print_key", "printKey"), ("card", "card"),
                   ("set", "set"), ("number", "number"), ("region", "region"), ("rarity", "rarity"),
                   ("rarity_tier", "rarityTier"), ("variant", "variant"), ("language", "language"),
                   ("edition", "edition"), ("finish", "finish"), ("scan", "scan")],
-    "archetypes": [("slug", "slug"), ("name", "name"), ("is_archetype", "isArchetype"), ("source", "source")],
-    "products": [("id", "id"), ("set", "set"), ("category", "category"), ("name", "name"),
+    "archetypes": [("slug", "slug"), ("uuid", "uuid"), ("name", "name"), ("is_archetype", "isArchetype"),
+                   ("source", "source")],
+    "products": [("id", "id"), ("uuid", "uuid"), ("set", "set"), ("category", "category"), ("name", "name"),
                  ("contents_status", "contentsStatus"), ("release_date", "releaseDate")],
     "formats": [("id", "id"), ("name", "name")],
     "legality_events": [("card", "card"), ("format", "format"), ("status", "status"), ("effective", "effective"),
@@ -120,6 +129,7 @@ def load(docs: dict[str, dict], path: Path) -> None:
                            for s in docs["AllSets"]["data"].values()))
         cards = docs["AllCards"]["data"].values()
         _rows(db, "cards", (_row("cards", c, drop=["names"]) for c in cards))
+        _rows(db, "oracles", sorted({(c["oracleId"], c["id"]) for c in cards if "oracleId" in c}))
         _rows(db, "card_names", ((c["id"], lang, name) for c in cards for lang, name in sorted(c["names"].items())))
         def price(p: dict) -> dict:
             found = p.get("tcgplayerPrice", {})

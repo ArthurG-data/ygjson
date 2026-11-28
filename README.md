@@ -27,7 +27,7 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Changes.json
 ```
 
-Every file is `{"meta": {"version": "X.Y.Z", "date": "YYYY-MM-DD", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
+Every file is `{"meta": {"version": "X.Y.Z", "date": "YYYY-MM-DD", "sources": {...}, "idsVersion": 2, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
 `{"version", "date", "since"}`. All eight come from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
 committed [`sources.json`](sources.json): the snapshot of each source the data was imported from (see
 [Rebuilding a release](#rebuilding-a-release)).
@@ -136,7 +136,12 @@ and `Ids.json` ships it.
      what it became. Several, or none, means the data cannot tell which print it was: ask the holder.
 - Cards, sets, archetypes and sealed products keep their ids and have entries too, so `Ids.json` lists every id the
   data has ever used.
-- `meta.idsVersion` is the version of this layout. It is `1`.
+- Every record has a `uuid`: sets, cards, archetypes, sealed products and printings. A set's, card's, archetype's
+  or product's is minted once and kept by the ledger, so a renamed set keeps it. A printing's is derived from its id.
+  `Ids.json` lists each UUID next to its readable id, so a reader holding either finds the other.
+- `oracleId` (on a card and on each of its printings) groups a card and its reprints. Today one oracle holds one card.
+  `Ids.json`'s `oracles` lists each oracle and its cards.
+- `meta.idsVersion` is the version of this layout. It is `2`.
 
 #### Migrating from 0.2.0
 

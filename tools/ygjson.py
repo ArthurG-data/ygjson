@@ -401,13 +401,24 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
             if p["contents"].get("cards"):
                 products[pid] = {**p, "contents": {**p["contents"], "cards": [
                     {**item, "print": uuids[item["print"]]} for item in p["contents"]["cards"]]}}
-    out: dict[str, dict] = {"sets": by_set, "cards": {}, "printings": {}, "archetypes": {}, "products": products}
+    oracle_of: dict[str, str] = {}
+    if ledger:
+        for oid, o in ledger.get("oracles", {}).items():
+            if o["status"] == "live":
+                oracle_of.update({cid: oid for cid in o["cards"]})
+
+    def stamped(kind: str, key: str, record: dict) -> dict:
+        return {"uuid": ledger[kind][key]["uuid"], **record} if ledger else record
+
+    out: dict[str, dict] = {"sets": {i: stamped("sets", i, s) for i, s in by_set.items()}, "cards": {},
+                            "printings": {}, "archetypes": {},
+                            "products": {i: stamped("sealed", i, p) for i, p in products.items()}}
     members: dict[str, list[str]] = collections.defaultdict(list)
     for body in files.values():
         for card in body["cards"]:
             cid = card["id"]
-            out["cards"][cid] = {**card, "prints": [p["id"] if uuids is None else uuids[p["id"]]
-                                                   for p in card["prints"]]}
+            out["cards"][cid] = {**stamped("cards", cid, card), **({"oracleId": oracle_of[cid]} if ledger else {}),
+                                 "prints": [p["id"] if uuids is None else uuids[p["id"]] for p in card["prints"]]}
             for slug in card.get("archetypes", []):
                 members[slug].append(cid)
             for p in card["prints"]:
@@ -418,6 +429,8 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
                     pid = key if uuids is None else printing_id(uuids[p["id"]], "en", edition)
                     out["printings"][pid] = {
                         "id": pid, **({} if uuids is None else {"key": key}),
+                        **({} if uuids is None else {"uuid": str(uuid.uuid5(YGJSON_NAMESPACE, f"printing:{pid}")),
+                                                     "oracleId": oracle_of[cid]}),
                         "print": p["id"] if uuids is None else uuids[p["id"]],
                         **({} if uuids is None else {"printKey": p["id"]}), "card": cid, "set": p["set"],
                         **{k: p[k] for k in ("number", "region", "variant", "source") if k in p},
@@ -432,5 +445,6 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
                         **({"scan": p["scans"][edition]} if edition in p.get("scans", {}) else {}),
                     }
     for a in archetypes["archetypes"]:
-        out["archetypes"][a["slug"]] = {**a, "members": sorted(members.get(a["slug"], []), key=int)}
+        out["archetypes"][a["slug"]] = {
+            **stamped("archetypes", a["slug"], a), "members": sorted(members.get(a["slug"], []), key=int)}
     return out

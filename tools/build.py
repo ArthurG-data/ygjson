@@ -23,7 +23,7 @@ import sources
 import ygjson
 
 DIST = ygjson.ROOT / "dist"
-IDS_VERSION = 1
+IDS_VERSION = 2
 
 
 def build(version: str, today: str) -> dict[str, dict]:
