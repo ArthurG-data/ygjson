@@ -1,15 +1,18 @@
 name: refresh
 
 # Weekly, and on demand: download the sources again, run the import pipeline and the ban lists, and check the result
-# offline (the tests, validate.py, the id ledger against main, the README's numbers). When every check passes and the
-# data (sets/, data/, ids/, legality/) changed, release it: take the next version (tools/next_version.py), commit to
-# main, tag vX.Y.Z, push both at once, and publish the release (release.yml). A failing check, or a refresh that
-# changes no data, pushes nothing.
+# offline (the tests, validate.py, the id ledger against main). When every check passes and the data (sets/, data/,
+# ids/, legality/) changed, release it: take the next version (tools/next_version.py), commit it to the branch
+# refresh/sources, open a pull request and merge it (main's ruleset takes changes only through a pull request; it asks
+# for no approval), tag the merge vX.Y.Z and publish the release (release.yml). A failing check, or a refresh that
+# changes no data, merges nothing.
 #
-# The push uses GITHUB_TOKEN, which GitHub does not let start other workflows: ci.yml does not run on this commit or
-# this tag, which is why the checks run here first and the release job is called from here. If main moved during the
-# run the atomic push is refused and nothing is tagged; run the workflow again. If only the release job fails, re-run
-# it: it builds from the tag. Only a run on main releases; a run on another branch only checks.
+# Everything is done with GITHUB_TOKEN, which GitHub does not let start other workflows: ci.yml does not run on this
+# pull request, merge or tag, which is why the checks run here first and the release job is called from here. If main
+# moved during the run the merge is not made, or not tagged, and the run fails: run the workflow again. If only the
+# release job fails, use "Re-run failed jobs": it builds from the tag (or run release.yml by hand with the tag). Only a
+# run on main releases; a run on another branch only checks. The repository must allow GitHub Actions to create pull
+# requests (Settings > Actions > General).
 on:
   schedule:
     - cron: "0 7 * * 1"  # Mondays, an hour after live-checks
@@ -28,6 +31,9 @@ jobs:
     timeout-minutes: 90
     permissions:
       contents: write
+      pull-requests: write
+    env:
+      BRANCH: refresh/sources
     outputs:
       tag: ${{ steps.push.outputs.tag }}
       notes: ${{ steps.push.outputs.notes }}
@@ -74,21 +80,44 @@ jobs:
         id: summary
         run: uv run python tools/refresh_summary.py --base HEAD --out "$RUNNER_TEMP/body.md"
 
-      - name: Commit, tag and push the release
+      - name: Merge and tag the release
         id: push
         if: steps.summary.outputs.changed == 'true' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          base="$(git rev-parse HEAD)"  # the main the checks ran against
           version="$(uv run python tools/next_version.py)"
+          title="Release $version: refresh the sources ($(date -u +%F))"
           uv version "$version"  # pyproject.toml and uv.lock
           uv run python tools/stats.py --write  # the release paragraph: the new version and its counts
-          uv run python tools/stats.py
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
           git add sets data ids legality review sources.json README.md pyproject.toml uv.lock
-          git commit -q -m "Release $version: refresh the sources ($(date -u +%F))"
-          git tag "v$version"
-          git push --atomic origin HEAD:main "v$version"
+          git commit -q -m "$title"
+          head="$(git rev-parse HEAD)"
+          git push --force origin "$BRANCH"
+          number="$(gh pr list --head "$BRANCH" --base main --state open --json number -q '.[0].number')"
+          if [ -n "$number" ]; then
+            gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/body.md"
+          else
+            gh pr create --base main --head "$BRANCH" --title "$title" --body-file "$RUNNER_TEMP/body.md"
+            number="$(gh pr list --head "$BRANCH" --base main --state open --json number -q '.[0].number')"
+          fi
+          # Merge only onto the main that was checked, and tag only a merge that holds exactly what was checked.
+          if [ "$(git ls-remote origin refs/heads/main | cut -f1)" != "$base" ]; then
+            echo "::error::main moved during the run; pull request #$number is left open. Run the workflow again."
+            exit 1
+          fi
+          gh pr merge "$number" --merge --match-head-commit "$head" --subject "$title"
+          git fetch -q origin main
+          merge="$(git rev-parse origin/main)"
+          if [ "$(git rev-parse "$merge^{tree}")" != "$(git rev-parse "$head^{tree}")" ]; then
+            echo "::error::main at $merge does not hold what was checked; nothing was tagged. Run the workflow again."
+            exit 1
+          fi
           delimiter="notes-$(openssl rand -hex 16)"
           {
             echo "tag=v$version"
@@ -96,7 +125,9 @@ jobs:
             cat "$RUNNER_TEMP/body.md"
             echo "$delimiter"
           } >> "$GITHUB_OUTPUT"
-          echo "Pushed v$version to main"
+          git tag "v$version" "$merge"
+          git push origin "v$version"
+          echo "Merged #$number and tagged v$version"
       - name: Nothing to release
         if: steps.summary.outputs.changed != 'true'
         run: echo "The refresh changed nothing in sets/, data/, ids/ or legality/, so nothing was released."

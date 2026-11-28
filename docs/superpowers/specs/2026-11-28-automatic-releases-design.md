@@ -33,16 +33,17 @@ ygjson release is published, with no one merging, bumping or tagging. The checks
   `ci.yml` release job would never see the refresh's tag. The release steps move to a reusable workflow
   (`release.yml`, `on: workflow_call`, input `tag`), which checks out that tag. `ci.yml`'s release job calls it
   on a pushed `v*` tag; `refresh.yml` calls it after pushing its tag.
-- **Checks before anything is pushed:** the refresh runs `pytest`, `validate.py`, `ids.py --check-against origin/main`
-  and `stats.py` (README numbers match), as now plus pytest.
+- **Checks before anything is merged:** the refresh runs `pytest`, `validate.py` and `ids.py --check-against origin/main`.
 - **Version (my call):** if the tag `v<pyproject version>` already exists, bump the patch number
   (`uv version --bump patch`, which also updates `uv.lock`); if it doesn't (a person bumped to 0.4.0 and has not
   tagged yet), release that version as it is. Then `stats.py --write` puts the new version and counts in the README.
-- **Push:** one commit, "Release X.Y.Z: refresh the sources (date)", pushed to `main`, then the tag `vX.Y.Z`. If
-  `main` moved during the run, the push is rejected and the run fails: nothing is tagged.
+- **Push (revised after review):** `main`'s ruleset (`protect-main`) takes changes only through a pull request and
+  asks for no approval, so a direct push is refused. The refresh commits "Release X.Y.Z: refresh the sources (date)"
+  to `refresh/sources`, opens or updates the pull request, checks `main` still is the commit it checked, merges the
+  pull request itself, checks the merge holds exactly the checked tree, then tags the merge `vX.Y.Z`. If `main` moved,
+  the run fails without merging or tagging. `release.yml` can also be run by hand for a tag that was never released.
 - **Notes (my call):** the refresh summary (what `refresh_summary.py` writes for the pull request today) is added to
   the release notes after the id changes.
-- **Removed:** the `refresh/sources` branch and pull request.
 - **README:** the hand-written `"version": "0.3.0"` example becomes version-neutral, so it never goes stale; the release
   section describes the automatic releases.
 

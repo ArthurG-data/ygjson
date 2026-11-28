@@ -3,8 +3,15 @@ name: release
 # Builds the release files of one tag and attaches them to a GitHub release. Called by ci.yml when a person pushes a
 # v* tag, and by refresh.yml after it pushes its own: a tag pushed with GITHUB_TOKEN starts no workflow, so the
 # refresh cannot rely on ci.yml seeing it. Everything is built from the tag's checkout, so re-running a failed run of
-# this job releases the same data.
+# this job releases the same data; it can also be run by hand (Actions > release > Run workflow) for a tag that was
+# pushed but never released.
 on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: The tag to release (vX.Y.Z), matching the version in pyproject.toml.
+        type: string
+        required: true
   workflow_call:
     inputs:
       tag:

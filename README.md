@@ -586,15 +586,19 @@ TCGCSV again and takes YGOJSON's current commit (`pipeline.py --refresh ygoprode
 ygojson`), updates the ban lists (`legality.py`), and runs pytest, `validate.py` and the ledger check against `main`.
 When they pass and something in `sets/`, `data/`, `ids/` or `legality/` changed, it takes the next version
 (`tools/next_version.py`: the next patch number once the version in `pyproject.toml` is tagged, else that version as
-it is, so a version bumped by hand is released first), sets it with `uv version`, rewrites the README's numbers, commits
-to `main` and pushes the commit and its tag `vX.Y.Z` in one atomic push, then publishes the release with
+it is, so a version bumped by hand is released first), sets it with `uv version` and rewrites the README's numbers. It
+commits that to the branch `refresh/sources`, opens a pull request and merges it itself (`main` takes changes only
+through a pull request; its ruleset asks for no approval), tags the merge `vX.Y.Z`, and publishes the release with
 `release.yml`, the same job a hand-pushed tag runs. The release notes open with the id changes and go on with the
 refresh summary (`tools/refresh_summary.py`): the ids added and retired per kind, the ban-list events added and removed,
-the review counts and `sources.json` before and after. A failing step pushes nothing and leaves the run failed; a
-refresh that changes no data releases nothing; only a run on `main` pushes. The push uses `GITHUB_TOKEN`, which cannot
-start other workflows, so `ci.yml` does not run on it: the same checks have run before the push. If `main` moved
-during the run the push is refused and nothing is tagged: run the workflow again. If only the release job fails, re-run
-it from the run's page: it builds from the tag. `.cache` is kept between runs with `actions/cache`, so Yugipedia pages
+the review counts and `sources.json` before and after. A failing step merges nothing and leaves the run failed; a
+refresh that changes no data releases nothing; only a run on `main` merges. Everything uses `GITHUB_TOKEN`, which
+cannot start other workflows, so `ci.yml` does not run on the pull request, the merge or the tag: the same checks have
+run before. If `main` moved during the run, the pull request is left open or the merge is not tagged, and the run
+fails: run the workflow again (a merged version that was never tagged is released by the next run). If only the
+release job fails, use "Re-run failed jobs" on the run's page, or run `release.yml` by hand with the tag: it builds
+from the tag. The repository has to allow GitHub Actions to create pull requests (Settings > Actions > General).
+`.cache` is kept between runs with `actions/cache`, so Yugipedia pages
 are fetched once. Each
 action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.
 
