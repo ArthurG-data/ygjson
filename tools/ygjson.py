@@ -104,6 +104,11 @@ def printing_id(print_id: str, language: str, edition: str) -> str:
     return f"{print_id}:{language}:{edition}"
 
 
+def printing_uuid(printing: str) -> str:
+    """A printing's UUID, derived from its id; flatten and build.py both use it."""
+    return str(uuid.uuid5(YGJSON_NAMESPACE, f"printing:{printing}"))
+
+
 def region_of(number: str | None) -> str | None:
     """The region letters of a set number: LOB-EN001 -> EN, LOB-001 -> None. Speed Duel numbers carry a slot letter
     after the region (LAVD-ENS05), and special editions and promos add two (TDIL-ENSE3, CYHO-ENSP1, RGBT-ENPP5), so a
@@ -429,7 +434,7 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
                     pid = key if uuids is None else printing_id(uuids[p["id"]], "en", edition)
                     out["printings"][pid] = {
                         "id": pid, **({} if uuids is None else {"key": key}),
-                        **({} if uuids is None else {"uuid": str(uuid.uuid5(YGJSON_NAMESPACE, f"printing:{pid}")),
+                        **({} if uuids is None else {"uuid": printing_uuid(pid),
                                                      "oracleId": oracle_of[cid]}),
                         "print": p["id"] if uuids is None else uuids[p["id"]],
                         **({} if uuids is None else {"printKey": p["id"]}), "card": cid, "set": p["set"],

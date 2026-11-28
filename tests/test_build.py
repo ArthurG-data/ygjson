@@ -95,8 +95,17 @@ def test_release_printings_are_keyed_by_uuid(data):
 
 def test_ids_json_ships_the_whole_ledger(data):
     docs = build.build("0.1.0", "2026-10-28")
-    assert docs["Ids"]["data"] == data
-    assert set(docs["Ids"]["data"]) == set(ids.KINDS)
+    shipped = docs["Ids"]["data"]
+    assert set(shipped) == set(ids.KINDS)
+    assert {k: v for k, v in shipped.items() if k != "printings"} == {k: v for k, v in data.items() if k != "printings"}
+    assert {i: {k: v for k, v in e.items() if k != "uuid"} for i, e in shipped["printings"].items()} == data["printings"]
+
+
+def test_ids_printing_uuids_match_all_printings(data):
+    docs = build.build("0.1.0", "2026-10-28")
+    live = docs["AllPrintings"]["data"]
+    assert live
+    assert all(docs["Ids"]["data"]["printings"][i]["uuid"] == p["uuid"] for i, p in live.items())
 
 
 def test_build_meta_ids_version_is_2(data):

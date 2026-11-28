@@ -138,7 +138,8 @@ and `Ids.json` ships it.
   data has ever used.
 - Every record has a `uuid`: sets, cards, archetypes, sealed products and printings. A set's, card's, archetype's
   or product's is minted once and kept by the ledger, so a renamed set keeps it. A printing's is derived from its id.
-  `Ids.json` lists each UUID next to its readable id, so a reader holding either finds the other.
+  `Ids.json` lists each UUID next to its readable id (a printing's entry carries its `uuid` too, derived when
+  the file is built), so a reader holding either finds the other.
 - `oracleId` (on a card and on each of its printings) groups a card and its reprints. Today one oracle holds one card.
   `Ids.json`'s `oracles` lists each oracle and its cards.
 - `meta.idsVersion` is the version of this layout. It is `2`.
