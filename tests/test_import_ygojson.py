@@ -299,7 +299,7 @@ def test_applying_everything_twice_changes_nothing():
 
 
 def test_results_validate_against_the_schemas():
-    s = our_set("lob", "Legend of Blue Eyes", "LOB")
+    s = our_set("lob", "Legend of Blue Eyes", "LOB", era="dm")  # import_yugipedia gives the era of the date
     imp.apply_set(s, their_set("u", "Legend of Blue Eyes", "LOB-EN", yugipedia="Legend of Blue Eyes",
                                date="2002-03-08", image="https://ms.yugipedia.com/a.png", editions=["1st", "limited"],
                                externalIDs={"dbIDs": [1]}))
@@ -310,3 +310,19 @@ def test_results_validate_against_the_schemas():
     imp.sync_archetypes(archetypes["archetypes"], [series("s", "Hero")])
     eras = [{"code": "dm", "name": "Duel Monsters", "mechanic": "Fusion", "from": "2002-03-08"}]
     assert ygjson.validate([s], eras, {"046": {"cards": [card]}}, archetypes) == []
+
+
+def test_an_archetype_keeps_its_own_english_name_when_ygojson_spells_it_in_lower_case():
+    archetypes = [arch("roid", "Roid")]
+    imp.sync_archetypes(archetypes, [series("s", "roid")])
+    assert archetypes[0]["names"]["en"] == "Roid" and archetypes[0]["names"]["ja"] == "魔導獣"
+
+
+def test_names_from_ygojson_lose_stray_spaces_but_keep_ideographic_ones():
+    card = our_card("54749427", "Destiny HERO - Defender")
+    imp.apply_card(card, their_card("c", text={"en": {"name": "Destiny HERO - Defender"},
+                                              "es": {"name": "HÉROE del Destino - Defender "},
+                                              "ja": {"name": "Ｄ－ＨＥＲＯ　ディフェンドガイ"},
+                                              "fr": {"name": "  "}}))
+    assert card["names"] == {"en": "Destiny HERO - Defender", "es": "HÉROE del Destino - Defender",
+                             "ja": "Ｄ－ＨＥＲＯ　ディフェンドガイ"}

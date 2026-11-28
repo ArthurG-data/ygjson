@@ -148,6 +148,35 @@ def _schema_errors(name: str, label: str, doc) -> list[str]:
     return [f"{label}: {e.json_path}: {e.message}" for e in _schema(name).iter_errors(doc)]
 
 
+def era_of(release_date: str | None, eras: Iterable[Mapping]) -> str | None:
+    """The era whose window holds the date. Dates are ISO strings, so they compare as text."""
+    if not release_date:
+        return None
+    return next((e["code"] for e in eras if e["from"] <= release_date <= e.get("to", "9999-12-31")), None)
+
+
+_ASCII_SPACE = re.compile(r"[ \t\r\n]+")
+_TEMPLATE_KEY = re.compile(r"^\|\s*[a-z_]+\s+")  # "| supports_archetypes    Power Patron": a wiki field leaked
+
+
+def clean_name(name: str) -> str:
+    """A name with each run of ASCII spaces, tabs and newlines made one space, and none at either end. Other spaces
+    stay: a Japanese name spells some with the ideographic space U+3000."""
+    return _ASCII_SPACE.sub(" ", name).strip(" ")
+
+
+def clean_archetype_name(raw: str) -> str:
+    """An archetype name without a leaked wiki template key (YGOPRODeck lists one), cleaned as clean_name."""
+    return clean_name(_TEMPLATE_KEY.sub("", raw))
+
+
+def spacing_errors(label: str, name: str) -> list[str]:
+    """A message when a name has a leading, trailing or doubled space (or a tab or newline): clean_name changes it."""
+    if clean_name(name) != name:
+        return [f"{label}: name {name!r} has a leading, trailing or doubled space"]
+    return []
+
+
 def _check_eras(eras: list[dict]) -> list[str]:
     errors = [f"eras.json: era {c} is listed {n} times"
               for c, n in collections.Counter(e["code"] for e in eras).items() if n > 1]
@@ -167,6 +196,7 @@ def _check_sets(sets: list[dict], eras: list[dict]) -> list[str]:
     errors += [f"sets.json: set {s} is listed {n} times" for s, n in set_ids.items() if n > 1]
     era_codes = {e["code"] for e in eras}
     parent_of = {s["id"]: s.get("parent") for s in sets}
+    era_of_set = {s["id"]: s.get("era") for s in sets}
     group_owner: dict[int, str] = {}
     for s in sets:
         if "parent" in s and s["parent"] not in set_ids:
@@ -180,6 +210,12 @@ def _check_sets(sets: list[dict], eras: list[dict]) -> list[str]:
             cur = parent_of.get(cur)
         if "era" in s and s["era"] not in era_codes:
             errors.append(f"sets.json: set {s['id']} has era {s['era']}, which is not in eras.json")
+        date = (s.get("releases") or [{}])[0].get("releaseDate")
+        expected = era_of(date, eras) if date else era_of_set.get(s.get("parent") or "")
+        if expected and s.get("era") != expected:
+            errors.append(f"sets.json: set {s['id']} has era {s.get('era')}, but "
+                          + (f"its release date {date} is in {expected}" if date else f"its parent's is {expected}"))
+        errors += spacing_errors(f"sets.json: set {s['id']}", s["name"])
         for gid in s.get("tcgplayerGroupIds", []):
             if gid in group_owner:
                 errors.append(f"sets.json: TCGplayer group {gid} is on {group_owner[gid]} and {s['id']}")
@@ -202,6 +238,8 @@ def _check_cards(sets: list[dict], files: dict[str, dict], archetype_slugs: set[
                 errors.append(f"cards/{stem}.json: card {cid} belongs in cards/{card_bucket(cid)}.json")
             if card["name"] != card["names"]["en"]:
                 errors.append(f"card {cid}: name must equal names.en")
+            for lang, name in sorted(card["names"].items()):
+                errors += spacing_errors(f"card {cid} ({lang})", name)
             errors += [f"card {cid}: archetype {a} is not in archetypes.json" for a in card.get("archetypes", [])
                        if a not in archetype_slugs]
             for p in card["prints"]:
@@ -239,6 +277,7 @@ def _check_sealed(sets: list[dict], sealed: dict[str, dict], print_ids: set[str]
                 if product_id in product_owner:
                     errors.append(f"TCGplayer product {product_id} is on {product_owner[product_id]} and {p['id']}")
                 product_owner[product_id] = p["id"]
+            errors += spacing_errors(where, p["name"])
             contents = p["contents"]
             for item in contents.get("sealed", []):
                 if item["product"] not in products or item["product"] == p["id"]:
@@ -272,12 +311,19 @@ def validate(sets: list[dict], eras: list[dict], files: dict[str, dict], archety
         errors += _schema_errors("sealed.schema.json", f"sealed/{stem}.json", body)
     if legality is not None:
         errors += _schema_errors("legality.schema.json", "legality", {"events": legality["events"]})
+        errors += _schema_errors("formats.schema.json", "formats.json", {"formats": legality["formats"]})
     if errors:
         return errors  # the checks below assume the documents have the right shape
 
     slugs = collections.Counter(a["slug"] for a in archetypes["archetypes"])
     errors = _check_eras(eras) + _check_sets(sets, eras)
     errors += [f"archetypes.json: archetype {s} is listed {n} times" for s, n in slugs.items() if n > 1]
+    for a in archetypes["archetypes"]:
+        where = f"archetypes.json: archetype {a['slug']}"
+        if "en" in a.get("names", {}) and a["names"]["en"] != a["name"]:
+            errors.append(f"{where}: name {a['name']!r} is not names.en {a['names']['en']!r}")
+        for name in [a["name"], *a.get("names", {}).values()]:
+            errors += spacing_errors(where, name)
     product_owner: dict[int, str] = {}
     card_errors, card_ids, print_ids = _check_cards(sets, files, set(slugs), product_owner)
     errors += card_errors + _check_sealed(sets, sealed, print_ids, product_owner)

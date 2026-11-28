@@ -484,3 +484,13 @@ def test_a_retired_print_whose_key_came_back_under_another_id_points_at_it():
     assert ids.check(ledger, SETS, files(CARD), ARCHETYPES, SEALED) == []
     ledger["prints"][old]["successors"] = []
     assert any(old in e and "retired" in e for e in ids.check(ledger, SETS, files(CARD), ARCHETYPES, SEALED))
+
+
+def test_an_archetype_whose_cleaned_name_is_another_s_retires_into_it():
+    entries = {"supports-archetypes-power-patron": {"id": "supports-archetypes-power-patron", "status": "live",
+                                                    "names": ["| supports_archetypes    Power Patron"], "successors": []},
+               "power-patron": {"id": "power-patron", "status": "live", "names": ["Power Patron"], "successors": []}}
+    current = [{"slug": "power-patron", "name": "Power Patron"}]
+    assert ids.cleaned_archetype_merges(entries, current) == {"supports-archetypes-power-patron": "power-patron"}
+    still = [*current, {"slug": "supports-archetypes-power-patron", "name": "| supports_archetypes    Power Patron"}]
+    assert ids.cleaned_archetype_merges(entries, still) == {}  # a slug still in the data is not merged

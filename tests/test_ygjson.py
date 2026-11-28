@@ -331,3 +331,88 @@ def test_flatten_sealed_contents_point_at_print_uuids():
     got = out["products"]["lob-booster-pack"]["contents"]["cards"]
     assert got == [{"print": ledger["prints"][got[0]["print"]]["id"], "count": 1}]
     assert ledger["prints"][got[0]["print"]]["key"] == PRINT_A
+
+
+# --- tighter schemas (#17) ----------------------------------------------------------------------------------------
+
+def _print(cards, **fields):
+    cards["046"]["cards"][0]["prints"][0].update(fields)
+
+
+@pytest.mark.parametrize("change, where", [
+    (dict(cards=lambda c: _print(c, tcgplayer={"name": "Dark Magician", "match": "number+rarity "})), "cards/046.json"),
+    (dict(cards=lambda c: c["046"]["cards"][0]["names"].update({"xx": "?"})), "cards/046.json"),
+    (dict(cards=lambda c: c["046"]["cards"][0].update(linkArrows=["Up"])), "cards/046.json"),
+    (dict(cards=lambda c: _print(c, rarity="unknown", id=f"{SET}:46986414:LOB-EN005:unknown")), "cards/046.json"),
+    (dict(archetypes=lambda a: a["archetypes"][0].update(names={"en": "Dark Magician", "jp": "?"})), "archetypes.json"),
+    (dict(sets=lambda s: s[0].update(parent="Not A Slug")), "sets.json"),
+    (dict(sets=lambda s: s[0].update(era="Duel Monsters")), "sets.json"),
+    (dict(sealed=lambda s: s[SET]["products"][0].update(category="accessory")), f"sealed/{SET}.json"),
+    (dict(sealed=lambda s: s[SET]["products"][0]["contents"].update(pool=[{"set": "LOB"}])), f"sealed/{SET}.json"),
+    (dict(sealed=lambda s: s[SET]["products"][0]["contents"].update(cards=[{"print": "Dark Magician"}])),
+     f"sealed/{SET}.json"),
+    (dict(sealed=lambda s: s[SET]["products"][0]["contents"].update(sealed=[{"product": "LOB Box"}])),
+     f"sealed/{SET}.json"),
+    (dict(legality=lambda g: g["formats"].append({"id": "edison", "name": "Edison", "source": "https://x"})),
+     "formats.json"),
+])
+def test_a_value_outside_the_tighter_schemas_is_a_schema_error(change, where):
+    found = errors(**edit(**change))
+    assert found and all(e.startswith(f"{where}: ") for e in found), found
+
+
+def test_an_unknown_rarity_with_its_raw_string_is_valid():
+    def unknown(c):
+        _print(c, rarity="unknown", rawRarity="New", id=f"{SET}:46986414:LOB-EN005:unknown")
+    assert errors(**edit(cards=unknown)) == []
+
+
+def test_an_archetype_name_must_be_its_english_name():
+    docs = edit(archetypes=lambda a: a["archetypes"][0].update(names={"en": "dark magician"}))
+    assert errors(**docs) == ["archetypes.json: archetype dark-magician: name 'Dark Magician' is not names.en "
+                              "'dark magician'"]
+
+
+def test_a_set_s_era_must_hold_its_release_date():
+    assert errors(**edit(sets=lambda s: s[0].update(era="gx"))) == [
+        f"sets.json: set {SET} has era gx, but its release date 2002-03-08 is in dm"]
+
+
+def test_a_set_without_a_date_takes_its_parent_s_era():
+    child = {**copy.deepcopy(SETS[0]), "id": "lob-promo", "name": "LOB Promo", "parent": SET, "era": "gx",
+             "releases": [{"language": "en", "name": "LOB Promo"}], "tcgplayerGroupIds": []}
+    assert errors(**edit(sets=lambda s: s.append(child))) == [
+        "sets.json: set lob-promo has era gx, but its parent's is dm"]
+    child["era"] = "dm"
+    assert errors(**edit(sets=lambda s: s.append(child))) == []
+
+
+@pytest.mark.parametrize("change, label", [
+    (dict(sets=lambda s: s[0].update(name="Legend of Blue Eyes  White Dragon")), f"sets.json: set {SET}"),
+    (dict(cards=lambda c: c["046"]["cards"][0]["names"].update(es="Mago Oscuro ")), "card 46986414 (es)"),
+    (dict(archetypes=lambda a: a["archetypes"][0].update(name=" Dark Magician")), "archetypes.json: archetype dark-magician"),
+    (dict(sealed=lambda s: s[SET]["products"][0].update(name="LOB\tBooster Pack")), f"sealed/{SET}.json: lob-booster-pack"),
+])
+def test_a_name_with_a_stray_space_is_an_error(change, label):
+    found = errors(**edit(**change))
+    assert any(e.startswith(label) and "leading, trailing or doubled space" in e for e in found), found
+
+
+def test_a_japanese_name_keeps_its_ideographic_spaces():
+    name = "ユベル－Ｄａｓ　Ａｂｓｃｈｅｕｌｉｃｈ　Ｒｉｔｔｅｒ"
+    assert ygjson.clean_name(name) == name
+    assert errors(**edit(cards=lambda c: c["046"]["cards"][0]["names"].update(ja=name))) == []
+
+
+@pytest.mark.parametrize("raw, clean", [
+    ("Crossover Breakers  - Booster Pack", "Crossover Breakers - Booster Pack"),
+    (" Mago Oscuro \n", "Mago Oscuro"),
+])
+def test_clean_name(raw, clean):
+    assert ygjson.clean_name(raw) == clean
+
+
+def test_clean_archetype_name_drops_a_leaked_template_key():
+    assert ygjson.clean_archetype_name("| supports_archetypes    Power Patron") == "Power Patron"
+    assert ygjson.clean_archetype_name("Power Patron") == "Power Patron"
+    assert ygjson.clean_archetype_name('"C"') == '"C"'

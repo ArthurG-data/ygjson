@@ -183,6 +183,21 @@ REVIEW = ygjson.ROOT / "review" / "ids.json"
 SET_ALIASES = ygjson.ROOT / "mappings" / "ygoprodeck_set_aliases.json"
 
 
+def cleaned_archetype_merges(entries: Mapping[str, dict], current: list[dict]) -> dict[str, str]:
+    """{gone slug: live slug} for an archetype whose name, cleaned (ygjson.clean_archetype_name), is now another
+    archetype's: its cards moved there, so the old slug retires with that one as successor."""
+    live = {a["name"]: a["slug"] for a in current}
+    slugs = set(live.values())
+    out = {}
+    for slug, e in entries.items():
+        if slug in slugs:
+            continue
+        targets = {live[c] for n in e.get("names", []) if (c := ygjson.clean_archetype_name(n)) != n and c in live}
+        if len(targets) == 1:
+            out[slug] = targets.pop()
+    return out
+
+
 def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, dict], archetypes: dict,
         sealed: dict[str, dict], hand: tuple[dict[str, str], dict[str, list[str]]],
         merges: Mapping[str, str]) -> tuple[dict[str, dict[str, dict]], dict, list[dict]]:
@@ -200,7 +215,8 @@ def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, d
     set_entries, set_renames = reconcile.reconcile_slugs(ledger.get("sets", {}), sets, "name", reconcile.set_identity,
                                                          merges, evidence=reconcile.set_evidence)
     archetype_entries, archetype_renames = reconcile.reconcile_slugs(
-        ledger.get("archetypes", {}), archetypes["archetypes"], "name", reconcile.archetype_identity, id_field="slug")
+        ledger.get("archetypes", {}), archetypes["archetypes"], "name", reconcile.archetype_identity,
+        cleaned_archetype_merges(ledger.get("archetypes", {}), archetypes["archetypes"]), id_field="slug")
     products = [p for body in sealed.values() for p in body.get("products", [])]
     sealed_entries = reconcile.reconcile_sealed(ledger.get("sealed", {}), products)
     renames = set_renames + archetype_renames

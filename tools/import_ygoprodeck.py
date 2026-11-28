@@ -14,7 +14,7 @@ import collections
 import html
 import json
 import re
-from collections.abc import Container, Mapping, Sequence, Set
+from collections.abc import Container, Mapping, Set
 from urllib.parse import quote
 
 import decisions
@@ -67,11 +67,7 @@ def set_editions(name: str) -> list[str]:
     return ["limited"] if "limited edition" in name.lower() else ["unlimited"]
 
 
-def era_of(release_date: str | None, eras: Sequence[dict]) -> str | None:
-    """The era whose window holds the date. Dates are ISO strings, so they compare as text."""
-    if not release_date:
-        return None
-    return next((e["code"] for e in eras if e["from"] <= release_date <= e.get("to", "9999-12-31")), None)
+era_of = ygjson.era_of  # the era whose window holds a release date
 
 
 def collisions(slugs: dict[str, str]) -> dict[str, list[str]]:
@@ -267,7 +263,7 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
     for raw in sorted(card_list, key=lambda r: r["id"]):
         card = card_entry(raw)
         if "archetypes" in card:
-            card["archetypes"] = [archetype_slugs[raw["archetype"]]]
+            card["archetypes"] = [archetype_slugs[ygjson.clean_archetype_name(raw["archetype"])]]
         card["prints"], dup, unk = build_prints(raw, set_ids)
         duplicates += dup
         unknown.update(unk)
@@ -286,7 +282,8 @@ def build_cards(card_list: list[dict], set_ids: dict[str, str], archetype_slugs:
 def build_archetypes(card_list: list[dict], listed: list[str], existing: dict, held: Mapping[str, str] = {},
                      reserved: Container[str] = frozenset()) -> tuple[dict, dict[str, str]]:
     """The archetypes sorted by slug and {name: slug}; ``held`` and ``reserved`` come from the archetype ledger."""
-    names = set(listed) | {c["archetype"] for c in card_list if c.get("archetype")}
+    raw = [*listed, *(c["archetype"] for c in card_list if c.get("archetype"))]
+    names = {ygjson.clean_archetype_name(n) for n in raw}
     slugs = ygjson.dedupe_slugs(names, held, reserved)
     old = {a["slug"]: a for a in existing.get("archetypes", [])}
     out = []

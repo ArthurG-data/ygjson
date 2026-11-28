@@ -177,8 +177,10 @@ def apply_set(s: dict, g: dict) -> None:
 
 
 def languages(names: dict) -> dict[str, str]:
-    """{language: name} for the keys that are languages, dropping romanisations and empty names."""
-    return {lang: name for lang, name in names.items() if _LANGUAGE.match(lang) and name}
+    """{language: name} for the keys that are languages, dropping romanisations and empty names, with stray spaces
+    cleaned (ygjson.clean_name)."""
+    return {lang: ygjson.clean_name(name) for lang, name in names.items()
+            if _LANGUAGE.match(lang) and name and name.strip()}
 
 
 def canonical_password(password) -> str:
@@ -262,7 +264,7 @@ def match_series(archetypes: list[dict], series: list[dict]) -> dict[str, dict]:
 
 
 def apply_archetype(a: dict, g: dict) -> None:
-    a["names"] = languages(g["name"])
+    a["names"] = {**languages(g["name"]), "en": a["name"]}  # our name leads: YGOJSON writes some in lower case
     a["isArchetype"] = bool(g["archetype"])
     a.setdefault("identifiers", {})["ygojsonId"] = g["id"]
     yugipedia = (g.get("externalIDs") or {}).get("yugipedia") or {}
