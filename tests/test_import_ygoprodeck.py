@@ -284,3 +284,10 @@ def test_card_entry_writes_no_text_when_desc_is_empty():
     assert "text" not in imp.card_entry(raw_card(desc=""))
     assert "text" not in imp.card_entry(raw_card())
     assert "text" not in imp.card_entry(raw_card(type="Pendulum Effect Monster", frameType="effect_pendulum"))
+
+
+def test_card_entry_takes_a_pendulum_monsters_desc_when_it_has_no_split_text():
+    raw = raw_card(type="Pendulum Effect Monster", frameType="effect_pendulum", desc="Whole text.")
+    assert imp.card_entry(raw)["text"] == {"en": {"effect": "Whole text."}}
+    empty = raw_card(type="Pendulum Effect Monster", frameType="effect_pendulum", desc="", pend_desc="", monster_desc="")
+    assert "text" not in imp.card_entry(empty)

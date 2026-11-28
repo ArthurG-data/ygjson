@@ -194,7 +194,7 @@ def card_entry(raw: dict) -> dict:
     for src, dst in (("tcg_date", "tcgDate"), ("ocg_date", "ocgDate")):
         if misc.get(src):
             card[dst] = misc[src]
-    if frame.endswith("_pendulum"):
+    if frame.endswith("_pendulum") and (raw.get("monster_desc") or raw.get("pend_desc")):
         text = {"effect": raw.get("monster_desc"), "pendulumEffect": raw.get("pend_desc")}
     else:
         text = {"effect": raw.get("desc")}
