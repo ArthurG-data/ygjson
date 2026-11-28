@@ -57,9 +57,11 @@ from __future__ import annotations
 
 import argparse
 import collections
+import enum
 import json
 import re
 from collections.abc import Callable, Container, Mapping, Sequence
+from dataclasses import dataclass
 from pathlib import Path
 
 import decisions
@@ -414,6 +416,38 @@ def _edition_list(editions) -> list[str]:
     return [e for e in EDITION_ORDER if e in editions]
 
 
+def _identity(prod: tcgcsv.Product) -> tuple[str, str]:
+    """The card name and rarity a product sells, as two products of one print must agree on them."""
+    return normalise(prod.base_name_and_tags()[0]), rarities.canonical(prod.rarity)
+
+
+def _family(card: dict, p: dict) -> list[dict]:
+    """The print and its versions: the card's prints of its set, number and rarity."""
+    key = (p["set"], p.get("number"), p["rarity"])
+    return [q for q in card["prints"] if (q["set"], q.get("number"), q["rarity"]) == key]
+
+
+class How(enum.Enum):
+    """How a single found its print in a set."""
+    EXACT = "number and rarity"
+    REKEY = "number, on the one print still of unknown rarity, which takes the single's rarity"
+    NUMBER = "number alone, on its one print"
+
+
+@dataclass(frozen=True)
+class Hit:
+    """The one print a single names, and how it was found."""
+    card: dict
+    print: dict
+    how: How
+
+
+@dataclass(frozen=True)
+class Ambiguous:
+    """More than one print could be the one a single names."""
+    count: int
+
+
 class Importer:
     def __init__(self, sets, files, groups, products, prices, mapping, eras=None, held: Mapping[str, str] = {},
                  reserved: Container[str] = frozenset(), product_mapping: Mapping[str, dict] = {}):
@@ -575,26 +609,26 @@ class Importer:
         named = [c for c in found if normalise(c[0]["name"]) == base]
         return named[0] if len(named) == 1 else None
 
-    def _exact(self, set_id: str, prod: tcgcsv.Product, rarity: str):
-        """("hit", (card, print)) | ("ambiguous", n) | None."""
-        found = [(c, p) for c, p in self.catalog.find(set_id, prod.number) if p["rarity"] == rarity]
-        if not found:
-            return None
+    def _found(self, found: list[tuple[dict, dict]], prod: tcgcsv.Product, how: How) -> Hit | Ambiguous:
         hit = self._pick(found, prod)
-        return ("hit", hit) if hit else ("ambiguous", len(found))
+        return Hit(*hit, how) if hit else Ambiguous(len(found))
 
-    def _fallback(self, set_id: str, prod: tcgcsv.Product, rarity: str):
-        """Rules 2 and 3 in `set_id`: ("rekey" | "number", (card, print)) | ("ambiguous", n) | None."""
+    def _exact(self, set_id: str, prod: tcgcsv.Product, rarity: str) -> Hit | Ambiguous | None:
+        """Rule 1 in `set_id`: the print of the single's number and rarity. None when there is none."""
+        found = [(c, p) for c, p in self.catalog.find(set_id, prod.number) if p["rarity"] == rarity]
+        return self._found(found, prod, How.EXACT) if found else None
+
+    def _fallback(self, set_id: str, prod: tcgcsv.Product, rarity: str) -> Hit | Ambiguous | None:
+        """Rules 2 and 3 in `set_id`: the print of the number still of unknown rarity, else the number's one print.
+        None when no print has the number."""
         here = self.catalog.find(set_id, prod.number)
         if not here:
             return None
         if rarity != rarities.UNKNOWN:
             unknown = [(c, p) for c, p in here if p["rarity"] == rarities.UNKNOWN]
             if unknown:
-                hit = self._pick(unknown, prod)
-                return ("rekey", hit) if hit else ("ambiguous", len(unknown))
-        hit = self._pick(here, prod) if len(here) == 1 else None
-        return ("number", hit) if hit else ("ambiguous", len(here))
+                return self._found(unknown, prod, How.REKEY)
+        return self._found(here, prod, How.NUMBER) if len(here) == 1 else Ambiguous(len(here))
 
     def _rekey(self, card: dict, p: dict, set_id: str, rarity: str) -> bool:
         new_id = ygjson.print_id(set_id, card["id"], p.get("number"), rarity)
@@ -614,42 +648,60 @@ class Importer:
                                "print": p["id"], "heldBy": held, "reason": reason})
 
     def _land(self, card: dict, p: dict, prod: tcgcsv.Product, match: str) -> bool:
-        """Put the product on the print, or on the print's variant when the product names one. False (and a review
-        entry) when the print holds another card or rarity. A variant print is created only after those checks, so a
+        """Put the product on the print, or on the print's version when the product names one. False (and a review
+        entry) when the print holds another card or rarity. A version print is created only after those checks, so a
         refused product leaves no empty print behind."""
         if unplaceable_tags(prod):
             self._review(prod, "its tags name two versions, and no print can hold both")
             return False
-        # A base print and its variants are one card at one rarity, so a stranger is refused whichever of them it hits.
-        family = [q for q in card["prints"]
-                  if (q["set"], q.get("number"), q["rarity"]) == (p["set"], p.get("number"), p["rarity"])]
-        held = sorted(i for q in family for i in _product_ids(q) if i != prod.product_id and i in self.by_id)
-        mine = (normalise(prod.base_name_and_tags()[0]), rarities.canonical(prod.rarity))
+        mine = _identity(prod)
+        target = self._admit(card, p, prod, mine)
+        if target is None:
+            return False
+        if target is not p:  # the same card at another rarity: it is checked as its own print
+            p, match = target, MINTED
+            if self._admit(card, p, prod, mine) is None:
+                return False
+        self._hold(card, self._version_print(card, p, prod, mine[1]), prod, match)
+        return True
+
+    def _admit(self, card: dict, p: dict, prod: tcgcsv.Product, mine: tuple[str, str]) -> dict | None:
+        """The print the product may land on: `p`, unless a product of another name or rarity holds it or one of its
+        versions (a base print and its versions are one card at one rarity, so a stranger is refused whichever of them
+        it hits). When the stranger is the same card at another rarity, as the product's name says, the answer is the
+        print at the product's rarity, minted beside `p`. None, with a conflict entry, otherwise."""
+        family = _family(card, p)
         # A product of a group whose products are missing stays as it was, unseen: the name and rarity its print
         # records stand for it, so a product of another name or rarity is refused as it was when both were in the input.
         unseen = sorted(i for q in family for i in _product_ids(q) if i != prod.product_id and i not in self.by_id
                         if (normalise(tcgcsv.base_name_and_tags(q["tcgplayer"]["name"])[0]), q["rarity"]) != mine)
         if unseen:
             self._conflict(prod, p, unseen, "the print holds a product of another name or rarity")
-            return False
-        for i in held:
-            other = self.by_id[i]
-            theirs = (normalise(other.base_name_and_tags()[0]), rarities.canonical(other.rarity))
-            sibling_id = ygjson.print_id(p["set"], card["id"], p.get("number"), mine[1])
-            if theirs != mine and theirs[0] == mine[0] and mine[1] != rarities.UNKNOWN and sibling_id != p["id"] \
-                    and has_rarity_tag(prod):
-                # The same card at another rarity under one number, as its name says: "Number 107 (PCR)" in RA04. A
-                # rarity only the Rarity field states stays a conflict, because a mislabel would become a real print.
-                sibling = {k: p[k] for k in ("number", "region", "set") if k in p}
-                fields = {"id": sibling_id, **sibling, "rarity": mine[1], "source": SOURCE}
-                return self._land(card, self.catalog.attach(card, fields), prod, MINTED)
-            if theirs != mine:
-                self._conflict(prod, p, held, "the print holds a product of another name or rarity")
-                return False
+            return None
+        held = sorted(i for q in family for i in _product_ids(q) if i != prod.product_id and i in self.by_id)
+        stranger = next((theirs for theirs in (_identity(self.by_id[i]) for i in held) if theirs != mine), None)
+        if stranger is None:
+            return p
+        sibling_id = ygjson.print_id(p["set"], card["id"], p.get("number"), mine[1])
+        if stranger[0] == mine[0] and mine[1] != rarities.UNKNOWN and sibling_id != p["id"] and has_rarity_tag(prod):
+            # The same card at another rarity under one number, as its name says: "Number 107 (PCR)" in RA04. A
+            # rarity only the Rarity field states stays a conflict, because a mislabel would become a real print.
+            sibling = {k: p[k] for k in ("number", "region", "set") if k in p}
+            return self.catalog.attach(card, {"id": sibling_id, **sibling, "rarity": mine[1], "source": SOURCE})
+        self._conflict(prod, p, held, "the print holds a product of another name or rarity")
+        return None
+
+    def _version_print(self, card: dict, p: dict, prod: tcgcsv.Product, rarity: str) -> dict:
+        """The print's version the product names, created on first sight, else the print itself. A colour or an art is
+        always a version; a treatment only when another product of the set has the number and rarity."""
         variant = variant_of(prod)
         if variant and not p.get("variant") and (_names_colour_or_art(prod)
-                                                 or self._shares_number(prod, mine[1], p["set"])):
-            p = self._variant_print(card, p, variant)
+                                                 or self._shares_number(prod, rarity, p["set"])):
+            return self._variant_print(card, p, variant)
+        return p
+
+    def _hold(self, card: dict, p: dict, prod: tcgcsv.Product, match: str) -> None:
+        """Record the product on the print, with how it matched, and the name it sells the card under."""
         ids = p.setdefault("identifiers", {}).setdefault("tcgplayerProductIds", [])
         if prod.product_id not in ids:
             ids.append(prod.product_id)
@@ -670,7 +722,6 @@ class Importer:
         self.sold_as[card["id"]].add(prod.base_name_and_tags()[0])
         self.catalog.add_alias(card, prod.base_name_and_tags()[0])
         self.stats[p["tcgplayer"]["match"]] += 1
-        return True
 
     def _release(self, p: dict, prod: tcgcsv.Product) -> None:
         """Take the product off the print, which keeps the name of a product it still holds."""
@@ -788,9 +839,9 @@ class Importer:
         self.minted_prints += len(card["prints"]) - before
         return None if self._land(card, p, prod, MINTED) else "the minted print holds another product"
 
-    def _apply(self, hit, kind: str, set_id: str, prod: tcgcsv.Product, rarity: str, label: str | None) -> bool:
-        card, p = hit
-        if kind == "rekey":
+    def _apply(self, hit: Hit, set_id: str, prod: tcgcsv.Product, rarity: str, label: str | None) -> bool:
+        card, p = hit.card, hit.print
+        if hit.how is How.REKEY:
             if not self._rekey(card, p, set_id, rarity):
                 self._review(prod, "re-keying the unknown-rarity print would duplicate an existing print")
                 return False
@@ -799,7 +850,7 @@ class Importer:
         # that is a number+rarity match, as on a rerun, where pass 1 finds it.
         same_rarity = rarity != rarities.UNKNOWN and p["rarity"] == rarity
         return self._land(card, p, prod,
-                          label or ("number" if kind == "number" and not same_rarity else "number+rarity"))
+                          label or ("number" if hit.how is How.NUMBER and not same_rarity else "number+rarity"))
 
     def match_singles(self) -> None:
         singles = sorted((p for ps in self.products.values() for p in ps if p.is_single), key=lambda p: p.product_id)
@@ -813,10 +864,10 @@ class Importer:
             res = self._exact(set_id, prod, rarity) if set_id and rarity != rarities.UNKNOWN else None
             if res is None or not set_id:
                 pending.append(prod)
-            elif res[0] == "ambiguous":
-                self._review(prod, f"ambiguous: {res[1]} prints of {prod.number} at {rarity}")
+            elif isinstance(res, Ambiguous):
+                self._review(prod, f"ambiguous: {res.count} prints of {prod.number} at {rarity}")
             else:
-                self._apply(res[1], "exact", set_id, prod, rarity, "number+rarity")
+                self._apply(res, set_id, prod, rarity, "number+rarity")
         pending3: list[tcgcsv.Product] = []
         for prod in pending:
             set_id = self.set_of_group.get(prod.group_id)
@@ -824,10 +875,10 @@ class Importer:
             res = self._fallback(set_id, prod, rarity) if set_id else None
             if res is None or not set_id:
                 pending3.append(prod)
-            elif res[0] == "ambiguous":
-                self._review(prod, f"ambiguous: {res[1]} prints of {prod.number} in the set, none at {rarity}")
+            elif isinstance(res, Ambiguous):
+                self._review(prod, f"ambiguous: {res.count} prints of {prod.number} in the set, none at {rarity}")
             else:
-                self._apply(res[1], res[0], set_id, prod, rarity, None)
+                self._apply(res, set_id, prod, rarity, None)
         for prod in pending3:
             self._other_set(prod)
 
@@ -845,12 +896,12 @@ class Importer:
             self._review(prod, f"the number is in {len(others)} other sets: {', '.join(others[:5])}")
             return
         target, rarity = others[0], rarities.canonical(prod.rarity)
-        res = self._exact(target, prod, rarity) if rarity != rarities.UNKNOWN else None
-        res = ("exact", res[1]) if res and res[0] == "hit" else res or self._fallback(target, prod, rarity)
-        if res is None or res[0] == "ambiguous":
+        res = (self._exact(target, prod, rarity) if rarity != rarities.UNKNOWN else None) \
+            or self._fallback(target, prod, rarity)
+        if not isinstance(res, Hit):
             self._review(prod, f"ambiguous in {target}" if res else f"no print of {target} has this number")
             return
-        if self._apply(res[1], res[0], target, prod, rarity, "number-other-set"):
+        if self._apply(res, target, prod, rarity, "number-other-set"):
             self.aliases[prod.group_id][target] += 1
 
     # --- editions ---------------------------------------------------------------------------------------------
