@@ -98,6 +98,7 @@ HAND = ygjson.ROOT / "mappings" / "ids.json"
 
 def load_hand(path: Path = HAND) -> tuple[dict[str, str], dict[str, list[str]]]:
     """The hand decisions of mappings/ids.json: ({newcomer key: retired print id}, {retired id: successor ids}).
+    A successors entry is a retired print (a UUID) or a retired card (its card id), with successors of its kind.
     An entry without a non-empty "why" is refused; a missing file is empty."""
     if not path.exists():
         return {}, {}
@@ -112,15 +113,16 @@ def load_hand(path: Path = HAND) -> tuple[dict[str, str], dict[str, list[str]]]:
 
 def hand_errors(ledger: dict[str, dict[str, dict]], hand: tuple[dict[str, str], dict[str, list[str]]]) -> list[str]:
     """Hand decisions the ledger contradicts: a print given an id the ledger lacks, or one that is live under another
-    key (live under the hand's own key, the decision was applied); successors set on an id that is not a retired
-    print, or naming ids that are not prints."""
+    key it never had (live under the hand's own key, the decision was applied; under a later key with the hand's in
+    its formerKeys, it was applied and the print has moved on since); successors set on an id that is not a retired
+    print or card, or naming ids that are not of its kind."""
     keys, successors = hand
     prints = ledger.get("prints", {})
     errors = []
     for key, pid in sorted(keys.items()):
         if pid not in prints:
             errors.append(f"hand print {key!r}: id {pid} is not in the ledger")
-        elif prints[pid]["status"] == "live" and prints[pid]["key"] != key:
+        elif prints[pid]["status"] == "live" and key not in (prints[pid]["key"], *prints[pid].get("formerKeys", [])):
             errors.append(f"hand print {key!r}: id {pid} is live under {prints[pid]['key']!r}")
     by_id: dict[str, list[str]] = {}
     for key, pid in sorted(keys.items()):
@@ -129,16 +131,23 @@ def hand_errors(ledger: dict[str, dict[str, dict]], hand: tuple[dict[str, str], 
         if len(named) > 1:
             errors.append(f"hand prints {', '.join(repr(k) for k in named)}: all claim id {pid}")
     for pid, targets in sorted(successors.items()):
-        if pid not in prints or prints[pid]["status"] != "retired":
-            errors.append(f"hand successors {pid!r}: not a retired print")
+        kind = _successor_kind(ledger, pid)
+        if kind is None:
+            errors.append(f"hand successors {pid!r}: not a retired print or card")
+            continue
         for target in targets:
-            if target not in prints:
-                errors.append(f"hand successors {pid!r}: successor {target} is not in the ledger")
+            if target not in ledger[kind]:
+                errors.append(f"hand successors {pid!r}: successor {target} is not a {kind[:-1]} in the ledger")
     return errors
 
 
+def _successor_kind(ledger: Mapping[str, Mapping[str, dict]], i: str) -> str | None:
+    """The kind of a retired id a hand successors entry may name: "prints" or "cards"; None for any other id."""
+    return next((k for k in ("prints", "cards") if ledger.get(k, {}).get(i, {}).get("status") == "retired"), None)
+
+
 def apply_successors(entries: dict[str, dict], overrides: Mapping[str, list[str]]) -> dict[str, dict]:
-    """A copy of the print entries with the hand-given successors set on the retired ones."""
+    """A copy of the entries (prints or cards) with the hand-given successors set on the retired ones."""
     out = {pid: dict(entry) for pid, entry in entries.items()}
     for pid, targets in overrides.items():
         if pid in out and out[pid]["status"] == "retired":
@@ -164,7 +173,7 @@ def reached(entries: Mapping[str, dict], start: str) -> list[str]:
 def review_body(ledger: Mapping[str, Mapping[str, dict]], settled: Container[str], renames: list[dict]) -> dict:
     """The body of review/ids.json, from the ledger alone: each retired print and card whose successors do not lead to
     exactly one live id ("dead-end" when none, "several"), with the live ids they reach, unless `settled` (the print
-    ids mappings/ids.json gives successors) holds it; and the `renames` rows sorted by "from"."""
+    and card ids mappings/ids.json gives successors) holds it; and the `renames` rows sorted by "from"."""
     def rows(kind: str, label: str, skip: Container[str]) -> list[dict]:
         found = []
         for i, e in sorted(ledger.get(kind, {}).items()):
@@ -175,7 +184,7 @@ def review_body(ledger: Mapping[str, Mapping[str, dict]], settled: Container[str
                 found.append({"id": i, label: e[label], "reason": "several" if live else "dead-end",
                               "successors": live})
         return found
-    return {"prints": rows("prints", "key", settled), "cards": rows("cards", "name", ()),
+    return {"prints": rows("prints", "key", settled), "cards": rows("cards", "name", settled),
             "renames": sorted(renames, key=lambda r: r["from"])}
 
 
@@ -207,6 +216,10 @@ def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, d
     keys, successors = hand
     cards = [c for body in files.values() for c in body.get("cards", [])]
     card_entries, card_successor = reconcile.reconcile_cards(ledger.get("cards", {}), cards)
+    card_entries = apply_successors(card_entries, successors)
+    # A card a person gave one successor leads its prints there too, as one the rules found does (reconcile.rekey_card).
+    card_successor = {**card_successor, **{c: targets[0] for c, targets in successors.items()
+                                          if card_entries.get(c, {}).get("status") == "retired" and len(targets) == 1}}
     print_entries, print_ids = reconcile.reconcile_prints(
         ledger.get("prints", {}), reconcile.current_prints(files), card_successor, keys)
     print_entries = apply_successors(print_entries, successors)

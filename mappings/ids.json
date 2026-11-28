@@ -1,5 +1,5 @@
 {
- "_comment": "Hand decisions for the permanent-id ledger (read by tools/ids.py). 'prints' gives a newcomer print key the retired print id it continues (reconcile rule 5); 'successors' sets which prints replace a retired print id. Every entry cites its evidence in 'why'. Items to settle are listed in review/ids.json.",
+ "_comment": "Hand decisions for the permanent-id ledger (read by tools/ids.py). 'prints' gives a newcomer print key the retired print id it continues (reconcile rule 5); the decision follows the print when its key changes later. 'successors' sets which ids replace a retired print id (UUID) or a retired card id; a card given one successor takes its prints there. Every entry cites its evidence in 'why'. Items to settle are listed in review/ids.json.",
  "prints": {},
  "successors": {}
 }
