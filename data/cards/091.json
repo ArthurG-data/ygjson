@@ -1690,6 +1690,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "thank-you-pack:91133740:TYP1-EN009:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6492,6 +6495,36 @@
   },
   {
    "archetypes": [
+    "ghostrick"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "91488070",
+   "identifiers": {
+    "konamiId": 24026,
+    "ygoprodeckId": 91488070
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/91488070.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/91488070.jpg",
+     "id": 91488070,
+     "small": "https://images.ygoprodeck.com/images/cards_small/91488070.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Field",
+   "name": "Ghostrick Garden",
+   "names": {
+    "en": "Ghostrick Garden"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 91488070,
+   "prints": []
+  },
+  {
+   "archetypes": [
     "gagaga"
    ],
    "atk": 1900,
@@ -6642,11 +6675,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:91500017:MAMS-EN104:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731708
+      ]
+     },
      "number": "MAMS-EN104",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Bookmark"
+     }
     },
     {
      "id": "toon-chaos:91500017:TOCH-EN003:collectors_rare",
@@ -10611,23 +10656,88 @@
    "passcode": 91714772,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:91714772:MAMS-EN012:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731516
+      ]
+     },
      "number": "MAMS-EN012",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy Defense Robot Orbital 7 (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:91714772:MAMS-EN012:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731515
+      ]
+     },
      "number": "MAMS-EN012",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy Defense Robot Orbital 7 (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:91714772:MAMS-EN012:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731513
+      ]
+     },
      "number": "MAMS-EN012",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy Defense Robot Orbital 7"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:91714772:MAMS-EN012:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731514
+      ]
+     },
+     "number": "MAMS-EN012",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy Defense Robot Orbital 7 (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:91714772:MAMS-EN012:unknown",
+     "number": "MAMS-EN012",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -14374,13 +14484,12 @@
   },
   {
    "aliases": [
-    "Fairy Tail",
-    "Fairy Tale Tails"
+    "Fairy Tail Tales"
    ],
    "archetypes": [
     "fairy-tail"
    ],
-   "betaName": "Fairy Tail",
+   "betaName": "Fairy Tail Tales",
    "frame": "spell",
    "hasEffect": true,
    "id": "91957038",
@@ -14403,10 +14512,10 @@
    "isTuner": false,
    "kind": "spell",
    "monsterType": "Continuous",
-   "name": "Fairy Tail Tales",
+   "name": "Fairy Tale Tails",
    "names": {
     "de": "Märchenschweif-Geschichten",
-    "en": "Fairy Tail Tales",
+    "en": "Fairy Tale Tails",
     "es": "Cuentos Colacuento",
     "fr": "Contes Animal Féérique",
     "it": "Racconti Codafavola",

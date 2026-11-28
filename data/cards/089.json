@@ -6675,7 +6675,6 @@
   },
   {
    "archetypes": [
-    "duel-dragon",
     "stardust"
    ],
    "atk": 3000,
@@ -8066,6 +8065,13 @@
       "match": "number+rarity",
       "name": "Small World"
      }
+    },
+    {
+     "id": "glorious-victors:89558743:GLVI-EN045:rare",
+     "number": "GLVI-EN045",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
     },
     {
      "editions": [
@@ -12453,11 +12459,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:89743495:UP02-EN031:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731139
+      ]
+     },
      "number": "UP02-EN031",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mathmech Division"
+     }
     }
    ],
    "tcgDate": "2019-11-21",
@@ -12493,25 +12511,61 @@
    "passcode": 89753095,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:89753095:MAMS-EN021:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731548
+      ]
+     },
      "number": "MAMS-EN021",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lightning Crash (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:89753095:MAMS-EN021:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731549
+      ]
+     },
      "number": "MAMS-EN021",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lightning Crash (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:89753095:MAMS-EN021:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731547
+      ]
+     },
      "number": "MAMS-EN021",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lightning Crash"
+     }
     }
    ],
    "tcgDate": "2026-11-12"
@@ -14293,23 +14347,88 @@
    "passcode": 89875646,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:89875646:MAMS-EN018:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731540
+      ]
+     },
      "number": "MAMS-EN018",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Triple Borrel Launch (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:89875646:MAMS-EN018:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731539
+      ]
+     },
      "number": "MAMS-EN018",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Triple Borrel Launch (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:89875646:MAMS-EN018:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731537
+      ]
+     },
      "number": "MAMS-EN018",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Triple Borrel Launch"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:89875646:MAMS-EN018:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731538
+      ]
+     },
+     "number": "MAMS-EN018",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Triple Borrel Launch (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:89875646:MAMS-EN018:unknown",
+     "number": "MAMS-EN018",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -16539,11 +16658,23 @@
      "variant": "purple"
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:89997728:MAMS-EN102:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731706
+      ]
+     },
      "number": "MAMS-EN102",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Table of Contents"
+     }
     },
     {
      "id": "speed-duel-starter-decks-destiny-masters:89997728:SS01-ENC10:common",

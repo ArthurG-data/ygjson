@@ -6524,9 +6524,13 @@
    "tcgDate": "2011-11-10"
   },
   {
+   "aliases": [
+    "The Glitter of Raise Moon"
+   ],
    "archetypes": [
     "raise-moon"
    ],
+   "betaName": "The Glitter of Raise Moon",
    "frame": "trap",
    "hasEffect": true,
    "id": "9362643",
@@ -6545,13 +6549,29 @@
    "isTuner": false,
    "kind": "trap",
    "monsterType": "Normal",
-   "name": "The Glitter of Raise Moon",
+   "name": "The Bright Lights of Raise Moon",
    "names": {
-    "en": "The Glitter of Raise Moon"
+    "en": "The Bright Lights of Raise Moon"
    },
    "ocgDate": "2026-09-05",
    "passcode": 9362643,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:9362643:GLVI-EN026:rare",
+     "number": "GLVI-EN026",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:9362643:GLVI-EN026:super_rare",
+     "number": "GLVI-EN026",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "atk": 900,
@@ -8518,11 +8538,15 @@
    ]
   },
   {
+   "aliases": [
+    "Raise Moon Hope Squeeze - Jackpot"
+   ],
    "archetypes": [
     "raise-moon"
    ],
    "atk": 1400,
    "attribute": "light",
+   "betaName": "Raise Moon Hope Squeeze - Jackpot",
    "def": 2800,
    "frame": "xyz",
    "hasEffect": true,
@@ -8542,14 +8566,23 @@
    "isTuner": false,
    "kind": "monster",
    "monsterType": "Machine",
-   "name": "Raise Moon Hope Squeeze - Jackpot",
+   "name": "Squeeze, the Full Moon of Raise Moon - JACKPOT!",
    "names": {
-    "en": "Raise Moon Hope Squeeze - Jackpot"
+    "en": "Squeeze, the Full Moon of Raise Moon - JACKPOT!"
    },
    "ocgDate": "2026-09-05",
    "passcode": 9484285,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:9484285:GLVI-EN023:super_rare",
+     "number": "GLVI-EN023",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
    "rank": 7,
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Machine",
     "Xyz",
@@ -10182,18 +10215,42 @@
    "passcode": 9603252,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:9603252:MAMS-EN123:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731731
+      ]
+     },
      "number": "MAMS-EN123",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Vice-Madame (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:9603252:MAMS-EN123:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731730
+      ]
+     },
      "number": "MAMS-EN123",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Vice-Madame (Extended Art)"
+     }
     },
     {
      "id": "magnificent-mavens:9603252:MAMA-EN020:ultra_rare",
@@ -12924,7 +12981,6 @@
   {
    "archetypes": [
     "archfiend",
-    "duel-dragon",
     "red-dragon-archfiend"
    ],
    "atk": 3200,
@@ -13060,9 +13116,13 @@
    ]
   },
   {
+   "aliases": [
+    "A Journey Back to the Light - \"Zenet\""
+   ],
    "archetypes": [
     "zenet"
    ],
+   "betaName": "A Journey Back to the Light - \"Zenet\"",
    "frame": "spell",
    "hasEffect": true,
    "id": "9762295",
@@ -13081,13 +13141,29 @@
    "isTuner": false,
    "kind": "spell",
    "monsterType": "Normal",
-   "name": "A Journey Back to the Light - \"Zenet\"",
+   "name": "Return Journey to the Light \"Zenet\"",
    "names": {
-    "en": "A Journey Back to the Light - \"Zenet\""
+    "en": "Return Journey to the Light \"Zenet\""
    },
    "ocgDate": "2026-09-05",
    "passcode": 9762295,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:9762295:GLVI-EN008:collectors_rare",
+     "number": "GLVI-EN008",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:9762295:GLVI-EN008:ultra_rare",
+     "number": "GLVI-EN008",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "atk": 800,

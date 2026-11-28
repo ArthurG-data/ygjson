@@ -912,11 +912,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:84040113:UP02-EN009:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731117
+      ]
+     },
      "number": "UP02-EN009",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Muddy Mudragon"
+     }
     }
    ],
    "tcgDate": "2019-05-02",
@@ -8329,14 +8341,14 @@
   },
   {
    "aliases": [
-    "Sennet Prophet - Nefertari"
+    "Zenet Prophet - Nefertari"
    ],
    "archetypes": [
     "zenet"
    ],
    "atk": 0,
    "attribute": "light",
-   "betaName": "Sennet Prophet - Nefertari",
+   "betaName": "Zenet Prophet - Nefertari",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -8357,13 +8369,22 @@
    "kind": "monster",
    "level": 4,
    "monsterType": "Zombie",
-   "name": "Zenet Prophet - Nefertari",
+   "name": "Zenet Revelator Nefertari",
    "names": {
-    "en": "Zenet Prophet - Nefertari"
+    "en": "Zenet Revelator Nefertari"
    },
    "ocgDate": "2026-09-05",
    "passcode": 84512726,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:84512726:GLVI-EN001:ultra_rare",
+     "number": "GLVI-EN001",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Zombie",
     "Effect"
@@ -13195,9 +13216,6 @@
    "tcgDate": "2022-11-17"
   },
   {
-   "archetypes": [
-    "evolution-pill"
-   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "84808313",

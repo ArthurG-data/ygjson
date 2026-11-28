@@ -1055,6 +1055,9 @@
    "passcode": 62023839,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2014-mega-tin-mega-pack:62023839:MP14-EN122:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3500,7 +3503,6 @@
   {
    "archetypes": [
     "archfiend",
-    "duel-dragon",
     "red-dragon-archfiend"
    ],
    "atk": 4000,
@@ -7391,9 +7393,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "the-lost-millennium:62420419:TLM-EN033:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8824,6 +8823,20 @@
    "ocgDate": "2013-07-20",
    "passcode": 62514770,
    "prints": [
+    {
+     "id": "glorious-victors:62514770:GLVI-EN047:rare",
+     "number": "GLVI-EN047",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:62514770:GLVI-EN047:super_rare",
+     "number": "GLVI-EN047",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
     {
      "id": "shadow-specters:62514770:SHSP-EN001:super_rare",
      "identifiers": {

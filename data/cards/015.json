@@ -2150,25 +2150,61 @@
    "passcode": 15141103,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:15141103:MAMS-EN022:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731551
+      ]
+     },
      "number": "MAMS-EN022",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Tuner Catastrogue (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:15141103:MAMS-EN022:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731552
+      ]
+     },
      "number": "MAMS-EN022",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Tuner Catastrogue (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:15141103:MAMS-EN022:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731550
+      ]
+     },
      "number": "MAMS-EN022",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Tuner Catastrogue"
+     }
     }
    ],
    "tcgDate": "2026-11-12",

@@ -2832,6 +2832,9 @@
    "passcode": 35183853,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2014-mega-tin-mega-pack:35183853:MP14-EN170:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4327,6 +4330,13 @@
      }
     },
     {
+     "id": "glorious-victors:35261759:GLVI-EN044:rare",
+     "number": "GLVI-EN044",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "ots-tournament-pack-11-por:35261759:OP11-PT003:ultimate_rare",
      "number": "OP11-PT003",
      "rarity": "ultimate_rare",
@@ -4468,11 +4478,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:35261759:UP02-EN044:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731152
+      ]
+     },
      "number": "UP02-EN044",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Pot of Desires"
+     }
     },
     {
      "id": "yu-gi-oh-championship-series-2025-prize-cards:35261759:25YC-ENP10:rare",
@@ -7673,11 +7695,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:35480699:UP02-EN043:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731151
+      ]
+     },
      "number": "UP02-EN043",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Book of Eclipse"
+     }
     }
    ],
    "tcgDate": "2008-08-09"
@@ -8491,6 +8525,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "thank-you-pack:35537860:TYP1-EN023:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11411,14 +11448,14 @@
   },
   {
    "aliases": [
-    "Xenovader△ of Emptiness Gehenna"
+    "Trirealm Rift of Emptiness Gehenna"
    ],
    "archetypes": [
     "trirealm-rift"
    ],
    "atk": 100,
    "attribute": "dark",
-   "betaName": "Xenovader△ of Emptiness Gehenna",
+   "betaName": "Trirealm Rift of Emptiness Gehenna",
    "def": 1000,
    "frame": "effect",
    "hasEffect": true,
@@ -11439,13 +11476,22 @@
    "kind": "monster",
    "level": 1,
    "monsterType": "Psychic",
-   "name": "Trirealm Rift of Emptiness Gehenna",
+   "name": "Trirealm Rift Hollows",
    "names": {
-    "en": "Trirealm Rift of Emptiness Gehenna"
+    "en": "Trirealm Rift Hollows"
    },
    "ocgDate": "2026-09-05",
    "passcode": 35761342,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:35761342:GLVI-EN031:ultra_rare",
+     "number": "GLVI-EN031",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Psychic",
     "Effect"
@@ -12356,6 +12402,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "dark-crisis:35798491:DCR-EN069:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12950,6 +12999,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-lost-millennium:35809262:TLM-EN035:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [

@@ -1744,6 +1744,13 @@
    "passcode": 39111158,
    "prints": [
     {
+     "id": "glorious-victors:39111158:GLVI-EN012:rare",
+     "number": "GLVI-EN012",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "legend-of-blue-eyes-white-dragon-25th-anniversary-edition:39111158:LOB-EN000:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2833,11 +2840,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:39168895:MAMS-EN063:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731667
+      ]
+     },
      "number": "MAMS-EN063",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Berserk Gorilla"
+     }
     },
     {
      "id": "tournament-pack-8:39168895:TP8-EN011:common",
@@ -10578,11 +10597,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:39706423:UP02-EN008:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731116
+      ]
+     },
      "number": "UP02-EN008",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "GMX Suppression Squad"
+     }
     }
    ],
    "tcgDate": "2026-05-07",
@@ -11712,7 +11743,6 @@
   {
    "archetypes": [
     "archfiend",
-    "duel-dragon",
     "red-dragon-archfiend"
    ],
    "atk": 3000,

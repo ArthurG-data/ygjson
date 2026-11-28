@@ -1470,8 +1470,17 @@
    },
    "ocgDate": "2026-09-05",
    "passcode": 73090586,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:73090586:GLVI-EN022:ultra_rare",
+     "number": "GLVI-EN022",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
    "rank": 7,
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Spellcaster",
     "Xyz",
@@ -6013,11 +6022,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:73355772:MAMS-EN086:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731690
+      ]
+     },
      "number": "MAMS-EN086",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dogmatika Fleurdelis, the Thunderbolt"
+     }
     }
    ],
    "tcgDate": "2025-09-25",
@@ -8167,11 +8188,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:73468603:UP02-EN045:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731153
+      ]
+     },
      "number": "UP02-EN045",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Set Rotation"
+     }
     }
    ],
    "tcgDate": "2017-05-04"
@@ -8528,14 +8561,14 @@
   },
   {
    "aliases": [
-    "Tausennet Wadjet"
+    "Tauzenet Wadjet"
    ],
    "archetypes": [
     "zenet"
    ],
    "atk": 3200,
    "attribute": "dark",
-   "betaName": "Tausennet Wadjet",
+   "betaName": "Tauzenet Wadjet",
    "def": 2500,
    "frame": "ritual",
    "hasEffect": true,
@@ -8556,13 +8589,22 @@
    "kind": "monster",
    "level": 8,
    "monsterType": "Zombie",
-   "name": "Tauzenet Wadjet",
+   "name": "Tau-Zenet Adjat",
    "names": {
-    "en": "Tauzenet Wadjet"
+    "en": "Tau-Zenet Adjat"
    },
    "ocgDate": "2026-09-05",
    "passcode": 73490148,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:73490148:GLVI-EN004:super_rare",
+     "number": "GLVI-EN004",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Zombie",
     "Ritual",
@@ -9249,9 +9291,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:73539069:MGED-EN145:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12216,7 +12255,7 @@
      }
     }
    ],
-   "tcgDate": "2003-07-18"
+   "tcgDate": "2005-03-19"
   },
   {
    "frame": "trap",

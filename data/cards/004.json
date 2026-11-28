@@ -947,8 +947,7 @@
       "name": "Change of Heart"
      }
     }
-   ],
-   "tcgDate": "2002-03-29"
+   ]
   },
   {
    "atk": 1200,
@@ -4117,9 +4116,6 @@
    "tcgDate": "2003-07-18"
   },
   {
-   "archetypes": [
-    "duel-dragon"
-   ],
    "atk": 2100,
    "attribute": "dark",
    "def": 3000,
@@ -10912,6 +10908,36 @@
    ]
   },
   {
+   "archetypes": [
+    "cubic"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "4661345",
+   "identifiers": {
+    "konamiId": 24014,
+    "ygoprodeckId": 4661345
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/4661345.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/4661345.jpg",
+     "id": 4661345,
+     "small": "https://images.ygoprodeck.com/images/cards_small/4661345.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Counter",
+   "name": "Cubic Defense",
+   "names": {
+    "en": "Cubic Defense"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 4661345,
+   "prints": []
+  },
+  {
    "aliases": [
     "Clock Tower Prison City - Dark City"
    ],
@@ -14580,11 +14606,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:4891376:UP02-EN005:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731113
+      ]
+     },
      "number": "UP02-EN005",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Zalen the Shackled Dragon"
+     }
     }
    ],
    "tcgDate": "2026-02-05",

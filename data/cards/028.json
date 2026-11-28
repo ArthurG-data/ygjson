@@ -1001,6 +1001,45 @@
    ]
   },
   {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "atk": 900,
+   "attribute": "dark",
+   "def": 900,
+   "frame": "xyz",
+   "hasEffect": true,
+   "id": "28095622",
+   "identifiers": {
+    "konamiId": 24024,
+    "ygoprodeckId": 28095622
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/28095622.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/28095622.jpg",
+     "id": 28095622,
+     "small": "https://images.ygoprodeck.com/images/cards_small/28095622.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "monsterType": "Spellcaster",
+   "name": "Ghostrick Yoko",
+   "names": {
+    "en": "Ghostrick Yoko"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 28095622,
+   "prints": [],
+   "rank": 2,
+   "typeline": [
+    "Spellcaster",
+    "Xyz",
+    "Effect"
+   ]
+  },
+  {
    "aliases": [
     "Ignihorse Dragonith"
    ],
@@ -1352,11 +1391,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:28112535:MAMS-EN069:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731673
+      ]
+     },
      "number": "MAMS-EN069",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Barrel Dragon"
+     }
     },
     {
      "id": "speed-duel-starter-decks-match-of-the-millennium:28112535:SS04-ENB06:common",
@@ -1970,6 +2021,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "the-dark-illusion:28139785:TDIL-EN041:short_print",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4637,23 +4691,88 @@
    "passcode": 28331069,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:28331069:MAMS-EN010:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731508
+      ]
+     },
      "number": "MAMS-EN010",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo Galaxy-Eyes Photon Dragon - Photon Howling (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:28331069:MAMS-EN010:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731507
+      ]
+     },
      "number": "MAMS-EN010",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo Galaxy-Eyes Photon Dragon - Photon Howling (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:28331069:MAMS-EN010:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731505
+      ]
+     },
      "number": "MAMS-EN010",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo Galaxy-Eyes Photon Dragon - Photon Howling"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:28331069:MAMS-EN010:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731506
+      ]
+     },
+     "number": "MAMS-EN010",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo Galaxy-Eyes Photon Dragon - Photon Howling (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:28331069:MAMS-EN010:unknown",
+     "number": "MAMS-EN010",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -6033,6 +6152,45 @@
    ]
   },
   {
+   "archetypes": [
+    "abyss"
+   ],
+   "atk": 0,
+   "attribute": "water",
+   "def": 0,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "28395288",
+   "identifiers": {
+    "konamiId": 24010,
+    "ygoprodeckId": 28395288
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/28395288.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/28395288.jpg",
+     "id": 28395288,
+     "small": "https://images.ygoprodeck.com/images/cards_small/28395288.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Fiend",
+   "name": "Abyss Vagrada the Abyssal Cubic Lord",
+   "names": {
+    "en": "Abyss Vagrada the Abyssal Cubic Lord"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 28395288,
+   "prints": [],
+   "typeline": [
+    "Fiend",
+    "Fusion",
+    "Effect"
+   ]
+  },
+  {
    "aliases": [
     "Number 97: Dragravion"
    ],
@@ -7252,6 +7410,9 @@
    "passcode": 28493337,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2014-mega-tin-mega-pack:28493337:MP14-EN112:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9677,10 +9838,6 @@
      }
     },
     {
-     "editions": [
-      "first",
-      "unlimited"
-     ],
      "id": "super-starter-power-up-pack:28637168:YS13-ENV06:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11145,11 +11302,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:28711704:MAMS-EN076:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731680
+      ]
+     },
      "number": "MAMS-EN076",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Black Luster Soldier"
+     }
     },
     {
      "id": "quarter-century-bonanza:28711704:RA03-EN272:platinum_secret_rare",
@@ -13396,11 +13565,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:28904860:UP02-EN010:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731118
+      ]
+     },
      "number": "UP02-EN010",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Angelechy Bastion"
+     }
     }
    ],
    "tcgDate": "2026-07-02",

@@ -261,11 +261,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34004470:MAMS-EN065:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731669
+      ]
+     },
      "number": "MAMS-EN065",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The big SATURN"
+     }
     }
    ],
    "tcgDate": "2010-02-19",
@@ -3805,11 +3817,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34206604:MAMS-EN061:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731665
+      ]
+     },
      "number": "MAMS-EN061",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magical Scientist"
+     }
     }
    ],
    "tcgDate": "2003-10-10",
@@ -5667,25 +5691,61 @@
    "passcode": 34298391,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34298391:MAMS-EN045:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731620
+      ]
+     },
      "number": "MAMS-EN045",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mind Scan (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34298391:MAMS-EN045:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731621
+      ]
+     },
      "number": "MAMS-EN045",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mind Scan (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34298391:MAMS-EN045:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731619
+      ]
+     },
      "number": "MAMS-EN045",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mind Scan"
+     }
     }
    ],
    "tcgDate": "2026-11-12"
@@ -5788,25 +5848,61 @@
    "passcode": 34314989,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34314989:MAMS-EN042:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731611
+      ]
+     },
      "number": "MAMS-EN042",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark-Eyes Illusionist Faceless Mage (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34314989:MAMS-EN042:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731612
+      ]
+     },
      "number": "MAMS-EN042",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark-Eyes Illusionist Faceless Mage (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:34314989:MAMS-EN042:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731610
+      ]
+     },
      "number": "MAMS-EN042",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark-Eyes Illusionist Faceless Mage"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -6721,9 +6817,6 @@
    ]
   },
   {
-   "archetypes": [
-    "duel-dragon"
-   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 3000,
@@ -10700,14 +10793,14 @@
   },
   {
    "aliases": [
-    "Xenovader△ of Scarlet Naraka"
+    "Trirealm Rift of Scarlet Naraka"
    ],
    "archetypes": [
     "trirealm-rift"
    ],
    "atk": 1700,
    "attribute": "fire",
-   "betaName": "Xenovader△ of Scarlet Naraka",
+   "betaName": "Trirealm Rift of Scarlet Naraka",
    "def": 400,
    "frame": "effect",
    "hasEffect": true,
@@ -10728,13 +10821,29 @@
    "kind": "monster",
    "level": 4,
    "monsterType": "Psychic",
-   "name": "Trirealm Rift of Scarlet Naraka",
+   "name": "Trirealm Rift Blaze",
    "names": {
-    "en": "Trirealm Rift of Scarlet Naraka"
+    "en": "Trirealm Rift Blaze"
    },
    "ocgDate": "2026-09-05",
    "passcode": 34645790,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:34645790:GLVI-EN034:rare",
+     "number": "GLVI-EN034",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:34645790:GLVI-EN034:super_rare",
+     "number": "GLVI-EN034",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Psychic",
     "Effect"

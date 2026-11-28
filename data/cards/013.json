@@ -1361,6 +1361,9 @@
    ]
   },
   {
+   "archetypes": [
+    "rites"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "13048472",
@@ -3773,25 +3776,61 @@
    "passcode": 13203964,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:13203964:MAMS-EN028:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731569
+      ]
+     },
      "number": "MAMS-EN028",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Perfectron Hydradrive Dragon (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:13203964:MAMS-EN028:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731570
+      ]
+     },
      "number": "MAMS-EN028",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Perfectron Hydradrive Dragon (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:13203964:MAMS-EN028:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731568
+      ]
+     },
      "number": "MAMS-EN028",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Perfectron Hydradrive Dragon"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -9900,11 +9939,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:13597785:MAMS-EN087:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731691
+      ]
+     },
      "number": "MAMS-EN087",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elfnote Lucina"
+     }
     }
    ],
    "tcgDate": "2026-02-05",

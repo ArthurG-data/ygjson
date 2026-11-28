@@ -384,23 +384,88 @@
    "passcode": 29053656,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:29053656:MAMS-EN007:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731496
+      ]
+     },
      "number": "MAMS-EN007",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crimson Dragon Quetzalcoatl (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:29053656:MAMS-EN007:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731495
+      ]
+     },
      "number": "MAMS-EN007",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crimson Dragon Quetzalcoatl (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:29053656:MAMS-EN007:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731493
+      ]
+     },
      "number": "MAMS-EN007",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crimson Dragon Quetzalcoatl"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:29053656:MAMS-EN007:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731494
+      ]
+     },
+     "number": "MAMS-EN007",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crimson Dragon Quetzalcoatl (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:29053656:MAMS-EN007:unknown",
+     "number": "MAMS-EN007",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -8675,18 +8740,42 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:29479265:MAMS-EN124:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731733
+      ]
+     },
      "number": "MAMS-EN124",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Unchained Abomination (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:29479265:MAMS-EN124:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731732
+      ]
+     },
      "number": "MAMS-EN124",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Unchained Abomination (Extended Art)"
+     }
     },
     {
      "id": "ots-tournament-pack-22:29479265:OP22-EN006:super_rare",
@@ -11973,6 +12062,36 @@
     "Aqua",
     "Normal"
    ]
+  },
+  {
+   "archetypes": [
+    "marincess"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "29711214",
+   "identifiers": {
+    "konamiId": 24021,
+    "ygoprodeckId": 29711214
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/29711214.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/29711214.jpg",
+     "id": 29711214,
+     "small": "https://images.ygoprodeck.com/images/cards_small/29711214.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Normal",
+   "name": "Marincess Overflow",
+   "names": {
+    "en": "Marincess Overflow"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 29711214,
+   "prints": []
   },
   {
    "aliases": [

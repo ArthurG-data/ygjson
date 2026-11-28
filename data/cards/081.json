@@ -510,9 +510,6 @@
    ]
   },
   {
-   "archetypes": [
-    "duel-dragon"
-   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 3000,
@@ -10900,9 +10897,13 @@
    "tcgDate": "2009-11-17"
   },
   {
+   "aliases": [
+    "Rikka June Moon"
+   ],
    "archetypes": [
     "rikka"
    ],
+   "betaName": "Rikka June Moon",
    "frame": "spell",
    "hasEffect": true,
    "id": "81611932",
@@ -10921,9 +10922,9 @@
    "isTuner": false,
    "kind": "spell",
    "monsterType": "Normal",
-   "name": "Rikka June Moon",
+   "name": "Rikka Moonlit Waters",
    "names": {
-    "en": "Rikka June Moon"
+    "en": "Rikka Moonlit Waters"
    },
    "ocgDate": "2026-10-31",
    "passcode": 81611932,
@@ -13749,11 +13750,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:81797573:MAMS-EN095:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731699
+      ]
+     },
      "number": "MAMS-EN095",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Angelechy Enlisted"
+     }
     }
    ],
    "tcgDate": "2026-07-02",

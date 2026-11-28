@@ -79,7 +79,7 @@
   {
    "id": "10007434",
    "konamiId": 23533,
-   "name": "Zenet Prophet - Amenhotep",
+   "name": "Zenet Revelator Amenhotep",
    "status": "live",
    "successors": []
   },
@@ -101,8 +101,10 @@
    "id": "100200298",
    "konamiId": 24035,
    "name": "Counter Spell \"Negate Attack\"",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "88421252"
+   ]
   },
   {
    "id": "10024317",
@@ -126,6 +128,18 @@
    "successors": []
   },
   {
+   "id": "100295131",
+   "name": "Conviction of the Unchained",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100296303",
+   "name": "Spellbook Genius of Prophecy",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "1003028",
    "konamiId": 10836,
    "name": "Doggy Diver",
@@ -143,8 +157,10 @@
    "id": "100350263",
    "konamiId": 23902,
    "name": "The Dark Dragon Lord of Ultum",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "64537714"
+   ]
   },
   {
    "id": "10035717",
@@ -177,104 +193,138 @@
   {
    "id": "100460001",
    "name": "Pritima the Infinity Cubic Vessel",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "65506471"
+   ]
   },
   {
    "id": "100460002",
    "name": "Alditia Hell Blaze the Burning Cubic Lord",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "92990170"
+   ]
   },
   {
    "id": "100460003",
    "name": "Abyss Vagrada the Abyssal Cubic Lord",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "28395288"
+   ]
   },
   {
    "id": "100460004",
    "name": "Divine Anima Infinity the Creation Cubic Overlord",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "5383983"
+   ]
   },
   {
    "id": "100460005",
    "name": "Cubic Dimension",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "31878592"
+   ]
   },
   {
    "id": "100460006",
    "name": "Cubic Bodhi",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "68272637"
+   ]
   },
   {
    "id": "100460007",
    "name": "Cubic Defense",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "4661345"
+   ]
   },
   {
    "id": "100460026",
    "name": "Marincess Azuri",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "30656940"
+   ]
   },
   {
    "id": "100460027",
    "name": "Marincess Ulpis",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "67050049"
+   ]
   },
   {
    "id": "100460028",
    "name": "Aqua Leviathan @Marincess",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "93545757"
+   ]
   },
   {
    "id": "100460030",
    "name": "Marincess Truth Heart",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "66338401"
+   ]
   },
   {
    "id": "100460031",
    "name": "Marincess Reef Lagoon",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "92322106"
+   ]
   },
   {
    "id": "100460050",
    "name": "Ghostrick Lich",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "92600528"
+   ]
   },
   {
    "id": "100460051",
    "name": "Ghostrick Yoko",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "28095622"
+   ]
   },
   {
    "id": "100460052",
    "name": "Ghostrick Master Alucard",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "54083371"
+   ]
   },
   {
    "id": "100460053",
    "name": "Ghostrick Garden",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "91488070"
+   ]
   },
   {
    "id": "100460054",
    "name": "Ghostrick Art",
-   "status": "live",
-   "successors": []
+   "status": "retired",
+   "successors": [
+    "27872075"
+   ]
   },
   {
    "id": "100461000",
@@ -301,6 +351,12 @@
    "successors": []
   },
   {
+   "id": "100461101",
+   "name": "Arcana Force VIII - The Strength",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "100462001",
    "name": "Trinitas Magistus",
    "status": "live",
@@ -313,8 +369,32 @@
    "successors": []
   },
   {
+   "id": "100462003",
+   "name": "Endymion, the Lord of Magistus",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "100462004",
    "name": "Magistus Witchcrafter Aruru",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100462005",
+   "name": "Wisprath Magistus",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100462028",
+   "name": "Dunamis Magistus",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100463001",
+   "name": "Obelisk the Tormentor, the Pharaoh's Memory",
    "status": "live",
    "successors": []
   },
@@ -325,14 +405,194 @@
    "successors": []
   },
   {
+   "id": "100463003",
+   "name": "Illusion Palladium Oracle Mahad",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100463004",
+   "name": "Cubic Vajra",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "100463005",
    "name": "Time Chain",
    "status": "live",
    "successors": []
   },
   {
+   "id": "100463006",
+   "name": "Enhanced Counter",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100463007",
+   "name": "Dragon's Orb",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "100463008",
    "name": "Warrior's Devotion",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100463009",
+   "name": "High Speed Aria",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100464001",
+   "name": "Minjal Khery Hebet",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100464002",
+   "name": "Black Shasta",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100464003",
+   "name": "Craydeath the Four Dimensional Dragon",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100464004",
+   "name": "Triad Proteus",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100464005",
+   "name": "Finger Game",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465001",
+   "name": "Bau the Black Dog Beast",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465002",
+   "name": "Stairway to the Underworld",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465003",
+   "name": "Domain of the Dark Ruler",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465004",
+   "name": "Cyber Struve",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465005",
+   "name": "Cyber Thuban",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465006",
+   "name": "Cyber Alnair",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465007",
+   "name": "Cyber Alsafi",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465008",
+   "name": "Infernity Spear Bearer",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465009",
+   "name": "Infernity Shield Bearer",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465010",
+   "name": "Void Ogre Dragon Zero",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465011",
+   "name": "Zero Gate of the Void",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465012",
+   "name": "Rainbow Spider",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465013",
+   "name": "Beetle Gardna",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465014",
+   "name": "Arachno-Cannibalism",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465015",
+   "name": "White Prosperity",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465016",
+   "name": "White Nightmare",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465017",
+   "name": "White Line",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465018",
+   "name": "Ancient Dragon Priestess",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465019",
+   "name": "Rogue, the Dagger of Endymion",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "100465020",
+   "name": "Protector of the Grand Tower",
    "status": "live",
    "successors": []
   },
@@ -1110,6 +1370,78 @@
    ]
   },
   {
+   "id": "101403081",
+   "name": "Nahar-Dex, Driver of the Seven Swords",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404001",
+   "name": "Blue-Eyes Alternative White Dragon, the Guided Phantom Beast",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404002",
+   "name": "Krystal Cloud Dragon",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404003",
+   "name": "Assault Slash Wyvern",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404004",
+   "name": "Saggi the Dark Sacrifice Clown",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404022",
+   "name": "White-Horned Buster Dragon",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404027",
+   "name": "Blue-Eyes Chaos MAXIMUM Dragon",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404029",
+   "name": "Neo Blue-Eyes Hyper Ultimate Dragon",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404049",
+   "name": "Endless Darkness",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404050",
+   "name": "Neo Chaos Form",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404051",
+   "name": "Dimensional Ascension",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "101404071",
+   "name": "Pandemic Infection",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "10140443",
    "konamiId": 18911,
    "name": "Salamangreat Burst Gryphon",
@@ -1636,7 +1968,7 @@
   {
    "id": "10611873",
    "konamiId": 23547,
-   "name": "Raise Moon Lamp Croucier",
+   "name": "Kulshe, the Beacon of Raise Moon",
    "status": "live",
    "successors": []
   },
@@ -1965,7 +2297,7 @@
   {
    "id": "10884847",
    "konamiId": 23536,
-   "name": "Zenetmes Nekhbet",
+   "name": "Zenet-Mose Nekhbet",
    "status": "live",
    "successors": []
   },
@@ -2440,7 +2772,7 @@
   {
    "id": "11333460",
    "konamiId": 23544,
-   "name": "Raise Moon Elegance Carol",
+   "name": "Carol, the Elegance of Raise Moon",
    "status": "live",
    "successors": []
   },
@@ -12831,7 +13163,7 @@
   {
    "id": "20477370",
    "konamiId": 23853,
-   "name": "Rikka Empress Strenna",
+   "name": "Rikka Sacred Queen Strenna",
    "status": "live",
    "successors": []
   },
@@ -21251,6 +21583,13 @@
    "successors": []
   },
   {
+   "id": "27872075",
+   "konamiId": 24027,
+   "name": "Ghostrick Art",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "27873305",
    "konamiId": 11988,
    "name": "D/D/D Wave Oblivion King Caesar Ragnarok",
@@ -21477,6 +21816,13 @@
    "id": "28066831",
    "konamiId": 9166,
    "name": "Gusto Thunbolt",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "28095622",
+   "konamiId": 24024,
+   "name": "Ghostrick Yoko",
    "status": "live",
    "successors": []
   },
@@ -21903,6 +22249,13 @@
    "id": "28388927",
    "konamiId": 14569,
    "name": "Battlewasp - Sting the Poison",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "28395288",
+   "konamiId": 24010,
+   "name": "Abyss Vagrada the Abyssal Cubic Lord",
    "status": "live",
    "successors": []
   },
@@ -23385,6 +23738,13 @@
    "id": "2971090",
    "konamiId": 4132,
    "name": "Orion the Battle King",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "29711214",
+   "konamiId": 24021,
+   "name": "Marincess Overflow",
    "status": "live",
    "successors": []
   },
@@ -25400,6 +25760,13 @@
    "successors": []
   },
   {
+   "id": "30656940",
+   "konamiId": 24015,
+   "name": "Marincess Azuri",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "30674956",
    "konamiId": 14497,
    "name": "Wynn the Wind Charmer, Verdant",
@@ -25683,6 +26050,13 @@
    "id": "30929786",
    "konamiId": 10445,
    "name": "Brotherhood of the Fire Fist - Rooster",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "30933452",
+   "konamiId": 24018,
+   "name": "Marincess Blue Crystal Heart",
    "status": "live",
    "successors": []
   },
@@ -26859,6 +27233,13 @@
    "id": "31863912",
    "konamiId": 10439,
    "name": "Dice-nied",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "31878592",
+   "konamiId": 24012,
+   "name": "Cubic Dimension",
    "status": "live",
    "successors": []
   },
@@ -28950,7 +29331,7 @@
   {
    "id": "33700664",
    "konamiId": 23563,
-   "name": "Trirealm Rift Territory - Valvols",
+   "name": "Trirealm Rift Vilvortex",
    "status": "live",
    "successors": []
   },
@@ -29118,7 +29499,7 @@
   {
    "id": "33822112",
    "konamiId": 23560,
-   "name": "Mad Tempest Trirealm Rift Ploutonion",
+   "name": "Trirealm Rift Savage Storms",
    "status": "live",
    "successors": []
   },
@@ -30112,7 +30493,7 @@
   {
    "id": "34645790",
    "konamiId": 23557,
-   "name": "Trirealm Rift of Scarlet Naraka",
+   "name": "Trirealm Rift Blaze",
    "status": "live",
    "successors": []
   },
@@ -31349,7 +31730,7 @@
   {
    "id": "35761342",
    "konamiId": 23554,
-   "name": "Trirealm Rift of Emptiness Gehenna",
+   "name": "Trirealm Rift Hollows",
    "status": "live",
    "successors": []
   },
@@ -39403,7 +39784,7 @@
   {
    "id": "42651293",
    "konamiId": 23826,
-   "name": "Primrose the Twin Rikka Fairy",
+   "name": "Primrose the Rikka Fairy Duo",
    "status": "live",
    "successors": []
   },
@@ -42303,7 +42684,7 @@
   {
    "id": "45151304",
    "konamiId": 23540,
-   "name": "Am Duazenet",
+   "name": "Amduat Zenet",
    "status": "live",
    "successors": []
   },
@@ -43953,6 +44334,13 @@
    "successors": []
   },
   {
+   "id": "4661345",
+   "konamiId": 24014,
+   "name": "Cubic Defense",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "46613515",
    "konamiId": 12399,
    "name": "Clear Kuriboh",
@@ -44319,7 +44707,7 @@
   {
    "id": "46983930",
    "konamiId": 23551,
-   "name": "The Stars of Raise Moon",
+   "name": "Stars of Raise Moon",
    "status": "live",
    "successors": []
   },
@@ -45040,7 +45428,7 @@
   {
    "id": "47605577",
    "konamiId": 23548,
-   "name": "Raise Moon Starter Squeeze",
+   "name": "Squeeze, the New Moon of Raise Moon",
    "status": "live",
    "successors": []
   },
@@ -45271,7 +45659,7 @@
   {
    "id": "47828069",
    "konamiId": 23545,
-   "name": "Raise Moon Wings Rapi",
+   "name": "Lapi, the Wings of Raise Moon",
    "status": "live",
    "successors": []
   },
@@ -46487,7 +46875,7 @@
   {
    "id": "48940617",
    "konamiId": 23542,
-   "name": "Zenet Thunderfall",
+   "name": "Zenet Thunder Fall",
    "status": "live",
    "successors": []
   },
@@ -52083,6 +52471,13 @@
    "successors": []
   },
   {
+   "id": "5383983",
+   "konamiId": 24011,
+   "name": "Divine Anima Infinity the Creation Cubic Overlord",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "53839837",
    "konamiId": 5410,
    "name": "Vampire Lord",
@@ -52321,6 +52716,13 @@
    "successors": []
   },
   {
+   "id": "54083371",
+   "konamiId": 24025,
+   "name": "Ghostrick Master Alucard",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "54088068",
    "konamiId": 13222,
    "name": "Gouki Headbatt",
@@ -52513,6 +52915,13 @@
    "id": "54261514",
    "konamiId": 20540,
    "name": "Final Bringer of the End Times",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "54261783",
+   "konamiId": 24028,
+   "name": "Ghostrick Freeze",
    "status": "live",
    "successors": []
   },
@@ -60306,7 +60715,7 @@
   {
    "id": "61033809",
    "konamiId": 23558,
-   "name": "Sky Thunder Trirealm Rift Yomi",
+   "name": "Trirealm Rift Havocs",
    "status": "live",
    "successors": []
   },
@@ -64089,6 +64498,13 @@
    "successors": []
   },
   {
+   "id": "64537714",
+   "konamiId": 23902,
+   "name": "The Dark Dragon Lord of Ultum",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "64538655",
    "konamiId": 6185,
    "name": "Sasuke Samurai #4",
@@ -64698,6 +65114,13 @@
    "successors": []
   },
   {
+   "id": "65116919",
+   "konamiId": 24022,
+   "name": "Ghostrick Spunkie",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "65118318",
    "konamiId": 23392,
    "name": "Foolish Graverobber",
@@ -64784,7 +65207,7 @@
   {
    "id": "65195679",
    "konamiId": 23564,
-   "name": "Trirealm Rift Judgment",
+   "name": "Trirealm Rift Verdict",
    "status": "live",
    "successors": []
   },
@@ -64848,6 +65271,13 @@
    "id": "65268179",
    "konamiId": 15405,
    "name": "Awakening of the Possessed - Nefariouser Archfiend",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "65276253",
+   "konamiId": 24071,
+   "name": "B.L.A.C.K. Parfait",
    "status": "live",
    "successors": []
   },
@@ -65191,6 +65621,13 @@
    "id": "65504487",
    "konamiId": 6791,
    "name": "Toy Soldier",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "65506471",
+   "konamiId": 24008,
+   "name": "Pritima the Infinity Cubic Vessel",
    "status": "live",
    "successors": []
   },
@@ -66118,6 +66555,13 @@
    "successors": []
   },
   {
+   "id": "66338401",
+   "konamiId": 24019,
+   "name": "Marincess Truth Heart",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "66362965",
    "konamiId": 4761,
    "name": "The Fiend Megacyber",
@@ -66939,6 +67383,13 @@
    "id": "67049542",
    "konamiId": 4978,
    "name": "Dark Bat",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "67050049",
+   "konamiId": 24016,
+   "name": "Marincess Ulpis",
    "status": "live",
    "successors": []
   },
@@ -68296,6 +68747,13 @@
    "id": "68258355",
    "konamiId": 15963,
    "name": "ZS - Armed Sage",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "68272637",
+   "konamiId": 24013,
+   "name": "Cubic Bodhi",
    "status": "live",
    "successors": []
   },
@@ -71456,7 +71914,7 @@
   {
    "id": "71155456",
    "konamiId": 23555,
-   "name": "Trirealm Rift of Sky Sheol",
+   "name": "Trirealm Rift Heavens",
    "status": "live",
    "successors": []
   },
@@ -72701,7 +73159,7 @@
   {
    "id": "72278590",
    "konamiId": 23538,
-   "name": "Zenet Per Akh",
+   "name": "Zenet Per Aarkh",
    "status": "live",
    "successors": []
   },
@@ -73499,7 +73957,7 @@
   {
    "id": "72978038",
    "konamiId": 23552,
-   "name": "\"Raise Moon\" the City that Never Sleeps",
+   "name": "Raise Moon - The City that Never Sleeps",
    "status": "live",
    "successors": []
   },
@@ -74087,7 +74545,7 @@
   {
    "id": "73490148",
    "konamiId": 23535,
-   "name": "Tauzenet Wadjet",
+   "name": "Tau-Zenet Adjat",
    "status": "live",
    "successors": []
   },
@@ -74918,7 +75376,7 @@
   {
    "id": "74212164",
    "konamiId": 23546,
-   "name": "Raise Moon Blade Shayna",
+   "name": "Sharna, the Blade of Raise Moon",
    "status": "live",
    "successors": []
   },
@@ -74960,7 +75418,7 @@
   {
    "id": "7428507",
    "konamiId": 23559,
-   "name": "Burial Summit Trirealm Rift Helheim",
+   "name": "Trirealm Rift Gorging Gorge",
    "status": "live",
    "successors": []
   },
@@ -76650,7 +77108,7 @@
   {
    "id": "75787708",
    "konamiId": 22702,
-   "name": "Odd-Eyes Pendulum Dragon of the Four Heavenly Dragons",
+   "name": "Odd-Eyes Pendulum Dragon, Four Heavenly Dragons",
    "status": "live",
    "successors": []
   },
@@ -82887,7 +83345,7 @@
   {
    "id": "81611932",
    "konamiId": 23875,
-   "name": "Rikka June Moon",
+   "name": "Rikka Moonlit Waters",
    "status": "live",
    "successors": []
   },
@@ -86200,7 +86658,7 @@
   {
    "id": "84512726",
    "konamiId": 23532,
-   "name": "Zenet Prophet - Nefertari",
+   "name": "Zenet Revelator Nefertari",
    "status": "live",
    "successors": []
   },
@@ -87207,7 +87665,7 @@
   {
    "id": "8540055",
    "konamiId": 23556,
-   "name": "Trirealm Rift of Blue Tuonela",
+   "name": "Trirealm Rift Blizzards",
    "status": "live",
    "successors": []
   },
@@ -90484,6 +90942,13 @@
    "successors": []
   },
   {
+   "id": "88421252",
+   "konamiId": 24035,
+   "name": "Counter Spell \"Negate Attack\"",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "8842266",
    "konamiId": 5607,
    "name": "Poison of the Old Man",
@@ -92915,6 +93380,15 @@
    "id": "90740329",
    "konamiId": 6140,
    "name": "Taunt",
+   "status": "retired",
+   "successors": [
+    "90740330"
+   ]
+  },
+  {
+   "id": "90740330",
+   "konamiId": 6140,
+   "name": "Taunt",
    "status": "live",
    "successors": []
   },
@@ -93716,6 +94190,13 @@
    "successors": []
   },
   {
+   "id": "91488070",
+   "konamiId": 24026,
+   "name": "Ghostrick Garden",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "91499077",
    "konamiId": 11414,
    "name": "Gagaga Samurai",
@@ -94271,7 +94752,7 @@
   {
    "id": "91957038",
    "konamiId": 15853,
-   "name": "Fairy Tail Tales",
+   "name": "Fairy Tale Tails",
    "status": "live",
    "successors": []
   },
@@ -94594,6 +95075,13 @@
    "id": "92300891",
    "konamiId": 9285,
    "name": "Karakuri Barrel mdl 96 \"Shinkuro\"",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "92322106",
+   "konamiId": 24020,
+   "name": "Marincess Reef Lagoon",
    "status": "live",
    "successors": []
   },
@@ -94951,6 +95439,13 @@
    "id": "92597893",
    "konamiId": 15072,
    "name": "Feedran, the Winds of Mischief",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "92600528",
+   "konamiId": 24023,
+   "name": "Ghostrick Lich",
    "status": "live",
    "successors": []
   },
@@ -95399,6 +95894,13 @@
    "id": "9298235",
    "konamiId": 11743,
    "name": "Fluffal Crane",
+   "status": "live",
+   "successors": []
+  },
+  {
+   "id": "92990170",
+   "konamiId": 24009,
+   "name": "Alditia Hell Blaze the Burning Cubic Lord",
    "status": "live",
    "successors": []
   },
@@ -96081,6 +96583,13 @@
    "successors": []
   },
   {
+   "id": "93545757",
+   "konamiId": 24017,
+   "name": "Aqua Leviathan @Marincess",
+   "status": "live",
+   "successors": []
+  },
+  {
    "id": "93553943",
    "konamiId": 4164,
    "name": "Man Eater",
@@ -96139,7 +96648,7 @@
   {
    "id": "9362643",
    "konamiId": 23553,
-   "name": "The Glitter of Raise Moon",
+   "name": "The Bright Lights of Raise Moon",
    "status": "live",
    "successors": []
   },
@@ -97517,7 +98026,7 @@
   {
    "id": "9484285",
    "konamiId": 23550,
-   "name": "Raise Moon Hope Squeeze - Jackpot",
+   "name": "Squeeze, the Full Moon of Raise Moon - JACKPOT!",
    "status": "live",
    "successors": []
   },
@@ -99022,7 +99531,7 @@
   {
    "id": "96205925",
    "konamiId": 23562,
-   "name": "Trirealm Rift Gospel",
+   "name": "Trirealm Rift Delectation",
    "status": "live",
    "successors": []
   },
@@ -100484,7 +100993,7 @@
   {
    "id": "9762295",
    "konamiId": 23539,
-   "name": "A Journey Back to the Light - \"Zenet\"",
+   "name": "Return Journey to the Light \"Zenet\"",
    "status": "live",
    "successors": []
   },

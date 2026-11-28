@@ -4213,25 +4213,61 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:55273560:MAMS-EN034:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731587
+      ]
+     },
      "number": "MAMS-EN034",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Incredible Ecclesia, the Virtuous (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:55273560:MAMS-EN034:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731588
+      ]
+     },
      "number": "MAMS-EN034",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Incredible Ecclesia, the Virtuous (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:55273560:MAMS-EN034:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731586
+      ]
+     },
      "number": "MAMS-EN034",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Incredible Ecclesia, the Virtuous"
+     }
     },
     {
      "id": "magnificent-mavens:55273560:MAMA-EN059:ultra_rare",
@@ -7386,6 +7422,9 @@
    "passcode": 55428242,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2014-mega-tin-mega-pack:55428242:MP14-EN085:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14793,6 +14832,9 @@
   {
    "aliases": [
     "Levionia the Primordial Chaos Dragon"
+   ],
+   "archetypes": [
+    "mythical-dragon"
    ],
    "atk": 3000,
    "attribute": "dark",

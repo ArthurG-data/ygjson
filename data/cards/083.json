@@ -7403,11 +7403,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:83443619:UP02-EN007:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731115
+      ]
+     },
      "number": "UP02-EN007",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crystron Smiger"
+     }
     }
    ],
    "tcgDate": "2016-11-03",
@@ -13065,11 +13077,23 @@
      "set": "the-lost-art-promotion-series"
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:83764719:UP02-EN037:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731145
+      ]
+     },
      "number": "UP02-EN037",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Monster Reborn"
+     }
     },
     {
      "id": "world-championship-jpp-cards:83764719:2017-JPP03:ultra_rare",
@@ -15109,9 +15133,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:83965310:MGED-EN007:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15417,11 +15438,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:83968380:UP02-EN047:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731155
+      ]
+     },
      "number": "UP02-EN047",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Jar of Greed"
+     }
     }
    ],
    "tcgDate": "2003-03-01"
@@ -15842,7 +15875,6 @@
   },
   {
    "archetypes": [
-    "duel-dragon",
     "stardust"
    ],
    "atk": 2500,

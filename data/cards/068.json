@@ -1837,7 +1837,6 @@
   },
   {
    "archetypes": [
-    "duel-dragon",
     "power-tool"
    ],
    "atk": 2300,
@@ -4201,6 +4200,36 @@
    ]
   },
   {
+   "archetypes": [
+    "cubic"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "68272637",
+   "identifiers": {
+    "konamiId": 24013,
+    "ygoprodeckId": 68272637
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/68272637.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/68272637.jpg",
+     "id": 68272637,
+     "small": "https://images.ygoprodeck.com/images/cards_small/68272637.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Continuous",
+   "name": "Cubic Bodhi",
+   "names": {
+    "en": "Cubic Bodhi"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 68272637,
+   "prints": []
+  },
+  {
    "atk": 1300,
    "attribute": "light",
    "def": 800,
@@ -5452,25 +5481,61 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68337209:MAMS-EN038:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731599
+      ]
+     },
      "number": "MAMS-EN038",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maliss in Underground (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68337209:MAMS-EN038:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731600
+      ]
+     },
      "number": "MAMS-EN038",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maliss in Underground (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68337209:MAMS-EN038:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731598
+      ]
+     },
      "number": "MAMS-EN038",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Maliss in Underground"
+     }
     }
    ],
    "tcgDate": "2024-12-05"
@@ -7852,25 +7917,61 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68468459:MAMS-EN033:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731584
+      ]
+     },
      "number": "MAMS-EN033",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fallen of Albaz (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68468459:MAMS-EN033:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731585
+      ]
+     },
      "number": "MAMS-EN033",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fallen of Albaz (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68468459:MAMS-EN033:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731583
+      ]
+     },
      "number": "MAMS-EN033",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fallen of Albaz"
+     }
     },
     {
      "id": "ots-tournament-pack-19-por:68468459:OP19-PT001:ultimate_rare",
@@ -9989,25 +10090,61 @@
    "passcode": 68625623,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68625623:MAMS-EN055:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731650
+      ]
+     },
      "number": "MAMS-EN055",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Unchained Zealot - Kamra (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68625623:MAMS-EN055:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731651
+      ]
+     },
      "number": "MAMS-EN055",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Unchained Zealot - Kamra (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:68625623:MAMS-EN055:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731649
+      ]
+     },
      "number": "MAMS-EN055",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Unchained Zealot - Kamra"
+     }
     }
    ],
    "tcgDate": "2026-11-12",

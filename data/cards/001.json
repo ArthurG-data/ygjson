@@ -2915,9 +2915,6 @@
    "passcode": 1186447,
    "prints": [
     {
-     "editions": [
-      "first"
-     ],
      "id": "magnificent-monsters:1186447:MAMO-EN014:grand_master_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6622,6 +6619,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "legacy-of-darkness:1412158:LOD-EN074:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10755,11 +10755,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:1596508:UP02-EN027:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731135
+      ]
+     },
      "number": "UP02-EN027",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dimension Fortress Weapon"
+     }
     }
    ],
    "tcgDate": "2009-02-28",
@@ -16408,11 +16420,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:1980574:MAMS-EN075:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731679
+      ]
+     },
      "number": "MAMS-EN075",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Hop Ear Squadron"
+     }
     }
    ],
    "tcgDate": "2019-10-24",

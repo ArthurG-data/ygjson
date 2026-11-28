@@ -3998,25 +3998,61 @@
    "passcode": 7293697,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:7293697:MAMS-EN044:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731617
+      ]
+     },
      "number": "MAMS-EN044",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Perfect Toon World (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:7293697:MAMS-EN044:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731618
+      ]
+     },
      "number": "MAMS-EN044",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Perfect Toon World (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:7293697:MAMS-EN044:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731616
+      ]
+     },
      "number": "MAMS-EN044",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Perfect Toon World"
+     }
     }
    ],
    "tcgDate": "2026-11-12"
@@ -5944,14 +5980,14 @@
   },
   {
    "aliases": [
-    "Burial Summit Xenovader△ Helheim"
+    "Burial Summit Trirealm Rift Helheim"
    ],
    "archetypes": [
     "trirealm-rift"
    ],
    "atk": 2400,
    "attribute": "earth",
-   "betaName": "Burial Summit Xenovader△ Helheim",
+   "betaName": "Burial Summit Trirealm Rift Helheim",
    "def": 1200,
    "frame": "effect",
    "hasEffect": true,
@@ -5972,13 +6008,22 @@
    "kind": "monster",
    "level": 6,
    "monsterType": "Psychic",
-   "name": "Burial Summit Trirealm Rift Helheim",
+   "name": "Trirealm Rift Gorging Gorge",
    "names": {
-    "en": "Burial Summit Trirealm Rift Helheim"
+    "en": "Trirealm Rift Gorging Gorge"
    },
    "ocgDate": "2026-09-05",
    "passcode": 7428507,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:7428507:GLVI-EN036:super_rare",
+     "number": "GLVI-EN036",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Psychic",
     "Effect"

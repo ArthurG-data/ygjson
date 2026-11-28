@@ -1941,6 +1941,20 @@
    "passcode": 47095439,
    "prints": [
     {
+     "id": "glorious-victors:47095439:GLVI-EN003:collectors_rare",
+     "number": "GLVI-EN003",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:47095439:GLVI-EN003:secret_rare",
+     "number": "GLVI-EN003",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "glorious-victors:47095439:GLVI-EN003:starlight_rare",
      "number": "GLVI-EN003",
      "rarity": "starlight_rare",
@@ -9973,11 +9987,15 @@
    "tcgDate": "2016-05-05"
   },
   {
+   "aliases": [
+    "Raise Moon Starter Squeeze"
+   ],
    "archetypes": [
     "raise-moon"
    ],
    "atk": 700,
    "attribute": "water",
+   "betaName": "Raise Moon Starter Squeeze",
    "def": 1400,
    "frame": "effect",
    "hasEffect": true,
@@ -9998,13 +10016,22 @@
    "kind": "monster",
    "level": 7,
    "monsterType": "Aqua",
-   "name": "Raise Moon Starter Squeeze",
+   "name": "Squeeze, the New Moon of Raise Moon",
    "names": {
-    "en": "Raise Moon Starter Squeeze"
+    "en": "Squeeze, the New Moon of Raise Moon"
    },
    "ocgDate": "2026-09-05",
    "passcode": 47605577,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:47605577:GLVI-EN021:secret_rare",
+     "number": "GLVI-EN021",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Aqua",
     "Effect"
@@ -13091,11 +13118,15 @@
    ]
   },
   {
+   "aliases": [
+    "Raise Moon Wings Rapi"
+   ],
    "archetypes": [
     "raise-moon"
    ],
    "atk": 700,
    "attribute": "earth",
+   "betaName": "Raise Moon Wings Rapi",
    "def": 2100,
    "frame": "effect",
    "hasEffect": true,
@@ -13116,13 +13147,29 @@
    "kind": "monster",
    "level": 7,
    "monsterType": "Beast",
-   "name": "Raise Moon Wings Rapi",
+   "name": "Lapi, the Wings of Raise Moon",
    "names": {
-    "en": "Raise Moon Wings Rapi"
+    "en": "Lapi, the Wings of Raise Moon"
    },
    "ocgDate": "2026-09-05",
    "passcode": 47828069,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:47828069:GLVI-EN018:starlight_rare",
+     "number": "GLVI-EN018",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:47828069:GLVI-EN018:ultra_rare",
+     "number": "GLVI-EN018",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Beast",
     "Effect"

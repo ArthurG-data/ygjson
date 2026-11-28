@@ -5153,6 +5153,13 @@
      }
     },
     {
+     "id": "glorious-victors:82308875:GLVI-EN054:rare",
+     "number": "GLVI-EN054",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "star-pack-2014:82308875:SP14-EN027:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13988,7 +13995,16 @@
    },
    "ocgDate": "2026-10-31",
    "passcode": 82951145,
-   "prints": [],
+   "prints": [
+    {
+     "id": "immortal-phoenix:82951145:IMPH-EN001:starlight_rare",
+     "number": "IMPH-EN001",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    }
+   ],
+   "tcgDate": "2027-01-28",
    "typeline": [
     "Fiend",
     "Effect"
@@ -14992,11 +15008,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:82997779:MAMS-EN110:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731714
+      ]
+     },
      "number": "MAMS-EN110",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Archfiend's Usurpation"
+     }
     }
    ],
    "tcgDate": "2026-05-07"

@@ -1181,11 +1181,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:46052429:UP02-EN042:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731150
+      ]
+     },
      "number": "UP02-EN042",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Advanced Ritual Art"
+     }
     }
    ],
    "tcgDate": "2007-02-28"
@@ -4920,7 +4932,16 @@
    },
    "ocgDate": "2026-09-05",
    "passcode": 46273941,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:46273941:GLVI-EN006:rare",
+     "number": "GLVI-EN006",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "aliases": [
@@ -6867,11 +6888,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:46411259:UP02-EN040:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731148
+      ]
+     },
      "number": "UP02-EN040",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Metamorphosis"
+     }
     }
    ],
    "tcgDate": "2003-07-18"
@@ -8621,6 +8654,13 @@
       "match": "number+rarity",
       "name": "Dipity"
      }
+    },
+    {
+     "id": "glorious-victors:46533533:GLVI-EN048:rare",
+     "number": "GLVI-EN048",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
     }
    ],
    "tcgDate": "2025-05-01",
@@ -12449,11 +12489,23 @@
    "passcode": 46815301,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:46815301:MAMS-EN093:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731697
+      ]
+     },
      "number": "MAMS-EN093",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Askaan, the Bicorned Ghoti"
+     }
     },
     {
      "editions": [
@@ -14763,9 +14815,13 @@
    "tcgDate": "2010-11-06"
   },
   {
+   "aliases": [
+    "The Stars of Raise Moon"
+   ],
    "archetypes": [
     "raise-moon"
    ],
+   "betaName": "The Stars of Raise Moon",
    "frame": "spell",
    "hasEffect": true,
    "id": "46983930",
@@ -14784,13 +14840,22 @@
    "isTuner": false,
    "kind": "spell",
    "monsterType": "Normal",
-   "name": "The Stars of Raise Moon",
+   "name": "Stars of Raise Moon",
    "names": {
-    "en": "The Stars of Raise Moon"
+    "en": "Stars of Raise Moon"
    },
    "ocgDate": "2026-09-05",
    "passcode": 46983930,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:46983930:GLVI-EN024:ultra_rare",
+     "number": "GLVI-EN024",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "aliases": [
@@ -15614,9 +15679,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:46986420:MGED-EN002:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [

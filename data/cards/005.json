@@ -736,9 +736,6 @@
      "variant": "purple-alternate-art"
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:5043010:MGED-EN141:rare:red-alternate-art",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6498,11 +6495,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:5318639:UP02-EN038:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731146
+      ]
+     },
      "number": "UP02-EN038",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Mystical Space Typhoon"
+     }
     },
     {
      "id": "warriors-strike-structure-deck:5318639:SDWS-EN023:common",
@@ -7866,6 +7875,45 @@
     }
    ],
    "tcgDate": "2022-08-25"
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "atk": 0,
+   "attribute": "light",
+   "def": 3000,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "5383983",
+   "identifiers": {
+    "konamiId": 24011,
+    "ygoprodeckId": 5383983
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/5383983.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/5383983.jpg",
+     "id": 5383983,
+     "small": "https://images.ygoprodeck.com/images/cards_small/5383983.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 10,
+   "monsterType": "Fiend",
+   "name": "Divine Anima Infinity the Creation Cubic Overlord",
+   "names": {
+    "en": "Divine Anima Infinity the Creation Cubic Overlord"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 5383983,
+   "prints": [],
+   "typeline": [
+    "Fiend",
+    "Fusion",
+    "Effect"
+   ]
   },
   {
    "atk": 1700,

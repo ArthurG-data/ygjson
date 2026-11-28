@@ -2075,9 +2075,6 @@
    "passcode": 51196805,
    "prints": [
     {
-     "editions": [
-      "first"
-     ],
      "id": "2014-mega-tin-mega-pack:51196805:MP14-EN205:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7688,25 +7685,61 @@
    "passcode": 51546708,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:51546708:MAMS-EN023:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731554
+      ]
+     },
      "number": "MAMS-EN023",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Tuner Nightmare Hand (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:51546708:MAMS-EN023:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731555
+      ]
+     },
      "number": "MAMS-EN023",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Tuner Nightmare Hand (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:51546708:MAMS-EN023:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731553
+      ]
+     },
      "number": "MAMS-EN023",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Tuner Nightmare Hand"
+     }
     }
    ],
    "tcgDate": "2026-11-12",

@@ -1334,6 +1334,9 @@
      }
     },
     {
+     "editions": [
+      "unlimited"
+     ],
      "id": "dark-crisis:48094997:DCR-EN001:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -2793,18 +2796,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:48152161:MAMS-EN114:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731718
+      ]
+     },
      "number": "MAMS-EN114",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
-    },
-    {
-     "id": "magnificent-maestros:48152161:MAMS-EN117:ultra_rare",
-     "number": "MAMS-EN117",
-     "rarity": "ultra_rare",
-     "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "The Sanctified Darklord"
+     }
     }
    ],
    "tcgDate": "2018-05-03"
@@ -12220,6 +12228,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "starter-deck-syrus-truesdale:48766543:YSDS-EN001:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12520,25 +12531,61 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:48770333:MAMS-EN029:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731572
+      ]
+     },
      "number": "MAMS-EN029",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Thunder King, the Lightningstrike Kaiju (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:48770333:MAMS-EN029:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731573
+      ]
+     },
      "number": "MAMS-EN029",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Thunder King, the Lightningstrike Kaiju (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:48770333:MAMS-EN029:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731571
+      ]
+     },
      "number": "MAMS-EN029",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Thunder King, the Lightningstrike Kaiju"
+     }
     },
     {
      "editions": [
@@ -14789,12 +14836,12 @@
   },
   {
    "aliases": [
-    "Sennet Thunderfall"
+    "Zenet Thunderfall"
    ],
    "archetypes": [
     "zenet"
    ],
-   "betaName": "Sennet Thunderfall",
+   "betaName": "Zenet Thunderfall",
    "frame": "trap",
    "hasEffect": true,
    "id": "48940617",
@@ -14813,13 +14860,22 @@
    "isTuner": false,
    "kind": "trap",
    "monsterType": "Counter",
-   "name": "Zenet Thunderfall",
+   "name": "Zenet Thunder Fall",
    "names": {
-    "en": "Zenet Thunderfall"
+    "en": "Zenet Thunder Fall"
    },
    "ocgDate": "2026-09-05",
    "passcode": 48940617,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:48940617:GLVI-EN011:rare",
+     "number": "GLVI-EN011",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "archetypes": [

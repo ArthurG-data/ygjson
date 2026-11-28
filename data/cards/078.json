@@ -11119,11 +11119,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:78665705:UP02-EN013:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731121
+      ]
+     },
      "number": "UP02-EN013",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ancient Chant"
+     }
     }
    ],
    "tcgDate": "2020-09-24"
@@ -12793,11 +12805,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:78783557:UP02-EN035:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731143
+      ]
+     },
      "number": "UP02-EN035",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Veidos the Eruption Dragon of Extinction"
+     }
     }
    ],
    "tcgDate": "2024-02-08",
@@ -13872,6 +13896,9 @@
    "tcgDate": "2004-06-01"
   },
   {
+   "archetypes": [
+    "deep-sea"
+   ],
    "atk": 200,
    "attribute": "water",
    "def": 400,
@@ -14192,7 +14219,7 @@
      }
     }
    ],
-   "tcgDate": "2009-05-02",
+   "tcgDate": "2009-05-12",
    "typeline": [
     "Sea Serpent",
     "Tuner",

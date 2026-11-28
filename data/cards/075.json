@@ -538,11 +538,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:75041269:UP02-EN041:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731149
+      ]
+     },
      "number": "UP02-EN041",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Clock Tower Prison"
+     }
     }
    ],
    "tcgDate": "2006-05-17"
@@ -6120,6 +6132,13 @@
    "passcode": 75390004,
    "prints": [
     {
+     "id": "glorious-victors:75390004:GLVI-EN046:rare",
+     "number": "GLVI-EN046",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "legendary-collection-4-joey-s-world-mega-pack:75390004:LCJW-EN147:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9526,6 +9545,9 @@
    "tcgDate": "2002-10-20"
   },
   {
+   "archetypes": [
+    "cyclone"
+   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "75652080",
@@ -9679,7 +9701,7 @@
      }
     }
    ],
-   "tcgDate": "2010-08-07"
+   "tcgDate": "2010-08-17"
   },
   {
    "aliases": [
@@ -11604,13 +11626,14 @@
   },
   {
    "aliases": [
-    "Odd-Eyes Pendulum Dragon, Four Heavenly Dragons"
+    "Odd-Eyes Pendulum Dragon of the Four Heavenly Dragons"
    ],
    "archetypes": [
     "odd-eyes"
    ],
    "atk": 2500,
    "attribute": "dark",
+   "betaName": "Odd-Eyes Pendulum Dragon of the Four Heavenly Dragons",
    "def": 2000,
    "frame": "effect_pendulum",
    "hasEffect": true,
@@ -11631,9 +11654,9 @@
    "kind": "monster",
    "level": 7,
    "monsterType": "Dragon",
-   "name": "Odd-Eyes Pendulum Dragon of the Four Heavenly Dragons",
+   "name": "Odd-Eyes Pendulum Dragon, Four Heavenly Dragons",
    "names": {
-    "en": "Odd-Eyes Pendulum Dragon of the Four Heavenly Dragons"
+    "en": "Odd-Eyes Pendulum Dragon, Four Heavenly Dragons"
    },
    "ocgDate": "2026-02-28",
    "passcode": 75787708,
@@ -13464,6 +13487,13 @@
    "ocgDate": "2026-09-05",
    "passcode": 75934716,
    "prints": [
+    {
+     "id": "glorious-victors:75934716:GLVI-EN016:secret_rare",
+     "number": "GLVI-EN016",
+     "rarity": "secret_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
     {
      "id": "glorious-victors:75934716:GLVI-EN016:starlight_rare",
      "number": "GLVI-EN016",
