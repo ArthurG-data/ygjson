@@ -59,6 +59,13 @@ resolving, as the stable-ids design requires.
   - 180,231 YGOJSON printing slots share their YGOJSON printing id with an English printing of the same set.
   - 354 are a printing the set's English list lacks: a rarity or card only that language has (238 of them Portuguese).
   - 59 sit in sets that have no English locale at all.
+  - Of the 180,231, the reviewer measured 163,765 that reach exactly one of our prints through today's English match.
+    3,278 reach two or three, in the 14 oldest sets: YGOJSON gives `LOB-`, `LOB-E` and `LOB-EN` one printing id,
+    where YGOPRODeck lists three prints. About 11,700 reach none: 4,369 colour rarities whose English print is a
+    TCGplayer colour variant (`:blue`), about 3,400 in sets whose English locale has no prefix, 2,946 at a number we
+    have no print of, 550 whose card is not matched, and 348 whose only prints are variants or from TCGplayer.
+- **YGOJSON stopped on 2025-10-25.** Its aggregate branch has not moved since. 717 of our cards have no YGOJSON card,
+  and no set released since then has a non-English printing in it.
 - YGOJSON gives card text as `text.<language>.{name, effect, pendulumEffect, official}`. `effect` exists for 14,329 of
   14,342 cards in English and in up to ten languages.
 - No two cards share an English name, and a reprint keeps its card's passcode. So a ygjson card is already one
@@ -93,8 +100,16 @@ The model stays: a **card** (gameplay card), a **print** (the card in one set, a
   `match_scans` makes) becomes that print's printing in that language.
 - A non-English YGOJSON printing with no English twin (the 354) becomes a new print with `source: ygojson`. Its key
   uses its own number: `<set>:<card>:LOB-PT001:super_rare`. It has printings in its languages only.
-- A YGOJSON printing whose English twin could not be matched to a print, or that sits in a set with no English locale
-  (the 59), is written to a review file, not to the data.
+- When one YGOJSON id reaches several English prints (`LOB-001`, `LOB-E001`, `LOB-EN001`), the printing's region
+  picks one. A two-letter region (`LOB-FR`, `IOC-DE`) goes on the `EN` print, the modern numbering it shares. A
+  one-letter region (`LDD-F`, `LOB-G`, `PMT-I`) goes on the `E` print, the European release it was printed with, else
+  on the print with no region. Anything still ambiguous goes to review.
+- A colour rarity (`ultra-blue`) goes on the colour-variant print (`:blue`) of that number, whoever minted it: the print
+  is the physical card, whatever its source.
+- In a set whose English locale has no prefix, the suffix is the whole number. The match reads it so.
+- A YGOJSON printing still not placed after these rules (no print of ours at that number, card not matched, only
+  TCGplayer prints), or in a set with no English locale (the 59), goes to a review file, not to the data. The README
+  states how many.
 - A printing's rarity is its print's rarity. No YGOJSON printing id has two rarities across the Western locales (0 of
   48,315), so a language that prints the card at another rarity has its own YGOJSON id, and the rule above makes it
   its own print.
@@ -102,17 +117,25 @@ The model stays: a **card** (gameplay card), a **print** (the card in one set, a
   printings have another suffix in some language than in English.
 - A printing's editions are the editions that locale's `contents` entry lists. An edition YGOJSON leaves empty
   falls back to the set's editions, as English does today.
+- A printing in another language has the `scan` of its own locale's `cardImages`, as English printings do today.
 - `language` takes `en`, `fr`, `de`, `it`, `es`, `pt`. YGOJSON's `sp` is `es`. Regional English printings (`LOB-E001`,
   Asian English) stay what they are today: English prints that YGOPRODeck states, with their `region`.
 - Printing ids keep their form, `<print uuid>:<language>:<edition>`, and their key `<print key>:<language>:<edition>`.
   French printings come in as new ledger entries, added like any other new id.
 
+### Set releases
+
+A set gains a release per language, from YGOJSON's locales: `language`, `name` (YGOJSON's name in that language, else
+the English name), `releaseDate`, `prefix` and key art. `releases[].language` widens to the six languages. English
+stays the first release, so the code that reads `releases[0]` (eras, rename evidence) keeps reading English.
+
 ### Card text
 
-- A card gains `text`: `{language: {"effect": ..., "pendulumEffect": ...}}`, for the ten languages `names` uses, from
-  YGOJSON. `pendulumEffect` appears only on Pendulum monsters.
+- A card gains `text`: `{language: {"effect": ..., "pendulumEffect": ...}}`, for the ten languages `names` uses.
+  English comes from YGOPRODeck (`desc`, and `pend_desc`/`monster_desc` on Pendulum monsters), which is current and
+  covers every card. The other languages come from YGOJSON. `pendulumEffect` appears only on Pendulum monsters.
 - A text marked `official: false` is not shipped, nor is an empty one.
-- `NOTICE` says that card text is Konami's, reproduced as published by Konami and gathered by YGOJSON. The line "No
+- `NOTICE` says that card text is Konami's, reproduced as Konami published it, gathered by YGOPRODeck (English) and YGOJSON (the other languages). The line "No
   effect text ... is copied into the data" goes.
 - The SQLite package gains the text, one row per card and language.
 
@@ -142,7 +165,9 @@ The model stays: a **card** (gameplay card), a **print** (the card in one set, a
 The files keep their names. The five languages add about 180,000 print-and-language pairs, more printings than that
 once editions are counted, against today's 89,730 printings. `AllPrintings.json` (47 MB today, 6 MB gzipped) and
 `Ids.json` (36 MB) grow accordingly, and so does the SQLite package. That growth is accepted. GitHub's limit is 2 GB
-per asset.
+per asset. A file committed to git is another matter: GitHub refuses one over 100 MB. `ids/printings.json` (20 MB
+today) would reach 75 to 90 MB, so the ledger's printings are split (by language, or otherwise) so that no committed
+file passes 50 MB.
 
 ### Checks
 
@@ -154,10 +179,16 @@ per asset.
 
 ## Order of work
 
-1. **AutoMana, first.** Its importer stops refusing non-English printings. It can skip them at first, and it tolerates
-   the new fields. This must be released before step 3 publishes, because AutoMana reads `releases/latest`.
-2. **ygjson.** UUIDs on every record, oracles, card text, then the non-English printings, with checks and README.
-3. **Release.** ygjson 0.4.0, published by hand once step 1 is out. The automatic refresh publishes later changes.
+ygjson's plan changes ygjson only. AutoMana's work is handed off as documents, for a session in AutoMana's repository.
+
+1. **ygjson, additive.** UUIDs on every record, oracles, card text and set releases per language. AutoMana's
+   importer loads these as they are (it ignores fields it does not know), so they can merge and the weekly refresh
+   can release them. The first of these pull requests sets the version to 0.4.0.
+2. **AutoMana, first handoff.** A short document: its importer skips a printing whose language is not English instead
+   of failing (`ygjson_build.py:290` raises today). AutoMana reads `releases/latest`, so this must be deployed before
+   step 3 merges.
+3. **ygjson, the non-English printings.** The pull request stays open until the owner confirms step 2 is deployed.
+   Once it merges, the weekly refresh releases it.
 4. **AutoMana, second (the handoff).** ygjson writes a handoff document for AutoMana, its issues to file there:
    - **Importer.** Store ygjson's UUIDs as AutoMana's external ids instead of hashing ygjson's id strings into its own
      (`ygjson_build.py` does `uuid5` of `print:<id>` today). Import the non-English printings, the card text and the
@@ -200,4 +231,8 @@ A separate design, after 0.4.0. What is known now:
 - Unofficial (fan-translated) texts are left out, so nothing not Konami's is credited to Konami.
 - `oracleId` is its own record even though it maps one-to-one onto cards today.
 - French Canadian printings are left out for now.
-- 0.4.0 is published by hand, not by the automatic refresh, so it can wait for AutoMana.
+- The non-English printings wait for AutoMana by holding their pull request, not by pausing the refresh.
+- Old-set printings follow their region (two letters to `EN`, one letter to `E`), and colour rarities go on colour
+  variants, even ones TCGplayer minted.
+- Sets get a release per language, and non-English printings get their scans.
+- English text comes from YGOPRODeck, not YGOJSON, because YGOJSON stopped in October 2025.
