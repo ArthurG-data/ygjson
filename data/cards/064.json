@@ -1166,9 +1166,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:64061284:MGED-EN147:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7806,6 +7803,41 @@
    ]
   },
   {
+   "atk": 2000,
+   "attribute": "earth",
+   "def": 2000,
+   "frame": "normal",
+   "hasEffect": true,
+   "id": "64537714",
+   "identifiers": {
+    "konamiId": 23902,
+    "ygoprodeckId": 64537714
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/64537714.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/64537714.jpg",
+     "id": 64537714,
+     "small": "https://images.ygoprodeck.com/images/cards_small/64537714.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Dragon",
+   "name": "The Dark Dragon Lord of Ultum",
+   "names": {
+    "en": "The Dark Dragon Lord of Ultum"
+   },
+   "ocgDate": "2026-10-01",
+   "passcode": 64537714,
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Normal"
+   ]
+  },
+  {
    "atk": 1200,
    "attribute": "wind",
    "betaName": "Sasuke Samurai 4",
@@ -8714,9 +8746,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "power-of-the-duelist:64599569:POTD-EN034:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11631,7 +11660,16 @@
    },
    "ocgDate": "2026-10-31",
    "passcode": 64740385,
-   "prints": [],
+   "prints": [
+    {
+     "id": "immortal-phoenix:64740385:IMPH-EN031:starlight_rare",
+     "number": "IMPH-EN031",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    }
+   ],
+   "tcgDate": "2027-01-28",
    "typeline": [
     "Fiend",
     "Fusion",
@@ -15036,6 +15074,25 @@
      "rarity": "common",
      "region": "EN",
      "set": "alliance-insight",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Curse of Diabell"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:64998567:MAMS-EN117:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731721
+      ]
+     },
+     "number": "MAMS-EN117",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
      "tcgplayer": {
       "match": "number+rarity",
       "name": "Curse of Diabell"

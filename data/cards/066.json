@@ -3169,11 +3169,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:66236707:MAMS-EN108:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731712
+      ]
+     },
      "number": "MAMS-EN108",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gordian Slicer"
+     }
     }
    ],
    "tcgDate": "2025-05-01"
@@ -4188,6 +4200,50 @@
    "tcgDate": "2007-10-24",
    "typeline": [
     "Spellcaster",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "heart"
+   ],
+   "atk": 2800,
+   "attribute": "water",
+   "frame": "link",
+   "hasEffect": true,
+   "id": "66338401",
+   "identifiers": {
+    "konamiId": 24019,
+    "ygoprodeckId": 66338401
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/66338401.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/66338401.jpg",
+     "id": 66338401,
+     "small": "https://images.ygoprodeck.com/images/cards_small/66338401.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "linkArrows": [
+    "Top",
+    "Right",
+    "Bottom-Left",
+    "Bottom-Right"
+   ],
+   "linkRating": 4,
+   "monsterType": "Cyberse",
+   "name": "Marincess Truth Heart",
+   "names": {
+    "en": "Marincess Truth Heart"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 66338401,
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Link",
     "Effect"
    ]
   },
@@ -8052,11 +8108,23 @@
    "passcode": 66532962,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:66532962:MAMS-EN090:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731694
+      ]
+     },
      "number": "MAMS-EN090",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Magistus Chorozo"
+     }
     },
     {
      "editions": [
@@ -9456,23 +9524,88 @@
    "passcode": 66664203,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:66664203:MAMS-EN005:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731488
+      ]
+     },
      "number": "MAMS-EN005",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon, the Luminous Mech Dragon (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:66664203:MAMS-EN005:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731487
+      ]
+     },
      "number": "MAMS-EN005",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon, the Luminous Mech Dragon (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:66664203:MAMS-EN005:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731485
+      ]
+     },
      "number": "MAMS-EN005",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon, the Luminous Mech Dragon"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:66664203:MAMS-EN005:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731486
+      ]
+     },
+     "number": "MAMS-EN005",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyber Dragon, the Luminous Mech Dragon (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:66664203:MAMS-EN005:unknown",
+     "number": "MAMS-EN005",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }

@@ -320,6 +320,13 @@
       "match": "number+rarity",
       "name": "Number 76: Harmonizer Gradielle"
      }
+    },
+    {
+     "id": "glorious-victors:92015800:GLVI-EN027:rare",
+     "number": "GLVI-EN027",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
     }
    ],
    "rank": 7,
@@ -781,23 +788,88 @@
    "passcode": 92058902,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:92058902:MAMS-EN006:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731492
+      ]
+     },
      "number": "MAMS-EN006",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Future Fusion Nova (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:92058902:MAMS-EN006:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731491
+      ]
+     },
      "number": "MAMS-EN006",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Future Fusion Nova (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:92058902:MAMS-EN006:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731489
+      ]
+     },
      "number": "MAMS-EN006",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Future Fusion Nova"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:92058902:MAMS-EN006:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731490
+      ]
+     },
+     "number": "MAMS-EN006",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Future Fusion Nova (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:92058902:MAMS-EN006:unknown",
+     "number": "MAMS-EN006",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -1375,9 +1447,6 @@
    "passcode": 92099232,
    "prints": [
     {
-     "editions": [
-      "first"
-     ],
      "id": "2014-mega-tin-mega-pack:92099232:MP14-EN111:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3265,6 +3334,36 @@
     "Tuner",
     "Effect"
    ]
+  },
+  {
+   "archetypes": [
+    "marincess"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "92322106",
+   "identifiers": {
+    "konamiId": 24020,
+    "ygoprodeckId": 92322106
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/92322106.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/92322106.jpg",
+     "id": 92322106,
+     "small": "https://images.ygoprodeck.com/images/cards_small/92322106.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Continuous",
+   "name": "Marincess Reef Lagoon",
+   "names": {
+    "en": "Marincess Reef Lagoon"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 92322106,
+   "prints": []
   },
   {
    "atk": 1000,
@@ -5995,11 +6094,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:92472273:MAMS-EN084:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731688
+      ]
+     },
      "number": "MAMS-EN084",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "DoomZ XII Zero - Drastea"
+     }
     }
    ],
    "tcgDate": "2025-09-25",
@@ -7787,6 +7898,44 @@
    "tcgDate": "2020-01-30",
    "typeline": [
     "Dragon",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "atk": 1500,
+   "attribute": "dark",
+   "def": 600,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "92600528",
+   "identifiers": {
+    "konamiId": 24023,
+    "ygoprodeckId": 92600528
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/92600528.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/92600528.jpg",
+     "id": 92600528,
+     "small": "https://images.ygoprodeck.com/images/cards_small/92600528.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 3,
+   "monsterType": "Zombie",
+   "name": "Ghostrick Lich",
+   "names": {
+    "en": "Ghostrick Lich"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 92600528,
+   "prints": [],
+   "typeline": [
+    "Zombie",
     "Effect"
    ]
   },
@@ -11037,6 +11186,13 @@
      }
     },
     {
+     "id": "glorious-victors:92826944:GLVI-EN049:rare",
+     "number": "GLVI-EN049",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "gold-series-3:92826944:GLD3-EN018:gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12893,23 +13049,88 @@
    "passcode": 92936364,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:92936364:MAMS-EN009:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731504
+      ]
+     },
      "number": "MAMS-EN009",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red Dragon Archfiend's Chains (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:92936364:MAMS-EN009:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731503
+      ]
+     },
      "number": "MAMS-EN009",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red Dragon Archfiend's Chains (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:92936364:MAMS-EN009:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731501
+      ]
+     },
      "number": "MAMS-EN009",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red Dragon Archfiend's Chains"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:92936364:MAMS-EN009:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731502
+      ]
+     },
+     "number": "MAMS-EN009",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Red Dragon Archfiend's Chains (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:92936364:MAMS-EN009:unknown",
+     "number": "MAMS-EN009",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -13301,6 +13522,45 @@
    "typeline": [
     "Pyro",
     "Flip",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "cubic"
+   ],
+   "atk": 0,
+   "attribute": "fire",
+   "def": 0,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "92990170",
+   "identifiers": {
+    "konamiId": 24009,
+    "ygoprodeckId": 92990170
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/92990170.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/92990170.jpg",
+     "id": 92990170,
+     "small": "https://images.ygoprodeck.com/images/cards_small/92990170.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 6,
+   "monsterType": "Fiend",
+   "name": "Alditia Hell Blaze the Burning Cubic Lord",
+   "names": {
+    "en": "Alditia Hell Blaze the Burning Cubic Lord"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 92990170,
+   "prints": [],
+   "typeline": [
+    "Fiend",
+    "Fusion",
     "Effect"
    ]
   },

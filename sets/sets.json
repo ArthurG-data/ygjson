@@ -12072,6 +12072,39 @@
   "type": "special_edition"
  },
  {
+  "code": "IMPH",
+  "editions": [
+   "unlimited"
+  ],
+  "era": "sevens",
+  "id": "immortal-phoenix",
+  "identifiers": {
+   "konamiDatabaseIds": [
+    1000009626000,
+    3000001721000
+   ],
+   "yugipediaId": 1201117
+  },
+  "name": "Immortal Phoenix",
+  "releases": [
+   {
+    "keyArt": {
+     "source": "https://yugipedia.com/wiki/Immortal_Phoenix",
+     "url": "https://yugipedia.com/wiki/Special:FilePath/IMPH-BoosterEN.png"
+    },
+    "language": "en",
+    "name": "Immortal Phoenix",
+    "releaseDate": "2027-01-29"
+   }
+  ],
+  "series": "Core Booster",
+  "source": "ygoprodeck",
+  "tcgplayerGroupIds": [
+   24944
+  ],
+  "type": "booster"
+ },
+ {
   "code": "IOC",
   "editions": [
    "first",
@@ -13471,7 +13504,7 @@
    {
     "language": "en",
     "name": "Legendary Dragon Decks (2020 Date Reprint)",
-    "releaseDate": "2026-11-05"
+    "releaseDate": "2026-11-27"
    }
   ],
   "source": "tcgplayer",
@@ -14566,11 +14599,15 @@
  {
   "code": "MAMS",
   "editions": [
+   "first",
    "unlimited"
   ],
   "era": "sevens",
   "id": "magnificent-maestros",
   "identifiers": {
+   "konamiDatabaseIds": [
+    2000001710000
+   ],
    "yugipediaId": 1209057
   },
   "name": "Magnificent Maestros",
@@ -29297,7 +29334,8 @@
  {
   "code": "UP02",
   "editions": [
-   "unlimited"
+   "unlimited",
+   "limited"
   ],
   "era": "sevens",
   "id": "ultimate-tournament-pack-2",

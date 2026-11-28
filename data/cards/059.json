@@ -2006,7 +2006,23 @@
    },
    "ocgDate": "2026-10-31",
    "passcode": 59128241,
-   "prints": [],
+   "prints": [
+    {
+     "id": "immortal-phoenix:59128241:IMPH-EN048:starlight_rare",
+     "number": "IMPH-EN048",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    },
+    {
+     "id": "immortal-phoenix:59128241:IMPH-EN048:ultra_rare",
+     "number": "IMPH-EN048",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    }
+   ],
+   "tcgDate": "2027-01-28",
    "typeline": [
     "Cyberse",
     "Link",
@@ -4438,11 +4454,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:59323650:MAMS-EN082:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731686
+      ]
+     },
      "number": "MAMS-EN082",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Regenesis Dragon"
+     }
     }
    ],
    "tcgDate": "2025-05-01",
@@ -6188,11 +6216,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:59400890:UP02-EN004:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731112
+      ]
+     },
      "number": "UP02-EN004",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Magician of Destruction"
+     }
     }
    ],
    "tcgDate": "2026-02-19",
@@ -8283,11 +8323,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:59514116:UP02-EN012:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731120
+      ]
+     },
      "number": "UP02-EN012",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Secrets of Dark Magic"
+     }
     }
    ],
    "tcgDate": "2020-01-16"
@@ -10941,11 +10993,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:59708927:UP02-EN030:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731138
+      ]
+     },
      "number": "UP02-EN030",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Umbral Horror Ghost"
+     }
     }
    ],
    "tcgDate": "2014-05-16",
@@ -12018,7 +12082,7 @@
      }
     }
    ],
-   "tcgDate": "2010-09-25",
+   "tcgDate": "2010-12-02",
    "typeline": [
     "Dragon",
     "Tuner",
@@ -15664,11 +15728,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:59921227:MAMS-EN118:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731722
+      ]
+     },
      "number": "MAMS-EN118",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Blitzclique Alternator"
+     }
     }
    ],
    "tcgDate": "2026-07-02"

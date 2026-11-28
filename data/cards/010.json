@@ -2749,14 +2749,14 @@
   },
   {
    "aliases": [
-    "Sennet Prophet - Amenhotep"
+    "Zenet Prophet - Amenhotep"
    ],
    "archetypes": [
     "zenet"
    ],
    "atk": 0,
    "attribute": "light",
-   "betaName": "Sennet Prophet - Amenhotep",
+   "betaName": "Zenet Prophet - Amenhotep",
    "def": 1500,
    "frame": "effect",
    "hasEffect": true,
@@ -2777,13 +2777,22 @@
    "kind": "monster",
    "level": 4,
    "monsterType": "Zombie",
-   "name": "Zenet Prophet - Amenhotep",
+   "name": "Zenet Revelator Amenhotep",
    "names": {
-    "en": "Zenet Prophet - Amenhotep"
+    "en": "Zenet Revelator Amenhotep"
    },
    "ocgDate": "2026-09-05",
    "passcode": 10007434,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:10007434:GLVI-EN002:rare",
+     "number": "GLVI-EN002",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Zombie",
     "Effect"
@@ -12204,11 +12213,15 @@
    ]
   },
   {
+   "aliases": [
+    "Raise Moon Lamp Croucier"
+   ],
    "archetypes": [
     "raise-moon"
    ],
    "atk": 2800,
    "attribute": "fire",
+   "betaName": "Raise Moon Lamp Croucier",
    "def": 700,
    "frame": "effect",
    "hasEffect": true,
@@ -12229,13 +12242,36 @@
    "kind": "monster",
    "level": 7,
    "monsterType": "Dragon",
-   "name": "Raise Moon Lamp Croucier",
+   "name": "Kulshe, the Beacon of Raise Moon",
    "names": {
-    "en": "Raise Moon Lamp Croucier"
+    "en": "Kulshe, the Beacon of Raise Moon"
    },
    "ocgDate": "2026-09-05",
    "passcode": 10611873,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:10611873:GLVI-EN020:collectors_rare",
+     "number": "GLVI-EN020",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:10611873:GLVI-EN020:rare",
+     "number": "GLVI-EN020",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:10611873:GLVI-EN020:super_rare",
+     "number": "GLVI-EN020",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Dragon",
     "Effect"
@@ -16869,14 +16905,14 @@
   },
   {
    "aliases": [
-    "Sennetmes Nekhbet"
+    "Zenetmes Nekhbet"
    ],
    "archetypes": [
     "zenet"
    ],
    "atk": 2800,
    "attribute": "dark",
-   "betaName": "Sennetmes Nekhbet",
+   "betaName": "Zenetmes Nekhbet",
    "def": 1500,
    "frame": "ritual",
    "hasEffect": true,
@@ -16897,13 +16933,22 @@
    "kind": "monster",
    "level": 6,
    "monsterType": "Zombie",
-   "name": "Zenetmes Nekhbet",
+   "name": "Zenet-Mose Nekhbet",
    "names": {
-    "en": "Zenetmes Nekhbet"
+    "en": "Zenet-Mose Nekhbet"
    },
    "ocgDate": "2026-09-05",
    "passcode": 10884847,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:10884847:GLVI-EN005:super_rare",
+     "number": "GLVI-EN005",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Zombie",
     "Ritual",

@@ -2160,6 +2160,13 @@
      }
     },
     {
+     "id": "glorious-victors:22110647:GLVI-EN055:rare",
+     "number": "GLVI-EN055",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "lord-of-the-tachyon-galaxy:22110647:LTGY-EN053:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6212,9 +6219,6 @@
    ]
   },
   {
-   "archetypes": [
-    "evolution-pill"
-   ],
    "frame": "spell",
    "hasEffect": true,
    "id": "22431243",
@@ -12085,11 +12089,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:22819092:UP02-EN018:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731126
+      ]
+     },
      "number": "UP02-EN018",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Fish Sonar"
+     }
     }
    ],
    "tcgDate": "2022-06-16"

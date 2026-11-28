@@ -2420,11 +2420,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:23153227:UP02-EN017:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731125
+      ]
+     },
      "number": "UP02-EN017",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Seventh Ascension"
+     }
     }
    ],
    "tcgDate": "2022-06-16"
@@ -16944,11 +16956,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:23931679:UP02-EN032:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731140
+      ]
+     },
      "number": "UP02-EN032",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ocean Dragon Lord - Kairyu-Shin"
+     }
     }
    ],
    "tcgDate": "2022-06-16",
@@ -17430,9 +17454,6 @@
   {
    "aliases": [
     "Transcendental Evolution Pill Beta"
-   ],
-   "archetypes": [
-    "evolution-pill"
    ],
    "betaName": "Transcendental Evolution Pill Beta",
    "frame": "spell",

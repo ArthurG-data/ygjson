@@ -2609,9 +2609,6 @@
    "passcode": 32202803,
    "prints": [
     {
-     "editions": [
-      "first"
-     ],
      "id": "2014-mega-tin-mega-pack:32202803:MP14-EN072:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -5593,25 +5590,61 @@
    "passcode": 32353566,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:32353566:MAMS-EN051:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731638
+      ]
+     },
      "number": "MAMS-EN051",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Walpurgis (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:32353566:MAMS-EN051:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731639
+      ]
+     },
      "number": "MAMS-EN051",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Walpurgis (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:32353566:MAMS-EN051:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731637
+      ]
+     },
      "number": "MAMS-EN051",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Walpurgis"
+     }
     }
    ],
    "tcgDate": "2026-11-12"
@@ -12826,11 +12859,23 @@
    "passcode": 32762201,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:32762201:MAMS-EN080:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731684
+      ]
+     },
      "number": "MAMS-EN080",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Ancient Gear Statue"
+     }
     },
     {
      "id": "maze-of-the-master:32762201:MZTM-EN045:ultra_rare",

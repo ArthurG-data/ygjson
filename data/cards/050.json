@@ -1646,11 +1646,23 @@
    "passcode": 50088247,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:50088247:MAMS-EN068:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731672
+      ]
+     },
      "number": "MAMS-EN068",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Prior of the Ice Barrier"
+     }
     },
     {
      "id": "photon-shockwave:50088247:PHSW-EN030:common",
@@ -13545,11 +13557,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:50930991:MAMS-EN060:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731664
+      ]
+     },
      "number": "MAMS-EN060",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Neo the Magic Swordsman"
+     }
     },
     {
      "id": "starter-deck-yugi-evolution:50930991:SYE-012:common",
@@ -13739,6 +13763,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "world-championship-2010-card-pack:50933533:WCPP-EN018:rare",
      "identifiers": {
       "tcgplayerProductIds": [

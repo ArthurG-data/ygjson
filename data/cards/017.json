@@ -6309,11 +6309,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:17412721:UP02-EN036:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731144
+      ]
+     },
      "number": "UP02-EN036",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Elder Entity Norden"
+     }
     }
    ],
    "tcgDate": "2015-09-17",
@@ -12552,11 +12564,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:17782288:MAMS-EN112:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731716
+      ]
+     },
      "number": "MAMS-EN112",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Angelechy Problem"
+     }
     }
    ],
    "tcgDate": "2026-07-02"

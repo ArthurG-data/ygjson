@@ -8186,25 +8186,61 @@
    "passcode": 41424250,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:41424250:MAMS-EN026:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731563
+      ]
+     },
      "number": "MAMS-EN026",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chaos End Ruler - Master of the Beginning and End (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:41424250:MAMS-EN026:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731564
+      ]
+     },
      "number": "MAMS-EN026",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chaos End Ruler - Master of the Beginning and End (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:41424250:MAMS-EN026:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731562
+      ]
+     },
      "number": "MAMS-EN026",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Chaos End Ruler - Master of the Beginning and End"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -10692,11 +10728,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:41510920:MAMS-EN113:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731717
+      ]
+     },
      "number": "MAMS-EN113",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Stellarnova Alpha"
+     }
     }
    ],
    "tcgDate": "2014-08-14"

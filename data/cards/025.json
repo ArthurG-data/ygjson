@@ -12578,11 +12578,23 @@
    "passcode": 25784595,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:25784595:MAMS-EN077:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731681
+      ]
+     },
      "number": "MAMS-EN077",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Bone Archfiend"
+     }
     },
     {
      "id": "structure-deck-the-crimson-king:25784595:SDCK-EN003:common",
@@ -13172,7 +13184,7 @@
      }
     }
    ],
-   "tcgDate": "2009-05-02"
+   "tcgDate": "2009-05-12"
   },
   {
    "aliases": [

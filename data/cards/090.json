@@ -958,23 +958,88 @@
    "passcode": 90091224,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:90091224:MAMS-EN015:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731528
+      ]
+     },
      "number": "MAMS-EN015",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Rebellion Xyz Dragon, Four Heavenly Dragons (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:90091224:MAMS-EN015:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731527
+      ]
+     },
      "number": "MAMS-EN015",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Rebellion Xyz Dragon, Four Heavenly Dragons (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:90091224:MAMS-EN015:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731525
+      ]
+     },
      "number": "MAMS-EN015",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Rebellion Xyz Dragon, Four Heavenly Dragons"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:90091224:MAMS-EN015:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731526
+      ]
+     },
+     "number": "MAMS-EN015",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Dark Rebellion Xyz Dragon, Four Heavenly Dragons (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:90091224:MAMS-EN015:unknown",
+     "number": "MAMS-EN015",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -11282,27 +11347,27 @@
   {
    "frame": "trap",
    "hasEffect": true,
-   "id": "90740329",
+   "id": "90740330",
    "identifiers": {
     "konamiId": 6140,
     "ygojsonId": "1c2f8e8f-8f7d-45bd-85c1-fca27135957d",
-    "ygoprodeckId": 90740329,
+    "ygoprodeckId": 90740330,
     "yugipediaIds": [
      12531
     ]
    },
    "images": [
     {
-     "art": "https://images.ygoprodeck.com/images/cards_cropped/90740329.jpg",
-     "card": "https://images.ygoprodeck.com/images/cards/90740329.jpg",
-     "id": 90740329,
-     "small": "https://images.ygoprodeck.com/images/cards_small/90740329.jpg"
-    },
-    {
      "art": "https://images.ygoprodeck.com/images/cards_cropped/90740330.jpg",
      "card": "https://images.ygoprodeck.com/images/cards/90740330.jpg",
      "id": 90740330,
      "small": "https://images.ygoprodeck.com/images/cards_small/90740330.jpg"
+    },
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/90740329.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/90740329.jpg",
+     "id": 90740329,
+     "small": "https://images.ygoprodeck.com/images/cards_small/90740329.jpg"
     }
    ],
    "isTuner": false,
@@ -11320,10 +11385,10 @@
     "pt": "Provocação"
    },
    "ocgDate": "2004-05-27",
-   "passcode": 90740329,
+   "passcode": 90740330,
    "prints": [
     {
-     "id": "dark-revelation-volume-3:90740329:DR3-EN049:common",
+     "id": "dark-revelation-volume-3:90740330:DR3-EN049:common",
      "identifiers": {
       "tcgplayerProductIds": [
        25844
@@ -11342,14 +11407,14 @@
      }
     },
     {
-     "id": "soul-of-the-duelist:90740329:SOD-EN049:common",
+     "id": "soul-of-the-duelist:90740330:SOD-EN049:short_print",
      "identifiers": {
       "tcgplayerProductIds": [
        23394
       ]
      },
      "number": "SOD-EN049",
-     "rarity": "common",
+     "rarity": "short_print",
      "region": "EN",
      "scans": {
       "first": "https://ms.yugipedia.com//0/02/Taunt-SOD-EN-C-1E.jpg",
@@ -11357,16 +11422,9 @@
      },
      "set": "soul-of-the-duelist",
      "tcgplayer": {
-      "match": "number+rarity",
+      "match": "number",
       "name": "Taunt"
      }
-    },
-    {
-     "id": "soul-of-the-duelist:90740329:SOD-EN049:short_print",
-     "number": "SOD-EN049",
-     "rarity": "short_print",
-     "region": "EN",
-     "set": "soul-of-the-duelist"
     }
    ],
    "tcgDate": "2004-10-01"
@@ -15640,18 +15698,42 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:90960358:MAMS-EN121:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731727
+      ]
+     },
      "number": "MAMS-EN121",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Dark Magician Girl (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:90960358:MAMS-EN121:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731726
+      ]
+     },
      "number": "MAMS-EN121",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Dark Magician Girl (Extended Art)"
+     }
     },
     {
      "editions": [

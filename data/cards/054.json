@@ -886,6 +886,45 @@
   },
   {
    "archetypes": [
+    "ghostrick"
+   ],
+   "atk": 2800,
+   "attribute": "dark",
+   "def": 2600,
+   "frame": "xyz",
+   "hasEffect": true,
+   "id": "54083371",
+   "identifiers": {
+    "konamiId": 24025,
+    "ygoprodeckId": 54083371
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/54083371.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/54083371.jpg",
+     "id": 54083371,
+     "small": "https://images.ygoprodeck.com/images/cards_small/54083371.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "monsterType": "Zombie",
+   "name": "Ghostrick Master Alucard",
+   "names": {
+    "en": "Ghostrick Master Alucard"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 54083371,
+   "prints": [],
+   "rank": 6,
+   "typeline": [
+    "Zombie",
+    "Xyz",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
     "gouki"
    ],
    "atk": 800,
@@ -2083,11 +2122,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:54171327:MAMS-EN119:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731723
+      ]
+     },
      "number": "MAMS-EN119",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Angelechy Disturbance"
+     }
     }
    ],
    "tcgDate": "2026-07-02"
@@ -3328,6 +3379,36 @@
     }
    ],
    "tcgDate": "2024-07-27"
+  },
+  {
+   "archetypes": [
+    "ghostrick"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "54261783",
+   "identifiers": {
+    "konamiId": 24028,
+    "ygoprodeckId": 54261783
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/54261783.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/54261783.jpg",
+     "id": 54261783,
+     "small": "https://images.ygoprodeck.com/images/cards_small/54261783.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Continuous",
+   "name": "Ghostrick Freeze",
+   "names": {
+    "en": "Ghostrick Freeze"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 54261783,
+   "prints": []
   },
   {
    "aliases": [
@@ -9863,23 +9944,88 @@
    "passcode": 54603525,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:54603525:MAMS-EN014:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731524
+      ]
+     },
      "number": "MAMS-EN014",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Clear Wing Synchro Dragon, Four Heavenly Dragons (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:54603525:MAMS-EN014:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731523
+      ]
+     },
      "number": "MAMS-EN014",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Clear Wing Synchro Dragon, Four Heavenly Dragons (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:54603525:MAMS-EN014:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731521
+      ]
+     },
      "number": "MAMS-EN014",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Clear Wing Synchro Dragon, Four Heavenly Dragons"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:54603525:MAMS-EN014:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731522
+      ]
+     },
+     "number": "MAMS-EN014",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Clear Wing Synchro Dragon, Four Heavenly Dragons (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:54603525:MAMS-EN014:unknown",
+     "number": "MAMS-EN014",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -12804,22 +12950,84 @@
    "prints": [
     {
      "id": "magnificent-maestros:54725177:MAMS-EN011:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731512
+      ]
+     },
      "number": "MAMS-EN011",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Photon Change Dragon (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:54725177:MAMS-EN011:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731511
+      ]
+     },
      "number": "MAMS-EN011",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Photon Change Dragon (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:54725177:MAMS-EN011:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731509
+      ]
+     },
      "number": "MAMS-EN011",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Photon Change Dragon"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:54725177:MAMS-EN011:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731510
+      ]
+     },
+     "number": "MAMS-EN011",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Galaxy-Eyes Photon Change Dragon (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:54725177:MAMS-EN011:unknown",
+     "number": "MAMS-EN011",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }
@@ -13187,6 +13395,13 @@
       "match": "number+rarity",
       "name": "Twin-Headed Thunder Dragon"
      }
+    },
+    {
+     "id": "glorious-victors:54752875:GLVI-EN014:rare",
+     "number": "GLVI-EN014",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
     },
     {
      "id": "metal-raiders-25th-anniversary-edition:54752875:MRD-EN120:super_rare",

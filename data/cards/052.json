@@ -7187,6 +7187,20 @@
      }
     },
     {
+     "id": "glorious-victors:52467217:GLVI-EN050:rare",
+     "number": "GLVI-EN050",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:52467217:GLVI-EN050:super_rare",
+     "number": "GLVI-EN050",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "ots-tournament-pack-6:52467217:OP06-EN017:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11529,11 +11543,23 @@
    "passcode": 52698008,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:52698008:MAMS-EN098:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731702
+      ]
+     },
      "number": "MAMS-EN098",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Cyberse Wicckid"
+     }
     },
     {
      "id": "savage-strike:52698008:SAST-EN044:common",
@@ -12206,25 +12232,61 @@
    "passcode": 52768390,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:52768390:MAMS-EN020:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731545
+      ]
+     },
      "number": "MAMS-EN020",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of Darkness (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:52768390:MAMS-EN020:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731546
+      ]
+     },
      "number": "MAMS-EN020",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of Darkness (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:52768390:MAMS-EN020:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731544
+      ]
+     },
      "number": "MAMS-EN020",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Lord of Darkness"
+     }
     }
    ],
    "tcgDate": "2026-11-12",

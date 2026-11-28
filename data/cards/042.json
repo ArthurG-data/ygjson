@@ -94,8 +94,7 @@
   },
   {
    "archetypes": [
-    "dark-magician",
-    "palladium"
+    "dark-magician"
    ],
    "atk": 2000,
    "attribute": "light",
@@ -8268,11 +8267,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:42493140:MAMS-EN078:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731682
+      ]
+     },
      "number": "MAMS-EN078",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Centur-Ion Trudea"
+     }
     },
     {
      "id": "valiant-smashers:42493140:VASM-EN017:collectors_rare",
@@ -8771,6 +8782,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "gladiator-s-assault:42534368:GLAS-EN094:secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9351,6 +9365,9 @@
    "passcode": 42551040,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "2014-mega-tin-mega-pack:42551040:MP14-EN147:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10955,11 +10972,15 @@
    ]
   },
   {
+   "aliases": [
+    "Primrose the Twin Rikka Fairy"
+   ],
    "archetypes": [
     "rikka"
    ],
    "atk": 2600,
    "attribute": "water",
+   "betaName": "Primrose the Twin Rikka Fairy",
    "def": 2600,
    "frame": "effect",
    "hasEffect": true,
@@ -10980,9 +11001,9 @@
    "kind": "monster",
    "level": 8,
    "monsterType": "Plant",
-   "name": "Primrose the Twin Rikka Fairy",
+   "name": "Primrose the Rikka Fairy Duo",
    "names": {
-    "en": "Primrose the Twin Rikka Fairy"
+    "en": "Primrose the Rikka Fairy Duo"
    },
    "ocgDate": "2026-10-31",
    "passcode": 42651293,
@@ -12021,6 +12042,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "starter-deck-syrus-truesdale:42703248:YSDS-EN023:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13012,9 +13036,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:42752141:MGED-EN029:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [

@@ -5539,11 +5539,15 @@
    ]
   },
   {
+   "aliases": [
+    "Raise Moon Elegance Carol"
+   ],
    "archetypes": [
     "raise-moon"
    ],
    "atk": 1400,
    "attribute": "dark",
+   "betaName": "Raise Moon Elegance Carol",
    "def": 1400,
    "frame": "effect",
    "hasEffect": true,
@@ -5564,13 +5568,29 @@
    "kind": "monster",
    "level": 7,
    "monsterType": "Zombie",
-   "name": "Raise Moon Elegance Carol",
+   "name": "Carol, the Elegance of Raise Moon",
    "names": {
-    "en": "Raise Moon Elegance Carol"
+    "en": "Carol, the Elegance of Raise Moon"
    },
    "ocgDate": "2026-09-05",
    "passcode": 11333460,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:11333460:GLVI-EN017:starlight_rare",
+     "number": "GLVI-EN017",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:11333460:GLVI-EN017:ultra_rare",
+     "number": "GLVI-EN017",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Zombie",
     "Effect"
@@ -14679,6 +14699,13 @@
       "match": "number+rarity",
       "name": "B. Skull Dragon"
      }
+    },
+    {
+     "id": "glorious-victors:11901678:GLVI-EN013:rare",
+     "number": "GLVI-EN013",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
     },
     {
      "id": "legendary-collection-4-joey-s-world-mega-pack:11901678:LCJW-EN054:rare",

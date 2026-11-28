@@ -172,7 +172,7 @@ To settle a review row:
 
 | type | Sets | AutoMana / MTG set type |
 |---|---|---|
-| booster | <!--n:type.booster-->273<!--/n--> | expansion |
+| booster | <!--n:type.booster-->274<!--/n--> | expansion |
 | structure_deck | <!--n:type.structure_deck-->63<!--/n--> | structure_deck |
 | starter_deck | <!--n:type.starter_deck-->31<!--/n--> | starter |
 | tin | <!--n:type.tin-->43<!--/n--> | tin |
@@ -184,7 +184,7 @@ To settle a review row:
 | box_set | <!--n:type.box_set-->63<!--/n--> | box |
 
 The schema also allows `other` for a set no rule places. No set has it today. `series` is Yugipedia's series for the
-set (`Core Booster`, `Duelist Pack`, `Battles of Legend`), and <!--n:sets_with_series-->466<!--/n--> sets have one.
+set (`Core Booster`, `Duelist Pack`, `Battles of Legend`), and <!--n:sets_with_series-->467<!--/n--> sets have one.
 
 **Parents.** A sneak peek, a special edition or a promo that reprints a booster names it in `parent`. The Yugipedia
 importer picks the one booster that shares the child's code, whose name the child's name starts with, or that the
@@ -216,7 +216,7 @@ Edition" and `unlimited` for the rest. YGOJSON states the editions of a set it m
 `limited`), which replace the guess. TCGCSV then adds every edition its prices show for the set's singles, where
 TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`.
 
-A print lists its own `editions` only when they differ from its set's: <!--n:prints_own_editions-->10,364<!--/n--> prints do. A print holding products
+A print lists its own `editions` only when they differ from its set's: <!--n:prints_own_editions-->10,664<!--/n--> prints do. A print holding products
 has the editions they are priced in. That is mostly fewer than its set's, but a product of another group that lands in
 a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions, except
 in a set that mixes `limited` with other editions. There Limited is usually a few special prints (the God cards of
@@ -224,7 +224,7 @@ Yugi's Legendary Decks) or all of them (a Duel Terminal set), so the print has t
 prints have, unless two lists tie. <!--n:prints_voted_editions-->109<!--/n--> prints get their editions this way.
 
 **Key art.** `releases[0].keyArt` links to YGOPRODeck's set image (<!--n:keyart.ygoprodeck-->911<!--/n--> sets), else to the pack art YGOJSON gives from
-Yugipedia (<!--n:keyart.ygojson-->127<!--/n--> sets). The `source` is the page the image is on. The images are links and are never copied. No source
+Yugipedia (<!--n:keyart.ygojson-->128<!--/n--> sets). The `source` is the page the image is on. The images are links and are never copied. No source
 hosts set logos: Konami's product pages show pack mockups and Yugipedia has no logo file for a set. So ygjson has key
 art and no logos.
 
@@ -234,7 +234,7 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 `de`, `it`, `pt`, `es`, `ja`, `ko`, `zh-CN`, `zh-TW`) where YGOJSON has them. YGOJSON's romanisations (`ja_romaji`,
 `ko_rr`) are not names and are left out. The other fields are:
 
-- `kind`: monster, spell, trap, token or skill. <!--n:cards_monster-->9,421<!--/n--> cards are monsters.
+- `kind`: monster, spell, trap, token or skill. <!--n:cards_monster-->9,453<!--/n--> cards are monsters.
 - `frame`: YGOPRODeck's `frameType`.
 - `attribute` (lower case), `monsterType` (YGOPRODeck's `race`: the monster type, or the spell or trap subtype),
   `level`, `rank`, `linkRating`, `linkArrows`, `scale`, `atk` and `def`. `rank` is the level of a Xyz monster,
@@ -243,12 +243,12 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 - `archetypes`: archetype slugs.
 - `tcgDate` and `ocgDate`: the card's first release in each, per YGOPRODeck.
 - `images`: links to YGOPRODeck's full image, small image and cropped art, one entry per artwork.
-- `identifiers`: `ygoprodeckId`, and `konamiId` (<!--n:cards_konami-->14,495<!--/n--> cards), `ygojsonId` (<!--n:cards_ygojson-->13,991<!--/n-->) and `yugipediaIds` where known.
+- `identifiers`: `ygoprodeckId`, and `konamiId` (<!--n:cards_konami-->14,517<!--/n--> cards), `ygojsonId` (<!--n:cards_ygojson-->13,991<!--/n-->) and `yugipediaIds` where known.
 - `prints`: every print of the card.
 
-<!--n:cards_no_print-->461<!--/n--> cards have no print. YGOPRODeck lists every card, but a print needs an English set that lists it:
-<!--n:cards_no_print.ocg-->371<!--/n--> are OCG cards with no TCG release yet (an `ocgDate` and no `tcgDate`),
-<!--n:cards_no_print.token-->79<!--/n--> are tokens no set lists, and <!--n:cards_no_print.other-->11<!--/n--> are announced cards still under a
+<!--n:cards_no_print-->478<!--/n--> cards have no print. YGOPRODeck lists every card, but a print needs an English set that lists it:
+<!--n:cards_no_print.ocg-->385<!--/n--> are OCG cards with no TCG release yet (an `ocgDate` and no `tcgDate`),
+<!--n:cards_no_print.token-->79<!--/n--> are tokens no set lists, and <!--n:cards_no_print.other-->14<!--/n--> are announced cards still under a
 temporary id (`100461002`), cards from the video games, or a card YGOPRODeck lists no set for yet. They are kept, so a deck list or a legality event can
 name them, and gain prints once a set lists them. YGOPRODeck's placeholder for unrevealed cards in deck lists
 (`???`, `149694341`) is not a card and is left out.
@@ -256,28 +256,28 @@ name them, and gain prints once a set lists them. YGOPRODeck's placeholder for u
 A print has `id`, `set`, `number` (`LOB-001`), `region`, `rarity`, `editions` where they differ from the set's,
 `identifiers.tcgplayerProductIds` and `tcgplayer`. `region` is the letters between the set prefix and the digits of the
 number: `LOB-EN001` has `EN`, `LOB-001` has none, and `LAVD-ENS05` has `EN` because the letter after the region is a
-slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (<!--n:region.EN-->45,491<!--/n--> prints), `E` (<!--n:region.E-->732<!--/n-->) and `PT` (<!--n:region.PT-->456<!--/n-->).
+slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (<!--n:region.EN-->45,615<!--/n--> prints), `E` (<!--n:region.E-->732<!--/n-->) and `PT` (<!--n:region.PT-->456<!--/n-->).
 
 **Scans.** A print's `scans` links Yugipedia's picture of that print in each edition (`{"first": ..., "unlimited":
 ...}`), so it shows which of the card's artworks the print carries; a printing has the one of its edition as `scan`.
 They come from YGOJSON, which lists each printing of a set's English locales with its scan: a printing is the locale's
 prefix and its suffix (`LOB-EN` + `005`) for one card, and lands on the YGOPRODeck print of that set, card and number at
 its rarity, or on the only print of that number when YGOJSON has only one printing of it. <!--n:prints_with_scan-->37,489<!--/n--> prints have
-scans, and <!--n:printings_with_scan-->48,883<!--/n--> printings a `scan`. A print `import_tcgcsv` mints (a version, or a number YGOPRODeck lacks)
+scans, and <!--n:printings_with_scan-->48,880<!--/n--> printings a `scan`. A print `import_tcgcsv` mints (a version, or a number YGOPRODeck lacks)
 has none, since it is made afresh on each run; nor does a printing of another region (`AGOV-AE001`). A printing that
 lands on no single print goes to `review/ygojson.json` `scansUnplaced`.
 
 **Rarity.** A print's `rarity` is a code from `tools/rarities.py`, which maps YGOPRODeck's and TCGplayer's free text
 onto <!--n:rarity_codes-->41<!--/n--> codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
 `dt_normal_parallel` and so on). Text the table does not know becomes `unknown`, and the print keeps the source's
-string as `rawRarity`, also once TCGplayer's rarity replaces `unknown` (`number+rarity-from-tcgplayer` below). <!--n:prints_unknown-->30<!--/n--> prints
+string as `rawRarity`, also once TCGplayer's rarity replaces `unknown` (`number+rarity-from-tcgplayer` below). <!--n:prints_unknown-->48<!--/n--> prints
 are `unknown`; `review/rarities.json` counts each raw string. The table is the one
 place that decides a rarity, its finish and its tier. TCGplayer's `Emblazoned Ultra Rare` and `Emblazoned Secret Rare`
 are `ultra_rare` and `secret_rare`: Emblazoned is a treatment, and the product's `(EUR)` or `(ESR)` makes it a version
 (see [Variants](#cards-and-prints)).
 
 **Finish.** A printing is `nonfoil` for four rarities, `common`, `short_print`, `super_short_print` and `rare`.
-Every other code is `foil`. An `unknown` rarity gives `null`: <!--n:printings_no_finish-->48<!--/n--> printings have no finish. TCGplayer prices a single
+Every other code is `foil`. An `unknown` rarity gives `null`: <!--n:printings_no_finish-->84<!--/n--> printings have no finish. TCGplayer prices a single
 by edition and not by finish, so the finish is a property of the rarity.
 
 **Tier.** `rarityTier` is a value ladder from 1 to 5, with a parallel rarity ranking with its base. The printing has
@@ -307,11 +307,11 @@ products only when they are the same card at the same rarity, like the Red and B
 
 | `match` | Prints | Evidence |
 |---|---|---|
-| `number+rarity` | <!--n:match.number+rarity-->41,618<!--/n--> | the group's set has a print with this number and this rarity |
+| `number+rarity` | <!--n:match.number+rarity-->41,932<!--/n--> | the group's set has a print with this number and this rarity |
 | `number+rarity-from-tcgplayer` | <!--n:match.number+rarity-from-tcgplayer-->193<!--/n--> | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
-| `number` | <!--n:match.number-->436<!--/n--> | the group's set has exactly one print of this number |
+| `number` | <!--n:match.number-->437<!--/n--> | the group's set has exactly one print of this number |
 | `number-other-set` | <!--n:match.number-other-set-->3,261<!--/n--> | the group's set lacks the number, and exactly one other set has it |
-| `minted` | <!--n:match.minted-->675<!--/n--> | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
+| `minted` | <!--n:match.minted-->676<!--/n--> | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
 
 **Prints from TCGplayer.** YGOPRODeck lags TCGplayer and omits whole sets. When no print anywhere has a product's number
 and its name is exactly one card, `import_tcgcsv.py` creates the print with `source: "tcgplayer"`, in the group's set, or
@@ -352,7 +352,7 @@ run of `import_tcgcsv` starts a card's aliases from its `betaName` and adds TCGp
 in that run, so a name it wrote before never mints a print by itself, and a beta name TCGplayer spells the same way
 stays when the product moves.
 
-<!--n:prints_no_product-->2,350<!--/n--> prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
+<!--n:prints_no_product-->2,158<!--/n--> prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
 another product already prices.
 `tools/coverage_report.py` accounts for every product in category 2.
@@ -362,11 +362,11 @@ fields are links. A reader that needs the text reads it from TCGCSV or YGOPRODec
 
 ## Archetypes
 
-`data/archetypes.json` holds the archetypes YGOPRODeck names (<!--n:archetypes.ygoprodeck-->666<!--/n-->) plus the YGOJSON series that Konami calls an
-archetype and YGOPRODeck lacks (<!--n:archetypes.ygojson-->243<!--/n-->). `source` says which. A YGOJSON series that matches one of ours by English name
+`data/archetypes.json` holds the archetypes YGOPRODeck names (<!--n:archetypes.ygoprodeck-->674<!--/n-->) plus the YGOJSON series that Konami calls an
+archetype and YGOPRODeck lacks (<!--n:archetypes.ygojson-->239<!--/n-->). `source` says which. A YGOJSON series that matches one of ours by English name
 adds `names` in ten languages, `isArchetype` and its YGOJSON id. `isArchetype` is false for a series Konami does not
-call an archetype (<!--n:archetypes.not_archetype-->106<!--/n--> today). A card's `archetypes` lists slugs, and `AllArchetypes.json` derives `members`, the card
-ids of the archetype in numeric order, at build time. <!--n:archetypes.no_member-->131<!--/n--> archetypes have no member card yet.
+call an archetype (<!--n:archetypes.not_archetype-->109<!--/n--> today). A card's `archetypes` lists slugs, and `AllArchetypes.json` derives `members`, the card
+ids of the archetype in numeric order, at build time. <!--n:archetypes.no_member-->130<!--/n--> archetypes have no member card yet.
 
 ## Sealed products
 

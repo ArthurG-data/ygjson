@@ -2714,9 +2714,6 @@
    ]
   },
   {
-   "archetypes": [
-    "duel-dragon"
-   ],
    "atk": 3000,
    "attribute": "dark",
    "def": 0,
@@ -8270,14 +8267,14 @@
   },
   {
    "aliases": [
-    "Xenovader△ of Blue Tuonela"
+    "Trirealm Rift of Blue Tuonela"
    ],
    "archetypes": [
     "trirealm-rift"
    ],
    "atk": 300,
    "attribute": "water",
-   "betaName": "Xenovader△ of Blue Tuonela",
+   "betaName": "Trirealm Rift of Blue Tuonela",
    "def": 2000,
    "frame": "effect",
    "hasEffect": true,
@@ -8298,13 +8295,22 @@
    "kind": "monster",
    "level": 3,
    "monsterType": "Psychic",
-   "name": "Trirealm Rift of Blue Tuonela",
+   "name": "Trirealm Rift Blizzards",
    "names": {
-    "en": "Trirealm Rift of Blue Tuonela"
+    "en": "Trirealm Rift Blizzards"
    },
    "ocgDate": "2026-09-05",
    "passcode": 8540055,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:8540055:GLVI-EN033:rare",
+     "number": "GLVI-EN033",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Psychic",
     "Effect"
@@ -11581,9 +11587,6 @@
    ]
   },
   {
-   "archetypes": [
-    "duel-dragon"
-   ],
    "atk": 4000,
    "attribute": "dark",
    "def": 4000,
@@ -11715,11 +11718,23 @@
    "passcode": 8775395,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:8775395:MAMS-EN107:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731711
+      ]
+     },
      "number": "MAMS-EN107",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil Eyes Unleashed"
+     }
     },
     {
      "editions": [
@@ -12236,9 +12251,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:8802510:MGED-EN077:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -13975,25 +13987,61 @@
    "passcode": 8915275,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:8915275:MAMS-EN041:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731608
+      ]
+     },
      "number": "MAMS-EN041",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil Box (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:8915275:MAMS-EN041:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731609
+      ]
+     },
      "number": "MAMS-EN041",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil Box (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:8915275:MAMS-EN041:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731607
+      ]
+     },
      "number": "MAMS-EN041",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Evil Box"
+     }
     }
    ],
    "tcgDate": "2026-11-12",

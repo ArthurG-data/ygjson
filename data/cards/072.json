@@ -3797,12 +3797,12 @@
   },
   {
    "aliases": [
-    "Sennet Per Akh"
+    "Zenet Per Akh"
    ],
    "archetypes": [
     "zenet"
    ],
-   "betaName": "Sennet Per Akh",
+   "betaName": "Zenet Per Akh",
    "frame": "spell",
    "hasEffect": true,
    "id": "72278590",
@@ -3821,13 +3821,29 @@
    "isTuner": false,
    "kind": "spell",
    "monsterType": "Normal",
-   "name": "Zenet Per Akh",
+   "name": "Zenet Per Aarkh",
    "names": {
-    "en": "Zenet Per Akh"
+    "en": "Zenet Per Aarkh"
    },
    "ocgDate": "2026-09-05",
    "passcode": 72278590,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:72278590:GLVI-EN007:starlight_rare",
+     "number": "GLVI-EN007",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:72278590:GLVI-EN007:ultra_rare",
+     "number": "GLVI-EN007",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "archetypes": [
@@ -3903,6 +3919,13 @@
       "match": "number+rarity",
       "name": "Golden Castle of Stromberg"
      }
+    },
+    {
+     "id": "glorious-victors:72283691:GLVI-EN060:rare",
+     "number": "GLVI-EN060",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
     }
    ],
    "tcgDate": "2018-06-28"
@@ -11705,11 +11728,23 @@
    "passcode": 72705654,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:72705654:MAMS-EN079:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731683
+      ]
+     },
      "number": "MAMS-EN079",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Tachyon Cloudragon"
+     }
     },
     {
      "id": "maze-of-the-master:72705654:MZTM-EN012:rare",
@@ -14927,25 +14962,61 @@
    "passcode": 72921536,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:72921536:MAMS-EN040:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731605
+      ]
+     },
      "number": "MAMS-EN040",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Animimicat (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:72921536:MAMS-EN040:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731606
+      ]
+     },
      "number": "MAMS-EN040",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Animimicat (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:72921536:MAMS-EN040:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731604
+      ]
+     },
      "number": "MAMS-EN040",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Animimicat"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -15764,6 +15835,7 @@
    "archetypes": [
     "raise-moon"
    ],
+   "betaName": "\"Raise Moon\" the City that Never Sleeps",
    "frame": "spell",
    "hasEffect": true,
    "id": "72978038",
@@ -15782,13 +15854,22 @@
    "isTuner": false,
    "kind": "spell",
    "monsterType": "Continuous",
-   "name": "\"Raise Moon\" the City that Never Sleeps",
+   "name": "Raise Moon - The City that Never Sleeps",
    "names": {
-    "en": "\"Raise Moon\" the City that Never Sleeps"
+    "en": "Raise Moon - The City that Never Sleeps"
    },
    "ocgDate": "2026-09-05",
    "passcode": 72978038,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:72978038:GLVI-EN025:super_rare",
+     "number": "GLVI-EN025",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "archetypes": [

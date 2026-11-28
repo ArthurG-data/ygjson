@@ -8026,9 +8026,6 @@
    "passcode": 37458564,
    "prints": [
     {
-     "editions": [
-      "first"
-     ],
      "id": "magnificent-monsters:37458564:MAMO-EN018:grand_master_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -8723,25 +8720,61 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:37495766:MAMS-EN030:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731575
+      ]
+     },
      "number": "MAMS-EN030",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue-ACE Turbulence (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:37495766:MAMS-EN030:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731576
+      ]
+     },
      "number": "MAMS-EN030",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue-ACE Turbulence (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:37495766:MAMS-EN030:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731574
+      ]
+     },
      "number": "MAMS-EN030",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Rescue-ACE Turbulence"
+     }
     },
     {
      "id": "maze-of-millennia:37495766:MZMI-EN077:super_rare",
@@ -15850,9 +15883,6 @@
    "tcgDate": "2018-05-24"
   },
   {
-   "archetypes": [
-    "duel-dragon"
-   ],
    "attribute": "light",
    "def": 3000,
    "frame": "synchro",
@@ -16095,7 +16125,7 @@
     }
    ],
    "rank": 4,
-   "tcgDate": "2011-08-06",
+   "tcgDate": "2011-08-12",
    "typeline": [
     "Fiend",
     "Xyz",

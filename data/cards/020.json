@@ -4894,11 +4894,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:20343502:MAMS-EN096:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731700
+      ]
+     },
      "number": "MAMS-EN096",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Madolche Teacher Glassouffle"
+     }
     }
    ],
    "rank": 4,
@@ -7788,11 +7800,15 @@
    ]
   },
   {
+   "aliases": [
+    "Rikka Empress Strenna"
+   ],
    "archetypes": [
     "rikka"
    ],
    "atk": 2000,
    "attribute": "water",
+   "betaName": "Rikka Empress Strenna",
    "def": 2000,
    "frame": "xyz",
    "hasEffect": true,
@@ -7812,9 +7828,9 @@
    "isTuner": false,
    "kind": "monster",
    "monsterType": "Plant",
-   "name": "Rikka Empress Strenna",
+   "name": "Rikka Sacred Queen Strenna",
    "names": {
-    "en": "Rikka Empress Strenna"
+    "en": "Rikka Sacred Queen Strenna"
    },
    "ocgDate": "2026-10-31",
    "passcode": 20477370,

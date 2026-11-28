@@ -872,6 +872,44 @@
   },
   {
    "archetypes": [
+    "marincess"
+   ],
+   "atk": 600,
+   "attribute": "water",
+   "def": 2400,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "67050049",
+   "identifiers": {
+    "konamiId": 24016,
+    "ygoprodeckId": 67050049
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/67050049.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/67050049.jpg",
+     "id": 67050049,
+     "small": "https://images.ygoprodeck.com/images/cards_small/67050049.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 5,
+   "monsterType": "Cyberse",
+   "name": "Marincess Ulpis",
+   "names": {
+    "en": "Marincess Ulpis"
+   },
+   "ocgDate": "2026-11-21",
+   "passcode": 67050049,
+   "prints": [],
+   "typeline": [
+    "Cyberse",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
     "kozmo"
    ],
    "atk": 1800,
@@ -4793,6 +4831,9 @@
    ]
   },
   {
+   "archetypes": [
+    "zombie-counterpart"
+   ],
    "atk": 0,
    "attribute": "dark",
    "def": 0,
@@ -11051,6 +11092,13 @@
      }
     },
     {
+     "id": "glorious-victors:67723438:GLVI-EN059:rare",
+     "number": "GLVI-EN059",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "high-speed-riders:67723438:HSRD-EN054:ultra_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -12367,11 +12415,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:67768675:MAMS-EN083:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731687
+      ]
+     },
      "number": "MAMS-EN083",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Kaibaman the Legend"
+     }
     }
    ],
    "tcgDate": "2025-07-03",
@@ -12903,25 +12963,61 @@
    "passcode": 67803035,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:67803035:MAMS-EN058:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731659
+      ]
+     },
      "number": "MAMS-EN058",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reincarnation of the Unchained (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:67803035:MAMS-EN058:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731660
+      ]
+     },
      "number": "MAMS-EN058",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reincarnation of the Unchained (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:67803035:MAMS-EN058:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731658
+      ]
+     },
      "number": "MAMS-EN058",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Reincarnation of the Unchained"
+     }
     }
    ],
    "tcgDate": "2026-11-12"
@@ -13642,23 +13738,88 @@
    "passcode": 67886895,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:67886895:MAMS-EN002:grand_master_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731476
+      ]
+     },
      "number": "MAMS-EN002",
      "rarity": "grand_master_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep-Eyes White Dragon, the Blue Abyss (GMR)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:67886895:MAMS-EN002:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731475
+      ]
+     },
      "number": "MAMS-EN002",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep-Eyes White Dragon, the Blue Abyss (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:67886895:MAMS-EN002:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731473
+      ]
+     },
      "number": "MAMS-EN002",
      "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep-Eyes White Dragon, the Blue Abyss"
+     }
+    },
+    {
+     "editions": [
+      "first"
+     ],
+     "id": "magnificent-maestros:67886895:MAMS-EN002:ultra_rare:extended-art",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731474
+      ]
+     },
+     "number": "MAMS-EN002",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "magnificent-maestros",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Deep-Eyes White Dragon, the Blue Abyss (Extended Art)"
+     },
+     "variant": "extended-art"
+    },
+    {
+     "id": "magnificent-maestros:67886895:MAMS-EN002:unknown",
+     "number": "MAMS-EN002",
+     "rarity": "unknown",
+     "rawRarity": "New",
      "region": "EN",
      "set": "magnificent-maestros"
     }

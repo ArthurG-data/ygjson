@@ -1024,25 +1024,61 @@
    "passcode": 6071005,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:6071005:MAMS-EN047:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731626
+      ]
+     },
      "number": "MAMS-EN047",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Marka (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:6071005:MAMS-EN047:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731627
+      ]
+     },
      "number": "MAMS-EN047",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Marka (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:6071005:MAMS-EN047:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731625
+      ]
+     },
      "number": "MAMS-EN047",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Marka"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -7032,6 +7068,20 @@
    "passcode": 6387204,
    "prints": [
     {
+     "id": "glorious-victors:6387204:GLVI-EN028:rare",
+     "number": "GLVI-EN028",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:6387204:GLVI-EN028:super_rare",
+     "number": "GLVI-EN028",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "premium-gold:6387204:PGLD-EN018:gold_secret_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -9525,11 +9575,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:6560411:MAMS-EN094:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731698
+      ]
+     },
      "number": "MAMS-EN094",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Bramble Rose Dragon"
+     }
     }
    ],
    "tcgDate": "2025-09-25",
@@ -15501,25 +15563,61 @@
    "passcode": 6958567,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:6958567:MAMS-EN050:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731635
+      ]
+     },
      "number": "MAMS-EN050",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Celebration (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:6958567:MAMS-EN050:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731636
+      ]
+     },
      "number": "MAMS-EN050",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Celebration (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:6958567:MAMS-EN050:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731634
+      ]
+     },
      "number": "MAMS-EN050",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Celebration"
+     }
     }
    ],
    "tcgDate": "2026-11-12"

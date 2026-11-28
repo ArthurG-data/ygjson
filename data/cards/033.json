@@ -7940,25 +7940,61 @@
    "passcode": 33475154,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:33475154:MAMS-EN048:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731629
+      ]
+     },
      "number": "MAMS-EN048",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Madame Rilliona (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:33475154:MAMS-EN048:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731630
+      ]
+     },
      "number": "MAMS-EN048",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Madame Rilliona (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:33475154:MAMS-EN048:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731628
+      ]
+     },
      "number": "MAMS-EN048",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Madame Rilliona"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -9769,11 +9805,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:33599853:UP02-EN006:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731114
+      ]
+     },
      "number": "UP02-EN006",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Light and Darkness Ritual"
+     }
     }
    ],
    "tcgDate": "2026-07-02"
@@ -10898,7 +10946,6 @@
   },
   {
    "archetypes": [
-    "duel-dragon",
     "rose-dragon"
    ],
    "atk": 2400,
@@ -11231,12 +11278,12 @@
   },
   {
    "aliases": [
-    "Xenovader△ Territory - Valvols"
+    "Trirealm Rift Territory - Valvols"
    ],
    "archetypes": [
     "trirealm-rift"
    ],
-   "betaName": "Xenovader△ Territory - Valvols",
+   "betaName": "Trirealm Rift Territory - Valvols",
    "frame": "spell",
    "hasEffect": true,
    "id": "33700664",
@@ -11255,13 +11302,29 @@
    "isTuner": false,
    "kind": "spell",
    "monsterType": "Field",
-   "name": "Trirealm Rift Territory - Valvols",
+   "name": "Trirealm Rift Vilvortex",
    "names": {
-    "en": "Trirealm Rift Territory - Valvols"
+    "en": "Trirealm Rift Vilvortex"
    },
    "ocgDate": "2026-09-05",
    "passcode": 33700664,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:33700664:GLVI-EN039:collectors_rare",
+     "number": "GLVI-EN039",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:33700664:GLVI-EN039:super_rare",
+     "number": "GLVI-EN039",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "archetypes": [
@@ -12034,7 +12097,7 @@
     "pt": "Dragão Samsara",
     "zh-CN": "轮回龙 僧娑罗"
    },
-   "ocgDate": "2020-09-21",
+   "ocgDate": "2020-09-19",
    "passcode": 33750025,
    "prints": [
     {
@@ -13338,14 +13401,14 @@
   },
   {
    "aliases": [
-    "Mad Tempest Xenovader△ Ploutonion"
+    "Mad Tempest Trirealm Rift Ploutonion"
    ],
    "archetypes": [
     "trirealm-rift"
    ],
    "atk": 2100,
    "attribute": "wind",
-   "betaName": "Mad Tempest Xenovader△ Ploutonion",
+   "betaName": "Mad Tempest Trirealm Rift Ploutonion",
    "def": 2800,
    "frame": "effect",
    "hasEffect": true,
@@ -13366,13 +13429,29 @@
    "kind": "monster",
    "level": 7,
    "monsterType": "Psychic",
-   "name": "Mad Tempest Trirealm Rift Ploutonion",
+   "name": "Trirealm Rift Savage Storms",
    "names": {
-    "en": "Mad Tempest Trirealm Rift Ploutonion"
+    "en": "Trirealm Rift Savage Storms"
    },
    "ocgDate": "2026-09-05",
    "passcode": 33822112,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:33822112:GLVI-EN037:collectors_rare",
+     "number": "GLVI-EN037",
+     "rarity": "collectors_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:33822112:GLVI-EN037:ultra_rare",
+     "number": "GLVI-EN037",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Psychic",
     "Effect"

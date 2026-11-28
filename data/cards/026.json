@@ -751,9 +751,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:26077387:MGED-EN017:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1523,11 +1520,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:26084285:UP02-EN023:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731131
+      ]
+     },
      "number": "UP02-EN023",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gravekeeper's Watcher"
+     }
     }
    ],
    "tcgDate": "2003-07-18",
@@ -4225,7 +4234,6 @@
   },
   {
    "archetypes": [
-    "duel-dragon",
     "stardust"
    ],
    "atk": 4000,
@@ -5797,25 +5805,61 @@
    "passcode": 26364381,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:26364381:MAMS-EN019:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731542
+      ]
+     },
      "number": "MAMS-EN019",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Demiurge Ema (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:26364381:MAMS-EN019:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731543
+      ]
+     },
      "number": "MAMS-EN019",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Demiurge Ema (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:26364381:MAMS-EN019:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731541
+      ]
+     },
      "number": "MAMS-EN019",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Demiurge Ema"
+     }
     }
    ],
    "tcgDate": "2026-11-12",

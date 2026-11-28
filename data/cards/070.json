@@ -11593,25 +11593,61 @@
    "passcode": 70686400,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:70686400:MAMS-EN046:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731623
+      ]
+     },
      "number": "MAMS-EN046",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Terracottan (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:70686400:MAMS-EN046:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731624
+      ]
+     },
      "number": "MAMS-EN046",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Terracottan (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:70686400:MAMS-EN046:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731622
+      ]
+     },
      "number": "MAMS-EN046",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Witchcrafter Terracottan"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -11952,9 +11988,13 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
+     "id": "glorious-victors:70711847:GLVI-EN053:rare",
+     "number": "GLVI-EN053",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
      "id": "maximum-gold-el-dorado:70711847:MGED-EN019:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14478,11 +14518,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:70828912:UP02-EN011:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731119
+      ]
+     },
      "number": "UP02-EN011",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Premature Burial"
+     }
     }
    ],
    "tcgDate": "2002-10-20"

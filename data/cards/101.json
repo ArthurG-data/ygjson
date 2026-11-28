@@ -212,7 +212,23 @@
     "en": "The Winged Dragon of Ra, Sun God of Darkness"
    },
    "ocgDate": "2026-10-31",
-   "prints": [],
+   "prints": [
+    {
+     "id": "immortal-phoenix:101403030:IMPH-EN030:starlight_rare",
+     "number": "IMPH-EN030",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    },
+    {
+     "id": "immortal-phoenix:101403030:IMPH-EN030:ultra_rare",
+     "number": "IMPH-EN030",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    }
+   ],
+   "tcgDate": "2027-01-28",
    "typeline": [
     "Divine-Beast",
     "Fusion",
@@ -255,6 +271,402 @@
     "Xyz",
     "Effect"
    ]
+  },
+  {
+   "atk": 2000,
+   "attribute": "dark",
+   "def": 3000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "101403081",
+   "identifiers": {
+    "ygoprodeckId": 101403081
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101403081.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101403081.jpg",
+     "id": 101403081,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101403081.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 7,
+   "monsterType": "Dragon",
+   "name": "Nahar-Dex, Driver of the Seven Swords",
+   "names": {
+    "en": "Nahar-Dex, Driver of the Seven Swords"
+   },
+   "prints": [],
+   "tcgDate": "2027-01-28",
+   "typeline": [
+    "Dragon",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "blue-eyes"
+   ],
+   "atk": 3000,
+   "attribute": "light",
+   "def": 2500,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "101404001",
+   "identifiers": {
+    "ygoprodeckId": 101404001
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404001.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404001.jpg",
+     "id": 101404001,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404001.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Dragon",
+   "name": "Blue-Eyes Alternative White Dragon, the Guided Phantom Beast",
+   "names": {
+    "en": "Blue-Eyes Alternative White Dragon, the Guided Phantom Beast"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "endless-darkness"
+   ],
+   "atk": 2500,
+   "attribute": "light",
+   "def": 1000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "101404002",
+   "identifiers": {
+    "ygoprodeckId": 101404002
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404002.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404002.jpg",
+     "id": 101404002,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404002.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 6,
+   "monsterType": "Dragon",
+   "name": "Krystal Cloud Dragon",
+   "names": {
+    "en": "Krystal Cloud Dragon"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "endless-darkness"
+   ],
+   "atk": 1800,
+   "attribute": "light",
+   "def": 1000,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "101404003",
+   "identifiers": {
+    "ygoprodeckId": 101404003
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404003.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404003.jpg",
+     "id": 101404003,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404003.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 4,
+   "monsterType": "Dragon",
+   "name": "Assault Slash Wyvern",
+   "names": {
+    "en": "Assault Slash Wyvern"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "endless-darkness"
+   ],
+   "atk": 600,
+   "attribute": "dark",
+   "def": 1500,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "101404004",
+   "identifiers": {
+    "ygoprodeckId": 101404004
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404004.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404004.jpg",
+     "id": 101404004,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404004.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 3,
+   "monsterType": "Spellcaster",
+   "name": "Saggi the Dark Sacrifice Clown",
+   "names": {
+    "en": "Saggi the Dark Sacrifice Clown"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": [],
+   "typeline": [
+    "Spellcaster",
+    "Effect"
+   ]
+  },
+  {
+   "atk": 4000,
+   "attribute": "dark",
+   "def": 1400,
+   "frame": "effect",
+   "hasEffect": true,
+   "id": "101404022",
+   "identifiers": {
+    "ygoprodeckId": 101404022
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404022.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404022.jpg",
+     "id": 101404022,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404022.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 10,
+   "monsterType": "Dragon",
+   "name": "White-Horned Buster Dragon",
+   "names": {
+    "en": "White-Horned Buster Dragon"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "blue-eyes"
+   ],
+   "atk": 4000,
+   "attribute": "dark",
+   "def": 0,
+   "frame": "ritual",
+   "hasEffect": true,
+   "id": "101404027",
+   "identifiers": {
+    "ygoprodeckId": 101404027
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404027.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404027.jpg",
+     "id": 101404027,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404027.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 8,
+   "monsterType": "Dragon",
+   "name": "Blue-Eyes Chaos MAXIMUM Dragon",
+   "names": {
+    "en": "Blue-Eyes Chaos MAXIMUM Dragon"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Ritual",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "blue-eyes"
+   ],
+   "atk": 4500,
+   "attribute": "light",
+   "def": 3800,
+   "frame": "fusion",
+   "hasEffect": true,
+   "id": "101404029",
+   "identifiers": {
+    "ygoprodeckId": 101404029
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404029.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404029.jpg",
+     "id": 101404029,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404029.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "monster",
+   "level": 12,
+   "monsterType": "Dragon",
+   "name": "Neo Blue-Eyes Hyper Ultimate Dragon",
+   "names": {
+    "en": "Neo Blue-Eyes Hyper Ultimate Dragon"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": [],
+   "typeline": [
+    "Dragon",
+    "Fusion",
+    "Effect"
+   ]
+  },
+  {
+   "archetypes": [
+    "endless-darkness"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "101404049",
+   "identifiers": {
+    "ygoprodeckId": 101404049
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404049.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404049.jpg",
+     "id": 101404049,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404049.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Field",
+   "name": "Endless Darkness",
+   "names": {
+    "en": "Endless Darkness"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "chaos"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "101404050",
+   "identifiers": {
+    "ygoprodeckId": 101404050
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404050.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404050.jpg",
+     "id": 101404050,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404050.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Normal",
+   "name": "Neo Chaos Form",
+   "names": {
+    "en": "Neo Chaos Form"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "endless-darkness"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "101404051",
+   "identifiers": {
+    "ygoprodeckId": 101404051
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404051.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404051.jpg",
+     "id": 101404051,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404051.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Normal",
+   "name": "Dimensional Ascension",
+   "names": {
+    "en": "Dimensional Ascension"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": []
+  },
+  {
+   "archetypes": [
+    "endless-darkness"
+   ],
+   "frame": "trap",
+   "hasEffect": true,
+   "id": "101404071",
+   "identifiers": {
+    "ygoprodeckId": 101404071
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/101404071.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/101404071.jpg",
+     "id": 101404071,
+     "small": "https://images.ygoprodeck.com/images/cards_small/101404071.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "trap",
+   "monsterType": "Normal",
+   "name": "Pandemic Infection",
+   "names": {
+    "en": "Pandemic Infection"
+   },
+   "ocgDate": "2027-01-23",
+   "prints": []
   }
  ]
 }

@@ -900,9 +900,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:74063034:MGED-EN044:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -3174,9 +3171,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "cybernetic-revolution:74157028:CRV-EN035:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4259,11 +4253,15 @@
    ]
   },
   {
+   "aliases": [
+    "Raise Moon Blade Shayna"
+   ],
    "archetypes": [
     "raise-moon"
    ],
    "atk": 2800,
    "attribute": "wind",
+   "betaName": "Raise Moon Blade Shayna",
    "def": 1400,
    "frame": "effect",
    "hasEffect": true,
@@ -4284,13 +4282,22 @@
    "kind": "monster",
    "level": 7,
    "monsterType": "Warrior",
-   "name": "Raise Moon Blade Shayna",
+   "name": "Sharna, the Blade of Raise Moon",
    "names": {
-    "en": "Raise Moon Blade Shayna"
+    "en": "Sharna, the Blade of Raise Moon"
    },
    "ocgDate": "2026-09-05",
    "passcode": 74212164,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:74212164:GLVI-EN019:super_rare",
+     "number": "GLVI-EN019",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Warrior",
     "Effect"
@@ -11837,6 +11844,26 @@
      "rarity": "ultra_rare",
      "region": "EN",
      "set": "swedish-shonen-jump-2005-issue-12-promotional-card"
+    },
+    {
+     "editions": [
+      "limited"
+     ],
+     "id": "ultimate-tournament-pack-2:74677427:UP02-EN001:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731109
+      ]
+     },
+     "number": "UP02-EN001",
+     "rarity": "ultimate_rare",
+     "region": "EN",
+     "set": "ultimate-tournament-pack-2",
+     "source": "tcgplayer",
+     "tcgplayer": {
+      "match": "minted",
+      "name": "Red-Eyes Black Dragon"
+     }
     },
     {
      "id": "world-championship-jpp-cards:74677427:2019-JPP01:normal_parallel_rare",

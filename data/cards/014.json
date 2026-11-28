@@ -1332,9 +1332,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:14087893:MGED-EN039:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -1796,11 +1793,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:14087893:UP02-EN039:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731147
+      ]
+     },
      "number": "UP02-EN039",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Book of Moon"
+     }
     }
    ],
    "tcgDate": "2003-07-18"
@@ -5391,6 +5400,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "starter-deck-syrus-truesdale:14315573:YSDS-EN037:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -6515,25 +6527,61 @@
    "passcode": 14425515,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:14425515:MAMS-EN025:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731560
+      ]
+     },
      "number": "MAMS-EN025",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infernity Doom Slinger (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:14425515:MAMS-EN025:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731561
+      ]
+     },
      "number": "MAMS-EN025",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infernity Doom Slinger (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:14425515:MAMS-EN025:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731559
+      ]
+     },
      "number": "MAMS-EN025",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infernity Doom Slinger"
+     }
     }
    ],
    "tcgDate": "2026-11-12",
@@ -10114,6 +10162,9 @@
   {
    "aliases": [
     "Ash Blossom"
+   ],
+   "archetypes": [
+    "yo-kai-girl"
    ],
    "atk": 0,
    "attribute": "fire",

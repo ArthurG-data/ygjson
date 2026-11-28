@@ -6700,6 +6700,36 @@
    ]
   },
   {
+   "archetypes": [
+    "counter"
+   ],
+   "frame": "spell",
+   "hasEffect": true,
+   "id": "88421252",
+   "identifiers": {
+    "konamiId": 24035,
+    "ygoprodeckId": 88421252
+   },
+   "images": [
+    {
+     "art": "https://images.ygoprodeck.com/images/cards_cropped/88421252.jpg",
+     "card": "https://images.ygoprodeck.com/images/cards/88421252.jpg",
+     "id": 88421252,
+     "small": "https://images.ygoprodeck.com/images/cards_small/88421252.jpg"
+    }
+   ],
+   "isTuner": false,
+   "kind": "spell",
+   "monsterType": "Quick-Play",
+   "name": "Counter Spell \"Negate Attack\"",
+   "names": {
+    "en": "Counter Spell \"Negate Attack\""
+   },
+   "ocgDate": "2026-10-21",
+   "passcode": 88421252,
+   "prints": []
+  },
+  {
    "atk": 800,
    "attribute": "fire",
    "def": 600,
@@ -12872,25 +12902,61 @@
    "passcode": 88931417,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:88931417:MAMS-EN024:secret_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731557
+      ]
+     },
      "number": "MAMS-EN024",
      "rarity": "secret_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gatling Ogre (Secret Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:88931417:MAMS-EN024:starlight_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731558
+      ]
+     },
      "number": "MAMS-EN024",
      "rarity": "starlight_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gatling Ogre (Starlight Rare)"
+     }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:88931417:MAMS-EN024:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731556
+      ]
+     },
      "number": "MAMS-EN024",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Gatling Ogre"
+     }
     }
    ],
    "tcgDate": "2026-11-12",

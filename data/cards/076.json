@@ -1826,9 +1826,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "the-dark-illusion:76136345:TDIL-EN092:common",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4931,9 +4928,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:76375976:MGED-EN047:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10060,6 +10054,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "thank-you-pack:76774528:TYP1-EN014:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -11396,11 +11393,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:76830505:MAMS-EN074:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731678
+      ]
+     },
      "number": "MAMS-EN074",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Infinitrack Brutal Dozer"
+     }
     }
    ],
    "tcgDate": "2019-10-24",

@@ -2618,9 +2618,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:58120309:MGED-EN053:premium_gold_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -4416,11 +4413,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:58203736:MAMS-EN105:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731709
+      ]
+     },
      "number": "MAMS-EN105",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Sea Stealth II"
+     }
     }
    ],
    "tcgDate": "2022-06-16"
@@ -9367,6 +9376,9 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "gladiator-s-assault:58554959:GLAS-EN003:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -10454,9 +10466,6 @@
    "passcode": 58601383,
    "prints": [
     {
-     "editions": [
-      "first"
-     ],
      "id": "starstrike-blast:58601383:STBL-EN039:ultimate_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -15391,11 +15400,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:58916810:UP02-EN003:ultimate_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731111
+      ]
+     },
      "number": "UP02-EN003",
      "rarity": "ultimate_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Crackle Blitzclique"
+     }
     }
    ],
    "tcgDate": "2026-07-02",
@@ -15816,7 +15837,7 @@
      "set": "yu-gi-oh-power-of-chaos-yugi-the-destiny-promotional-cards"
     }
    ],
-   "tcgDate": "2003-11-18"
+   "tcgDate": "2008-01-08"
   },
   {
    "archetypes": [

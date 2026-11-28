@@ -408,14 +408,14 @@
   },
   {
    "aliases": [
-    "Sky Thunder Xenovader△ Yomi"
+    "Sky Thunder Trirealm Rift Yomi"
    ],
    "archetypes": [
     "trirealm-rift"
    ],
    "atk": 1000,
    "attribute": "light",
-   "betaName": "Sky Thunder Xenovader△ Yomi",
+   "betaName": "Sky Thunder Trirealm Rift Yomi",
    "def": 2500,
    "frame": "effect",
    "hasEffect": true,
@@ -436,13 +436,22 @@
    "kind": "monster",
    "level": 5,
    "monsterType": "Psychic",
-   "name": "Sky Thunder Trirealm Rift Yomi",
+   "name": "Trirealm Rift Havocs",
    "names": {
-    "en": "Sky Thunder Trirealm Rift Yomi"
+    "en": "Trirealm Rift Havocs"
    },
    "ocgDate": "2026-09-05",
    "passcode": 61033809,
-   "prints": [],
+   "prints": [
+    {
+     "id": "glorious-victors:61033809:GLVI-EN035:super_rare",
+     "number": "GLVI-EN035",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03",
    "typeline": [
     "Psychic",
     "Effect"
@@ -2718,11 +2727,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:61190918:MAMS-EN070:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731674
+      ]
+     },
      "number": "MAMS-EN070",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Toon Buster Blader"
+     }
     },
     {
      "id": "speed-duel-starter-decks-match-of-the-millennium:61190918:SS04-ENB07:common",
@@ -10080,11 +10101,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:61705417:UP02-EN014:super_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731122
+      ]
+     },
      "number": "UP02-EN014",
      "rarity": "super_rare",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Graverobber"
+     }
     }
    ],
    "tcgDate": "2002-10-20"

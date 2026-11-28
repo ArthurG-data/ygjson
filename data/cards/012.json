@@ -5066,11 +5066,23 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "ultimate-tournament-pack-2:12275533:UP02-EN029:common",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731137
+      ]
+     },
      "number": "UP02-EN029",
      "rarity": "common",
      "region": "EN",
-     "set": "ultimate-tournament-pack-2"
+     "set": "ultimate-tournament-pack-2",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Trifortressops"
+     }
     }
    ],
    "tcgDate": "2013-05-17",
@@ -10048,7 +10060,23 @@
    },
    "ocgDate": "2026-09-05",
    "passcode": 12555008,
-   "prints": []
+   "prints": [
+    {
+     "id": "glorious-victors:12555008:GLVI-EN010:rare",
+     "number": "GLVI-EN010",
+     "rarity": "rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:12555008:GLVI-EN010:super_rare",
+     "number": "GLVI-EN010",
+     "rarity": "super_rare",
+     "region": "EN",
+     "set": "glorious-victors"
+    }
+   ],
+   "tcgDate": "2026-12-03"
   },
   {
    "aliases": [
@@ -10849,6 +10877,9 @@
      }
     },
     {
+     "editions": [
+      "limited"
+     ],
      "id": "thank-you-pack:12580477:TYP1-EN017:super_rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -14392,11 +14423,23 @@
    "passcode": 12877076,
    "prints": [
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:12877076:MAMS-EN106:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731710
+      ]
+     },
      "number": "MAMS-EN106",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Awakening of the Crystal Ultimates"
+     }
     },
     {
      "id": "structure-deck-legend-of-the-crystal-beasts:12877076:SDCB-EN016:common",

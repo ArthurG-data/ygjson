@@ -4490,9 +4490,6 @@
      }
     },
     {
-     "editions": [
-      "first"
-     ],
      "id": "maximum-gold-el-dorado:60303245:MGED-EN144:rare",
      "identifiers": {
       "tcgplayerProductIds": [
@@ -7824,11 +7821,23 @@
      }
     },
     {
+     "editions": [
+      "first"
+     ],
      "id": "magnificent-maestros:60470713:MAMS-EN103:ultra_rare",
+     "identifiers": {
+      "tcgplayerProductIds": [
+       731707
+      ]
+     },
      "number": "MAMS-EN103",
      "rarity": "ultra_rare",
      "region": "EN",
-     "set": "magnificent-maestros"
+     "set": "magnificent-maestros",
+     "tcgplayer": {
+      "match": "number+rarity",
+      "name": "Madolche Ticket"
+     }
     },
     {
      "id": "ots-tournament-pack-15-por:60470713:OP15-PT036:common",
@@ -13174,6 +13183,13 @@
      "rarity": "starlight_rare",
      "region": "EN",
      "set": "glorious-victors"
+    },
+    {
+     "id": "glorious-victors:60811211:GLVI-EN038:ultra_rare",
+     "number": "GLVI-EN038",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "glorious-victors"
     }
    ],
    "tcgDate": "2026-12-03",
@@ -15673,9 +15689,6 @@
    ]
   },
   {
-   "archetypes": [
-    "duel-dragon"
-   ],
    "atk": 2800,
    "attribute": "dark",
    "def": 1600,
