@@ -18,7 +18,7 @@
           "passcode": {"type": "integer", "minimum": 0, "description": "The 8-digit number printed on the card. Absent for cards without one: YGOPRODeck's own ids for those are 100,000,000 and up."},
           "konamiId": {"type": "integer", "description": "The card's id on Konami's card database."},
           "name": {"type": "string", "minLength": 1, "description": "The English name; equals names.en."},
-          "names": {"type": "object", "required": ["en"], "propertyNames": {"pattern": "^[a-z]{2}(-[A-Za-z]+)?$"},
+          "names": {"type": "object", "required": ["en"], "propertyNames": {"enum": ["en", "ja", "fr", "de", "es", "it", "ko", "pt", "zh-CN", "zh-TW"]},
                     "additionalProperties": {"type": "string", "minLength": 1}, "description": "The card's name by language code."},
           "kind": {"enum": ["monster", "spell", "trap", "token", "skill"]},
           "frame": {"enum": ["normal", "effect", "ritual", "fusion", "synchro", "xyz", "link", "normal_pendulum", "effect_pendulum",
@@ -29,7 +29,7 @@
           "level": {"type": "integer", "minimum": 0, "description": "Monsters that have a level. Xyz monsters have a rank instead."},
           "rank": {"type": "integer", "minimum": 0, "description": "Xyz monsters (frames xyz and xyz_pendulum). YGOPRODeck reports it as level."},
           "linkRating": {"type": "integer", "minimum": 1},
-          "linkArrows": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}, "description": "YGOPRODeck's linkmarkers (Top, Bottom-Left...)."},
+          "linkArrows": {"type": "array", "uniqueItems": true, "items": {"enum": ["Top", "Top-Left", "Top-Right", "Left", "Right", "Bottom", "Bottom-Left", "Bottom-Right"]}, "description": "YGOPRODeck's linkmarkers (Top, Bottom-Left...)."},
           "scale": {"type": "integer", "minimum": 0, "description": "Pendulum scale."},
           "atk": {"type": "integer", "minimum": 0, "description": "Absent when the card prints ?."},
           "def": {"type": "integer", "minimum": 0, "description": "Absent when the card prints ? and on Link monsters."},
@@ -70,6 +70,8 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["id", "set", "rarity"],
+      "if": {"properties": {"rarity": {"const": "unknown"}}},
+      "then": {"required": ["rawRarity"], "description": "A rarity that mapped to unknown keeps the source's string."},
       "properties": {
         "id": {"type": "string", "pattern": "^[a-z0-9-]+:[0-9]+:[A-Za-z0-9-]*:[a-z0-9_]+(:[a-z0-9-]+)?$",
                "description": "<set id>:<card id>:<set number or empty>:<rarity code>[:<variant>]. The same card in the same set at a different rarity is another print, and so is a version with its own TCGplayer product."},
@@ -107,7 +109,7 @@
           "additionalProperties": false,
           "required": ["name", "match"],
           "description": "How the TCGplayer product was tied to this print: its name there, and the rule that matched it.",
-          "properties": {"name": {"type": "string"}, "match": {"type": "string", "minLength": 1}}
+          "properties": {"name": {"type": "string"}, "match": {"enum": ["number+rarity", "number+rarity-from-tcgplayer", "number", "number-other-set", "minted"]}}
         }
       }
     }

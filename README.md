@@ -471,8 +471,12 @@ no products, and while a group the data holds is missing from the listing or has
 group's products, prints and set as they are.
 
 `validate.py` checks every file against its schema, then every id and reference: print ids follow the rule, a print's
-set exists, no parent loops, no TCGplayer product or group sits on two prints or sets, archetype slugs exist, and a
-legality event names a card and a format that exist. `--online` also asks TCGCSV whether every TCGplayer product id on
+set exists, no parent loops, no TCGplayer product or group sits on two prints or sets, archetype slugs exist, a
+legality event names a card and a format that exist, a set's era holds its release date (or is its parent's when it has
+none), an archetype's `name` is its `names.en`, and no name has a leading, trailing or doubled space. The schemas fix
+the values of `tcgplayer.match`, `linkArrows`, the language keys of `names` and the sealed categories, the shape of
+every id that points at a set, era, print or sealed product, and require `rawRarity` on a print whose rarity is
+`unknown`; `schema/formats.schema.json` covers `legality/formats.json`. `--online` also asks TCGCSV whether every TCGplayer product id on
 a print or a sealed product still exists in category 2. It downloads the catalogue into a temporary directory, about
 660 requests.
 

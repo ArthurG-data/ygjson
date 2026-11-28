@@ -329,7 +329,8 @@ def product_body(r: dict) -> dict:
     if r.get("ygojsonId"):
         ids["ygojsonId"] = r["ygojsonId"]
         sources.append(f"ygojson:{r['ygojsonId']}")
-    body = {"id": r["id"], "set": r["set"], "category": r["category"], "name": r["name"], "identifiers": ids,
+    body = {"id": r["id"], "set": r["set"], "category": r["category"], "name": ygjson.clean_name(r["name"]),
+            "identifiers": ids,
             "contentsStatus": r["status"], "contents": r["contents"], "sources": sources}
     if r["releasedOn"]:
         body["releaseDate"] = r["releasedOn"]
