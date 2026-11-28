@@ -9,8 +9,8 @@ the JSON holds:
                    gives the same bytes.
   ygjson.sqlite    one table per kind of record (see SCHEMA): the fields most queries filter on are columns (COLUMNS),
                    and `data` holds the record's other fields as JSON, for SQLite's json_extract. A card's names are
-                   the card_names table, an oracle's cards the oracles table, an archetype's members archetype_members,
-                   and a printing's tcgplayerPrice
+                   the card_names and card_texts tables, an oracle's cards the oracles table, an archetype's
+                   members archetype_members, and a printing's tcgplayerPrice
                    the tcgplayer_product_id and tcgplayer_subtype columns. Shipped gzipped as ygjson.sqlite.gz.
   SHA256SUMS       the SHA-256 of every file the release attaches, in the format `sha256sum -c SHA256SUMS` checks.
 """
@@ -42,6 +42,8 @@ CREATE TABLE cards (id TEXT PRIMARY KEY, uuid TEXT, oracle_id TEXT,
 CREATE TABLE oracles (id TEXT NOT NULL, card TEXT NOT NULL REFERENCES cards(id), PRIMARY KEY (id, card)) WITHOUT ROWID;
 CREATE TABLE card_names (card TEXT NOT NULL REFERENCES cards(id), language TEXT NOT NULL, name TEXT NOT NULL,
                          PRIMARY KEY (card, language)) WITHOUT ROWID;
+CREATE TABLE card_texts (card TEXT NOT NULL REFERENCES cards(id), language TEXT NOT NULL, effect TEXT,
+                         pendulum_effect TEXT, PRIMARY KEY (card, language)) WITHOUT ROWID;
 CREATE TABLE printings (id TEXT PRIMARY KEY, uuid TEXT, oracle_id TEXT,
                         key TEXT NOT NULL, print TEXT NOT NULL, print_key TEXT,
                         card TEXT NOT NULL REFERENCES cards(id), "set" TEXT NOT NULL REFERENCES sets(id),
@@ -128,13 +130,15 @@ def load(docs: dict[str, dict], path: Path) -> None:
         _rows(db, "sets", (_row("sets", s, {"release_date": (s.get("releases") or [{}])[0].get("releaseDate")})
                            for s in docs["AllSets"]["data"].values()))
         cards = docs["AllCards"]["data"].values()
-        _rows(db, "cards", (_row("cards", c, drop=["names"]) for c in cards))
+        _rows(db, "cards", (_row("cards", c, drop=["names", "text"]) for c in cards))
         _rows(db, "oracles", sorted({(c["oracleId"], c["id"]) for c in cards if "oracleId" in c}))
         _rows(db, "card_names", ((c["id"], lang, name) for c in cards for lang, name in sorted(c["names"].items())))
         def price(p: dict) -> dict:
             found = p.get("tcgplayerPrice", {})
             return {"tcgplayer_product_id": found.get("productId"), "tcgplayer_subtype": found.get("subTypeName")}
 
+        _rows(db, "card_texts", ((c["id"], lang, t.get("effect"), t.get("pendulumEffect")) for c in cards
+                                 for lang, t in sorted(c.get("text", {}).items())))
         _rows(db, "printings", (_row("printings", p, price(p), drop=["tcgplayerPrice"])
                                 for p in docs["AllPrintings"]["data"].values()))
         archetypes = docs["AllArchetypes"]["data"].values()

@@ -194,6 +194,12 @@ def card_entry(raw: dict) -> dict:
     for src, dst in (("tcg_date", "tcgDate"), ("ocg_date", "ocgDate")):
         if misc.get(src):
             card[dst] = misc[src]
+    if frame.endswith("_pendulum"):
+        text = {"effect": raw.get("monster_desc"), "pendulumEffect": raw.get("pend_desc")}
+    else:
+        text = {"effect": raw.get("desc")}
+    if text := {k: v for k, v in text.items() if v and v.strip()}:
+        card["text"] = {"en": text}
     images = []
     for img in raw.get("card_images", []):
         image = {"id": img["id"], "card": img["image_url"]}

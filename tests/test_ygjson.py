@@ -23,6 +23,7 @@ CARD = {"id": "46986414", "passcode": 46986414, "name": "Dark Magician", "names"
         "kind": "monster", "frame": "normal", "attribute": "dark", "monsterType": "Spellcaster", "level": 7,
         "atk": 2500, "def": 2100, "hasEffect": False, "isTuner": False, "typeline": ["Spellcaster", "Normal"],
         "archetypes": ["dark-magician"], "identifiers": {"ygoprodeckId": 46986414},
+        "text": {"en": {"effect": "The ultimate wizard."}},
         "prints": [{"id": PRINT_A, "set": SET, "number": "LOB-EN005", "region": "EN", "rarity": "ultra_rare",
                     "identifiers": {"tcgplayerProductIds": [10]}},
                    {"id": PRINT_B, "set": SET, "number": "LOB-EN005", "region": "EN", "rarity": "common",
@@ -487,3 +488,11 @@ def test_normalise_keeps_different_words_apart():
 def test_fold_name_folds_case_apostrophes_and_spaces_but_keeps_punctuation():
     assert ygjson.fold_name("  Magician’s   FORCE ") == "magician's force"
     assert ygjson.fold_name("Yu-Gi-Oh! 5D's") != ygjson.fold_name("Yu Gi Oh 5D's")
+
+
+def test_card_text_needs_an_effect_or_a_pendulum_effect_and_allows_a_yugipedia_source():
+    ok = edit(cards=lambda c: c["046"]["cards"][0].update(text={
+        "en": {"effect": "a"}, "fr": {"pendulumEffect": "b", "source": "yugipedia"}}))
+    assert errors(**ok) == []
+    for bad in ({"en": {}}, {"en": {"effect": ""}}, {"xx": {"effect": "a"}}, {"en": {"effect": "a", "source": "x"}}):
+        assert errors(**edit(cards=lambda c, bad=bad: c["046"]["cards"][0].update(text=bad)))

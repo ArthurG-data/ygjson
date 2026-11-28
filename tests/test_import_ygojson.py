@@ -352,3 +352,36 @@ def test_an_unsettled_number_goes_to_review_and_other_regions_and_minted_prints_
 def test_apply_scans_takes_away_a_scan_no_longer_found():
     cards = [{"prints": [{"id": "u", "scans": {"first": "https://y/old.png"}}]}]
     assert imp.apply_scans(cards, {}) == 0 and "scans" not in cards[0]["prints"][0]
+
+
+def test_apply_card_writes_official_text_per_language():
+    card = our_card("1")
+    g = their_card("g", text={"en": {"name": "x"}, "fr": {"name": "y", "effect": "Effet.", "pendulumEffect": "Pendule.",
+                                                          "official": True},
+                              "ja_romaji": {"effect": "romaji"}})
+    imp.apply_card(card, g)
+    assert card["text"] == {"fr": {"effect": "Effet.", "pendulumEffect": "Pendule."}}
+
+
+def test_apply_card_never_writes_unofficial_or_empty_text():
+    card = our_card("1")
+    imp.apply_card(card, their_card("g", text={"en": {"effect": "Fan.", "official": False},
+                                               "de": {"effect": "", "official": True},
+                                               "it": {"effect": "Fan.", "official": False}}))
+    assert "text" not in card
+
+
+def test_apply_card_never_overwrites_english_text():
+    card = {**our_card("1"), "text": {"en": {"effect": "Ours."}}}
+    imp.apply_card(card, their_card("g", text={"en": {"effect": "Theirs.", "official": True}}))
+    assert card["text"] == {"en": {"effect": "Ours."}}
+
+
+def test_apply_card_drops_text_ygojson_no_longer_has_but_keeps_yugipedias():
+    card = {**our_card("1"), "text": {"en": {"effect": "Ours."}, "fr": {"effect": "Vieux."},
+                                      "de": {"effect": "Yugi.", "source": "yugipedia"}}}
+    imp.apply_card(card, their_card("g", text={"es": {"effect": "Nuevo.", "official": True}}))
+    assert card["text"] == {"en": {"effect": "Ours."}, "de": {"effect": "Yugi.", "source": "yugipedia"},
+                            "es": {"effect": "Nuevo."}}
+    imp.apply_card(card, their_card("g", text={}))
+    assert card["text"] == {"en": {"effect": "Ours."}, "de": {"effect": "Yugi.", "source": "yugipedia"}}

@@ -47,7 +47,7 @@ Beside them the release attaches:
 
 - `<file>.json.gz` for each JSON file, gzipped: `AllPrintings.json` is 47 MB and `AllPrintings.json.gz` about 6 MB.
 - `ygjson.sqlite.gz`, the same data as one SQLite database (about 29 MB, 113 MB unpacked). Each table is a kind of
-  record: `sets`, `cards`, `card_names`, `printings`, `archetypes`, `archetype_members`, `products`, `formats`,
+  record: `sets`, `cards`, `card_names`, `card_texts`, `printings`, `archetypes`, `archetype_members`, `products`, `formats`,
   `legality_events`, `ids` and `former_keys`, and `meta` holds the build's `meta`. The fields most queries filter on
   are columns (`printings` has `card`, `set`, `number`, `rarity`, `edition`, `tcgplayer_product_id`,
   `tcgplayer_subtype` and so on), and `data` holds the record's other fields as JSON. `tools/package.py` lists them all.
@@ -246,6 +246,7 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
   `level`, `rank`, `linkRating`, `linkArrows`, `scale`, `atk` and `def`. `rank` is the level of a Xyz monster,
   which YGOPRODeck reports as `level`. A card that prints `?` has no `atk` or `def`, and a Link monster has no `def`.
 - `hasEffect`, `isTuner` and `typeline`, the tokens of the type line in order (`Cyberse`, `Link`, `Effect`).
+- `text`: the card's effect text by language (see Card text below).
 - `archetypes`: archetype slugs.
 - `tcgDate` and `ocgDate`: the card's first release in each, per YGOPRODeck.
 - `images`: links to YGOPRODeck's full image, small image and cropped art, one entry per artwork.
@@ -363,8 +364,13 @@ and the reason, and `conflicts` lists a product that would share a print with an
 another product already prices.
 `tools/coverage_report.py` accounts for every product in category 2.
 
-**No effect text.** ygjson records facts. It copies no card effect text, product description or card art, and its image
-fields are links. A reader that needs the text reads it from TCGCSV or YGOPRODeck at load time. See `NOTICE`.
+**Card text.** A card's `text` maps a language to `effect` and, on a Pendulum monster, `pendulumEffect`. The text is
+Konami's, reproduced as Konami published it. English comes from YGOPRODeck (`desc`, or `monster_desc` and `pend_desc`
+on a Pendulum monster). The other languages come from YGOJSON, and from Yugipedia for what YGOJSON lacks (those
+entries carry `"source": "yugipedia"`). A text YGOJSON marks `official: false`, an empty text and Yugipedia's
+`translated_text` are never shipped. `import_ygojson` rewrites a card's non-English text on each run. The database
+holds it in `card_texts`. ygjson still copies no product description or card art, and its image fields are links. See
+`NOTICE`.
 
 ## Archetypes
 

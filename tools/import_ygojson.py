@@ -218,6 +218,18 @@ def apply_card(card: dict, g: dict) -> None:
     for lang, name in languages({k: (v or {}).get("name") for k, v in (g.get("text") or {}).items()}).items():
         if lang != "en":
             card["names"][lang] = name
+    # YGOJSON's text is rewritten afresh: only what the Yugipedia stage added outlives a run.
+    text = {lang: t for lang, t in (card.get("text") or {}).items() if lang == "en" or t.get("source") == "yugipedia"}
+    for lang, t in (g.get("text") or {}).items():
+        if lang == "en" or t.get("official") is False:
+            continue
+        found = {k: t[k] for k in ("effect", "pendulumEffect") if t.get(k) and t[k].strip()}
+        if found and languages({lang: "x"}):
+            text[lang] = found
+    if text:
+        card["text"] = text
+    else:
+        card.pop("text", None)
 
 
 def match_series(archetypes: list[dict], series: list[dict]) -> dict[str, dict]:
