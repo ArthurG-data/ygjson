@@ -41,6 +41,12 @@
       "items": {
         "$ref": "#/$defs/sealed"
       }
+    },
+    "oracles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/oracle"
+      }
     }
   },
   "$defs": {
@@ -146,7 +152,8 @@
         "id",
         "name",
         "status",
-        "successors"
+        "successors",
+        "uuid"
       ],
       "properties": {
         "id": {
@@ -173,6 +180,11 @@
         },
         "konamiId": {
           "type": "integer"
+        },
+        "uuid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "uuid5(YGJSON_NAMESPACE, \"card:<id>\") when first seen, then kept: never changed."
         }
       },
       "description": "A card id ever seen."
@@ -184,7 +196,8 @@
         "id",
         "names",
         "status",
-        "successors"
+        "successors",
+        "uuid"
       ],
       "properties": {
         "id": {
@@ -228,6 +241,11 @@
             "minLength": 1
           },
           "description": "The ids that survive a rename: ygojson:<id>, yugipedia:<page id>, konami:<database id>, tcgplayer:<group id>."
+        },
+        "uuid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "uuid5(YGJSON_NAMESPACE, \"set:<id>\") when first seen, then kept: never changed."
         }
       },
       "description": "A set slug."
@@ -239,7 +257,8 @@
         "id",
         "names",
         "status",
-        "successors"
+        "successors",
+        "uuid"
       ],
       "properties": {
         "id": {
@@ -275,6 +294,11 @@
             "type": "string",
             "minLength": 1
           }
+        },
+        "uuid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "uuid5(YGJSON_NAMESPACE, \"archetype:<id>\") when first seen, then kept: never changed."
         }
       },
       "description": "An archetype slug."
@@ -286,7 +310,8 @@
         "id",
         "tcgplayerProductId",
         "status",
-        "successors"
+        "successors",
+        "uuid"
       ],
       "properties": {
         "id": {
@@ -309,9 +334,56 @@
         },
         "tcgplayerProductId": {
           "type": "integer"
+        },
+        "uuid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "uuid5(YGJSON_NAMESPACE, \"sealed:<id>\") when first seen, then kept: never changed."
         }
       },
       "description": "A sealed product id."
+    },
+    "oracle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "cards",
+        "status",
+        "successors"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "uuid5(YGJSON_NAMESPACE, \"oracle:<card id>\") of its first card."
+        },
+        "status": {
+          "enum": [
+            "live",
+            "retired"
+          ]
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "Oracles that replace this one."
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "The card ids that are this gameplay card, oldest first. It only grows."
+        }
+      },
+      "description": "An oracle: one gameplay card, which a card that succeeds another keeps."
     }
   }
 }

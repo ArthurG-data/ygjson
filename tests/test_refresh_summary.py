@@ -28,6 +28,7 @@ def test_ids_added_and_retired_per_kind():
     assert "| cards | 2 | 1 | 1 |" in text  # a and c live; c added; b retired
     assert "| prints | 1 → 0 (-1) | 0 | 1 |" in text
     assert "| sets | 0 | 0 | 0 |" in text
+    assert "| oracles | 0 | 0 | 0 |" in text
 
 
 def test_ban_list_events_added_and_removed_name_the_card():

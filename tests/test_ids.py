@@ -21,7 +21,9 @@ def test_mint_skips_a_taken_id():
 
 
 def test_namespace_is_the_project_url_uuid():
+    import ygjson
     assert ids.YGJSON_NAMESPACE == uuid.uuid5(uuid.NAMESPACE_URL, "https://github.com/ArthurG-data/ygjson")
+    assert ids.YGJSON_NAMESPACE is ygjson.YGJSON_NAMESPACE
 
 
 def test_ledger_round_trips_sorted(tmp_path):
@@ -37,16 +39,22 @@ def test_missing_ledger_loads_empty(tmp_path):
     assert ids.load_ledger(tmp_path) == {k: {} for k in ids.KINDS}
 
 
+def _uuid(name):
+    return str(uuid.uuid5(ids.YGJSON_NAMESPACE, name))
+
+
 def _ledger():
     base = {"status": "live", "successors": []}
     return {
         "prints": {PRINT["id"]: PRINT},
         "printings": {"x": {"id": PRINT["id"] + ":en:first", "key": "k:en:first", "formerIds": ["k:en:first"], **base}},
-        "cards": {"1": {"id": "1", "name": "Blue-Eyes", "konamiId": 4007, **base}},
+        "cards": {"1": {"id": "1", "name": "Blue-Eyes", "konamiId": 4007, "uuid": _uuid("card:1"), **base}},
         "sets": {"lob": {"id": "lob", "names": ["Legend of Blue Eyes"], "code": "LOB", "releaseDate": "2002-03-08",
-                         "identity": ["a", "b"], **base}},
-        "archetypes": {"hero": {"id": "hero", "names": ["HERO"], "identity": ["x"], **base}},
-        "sealed": {"1": {"id": "lob-box", "tcgplayerProductId": 5, **base}},
+                         "identity": ["a", "b"], "uuid": _uuid("set:lob"), **base}},
+        "archetypes": {"hero": {"id": "hero", "names": ["HERO"], "identity": ["x"], "uuid": _uuid("archetype:hero"),
+                                **base}},
+        "sealed": {"1": {"id": "lob-box", "tcgplayerProductId": 5, "uuid": _uuid("sealed:lob-box"), **base}},
+        "oracles": {_uuid("oracle:1"): {"id": _uuid("oracle:1"), "cards": ["1"], **base}},
     }
 
 
@@ -55,6 +63,27 @@ def test_ledger_entries_match_the_schema():
     assert ids.schema_errors(ledger) == []
     ledger["prints"][PRINT["id"]] = {**PRINT, "status": "gone"}
     assert ids.schema_errors(ledger)
+
+
+@pytest.mark.parametrize("kind, i", [("cards", "1"), ("sets", "lob"), ("archetypes", "hero"), ("sealed", "1")])
+def test_schema_requires_a_uuid_on_a_card_set_archetype_and_sealed_entry(kind, i):
+    assert ids.schema_errors(_ledger()) == []
+    ledger = _ledger()
+    del ledger[kind][i]["uuid"]
+    assert ids.schema_errors(ledger) == [f"ids: $.{kind}[0]: 'uuid' is a required property"]
+    ledger = _ledger()
+    ledger[kind][i]["uuid"] = "not-a-uuid"
+    assert ids.schema_errors(ledger) == [f"ids: $.{kind}[0].uuid: 'not-a-uuid' is not a 'uuid'"]
+
+
+def test_schema_refuses_an_oracle_with_no_card_or_a_bad_id():
+    assert ids.schema_errors(_ledger()) == []
+    oid = _uuid("oracle:1")
+    for bad, path in (({"cards": []}, "cards"), ({"id": "not-a-uuid"}, "id"), ({"cards": ["1", "1"]}, "cards")):
+        ledger = _ledger()
+        ledger["oracles"][oid].update(bad)
+        errors = ids.schema_errors(ledger)
+        assert len(errors) == 1 and errors[0].startswith(f"ids: $.oracles[0].{path}: "), (bad, errors)
 
 
 def test_schema_rejects_a_bad_printing_id():
@@ -249,7 +278,7 @@ def test_run_twice_leaves_the_ledger_byte_identical(tmp_path):
     first, review, renames = _fixture_run()
     assert renames == [] and review == {"prints": [], "cards": [], "renames": []}
     assert {k: len(v) for k, v in first.items()} == {"prints": 2, "printings": 3, "cards": 1, "sets": 1,
-                                                     "archetypes": 1, "sealed": 1}
+                                                     "archetypes": 1, "sealed": 1, "oracles": 1}
     ids.save_ledger(first, tmp_path / "a")
     second, _, _ = _fixture_run(ids.load_ledger(tmp_path / "a"))
     ids.save_ledger(second, tmp_path / "b")
@@ -291,12 +320,61 @@ def test_check_reports_retired_entries_in_the_data_and_missing_successors():
     ledger, _, _ = _fixture_run()
     ledger["sets"]["legend-of-blue-eyes-white-dragon"]["status"] = "retired"
     ledger["cards"]["46986414"]["successors"] = ["nowhere"]
-    ledger["sealed"]["gone-box"] = {"id": "other-box", "tcgplayerProductId": 9, "status": "live", "successors": []}
+    ledger["sealed"]["gone-box"] = {"id": "other-box", "tcgplayerProductId": 9, "status": "live", "successors": [],
+                                    "uuid": _uuid("sealed:other-box")}
     errors = _fixture_check(ledger)
     assert any("legend-of-blue-eyes-white-dragon" in e and "retired" in e for e in errors)
     assert any("46986414" in e and "nowhere" in e for e in errors)
     assert any("gone-box" in e and "other-box" in e for e in errors)  # dict key and id disagree
     assert any("other-box" in e and "not in the data" in e for e in errors)
+
+
+def test_run_gives_every_record_a_uuid_and_every_card_an_oracle():
+    ledger, _, _ = _fixture_run()
+    for kind, label in (("cards", "card"), ("sets", "set"), ("archetypes", "archetype"), ("sealed", "sealed")):
+        assert [e["uuid"] for e in ledger[kind].values()] == [_uuid(f"{label}:{i}") for i in ledger[kind]]
+    oid = _uuid("oracle:46986414")
+    assert ledger["oracles"] == {oid: {"id": oid, "cards": ["46986414"], "status": "live", "successors": []}}
+    assert _fixture_check(ledger) == []
+
+
+def test_run_keeps_a_uuid_the_ledger_holds():
+    ledger, _, _ = _fixture_run()
+    ledger["cards"]["46986414"]["uuid"] = _uuid("minted earlier")
+    ledger["sets"]["legend-of-blue-eyes-white-dragon"]["uuid"] = _uuid("minted earlier too")
+    again, _, _ = _fixture_run(ledger)
+    assert again["cards"]["46986414"]["uuid"] == _uuid("minted earlier")
+    assert again["sets"]["legend-of-blue-eyes-white-dragon"]["uuid"] == _uuid("minted earlier too")
+
+
+def test_check_refuses_a_live_card_in_no_oracle_or_in_two():
+    ledger, _, _ = _fixture_run()
+    oid = _uuid("oracle:46986414")
+    alone = {**ledger, "oracles": {}}
+    assert any("card 46986414" in e and "no oracle" in e for e in _fixture_check(alone))
+    other = _uuid("oracle:other")
+    twice = {**ledger, "oracles": {**ledger["oracles"],
+                                   other: {"id": other, "cards": ["46986414"], "status": "live", "successors": []}}}
+    assert any("card 46986414" in e and oid in e and other in e for e in _fixture_check(twice))
+    retired = {**ledger, "oracles": {oid: {**ledger["oracles"][oid], "status": "retired"}}}
+    assert any("card 46986414" in e and "retired" in e for e in _fixture_check(retired))
+    ghost = {**ledger, "oracles": {oid: {**ledger["oracles"][oid], "cards": ["46986414", "nope"]}}}
+    assert any(oid in e and "nope" in e for e in _fixture_check(ghost))
+    empty = _uuid("oracle:retired-card")
+    dead = {**ledger, "cards": {**ledger["cards"], "7": {"id": "7", "name": "Gone", "status": "retired",
+                                                         "successors": [], "uuid": _uuid("card:7")}},
+            "oracles": {**ledger["oracles"], empty: {"id": empty, "cards": ["7"], "status": "live", "successors": []}}}
+    assert any(empty in e and "no live card" in e for e in _fixture_check(dead))
+
+
+def test_check_refuses_two_records_sharing_a_uuid():
+    ledger, _, _ = _fixture_run()
+    shared = ledger["cards"]["46986414"]["uuid"]
+    ledger["cards"]["7"] = {"id": "7", "name": "Gone", "status": "retired", "successors": [], "uuid": shared}
+    assert _fixture_check(ledger) == [f"uuid {shared}: held by cards 46986414, cards 7"]
+    set_uuid = ledger["cards"]["7"]["uuid"] = ledger["sets"]["legend-of-blue-eyes-white-dragon"]["uuid"]
+    assert _fixture_check(ledger) == [  # across kinds too
+        f"uuid {set_uuid}: held by cards 7, sets legend-of-blue-eyes-white-dragon"]
 
 
 def test_check_includes_hand_errors():
@@ -338,6 +416,20 @@ def test_diff_errors_reports_a_changed_id_and_birth_key():
     assert any("id" in e for e in ids.diff_errors(before, {"prints": {"a": {**PRINT, "id": "b"}}}))
     reborn = {"prints": {"a": {**before["prints"]["a"], "key": "k2", "formerKeys": []}}}
     assert any("born" in e for e in ids.diff_errors(before, reborn))
+
+
+def test_diff_errors_refuses_a_changed_uuid_and_an_oracle_losing_a_card():
+    before, _, _ = _fixture_run()
+    oid = _uuid("oracle:46986414")
+    grown = {**before, "oracles": {oid: {**before["oracles"][oid], "cards": ["46986414", "9"]}}}
+    assert ids.diff_errors(before, grown) == []
+    changed = {**before, "cards": {"46986414": {**before["cards"]["46986414"], "uuid": _uuid("other")}}}
+    assert any("cards 46986414" in e and "uuid" in e for e in ids.diff_errors(before, changed))
+    dropped = {**before, "sets": {i: {k: v for k, v in e.items() if k != "uuid"} for i, e in before["sets"].items()}}
+    assert any("sets legend-of-blue-eyes-white-dragon" in e and "uuid" in e for e in ids.diff_errors(before, dropped))
+    lost = {**grown, "oracles": {oid: {**before["oracles"][oid], "cards": ["9"]}}}
+    assert any(f"oracles {oid}" in e and "cards" in e for e in ids.diff_errors(grown, lost))
+    assert any(f"oracles {oid}" in e and "removed" in e for e in ids.diff_errors(before, {**before, "oracles": {}}))
 
 
 def test_diff_errors_reports_a_lost_key_and_successors_shrunk_to_none():

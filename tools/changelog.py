@@ -6,12 +6,13 @@ Compares ids/ with the ledger committed at git REV (the previous release tag) an
 dist/CHANGES.md, which the release attaches and opens its notes with. Without --since, or when REV holds no ledger,
 every id is added: the release is the first to publish the ledger.
 
-For each kind (prints, printings, cards, sets, archetypes, sealed):
+For each kind (prints, printings, cards, sets, archetypes, sealed, oracles):
 
   added    ids REV did not hold.
   retired  ids live at REV and retired now, with the live ids they lead to (their successors).
   renamed  ids live at both whose readable name changed: a print's or printing's `key`, a card's `name`, the last
-           of a set's or archetype's `names`. A sealed product has no name in the ledger, so none is renamed.
+           of a set's or archetype's `names`. A sealed product or an oracle has no name in the ledger, so
+           none is renamed: an oracle gaining a card is not a rename.
 
 An id that is new and already retired counts as added only. Changes.json is {"meta": {"version", "date", "since"},
 "data": {kind: {"added": [id], "retired": [{"id", "successors"}], "renamed": [{"id", "from", "to"}]}}}, each list

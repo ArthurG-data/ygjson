@@ -35,6 +35,16 @@ def test_added_retired_and_renamed_ids_by_kind():
     assert set(data) == set(changelog.ids.KINDS)
 
 
+def test_oracles_are_added_and_retired_but_never_renamed():
+    before = {"oracles": {"o1": entry("o1", cards=["1"]), "o2": entry("o2", cards=["2"])}}
+    after = {"oracles": {"o1": entry("o1", cards=["1", "3"]),  # a card joining is no rename
+                         "o2": entry("o2", "retired", cards=["2"], successors=["o1"]),
+                         "o4": entry("o4", cards=["4"])}}
+    assert changelog.changes(before, after)["oracles"] == {"added": ["o4"],
+                                                           "retired": [{"id": "o2", "successors": ["o1"]}],
+                                                           "renamed": []}
+
+
 def test_an_id_retired_before_stays_out_of_the_list():
     before = {"cards": {"1": entry("1", "retired", name="A", successors=["2"])}}
     after = {"cards": {"1": entry("1", "retired", name="A", successors=["3"])}}

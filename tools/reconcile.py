@@ -4,6 +4,7 @@ Used by the build; see tools/ids.py for the ledger itself.
 """
 from __future__ import annotations
 
+import uuid
 from collections import defaultdict
 from collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass
@@ -156,10 +157,10 @@ def reconcile_printings(entries: dict[str, dict], printings: list[tuple[str, str
 def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[str, dict], dict[str, str]]:
     """Update the card ledger: (new card entries, {retired card id: its one successor}).
 
-    A card in `cards` is live: its `name` and `konamiId` (kept from the entry when the card has none) are refreshed.
-    A live entry whose card is gone is retired; its successor is the one current card with its name, else the one
-    with its konamiId. With none or several it has no successor. An entry already retired is left as it is.
-    `entries` is not modified.
+    A card in `cards` is live: its `name` and `konamiId` (kept from the entry when the card has none) are refreshed,
+    and its `uuid` is kept. A live entry whose card is gone is retired; its successor is the one current card with
+    its name, else the one with its konamiId. With none or several it has no successor. An entry already retired is
+    left as it is. `entries` is not modified.
     """
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
     current = {c["id"]: c for c in cards}
@@ -169,6 +170,8 @@ def reconcile_cards(entries: dict[str, dict], cards: list[dict]) -> tuple[dict[s
         konami = (card.get("identifiers") or {}).get("konamiId", out.get(cid, {}).get("konamiId"))
         if konami is not None:
             entry["konamiId"] = konami
+        if "uuid" in out.get(cid, {}):
+            entry["uuid"] = out[cid]["uuid"]
         out[cid] = entry
     by_name: dict[str, list[str]] = defaultdict(list)
     by_konami: dict[int, list[str]] = defaultdict(list)
@@ -279,16 +282,64 @@ def reconcile_slugs(entries: dict[str, dict], current: list[dict], name_field: s
 
 
 def reconcile_sealed(entries: dict[str, dict], products: list[dict]) -> dict[str, dict]:
-    """Update the sealed ledger, keyed by slug: a product in `products` is live with its first TCGplayer product id; a
-    live entry whose product is gone is retired with no successor. `entries` is not modified."""
+    """Update the sealed ledger, keyed by slug: a product in `products` is live with its first TCGplayer product id,
+    keeping its `uuid`; a live entry whose product is gone is retired with no successor. `entries` is not modified."""
     out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
     current = {p["id"]: p for p in products}
     for i, p in sorted(current.items()):
+        kept = {"uuid": out[i]["uuid"]} if "uuid" in out.get(i, {}) else {}
         out[i] = {"id": i, "tcgplayerProductId": p["identifiers"]["tcgplayerProductIds"][0], "status": "live",
-                  "successors": []}
+                  "successors": [], **kept}
     for i, e in out.items():
         if i not in current and e["status"] == "live":
             e["status"], e["successors"] = "retired", []
+    return dict(sorted(out.items()))
+
+
+UUID_KINDS = ("card", "set", "archetype", "sealed")
+
+
+def stamp_uuids(kind: str, entries: dict[str, dict]) -> dict[str, dict]:
+    """The ledger entries of a kind in UUID_KINDS, each without a `uuid` given uuid5(YGJSON_NAMESPACE,
+    "<kind>:<id>"). A `uuid` an entry holds is never changed, so a set or archetype renamed under its old slug keeps
+    it. `entries` is not modified."""
+    if kind not in UUID_KINDS:
+        raise ValueError(f"no uuid is minted for kind {kind!r}")
+    return {i: e if "uuid" in e else {**e, "uuid": str(uuid.uuid5(ygjson.YGJSON_NAMESPACE, f"{kind}:{e['id']}"))}
+            for i, e in entries.items()}
+
+
+def reconcile_oracles(entries: dict[str, dict], card_entries: Mapping[str, dict]) -> dict[str, dict]:
+    """Update the oracle ledger, keyed by oracle UUID. An oracle is one gameplay card; its `cards` lists the card ids
+    that are it, oldest first, and only grows.
+
+    A card stays in the oracle it is in. A live card in none joins the oracle of a retired card whose one successor
+    it is (the smallest such card's, when several are), else gets an oracle of its own, minted as
+    uuid5(YGJSON_NAMESPACE, "oracle:<card id>"). A card with several successors hands its oracle to none of them. An
+    oracle holding a live card is live. One whose cards are all retired is retired, its successors what it held and
+    the live oracles holding its cards' successors, sorted. `card_entries` is the card ledger after the hand
+    decisions; `entries` is not modified.
+    """
+    out = {i: {k: list(v) if isinstance(v, list) else v for k, v in e.items()} for i, e in sorted(entries.items())}
+    home = {c: i for i, e in out.items() for c in e["cards"]}
+    joins: dict[str, str] = {}
+    for cid, card in sorted(card_entries.items()):
+        if card["status"] == "retired" and len(card["successors"]) == 1 and cid in home:
+            joins.setdefault(card["successors"][0], home[cid])
+    for cid, card in sorted(card_entries.items()):
+        if card["status"] != "live" or cid in home:
+            continue
+        oid = joins.get(cid) or ids.mint(f"oracle:{cid}", out)
+        out.setdefault(oid, {"id": oid, "cards": [], "status": "live", "successors": []})["cards"].append(cid)
+        home[cid] = oid
+    live = {i for i, e in out.items() if any(card_entries.get(c, {}).get("status") == "live" for c in e["cards"])}
+    for i, e in out.items():
+        if i in live:
+            e["status"], e["successors"] = "live", []
+            continue
+        found = {home[s] for c in e["cards"] for s in card_entries.get(c, {}).get("successors", [])
+                 if home.get(s) in live}
+        e["status"], e["successors"] = "retired", sorted(set(e["successors"]) | found)
     return dict(sorted(out.items()))
 
 

@@ -575,3 +575,103 @@ def test_sealed_ledger_follows_the_product_and_retires_what_left():
     later = reconcile.reconcile_sealed(got, products[1:])
     assert later["box"]["status"] == "retired" and later["box"]["successors"] == []
     assert list(later) == sorted(later)
+
+
+# --- uuids and oracles --------------------------------------------------------------------------------------------
+
+
+def test_stamp_uuids_mints_from_kind_and_id():
+    got = reconcile.stamp_uuids("card", {"89631139": {"id": "89631139", "name": "Blue-Eyes White Dragon"}})
+    assert got["89631139"]["uuid"] == str(uuid.uuid5(ids.YGJSON_NAMESPACE, "card:89631139"))
+    assert reconcile.stamp_uuids("sealed", {"box": {"id": "box"}})["box"]["uuid"] == str(
+        uuid.uuid5(ids.YGJSON_NAMESPACE, "sealed:box"))
+
+
+def test_stamp_uuids_keeps_an_existing_uuid():
+    entries = {"89631139": {"id": "89631139", "uuid": "x"}, "2": {"id": "2"}}
+    got = reconcile.stamp_uuids("card", entries)
+    assert got["89631139"]["uuid"] == "x"
+    assert "uuid" not in entries["2"]  # the input is not modified
+
+
+def test_reconcile_cards_and_sealed_keep_an_entrys_uuid():
+    cards, _ = reconcile.reconcile_cards({"2": {"id": "2", "name": "A", "status": "live", "successors": [],
+                                                "uuid": "kept"}}, [_card("2", "B")])
+    assert cards["2"]["uuid"] == "kept"
+    sealed = reconcile.reconcile_sealed({"box": {"id": "box", "tcgplayerProductId": 1, "status": "live",
+                                                 "successors": [], "uuid": "kept"}},
+                                        [{"id": "box", "identifiers": {"tcgplayerProductIds": [4]}}])
+    assert sealed["box"] == {"id": "box", "tcgplayerProductId": 4, "status": "live", "successors": [], "uuid": "kept"}
+
+
+def _oracle_id(card_id):
+    return str(uuid.uuid5(ids.YGJSON_NAMESPACE, f"oracle:{card_id}"))
+
+
+def _oracle(card_id, *cards, status="live", successors=()):
+    return {"id": _oracle_id(card_id), "cards": [card_id, *cards], "status": status, "successors": list(successors)}
+
+
+def _card_entry(cid, status="live", successors=()):
+    return {"id": cid, "name": f"n-{cid}", "status": status, "successors": list(successors)}
+
+
+def _card_entries(*entries):
+    return {e["id"]: e for e in entries}
+
+
+def test_a_new_card_gets_its_own_oracle():
+    got = reconcile.reconcile_oracles({}, _card_entries(_card_entry("1")))
+    assert got == {_oracle_id("1"): {"id": _oracle_id("1"), "cards": ["1"], "status": "live", "successors": []}}
+
+
+def test_a_successor_card_joins_its_predecessors_oracle():
+    o = _oracle("101403001")
+    entries = {o["id"]: o}
+    cards = _card_entries(_card_entry("101403001", "retired", ["82951145"]), _card_entry("82951145"))
+    got = reconcile.reconcile_oracles(entries, cards)
+    assert list(got) == [o["id"]]  # no other oracle minted
+    assert got[o["id"]]["cards"] == ["101403001", "82951145"] and got[o["id"]]["status"] == "live"
+    assert entries[o["id"]]["cards"] == ["101403001"]  # the input is not modified
+    assert reconcile.reconcile_oracles(got, cards) == got
+
+
+def test_an_oracle_whose_cards_are_all_retired_without_successor_is_retired():
+    o = _oracle("1")
+    got = reconcile.reconcile_oracles({o["id"]: o}, _card_entries(_card_entry("1", "retired")))
+    assert got[o["id"]] == {**o, "status": "retired", "successors": []}
+
+
+def test_a_retired_oracle_points_at_the_oracles_its_cards_successors_hold():
+    a, b = _oracle("1"), _oracle("2")
+    cards = _card_entries(_card_entry("1", "retired", ["2"]), _card_entry("2"))  # 2 already had an oracle
+    got = reconcile.reconcile_oracles({a["id"]: a, b["id"]: b}, cards)
+    assert got[a["id"]] == {**a, "status": "retired", "successors": [b["id"]]}
+    assert got[b["id"]] == b
+    # 2 retires in turn: the oracle of 1 keeps pointing at the oracle of 2, which a reader follows.
+    later = reconcile.reconcile_oracles(got, _card_entries(_card_entry("1", "retired", ["2"]),
+                                                           _card_entry("2", "retired")))
+    assert later[a["id"]]["successors"] == [b["id"]] and later[b["id"]]["status"] == "retired"
+
+
+def test_a_card_with_several_successors_leaves_each_its_own_oracle():
+    a = _oracle("1")
+    cards = _card_entries(_card_entry("1", "retired", ["3", "2"]), _card_entry("2"), _card_entry("3"))
+    got = reconcile.reconcile_oracles({a["id"]: a}, cards)
+    assert got[a["id"]] == {**a, "status": "retired", "successors": sorted([_oracle_id("2"), _oracle_id("3")])}
+    assert got[_oracle_id("2")]["cards"] == ["2"] and got[_oracle_id("3")]["cards"] == ["3"]
+
+
+def test_a_card_back_live_revives_its_oracle():
+    a = _oracle("1", status="retired")
+    got = reconcile.reconcile_oracles({a["id"]: a}, _card_entries(_card_entry("1")))
+    assert got == {a["id"]: {**a, "status": "live", "successors": []}}
+
+
+def test_two_predecessors_of_one_card_give_it_the_smallest_ones_oracle():
+    a, b = _oracle("1"), _oracle("2")
+    cards = _card_entries(_card_entry("1", "retired", ["9"]), _card_entry("2", "retired", ["9"]), _card_entry("9"))
+    got = reconcile.reconcile_oracles({a["id"]: a, b["id"]: b}, cards)
+    assert got[a["id"]]["cards"] == ["1", "9"] and got[a["id"]]["status"] == "live"
+    assert got[b["id"]] == {**b, "status": "retired", "successors": [a["id"]]}
+    assert _oracle_id("9") not in got

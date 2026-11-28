@@ -12,6 +12,7 @@ import html
 import itertools
 import json
 import re
+import uuid
 from collections.abc import Container, Iterable, Mapping
 from pathlib import Path
 
@@ -27,6 +28,8 @@ ARCHETYPES = ROOT / "data" / "archetypes.json"
 SEALED = ROOT / "data" / "sealed"
 LEGALITY = ROOT / "legality"
 SCHEMAS = ROOT / "schema"
+# The namespace of every UUID ygjson mints: prints, cards, sets, archetypes, sealed products, printings and oracles.
+YGJSON_NAMESPACE = uuid.UUID("7d674373-b170-5fd8-ab33-29bacad29ffa")  # uuid5(NAMESPACE_URL, "https://github.com/ArthurG-data/ygjson")
 
 # TCGplayer prices a single in one subtype per edition, named so in TCGCSV's prices (subTypeName).
 PRICE_SUBTYPES = {"first": "1st Edition", "unlimited": "Unlimited", "limited": "Limited"}
