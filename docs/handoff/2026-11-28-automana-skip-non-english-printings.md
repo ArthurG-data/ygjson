@@ -10,7 +10,8 @@ so it will see these printings as soon as 0.5.0 is released.
 
 AutoMana's catalog has English printings only, and today the importer refuses anything else. That would fail the
 whole `ingest_printings` step, and so the whole ygjson run, on the day 0.5.0 ships. The change below makes the
-importer skip those printings instead. Deploy it before 0.5.0 is released.
+importer skip those printings instead. Deploy it before ygjson's pull request that adds these printings is merged. Once that merges, ygjson's weekly
+refresh releases it with no further step, and AutoMana reads `releases/latest`.
 
 ## The change
 
@@ -40,7 +41,15 @@ Change it so that a printing whose `language` is not `en` is skipped, and counte
    `"skipped_non_english": sum(rows.skipped_languages.values())` and the per-language dict. The log is where the
    owner will see that the new printings arrived and were skipped.
 
-Check one more place. `card_art_wants` in `ygjson_service.py` (around line 499) picks the cards "that have a
+Check two more places that read all of `AllPrintings`.
+
+`print_editions` in `ygjson_build.py` (around line 158) collects `printing["edition"]` for each print, with no
+language filter. `ingest_contents` in `ygjson_service.py` (around line 382) passes the result to `contents_wants`
+to resolve sealed-product contents. A French printing whose edition differs from the English ones would add an
+edition to a print that has no printing row for it. Skip printings whose `language` is not `en` in
+`print_editions` too.
+
+Also `card_art_wants` in `ygjson_service.py` (around line 499) picks the cards "that have a
 printing" from every entry of `AllPrintings`. After this change a card with only non-English printings has no
 printing row, so skip non-English printings there as well. Otherwise it fetches pictures for a card the catalog
 shows no print of. Real cards have English printings, so the effect is small, but the two functions should agree.
@@ -77,6 +86,10 @@ Also test the all-skipped case: an `AllPrintings` holding only that one `fr` pri
 The existing test `test_a_language_or_edition_the_catalog_lacks_is_refused` has `("language", "ja")` as a
 parameter. That case now skips instead of raising. Remove the `language` parameter and keep the `edition` one.
 
+Add a test for `print_editions` as well (next to `test_print_editions_lists_the_editions_each_print_exists_in`):
+copy one English printing, set its `language` to `fr` and its `edition` to one the print has no English printing
+in, and assert `print_editions` returns the same editions as before.
+
 Run `pytest tests/unit/core/services/yugioh_catalog` and confirm it passes. The integration tests under
 `tests/integration/services/yugioh_catalog/` use fixtures in English only, so they should not change; run them if
 your environment can.
@@ -85,4 +98,5 @@ your environment can.
 
 - The change, the log counts and the tests are merged.
 - It is deployed.
-- The owner has told the ygjson session so. ygjson will not release 0.5.0 before that.
+- The owner has told the ygjson session so. ygjson's pull request adding non-English printings will not be
+  merged until the owner confirms the AutoMana change is deployed.
