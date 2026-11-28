@@ -14,7 +14,7 @@ product. The numbers below describe the data on `main`.
 
 ## Using the data
 
-Each tagged release attaches seven files to a GitHub release:
+Each tagged release attaches eight files to a GitHub release:
 
 ```
 https://github.com/ArthurG-data/ygjson/releases/latest/download/AllSets.json
@@ -24,10 +24,11 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/AllArchetypes.js
 https://github.com/ArthurG-data/ygjson/releases/latest/download/AllProducts.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Legality.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
+https://github.com/ArthurG-data/ygjson/releases/latest/download/Changes.json
 ```
 
-Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`. All seven come
-from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
+Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
+`{"version", "date", "since"}`. All eight come from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
 committed [`sources.json`](sources.json): the snapshot of each source the data was imported from (see
 [Rebuilding a release](#rebuilding-a-release)).
 
@@ -40,6 +41,7 @@ committed [`sources.json`](sources.json): the snapshot of each source the data w
 | `AllProducts.json` | sealed product id (`legend-of-blue-eyes-white-dragon-booster-box`) | category, set, TCGplayer product id, release date, contents and the sources that state them |
 | `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
 | `Legality.json` | `formats`, `events` | the four formats and every change of a card's status in them |
+| `Changes.json` | kind, then `added`, `retired`, `renamed` | the ids added since `meta.since` (the previous release), the ids retired with the live ids they lead to, and the ids whose readable name changed, `from` and `to`. The release notes open with the same counts. `since` is `null` in the first release to publish the ledger, where every id is added |
 
 ## Layout
 
