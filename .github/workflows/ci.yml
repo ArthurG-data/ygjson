@@ -89,7 +89,8 @@ jobs:
           else
             uv run python tools/changelog.py --version "${GITHUB_REF_NAME#v}"
           fi
+      - run: uv run python tools/package.py  # the .json.gz files, ygjson.sqlite.gz and SHA256SUMS
       # The id changes open the notes; GitHub appends its generated list of pull requests after them.
-      - run: gh release create "$GITHUB_REF_NAME" dist/AllSets.json dist/AllCards.json dist/AllPrintings.json dist/AllArchetypes.json dist/AllProducts.json dist/Legality.json dist/Ids.json dist/Changes.json --notes-file dist/CHANGES.md --generate-notes
+      - run: gh release create "$GITHUB_REF_NAME" dist/*.json dist/*.json.gz dist/ygjson.sqlite.gz dist/SHA256SUMS --notes-file dist/CHANGES.md --generate-notes
         env:
           GH_TOKEN: ${{ github.token }}

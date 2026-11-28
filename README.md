@@ -14,7 +14,7 @@ product. The numbers below describe the data on `main`.
 
 ## Using the data
 
-Each tagged release attaches eight files to a GitHub release:
+Each tagged release attaches eight JSON files to a GitHub release:
 
 ```
 https://github.com/ArthurG-data/ygjson/releases/latest/download/AllSets.json
@@ -42,6 +42,28 @@ committed [`sources.json`](sources.json): the snapshot of each source the data w
 | `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
 | `Legality.json` | `formats`, `events` | the four formats and every change of a card's status in them |
 | `Changes.json` | kind, then `added`, `retired`, `renamed` | the ids added since `meta.since` (the previous release), the ids retired with the live ids they lead to, and the ids whose readable name changed, `from` and `to`. The release notes open with the same counts. `since` is `null` in the first release to publish the ledger, where every id is added |
+
+Beside them the release attaches:
+
+- `<file>.json.gz` for each JSON file, gzipped: `AllPrintings.json` is 47 MB and `AllPrintings.json.gz` about 6 MB.
+- `ygjson.sqlite.gz`, the same data as one SQLite database (about 29 MB, 113 MB unpacked). Each table is a kind of
+  record: `sets`, `cards`, `card_names`, `printings`, `archetypes`, `archetype_members`, `products`, `formats`,
+  `legality_events`, `ids` and `former_keys`, and `meta` holds the build's `meta`. The fields most queries filter on
+  are columns (`printings` has `card`, `set`, `number`, `rarity`, `edition`, `tcgplayer_product_id`,
+  `tcgplayer_subtype` and so on), and `data` holds the record's other fields as JSON. `tools/package.py` lists them all.
+- `SHA256SUMS`, the SHA-256 of every file above. `sha256sum -c SHA256SUMS` checks the ones you downloaded
+  (add `--ignore-missing` when you did not download them all).
+
+```sql
+-- The TCGplayer product and price subtype of each printing of Dark Magician in LOB
+SELECT p.number, p.rarity, p.edition, p.tcgplayer_product_id, p.tcgplayer_subtype
+FROM printings p JOIN card_names n ON n.card = p.card AND n.language = 'en'
+WHERE n.name = 'Dark Magician' AND p."set" = 'legend-of-blue-eyes-white-dragon';
+
+-- The id a stored print key belongs to, whether it is the current key or a former one
+SELECT id FROM ids WHERE kind = 'prints' AND key = :key
+UNION SELECT id FROM former_keys WHERE kind = 'prints' AND key = :key;
+```
 
 ## Layout
 
@@ -457,6 +479,8 @@ uv run python tools/coverage_report.py [--strict] # where every TCGplayer produc
 uv run python tools/legality.py            # ban list events
 uv run python tools/validate.py [--online]
 uv run python tools/build.py --version 0.2.0   # dist/AllSets, AllCards, AllPrintings, AllArchetypes, AllProducts, Legality, Ids
+uv run python tools/changelog.py --since v0.2.0 --version 0.3.0   # dist/Changes.json, CHANGES.md
+uv run python tools/package.py             # dist/*.json.gz, ygjson.sqlite.gz, SHA256SUMS
 ```
 
 `pipeline.py` runs the import stages in order, each printing its summary:
@@ -518,8 +542,8 @@ data and copies `sources.json` into `meta.sources`.
 | `yugipedia` | the `pages` cached and the UTC day the newest was fetched (`fetchedThrough`) | `import_yugipedia.py`, `legality.py` |
 
 Every release file carries the same object in `meta.sources`. A release's data is the commit it was tagged at, so to
-rebuild one, check out its tag and run `uv run python tools/build.py --version <version>`: the build reads only
-committed files. To redo the imports themselves, run the pipeline above on that checkout. YGOJSON comes back exactly:
+rebuild one, check out its tag and run `uv run python tools/build.py --version <version>`, then `changelog.py` and
+`package.py`: they read only committed files. To redo the imports themselves, run the pipeline above on that checkout. YGOJSON comes back exactly:
 `import_ygojson.py` downloads the pinned commit (YGOJSON rewrites the branch on each update, so a commit GitHub has
 since dropped can no longer be fetched). YGOPRODeck, TCGCSV and Yugipedia serve only today's data, so an exact rerun
 needs the `.cache/` the release was imported from; `validate.py` says whether a cache is that one.
