@@ -69,6 +69,9 @@ jobs:
       - name: Check the id ledger against main
         run: uv run python tools/ids.py --check-against origin/main
 
+      - name: Update the README's numbers
+        run: uv run python tools/stats.py --write
+
       - name: Summarise the changes
         id: summary
         run: uv run python tools/refresh_summary.py --base HEAD --out "$RUNNER_TEMP/body.md"
@@ -83,7 +86,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
-          git add sets data ids legality review sources.json
+          git add sets data ids legality review sources.json README.md
           git commit -q -m "$title"
           git push --force origin "$BRANCH"
           number="$(gh pr list --head "$BRANCH" --base main --state open --json number -q '.[0].number')"

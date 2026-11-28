@@ -28,6 +28,7 @@ jobs:
       - run: uv run mypy
       - run: uv run pytest -q
       - run: uv run python tools/validate.py
+      - run: uv run python tools/stats.py  # the README's numbers match the data
       - name: Check the id ledger against the previous state
         env:
           EVENT_NAME: ${{ github.event_name }}
