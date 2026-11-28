@@ -497,7 +497,18 @@ on every pull request, every push to `main` and every `v*` tag. pytest includes 
 `pipeline.py --offline` end to end on a small snapshot of the four sources (one set and three of its cards, in
 `tests/fixtures/pipeline`, cut from a full cache by `tests/fixtures/make_pipeline_fixture.py`) and validates the result. The two live checks run weekly and on demand in
 `live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
-that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release. Each
+that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release.
+
+`refresh.yml` runs every Monday, and on demand. It downloads YGOPRODeck and TCGCSV again and takes YGOJSON's current
+commit (`pipeline.py --refresh ygoprodeck --refresh tcgcsv --refresh ygojson`), updates the ban lists
+(`legality.py`), runs `validate.py` and the ledger check against `main`, and opens or updates one pull request from the
+branch `refresh/sources`. Its body (`tools/refresh_summary.py`) gives the ids added and retired per kind, the ban-list
+events added and removed, the review counts and `sources.json` before and after. A failing step leaves its log and
+pushes nothing; a refresh that changes nothing in `sets/`, `data/`, `ids/` or `legality/` opens no pull request.
+`.cache` is kept between runs with `actions/cache`, so Yugipedia pages are fetched once. The pull request is opened with
+`GITHUB_TOKEN`, which cannot start other workflows: the checks above run before the push, and CI runs on the pull
+request once it is closed and reopened. The repository has to allow GitHub Actions to create pull requests (Settings >
+Actions > General). Each
 action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.
 
 ## Licence

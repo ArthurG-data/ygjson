@@ -1,0 +1,98 @@
+name: refresh
+
+# Weekly, and on demand: download the sources again, run the import pipeline and
+# the ban lists, check the result offline, and open (or update) one pull request
+# from the branch refresh/sources with a summary of what changed. Nothing is
+# pushed when a step fails, or when the data (sets/, data/, ids/, legality/) did
+# not change.
+#
+# The pull request is opened with GITHUB_TOKEN, which GitHub does not let start
+# other workflows, so ci.yml does not run on it by itself: the same offline
+# checks run here before anything is pushed, and CI runs on the pull request
+# once it is closed and reopened, or pushed to. The repository must allow
+# GitHub Actions to create pull requests (Settings > Actions > General).
+on:
+  schedule:
+    - cron: "0 7 * * 1"  # Mondays, an hour after live-checks
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      BRANCH: refresh/sources
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86  # v5.4.2
+        with:
+          enable-cache: true
+      - run: uv sync --locked --group dev
+
+      # The cache only saves requests: Yugipedia pages already fetched are not
+      # asked for again. Without it (GitHub drops a cache unused for a week) the
+      # pipeline fetches everything, at each source's own pace (tools/fetch.py).
+      - name: Restore the source cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: .cache
+          key: sources-${{ github.run_id }}
+          restore-keys: sources-
+
+      - name: Refresh the sources and run the pipeline
+        id: pipeline
+        run: uv run python tools/pipeline.py --refresh ygoprodeck --refresh tcgcsv --refresh ygojson
+      - name: Update the ban lists
+        run: uv run python tools/legality.py
+
+      - name: Save the source cache
+        if: always() && steps.pipeline.outcome != 'skipped'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: .cache
+          key: sources-${{ github.run_id }}
+
+      - name: Validate the data
+        run: uv run python tools/validate.py
+      - name: Check the id ledger against main
+        run: uv run python tools/ids.py --check-against origin/main
+
+      - name: Summarise the changes
+        id: summary
+        run: uv run python tools/refresh_summary.py --base HEAD --out "$RUNNER_TEMP/body.md"
+
+      - name: Open or update the pull request
+        if: steps.summary.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          title="Refresh the sources ($(date -u +%F))"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add sets data ids legality review sources.json
+          git commit -q -m "$title"
+          git push --force origin "$BRANCH"
+          number="$(gh pr list --head "$BRANCH" --base main --state open --json number -q '.[0].number')"
+          if [ -n "$number" ]; then
+            gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/body.md"
+            echo "Updated pull request #$number"
+          else
+            gh pr create --base main --head "$BRANCH" --title "$title" --body-file "$RUNNER_TEMP/body.md"
+          fi
+      - name: Nothing to propose
+        if: steps.summary.outputs.changed != 'true'
+        run: echo "The refresh changed nothing in sets/, data/, ids/ or legality/, so no pull request was opened."
