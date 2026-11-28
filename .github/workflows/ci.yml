@@ -64,6 +64,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0  # the previous release tag and its ledger, for the changelog
       - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d  # v10.4.0
         with:
           enable-cache: true
@@ -78,6 +80,16 @@ jobs:
             exit 1
           fi
       - run: uv run python tools/build.py --version "${GITHUB_REF_NAME#v}"
-      - run: gh release create "$GITHUB_REF_NAME" dist/AllSets.json dist/AllCards.json dist/AllPrintings.json dist/AllArchetypes.json dist/AllProducts.json dist/Legality.json dist/Ids.json --generate-notes
+      - name: List the ids added, retired and renamed since the previous release
+        run: |
+          set -euo pipefail
+          # The previous release tag (v*), as the ledger check finds it; none for the first release.
+          if previous="$(git describe --tags --abbrev=0 --match 'v*' 'HEAD^' 2>/dev/null)"; then
+            uv run python tools/changelog.py --since "$previous" --version "${GITHUB_REF_NAME#v}"
+          else
+            uv run python tools/changelog.py --version "${GITHUB_REF_NAME#v}"
+          fi
+      # The id changes open the notes; GitHub appends its generated list of pull requests after them.
+      - run: gh release create "$GITHUB_REF_NAME" dist/AllSets.json dist/AllCards.json dist/AllPrintings.json dist/AllArchetypes.json dist/AllProducts.json dist/Legality.json dist/Ids.json dist/Changes.json --notes-file dist/CHANGES.md --generate-notes
         env:
           GH_TOKEN: ${{ github.token }}
