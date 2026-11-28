@@ -8,8 +8,8 @@ database ids. TCGCSV, a mirror of TCGplayer's catalogue, gives the product ids, 
 in, and the sealed products. Nothing is matched by name order, and a product that no rule can settle goes to a review
 file instead of into a guess.
 
-Release <!--n:release.version-->0.2.0<!--/n--> holds <!--n:release.sets-->1,066<!--/n--> sets, <!--n:release.cards-->14,731<!--/n--> cards, <!--n:release.prints-->48,494<!--/n--> prints, <!--n:release.printings-->63,155<!--/n--> printings,
-<!--n:release.archetypes-->910<!--/n--> archetypes, <!--n:release.sealed-->1,160<!--/n--> sealed products and <!--n:release.events-->3,105<!--/n--> legality events. <!--n:release.prints_with_product-->46,142<!--/n--> prints have a TCGplayer
+Release <!--n:release.version-->0.3.0<!--/n--> holds <!--n:release.sets-->1,066<!--/n--> sets, <!--n:release.cards-->14,708<!--/n--> cards, <!--n:release.prints-->48,657<!--/n--> prints, <!--n:release.printings-->63,305<!--/n--> printings,
+<!--n:release.archetypes-->913<!--/n--> archetypes, <!--n:release.sealed-->1,160<!--/n--> sealed products and <!--n:release.events-->3,105<!--/n--> legality events. <!--n:release.prints_with_product-->46,499<!--/n--> prints have a TCGplayer
 product. The numbers below describe the data on `main`.
 
 ## Using the data
@@ -27,7 +27,7 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Changes.json
 ```
 
-Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
+Every file is `{"meta": {"version": "0.3.0", "date": "2026-11-28", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
 `{"version", "date", "since"}`. All eight come from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
 committed [`sources.json`](sources.json): the snapshot of each source the data was imported from (see
 [Rebuilding a release](#rebuilding-a-release)).
