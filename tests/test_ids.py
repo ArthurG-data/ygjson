@@ -253,8 +253,7 @@ def test_run_twice_leaves_the_ledger_byte_identical(tmp_path):
     ids.save_ledger(first, tmp_path / "a")
     second, _, _ = _fixture_run(ids.load_ledger(tmp_path / "a"))
     ids.save_ledger(second, tmp_path / "b")
-    for kind in ids.KINDS:
-        assert (tmp_path / "a" / f"{kind}.json").read_bytes() == (tmp_path / "b" / f"{kind}.json").read_bytes()
+    assert _tree(tmp_path / "a") == _tree(tmp_path / "b")
 
 
 def test_review_comes_from_the_ledger_and_is_the_same_on_a_rerun():
@@ -433,7 +432,7 @@ def test_a_rename_leaves_the_prints_alone_until_the_rerun(monkeypatch, tmp_path,
     mapped = named("lob-old", "Legend of Blue Eyes White Dragon")  # the rerun maps the new name to the old slug
     ledger, _, _ = ids.run({k: {} for k in ids.KINDS}, *published[:2], ARCHETYPES, published[2], ({}, {}), {})
     _cli(monkeypatch, tmp_path, ledger, published[0])
-    before = {kind: (tmp_path / "ids" / f"{kind}.json").read_bytes() for kind in ids.KINDS}
+    before = _tree(tmp_path / "ids")
 
     for step in (renamed, mapped):
         monkeypatch.setattr(ygjson, "load_sets", lambda step=step: step[0])
@@ -443,8 +442,10 @@ def test_a_rename_leaves_the_prints_alone_until_the_rerun(monkeypatch, tmp_path,
             with pytest.raises(SystemExit) as e:
                 ids.main([])
             assert e.value.code == 3
-            for kind in ("prints", "printings", "cards", "sealed"):
-                assert (tmp_path / "ids" / f"{kind}.json").read_bytes() == before[kind]
+            after = _tree(tmp_path / "ids")
+            for name in before:
+                if name not in ("sets.json", "archetypes.json"):
+                    assert after[name] == before[name]
             assert ids.load_ledger(tmp_path / "ids")["sets"]["lob-old"]["names"] == [
                 "LOB", "Legend of Blue Eyes White Dragon"]
             assert json.loads((tmp_path / "review" / "ids.json").read_text())["renames"][0]["from"] == "lob-old"
@@ -457,6 +458,11 @@ def test_a_rename_leaves_the_prints_alone_until_the_rerun(monkeypatch, tmp_path,
     assert not [k for e in saved["prints"].values() for k in e["formerKeys"] if SET in k]
     assert not [k for e in saved["printings"].values() for k in e["formerIds"] if SET in k]
     assert ids.check(saved, *mapped[:2], ARCHETYPES, mapped[2]) == []
+
+
+def _tree(root):
+    """{path relative to root: bytes} of every file under it."""
+    return {str(p.relative_to(root)): p.read_bytes() for p in sorted(root.rglob("*")) if p.is_file()}
 
 
 def _git(cwd, *args):
@@ -541,3 +547,57 @@ def test_an_archetype_whose_cleaned_name_is_another_s_retires_into_it():
     assert ids.cleaned_archetype_merges(entries, current) == {"supports-archetypes-power-patron": "power-patron"}
     still = [*current, {"slug": "supports-archetypes-power-patron", "name": "| supports_archetypes    Power Patron"}]
     assert ids.cleaned_archetype_merges(entries, still) == {}  # a slug still in the data is not merged
+
+
+def _printing(i):
+    return {"id": i, "key": f"k-{i}", "status": "live", "formerIds": [], "successors": []}
+
+
+def test_save_ledger_splits_printings_by_language(tmp_path):
+    ledger = {k: {} for k in ids.KINDS}
+    ledger["printings"] = {i: _printing(i) for i in ("u:en:first", "u:fr:first")}
+    ids.save_ledger(ledger, tmp_path / "ids")
+    assert (tmp_path / "ids" / "printings" / "en.json").exists()
+    assert (tmp_path / "ids" / "printings" / "fr.json").exists()
+    assert not (tmp_path / "ids" / "printings.json").exists()
+    assert ids.load_ledger(tmp_path / "ids") == ledger
+    assert ids.printing_files(ledger["printings"]) == {"en": [_printing("u:en:first")], "fr": [_printing("u:fr:first")]}
+
+
+def test_save_ledger_deletes_the_legacy_printings_file(tmp_path):
+    (tmp_path / "printings.json").write_text(json.dumps({"printings": [_printing("u:en:first")]}))
+    ledger = ids.load_ledger(tmp_path)
+    ids.save_ledger(ledger, tmp_path)
+    assert not (tmp_path / "printings.json").exists()
+    assert ids.load_ledger(tmp_path) == ledger
+
+
+def test_load_ledger_reads_the_legacy_printings_file(tmp_path):
+    (tmp_path / "printings.json").write_text(json.dumps({"printings": [_printing("u:en:first")]}))
+    assert ids.load_ledger(tmp_path)["printings"] == {"u:en:first": _printing("u:en:first")}
+
+
+def test_ledger_at_reads_both_layouts(tmp_path):
+    _git(tmp_path, "init", "-q")
+    (tmp_path / "ids").mkdir()
+    old = [_printing("u:en:first"), _printing("u:fr:first")]
+    (tmp_path / "ids" / "printings.json").write_text(json.dumps({"printings": old}))
+    _git(tmp_path, "add", "ids")
+    _git(tmp_path, "commit", "-q", "-m", "old")
+    _git(tmp_path, "tag", "old")
+    ids.save_ledger(ids.load_ledger(tmp_path / "ids"), tmp_path / "ids")
+    _git(tmp_path, "add", "-A", "ids")
+    _git(tmp_path, "commit", "-q", "-m", "new")
+    _git(tmp_path, "tag", "new")
+    assert (tmp_path / "ids" / "printings" / "fr.json").exists()
+    got = ids.ledger_at("old", tmp_path)["printings"]
+    assert len(got) == 2
+    assert got == ids.ledger_at("new", tmp_path)["printings"]
+
+
+def test_a_printing_in_both_layouts_is_refused(tmp_path):
+    (tmp_path / "printings").mkdir()
+    (tmp_path / "printings.json").write_text(json.dumps({"printings": [_printing("u:en:first")]}))
+    (tmp_path / "printings" / "en.json").write_text(json.dumps({"printings": [_printing("u:en:first")]}))
+    with pytest.raises(ValueError, match="u:en:first"):
+        ids.load_ledger(tmp_path)

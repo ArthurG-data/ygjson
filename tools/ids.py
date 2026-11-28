@@ -46,12 +46,24 @@ def mint(birth_key: str, taken: Container[str]) -> str:
     return new_id
 
 
+def printing_files(entries: Mapping[str, dict]) -> dict[str, list[dict]]:
+    """{language: printings sorted by id}; a printing's language is the second ":" field of its id."""
+    out: dict[str, list[dict]] = {}
+    for i, e in sorted(entries.items()):
+        out.setdefault(i.split(":")[1], []).append(e)
+    return out
+
+
 def load_ledger(path: Path = IDS) -> dict[str, dict[str, dict]]:
-    """{kind: {id: entry}}; a missing file loads empty."""
+    """{kind: {id: entry}}; a missing file loads empty. The printings are in printings/<language>.json, and a legacy
+    printings.json is read too."""
     ledger: dict[str, dict[str, dict]] = {}
     for kind in KINDS:
-        file = path / f"{kind}.json"
-        entries = json.loads(file.read_text(encoding="utf-8"))[kind] if file.exists() else []
+        files = [path / f"{kind}.json"]
+        if kind == "printings":
+            files += sorted((path / "printings").glob("*.json"))
+        entries = [e for file in files if file.exists()
+                   for e in json.loads(file.read_text(encoding="utf-8"))[kind]]
         ledger[kind] = _by_id(kind, entries)
     return ledger
 
@@ -67,9 +79,19 @@ def _by_id(kind: str, entries: list[dict]) -> dict[str, dict]:
 
 
 def save_ledger(ledger: dict[str, dict[str, dict]], path: Path = IDS) -> None:
-    """One file per kind, entries sorted by id."""
+    """One file per kind, entries sorted by id; the printings split by language into printings/<language>.json, and a
+    legacy printings.json or a language file with no printings left is deleted."""
     for kind in KINDS:
+        if kind == "printings":
+            continue
         ygjson.save_json(path / f"{kind}.json", {kind: [e for _, e in sorted(ledger.get(kind, {}).items())]})
+    (path / "printings.json").unlink(missing_ok=True)
+    files = printing_files(ledger.get("printings", {}))
+    for language, entries in files.items():
+        ygjson.save_json(path / "printings" / f"{language}.json", {"printings": entries})
+    for stale in (path / "printings").glob("*.json"):
+        if stale.stem not in files:
+            stale.unlink()
 
 
 def held_names(ledger: dict[str, dict[str, dict]], kind: str) -> dict[str, str]:
@@ -331,25 +353,29 @@ def _birth(entry: dict) -> str | None:
 
 
 def ledger_at(rev: str, root: Path = ygjson.ROOT) -> dict[str, dict[str, dict]]:
-    """The ledger committed at git `rev`; a kind whose file is not in `rev`'s tree loads empty. Exits on a rev git
+    """The ledger committed at git `rev`, in either printings layout; a kind whose file is not in `rev`'s tree loads
+    empty. Exits on a rev git
     lacks and on any other git failure, so a ledger git could not read is never taken for an empty one."""
     known = subprocess.run(["git", "rev-parse", "--verify", "--quiet", f"{rev}^{{commit}}"], cwd=root,
                            capture_output=True)
     if known.returncode != 0:
         sys.exit(f"{rev}: no such git revision")
-    listed = subprocess.run(["git", "ls-tree", "--name-only", rev, "ids/"], cwd=root, capture_output=True)
+    listed = subprocess.run(["git", "ls-tree", "-r", "--name-only", rev, "ids/"], cwd=root, capture_output=True)
     if listed.returncode != 0:
         sys.exit(f"{rev}: git ls-tree failed: {listed.stderr.decode('utf-8', 'replace').strip()}")
     present = set(listed.stdout.decode("utf-8").split())
     ledger: dict[str, dict[str, dict]] = {}
     for kind in KINDS:
-        path = f"ids/{kind}.json"
+        paths = [f"ids/{kind}.json"]
+        if kind == "printings":
+            paths += sorted(p for p in present if p.startswith("ids/printings/") and p.endswith(".json"))
         entries: list[dict] = []
-        if path in present:
-            shown = subprocess.run(["git", "show", f"{rev}:{path}"], cwd=root, capture_output=True)
-            if shown.returncode != 0:
-                sys.exit(f"{rev}:{path}: {shown.stderr.decode('utf-8', 'replace').strip()}")
-            entries = json.loads(shown.stdout.decode("utf-8"))[kind]
+        for path in paths:
+            if path in present:
+                shown = subprocess.run(["git", "show", f"{rev}:{path}"], cwd=root, capture_output=True)
+                if shown.returncode != 0:
+                    sys.exit(f"{rev}:{path}: {shown.stderr.decode('utf-8', 'replace').strip()}")
+                entries += json.loads(shown.stdout.decode("utf-8"))[kind]
         ledger[kind] = _by_id(kind, entries)
     return ledger
 
