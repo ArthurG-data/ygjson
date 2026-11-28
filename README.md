@@ -35,7 +35,7 @@ committed [`sources.json`](sources.json): the snapshot of each source the data w
 |---|---|---|
 | `AllSets.json` | set id (`legend-of-blue-eyes-white-dragon`) | name, code, type, series, parent, era, editions, TCGplayer group ids, identifiers, and the release with its date and key art |
 | `AllCards.json` | card id (`89631139`) | the facts every print of the card shares, its name in each language, and the permanent ids of its prints |
-| `AllPrintings.json` | printing id, `<print uuid>:<language>:<edition>` (`7fb2b3b7-22d1-5e78-8f11-31cfa734fbe9:en:first`) | its readable `key` (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`), `print` (the print's UUID), `printKey`, set, number, region, rarity and its tier, edition, finish, TCGplayer product ids, and `tcgplayerPrice`: the product and price subtype of its edition |
+| `AllPrintings.json` | printing id, `<print uuid>:<language>:<edition>` (`7fb2b3b7-22d1-5e78-8f11-31cfa734fbe9:en:first`) | its readable `key` (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`), `print` (the print's UUID), `printKey`, set, number, region, rarity and its tier, edition, finish, TCGplayer product ids, `tcgplayerPrice`: the product and price subtype of its edition, and `scan`: Yugipedia's picture of it |
 | `AllArchetypes.json` | archetype slug (`blue-eyes`) | name, names by language, whether Konami calls it an archetype, and the ids of its member cards |
 | `AllProducts.json` | sealed product id (`legend-of-blue-eyes-white-dragon-booster-box`) | category, set, TCGplayer product id, release date, contents and the sources that state them |
 | `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
@@ -225,6 +225,15 @@ A print has `id`, `set`, `number` (`LOB-001`), `region`, `rarity`, `editions` wh
 number: `LOB-EN001` has `EN`, `LOB-001` has none, and `LAVD-ENS05` has `EN` because the letter after the region is a
 slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (<!--n:region.EN-->45,491<!--/n--> prints), `E` (<!--n:region.E-->732<!--/n-->) and `PT` (<!--n:region.PT-->456<!--/n-->).
 
+**Scans.** A print's `scans` links Yugipedia's picture of that print in each edition (`{"first": ..., "unlimited":
+...}`), so it shows which of the card's artworks the print carries; a printing has the one of its edition as `scan`.
+They come from YGOJSON, which lists each printing of a set's English locales with its scan: a printing is the locale's
+prefix and its suffix (`LOB-EN` + `005`) for one card, and lands on the YGOPRODeck print of that set, card and number at
+its rarity, or on the only print of that number when YGOJSON has only one printing of it. <!--n:prints_with_scan-->37,489<!--/n--> prints have
+scans, and <!--n:printings_with_scan-->48,883<!--/n--> printings a `scan`. A print `import_tcgcsv` mints (a version, or a number YGOPRODeck lacks)
+has none, since it is made afresh on each run; nor does a printing of another region (`AGOV-AE001`). A printing that
+lands on no single print goes to `review/ygojson.json` `scansUnplaced`.
+
 **Rarity.** A print's `rarity` is a code from `tools/rarities.py`, which maps YGOPRODeck's and TCGplayer's free text
 onto <!--n:rarity_codes-->41<!--/n--> codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
 `dt_normal_parallel` and so on). Text the table does not know becomes `unknown`, and the print keeps the source's
@@ -410,7 +419,7 @@ today. `speed_duel` needs `.cache/ygojson` and is skipped without it.
 | File | Lists |
 |---|---|
 | `review/rarities.json` | rarity strings that mapped to `unknown`, with the number of prints, and the count of duplicate rows YGOPRODeck repeats |
-| `review/ygojson.json` | YGOPRODeck sets with no YGOJSON match, YGOJSON English sets no set of ours claimed, sets matched by the weaker rules, cards with no match, skipped series |
+| `review/ygojson.json` | YGOPRODeck sets with no YGOJSON match, YGOJSON English sets no set of ours claimed, sets matched by the weaker rules, cards with no match, skipped series, scans that land on no single print |
 | `review/yugipedia.json` | sets with no page or infobox, infobox types the mapping lacks, pages shared by several sets, ambiguous parents |
 | `review/tcgplayer-2.json` | TCGplayer products no rule could tie to a print (`unmatched`), products that would share a print (`conflicts`), groups with no set (`groups`), and groups matched through an alias (`groupAliases`) |
 | `review/sealed.json` | sealed products in a group with no set (`noSet`), products with category `other`, and YGOJSON products no TCGplayer product matched (`ygojsonUnmatched`) |

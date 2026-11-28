@@ -387,7 +387,8 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
     sealed product's cards point at print UUIDs. Without one the readable ids are used throughout.
 
     A printing is a print in one edition: the print's editions when it has them, else its set's. It carries the
-    print's product ids, and `tcgplayerPrice` (see price_of) names the product and price subtype of its edition.
+    print's product ids, `tcgplayerPrice` (see price_of) names the product and price subtype of its edition, and
+    `scan` links the print's scan in its edition, when the print has one.
     archetype members are card ids in numeric order."""
     by_set = {s["id"]: s for s in sets}
     uuids = {e["key"]: e["id"] for e in ledger["prints"].values() if e["status"] == "live"} if ledger else None
@@ -425,6 +426,7 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
                         **({"tcgplayer": {k: v for k, v in p["tcgplayer"].items() if k != "editionProducts"}}
                            if "tcgplayer" in p else {}),
                         **({"tcgplayerPrice": price} if (price := price_of(p, edition)) else {}),
+                        **({"scan": p["scans"][edition]} if edition in p.get("scans", {}) else {}),
                     }
     for a in archetypes["archetypes"]:
         out["archetypes"][a["slug"]] = {**a, "members": sorted(members.get(a["slug"], []), key=int)}

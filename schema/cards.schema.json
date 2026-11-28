@@ -96,6 +96,9 @@
         "rawRarity": {"type": "string", "minLength": 1, "description": "The source's rarity string, kept when it mapped to unknown, also after TCGplayer's rarity replaced unknown."},
         "editions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["first", "unlimited", "limited"]},
                      "description": "Present only when it differs from the set's editions."},
+        "scans": {"type": "object", "minProperties": 1, "propertyNames": {"enum": ["first", "unlimited", "limited"]},
+                  "additionalProperties": {"type": "string", "format": "uri"},
+                  "description": "A link to Yugipedia's scan of the print in each edition, from YGOJSON; none is copied. Only on YGOPRODeck's prints."},
         "identifiers": {
           "type": "object",
           "additionalProperties": false,
