@@ -69,8 +69,8 @@ import rarities
 import sources
 import tcgcsv
 import ygjson
-from import_ygojson import normalise
 from import_ygoprodeck import era_of, set_type
+from ygjson import normalise
 
 CACHE = ygjson.ROOT / ".cache" / "tcgcsv"
 REVIEW = ygjson.ROOT / "review" / "tcgplayer-2.json"
@@ -85,7 +85,6 @@ SUFFIX_SLUGS = {"2020 Date Reprint": "2020-reprint", "2020 Reprint": "2020-repri
 WORLDWIDE = " (Worldwide English)"
 SUBTYPES = {"1st Edition": "first", "Unlimited": "unlimited", "Limited": "limited"}
 EDITION_ORDER = ("first", "unlimited", "limited")
-RULES = ("exact_name", "normalised_name", "worldwide_english", "mapping", "abbreviation", "reprint", "minted")
 MINTED = "minted"
 _SKILL_CARD = " (Skill Card)"
 
@@ -283,7 +282,6 @@ class Catalog:
         self.by_alias: dict[str, list[dict]] = collections.defaultdict(list)
         self.by_id: dict[str, dict] = {}
         self.cards: dict[str, dict] = {}
-        self.touched: set[str] = set()
         for body in files.values():
             for card in body["cards"]:
                 self.cards[card["id"]] = card
@@ -366,7 +364,7 @@ def _undecided_group(products: dict[int, list[tcgcsv.Product]], complete: bool) 
     return lambda group_id: group_id not in products and not complete
 
 
-def _remove_minted(sets: list[dict], files: dict[str, dict], undecided: Callable[[int], bool]) -> None:
+def _remove_minted(files: dict[str, dict], undecided: Callable[[int], bool]) -> None:
     """Drop what an earlier run minted, so each run decides again and a rule fixed today leaves nothing behind. A
     product on a removed print goes back through the rules; a print holding a product this run cannot decide stays.
     Reprint sets (they have a parent) are not minted this way."""
@@ -950,7 +948,7 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
     """Everything the tool does, on in-memory data: {"sets", "files", "review", "stats"}. ``held`` and ``reserved`` are
     the set ledger's {name: slug} and slugs, for the sets this tool mints."""
     _start_aliases(files)
-    _remove_minted(sets, files, _undecided(products, _complete(groups, products, sets, mapping)))
+    _remove_minted(files, _undecided(products, _complete(groups, products, sets, mapping)))
     imp = Importer(sets, files, groups, products, prices, mapping, eras, held, reserved, product_mapping)
     unmatched_groups = imp.match_groups()
     imp.match_singles()

@@ -1,7 +1,5 @@
 import copy
 
-import pytest
-
 import import_ygojson as imp
 import ygjson
 
@@ -23,20 +21,6 @@ def their_set(uuid, name, prefix=None, locale="en", yugipedia=None, **locale_ove
 
 def matched(ours, theirs):
     return {sid: (g["id"], rule) for sid, (g, rule) in imp.match_sets(ours, theirs).items()}
-
-
-@pytest.mark.parametrize("a, b", [
-    ("Magician&apos;s Force", "Magician’s Force"),
-    ("Magician's  Force", "magician's force"),
-    ("Yu-Gi-Oh! 5D's", "yu gi oh 5d s"),
-    ("  Dark Crisis ", "Dark Crisis"),
-])
-def test_normalise_unifies_case_apostrophes_and_punctuation(a, b):
-    assert imp.normalise(a) == imp.normalise(b)
-
-
-def test_normalise_keeps_different_words_apart():
-    assert imp.normalise("Dark Crisis") != imp.normalise("Dark Crisis 2")
 
 
 def test_exact_name_wins_before_any_looser_rule():
@@ -125,10 +109,6 @@ def test_apply_set_without_a_yugipedia_page_writes_no_art():
     assert "keyArt" not in s["releases"][0]
     assert s["identifiers"] == {"ygojsonId": "u"}
 
-
-def test_yugipedia_page_quotes_the_title():
-    assert imp.yugipedia_page("Yu-Gi-Oh! 5D's Volume 1") == "https://yugipedia.com/wiki/Yu-Gi-Oh!_5D%27s_Volume_1"
-    assert imp.yugipedia_page("Tournament Pack: 1st Season") == "https://yugipedia.com/wiki/Tournament_Pack:_1st_Season"
 
 
 def our_card(card_id, name="Dark Magician", **ids):

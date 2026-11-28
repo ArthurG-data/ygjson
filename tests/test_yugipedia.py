@@ -85,6 +85,7 @@ def test_parse_date(text, iso):
 
 def test_page_urls():
     assert y.page_url("Duelist Pack: Yusei 2") == "https://yugipedia.com/wiki/Duelist_Pack:_Yusei_2"
+    assert y.page_url("Yu-Gi-Oh! 5D's Volume 1") == "https://yugipedia.com/wiki/Yu-Gi-Oh!_5D%27s_Volume_1"
     assert y.file_url("File:LOB-Booster EN.png") == "https://yugipedia.com/wiki/Special:FilePath/LOB-Booster_EN.png"
 
 

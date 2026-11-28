@@ -11,7 +11,6 @@ from pathlib import Path
 import fetch
 
 API = "https://db.ygoprodeck.com/api/v7"
-USER_AGENT = fetch.USER_AGENT
 FETCH_DELAY_S = 0.1
 DEFAULT_CACHE = Path(__file__).resolve().parents[1] / ".cache" / "ygoprodeck"
 

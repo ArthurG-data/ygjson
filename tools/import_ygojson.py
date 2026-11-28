@@ -26,15 +26,14 @@ from __future__ import annotations
 
 import argparse
 import collections
-import html
 import json
 import re
-from urllib.parse import quote
 
 import decisions
 import sources
 import ygjson
 import ygojson_aggregate
+from yugipedia import page_url
 
 CACHE = ygjson.ROOT / ".cache" / "ygojson"
 REVIEW = ygjson.ROOT / "review" / "ygojson.json"
@@ -44,19 +43,10 @@ _EDITIONS = {"1st": "first", "unlimited": "unlimited", "limited": "limited"}
 _EDITION_ORDER = ("first", "unlimited", "limited")
 # The language keys the schemas accept: ja_romaji and ko_rr are romanisations, not languages.
 _LANGUAGE = re.compile(r"^[a-z]{2}(-[A-Za-z]+)?$")
-_NON_ALNUM = re.compile(r"[\W_]+")
-# Characters MediaWiki leaves unescaped in a page title.
-_WIKI_SAFE = ";@$!*(),/~:"
 
 # YGOJSON files a set's English release under en, or, for the older sets, under the region it came out in.
 ENGLISH_LOCALES = ("en", "na", "eu", "ae", "oc")
 RULES = ("exact_name", "name_and_prefix", "name", "yugipedia_name", "prefix")
-
-
-def normalise(name: str) -> str:
-    """Lower case, apostrophes unified, every run of non-alphanumerics one space, trimmed."""
-    text = html.unescape(name).lower().replace("’", "'")
-    return _NON_ALNUM.sub(" ", text).strip()
 
 
 def english(ygo_set: dict) -> dict:
@@ -82,7 +72,7 @@ def en_sets(ygo_sets: list[dict]) -> list[dict]:
 
 
 def match_sets(ours: list[dict], theirs: list[dict]) -> dict[str, tuple[dict, str]]:
-    """{our set id: (YGOJSON set, rule)} for the ygoprodeck sets of ours, by the four rules in RULES."""
+    """{our set id: (YGOJSON set, rule)} for the ygoprodeck sets of ours, by the five rules in RULES, in order."""
     ours = sorted((s for s in ours if s["source"] == "ygoprodeck"), key=lambda s: s["id"])
     found: dict[str, tuple[dict, str]] = {}
     claimed: set[str] = set()
@@ -111,20 +101,20 @@ def match_sets(ours: list[dict], theirs: list[dict]) -> dict[str, tuple[dict, st
     # 2. normalised name and prefix == code, unique on both sides.
     keyed = collections.defaultdict(list)
     for g in free_theirs():
-        keyed[(normalise(g["name"]["en"]), en_prefix(g))].append(g)
-    ours_keys = collections.Counter((normalise(s["name"]), s["code"]) for s in free_ours())
+        keyed[(ygjson.normalise(g["name"]["en"]), en_prefix(g))].append(g)
+    ours_keys = collections.Counter((ygjson.normalise(s["name"]), s["code"]) for s in free_ours())
     for s in free_ours():
-        key = (normalise(s["name"]), s["code"])
+        key = (ygjson.normalise(s["name"]), s["code"])
         if ours_keys[key] == 1 and len(keyed.get(key, [])) == 1:
             take(s, keyed[key][0], "name_and_prefix")
 
     # 3. normalised name alone, unique on both sides.
     named = collections.defaultdict(list)
     for g in free_theirs():
-        named[normalise(g["name"]["en"])].append(g)
-    ours_names = collections.Counter(normalise(s["name"]) for s in free_ours())
+        named[ygjson.normalise(g["name"]["en"])].append(g)
+    ours_names = collections.Counter(ygjson.normalise(s["name"]) for s in free_ours())
     for s in free_ours():
-        name = normalise(s["name"])
+        name = ygjson.normalise(s["name"])
         if ours_names[name] == 1 and len(named.get(name, [])) == 1:
             take(s, named[name][0], "name")
 
@@ -151,10 +141,6 @@ def match_sets(ours: list[dict], theirs: list[dict]) -> dict[str, tuple[dict, st
     return found
 
 
-def yugipedia_page(name: str) -> str:
-    return "https://yugipedia.com/wiki/" + quote(name.replace(" ", "_"), safe=_WIKI_SAFE)
-
-
 def apply_set(s: dict, g: dict) -> None:
     """Fold the matched YGOJSON set into ours, touching only the fields the module docstring lists."""
     en = english(g)
@@ -173,7 +159,7 @@ def apply_set(s: dict, g: dict) -> None:
     if en.get("date") and not release.get("releaseDate"):
         release["releaseDate"] = en["date"]
     if en.get("image") and yugipedia.get("name") and not release.get("keyArt"):
-        release["keyArt"] = {"url": en["image"], "source": yugipedia_page(yugipedia["name"])}
+        release["keyArt"] = {"url": en["image"], "source": page_url(yugipedia["name"])}
 
 
 def languages(names: dict) -> dict[str, str]:

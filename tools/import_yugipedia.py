@@ -39,6 +39,7 @@ import import_ygoprodeck
 import sources
 import ygjson
 import yugipedia
+from ygjson import fold_name
 
 MAPPING = ygjson.ROOT / "mappings" / "set_types.json"
 REVIEW = ygjson.ROOT / "review" / "yugipedia.json"
@@ -49,7 +50,6 @@ _RELEASE_DATE = re.compile(r"release_date$")
 _PREFERRED_DATES = ("na_release_date", "en_release_date", "release_date")
 # The regions of the TCG's other languages. A jp, kr, ae, sc or tc date is an OCG release, not one of an English set.
 _TCG_REGIONS = {"eu", "oc", "au", "fr", "de", "it", "sp", "sp-lat", "pt", "fc"}
-CHILD_TYPES = ("sneak_peek", "special_edition", "promo")
 _PROMO_CHILD = re.compile(r"premiere|promotional cards?", re.IGNORECASE)
 _SNEAK_PEEK = re.compile(r"sneak peek", re.IGNORECASE)
 _SPECIAL_EDITION = re.compile(r":\s*special edition\s*$", re.IGNORECASE)
@@ -58,11 +58,6 @@ _SPEED_DUEL = re.compile(r"\bspeed duel\b", re.IGNORECASE)
 
 def load_mapping(path: Path = MAPPING) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
-
-
-def norm(name: str) -> str:
-    """Case-folded name with apostrophes unified and spaces collapsed, for comparing set names."""
-    return " ".join(name.replace("’", "'").casefold().split())
 
 
 def _titles(set_name: str) -> list[str]:
@@ -75,14 +70,14 @@ def _titles(set_name: str) -> list[str]:
 
 def map_type(ib: dict[str, str], name: str, mapping: dict) -> str | None:
     """Our type for an infobox, or None when its type is not in the mapping."""
-    raw_type = norm(ib.get("type", ""))
+    raw_type = fold_name(ib.get("type", ""))
     kind = mapping["types"].get(raw_type)
     if kind is None:
         return None
-    series = norm(ib.get("series", ""))
+    series = fold_name(ib.get("series", ""))
     if series:
-        exact = {norm(k): v for k, v in mapping["series"].items() if not k.endswith("*")}
-        prefixes = sorted(((norm(k[:-1]), v) for k, v in mapping["series"].items() if k.endswith("*")),
+        exact = {fold_name(k): v for k, v in mapping["series"].items() if not k.endswith("*")}
+        prefixes = sorted(((fold_name(k[:-1]), v) for k, v in mapping["series"].items() if k.endswith("*")),
                           key=lambda kv: -len(kv[0]))
         if series in exact:
             kind = exact[series]
@@ -186,15 +181,15 @@ def find_parents(sets: list[dict], raw_boxes: dict[str, dict[str, str]]) -> tupl
     boosters = [s for s in sets if s["type"] == "booster" and "parent" not in s]
     by_name = collections.defaultdict(list)
     for b in boosters:
-        by_name[norm(b["name"])].append(b)
+        by_name[fold_name(b["name"])].append(b)
         if b["name"].startswith("Yu-Gi-Oh! "):
-            by_name[norm(b["name"][len("Yu-Gi-Oh! "):])].append(b)
+            by_name[fold_name(b["name"][len("Yu-Gi-Oh! "):])].append(b)
     # booster id -> the names its other_sets points at, whole or by item.
     listed = {}
     for b in boosters:
         raw = raw_boxes.get(b["id"], {}).get("other_sets", "")
-        listed[b["id"]] = ({norm(n) for n in yugipedia.named_in(raw)}
-                           | {norm(i) for i in yugipedia.clean(raw).split(";")})
+        listed[b["id"]] = ({fold_name(n) for n in yugipedia.named_in(raw)}
+                           | {fold_name(i) for i in yugipedia.clean(raw).split(";")})
     found, ambiguous = {}, {}
     for s in sorted(sets, key=lambda s: s["id"]):
         if "parent" in s or not _child_eligible(s):
@@ -203,16 +198,16 @@ def find_parents(sets: list[dict], raw_boxes: dict[str, dict[str, str]]) -> tupl
         for b in boosters:
             if b["id"] != s["id"] and s["code"] != "UNKNOWN" and b["code"] == s["code"]:
                 evidence[b["id"]].add("code")
-        child = norm(s["name"])
+        child = fold_name(s["name"])
         starts = [b for b in boosters
-                  if b["id"] != s["id"] and re.match(re.escape(norm(b["name"])) + r"(?![a-z0-9])", child)]
+                  if b["id"] != s["id"] and re.match(re.escape(fold_name(b["name"])) + r"(?![a-z0-9])", child)]
         # A booster whose name starts another matched booster's name is the shorter, vaguer match: keep the longest.
         starts = [b for b in starts
-                  if not any(o is not b and norm(o["name"]).startswith(norm(b["name"])) for o in starts)]
+                  if not any(o is not b and fold_name(o["name"]).startswith(fold_name(b["name"])) for o in starts)]
         for b in starts:
             evidence[b["id"]].add("name")
         for name in yugipedia.named_in(raw_boxes.get(s["id"], {}).get("other_sets", "")):
-            for b in by_name.get(norm(name), []):
+            for b in by_name.get(fold_name(name), []):
                 if b["id"] != s["id"]:
                     evidence[b["id"]].add("other_sets")
         for b in boosters:

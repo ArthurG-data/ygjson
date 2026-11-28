@@ -8,6 +8,7 @@ from __future__ import annotations
 import collections
 import functools
 import hashlib
+import html
 import itertools
 import json
 import re
@@ -153,6 +154,22 @@ def era_of(release_date: str | None, eras: Iterable[Mapping]) -> str | None:
     if not release_date:
         return None
     return next((e["code"] for e in eras if e["from"] <= release_date <= e.get("to", "9999-12-31")), None)
+
+
+_NON_ALNUM = re.compile(r"[\W_]+")
+
+
+def normalise(name: str) -> str:
+    """A name for loose comparison: HTML entities decoded, lower case, apostrophes unified, every run of
+    non-alphanumerics one space, trimmed. "Yu-Gi-Oh! 5D's" and "yu gi oh 5d s" are equal."""
+    text = html.unescape(name).lower().replace("’", "'")
+    return _NON_ALNUM.sub(" ", text).strip()
+
+
+def fold_name(name: str) -> str:
+    """A name for stricter comparison than normalise: case-folded, apostrophes unified and spaces collapsed, with its
+    punctuation kept, so "Yu-Gi-Oh! 5D's" and "Yu Gi Oh 5D's" stay apart."""
+    return " ".join(name.replace("’", "'").casefold().split())
 
 
 _ASCII_SPACE = re.compile(r"[ \t\r\n]+")
