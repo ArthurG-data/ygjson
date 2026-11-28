@@ -9,9 +9,12 @@ another (see ygojson_aggregate.py); --update takes the branch's current commit i
 sources.json records the commit read. It adds only:
 
   sets        identifiers.ygojsonId / yugipediaId / konamiDatabaseIds, editions (when YGOJSON states some),
-              releases[0].releaseDate and releases[0].keyArt (only where the set has none). A YGOPRODeck set is
-              matched to one YGOJSON set with an English release (locale en, else na, eu, ae, oc) by five rules,
-              applied in order to the sets still unmatched on both sides: exact English name; normalised name plus
+              releases[0].releaseDate and releases[0].keyArt (only where the set has none), and
+              one release per Western locale (fr, de, it, sp as es, pt) written afresh on every run: name, releaseDate,
+              prefix, keyArt. Every non-English release is dropped first; a later stage adds its own.
+              A YGOPRODeck set is matched to one YGOJSON set with an English release (locale en, else na, eu, ae,
+              oc) by five rules, applied in order to the sets still unmatched on both sides: exact English name;
+              normalised name plus
               prefix equal to our code; normalised name alone when unique on both sides; Yugipedia page title equal
               to our name; prefix alone when unique on both sides.
   cards       identifiers.ygojsonId / yugipediaIds, identifiers.konamiId (only when the card has none), and
@@ -164,6 +167,31 @@ def apply_set(s: dict, g: dict) -> None:
         release["releaseDate"] = en["date"]
     if en.get("image") and yugipedia.get("name") and not release.get("keyArt"):
         release["keyArt"] = {"url": en["image"], "source": page_url(yugipedia["name"])}
+    s["releases"][1:] = western_releases(g, en_name=release["name"], page=yugipedia.get("name"))
+
+
+# YGOJSON's locale -> our release language
+_RELEASE_LOCALES = {"fr": "fr", "de": "de", "it": "it", "sp": "es", "pt": "pt"}
+
+
+def western_releases(g: dict, en_name: str, page: str | None) -> list[dict]:
+    """One release per Western locale YGOJSON gives the set: the name in that language (else the English one), the
+    date, the prefix and the art (sourced to the Yugipedia page)."""
+    out = []
+    for locale, lang in _RELEASE_LOCALES.items():
+        body = (g.get("locales") or {}).get(locale)
+        if not body:
+            continue
+        name = ygjson.clean_name(g["name"][lang]) if (g.get("name") or {}).get(lang, "").strip() else en_name
+        release: dict = {"language": lang, "name": name}
+        if body.get("date"):
+            release["releaseDate"] = body["date"]
+        if body.get("prefix"):
+            release["prefix"] = body["prefix"]
+        if body.get("image") and page:
+            release["keyArt"] = {"url": body["image"], "source": page_url(page)}
+        out.append(release)
+    return out
 
 
 def languages(names: dict) -> dict[str, str]:

@@ -30,7 +30,8 @@
           "additionalProperties": false,
           "required": ["language", "name"],
           "properties": {
-            "language": {"enum": ["en"]},
+            "language": {"enum": ["en", "fr", "de", "it", "es", "pt"]},
+            "prefix": {"type": "string", "minLength": 1, "description": "The release's own set prefix (LOB-FR)."},
             "name": {"type": "string", "minLength": 1},
             "releaseDate": {"type": "string", "format": "date", "description": "YGOPRODeck's tcg_date, else Yugipedia's North American or English release date."},
             "keyArt": {"type": "object", "additionalProperties": false, "required": ["url", "source"],

@@ -496,3 +496,15 @@ def test_card_text_needs_an_effect_or_a_pendulum_effect_and_allows_a_yugipedia_s
     assert errors(**ok) == []
     for bad in ({"en": {}}, {"en": {"effect": ""}}, {"xx": {"effect": "a"}}, {"en": {"effect": "a", "source": "x"}}):
         assert errors(**edit(cards=lambda c, bad=bad: c["046"]["cards"][0].update(text=bad)))
+
+
+def test_validate_refuses_a_set_whose_first_release_is_not_english():
+    fr = {"language": "fr", "name": "Legende"}
+    out = errors(**edit(sets=lambda s: s[0].update(releases=[fr, s[0]["releases"][0]])))
+    assert out == [f"sets.json: set {SET} must list its English release first"]
+
+
+def test_validate_refuses_two_releases_in_one_language():
+    fr = {"language": "fr", "name": "Legende"}
+    out = errors(**edit(sets=lambda s: s[0]["releases"].extend([fr, dict(fr)])))
+    assert out == [f"sets.json: set {SET} has two fr releases"]

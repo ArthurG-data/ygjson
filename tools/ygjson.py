@@ -243,6 +243,10 @@ def _check_sets(sets: list[dict], eras: list[dict]) -> list[str]:
         if expected and s.get("era") != expected:
             errors.append(f"sets.json: set {s['id']} has era {s.get('era')}, but "
                           + (f"its release date {date} is in {expected}" if date else f"its parent's is {expected}"))
+        langs = collections.Counter(r["language"] for r in s["releases"])
+        if s["releases"][0]["language"] != "en":
+            errors.append(f"sets.json: set {s['id']} must list its English release first")
+        errors += [f"sets.json: set {s['id']} has two {lang} releases" for lang, n in sorted(langs.items()) if n > 1]
         errors += spacing_errors(f"sets.json: set {s['id']}", s["name"])
         for gid in s.get("tcgplayerGroupIds", []):
             if gid in group_owner:

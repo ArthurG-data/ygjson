@@ -385,3 +385,53 @@ def test_apply_card_drops_text_ygojson_no_longer_has_but_keeps_yugipedias():
                             "es": {"effect": "Nuevo."}}
     imp.apply_card(card, their_card("g", text={}))
     assert card["text"] == {"en": {"effect": "Ours."}, "de": {"effect": "Yugi.", "source": "yugipedia"}}
+
+
+def western(**over):
+    g = their_set("u", "Legend", "LOB-EN", yugipedia="Legend", date="2002-03-08", image="https://ms/en.png")
+    g["name"].update(fr="Legende", es="Leyenda")
+    g["locales"]["fr"] = {"language": "fr", "prefix": "LOB-FR", "date": "2023-04-20", "image": "https://ms/fr.png"}
+    g["locales"]["sp"] = {"language": "es", "prefix": "LOB-SP", "date": "2023-05-01"}
+    g["locales"].update(over)
+    return g
+
+
+def test_apply_set_adds_a_release_per_western_locale():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western())
+    assert s["releases"][1] == {"language": "fr", "name": "Legende", "releaseDate": "2023-04-20", "prefix": "LOB-FR",
+                                "keyArt": {"url": "https://ms/fr.png", "source": "https://yugipedia.com/wiki/Legend"}}
+
+
+def test_apply_set_maps_sp_to_es():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western())
+    es = s["releases"][2]
+    assert es == {"language": "es", "name": "Leyenda", "releaseDate": "2023-05-01", "prefix": "LOB-SP"}
+
+
+def test_a_release_without_a_translated_name_takes_the_english_one():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western(de={"language": "de", "prefix": "LOB-DE"}))
+    assert {"language": "de", "name": "Legend", "prefix": "LOB-DE"} in s["releases"]
+
+
+def test_apply_set_keeps_english_first_and_untouched():
+    s = our_set("lob", "Legend", "LOB")
+    s["releases"][0].update(releaseDate="2000-01-01")
+    imp.apply_set(s, western())
+    assert [r["language"] for r in s["releases"]] == ["en", "fr", "es"]
+    assert s["releases"][0] == {"language": "en", "name": "Legend", "releaseDate": "2000-01-01",
+                                "keyArt": {"url": "https://ms/en.png", "source": "https://yugipedia.com/wiki/Legend"}}
+
+
+def test_apply_set_drops_a_language_ygojson_no_longer_gives():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western())
+    g = western()
+    del g["locales"]["fr"]
+    imp.apply_set(s, g)
+    assert [r["language"] for r in s["releases"]] == ["en", "es"]
+    s["releases"].append({"language": "de", "name": "x"})  # another stage's release goes too
+    imp.apply_set(s, g)
+    assert [r["language"] for r in s["releases"]] == ["en", "es"]
