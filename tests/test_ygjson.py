@@ -416,3 +416,22 @@ def test_clean_archetype_name_drops_a_leaked_template_key():
     assert ygjson.clean_archetype_name("| supports_archetypes    Power Patron") == "Power Patron"
     assert ygjson.clean_archetype_name("Power Patron") == "Power Patron"
     assert ygjson.clean_archetype_name('"C"') == '"C"'
+
+
+@pytest.mark.parametrize("a, b", [
+    ("Magician&apos;s Force", "Magician’s Force"),
+    ("Magician's  Force", "magician's force"),
+    ("Yu-Gi-Oh! 5D's", "yu gi oh 5d s"),
+    ("  Dark Crisis ", "Dark Crisis"),
+])
+def test_normalise_unifies_case_apostrophes_and_punctuation(a, b):
+    assert ygjson.normalise(a) == ygjson.normalise(b)
+
+
+def test_normalise_keeps_different_words_apart():
+    assert ygjson.normalise("Dark Crisis") != ygjson.normalise("Dark Crisis 2")
+
+
+def test_fold_name_folds_case_apostrophes_and_spaces_but_keeps_punctuation():
+    assert ygjson.fold_name("  Magician’s   FORCE ") == "magician's force"
+    assert ygjson.fold_name("Yu-Gi-Oh! 5D's") != ygjson.fold_name("Yu Gi Oh 5D's")

@@ -9,9 +9,8 @@ def product(name="Dark Magician", **extended):
     return tcgcsv.Product(product_id=1, group_id=2, name=name, clean_name=name, image_url="", url="", extended=extended)
 
 
-def test_category_and_user_agent():
+def test_category():
     assert tcgcsv.CATEGORY == 2
-    assert tcgcsv.USER_AGENT == "ygjson/0.1 (+https://github.com/ArthurG-data/ygjson)"
 
 
 @pytest.mark.parametrize("extended, single", [

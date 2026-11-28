@@ -29,7 +29,6 @@ import fetch
 import ygjson
 
 API = "https://yugipedia.com/api.php"
-USER_AGENT = fetch.USER_AGENT
 FETCH_DELAY_S = 1.0
 MAXLAG_S = 5
 BATCH = 50

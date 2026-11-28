@@ -12,7 +12,6 @@ import fetch
 
 TCGCSV = "https://tcgcsv.com/tcgplayer"
 CATEGORY = 2
-USER_AGENT = fetch.USER_AGENT
 FETCH_DELAY_S = 0.5
 
 # Trailing tags TCGplayer appends to a name to tell variants apart: "(Secret Rare)", "(Starlight Rare)",

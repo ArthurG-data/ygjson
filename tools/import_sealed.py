@@ -36,7 +36,7 @@ import decisions
 import ids
 import tcgcsv
 import ygjson
-from import_ygojson import normalise
+from ygjson import normalise
 
 CACHE = ygjson.ROOT / ".cache" / "tcgcsv"
 YGOJSON = ygjson.ROOT / ".cache" / "ygojson" / "sealedProducts.json"
