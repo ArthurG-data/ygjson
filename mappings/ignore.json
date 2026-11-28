@@ -1,3 +1,13 @@
 {
- "_comment": "Review items that are known and accepted (read by tools/decisions.py). '<review file stem>': {'<list>': [{'match': {field: value}, 'why': evidence}]}. An entry matches every item of that list whose fields include all of 'match'; the matched items move from the list to the file's 'ignored' section on the next run. validate.py reports an entry that matches nothing, or whose item is still in the list."
+ "_comment": "Review items that are known and accepted (read by tools/decisions.py). '<review file stem>': {'<list>': [{'match': {field: value}, 'why': evidence}]}. An entry matches every item of that list whose fields include all of 'match'; the matched items move from the list to the file's 'ignored' section on the next run. validate.py reports an entry that matches nothing, or whose item is still in the list.",
+ "ids": {
+  "cards": [
+   {
+    "match": {
+     "id": "149694341"
+    },
+    "why": "YGOPRODeck's '???' placeholder for unrevealed cards in deck lists (ygoprodeck.com/card/placeholder-15961): not a card, so it has no successor. import_ygoprodeck leaves placeholders out."
+   }
+  ]
+ }
 }

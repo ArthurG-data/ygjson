@@ -244,6 +244,13 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 - `identifiers`: `ygoprodeckId`, and `konamiId` (<!--n:cards_konami-->14,495<!--/n--> cards), `ygojsonId` (<!--n:cards_ygojson-->13,991<!--/n-->) and `yugipediaIds` where known.
 - `prints`: every print of the card.
 
+<!--n:cards_no_print-->461<!--/n--> cards have no print. YGOPRODeck lists every card, but a print needs an English set that lists it:
+<!--n:cards_no_print.ocg-->371<!--/n--> are OCG cards with no TCG release yet (an `ocgDate` and no `tcgDate`),
+<!--n:cards_no_print.token-->79<!--/n--> are tokens no set lists, and <!--n:cards_no_print.other-->11<!--/n--> are announced cards still under a
+temporary id (`100461002`), cards from the video games, or a card YGOPRODeck lists no set for yet. They are kept, so a deck list or a legality event can
+name them, and gain prints once a set lists them. YGOPRODeck's placeholder for unrevealed cards in deck lists
+(`???`, `149694341`) is not a card and is left out.
+
 A print has `id`, `set`, `number` (`LOB-001`), `region`, `rarity`, `editions` where they differ from the set's,
 `identifiers.tcgplayerProductIds` and `tcgplayer`. `region` is the letters between the set prefix and the digits of the
 number: `LOB-EN001` has `EN`, `LOB-001` has none, and `LAVD-ENS05` has `EN` because the letter after the region is a
