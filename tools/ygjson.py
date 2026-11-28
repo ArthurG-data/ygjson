@@ -28,6 +28,9 @@ SEALED = ROOT / "data" / "sealed"
 LEGALITY = ROOT / "legality"
 SCHEMAS = ROOT / "schema"
 
+# TCGplayer prices a single in one subtype per edition, named so in TCGCSV's prices (subTypeName).
+PRICE_SUBTYPES = {"first": "1st Edition", "unlimited": "Unlimited", "limited": "Limited"}
+
 _REGION = re.compile(r"^[^-]+-([A-Z]+)\d")
 _COLOUR_OR_ART_VARIANT = re.compile(r"^(blue|green|purple|red|silver|bronze|[a-g]|version-\d+)$")
 
@@ -245,6 +248,7 @@ def _check_cards(sets: list[dict], files: dict[str, dict], archetype_slugs: set[
     """Returns the errors, the card ids and the print ids."""
     errors = []
     set_ids = {s["id"] for s in sets}
+    set_editions = {s["id"]: s["editions"] for s in sets}
     card_ids: collections.Counter = collections.Counter()
     print_ids: dict[str, str] = {}
     for stem, body in files.items():
@@ -269,7 +273,12 @@ def _check_cards(sets: list[dict], files: dict[str, dict], archetype_slugs: set[
                     errors.append(f"print {pid}: id must be {expected}")
                 if p["set"] not in set_ids:
                     errors.append(f"print {pid}: set {p['set']} is not in sets.json")
-                for product_id in p.get("identifiers", {}).get("tcgplayerProductIds", []):
+                held = p.get("identifiers", {}).get("tcgplayerProductIds", [])
+                for edition, product_id in p.get("tcgplayer", {}).get("editionProducts", {}).items():
+                    if product_id not in held or edition not in print_editions(p, set_editions.get(p["set"], [])):
+                        errors.append(f"print {pid}: editionProducts names {edition} {product_id}, which is not one "
+                                      f"of its products and editions")
+                for product_id in held:
                     if product_id in product_owner:
                         errors.append(f"TCGplayer product {product_id} is on {product_owner[product_id]} and {pid}")
                     product_owner[product_id] = pid
@@ -359,6 +368,15 @@ def print_editions(p: dict, set_editions: list[str]) -> list[str]:
     return p.get("editions", set_editions)
 
 
+def price_of(p: dict, edition: str) -> dict | None:
+    """Where TCGplayer prices the print in `edition`: {"productId", "subTypeName"}, the pair a TCGCSV price row is
+    keyed by. The print's one product, else the one its `tcgplayer.editionProducts` names for the edition. None when
+    the print has no product, or none of its products prices the edition."""
+    ids = p.get("identifiers", {}).get("tcgplayerProductIds", [])
+    product = ids[0] if len(ids) == 1 else p.get("tcgplayer", {}).get("editionProducts", {}).get(edition)
+    return None if product is None else {"productId": product, "subTypeName": PRICE_SUBTYPES[edition]}
+
+
 def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
             sealed: dict[str, dict] | None = None, ledger: dict[str, dict[str, dict]] | None = None) -> dict[str, dict]:
     """The release shape: {"sets": {id: set}, "cards": {id: card with prints as print ids}, "printings": {id: printing},
@@ -368,9 +386,9 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
     `<print uuid>:<language>:<edition>` and keeps the readable id as `key` and the print's key as `printKey`, and a
     sealed product's cards point at print UUIDs. Without one the readable ids are used throughout.
 
-    A printing is a print in one edition: the print's editions when it has them, else its set's. TCGplayer sells
-    every edition of a print under one product, so each printing carries the print's product ids. archetype members
-    are card ids in numeric order."""
+    A printing is a print in one edition: the print's editions when it has them, else its set's. It carries the
+    print's product ids, and `tcgplayerPrice` (see price_of) names the product and price subtype of its edition.
+    archetype members are card ids in numeric order."""
     by_set = {s["id"]: s for s in sets}
     uuids = {e["key"]: e["id"] for e in ledger["prints"].values() if e["status"] == "live"} if ledger else None
     products = {p["id"]: p for body in (sealed or {}).values() for p in body["products"]}
@@ -404,7 +422,9 @@ def flatten(sets: list[dict], files: dict[str, dict], archetypes: dict,
                         "language": "en", "edition": edition,
                         "finish": None if finish is None else "foil" if finish else "nonfoil",
                         "identifiers": p.get("identifiers", {}),
-                        **({"tcgplayer": p["tcgplayer"]} if "tcgplayer" in p else {}),
+                        **({"tcgplayer": {k: v for k, v in p["tcgplayer"].items() if k != "editionProducts"}}
+                           if "tcgplayer" in p else {}),
+                        **({"tcgplayerPrice": price} if (price := price_of(p, edition)) else {}),
                     }
     for a in archetypes["archetypes"]:
         out["archetypes"][a["slug"]] = {**a, "members": sorted(members.get(a["slug"], []), key=int)}

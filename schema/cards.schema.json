@@ -109,7 +109,10 @@
           "additionalProperties": false,
           "required": ["name", "match"],
           "description": "How the TCGplayer product was tied to this print: its name there, and the rule that matched it.",
-          "properties": {"name": {"type": "string"}, "match": {"enum": ["number+rarity", "number+rarity-from-tcgplayer", "number", "number-other-set", "minted"]}}
+          "properties": {"name": {"type": "string"}, "match": {"enum": ["number+rarity", "number+rarity-from-tcgplayer", "number", "number-other-set", "minted"]},
+                         "editionProducts": {"type": "object", "minProperties": 1, "propertyNames": {"enum": ["first", "unlimited", "limited"]},
+                                             "additionalProperties": {"type": "integer"},
+                                             "description": "On a print holding several products: the product that prices each edition, as a TCGplayer price subtype (1st Edition, Unlimited, Limited)."}}
         }
       }
     }

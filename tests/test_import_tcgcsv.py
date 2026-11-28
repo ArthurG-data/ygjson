@@ -975,8 +975,30 @@ def test_a_print_keeps_two_products_that_price_different_editions():
     products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha", "LOB-EN001", "Common", 7)]}
     prices = {1: [price(6, "Limited"), price(7, "Unlimited")]}
     out = go(products=products, prices=prices, **w)
-    assert prints_of(out, "100")["lob:100:LOB-EN001:common"]["identifiers"]["tcgplayerProductIds"] == [6, 7]
+    p = prints_of(out, "100")["lob:100:LOB-EN001:common"]
+    assert p["identifiers"]["tcgplayerProductIds"] == [6, 7]
+    assert p["tcgplayer"]["editionProducts"] == {"unlimited": 7, "limited": 6}  # in edition order
     assert out["review"]["conflicts"] == []
+    again = imp.run(w["groups"], products, prices, copy.deepcopy(out["sets"]), copy.deepcopy(out["files"]), {})
+    assert again["files"] == out["files"]
+
+
+def test_a_print_with_one_product_names_no_edition_products_and_loses_an_old_map():
+    old = {"identifiers": {"tcgplayerProductIds": [6, 7]},
+           "tcgplayer": {"name": "Alpha", "match": "number+rarity", "editionProducts": {"unlimited": 7}}}
+    w = world([mkprint("lob", "100", "LOB-EN001", "common", **old)])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6)]}
+    p = prints_of(go(products=products, prices={1: [price(6, "Unlimited")]}, **w), "100")["lob:100:LOB-EN001:common"]
+    assert p["identifiers"]["tcgplayerProductIds"] == [6] and "editionProducts" not in p["tcgplayer"]
+
+
+def test_a_print_keeps_its_edition_products_while_their_prices_are_missing():
+    kept = {"identifiers": {"tcgplayerProductIds": [6, 7]},
+            "tcgplayer": {"name": "Alpha", "match": "number+rarity", "editionProducts": {"unlimited": 7, "limited": 6}}}
+    w = world([mkprint("lob", "100", "LOB-EN001", "common", editions=["unlimited", "limited"], **kept)])
+    products = {1: [single(1, "Alpha", "LOB-EN001", "Common", 6), single(1, "Alpha", "LOB-EN001", "Common", 7)]}
+    p = prints_of(go(products=products, prices={}, **w), "100")["lob:100:LOB-EN001:common"]
+    assert p["tcgplayer"]["editionProducts"] == {"unlimited": 7, "limited": 6}
 
 
 def test_a_print_keeps_one_product_per_edition_and_prefers_the_one_pricing_the_most():

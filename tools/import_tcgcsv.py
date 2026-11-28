@@ -85,7 +85,7 @@ CHILD = re.compile(r"^(?P<base>.*?)\s*\((?P<suffix>2020 Date Reprint|2020 Reprin
 SUFFIX_SLUGS = {"2020 Date Reprint": "2020-reprint", "2020 Reprint": "2020-reprint",
                 "25th Anniversary Edition": "25th-anniversary-edition"}
 WORLDWIDE = " (Worldwide English)"
-SUBTYPES = {"1st Edition": "first", "Unlimited": "unlimited", "Limited": "limited"}
+SUBTYPES = {name: edition for edition, name in ygjson.PRICE_SUBTYPES.items()}
 EDITION_ORDER = ("first", "unlimited", "limited")
 MINTED = "minted"
 _SKILL_CARD = " (Skill Card)"
@@ -486,9 +486,13 @@ class Importer:
                 self.number_rarity[(prod.number, rarities.canonical(prod.rarity))].append(
                     (prod.product_id, prod.group_id))
         self.sold_as: dict[str, set[str]] = collections.defaultdict(set)  # card id -> TCGplayer's base names for it
+        # print id -> the editionProducts an earlier run wrote, kept for a print whose prices this run lacks
+        self.earlier_edition_products: dict[str, dict[str, int]] = {}
         for body in files.values():
             for card in body["cards"]:
                 for p in card["prints"]:
+                    if "editionProducts" in p.get("tcgplayer", {}):
+                        self.earlier_edition_products[p["id"]] = p["tcgplayer"]["editionProducts"]
                     self._forget_products(p)
                     if "tcgplayer" in p:
                         # It holds a product this run cannot decide, which stays as it was, and so does the name
@@ -966,6 +970,27 @@ class Importer:
             self._productless_editions(self.sets[set_id]["editions"], prints)
         return changed
 
+    def record_edition_products(self) -> None:
+        """Name, on a print holding several products, the product that prices each of its editions
+        (`tcgplayer.editionProducts`), so a price joins a printing without guessing. settle_shared_editions left one
+        product per edition. A print with one product needs no such map: that product prices all its editions. A print
+        whose products or prices are missing from the input keeps what it had of the map for the products it holds."""
+        for p in self.catalog.by_id.values():
+            if "tcgplayer" not in p:
+                continue
+            p["tcgplayer"].pop("editionProducts", None)
+            ids = _product_ids(p)
+            if len(ids) < 2:
+                continue
+            editions = p.get("editions", self.sets[p["set"]]["editions"])
+            if self._print_editions_unknown(p):
+                earlier = self.earlier_edition_products.get(p["id"], {})
+                priced = {e: i for e, i in earlier.items() if i in ids and e in editions}
+            else:
+                priced = {e: i for i in ids for e in self.subtypes.get(i, set()) if e in editions}
+            if priced:
+                p["tcgplayer"]["editionProducts"] = {e: priced[e] for e in EDITION_ORDER if e in priced}
+
     def _print_editions_unknown(self, p: dict) -> bool:
         """Whether the input lacks the products or prices of a product the print holds."""
         return any(self._editions_unknown(self.by_id[i].group_id) if i in self.by_id else self.undecided(i)
@@ -1006,6 +1031,7 @@ def run(groups, products, prices, sets, files, mapping, eras=None, held: Mapping
     imp.settle_shared_editions()
     _drop_empty_minted_prints(imp.catalog.files)
     editions_changed = imp.merge_editions()
+    imp.record_edition_products()
     cards_with_aliases = imp.merge_aliases()
     imp.catalog.sort_prints()
     group_review = []
