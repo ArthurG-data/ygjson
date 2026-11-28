@@ -17,6 +17,7 @@ import re
 from collections.abc import Container, Mapping, Sequence, Set
 from urllib.parse import quote
 
+import decisions
 import fetch
 import ids
 import rarities
@@ -336,7 +337,7 @@ def main() -> None:
     for bucket, body in files.items():
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
     ygjson.save_json(ygjson.ARCHETYPES, archetypes)
-    ygjson.save_json(REVIEW, review_body(counts["unknown"], counts["duplicates"]))
+    decisions.save_review(REVIEW, review_body(counts["unknown"], counts["duplicates"]))
     sources.record("ygoprodeck", sources.ygoprodeck(dbver))
 
     set_collisions, archetype_collisions = collisions(set_ids), collisions(archetype_slugs)

@@ -1,0 +1,4 @@
+{
+ "_comment": "Print-level facts a source gets wrong (read by tools/decisions.py, applied last by tools/import_tcgcsv.py). 'prints': {'<print id>': {'editions': [...], 'why': evidence}}. Only editions can be set: a print's set, number, rarity and variant make its id. validate.py reports an override whose print does not exist, or does not carry its values.",
+ "prints": {}
+}

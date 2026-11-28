@@ -1,0 +1,3 @@
+{
+ "_comment": "Review items that are known and accepted (read by tools/decisions.py). '<review file stem>': {'<list>': [{'match': {field: value}, 'why': evidence}]}. An entry matches every item of that list whose fields include all of 'match'; the matched items move from the list to the file's 'ignored' section on the next run. validate.py reports an entry that matches nothing, or whose item is still in the list."
+}

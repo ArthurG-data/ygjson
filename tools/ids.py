@@ -27,6 +27,7 @@ from collections import defaultdict
 from collections.abc import Collection, Container, Mapping
 from pathlib import Path
 
+import decisions
 import reconcile
 import ygjson
 
@@ -344,7 +345,7 @@ def main(argv: list[str] | None = None) -> None:
         ledger = {**before, "sets": ledger["sets"], "archetypes": ledger["archetypes"]}
         review = review_body(ledger, hand[1], renames)
     save_ledger(ledger, IDS)
-    ygjson.save_json(REVIEW, review)
+    decisions.save_review(REVIEW, review)
     counts = [f"{kind} {sum(e['status'] == 'live' for e in ledger[kind].values())} live "
               f"{sum(e['status'] == 'retired' for e in ledger[kind].values())} retired" for kind in KINDS]
     print("ids/ written: " + ", ".join(counts) + f"; {len(review['prints']) + len(review['cards'])} to review")

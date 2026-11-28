@@ -25,7 +25,7 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/Legality.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 ```
 
-Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}, "idsVersion": 1}, "data": {...}}`. All seven come
+Every file is `{"meta": {"version": "0.2.0", "date": "2026-11-07", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`. All seven come
 from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
 committed [`sources.json`](sources.json): the snapshot of each source the data was imported from (see
 [Rebuilding a release](#rebuilding-a-release)).
@@ -59,7 +59,9 @@ committed [`sources.json`](sources.json): the snapshot of each source the data w
   card's (`Synch Realm` is `Synchronized Realm`), so its print is minted.
   `ygoprodeck_set_aliases.json` names a YGOPRODeck set that is another set under a second name: the alias is not
   written and its prints go to the owner (`WCS 2025 Limited Pack` is `Limited Pack World Championship 2025`). Each
-  entry cites its evidence. `ids.json` holds the hand decisions on the id ledger (see [Ids](#ids)).
+  entry cites its evidence. `ids.json` holds the hand decisions on the id ledger (see [Ids](#ids)). `ignore.json`
+  and `print_overrides.json` hold the review items accepted as they are and the print facts set by hand (see
+  [Hand decisions](#hand-decisions)).
 - `review/` lists what the tools could not decide, file by file (see [Review files](#review-files)).
 - `schema/` holds a JSON Schema (draft 2020-12) for sets, eras, cards, archetypes, sealed products and legality events.
   None allows a property it does not name.
@@ -403,6 +405,23 @@ today. `speed_duel` needs `.cache/ygojson` and is skipped without it.
 | `review/tcgplayer-2.json` | TCGplayer products no rule could tie to a print (`unmatched`), products that would share a print (`conflicts`), groups with no set (`groups`), and groups matched through an alias (`groupAliases`) |
 | `review/sealed.json` | sealed products in a group with no set (`noSet`), products with category `other`, and YGOJSON products no TCGplayer product matched (`ygojsonUnmatched`) |
 | `review/ids.json` | retired prints and cards whose successors lead to no live id or to several, and the sets and archetypes the last run renamed, for a person to settle in `mappings/ids.json` |
+
+### Hand decisions
+
+A review item that is settled by hand is recorded once and honoured on every rebuild, each with its `why`:
+
+- `mappings/ignore.json` accepts review items as they are:
+  `{"tcgplayer-2": {"unmatched": [{"match": {"productId": 23322}, "why": "..."}]}}`. An entry matches every item of
+  that list whose fields include all of `match`. On the next run the importer moves the matched items out of the list
+  into the file's `ignored` section, so the lists hold only what is still to settle.
+- `mappings/print_overrides.json` sets a print fact a source gets wrong:
+  `{"prints": {"<print id>": {"editions": ["first"], "why": "..."}}}`. `import_tcgcsv.py` applies it last. Only
+  `editions` can be set, since a print's set, number, rarity and variant make its id.
+
+`validate.py` reports an entry with no `why`, an ignore entry that matches nothing (the item is gone: remove the
+entry), an item still listed or still ignored after its entry changed (rerun the pipeline), and an override whose
+print does not exist or does not carry its values. `pipeline.py` and `build.py` print how many items the review lists
+still hold, and every release records them per list in `meta.reviewCounts`: the number to bring down.
 
 `uv run python tools/coverage_report.py` reports where every TCGplayer product in category 2 ended up: on a print, on a
 sealed product, skipped as an accessory, in a group published after today, or in review. `--strict` exits 1 if any

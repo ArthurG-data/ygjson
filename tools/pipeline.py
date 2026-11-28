@@ -30,6 +30,7 @@ import time
 from collections.abc import Sequence
 from pathlib import Path
 
+import decisions
 import fetch
 import sources
 import ygjson
@@ -117,6 +118,8 @@ def run(start: str, refresh: Sequence[str], offline: bool) -> int:
                 return status
             save_state(stage)
         else:
+            counts = decisions.review_counts(decisions.load_reviews())
+            print(f"review: {sum(counts.values()):,} items to settle in review/ (see mappings/ignore.json)", flush=True)
             return 0
     return RENAMED  # not reached: the second attempt either finishes or returns
 

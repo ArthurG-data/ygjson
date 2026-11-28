@@ -31,6 +31,7 @@ import json
 import re
 from urllib.parse import quote
 
+import decisions
 import sources
 import ygjson
 import ygojson_aggregate
@@ -386,7 +387,7 @@ def main() -> None:
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
     ygjson.save_json(ygjson.ARCHETYPES, archetypes)
     review = review_body(sets, found, theirs, cards, card_found, skipped)
-    ygjson.save_json(REVIEW, review)
+    decisions.save_review(REVIEW, review)
     sources.record("ygojson", sources.ygojson(commit, json.loads((CACHE / "meta.json").read_text(encoding="utf-8"))))
 
     ours = sum(1 for s in sets if s["source"] == "ygoprodeck")

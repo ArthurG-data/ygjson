@@ -32,6 +32,7 @@ import json
 import re
 from collections.abc import Container, Mapping
 
+import decisions
 import ids
 import tcgcsv
 import ygjson
@@ -349,7 +350,7 @@ def main() -> None:
         stale.unlink()
     for set_id, body in out["files"].items():
         ygjson.save_json(ygjson.SEALED / f"{set_id}.json", body)
-    ygjson.save_json(REVIEW, out["review"])
+    decisions.save_review(REVIEW, out["review"])
     s = out["stats"]
     print(f"{s['products']} sealed products in {len(out['files'])} sets; {s['accessories']} accessories skipped, "
           f"{s['noSet']} in groups with no set")

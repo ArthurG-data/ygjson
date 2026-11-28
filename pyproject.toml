@@ -33,10 +33,10 @@ select = ["E", "F", "W", "I", "B", "UP"]
 "tests/*" = ["E501"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["build", "coverage_report", "fetch", "ids", "import_sealed", "import_tcgcsv", "import_ygojson",
-                     "import_ygoprodeck", "import_yugipedia", "legality", "pipeline", "rarities", "reconcile",
-                     "refresh_summary", "seed_ids", "sources", "tcgcsv", "validate", "ygjson", "ygojson_aggregate",
-                     "ygoprodeck", "yugipedia"]
+known-first-party = ["build", "coverage_report", "decisions", "fetch", "ids", "import_sealed", "import_tcgcsv",
+                     "import_ygojson", "import_ygoprodeck", "import_yugipedia", "legality", "pipeline", "rarities",
+                     "reconcile", "refresh_summary", "seed_ids", "sources", "tcgcsv", "validate", "ygjson",
+                     "ygojson_aggregate", "ygoprodeck", "yugipedia"]
 
 [tool.mypy]
 python_version = "3.11"
