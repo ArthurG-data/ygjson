@@ -35,7 +35,7 @@ select = ["E", "F", "W", "I", "B", "UP"]
 [tool.ruff.lint.isort]
 known-first-party = ["build", "coverage_report", "decisions", "fetch", "ids", "import_sealed", "import_tcgcsv",
                      "import_ygojson", "import_ygoprodeck", "import_yugipedia", "legality", "pipeline", "rarities",
-                     "reconcile", "refresh_summary", "seed_ids", "sources", "tcgcsv", "validate", "ygjson",
+                     "reconcile", "refresh_summary", "seed_ids", "sources", "stats", "tcgcsv", "validate", "ygjson",
                      "ygojson_aggregate", "ygoprodeck", "yugipedia"]
 
 [tool.mypy]

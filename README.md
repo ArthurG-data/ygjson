@@ -8,8 +8,9 @@ database ids. TCGCSV, a mirror of TCGplayer's catalogue, gives the product ids, 
 in, and the sealed products. Nothing is matched by name order, and a product that no rule can settle goes to a review
 file instead of into a guess.
 
-Release 0.2.0 holds 1,066 sets, 14,731 cards, 48,494 prints, 63,155 printings, 910 archetypes, 1,160 sealed products
-and 3,105 legality events. 46,142 prints have a TCGplayer product.
+Release <!--n:release.version-->0.2.0<!--/n--> holds <!--n:release.sets-->1,066<!--/n--> sets, <!--n:release.cards-->14,731<!--/n--> cards, <!--n:release.prints-->48,494<!--/n--> prints, <!--n:release.printings-->63,155<!--/n--> printings,
+<!--n:release.archetypes-->910<!--/n--> archetypes, <!--n:release.sealed-->1,160<!--/n--> sealed products and <!--n:release.events-->3,105<!--/n--> legality events. <!--n:release.prints_with_product-->46,142<!--/n--> prints have a TCGplayer
+product. The numbers below describe the data on `main`.
 
 ## Using the data
 
@@ -73,7 +74,7 @@ committed [`sources.json`](sources.json): the snapshot of each source the data w
   today is `Yu-Gi-Oh! 5D's Tag Force 5 Promotional Cards` (`yu-gi-oh-5d-s-tag-force-5-promotional-cards`) and
   `Yu-Gi-Oh! 5D's Tag Force 5 promotional cards` (`...-promotional-cards-2`). A set minted from a TCGplayer group gets
   its parent's id plus `-2020-reprint` or `-25th-anniversary-edition`. `code` is the prefix (`LOB`) and is not
-  unique: 151 prefixes belong to more than one set.
+  unique: <!--n:prefixes_shared-->150<!--/n--> prefixes belong to more than one set.
 - **Card id.** YGOPRODeck's card id, as a string. `passcode` is the same number when it is below 100,000,000, which is
   the 8-digit number printed on the card. YGOPRODeck gives cards that have no passcode an id above that line, and
   those cards have no `passcode`.
@@ -145,24 +146,25 @@ To settle a review row:
 
 | type | Sets | AutoMana / MTG set type |
 |---|---|---|
-| booster | 267 | expansion |
-| structure_deck | 63 | structure_deck |
-| starter_deck | 31 | starter |
-| tin | 43 | tin |
-| special_edition | 75 | special_edition |
-| sneak_peek | 61 | sneak_peek |
-| duel_terminal | 15 | duel_terminal |
-| speed_duel | 26 | speed_duel |
-| promo | 403 | promo |
-| box_set | 62 | box |
+| booster | <!--n:type.booster-->273<!--/n--> | expansion |
+| structure_deck | <!--n:type.structure_deck-->63<!--/n--> | structure_deck |
+| starter_deck | <!--n:type.starter_deck-->31<!--/n--> | starter |
+| tin | <!--n:type.tin-->43<!--/n--> | tin |
+| special_edition | <!--n:type.special_edition-->75<!--/n--> | special_edition |
+| sneak_peek | <!--n:type.sneak_peek-->61<!--/n--> | sneak_peek |
+| duel_terminal | <!--n:type.duel_terminal-->15<!--/n--> | duel_terminal |
+| speed_duel | <!--n:type.speed_duel-->29<!--/n--> | speed_duel |
+| promo | <!--n:type.promo-->412<!--/n--> | promo |
+| box_set | <!--n:type.box_set-->63<!--/n--> | box |
 
 The schema also allows `other` for a set no rule places. No set has it today. `series` is Yugipedia's series for the
-set (`Core Booster`, `Duelist Pack`, `Battles of Legend`), and 463 sets have one.
+set (`Core Booster`, `Duelist Pack`, `Battles of Legend`), and <!--n:sets_with_series-->466<!--/n--> sets have one.
 
 **Parents.** A sneak peek, a special edition or a promo that reprints a booster names it in `parent`. The Yugipedia
 importer picks the one booster that shares the child's code, whose name the child's name starts with, or that the
-two infoboxes' `other_sets` name. If two or more boosters qualify, nothing is set and the set goes to review. 138
-sets have a parent: all 61 sneak peeks, 59 of the 75 special editions, and a few others.
+two infoboxes' `other_sets` name. If two or more boosters qualify, nothing is set and the set goes to review.
+<!--n:sets_with_parent-->138<!--/n--> sets have a parent: <!--n:type.sneak_peek.with_parent-->61<!--/n--> of the <!--n:type.sneak_peek-->61<!--/n--> sneak peeks, <!--n:type.special_edition.with_parent-->59<!--/n--> of the <!--n:type.special_edition-->75<!--/n--> special editions,
+and a few others.
 
 - `absolute-powerforce-sneak-peek-participation-card` has parent `absolute-powerforce`.
 - `absolute-powerforce-special-edition` has parent `absolute-powerforce`.
@@ -188,15 +190,15 @@ Edition" and `unlimited` for the rest. YGOJSON states the editions of a set it m
 `limited`), which replace the guess. TCGCSV then adds every edition its prices show for the set's singles, where
 TCGplayer names the subtypes `1st Edition`, `Unlimited` and `Limited`.
 
-A print lists its own `editions` only when they differ from its set's: 10,364 prints do. A print holding products
+A print lists its own `editions` only when they differ from its set's: <!--n:prints_own_editions-->10,364<!--/n--> prints do. A print holding products
 has the editions they are priced in. That is mostly fewer than its set's, but a product of another group that lands in
 a 2020 reprint set keeps the original's editions on its print. A print with no product has its set's editions, except
 in a set that mixes `limited` with other editions. There Limited is usually a few special prints (the God cards of
 Yugi's Legendary Decks) or all of them (a Duel Terminal set), so the print has the editions most of the set's priced
-prints have, unless two lists tie. 109 prints get their editions this way.
+prints have, unless two lists tie. <!--n:prints_voted_editions-->109<!--/n--> prints get their editions this way.
 
-**Key art.** `releases[0].keyArt` links to YGOPRODeck's set image (910 sets), else to the pack art YGOJSON gives from
-Yugipedia (126 sets). The `source` is the page the image is on. The images are links and are never copied. No source
+**Key art.** `releases[0].keyArt` links to YGOPRODeck's set image (<!--n:keyart.ygoprodeck-->911<!--/n--> sets), else to the pack art YGOJSON gives from
+Yugipedia (<!--n:keyart.ygojson-->127<!--/n--> sets). The `source` is the page the image is on. The images are links and are never copied. No source
 hosts set logos: Konami's product pages show pack mockups and Yugipedia has no logo file for a set. So ygjson has key
 art and no logos.
 
@@ -206,7 +208,7 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 `de`, `it`, `pt`, `es`, `ja`, `ko`, `zh-CN`, `zh-TW`) where YGOJSON has them. YGOJSON's romanisations (`ja_romaji`,
 `ko_rr`) are not names and are left out. The other fields are:
 
-- `kind`: monster, spell, trap, token or skill. 9,468 cards are monsters.
+- `kind`: monster, spell, trap, token or skill. <!--n:cards_monster-->9,421<!--/n--> cards are monsters.
 - `frame`: YGOPRODeck's `frameType`.
 - `attribute` (lower case), `monsterType` (YGOPRODeck's `race`: the monster type, or the spell or trap subtype),
   `level`, `rank`, `linkRating`, `linkArrows`, `scale`, `atk` and `def`. `rank` is the level of a Xyz monster,
@@ -215,25 +217,25 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
 - `archetypes`: archetype slugs.
 - `tcgDate` and `ocgDate`: the card's first release in each, per YGOPRODeck.
 - `images`: links to YGOPRODeck's full image, small image and cropped art, one entry per artwork.
-- `identifiers`: `ygoprodeckId`, and `konamiId` (14,495 cards), `ygojsonId` (13,984) and `yugipediaIds` where known.
+- `identifiers`: `ygoprodeckId`, and `konamiId` (<!--n:cards_konami-->14,495<!--/n--> cards), `ygojsonId` (<!--n:cards_ygojson-->13,991<!--/n-->) and `yugipediaIds` where known.
 - `prints`: every print of the card.
 
 A print has `id`, `set`, `number` (`LOB-001`), `region`, `rarity`, `editions` where they differ from the set's,
 `identifiers.tcgplayerProductIds` and `tcgplayer`. `region` is the letters between the set prefix and the digits of the
 number: `LOB-EN001` has `EN`, `LOB-001` has none, and `LAVD-ENS05` has `EN` because the letter after the region is a
-slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (45,146 prints), `E` (732) and `PT` (456).
+slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (<!--n:region.EN-->45,491<!--/n--> prints), `E` (<!--n:region.E-->732<!--/n-->) and `PT` (<!--n:region.PT-->456<!--/n-->).
 
 **Rarity.** A print's `rarity` is a code from `tools/rarities.py`, which maps YGOPRODeck's and TCGplayer's free text
-onto 41 codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
+onto <!--n:rarity_codes-->41<!--/n--> codes (`common`, `rare`, `super_rare`, `ultra_rare`, `secret_rare`, `qc_secret_rare`, `starlight_rare`,
 `dt_normal_parallel` and so on). Text the table does not know becomes `unknown`, and the print keeps the source's
-string as `rawRarity`, also once TCGplayer's rarity replaces `unknown` (`number+rarity-from-tcgplayer` below). 30 prints
+string as `rawRarity`, also once TCGplayer's rarity replaces `unknown` (`number+rarity-from-tcgplayer` below). <!--n:prints_unknown-->30<!--/n--> prints
 are `unknown`; `review/rarities.json` counts each raw string. The table is the one
 place that decides a rarity, its finish and its tier. TCGplayer's `Emblazoned Ultra Rare` and `Emblazoned Secret Rare`
 are `ultra_rare` and `secret_rare`: Emblazoned is a treatment, and the product's `(EUR)` or `(ESR)` makes it a version
 (see [Variants](#cards-and-prints)).
 
 **Finish.** A printing is `nonfoil` for four rarities, `common`, `short_print`, `super_short_print` and `rare`.
-Every other code is `foil`. An `unknown` rarity gives `null`: 58 printings have no finish. TCGplayer prices a single
+Every other code is `foil`. An `unknown` rarity gives `null`: <!--n:printings_no_finish-->48<!--/n--> printings have no finish. TCGplayer prices a single
 by edition and not by finish, so the finish is a property of the rarity.
 
 **Tier.** `rarityTier` is a value ladder from 1 to 5, with a parallel rarity ranking with its base. The printing has
@@ -263,11 +265,11 @@ products only when they are the same card at the same rarity, like the Red and B
 
 | `match` | Prints | Evidence |
 |---|---|---|
-| `number+rarity` | 41,618 | the group's set has a print with this number and this rarity |
-| `number+rarity-from-tcgplayer` | 193 | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
-| `number` | 436 | the group's set has exactly one print of this number |
-| `number-other-set` | 3,261 | the group's set lacks the number, and exactly one other set has it |
-| `minted` | 675 | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
+| `number+rarity` | <!--n:match.number+rarity-->41,618<!--/n--> | the group's set has a print with this number and this rarity |
+| `number+rarity-from-tcgplayer` | <!--n:match.number+rarity-from-tcgplayer-->193<!--/n--> | one print of the number had an `unknown` rarity, which takes TCGplayer's rarity and a new id |
+| `number` | <!--n:match.number-->436<!--/n--> | the group's set has exactly one print of this number |
+| `number-other-set` | <!--n:match.number-other-set-->3,261<!--/n--> | the group's set lacks the number, and exactly one other set has it |
+| `minted` | <!--n:match.minted-->675<!--/n--> | no print has the number, or the number is held at another rarity, and the product's name is one card: the print is created from the product |
 
 **Prints from TCGplayer.** YGOPRODeck lags TCGplayer and omits whole sets. When no print anywhere has a product's number
 and its name is exactly one card, `import_tcgcsv.py` creates the print with `source: "tcgplayer"`, in the group's set, or
@@ -290,7 +292,7 @@ that number.
 A colour or art with a treatment is one version, with the tags joined in the order the name gives them
 (`alternate-art-silver`, `a-alternate-art`). A product naming two colours or two treatments goes to review.
 
-A print has one price per edition, so it holds several products only when they price different editions: 10 prints hold an
+A print has one price per edition, so it holds several products only when they price different editions: <!--n:prints_several_products-->10<!--/n--> prints hold an
 original and its 2020 reprint, which is sold as another edition. When two products of one card, rarity and version price
 the same edition, the print keeps the one pricing the most editions, then the oldest, and the other goes to review
 `conflicts`.
@@ -302,7 +304,7 @@ run of `import_tcgcsv` starts a card's aliases from its `betaName` and adds TCGp
 in that run, so a name it wrote before never mints a print by itself, and a beta name TCGplayer spells the same way
 stays when the product moves.
 
-2,352 prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
+<!--n:prints_no_product-->2,350<!--/n--> prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
 another product already prices.
 `tools/coverage_report.py` accounts for every product in category 2.
@@ -312,21 +314,23 @@ fields are links. A reader that needs the text reads it from TCGCSV or YGOPRODec
 
 ## Archetypes
 
-`data/archetypes.json` holds the archetypes YGOPRODeck names (667) plus the YGOJSON series that Konami calls an
-archetype and YGOPRODeck lacks (243). `source` says which. A YGOJSON series that matches one of ours by English name
+`data/archetypes.json` holds the archetypes YGOPRODeck names (<!--n:archetypes.ygoprodeck-->666<!--/n-->) plus the YGOJSON series that Konami calls an
+archetype and YGOPRODeck lacks (<!--n:archetypes.ygojson-->243<!--/n-->). `source` says which. A YGOJSON series that matches one of ours by English name
 adds `names` in ten languages, `isArchetype` and its YGOJSON id. `isArchetype` is false for a series Konami does not
-call an archetype (106 today). A card's `archetypes` lists slugs, and `AllArchetypes.json` derives `members`, the card
-ids of the archetype in numeric order, at build time. 131 archetypes have no member card yet.
+call an archetype (<!--n:archetypes.not_archetype-->106<!--/n--> today). A card's `archetypes` lists slugs, and `AllArchetypes.json` derives `members`, the card
+ids of the archetype in numeric order, at build time. <!--n:archetypes.no_member-->131<!--/n--> archetypes have no member card yet.
 
 ## Sealed products
 
 A sealed product is a TCGCSV product with neither a card number nor a rarity, in a group matched to a set. It lives
-in `data/sealed/<set id>.json`. 1,160 are listed.
+in `data/sealed/<set id>.json`. <!--n:sealed-->1,160<!--/n--> are listed.
 
-`category` is one of booster_pack (383), booster_box (284), display (112), structure_deck (79), special_edition (63),
-tin (43), collectors_set (42), starter_deck (37), deck (22), mega_tin (15), case (15), bundle (6), promo_pack (5) or
-other (38). The category comes from ordered name rules, first match wins. A product that is an accessory, such as a
-binder or a card box for a field center, is skipped and appears in no file. 70 products in groups
+`category` is one of booster_pack (<!--n:sealed.booster_pack-->384<!--/n-->), booster_box (<!--n:sealed.booster_box-->285<!--/n-->), display (<!--n:sealed.display-->114<!--/n-->),
+structure_deck (<!--n:sealed.structure_deck-->79<!--/n-->), special_edition (<!--n:sealed.special_edition-->63<!--/n-->), tin (<!--n:sealed.tin-->43<!--/n-->),
+collectors_set (<!--n:sealed.collectors_set-->44<!--/n-->), starter_deck (<!--n:sealed.starter_deck-->37<!--/n-->), deck (<!--n:sealed.deck-->22<!--/n-->),
+mega_tin (<!--n:sealed.mega_tin-->15<!--/n-->), case (<!--n:sealed.case-->15<!--/n-->), bundle (<!--n:sealed.bundle-->6<!--/n-->),
+promo_pack (<!--n:sealed.promo_pack-->5<!--/n-->) or other (<!--n:sealed.other-->48<!--/n-->). The category comes from ordered name rules, first match wins. A product that is an accessory, such as a
+binder or a card box for a field center, is skipped and appears in no file. <!--n:sealed.no_set-->55<!--/n--> products in groups
 with no set go to `review/sealed.json` under `noSet`.
 
 `contents` lists only what a rule or a source states:
@@ -341,12 +345,12 @@ with no set go to `review/sealed.json` under `noSet`.
 - anything else has no contents.
 
 **YGOJSON.** A product YGOJSON names the same (normalised English name) gains `identifiers.ygojsonId` and the packs
-YGOJSON lists for it: 199 products. A pack of one of our sets becomes a `sealed` entry for that set's booster pack with
+YGOJSON lists for it: <!--n:sealed.ygojson-->199<!--/n--> products. A pack of one of our sets becomes a `sealed` entry for that set's booster pack with
 YGOJSON's quantity. A pack that names a card becomes a `cards` entry for that card's print. Contents YGOJSON states
 replace the rule-written `cards`, and the product is `complete` when every pack resolved with a quantity.
 
-`contentsStatus` is `complete` when every item and count is stated (234 products), `partial` when what is listed is
-right but items or counts are missing (673), and `unknown` when nothing is stated (237). Each product's `sources` cite
+`contentsStatus` is `complete` when every item and count is stated (<!--n:sealed.status.complete-->235<!--/n--> products), `partial` when what is listed is
+right but items or counts are missing (<!--n:sealed.status.partial-->674<!--/n-->), and `unknown` when nothing is stated (<!--n:sealed.status.unknown-->251<!--/n-->). Each product's `sources` cite
 TCGplayer's product page and the YGOJSON record.
 
 ## Legality
@@ -360,12 +364,12 @@ An event has `effective`, the date a source states, or `inForceBy`, the date the
 `inForceBy` date is a latest date: the change may have started earlier, and no source says when.
 
 - **History.** YGOJSON dates every change in a card's `tcg`, `ocg` and `speed` history. Each dated entry is an event
-  with source `ygojson` (2,847 events). YGOJSON's `forbidden`, `limited`, `semilimited` and `unlimited` are `banned`,
+  with source `ygojson` (<!--n:events.ygojson-->2,847<!--/n--> events). YGOJSON's `forbidden`, `limited`, `semilimited` and `unlimited` are `banned`,
   `limited`, `semi_limited` and `legal`. Speed Duel also uses `limit1`, `limit2` and `limit3`, which are `limited`,
   `semi_limited` and `legal`. `unreleased` is not a status and makes no event.
 - **Dated lists.** YGOJSON's dates end with the October 2025 lists. From those lists onward, `tools/legality.py` reads
   Yugipedia's list pages, such as `October 2026 Lists (TCG)`, and follows each page's `next` link. Each change a list
-  makes is an event with the page's `start_date` and source `yugipedia` (185 events). A list names every limited card,
+  makes is an event with the page's `start_date` and source `yugipedia` (<!--n:events.yugipedia-->185<!--/n--> events). A list names every limited card,
   so a card it leaves out is legal, unless a name on that list matches no single card here. Such a list moves only the
   cards it names, and the tool prints the name. The walk stops at a page of another medium or format, at a date that
   does not move forward, or at a page that drops over a quarter of the last list, and the tool prints the last date it read.
@@ -375,7 +379,7 @@ An event has `effective`, the date a source states, or `inForceBy`, the date the
   format is legal. YGOPRODeck gives no status to any name with `<` or `>`, including cards Konami's list limits, so its
   silence on such a name says nothing. YGOJSON leads for `speed_duel`. The lead source's current status becomes an event
   only when it differs from the card's last event, or from legal when there is none. That event has `inForceBy`, and
-  the source is `ygoprodeck` or `ygojson` (73 events). YGOPRODeck has no history and YGOJSON has no GOAT list, so every
+  the source is `ygoprodeck` or `ygojson` (<!--n:events.in_force_by-->73<!--/n--> events). YGOPRODeck has no history and YGOJSON has no GOAT list, so every
   GOAT event is of this kind. In `tcg` and `ocg` such an event means a list reached YGOPRODeck before Yugipedia.
 - **Exact dates replace undated ones.** `tools/legality.py` loads `bans.json` first and never rewrites or removes an
   event with `effective`. It removes an `inForceBy` event once the dated events give the same status on its date. A
@@ -383,8 +387,8 @@ An event has `effective`, the date a source states, or `inForceBy`, the date the
   silent, and an `inForceBy` event the dated events contradict otherwise stays, so a difference between the sources
   stays visible.
 
-The file holds 3,105 events: 1,572 in `ocg`, 1,395 in `tcg`, 73 in `goat` and 65 in `speed_duel`; 503 `banned`, 1,095
-`limited`, 738 `semi_limited` and 769 `legal`.
+The file holds <!--n:events-->3,105<!--/n--> events: <!--n:events.ocg-->1,572<!--/n--> in `ocg`, <!--n:events.tcg-->1,395<!--/n--> in `tcg`, <!--n:events.goat-->73<!--/n--> in `goat` and <!--n:events.speed_duel-->65<!--/n--> in
+`speed_duel`; <!--n:events.banned-->503<!--/n--> `banned`, <!--n:events.limited-->1,095<!--/n--> `limited`, <!--n:events.semi_limited-->738<!--/n--> `semi_limited` and <!--n:events.legal-->769<!--/n--> `legal`.
 
 The history before October 2025 can miss a list. Konami's TCG lists of April 14, 2021 and March 10, 2023 have no events
 here, so an event in the weeks after one of those dates reads as the list before it.
@@ -511,12 +515,17 @@ uv run ruff check                          # lint
 uv run mypy                                # types (tools/)
 uv run pytest
 uv run python tools/validate.py            # offline
+uv run python tools/stats.py [--write]     # the README's numbers against the data; --write updates them
 uv run python tools/validate.py --online   # also checks product ids against TCGCSV
 uv run python tools/legality.py --check    # compares with YGOPRODeck's live list
 ```
 
-CI runs only the offline checks (ruff, mypy, pytest, `validate.py`, and the id ledger check against the previous state)
-on every pull request, every push to `main` and every `v*` tag. pytest includes `tests/test_pipeline.py`, which runs
+CI runs only the offline checks (ruff, mypy, pytest, `validate.py`, `stats.py`, and the id ledger check against the previous state)
+on every pull request, every push to `main` and every `v*` tag. Every count this README quotes sits between two HTML
+comments, `n:<key>` before it and `/n` after it, which do not show once rendered; `tools/stats.py` computes them from the committed data and fails
+when one differs, and `--write` rewrites them. The release paragraph names the version in `pyproject.toml` and the counts
+of its tag, or of the working tree before the tag exists: to release, bump the version, run `stats.py --write`, commit
+and tag. pytest includes `tests/test_pipeline.py`, which runs
 `pipeline.py --offline` end to end on a small snapshot of the four sources (one set and three of its cards, in
 `tests/fixtures/pipeline`, cut from a full cache by `tests/fixtures/make_pipeline_fixture.py`) and validates the result. The two live checks run weekly and on demand in
 `live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
