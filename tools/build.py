@@ -23,7 +23,7 @@ import sources
 import ygjson
 
 DIST = ygjson.ROOT / "dist"
-IDS_VERSION = 1
+IDS_VERSION = 2
 
 
 def build(version: str, today: str) -> dict[str, dict]:
@@ -43,7 +43,9 @@ def build(version: str, today: str) -> dict[str, dict]:
     meta = {"version": version, "date": today, "sources": manifest, "idsVersion": IDS_VERSION,
             "reviewCounts": decisions.review_counts(decisions.load_reviews())}
     data = {"AllSets": flat["sets"], "AllCards": flat["cards"], "AllPrintings": flat["printings"],
-            "AllArchetypes": flat["archetypes"], "AllProducts": flat["products"], "Legality": legality, "Ids": ledger}
+            "AllArchetypes": flat["archetypes"], "AllProducts": flat["products"], "Legality": legality,
+            "Ids": {**ledger, "printings": {i: {**e, "uuid": ygjson.printing_uuid(i)}
+                                            for i, e in ledger["printings"].items()}}}
     return {name: {"meta": meta, "data": body} for name, body in data.items()}
 
 

@@ -27,7 +27,12 @@
     "en": "Fireworks Celebration"
    },
    "ocgDate": "2024-07-27",
-   "prints": []
+   "prints": [],
+   "text": {
+    "en": {
+     "effect": "Activate this card by placing 5 Celebration Counters on it. If a monster(s) is Special Summoned from the Extra Deck, and/or a card(s) is sent from the Deck to the GY, by a Spell/Trap effect: Remove 1 Celebration Counter from this card, then, if there are no Celebration Counters on it, destroy it, and if you do, gain 4000 LP, then Set 1 \"Celebration\" Trap from your Deck or GY, then, if you have 1 or less cards in your Deck, you win the Duel."
+    }
+   }
   },
   {
    "archetypes": [
@@ -61,7 +66,15 @@
     "ja": "エルフェンノーツ～託選のアリスティア～"
    },
    "ocgDate": "2025-10-25",
-   "prints": []
+   "prints": [],
+   "text": {
+    "en": {
+     "effect": "You cannot activate the following effects of \"Elvennotes ~Oracle Alicetea~\" in the same Chain. Once per turn: You can target 1 face-up monster you control; move that monster you control to another of your Main Monster Zones. When your opponent activates a Spell/Trap Card and you control 3 or more \"Elvennotes\" monsters: You can negate that effect, then if you control a Synchro Monster, you can destroy that card. You can only use this effect of \"Elvennotes ~Oracle Alicetea~\" once per turn."
+    },
+    "ja": {
+     "effect": "このカード名の、②の効果は１ターンに１度しか使用できず、①②の効果は同一チェーン上では発動できない。①：１ターンに１度、自分フィールドの表側表示モンスター１体を対象として発動できる。その自分のモンスターの位置を他の自分のメインモンスターゾーンに移動する。②：自分フィールドに「エルフェンノーツ」モンスターが３体以上存在し、相手が魔法・罠カードを発動した時に発動できる。その効果を無効にする。自分フィールドにＳモンスターが存在する場合、さらにその無効にしたカードを破壊できる。"
+    }
+   }
   },
   {
    "atk": 3000,
@@ -137,6 +150,11 @@
    ],
    "rank": 10,
    "tcgDate": "2026-02-05",
+   "text": {
+    "en": {
+     "effect": "2+ Level 10 monsters\r\nIf this card is Xyz Summoned: You can attach 1 monster from your Deck to this card as material. You can only use this effect of \"Mercurium the Living Quicksilver\" once per turn. While this card has material, your opponent cannot activate the effects of monsters in their GY with the same Attribute as a monster in your GY. Once per turn, during the End Phase: Detach 1 material from this card or take 3000 damage."
+    }
+   },
    "typeline": [
     "Aqua",
     "Xyz",
@@ -174,6 +192,11 @@
    },
    "ocgDate": "2026-01-24",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "(Quick Effect): You can send 1 other \"Elvennotes\" card from your hand or face-up field to the GY; Special Summon this card from your hand. If this card is Normal or Special Summoned to the center Main Monster Zone: You can Special Summon 1 \"Elvennotes\" monster from your Deck, except \"Elvennotes Regina\". If this card is sent to the GY as Synchro Material: You can add this card to your hand. You can only use each effect of \"Elvennotes Regina\" once per turn."
+    }
+   },
    "typeline": [
     "Spellcaster",
     "Effect"
@@ -229,6 +252,11 @@
     }
    ],
    "tcgDate": "2027-01-28",
+   "text": {
+    "en": {
+     "effect": "\"The Winged Dragon of Ra\" + 3 \"Sun God\" monsters\r\nUnaffected by other cards' effects. Once per turn, during the Main Phase (Quick Effect): You can discard any number of \"Sun God\" cards, then choose that number of your opponent's used Main Monster Zones; your opponent must send monsters in those zones to the GY. When an attack is declared involving this card: You can pay LP so that you only have 1 left; this card gains ATK/DEF equal to the LP paid and the total ATK of \"Sun God\" monsters in your GY."
+    }
+   },
    "typeline": [
     "Divine-Beast",
     "Fusion",
@@ -266,6 +294,11 @@
    "ocgDate": "2026-10-31",
    "prints": [],
    "rank": 10,
+   "text": {
+    "en": {
+     "effect": "2 Level 10 Plant monsters\r\nYou can also Xyz Summon this card by using \"Teardrop the Rikka Queen\" you control (transfer its materials). (Quick Effect): You can detach up to 6 materials from this card; send that many Spells/Traps from the field to the GY, then you can Tribute 1 monster on either field. You can only use this effect of \"Teardrop the Rikka Sacred Queen\" once per turn. Each time a monster(s) is Tributed: Attach 1 card from your opponent's GY to 1 Plant Xyz Monster you control."
+    }
+   },
    "typeline": [
     "Plant",
     "Xyz",
@@ -298,8 +331,28 @@
    "names": {
     "en": "Nahar-Dex, Driver of the Seven Swords"
    },
-   "prints": [],
+   "prints": [
+    {
+     "id": "immortal-phoenix:101403081:IMPH-EN081:starlight_rare",
+     "number": "IMPH-EN081",
+     "rarity": "starlight_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    },
+    {
+     "id": "immortal-phoenix:101403081:IMPH-EN081:ultra_rare",
+     "number": "IMPH-EN081",
+     "rarity": "ultra_rare",
+     "region": "EN",
+     "set": "immortal-phoenix"
+    }
+   ],
    "tcgDate": "2027-01-28",
+   "text": {
+    "en": {
+     "effect": "If you control a monster and the total Levels of Effect Monsters you control are 7 or lower: You can Special Summon this card from your hand or GY, but banish it when it leaves the field. If this card is Normal or Special Summoned from the hand: You can destroy as many other monsters on the field with a Level as possible, and if you do, this card gains 700 ATK for each card destroyed, until the end of this turn. You can only use each effect of \"Nahar-Dex, Driver of the Seven Swords\" once per turn."
+    }
+   },
    "typeline": [
     "Dragon",
     "Effect"
@@ -336,6 +389,11 @@
    },
    "ocgDate": "2027-01-23",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "If this card is in your hand: You can banish 1 \"Blue-Eyes White Dragon\" from your hand or Deck; Special Summon this card, then you can place 1 \"Endless Darkness\" from your hand, Deck, or GY, face-up in your Field Zone. If you have a banished \"Blue-Eyes\" monster: You can target 1 card your opponent controls; banish it, also this card cannot attack this turn. You can only use each effect of \"Blue-Eyes Alternative White Dragon, the Guided Phantom Beast\" once per turn."
+    }
+   },
    "typeline": [
     "Dragon",
     "Effect"
@@ -372,6 +430,11 @@
    },
    "ocgDate": "2027-01-23",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "If you control no monsters, or all monsters you control mention \"Endless Darkness\": You can Special Summon this card from your hand. If this card is Normal or Special Summoned: You can add 1 monster that mentions \"Endless Darkness\" from your Deck to your hand, except a Level 6 monster, or if you have a banished \"Blue-Eyes\" monster, you can add 2 such monsters with different Attributes from each other instead. You can only use each effect of \"Krystal Cloud Dragon\" once per turn."
+    }
+   },
    "typeline": [
     "Dragon",
     "Effect"
@@ -408,6 +471,11 @@
    },
    "ocgDate": "2027-01-23",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "If this card is Normal or Special Summoned: You can send to the GY, or banish, 1 \"Blue-Eyes\" monster from your Deck. If you have a banished \"Blue-Eyes\" monster: You can Tribute this card; Special Summon 1 \"Blue-Eyes White Dragon\" or 1 monster that mentions \"Endless Darkness\", except \"Assault Slash Wyvern\", from your Deck or GY. You can only use each effect of \"Assault Slash Wyvern\" once per turn."
+    }
+   },
    "typeline": [
     "Dragon",
     "Effect"
@@ -444,6 +512,11 @@
    },
    "ocgDate": "2027-01-23",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "If this card is Normal or Special Summoned: You can add 1 Spell/Trap that mentions \"Endless Darkness\" or 1 \"Dark Sacrifice\" from your Deck to your hand. During your opponent's turn, if you have a banished \"Blue-Eyes\" monster (Quick Effect): You can Tribute this card, then target 1 monster on the field; destroy it. If a Dragon monster(s) you control would be destroyed by card effect, you can banish this card from your hand or field instead. You can only use each effect of \"Saggi the Dark Sacrifice Clown\" once per turn."
+    }
+   },
    "typeline": [
     "Spellcaster",
     "Effect"
@@ -477,6 +550,11 @@
    },
    "ocgDate": "2027-01-23",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) while the total ATK of your banished monsters is 4000 or higher, or while you have 5 or more face-down banished cards. You can only Special Summon \"White-Horned Buster Dragon\" once per turn this way. When your opponent activates a monster effect, or Spell Card or effect, on the field (Quick Effect): You can banish 1 card of the same type (Monster or Spell) from your GY; negate the activation, then this card gains 600 ATK. You can only use this effect of \"White-Horned Buster Dragon\" once per turn."
+    }
+   },
    "typeline": [
     "Dragon",
     "Effect"
@@ -513,6 +591,11 @@
    },
    "ocgDate": "2027-01-23",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "You can Ritual Summon this card with \"Chaos Form\". Must be Ritual Summoned. You can banish this card from your hand; add 1 \"Neo Chaos Form\" from your Deck, GY, or banishment to your hand. You can only use this effect of \"Blue-Eyes Chaos MAXIMUM Dragon\" once per turn. If your monster that mentions \"Endless Darkness\" attacks a Defense Position monster, inflict piercing battle damage to your opponent. Any battle damage your opponent takes from battles involving this card is doubled."
+    }
+   },
    "typeline": [
     "Dragon",
     "Ritual",
@@ -550,6 +633,11 @@
    },
    "ocgDate": "2027-01-23",
    "prints": [],
+   "text": {
+    "en": {
+     "effect": "\"Blue-Eyes White Dragon\" + 2 monsters that are \"Blue-Eyes White Dragon\" and/or mention \"Endless Darkness\"\r\nCan make up to 3 attacks on monsters during each Battle Phase. You can only use each of the following effects of \"Neo Blue-Eyes Hyper Ultimate Dragon\" once per turn. During your Main Phase: You can Set 1 Spell/Trap that mentions \"Endless Darkness\" from your Deck or GY. When your opponent activates a monster effect on the field (Quick Effect): You can banish that monster."
+    }
+   },
    "typeline": [
     "Dragon",
     "Fusion",
@@ -582,7 +670,12 @@
     "en": "Endless Darkness"
    },
    "ocgDate": "2027-01-23",
-   "prints": []
+   "prints": [],
+   "text": {
+    "en": {
+     "effect": "Monsters you control with 4000 or more original ATK cannot be destroyed by card effects, also your opponent cannot target them with card effects. You can only use each of the following effects of \"Endless Darkness\" once per turn. During your Main Phase: You can add 1 card that mentions \"Endless Darkness\" from your Deck to your hand, except \"Endless Darkness\", then banish 1 card from your hand. If this card in its owner's possession is destroyed by an opponent's card: You can add 1 Level 10 monster with 0 or 4000 ATK from your Deck to your hand."
+    }
+   }
   },
   {
    "archetypes": [
@@ -610,7 +703,12 @@
     "en": "Neo Chaos Form"
    },
    "ocgDate": "2027-01-23",
-   "prints": []
+   "prints": [],
+   "text": {
+    "en": {
+     "effect": "Activate 1 of these effects (but you can only use each effect of \"Neo Chaos Form\" once per turn);\r\n● Fusion Summon 1 \"Blue-Eyes\" Fusion Monster from your Extra Deck, by shuffling its materials from your hand, GY, and/or banishment into the Deck.\r\n● Ritual Summon 1 \"Chaos\" or \"Black Luster Soldier\" Ritual Monster from your hand or banishment, by banishing monsters that are \"Blue-Eyes White Dragon\" and/or mention \"Endless Darkness\" from your hand, field, and/or GY whose total Levels equal or exceed its Level."
+    }
+   }
   },
   {
    "archetypes": [
@@ -638,7 +736,12 @@
     "en": "Dimensional Ascension"
    },
    "ocgDate": "2027-01-23",
-   "prints": []
+   "prints": [],
+   "text": {
+    "en": {
+     "effect": "Special Summon 1 monster that mentions \"Endless Darkness\" from your GY or banishment, or if you activated this card the turn your opponent activated a card or effect, you can Special Summon from your Deck instead. At the start of the Battle Phase: You can banish this card from your GY; Special Summon 1 of your banished \"Blue-Eyes White Dragon\", but banish it at the end of the Battle Phase. You can only use each effect of \"Dimensional Ascension\" once per turn."
+    }
+   }
   },
   {
    "archetypes": [
@@ -666,7 +769,12 @@
     "en": "Pandemic Infection"
    },
    "ocgDate": "2027-01-23",
-   "prints": []
+   "prints": [],
+   "text": {
+    "en": {
+     "effect": "Target 1 monster in your field or GY that mentions \"Endless Darkness\"; you lose LP equal to its ATK, and if you do, monsters your opponent controls lose an equal amount of ATK this turn. You can banish this card from your GY, then target 1 monster your opponent controls with 0 ATK; banish it. You can only use each effect of \"Pandemic Infection\" once per turn."
+    }
+   }
   }
  ]
 }

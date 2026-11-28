@@ -23,6 +23,7 @@ CARD = {"id": "46986414", "passcode": 46986414, "name": "Dark Magician", "names"
         "kind": "monster", "frame": "normal", "attribute": "dark", "monsterType": "Spellcaster", "level": 7,
         "atk": 2500, "def": 2100, "hasEffect": False, "isTuner": False, "typeline": ["Spellcaster", "Normal"],
         "archetypes": ["dark-magician"], "identifiers": {"ygoprodeckId": 46986414},
+        "text": {"en": {"effect": "The ultimate wizard."}},
         "prints": [{"id": PRINT_A, "set": SET, "number": "LOB-EN005", "region": "EN", "rarity": "ultra_rare",
                     "identifiers": {"tcgplayerProductIds": [10]}},
                    {"id": PRINT_B, "set": SET, "number": "LOB-EN005", "region": "EN", "rarity": "common",
@@ -352,8 +353,25 @@ def test_flatten_with_a_ledger_uses_print_uuids():
     assert rec["id"] == pid and rec["print"] == uuids[PRINT_A]
     assert rec["key"] == f"{PRINT_A}:en:first" and rec["printKey"] == PRINT_A
     old = ygjson.flatten(SETS, CARDS, ARCHETYPES, SEALED)["printings"][f"{PRINT_A}:en:first"]
-    assert {k: v for k, v in rec.items() if k not in ("id", "key", "print", "printKey")} == \
+    assert {k: v for k, v in rec.items() if k not in ("id", "key", "print", "printKey", "uuid", "oracleId")} == \
         {k: v for k, v in old.items() if k not in ("id", "print")}
+
+
+def test_flatten_puts_uuids_and_oracle_ids_on_every_record():
+    import uuid
+    ledger = _ledger_for()
+    out = ygjson.flatten(SETS, CARDS, ARCHETYPES, SEALED, ledger=ledger)
+    card = out["cards"]["46986414"]
+    oracle = next(i for i, o in ledger["oracles"].items() if "46986414" in o["cards"])
+    assert card["uuid"] == ledger["cards"]["46986414"]["uuid"] and card["oracleId"] == oracle
+    assert out["sets"][SET]["uuid"] == ledger["sets"][SET]["uuid"]
+    assert out["archetypes"]["dark-magician"]["uuid"] == ledger["archetypes"]["dark-magician"]["uuid"]
+    assert out["products"]["lob-booster-pack"]["uuid"] == ledger["sealed"]["lob-booster-pack"]["uuid"]
+    for pid, printing in out["printings"].items():
+        assert printing["uuid"] == str(uuid.uuid5(ygjson.YGJSON_NAMESPACE, f"printing:{pid}"))
+        assert printing["oracleId"] == oracle
+    plain = ygjson.flatten(SETS, CARDS, ARCHETYPES, SEALED)
+    assert "uuid" not in plain["cards"]["46986414"] and "oracleId" not in next(iter(plain["printings"].values()))
 
 
 def test_flatten_sealed_contents_point_at_print_uuids():
@@ -470,3 +488,23 @@ def test_normalise_keeps_different_words_apart():
 def test_fold_name_folds_case_apostrophes_and_spaces_but_keeps_punctuation():
     assert ygjson.fold_name("  Magician’s   FORCE ") == "magician's force"
     assert ygjson.fold_name("Yu-Gi-Oh! 5D's") != ygjson.fold_name("Yu Gi Oh 5D's")
+
+
+def test_card_text_needs_an_effect_or_a_pendulum_effect_and_allows_a_yugipedia_source():
+    ok = edit(cards=lambda c: c["046"]["cards"][0].update(text={
+        "en": {"effect": "a"}, "fr": {"pendulumEffect": "b", "source": "yugipedia"}}))
+    assert errors(**ok) == []
+    for bad in ({"en": {}}, {"en": {"effect": ""}}, {"xx": {"effect": "a"}}, {"en": {"effect": "a", "source": "x"}}):
+        assert errors(**edit(cards=lambda c, bad=bad: c["046"]["cards"][0].update(text=bad)))
+
+
+def test_validate_refuses_a_set_whose_first_release_is_not_english():
+    fr = {"language": "fr", "name": "Legende"}
+    out = errors(**edit(sets=lambda s: s[0].update(releases=[fr, s[0]["releases"][0]])))
+    assert out == [f"sets.json: set {SET} must list its English release first"]
+
+
+def test_validate_refuses_two_releases_in_one_language():
+    fr = {"language": "fr", "name": "Legende"}
+    out = errors(**edit(sets=lambda s: s[0]["releases"].extend([fr, dict(fr)])))
+    assert out == [f"sets.json: set {SET} has two fr releases"]

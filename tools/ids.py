@@ -7,14 +7,15 @@ id]}. This module mints print ids and loads, saves and checks the ledger; tools/
 record carries.
 
 The default reconciles data/cards, sets/, data/archetypes.json and data/sealed with the ledger and the hand decisions
-of mappings/ids.json, writes ids/ and review/ids.json (the retired ids that do not lead to exactly one live id, and
-this run's renames, for a person to settle), and exits 3 when a set or archetype was renamed: then only ids/sets.json
-and ids/archetypes.json are written, holding the new name under the old slug, and the pipeline must run again so the
-data carries it before the prints, printings, cards and sealed products are reconciled.
+of mappings/ids.json, gives every card, set, archetype and sealed product a uuid and every card an oracle (one
+gameplay card, in ids/oracles.json), writes ids/ and review/ids.json (the retired ids that do not lead to exactly one
+live id, and this run's renames, for a person to settle), and exits 3 when a set or archetype was renamed: then only
+ids/sets.json and ids/archetypes.json are written, holding the new name under the old slug, and the pipeline must run
+again so the data carries it before the prints, printings, cards, sealed products and oracles are reconciled.
 
---check-against REV compares the ledger on disk with the one at git REV and exits 1 when an entry was removed, an id
-or a print's birth key changed, a formerKeys/formerIds/names list lost what it had, a print's or printing's old key
-is no longer findable, or a retired entry's successors shrank to none.
+--check-against REV compares the ledger on disk with the one at git REV and exits 1 when an entry was removed, an id,
+a uuid or a print's birth key changed, a formerKeys/formerIds/names list or an oracle's cards lost what it had, a
+print's or printing's old key is no longer findable, or a retired entry's successors shrank to none.
 """
 from __future__ import annotations
 
@@ -32,8 +33,8 @@ import reconcile
 import ygjson
 
 IDS = ygjson.ROOT / "ids"
-KINDS = ("prints", "printings", "cards", "sets", "archetypes", "sealed")
-YGJSON_NAMESPACE = uuid.UUID("7d674373-b170-5fd8-ab33-29bacad29ffa")  # uuid5(NAMESPACE_URL, "https://github.com/ArthurG-data/ygjson")
+KINDS = ("prints", "printings", "cards", "sets", "archetypes", "sealed", "oracles")
+YGJSON_NAMESPACE = ygjson.YGJSON_NAMESPACE  # defined in ygjson.py, for reconcile.py too; kept here under its name
 
 
 def mint(birth_key: str, taken: Container[str]) -> str:
@@ -46,12 +47,24 @@ def mint(birth_key: str, taken: Container[str]) -> str:
     return new_id
 
 
+def printing_files(entries: Mapping[str, dict]) -> dict[str, list[dict]]:
+    """{language: printings sorted by id}; a printing's language is the second ":" field of its id."""
+    out: dict[str, list[dict]] = {}
+    for i, e in sorted(entries.items()):
+        out.setdefault(i.split(":")[1], []).append(e)
+    return out
+
+
 def load_ledger(path: Path = IDS) -> dict[str, dict[str, dict]]:
-    """{kind: {id: entry}}; a missing file loads empty."""
+    """{kind: {id: entry}}; a missing file loads empty. The printings are in printings/<language>.json, and a legacy
+    printings.json is read too."""
     ledger: dict[str, dict[str, dict]] = {}
     for kind in KINDS:
-        file = path / f"{kind}.json"
-        entries = json.loads(file.read_text(encoding="utf-8"))[kind] if file.exists() else []
+        files = [path / f"{kind}.json"]
+        if kind == "printings":
+            files += sorted((path / "printings").glob("*.json"))
+        entries = [e for file in files if file.exists()
+                   for e in json.loads(file.read_text(encoding="utf-8"))[kind]]
         ledger[kind] = _by_id(kind, entries)
     return ledger
 
@@ -67,9 +80,19 @@ def _by_id(kind: str, entries: list[dict]) -> dict[str, dict]:
 
 
 def save_ledger(ledger: dict[str, dict[str, dict]], path: Path = IDS) -> None:
-    """One file per kind, entries sorted by id."""
+    """One file per kind, entries sorted by id; the printings split by language into printings/<language>.json, and a
+    legacy printings.json or a language file with no printings left is deleted."""
     for kind in KINDS:
+        if kind == "printings":
+            continue
         ygjson.save_json(path / f"{kind}.json", {kind: [e for _, e in sorted(ledger.get(kind, {}).items())]})
+    (path / "printings.json").unlink(missing_ok=True)
+    files = printing_files(ledger.get("printings", {}))
+    for language, entries in files.items():
+        ygjson.save_json(path / "printings" / f"{language}.json", {"printings": entries})
+    for stale in (path / "printings").glob("*.json"):
+        if stale.stem not in files:
+            stale.unlink()
 
 
 def held_names(ledger: dict[str, dict[str, dict]], kind: str) -> dict[str, str]:
@@ -211,12 +234,14 @@ def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, d
         sealed: dict[str, dict], hand: tuple[dict[str, str], dict[str, list[str]]],
         merges: Mapping[str, str]) -> tuple[dict[str, dict[str, dict]], dict, list[dict]]:
     """Reconcile every kind with the data: (new ledger, its review body, rename rows). Cards go first so prints can
-    follow a retired card to its successor; printings follow the prints. `merges` is {alias set slug: target slug}.
-    `ledger` is not modified."""
+    follow a retired card to its successor, and oracles follow the cards with the hand's successors set; printings
+    follow the prints. Every card, set, archetype and sealed entry gets its `uuid` (reconcile.stamp_uuids). `merges`
+    is {alias set slug: target slug}. `ledger` is not modified."""
     keys, successors = hand
     cards = [c for body in files.values() for c in body.get("cards", [])]
     card_entries, card_successor = reconcile.reconcile_cards(ledger.get("cards", {}), cards)
     card_entries = apply_successors(card_entries, successors)
+    oracle_entries = reconcile.reconcile_oracles(ledger.get("oracles", {}), card_entries)
     # A card a person gave one successor leads its prints there too, as one the rules found does (reconcile.rekey_card).
     card_successor = {**card_successor, **{c: targets[0] for c, targets in successors.items()
                                           if card_entries.get(c, {}).get("status") == "retired" and len(targets) == 1}}
@@ -233,8 +258,10 @@ def run(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str, d
     products = [p for body in sealed.values() for p in body.get("products", [])]
     sealed_entries = reconcile.reconcile_sealed(ledger.get("sealed", {}), products)
     renames = set_renames + archetype_renames
-    new = {"prints": print_entries, "printings": printing_entries, "cards": card_entries, "sets": set_entries,
-           "archetypes": archetype_entries, "sealed": sealed_entries}
+    new = {"prints": print_entries, "printings": printing_entries, "cards": reconcile.stamp_uuids("card", card_entries),
+           "sets": reconcile.stamp_uuids("set", set_entries),
+           "archetypes": reconcile.stamp_uuids("archetype", archetype_entries),
+           "sealed": reconcile.stamp_uuids("sealed", sealed_entries), "oracles": oracle_entries}
     return new, review_body(new, successors, renames), renames
 
 
@@ -264,7 +291,8 @@ def check(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str,
           sealed: dict[str, dict], hand: tuple[dict[str, str], dict[str, list[str]]] = ({}, {})) -> list[str]:
     """Where the ledger and the data disagree, as readable strings: schema errors; an entry filed under another id;
     a print key, printing, card, set, archetype or sealed product with no live entry, a live entry not in the data
-    or a retired one that is; a successor the kind does not hold; and the hand decisions the ledger contradicts."""
+    or a retired one that is; a successor the kind does not hold; two records holding one UUID; a card in no oracle
+    or several (see `_oracle_errors`); and the hand decisions the ledger contradicts."""
     errors = schema_errors(ledger)
     if errors:
         return errors  # the checks below read fields the schema guarantees
@@ -293,13 +321,50 @@ def check(ledger: dict[str, dict[str, dict]], sets: list[dict], files: dict[str,
     errors += _both_ways("archetype", ledger.get("archetypes", {}), {a["slug"] for a in archetypes["archetypes"]})
     errors += _both_ways("sealed product", ledger.get("sealed", {}),
                          {p["id"] for body in sealed.values() for p in body.get("products", [])})
+    errors += _shared_uuids(ledger) + _oracle_errors(ledger.get("cards", {}), ledger.get("oracles", {}))
     return errors + hand_errors(ledger, hand)
 
 
+def _shared_uuids(ledger: Mapping[str, Mapping[str, dict]]) -> list[str]:
+    """UUIDs two records hold: a card's, set's, archetype's or sealed product's `uuid`, a print's or an oracle's id."""
+    holders: dict[str, list[str]] = defaultdict(list)
+    for kind in KINDS:
+        for i, e in sorted(ledger.get(kind, {}).items()):
+            if kind in ("prints", "oracles"):
+                holders[i].append(f"{kind} {i}")
+            elif "uuid" in e:
+                holders[e["uuid"]].append(f"{kind} {i}")
+    return [f"uuid {u}: held by {', '.join(held)}" for u, held in sorted(holders.items()) if len(held) > 1]
+
+
+def _oracle_errors(cards: Mapping[str, dict], oracles: Mapping[str, dict]) -> list[str]:
+    """A card in two oracles, a live card in none or in a retired one, an oracle naming a card the ledger lacks, and a
+    live oracle holding no live card."""
+    homes: dict[str, list[str]] = defaultdict(list)
+    errors = []
+    for oid, o in sorted(oracles.items()):
+        for c in o["cards"]:
+            homes[c].append(oid)
+            if c not in cards:
+                errors.append(f"oracle {oid}: card {c} is not in the ledger")
+        if o["status"] == "live" and not any(cards.get(c, {}).get("status") == "live" for c in o["cards"]):
+            errors.append(f"oracle {oid}: live but holds no live card")
+    for cid, e in sorted(cards.items()):
+        held = homes.get(cid, [])
+        if len(held) > 1:
+            errors.append(f"card {cid}: in {len(held)} oracles ({', '.join(held)})")
+        elif e["status"] == "live" and not held:
+            errors.append(f"card {cid}: live but in no oracle")
+        elif e["status"] == "live" and oracles[held[0]]["status"] != "live":
+            errors.append(f"card {cid}: live but its oracle {held[0]} is retired")
+    return errors
+
+
 def diff_errors(before: dict[str, dict[str, dict]], after: dict[str, dict[str, dict]]) -> list[str]:
-    """What `after` dropped of `before`: an entry removed, an id or a print's birth key changed, a formerKeys,
-    formerIds or names list that no longer starts with what it held, a print's or printing's key that is neither its
-    new key nor in its new formerKeys/formerIds, or a retired entry whose successors shrank to none."""
+    """What `after` dropped of `before`: an entry removed, an id, a uuid or a print's birth key changed, a formerKeys,
+    formerIds, names or (an oracle's) cards list that no longer starts with what it held, a print's or printing's key
+    that is neither its new key nor in its new formerKeys/formerIds, or a retired entry whose successors shrank to
+    none."""
     errors = []
     for kind in KINDS:
         later = after.get(kind, {})
@@ -310,7 +375,9 @@ def diff_errors(before: dict[str, dict[str, dict]], after: dict[str, dict[str, d
                 continue
             if new.get("id") != old.get("id"):
                 errors.append(f"{kind} {i}: id changed from {old.get('id')!r} to {new.get('id')!r}")
-            for field in ("formerKeys", "formerIds", "names"):
+            if "uuid" in old and new.get("uuid") != old["uuid"]:
+                errors.append(f"{kind} {i}: uuid changed from {old['uuid']!r} to {new.get('uuid')!r}")
+            for field in ("formerKeys", "formerIds", "names", "cards"):
                 held = old.get(field, [])
                 if new.get(field, [])[:len(held)] != held:
                     errors.append(f"{kind} {i}: {field} {held} is not kept at the start of {new.get(field, [])}")
@@ -331,25 +398,29 @@ def _birth(entry: dict) -> str | None:
 
 
 def ledger_at(rev: str, root: Path = ygjson.ROOT) -> dict[str, dict[str, dict]]:
-    """The ledger committed at git `rev`; a kind whose file is not in `rev`'s tree loads empty. Exits on a rev git
+    """The ledger committed at git `rev`, in either printings layout; a kind whose file is not in `rev`'s tree loads
+    empty. Exits on a rev git
     lacks and on any other git failure, so a ledger git could not read is never taken for an empty one."""
     known = subprocess.run(["git", "rev-parse", "--verify", "--quiet", f"{rev}^{{commit}}"], cwd=root,
                            capture_output=True)
     if known.returncode != 0:
         sys.exit(f"{rev}: no such git revision")
-    listed = subprocess.run(["git", "ls-tree", "--name-only", rev, "ids/"], cwd=root, capture_output=True)
+    listed = subprocess.run(["git", "ls-tree", "-r", "--name-only", rev, "ids/"], cwd=root, capture_output=True)
     if listed.returncode != 0:
         sys.exit(f"{rev}: git ls-tree failed: {listed.stderr.decode('utf-8', 'replace').strip()}")
     present = set(listed.stdout.decode("utf-8").split())
     ledger: dict[str, dict[str, dict]] = {}
     for kind in KINDS:
-        path = f"ids/{kind}.json"
+        paths = [f"ids/{kind}.json"]
+        if kind == "printings":
+            paths += sorted(p for p in present if p.startswith("ids/printings/") and p.endswith(".json"))
         entries: list[dict] = []
-        if path in present:
-            shown = subprocess.run(["git", "show", f"{rev}:{path}"], cwd=root, capture_output=True)
-            if shown.returncode != 0:
-                sys.exit(f"{rev}:{path}: {shown.stderr.decode('utf-8', 'replace').strip()}")
-            entries = json.loads(shown.stdout.decode("utf-8"))[kind]
+        for path in paths:
+            if path in present:
+                shown = subprocess.run(["git", "show", f"{rev}:{path}"], cwd=root, capture_output=True)
+                if shown.returncode != 0:
+                    sys.exit(f"{rev}:{path}: {shown.stderr.decode('utf-8', 'replace').strip()}")
+                entries += json.loads(shown.stdout.decode("utf-8"))[kind]
         ledger[kind] = _by_id(kind, entries)
     return ledger
 

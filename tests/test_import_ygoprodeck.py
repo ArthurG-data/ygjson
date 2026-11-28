@@ -268,3 +268,26 @@ def test_a_beta_name_is_kept_as_betaName_and_as_an_alias():
     assert (beta["betaName"], beta["aliases"]) == ("Dark Magican", ["Dark Magican"])
     same = imp.card_entry(raw_card(misc_info=[{"beta_name": "Dark Magician", "has_effect": 0}]))
     assert "betaName" not in same and "aliases" not in same
+
+
+def test_card_entry_takes_english_text_from_desc():
+    assert imp.card_entry(raw_card(desc="The ultimate wizard."))["text"] == {"en": {"effect": "The ultimate wizard."}}
+
+
+def test_card_entry_splits_a_pendulum_monsters_text():
+    raw = raw_card(type="Pendulum Effect Monster", frameType="effect_pendulum", desc="[ Pendulum Effect ] a\n[ Monster Effect ] b",
+                   pend_desc="a", monster_desc="b")
+    assert imp.card_entry(raw)["text"] == {"en": {"effect": "b", "pendulumEffect": "a"}}
+
+
+def test_card_entry_writes_no_text_when_desc_is_empty():
+    assert "text" not in imp.card_entry(raw_card(desc=""))
+    assert "text" not in imp.card_entry(raw_card())
+    assert "text" not in imp.card_entry(raw_card(type="Pendulum Effect Monster", frameType="effect_pendulum"))
+
+
+def test_card_entry_takes_a_pendulum_monsters_desc_when_it_has_no_split_text():
+    raw = raw_card(type="Pendulum Effect Monster", frameType="effect_pendulum", desc="Whole text.")
+    assert imp.card_entry(raw)["text"] == {"en": {"effect": "Whole text."}}
+    empty = raw_card(type="Pendulum Effect Monster", frameType="effect_pendulum", desc="", pend_desc="", monster_desc="")
+    assert "text" not in imp.card_entry(empty)

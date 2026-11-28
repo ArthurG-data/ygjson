@@ -33,6 +33,8 @@ def test_the_database_holds_each_record_as_columns_and_the_rest_as_json(tmp_path
     assert q("SELECT name, monster_type, atk, json_extract(data, '$.typeline') FROM cards") == [
         ("Dark Magician", "Spellcaster", 2500, '["Spellcaster","Normal"]')]
     assert q("SELECT language, name FROM card_names") == [("en", "Dark Magician")]
+    assert q("SELECT card, language, effect, pendulum_effect FROM card_texts") == [
+        ("46986414", "en", "The ultimate wizard.", None)]
     first = q("""SELECT number, edition, tcgplayer_product_id, tcgplayer_subtype, json_extract(data, '$.identifiers')
                  FROM printings WHERE key = ?""", f"{PRINT_A}:en:first")
     assert first == [("LOB-EN005", "first", 10, "1st Edition", '{"tcgplayerProductIds":[10]}')]
@@ -42,6 +44,20 @@ def test_the_database_holds_each_record_as_columns_and_the_rest_as_json(tmp_path
     assert q("SELECT card, format, status, effective FROM legality_events") == [("46986414", "tcg", "limited", "2005-03-01")]
     assert q("SELECT kind, status FROM ids WHERE key = ?", PRINT_A) == [("prints", "live")]
     assert q("SELECT count(*) FROM former_keys") == [(0,)]
+
+
+def test_package_writes_uuid_and_oracle_columns(tmp_path):
+    d = docs()
+    package.load(d, tmp_path / "x.sqlite")
+    db = sqlite3.connect(tmp_path / "x.sqlite")
+    card = d["AllCards"]["data"]["46986414"]
+    assert db.execute("SELECT uuid, oracle_id FROM cards").fetchall() == [(card["uuid"], card["oracleId"])]
+    assert db.execute("SELECT id, card FROM oracles").fetchall() == [(card["oracleId"], "46986414")]
+    assert db.execute("SELECT count(*) FROM printings WHERE uuid IS NOT NULL AND oracle_id = ?",
+                      (card["oracleId"],)).fetchall() == [(len(d["AllPrintings"]["data"]),)]
+    for table in ("sets", "archetypes", "products"):
+        assert db.execute(f"SELECT count(*) FROM {table} WHERE uuid IS NULL").fetchall() == [(0,)]
+    assert "uuid" not in db.execute("SELECT data FROM cards").fetchone()[0]
 
 
 def test_a_former_key_resolves_to_its_id(tmp_path):

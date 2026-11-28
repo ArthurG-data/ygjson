@@ -352,3 +352,86 @@ def test_an_unsettled_number_goes_to_review_and_other_regions_and_minted_prints_
 def test_apply_scans_takes_away_a_scan_no_longer_found():
     cards = [{"prints": [{"id": "u", "scans": {"first": "https://y/old.png"}}]}]
     assert imp.apply_scans(cards, {}) == 0 and "scans" not in cards[0]["prints"][0]
+
+
+def test_apply_card_writes_official_text_per_language():
+    card = our_card("1")
+    g = their_card("g", text={"en": {"name": "x"}, "fr": {"name": "y", "effect": "Effet.", "pendulumEffect": "Pendule.",
+                                                          "official": True},
+                              "ja_romaji": {"effect": "romaji"}})
+    imp.apply_card(card, g)
+    assert card["text"] == {"fr": {"effect": "Effet.", "pendulumEffect": "Pendule."}}
+
+
+def test_apply_card_never_writes_unofficial_or_empty_text():
+    card = our_card("1")
+    imp.apply_card(card, their_card("g", text={"en": {"effect": "Fan.", "official": False},
+                                               "de": {"effect": "", "official": True},
+                                               "it": {"effect": "Fan.", "official": False}}))
+    assert "text" not in card
+
+
+def test_apply_card_never_overwrites_english_text():
+    card = {**our_card("1"), "text": {"en": {"effect": "Ours."}}}
+    imp.apply_card(card, their_card("g", text={"en": {"effect": "Theirs.", "official": True}}))
+    assert card["text"] == {"en": {"effect": "Ours."}}
+
+
+def test_apply_card_drops_text_ygojson_no_longer_has_but_keeps_yugipedias():
+    card = {**our_card("1"), "text": {"en": {"effect": "Ours."}, "fr": {"effect": "Vieux."},
+                                      "de": {"effect": "Yugi.", "source": "yugipedia"}}}
+    imp.apply_card(card, their_card("g", text={"es": {"effect": "Nuevo.", "official": True}}))
+    assert card["text"] == {"en": {"effect": "Ours."}, "de": {"effect": "Yugi.", "source": "yugipedia"},
+                            "es": {"effect": "Nuevo."}}
+    imp.apply_card(card, their_card("g", text={}))
+    assert card["text"] == {"en": {"effect": "Ours."}, "de": {"effect": "Yugi.", "source": "yugipedia"}}
+
+
+def western(**over):
+    g = their_set("u", "Legend", "LOB-EN", yugipedia="Legend", date="2002-03-08", image="https://ms/en.png")
+    g["name"].update(fr="Legende", es="Leyenda")
+    g["locales"]["fr"] = {"language": "fr", "prefix": "LOB-FR", "date": "2023-04-20", "image": "https://ms/fr.png"}
+    g["locales"]["sp"] = {"language": "es", "prefix": "LOB-SP", "date": "2023-05-01"}
+    g["locales"].update(over)
+    return g
+
+
+def test_apply_set_adds_a_release_per_western_locale():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western())
+    assert s["releases"][1] == {"language": "fr", "name": "Legende", "releaseDate": "2023-04-20", "prefix": "LOB-FR",
+                                "keyArt": {"url": "https://ms/fr.png", "source": "https://yugipedia.com/wiki/Legend"}}
+
+
+def test_apply_set_maps_sp_to_es():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western())
+    es = s["releases"][2]
+    assert es == {"language": "es", "name": "Leyenda", "releaseDate": "2023-05-01", "prefix": "LOB-SP"}
+
+
+def test_a_release_without_a_translated_name_takes_the_english_one():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western(de={"language": "de", "prefix": "LOB-DE"}))
+    assert {"language": "de", "name": "Legend", "prefix": "LOB-DE"} in s["releases"]
+
+
+def test_apply_set_keeps_english_first_and_untouched():
+    s = our_set("lob", "Legend", "LOB")
+    s["releases"][0].update(releaseDate="2000-01-01")
+    imp.apply_set(s, western())
+    assert [r["language"] for r in s["releases"]] == ["en", "fr", "es"]
+    assert s["releases"][0] == {"language": "en", "name": "Legend", "releaseDate": "2000-01-01",
+                                "keyArt": {"url": "https://ms/en.png", "source": "https://yugipedia.com/wiki/Legend"}}
+
+
+def test_apply_set_drops_a_language_ygojson_no_longer_gives():
+    s = our_set("lob", "Legend", "LOB")
+    imp.apply_set(s, western())
+    g = western()
+    del g["locales"]["fr"]
+    imp.apply_set(s, g)
+    assert [r["language"] for r in s["releases"]] == ["en", "es"]
+    s["releases"].append({"language": "de", "name": "x"})  # another stage's release goes too
+    imp.apply_set(s, g)
+    assert [r["language"] for r in s["releases"]] == ["en", "es"]

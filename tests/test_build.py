@@ -39,7 +39,7 @@ def test_meta_sources_is_the_committed_manifest(data):
     docs = build.build("0.0.0-dev", "2026-10-28")
     assert set(docs) == {"AllSets", "AllCards", "AllPrintings", "AllArchetypes", "AllProducts", "Legality", "Ids"}
     counts = {"rarities.unknown": 1, "tcgplayer-2.groups": 0, "tcgplayer-2.unmatched": 2}  # ignored items left out
-    assert all(d["meta"] == {"version": "0.0.0-dev", "date": "2026-10-28", "sources": MANIFEST, "idsVersion": 1,
+    assert all(d["meta"] == {"version": "0.0.0-dev", "date": "2026-10-28", "sources": MANIFEST, "idsVersion": 2,
                              "reviewCounts": counts} for d in docs.values())
 
 
@@ -95,13 +95,22 @@ def test_release_printings_are_keyed_by_uuid(data):
 
 def test_ids_json_ships_the_whole_ledger(data):
     docs = build.build("0.1.0", "2026-10-28")
-    assert docs["Ids"]["data"] == data
-    assert set(docs["Ids"]["data"]) == set(ids.KINDS)
+    shipped = docs["Ids"]["data"]
+    assert set(shipped) == set(ids.KINDS)
+    assert {k: v for k, v in shipped.items() if k != "printings"} == {k: v for k, v in data.items() if k != "printings"}
+    assert {i: {k: v for k, v in e.items() if k != "uuid"} for i, e in shipped["printings"].items()} == data["printings"]
 
 
-def test_meta_carries_ids_version(data):
+def test_ids_printing_uuids_match_all_printings(data):
     docs = build.build("0.1.0", "2026-10-28")
-    assert all(d["meta"]["idsVersion"] == 1 for d in docs.values())
+    live = docs["AllPrintings"]["data"]
+    assert live
+    assert all(docs["Ids"]["data"]["printings"][i]["uuid"] == p["uuid"] for i, p in live.items())
+
+
+def test_build_meta_ids_version_is_2(data):
+    docs = build.build("0.1.0", "2026-10-28")
+    assert all(d["meta"]["idsVersion"] == 2 for d in docs.values())
 
 
 def test_sealed_contents_point_at_print_uuids(data, monkeypatch):

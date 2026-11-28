@@ -8,7 +8,7 @@ database ids. TCGCSV, a mirror of TCGplayer's catalogue, gives the product ids, 
 in, and the sealed products. Nothing is matched by name order, and a product that no rule can settle goes to a review
 file instead of into a guess.
 
-Release <!--n:release.version-->0.3.0<!--/n--> holds <!--n:release.sets-->1,066<!--/n--> sets, <!--n:release.cards-->14,708<!--/n--> cards, <!--n:release.prints-->48,657<!--/n--> prints, <!--n:release.printings-->63,305<!--/n--> printings,
+Release <!--n:release.version-->0.4.0<!--/n--> holds <!--n:release.sets-->1,066<!--/n--> sets, <!--n:release.cards-->14,708<!--/n--> cards, <!--n:release.prints-->48,659<!--/n--> prints, <!--n:release.printings-->63,307<!--/n--> printings,
 <!--n:release.archetypes-->913<!--/n--> archetypes, <!--n:release.sealed-->1,160<!--/n--> sealed products and <!--n:release.events-->3,105<!--/n--> legality events. <!--n:release.prints_with_product-->46,499<!--/n--> prints have a TCGplayer
 product. The numbers below describe the data on `main`.
 
@@ -27,19 +27,19 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Changes.json
 ```
 
-Every file is `{"meta": {"version": "X.Y.Z", "date": "YYYY-MM-DD", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
+Every file is `{"meta": {"version": "X.Y.Z", "date": "YYYY-MM-DD", "sources": {...}, "idsVersion": 2, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
 `{"version", "date", "since"}`. All eight come from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
 committed [`sources.json`](sources.json): the snapshot of each source the data was imported from (see
 [Rebuilding a release](#rebuilding-a-release)).
 
 | File | Keyed by | Holds |
 |---|---|---|
-| `AllSets.json` | set id (`legend-of-blue-eyes-white-dragon`) | name, code, type, series, parent, era, editions, TCGplayer group ids, identifiers, and the release with its date and key art |
-| `AllCards.json` | card id (`89631139`) | the facts every print of the card shares, its name in each language, and the permanent ids of its prints |
+| `AllSets.json` | set id (`legend-of-blue-eyes-white-dragon`) | `uuid`, name, code, type, series, parent, era, editions, TCGplayer group ids, identifiers, and its releases (English, and the fr, de, it, es and pt ones where the set has them) with their dates and key art |
+| `AllCards.json` | card id (`89631139`) | the card's `uuid` and `oracleId`, the facts every print of the card shares, its name and its text in each language, and the permanent ids of its prints |
 | `AllPrintings.json` | printing id, `<print uuid>:<language>:<edition>` (`7fb2b3b7-22d1-5e78-8f11-31cfa734fbe9:en:first`) | its readable `key` (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`), `print` (the print's UUID), `printKey`, set, number, region, rarity and its tier, edition, finish, TCGplayer product ids, `tcgplayerPrice`: the product and price subtype of its edition, and `scan`: Yugipedia's picture of it |
 | `AllArchetypes.json` | archetype slug (`blue-eyes`) | name, names by language, whether Konami calls it an archetype, and the ids of its member cards |
 | `AllProducts.json` | sealed product id (`legend-of-blue-eyes-white-dragon-booster-box`) | category, set, TCGplayer product id, release date, contents and the sources that state them |
-| `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
+| `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`, `oracles`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
 | `Legality.json` | `formats`, `events` | the four formats and every change of a card's status in them |
 | `Changes.json` | kind, then `added`, `retired`, `renamed` | the ids added since `meta.since` (the previous release), the ids retired with the live ids they lead to, and the ids whose readable name changed, `from` and `to`. The release notes open with the same counts. `since` is `null` in the first release to publish the ledger, where every id is added |
 
@@ -47,7 +47,7 @@ Beside them the release attaches:
 
 - `<file>.json.gz` for each JSON file, gzipped: `AllPrintings.json` is 47 MB and `AllPrintings.json.gz` about 6 MB.
 - `ygjson.sqlite.gz`, the same data as one SQLite database (about 29 MB, 113 MB unpacked). Each table is a kind of
-  record: `sets`, `cards`, `card_names`, `printings`, `archetypes`, `archetype_members`, `products`, `formats`,
+  record: `sets`, `cards`, `card_names`, `card_texts`, `printings`, `archetypes`, `archetype_members`, `products`, `formats`,
   `legality_events`, `ids` and `former_keys`, and `meta` holds the build's `meta`. The fields most queries filter on
   are columns (`printings` has `card`, `set`, `number`, `rarity`, `edition`, `tcgplayer_product_id`,
   `tcgplayer_subtype` and so on), and `data` holds the record's other fields as JSON. `tools/package.py` lists them all.
@@ -136,7 +136,22 @@ and `Ids.json` ships it.
      what it became. Several, or none, means the data cannot tell which print it was: ask the holder.
 - Cards, sets, archetypes and sealed products keep their ids and have entries too, so `Ids.json` lists every id the
   data has ever used.
-- `meta.idsVersion` is the version of this layout. It is `1`.
+- Every record has a `uuid`: sets, cards, archetypes, sealed products and printings. A set's, card's, archetype's
+  or product's is minted once and kept by the ledger, so a renamed set keeps it. A printing's is derived from its id.
+  `Ids.json` lists each UUID next to its readable id (a printing's entry carries its `uuid` too, derived when
+  the file is built), so a reader holding either finds the other.
+- `oracleId` (on a card and on each of its printings) groups a card and its reprints. Today one oracle holds one card.
+  `Ids.json`'s `oracles` lists each oracle and its cards.
+- `meta.idsVersion` is the version of this layout. It is `2`.
+
+#### Migrating from 0.3.0
+
+Everything is additive: nothing is removed or renamed, and every id 0.3.0 published is still live with the same key.
+
+- New: a `uuid` on every set, card, archetype, sealed product and printing, and an `oracleId` on every card and printing.
+- New: a card's `text` in each language that has one (English from YGOPRODeck, the rest from YGOJSON).
+- New: a set's `releases` in French, German, Italian, Spanish and Portuguese, next to the English one.
+- `meta.idsVersion` is `2`, and `Ids.json` has a new `oracles` kind.
 
 #### Migrating from 0.2.0
 
@@ -240,15 +255,16 @@ A card has an `id`, an optional `passcode`, a `name` that equals `names.en`, and
   `level`, `rank`, `linkRating`, `linkArrows`, `scale`, `atk` and `def`. `rank` is the level of a Xyz monster,
   which YGOPRODeck reports as `level`. A card that prints `?` has no `atk` or `def`, and a Link monster has no `def`.
 - `hasEffect`, `isTuner` and `typeline`, the tokens of the type line in order (`Cyberse`, `Link`, `Effect`).
+- `text`: the card's effect text by language (see Card text below).
 - `archetypes`: archetype slugs.
 - `tcgDate` and `ocgDate`: the card's first release in each, per YGOPRODeck.
 - `images`: links to YGOPRODeck's full image, small image and cropped art, one entry per artwork.
 - `identifiers`: `ygoprodeckId`, and `konamiId` (<!--n:cards_konami-->14,517<!--/n--> cards), `ygojsonId` (<!--n:cards_ygojson-->13,991<!--/n-->) and `yugipediaIds` where known.
 - `prints`: every print of the card.
 
-<!--n:cards_no_print-->478<!--/n--> cards have no print. YGOPRODeck lists every card, but a print needs an English set that lists it:
+<!--n:cards_no_print-->477<!--/n--> cards have no print. YGOPRODeck lists every card, but a print needs an English set that lists it:
 <!--n:cards_no_print.ocg-->385<!--/n--> are OCG cards with no TCG release yet (an `ocgDate` and no `tcgDate`),
-<!--n:cards_no_print.token-->79<!--/n--> are tokens no set lists, and <!--n:cards_no_print.other-->14<!--/n--> are announced cards still under a
+<!--n:cards_no_print.token-->79<!--/n--> are tokens no set lists, and <!--n:cards_no_print.other-->13<!--/n--> are announced cards still under a
 temporary id (`100461002`), cards from the video games, or a card YGOPRODeck lists no set for yet. They are kept, so a deck list or a legality event can
 name them, and gain prints once a set lists them. YGOPRODeck's placeholder for unrevealed cards in deck lists
 (`???`, `149694341`) is not a card and is left out.
@@ -256,7 +272,7 @@ name them, and gain prints once a set lists them. YGOPRODeck's placeholder for u
 A print has `id`, `set`, `number` (`LOB-001`), `region`, `rarity`, `editions` where they differ from the set's,
 `identifiers.tcgplayerProductIds` and `tcgplayer`. `region` is the letters between the set prefix and the digits of the
 number: `LOB-EN001` has `EN`, `LOB-001` has none, and `LAVD-ENS05` has `EN` because the letter after the region is a
-slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (<!--n:region.EN-->45,615<!--/n--> prints), `E` (<!--n:region.E-->732<!--/n-->) and `PT` (<!--n:region.PT-->456<!--/n-->).
+slot, and `TDIL-ENSE3` has `EN` because `SE` marks a special edition. The commonest regions are `EN` (<!--n:region.EN-->45,617<!--/n--> prints), `E` (<!--n:region.E-->732<!--/n-->) and `PT` (<!--n:region.PT-->456<!--/n-->).
 
 **Scans.** A print's `scans` links Yugipedia's picture of that print in each edition (`{"first": ..., "unlimited":
 ...}`), so it shows which of the card's artworks the print carries; a printing has the one of its edition as `scan`.
@@ -352,13 +368,18 @@ run of `import_tcgcsv` starts a card's aliases from its `betaName` and adds TCGp
 in that run, so a name it wrote before never mints a print by itself, and a beta name TCGplayer spells the same way
 stays when the product moves.
 
-<!--n:prints_no_product-->2,158<!--/n--> prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
+<!--n:prints_no_product-->2,160<!--/n--> prints have no product. A single no rule settles goes to `review/tcgplayer-2.json`: `unmatched` has the product
 and the reason, and `conflicts` lists a product that would share a print with another card, another rarity, or an edition
 another product already prices.
 `tools/coverage_report.py` accounts for every product in category 2.
 
-**No effect text.** ygjson records facts. It copies no card effect text, product description or card art, and its image
-fields are links. A reader that needs the text reads it from TCGCSV or YGOPRODeck at load time. See `NOTICE`.
+**Card text.** A card's `text` maps a language to `effect` and, on a Pendulum monster, `pendulumEffect`. The text is
+Konami's, reproduced as Konami published it. English comes from YGOPRODeck (`desc`, or `monster_desc` and `pend_desc`
+on a Pendulum monster). The other languages come from YGOJSON, and from Yugipedia for what YGOJSON lacks (those
+entries carry `"source": "yugipedia"`). A text YGOJSON marks `official: false`, an empty text and Yugipedia's
+`translated_text` are never shipped. `import_ygojson` rewrites a card's non-English text on each run. The database
+holds it in `card_texts`. ygjson still copies no product description or card art, and its image fields are links. See
+`NOTICE`.
 
 ## Archetypes
 
