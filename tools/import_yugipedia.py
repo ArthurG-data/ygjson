@@ -34,6 +34,7 @@ import json
 import re
 from pathlib import Path
 
+import decisions
 import import_ygoprodeck
 import sources
 import ygjson
@@ -323,7 +324,7 @@ def main() -> None:
     pages, how = resolve_pages(sets)
     review, stats, evidence = build(sets, pages, ygjson.load_eras(), mapping)
     ygjson.save_json(ygjson.SETS, sets)
-    ygjson.save_json(REVIEW, review)
+    decisions.save_review(REVIEW, review)
     if (pages_read := sources.yugipedia(yugipedia.DEFAULT_CACHE)) is not None:
         sources.record("yugipedia", pages_read)
     types = collections.Counter(s["type"] for s in sets)

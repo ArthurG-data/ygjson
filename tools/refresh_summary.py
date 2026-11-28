@@ -18,6 +18,7 @@ import subprocess
 from collections.abc import Mapping
 from pathlib import Path
 
+import decisions
 import ids
 import sources
 import ygjson
@@ -98,7 +99,7 @@ def body(before: dict, after: dict, names: Mapping[str, str], today: str) -> str
         old_review, new_review = before["reviews"].get(name) or {}, after["reviews"].get(name) or {}
         for key in sorted(old_review.keys() | new_review.keys()):
             a, b = _size(old_review.get(key)), _size(new_review.get(key))
-            if a is None and b is None:
+            if key == decisions.IGNORED or (a is None and b is None):
                 continue
             if (a or 0) == (b or 0):
                 same += 1

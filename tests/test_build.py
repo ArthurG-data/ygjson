@@ -6,10 +6,14 @@ import pytest
 from test_ygjson import ARCHETYPES, CARDS, ERAS, LEGALITY, SEALED, SETS
 
 import build
+import decisions
 import ids
 import sources
 import ygjson
 
+REVIEWS = {"tcgplayer-2": {"unmatched": [{"productId": 1}, {"productId": 2}], "groups": [],
+                           "ignored": {"unmatched": [{"productId": 3}]}},
+           "rarities": {"duplicateRows": 51, "unknown": [{"rarity": "New"}]}}
 MANIFEST = {"ygoprodeck": {"databaseVersion": "147.67", "lastUpdate": "2026-11-04 16:00:24"},
             "ygojson": {"commit": "5d97ede58b68994c3e99a43d419ed5d2c44c7284", "increment": 1559},
             "tcgcsv": {"modifiedOn": "2026-11-05"}, "yugipedia": {"pages": 1216, "fetchedThrough": "2026-11-05"}}
@@ -24,6 +28,7 @@ def data(monkeypatch):
     monkeypatch.setattr(ygjson, "load_sealed", lambda: SEALED)
     monkeypatch.setattr(ygjson, "load_legality", lambda: LEGALITY)
     monkeypatch.setattr(sources, "load", lambda: copy.deepcopy(MANIFEST))
+    monkeypatch.setattr(decisions, "load_reviews", lambda: copy.deepcopy(REVIEWS))
     ledger = ids.run({k: {} for k in ids.KINDS}, SETS, CARDS, ARCHETYPES, SEALED, ({}, {}), {})[0]
     monkeypatch.setattr(ids, "load_ledger", lambda: ledger)
     monkeypatch.setattr(ids, "load_hand", lambda: ({}, {}))
@@ -33,8 +38,9 @@ def data(monkeypatch):
 def test_meta_sources_is_the_committed_manifest(data):
     docs = build.build("0.0.0-dev", "2026-10-28")
     assert set(docs) == {"AllSets", "AllCards", "AllPrintings", "AllArchetypes", "AllProducts", "Legality", "Ids"}
-    assert all(d["meta"] == {"version": "0.0.0-dev", "date": "2026-10-28", "sources": MANIFEST, "idsVersion": 1}
-               for d in docs.values())
+    counts = {"rarities.unknown": 1, "tcgplayer-2.groups": 0, "tcgplayer-2.unmatched": 2}  # ignored items left out
+    assert all(d["meta"] == {"version": "0.0.0-dev", "date": "2026-10-28", "sources": MANIFEST, "idsVersion": 1,
+                             "reviewCounts": counts} for d in docs.values())
 
 
 @pytest.mark.parametrize("manifest", [{}, {**MANIFEST, "ygojson": {"commit": "main", "increment": 1559}}])

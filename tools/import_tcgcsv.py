@@ -62,6 +62,7 @@ import re
 from collections.abc import Callable, Container, Mapping, Sequence
 from pathlib import Path
 
+import decisions
 import fetch
 import ids
 import rarities
@@ -1004,10 +1005,12 @@ def main() -> None:
     ledger = ids.load_ledger()
     out = run(groups, products, prices, ygjson.load_sets(), ygjson.load_cards(), load_mapping(), ygjson.load_eras(),
               ids.held_names(ledger, "sets"), ids.reserved(ledger, "sets"), load_mapping(PRODUCT_MAPPING))
+    set_editions = {s["id"]: s.get("editions", []) for s in out["sets"]}
+    overridden, stale = decisions.apply_print_overrides(out["files"], set_editions, decisions.load_print_overrides())
     ygjson.save_json(ygjson.SETS, out["sets"])
     for bucket, body in out["files"].items():
         ygjson.save_json(ygjson.CARDS / f"{bucket}.json", body)
-    ygjson.save_json(REVIEW, out["review"])
+    decisions.save_review(REVIEW, out["review"])
     sources.record("tcgcsv", sources.tcgcsv(groups))
     s = out["stats"]
     print(f"{len(groups)} groups: " + ", ".join(f"{n} by {rule}" for rule, n in s["groupRules"].items())
@@ -1017,6 +1020,8 @@ def main() -> None:
     print(f"{s['rekeyed']} prints re-keyed to TCGplayer's rarity, {s['setsEditionsChanged']} sets' editions changed, "
           f"{s['minted']} reprint prints, {s['mintedPrints']} prints and {s['mintedVariants']} variants minted, "
           f"{s['cardsWithAliases']} cards with aliases")
+    print(f"print overrides: {overridden} prints changed" + (f", {len(stale)} name no print: {', '.join(stale)}"
+                                                             if stale else ""))
     print(f"review: {s['groups']} groups, {s['unmatched']} unmatched singles, {s['groupAliases']} aliased groups, "
           f"{s['conflicts']} conflicts")
 
