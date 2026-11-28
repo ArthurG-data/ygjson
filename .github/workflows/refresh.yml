@@ -1,16 +1,18 @@
 name: refresh
 
-# Weekly, and on demand: download the sources again, run the import pipeline and
-# the ban lists, check the result offline, and open (or update) one pull request
-# from the branch refresh/sources with a summary of what changed. Nothing is
-# pushed when a step fails, or when the data (sets/, data/, ids/, legality/) did
-# not change.
+# Weekly, and on demand: download the sources again, run the import pipeline and the ban lists, and check the result
+# offline (the tests, validate.py, the id ledger against main). When every check passes and the data (sets/, data/,
+# ids/, legality/) changed, release it: take the next version (tools/next_version.py), commit it to the branch
+# refresh/sources, open a pull request and merge it (main's ruleset takes changes only through a pull request; it asks
+# for no approval), tag the merge vX.Y.Z and publish the release (release.yml). A failing check, or a refresh that
+# changes no data, merges nothing.
 #
-# The pull request is opened with GITHUB_TOKEN, which GitHub does not let start
-# other workflows, so ci.yml does not run on it by itself: the same offline
-# checks run here before anything is pushed, and CI runs on the pull request
-# once it is closed and reopened, or pushed to. The repository must allow
-# GitHub Actions to create pull requests (Settings > Actions > General).
+# Everything is done with GITHUB_TOKEN, which GitHub does not let start other workflows: ci.yml does not run on this
+# pull request, merge or tag, which is why the checks run here first and the release job is called from here. If main
+# moved during the run the merge is not made, or not tagged, and the run fails: run the workflow again. If only the
+# release job fails, use "Re-run failed jobs": it builds from the tag (or run release.yml by hand with the tag). Only a
+# run on main releases; a run on another branch only checks. The repository must allow GitHub Actions to create pull
+# requests (Settings > Actions > General).
 on:
   schedule:
     - cron: "0 7 * * 1"  # Mondays, an hour after live-checks
@@ -32,6 +34,9 @@ jobs:
       pull-requests: write
     env:
       BRANCH: refresh/sources
+    outputs:
+      tag: ${{ steps.push.outputs.tag }}
+      notes: ${{ steps.push.outputs.notes }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
@@ -64,38 +69,78 @@ jobs:
           path: .cache
           key: sources-${{ github.run_id }}
 
+      - name: Run the tests
+        run: uv run pytest -q
       - name: Validate the data
         run: uv run python tools/validate.py
       - name: Check the id ledger against main
         run: uv run python tools/ids.py --check-against origin/main
 
-      - name: Update the README's numbers
-        run: uv run python tools/stats.py --write
-
       - name: Summarise the changes
         id: summary
         run: uv run python tools/refresh_summary.py --base HEAD --out "$RUNNER_TEMP/body.md"
 
-      - name: Open or update the pull request
-        if: steps.summary.outputs.changed == 'true'
+      - name: Merge and tag the release
+        id: push
+        if: steps.summary.outputs.changed == 'true' && github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          title="Refresh the sources ($(date -u +%F))"
+          base="$(git rev-parse HEAD)"  # the main the checks ran against
+          version="$(uv run python tools/next_version.py)"
+          title="Release $version: refresh the sources ($(date -u +%F))"
+          uv version "$version"  # pyproject.toml and uv.lock
+          uv run python tools/stats.py --write  # the release paragraph: the new version and its counts
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
-          git add sets data ids legality review sources.json README.md
+          git add sets data ids legality review sources.json README.md pyproject.toml uv.lock
           git commit -q -m "$title"
+          head="$(git rev-parse HEAD)"
           git push --force origin "$BRANCH"
           number="$(gh pr list --head "$BRANCH" --base main --state open --json number -q '.[0].number')"
           if [ -n "$number" ]; then
             gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/body.md"
-            echo "Updated pull request #$number"
           else
             gh pr create --base main --head "$BRANCH" --title "$title" --body-file "$RUNNER_TEMP/body.md"
+            number="$(gh pr list --head "$BRANCH" --base main --state open --json number -q '.[0].number')"
           fi
-      - name: Nothing to propose
+          # Merge only onto the main that was checked, and tag only a merge that holds exactly what was checked.
+          if [ "$(git ls-remote origin refs/heads/main | cut -f1)" != "$base" ]; then
+            echo "::error::main moved during the run; pull request #$number is left open. Run the workflow again."
+            exit 1
+          fi
+          gh pr merge "$number" --merge --match-head-commit "$head" --subject "$title"
+          git fetch -q origin main
+          merge="$(git rev-parse origin/main)"
+          if [ "$(git rev-parse "$merge^{tree}")" != "$(git rev-parse "$head^{tree}")" ]; then
+            echo "::error::main at $merge does not hold what was checked; nothing was tagged. Run the workflow again."
+            exit 1
+          fi
+          delimiter="notes-$(openssl rand -hex 16)"
+          {
+            echo "tag=v$version"
+            echo "notes<<$delimiter"
+            cat "$RUNNER_TEMP/body.md"
+            echo "$delimiter"
+          } >> "$GITHUB_OUTPUT"
+          git tag "v$version" "$merge"
+          git push origin "v$version"
+          echo "Merged #$number and tagged v$version"
+      - name: Nothing to release
         if: steps.summary.outputs.changed != 'true'
-        run: echo "The refresh changed nothing in sets/, data/, ids/ or legality/, so no pull request was opened."
+        run: echo "The refresh changed nothing in sets/, data/, ids/ or legality/, so nothing was released."
+      - name: Not on main
+        if: steps.summary.outputs.changed == 'true' && github.ref != 'refs/heads/main'
+        run: echo "The data changed, but only a run on main releases. Nothing was pushed."
+
+  release:
+    needs: refresh
+    if: needs.refresh.outputs.tag != ''
+    permissions:
+      contents: write
+    uses: ./.github/workflows/release.yml
+    with:
+      tag: ${{ needs.refresh.outputs.tag }}
+      notes: ${{ needs.refresh.outputs.notes }}

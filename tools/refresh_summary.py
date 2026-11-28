@@ -1,4 +1,4 @@
-"""Summarise a refresh: how the data in the working tree differs from git REV's, as the refresh pull request's body.
+"""Summarise a refresh: how the data in the working tree differs from git REV's, for a refresh's release notes.
 
     uv run python tools/refresh_summary.py [--base REV] [--out FILE]
 
@@ -6,7 +6,7 @@ The body gives, per kind of id, the live count before and after and the ids adde
 under ids/); the ban-list events added and removed (legality/bans.json); the review counts that moved; and sources.json
 before and after. It is printed, and written to FILE when given. `changed=true|false` goes to $GITHUB_OUTPUT when that
 is set: true when the data (sets/, data/, ids/, legality/) differs from REV. A refresh that moves only sources.json or
-review/ changes nothing a reader of the data sees, and opens no pull request.
+review/ changes nothing a reader of the data sees, and releases nothing.
 """
 from __future__ import annotations
 
@@ -72,7 +72,7 @@ def _delta(before: int, after: int) -> str:
 
 
 def body(before: dict, after: dict, names: Mapping[str, str], today: str) -> str:
-    """The pull request body. `names` gives a card's name by id, for the ban-list events."""
+    """The summary, as release notes. `names` gives a card's name by id, for the ban-list events."""
     out = [f"Weekly refresh of the sources, {today}.", "", "## Ids", "",
            "| Kind | Live | Added | Retired |", "|---|---|---|---|"]
     for kind in ids.KINDS:

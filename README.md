@@ -27,7 +27,7 @@ https://github.com/ArthurG-data/ygjson/releases/latest/download/Ids.json
 https://github.com/ArthurG-data/ygjson/releases/latest/download/Changes.json
 ```
 
-Every file is `{"meta": {"version": "0.3.0", "date": "2026-11-28", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
+Every file is `{"meta": {"version": "X.Y.Z", "date": "YYYY-MM-DD", "sources": {...}, "idsVersion": 1, "reviewCounts": {...}}, "data": {...}}`, except `Changes.json`, whose `meta` is
 `{"version", "date", "since"}`. All eight come from one build, so a reader that downloads them separately can check that the versions agree. `meta.sources` is the
 committed [`sources.json`](sources.json): the snapshot of each source the data was imported from (see
 [Rebuilding a release](#rebuilding-a-release)).
@@ -581,16 +581,25 @@ and tag. pytest includes `tests/test_pipeline.py`, which runs
 `live-checks.yml`; a failure there means the data needs refreshing and does not block anything. A `v*` tag also checks
 that it matches the version in `pyproject.toml`, builds the release files and attaches them to a GitHub release.
 
-`refresh.yml` runs every Monday, and on demand. It downloads YGOPRODeck and TCGCSV again and takes YGOJSON's current
-commit (`pipeline.py --refresh ygoprodeck --refresh tcgcsv --refresh ygojson`), updates the ban lists
-(`legality.py`), runs `validate.py` and the ledger check against `main`, and opens or updates one pull request from the
-branch `refresh/sources`. Its body (`tools/refresh_summary.py`) gives the ids added and retired per kind, the ban-list
-events added and removed, the review counts and `sources.json` before and after. A failing step leaves its log and
-pushes nothing; a refresh that changes nothing in `sets/`, `data/`, `ids/` or `legality/` opens no pull request.
-`.cache` is kept between runs with `actions/cache`, so Yugipedia pages are fetched once. The pull request is opened with
-`GITHUB_TOKEN`, which cannot start other workflows: the checks above run before the push, and CI runs on the pull
-request once it is closed and reopened. The repository has to allow GitHub Actions to create pull requests (Settings >
-Actions > General). Each
+`refresh.yml` runs every Monday, and on demand, and releases the data on its own. It downloads YGOPRODeck and
+TCGCSV again and takes YGOJSON's current commit (`pipeline.py --refresh ygoprodeck --refresh tcgcsv --refresh
+ygojson`), updates the ban lists (`legality.py`), and runs pytest, `validate.py` and the ledger check against `main`.
+When they pass and something in `sets/`, `data/`, `ids/` or `legality/` changed, it takes the next version
+(`tools/next_version.py`: the next patch number once the version in `pyproject.toml` is tagged, else that version as
+it is, so a version bumped by hand is released first), sets it with `uv version` and rewrites the README's numbers. It
+commits that to the branch `refresh/sources`, opens a pull request and merges it itself (`main` takes changes only
+through a pull request; its ruleset asks for no approval), tags the merge `vX.Y.Z`, and publishes the release with
+`release.yml`, the same job a hand-pushed tag runs. The release notes open with the id changes and go on with the
+refresh summary (`tools/refresh_summary.py`): the ids added and retired per kind, the ban-list events added and removed,
+the review counts and `sources.json` before and after. A failing step merges nothing and leaves the run failed; a
+refresh that changes no data releases nothing; only a run on `main` merges. Everything uses `GITHUB_TOKEN`, which
+cannot start other workflows, so `ci.yml` does not run on the pull request, the merge or the tag: the same checks have
+run before. If `main` moved during the run, the pull request is left open or the merge is not tagged, and the run
+fails: run the workflow again (a merged version that was never tagged is released by the next run). If only the
+release job fails, use "Re-run failed jobs" on the run's page, or run `release.yml` by hand with the tag: it builds
+from the tag. The repository has to allow GitHub Actions to create pull requests (Settings > Actions > General).
+`.cache` is kept between runs with `actions/cache`, so Yugipedia pages
+are fetched once. Each
 action is pinned to a commit SHA, with its release in a comment; Dependabot proposes new pins weekly.
 
 ## Licence

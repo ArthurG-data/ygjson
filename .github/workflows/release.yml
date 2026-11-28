@@ -1,0 +1,77 @@
+name: release
+
+# Builds the release files of one tag and attaches them to a GitHub release. Called by ci.yml when a person pushes a
+# v* tag, and by refresh.yml after it pushes its own: a tag pushed with GITHUB_TOKEN starts no workflow, so the
+# refresh cannot rely on ci.yml seeing it. Everything is built from the tag's checkout, so re-running a failed run of
+# this job releases the same data; it can also be run by hand (Actions > release > Run workflow) for a tag that was
+# pushed but never released.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: The tag to release (vX.Y.Z), matching the version in pyproject.toml.
+        type: string
+        required: true
+  workflow_call:
+    inputs:
+      tag:
+        description: The tag to release (vX.Y.Z), matching the version in pyproject.toml.
+        type: string
+        required: true
+      notes:
+        description: Text added to the release notes after the id changes (the refresh summary).
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      TAG: ${{ inputs.tag }}
+      NOTES: ${{ inputs.notes }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0  # the previous release tag and its ledger, for the changelog
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d  # v10.4.0
+        with:
+          enable-cache: true
+      - run: uv sync --locked --group dev
+      - name: Check the tag matches pyproject.toml
+        run: |
+          set -euo pipefail
+          tag_version="${TAG#v}"
+          project_version="$(uv run python -c 'import tomllib; print(tomllib.load(open("pyproject.toml", "rb"))["project"]["version"])')"
+          if [ "$tag_version" != "$project_version" ]; then
+            echo "::error::Tag $TAG does not match pyproject.toml version $project_version. Bump the version or retag."
+            exit 1
+          fi
+      - run: uv run python tools/build.py --version "${TAG#v}"
+      - name: List the ids added, retired and renamed since the previous release
+        run: |
+          set -euo pipefail
+          # The previous release tag (v*), as the ledger check finds it; none for the first release.
+          if previous="$(git describe --tags --abbrev=0 --match 'v*' 'HEAD^' 2>/dev/null)"; then
+            uv run python tools/changelog.py --since "$previous" --version "${TAG#v}"
+          else
+            uv run python tools/changelog.py --version "${TAG#v}"
+          fi
+      - run: uv run python tools/package.py  # the .json.gz files, ygjson.sqlite.gz and SHA256SUMS
+      - name: Write the release notes
+        run: |
+          set -euo pipefail
+          cp dist/CHANGES.md "$RUNNER_TEMP/notes.md"
+          if [ -n "$NOTES" ]; then
+            printf '\n%s\n' "$NOTES" >> "$RUNNER_TEMP/notes.md"
+          fi
+      # The id changes open the notes, then the refresh summary if any; GitHub appends its list of pull requests.
+      - run: gh release create "$TAG" dist/*.json dist/*.json.gz dist/ygjson.sqlite.gz dist/SHA256SUMS --notes-file "$RUNNER_TEMP/notes.md" --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
