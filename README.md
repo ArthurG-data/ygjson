@@ -35,7 +35,7 @@ committed [`sources.json`](sources.json): the snapshot of each source the data w
 |---|---|---|
 | `AllSets.json` | set id (`legend-of-blue-eyes-white-dragon`) | name, code, type, series, parent, era, editions, TCGplayer group ids, identifiers, and the release with its date and key art |
 | `AllCards.json` | card id (`89631139`) | the facts every print of the card shares, its name in each language, and the permanent ids of its prints |
-| `AllPrintings.json` | printing id, `<print uuid>:<language>:<edition>` (`7fb2b3b7-22d1-5e78-8f11-31cfa734fbe9:en:first`) | its readable `key` (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`), `print` (the print's UUID), `printKey`, set, number, region, rarity and its tier, edition, finish, TCGplayer product ids |
+| `AllPrintings.json` | printing id, `<print uuid>:<language>:<edition>` (`7fb2b3b7-22d1-5e78-8f11-31cfa734fbe9:en:first`) | its readable `key` (`legend-of-blue-eyes-white-dragon:89631139:LOB-001:ultra_rare:en:first`), `print` (the print's UUID), `printKey`, set, number, region, rarity and its tier, edition, finish, TCGplayer product ids, and `tcgplayerPrice`: the product and price subtype of its edition |
 | `AllArchetypes.json` | archetype slug (`blue-eyes`) | name, names by language, whether Konami calls it an archetype, and the ids of its member cards |
 | `AllProducts.json` | sealed product id (`legend-of-blue-eyes-white-dragon-booster-box`) | category, set, TCGplayer product id, release date, contents and the sources that state them |
 | `Ids.json` | kind (`prints`, `printings`, `cards`, `sets`, `archetypes`, `sealed`), then permanent id | the id ledger: each id's readable `key`, its `formerKeys` or `formerIds`, `successors` and `status` (see [Ids](#ids)) |
@@ -295,7 +295,13 @@ A colour or art with a treatment is one version, with the tags joined in the ord
 A print has one price per edition, so it holds several products only when they price different editions: <!--n:prints_several_products-->10<!--/n--> prints hold an
 original and its 2020 reprint, which is sold as another edition. When two products of one card, rarity and version price
 the same edition, the print keeps the one pricing the most editions, then the oldest, and the other goes to review
-`conflicts`.
+`conflicts`. Such a print's `tcgplayer.editionProducts` names the product pricing each edition (`{"limited": 108330,
+"unlimited": 616043}`).
+
+**Prices.** A printing's `tcgplayerPrice` is `{"productId", "subTypeName"}`, the two fields a TCGCSV price row is
+keyed by, so a price joins a printing without guessing: `first` is priced as `1st Edition`, `unlimited` as `Unlimited`
+and `limited` as `Limited`, on the print's one product or the one `editionProducts` names. A printing whose print has no
+product has no `tcgplayerPrice`.
 
 **Aliases.** A card's `aliases` are other English names shops sell it under: YGOPRODeck's `beta_name` (`Red-Eyes B.
 Dragon`), which the card also carries as `betaName`, and TCGplayer's product name at any of its prints (`Stellarnova

@@ -275,9 +275,35 @@ def test_flatten_makes_a_printing_per_print_and_edition():
     first = out["printings"][f"{PRINT_A}:en:first"]
     assert first == {"id": f"{PRINT_A}:en:first", "print": PRINT_A, "card": "46986414", "set": SET,
                      "number": "LOB-EN005", "region": "EN", "rarity": "ultra_rare", "rarityTier": 4, "language": "en",
-                     "edition": "first", "finish": "foil", "identifiers": {"tcgplayerProductIds": [10]}}
+                     "edition": "first", "finish": "foil", "identifiers": {"tcgplayerProductIds": [10]},
+                     "tcgplayerPrice": {"productId": 10, "subTypeName": "1st Edition"}}
+    assert out["printings"][f"{PRINT_A}:en:unlimited"]["tcgplayerPrice"] == {"productId": 10, "subTypeName": "Unlimited"}
     common = out["printings"][f"{PRINT_B}:en:unlimited"]
     assert common["finish"] == "nonfoil" and common["rarityTier"] == 1 and common["identifiers"] == {}
+    assert "tcgplayerPrice" not in common  # no product
+
+
+def _two_products(edition_products):
+    cards = copy.deepcopy(CARDS)
+    p = cards["046"]["cards"][0]["prints"][0]
+    p["identifiers"] = {"tcgplayerProductIds": [10, 11]}
+    p["tcgplayer"] = {"name": "Dark Magician", "match": "number+rarity", "editionProducts": edition_products}
+    return cards
+
+
+def test_a_printing_of_a_print_with_two_products_is_priced_by_the_one_its_edition_names():
+    printings = ygjson.flatten(SETS, _two_products({"first": 11}), ARCHETYPES)["printings"]
+    first, unlimited = printings[f"{PRINT_A}:en:first"], printings[f"{PRINT_A}:en:unlimited"]
+    assert first["tcgplayerPrice"] == {"productId": 11, "subTypeName": "1st Edition"}
+    assert "tcgplayerPrice" not in unlimited  # neither product prices it
+    assert first["tcgplayer"] == {"name": "Dark Magician", "match": "number+rarity"}  # the map stays in the data
+
+
+def test_edition_products_must_name_the_prints_own_products_and_editions():
+    assert errors(cards=_two_products({"first": 11, "unlimited": 10})) == []
+    assert errors(cards=_two_products({"first": 12})) == [
+        f"print {PRINT_A}: editionProducts names first 12, which is not one of its products and editions"]
+    assert len(errors(cards=_two_products({"limited": 10}))) == 1
 
 
 def test_flatten_unknown_rarity_has_no_finish_or_tier():
